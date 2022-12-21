@@ -20,6 +20,4 @@ jobs:
         git remote add pantheon $pantheon_repo
         git config --global user.email "elkhatibm@si.edu"
         git config --global user.name "Mo El-Khatib"
-        git add .
-        git commit -q -m 'Build assets for dev.'
         git push -f pantheon HEAD:refs/heads/$BASE_BRANCH

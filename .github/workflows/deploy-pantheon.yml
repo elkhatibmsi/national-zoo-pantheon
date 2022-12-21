@@ -16,7 +16,6 @@ jobs:
       env:
         pantheon_repo: '${{ secrets.PANTHEON_REPO }}'
       run: |
-        BASE_BRANCH=${GITHUB_REF##*/}
         git remote add pantheon $pantheon_repo
         git config --global user.email "elkhatibm@si.edu"
         git config --global user.name "Mo El-Khatib"

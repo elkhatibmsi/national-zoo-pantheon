@@ -14,7 +14,7 @@ jobs:
         known_hosts: ${{ secrets.KNOWN_HOSTS }}
     - name: deployer
       env:
-        pantheon_repo: '${{ secrets.PANTHEON_REPO }}'
+        pantheon_repo: 'ssh://codeserver.dev.0793264a-5155-42a8-8f9e-c4d7a2dee9f9@codeserver.dev.0793264a-5155-42a8-8f9e-c4d7a2dee9f9.drush.in:2222/~/repository.git'
       run: |
         git remote add pantheon $pantheon_repo
         git config --global user.email "elkhatibm@si.edu"

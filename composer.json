@@ -22,7 +22,9 @@
         "cweagans/composer-patches": "^1.7",
         "drush/drush": "^11 || ^12",
         "drupal/block_field": "^1.0@RC",
-        "drupal/block_class": "^1.0"
+        "drupal/block_class": "^1.0",
+        "drupal/components": "^3.0@beta"
+
     },
     "require-dev": {
         "drupal/core-dev": "^9.2"

@@ -1,8 +1,7 @@
 name: Deploy to Pantheon
 on:
-  push:
-    branches:
-      - 'master'
+  push
+  
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -17,5 +16,8 @@ jobs:
       env:
         pantheon_repo: '${{ secrets.PANTHEON_REPO }}'
       run: |
+        BASE_BRANCH=${GITHUB_REF##*/}
         git remote add pantheon $pantheon_repo
-        git push pantheon HEAD:master
+        git add .
+        git commit -q -m 'Build assets for dev.'
+        git push -f pantheon HEAD:refs/heads/$BASE_BRANCH

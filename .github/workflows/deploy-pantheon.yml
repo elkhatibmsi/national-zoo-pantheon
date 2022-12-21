@@ -14,11 +14,12 @@ jobs:
         known_hosts: ${{ secrets.KNOWN_HOSTS }}
     - name: deployer
       env:
-        pantheon_repo: 'ssh://codeserver.dev.0793264a-5155-42a8-8f9e-c4d7a2dee9f9@codeserver.dev.0793264a-5155-42a8-8f9e-c4d7a2dee9f9.drush.in:2222/~/repository.git'
+        pantheon_repo: '${{ secrets.PANTHEON_REPO }}'
       run: |
-        git remote add pantheon ssh://codeserver.dev.0793264a-5155-42a8-8f9e-c4d7a2dee9f9@codeserver.dev.0793264a-5155-42a8-8f9e-c4d7a2dee9f9.drush.in:2222/~/repository.git
+        BASE_BRANCH=${GITHUB_REF##*/}
+        git remote add pantheon $pantheon_repo
         git config --global user.email "elkhatibm@si.edu"
         git config --global user.name "Mo El-Khatib"
         git add .
         git commit -q -m 'Build assets for dev.'
-        git push -f pantheon master
+        git push -f pantheon HEAD:refs/heads/$BASE_BRANCH

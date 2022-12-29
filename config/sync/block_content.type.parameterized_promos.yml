@@ -1,0 +1,8 @@
+uuid: 34da3ab3-cbe8-49bc-93a3-f211dc6bf361
+langcode: en
+status: true
+dependencies: {  }
+id: parameterized_promos
+label: 'Parameterized Promos'
+revision: 1
+description: "Creating Promo content that can be accessed via a parameter. \r\n"

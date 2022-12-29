@@ -1,0 +1,31 @@
+uuid: 44679372-d793-46ec-a4ab-1fc2a60ffde6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.horizontal_link_bar.field_horizontal_link_item
+    - paragraphs.paragraphs_type.horizontal_link_bar
+  module:
+    - micon_link
+id: paragraph.horizontal_link_bar.default
+targetEntityType: paragraph
+bundle: horizontal_link_bar
+mode: default
+content:
+  field_horizontal_link_item:
+    type: micon_link
+    weight: 0
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+      packages:
+        zoo-icons-: true
+        fa: false
+      icon: ''
+      position: '1'
+      target: 0
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

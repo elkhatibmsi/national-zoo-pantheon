@@ -1,0 +1,22 @@
+uuid: 19ab060e-5a73-454c-87de-21096ebbb74c
+langcode: en
+status: true
+dependencies:
+  config:
+    - storage.storage_type.position_and_center
+id: storage.position_and_center.status
+field_name: status
+entity_type: storage
+bundle: position_and_center
+label: Published
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

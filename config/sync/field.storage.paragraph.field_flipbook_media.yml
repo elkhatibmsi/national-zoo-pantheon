@@ -1,0 +1,20 @@
+uuid: c1934a9d-51a1-4e53-a2fe-8b87f72062ed
+langcode: und
+status: true
+dependencies:
+  module:
+    - media
+    - paragraphs
+id: paragraph.field_flipbook_media
+field_name: field_flipbook_media
+entity_type: paragraph
+type: entity_reference
+settings:
+  target_type: media
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

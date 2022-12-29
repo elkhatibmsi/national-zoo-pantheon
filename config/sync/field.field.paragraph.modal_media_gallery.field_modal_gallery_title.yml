@@ -1,0 +1,19 @@
+uuid: 64ebdb55-e531-43c5-8580-fec1cb9f760e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_modal_gallery_title
+    - paragraphs.paragraphs_type.modal_media_gallery
+id: paragraph.modal_media_gallery.field_modal_gallery_title
+field_name: field_modal_gallery_title
+entity_type: paragraph
+bundle: modal_media_gallery
+label: 'Gallery Title'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

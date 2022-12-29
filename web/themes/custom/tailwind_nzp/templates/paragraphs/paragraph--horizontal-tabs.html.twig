@@ -1,0 +1,25 @@
+{% block paragraph %}
+	<div{{attributes}}>
+		{{ content.controls }}
+
+	
+
+		{% set tabs = paragraph.field_h_tabs %}
+		{% set labels = [] %}
+		{% set tab_content = [] %}
+
+		{# iterate over tabs and create seperate arrays for tab content and tab label #}
+		{% for key, tab in tabs if key|first != '#' %}
+			{% set labels = labels|merge([tab.entity.field_h_tab_label.value]) %}
+			{% set tab_content = tab_content|merge([content.field_h_tabs[key]]) %}
+		{% endfor %}
+
+		{%
+			include '@nzpComponents/tabs/horizontal-tabs.html.twig' with {
+				tab_labels: labels,
+				tab_content: tab_content,		} 
+		%}
+	</div>
+
+{% endblock paragraph %}
+

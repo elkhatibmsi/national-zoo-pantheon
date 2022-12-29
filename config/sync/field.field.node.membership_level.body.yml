@@ -1,0 +1,23 @@
+uuid: e8d80bae-9d47-48ef-a2de-1178549938ca
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.membership_level
+  module:
+    - text
+id: node.membership_level.body
+field_name: body
+entity_type: node
+bundle: membership_level
+label: Description
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

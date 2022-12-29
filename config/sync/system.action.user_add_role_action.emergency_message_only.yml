@@ -1,0 +1,14 @@
+uuid: b0611d5c-86d4-4ec1-bb11-263afa75c51b
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.emergency_message_only
+  module:
+    - user
+id: user_add_role_action.emergency_message_only
+label: 'Add the emergency message only role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: emergency_message_only

@@ -1,0 +1,23 @@
+uuid: 63eb6aba-1a61-4857-88e4-e4be4d325144
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.paragraphs_editor_preview
+    - field.field.paragraph.text.field_text
+    - paragraphs.paragraphs_type.text
+  module:
+    - text
+id: paragraph.text.paragraphs_editor_preview
+targetEntityType: paragraph
+bundle: text
+mode: paragraphs_editor_preview
+content:
+  field_text:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

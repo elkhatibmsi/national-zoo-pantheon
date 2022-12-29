@@ -1,0 +1,25 @@
+uuid: 64feacf9-dd23-4f41-99a9-d46cb3df7f89
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_webcam_timeout
+    - paragraphs.paragraphs_type.webcam_embed
+id: paragraph.webcam_embed.field_webcam_timeout
+field_name: field_webcam_timeout
+entity_type: paragraph
+bundle: webcam_embed
+label: 'Webcam Timeout'
+description: 'Enter in minutes, the duration of the webcam before automatically pausing. Defaults to 15minutes. '
+required: false
+translatable: false
+default_value:
+  -
+    value: 15
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

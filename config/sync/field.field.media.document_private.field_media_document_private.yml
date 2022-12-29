@@ -1,0 +1,27 @@
+uuid: 23c48f7e-b17b-4544-9c97-61cde7db7b6e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_media_document_private
+    - media.type.document_private
+  module:
+    - file
+id: media.document_private.field_media_document_private
+field_name: field_media_document_private
+entity_type: media
+bundle: document_private
+label: Document
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'txt doc docx pdf csv'
+  max_filesize: ''
+  description_field: true
+field_type: file

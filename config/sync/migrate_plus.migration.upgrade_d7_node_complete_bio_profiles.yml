@@ -1,0 +1,80 @@
+uuid: c0248f0f-6109-48e9-8851-cfe6b9964483
+langcode: en
+status: true
+dependencies: {  }
+id: upgrade_d7_node_complete_bio_profiles
+class: Drupal\node\Plugin\migrate\D7NodeTranslation
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 7'
+  - Content
+migration_group: migrate_drupal_7
+label: 'Node complete (Bio Profiles)'
+source:
+  plugin: d7_node_complete
+  node_type: nzp_scbi_staff
+process:
+  nid:
+    -
+      plugin: get
+      source: tnid
+  title:
+    -
+      plugin: get
+      source: title
+  body:
+    -
+      plugin: get
+      source: body
+    -
+      plugin: media_wysiwyg_filter
+    -
+      plugin: img_tag_to_embed
+  field_position:
+    -
+      plugin: get
+      source: field_official_title
+    -
+      plugin: media_wysiwyg_filter
+  field_education:
+    -
+      plugin: get
+      source: field_education
+    -
+      plugin: media_wysiwyg_filter
+  field_noteworthy_work:
+    -
+      plugin: get
+      source: field_noteworthy_work
+    -
+      plugin: media_wysiwyg_filter
+  field_center_affiliation:
+    -
+      plugin: sub_process
+      source: field_editorial_access
+      process:
+        target_id: tid
+  field_headshot:
+    -
+      plugin: media_migration_delta_sort
+      source: field_image
+    -
+      plugin: sub_process
+      process:
+        target_id: fid
+  field_si_profiles_id:
+    -
+      plugin: get
+      source: field_si_profiles_id
+    -
+      plugin: media_wysiwyg_filter
+  field_bio_profile_link:
+    -
+      plugin: field_link
+      source: field_si_profile_link
+destination:
+  plugin: 'entity_complete:node'
+  translations: true
+  default_bundle: bio_profiles
+migration_dependencies: null

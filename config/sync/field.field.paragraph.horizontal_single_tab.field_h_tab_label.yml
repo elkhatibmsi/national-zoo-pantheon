@@ -1,0 +1,19 @@
+uuid: 92dc4beb-5ce3-4df8-9e5b-d464feab0cfa
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_h_tab_label
+    - paragraphs.paragraphs_type.horizontal_single_tab
+id: paragraph.horizontal_single_tab.field_h_tab_label
+field_name: field_h_tab_label
+entity_type: paragraph
+bundle: horizontal_single_tab
+label: 'H Tab Label'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

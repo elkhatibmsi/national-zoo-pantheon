@@ -1,0 +1,8 @@
+uuid: 0909fede-6dad-489c-9e3b-b2cea33685a3
+langcode: en
+status: true
+dependencies: {  }
+name: 'Staff Categories'
+vid: staff_categories
+description: 'Applies to SCBI Staff '
+weight: 0

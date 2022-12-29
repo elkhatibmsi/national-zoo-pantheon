@@ -1,0 +1,23 @@
+uuid: 8c28b7d8-d53e-436d-890a-3eb5d7e487ea
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.parameterized_promos
+    - field.storage.block_content.field_promo_banner_link
+  module:
+    - link
+id: block_content.parameterized_promos.field_promo_banner_link
+field_name: field_promo_banner_link
+entity_type: block_content
+bundle: parameterized_promos
+label: 'Promo Banner Link'
+description: "Create a link that will be rendered as a button or call to action link. \r\n"
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 1
+  link_type: 17
+field_type: link

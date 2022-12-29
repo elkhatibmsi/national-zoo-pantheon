@@ -1,0 +1,20 @@
+uuid: d3dae8fd-e557-426d-9ba6-eb95311e03cd
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+    - text
+id: paragraph.field_single_image_caption_title
+field_name: field_single_image_caption_title
+entity_type: paragraph
+type: text
+settings:
+  max_length: 255
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

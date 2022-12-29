@@ -1,0 +1,180 @@
+uuid: f2c833eb-4f9e-4df8-92a3-17168cae1a33
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.webcam.body
+    - field.field.node.webcam.field_camera_embed
+    - field.field.node.webcam.field_content_block
+    - field.field.node.webcam.field_editorial_access
+    - field.field.node.webcam.field_feature_one
+    - field.field.node.webcam.field_feature_three
+    - field.field.node.webcam.field_feature_two
+    - field.field.node.webcam.field_landing_image
+    - field.field.node.webcam.field_promotion_three
+    - field.field.node.webcam.field_related_animal
+    - field.field.node.webcam.field_sidebar_section_content
+    - field.field.node.webcam.field_sponsored_by
+    - field.field.node.webcam.field_use_test_player
+    - node.type.webcam
+  module:
+    - layout_builder
+    - nzp_layouts
+    - text
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: layout_nzp_one_col
+        layout_settings:
+          context_mapping: {  }
+          custom_classes: ''
+          region_classes:
+            content: col-md-12
+          container_classes: container
+          html_container_elements: div
+          html_region_elements:
+            content: div
+        components:
+          8debd6b6-6d8a-466d-8c10-cb23462850c4:
+            uuid: 8debd6b6-6d8a-466d-8c10-cb23462850c4
+            region: content
+            configuration:
+              id: 'field_block:node:webcam:body'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            weight: 1
+            additional: {  }
+          afe7a947-012b-43fb-be3c-5e95a48f6e83:
+            uuid: afe7a947-012b-43fb-be3c-5e95a48f6e83
+            region: content
+            configuration:
+              id: 'field_block:node:webcam:title'
+              label: Title
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: text_field_formatter
+                label: hidden
+                settings:
+                  link_to_entity: 0
+                  wrap_tag: h1
+                  wrap_class: page-title
+                  wrap_attributes: ''
+                  override_link_label: ''
+                  token: ''
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          b480cbf8-18dd-4dba-bd23-fd5bee7ebf8f:
+            uuid: b480cbf8-18dd-4dba-bd23-fd5bee7ebf8f
+            region: content
+            configuration:
+              id: 'field_block:node:webcam:field_content_block'
+              label: 'Main Section Content'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: entity_reference_revisions_entity_view
+                label: hidden
+                settings:
+                  view_mode: default
+                third_party_settings: {  }
+            weight: 2
+            additional: {  }
+          16245e5b-ab1b-4114-8540-6daba5edfd99:
+            uuid: 16245e5b-ab1b-4114-8540-6daba5edfd99
+            region: content
+            configuration:
+              id: 'extra_field_block:node:webcam:links'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+            weight: 3
+            additional: {  }
+          4f1f1909-5768-4d42-b445-2b2019e3c6d4:
+            uuid: 4f1f1909-5768-4d42-b445-2b2019e3c6d4
+            region: content
+            configuration:
+              id: 'field_block:node:webcam:body'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            weight: 4
+            additional: {  }
+          de03f92d-376b-4865-8501-54ada313b210:
+            uuid: de03f92d-376b-4865-8501-54ada313b210
+            region: content
+            configuration:
+              id: 'field_block:node:webcam:field_sponsored_by'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: entity_reference_entity_view
+                label: above
+                settings:
+                  view_mode: default
+                  link: false
+                third_party_settings: {  }
+            weight: 5
+            additional: {  }
+        third_party_settings: {  }
+id: node.webcam.default
+targetEntityType: node
+bundle: webcam
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_sponsored_by:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_camera_embed: true
+  field_content_block: true
+  field_editorial_access: true
+  field_feature_one: true
+  field_feature_three: true
+  field_feature_two: true
+  field_landing_image: true
+  field_promotion_three: true
+  field_related_animal: true
+  field_sidebar_section_content: true
+  field_use_test_player: true

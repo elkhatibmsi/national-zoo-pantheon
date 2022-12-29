@@ -1,0 +1,8 @@
+uuid: e56966e4-99c8-4940-aa06-e95bb1c9a6cb
+langcode: en
+status: true
+dependencies: {  }
+name: 'Media Tags'
+vid: media_tags
+description: 'arbitrary groupings of images, videos, etc.'
+weight: 0

@@ -1,0 +1,27 @@
+uuid: d3e96023-06ed-4b50-8b1d-fc78f725840a
+langcode: und
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_class_length
+field_name: field_class_length
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: '1'
+      label: 'One-day class'
+    -
+      value: '2'
+      label: 'Weekly series'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

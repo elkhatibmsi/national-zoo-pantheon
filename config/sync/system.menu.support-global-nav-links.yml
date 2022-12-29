@@ -1,0 +1,8 @@
+uuid: 8b7899ee-0483-4785-8342-fdfeafe3b613
+langcode: en
+status: true
+dependencies: {  }
+id: support-global-nav-links
+label: 'Support Global Nav Links'
+description: 'Support global nav menu'
+locked: false

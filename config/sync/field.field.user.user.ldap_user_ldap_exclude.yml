@@ -1,0 +1,24 @@
+uuid: 8216a2cd-78d7-4734-9be7-d329deca886d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.ldap_user_ldap_exclude
+  module:
+    - user
+id: user.user.ldap_user_ldap_exclude
+field_name: ldap_user_ldap_exclude
+entity_type: user
+bundle: user
+label: 'Whether to exclude the user from LDAP functionality'
+description: 'This field should not be edited.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

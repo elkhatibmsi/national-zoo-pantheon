@@ -1,0 +1,41 @@
+uuid: 8078246f-4793-4516-b536-ac9d9c0f9c07
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.card_grid.field_card
+    - field.field.paragraph.card_grid.field_card_border_settings
+    - field.field.paragraph.card_grid.field_number_of_columns
+    - paragraphs.paragraphs_type.card_grid
+  module:
+    - entity_reference_revisions
+    - layout_builder
+    - layout_builder_restrictions
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+  layout_builder_restrictions:
+    allowed_block_categories: {  }
+    entity_view_mode_restriction:
+      allowed_layouts: {  }
+      denylisted_blocks: {  }
+      allowlisted_blocks: {  }
+      restricted_categories: {  }
+id: paragraph.card_grid.default
+targetEntityType: paragraph
+bundle: card_grid
+mode: default
+content:
+  field_card:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: full
+      link: ''
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_card_border_settings: true
+  field_number_of_columns: true

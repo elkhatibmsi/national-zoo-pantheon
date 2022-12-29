@@ -1,0 +1,33 @@
+uuid: de0c60c8-6a9f-43f9-a503-3db1244860cb
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.emergency_message
+    - field.field.block_content.emergency_message.body
+  module:
+    - text
+id: block_content.emergency_message.default
+targetEntityType: block_content
+bundle: emergency_message
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 26
+    region: content
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
+  info:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

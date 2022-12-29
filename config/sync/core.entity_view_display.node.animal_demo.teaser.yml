@@ -1,0 +1,25 @@
+uuid: 74560849-6474-4159-a075-7f0eafd53b4f
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.animal_demo.field_animal_demo_exhibit
+    - field.field.node.animal_demo.field_animal_demo_time
+    - node.type.animal_demo
+  module:
+    - user
+id: node.animal_demo.teaser
+targetEntityType: node
+bundle: animal_demo
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_animal_demo_exhibit: true
+  field_animal_demo_time: true
+  field_time: true

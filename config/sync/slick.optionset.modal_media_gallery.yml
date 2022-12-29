@@ -1,0 +1,66 @@
+uuid: 92c7c9c3-13a9-436a-ad49-8cb1379586c7
+langcode: en
+status: true
+dependencies: {  }
+id: modal_media_gallery
+name: modal_media_gallery
+weight: 0
+label: 'Modal Media Gallery'
+group: ''
+skin: classic
+breakpoints: 0
+optimized: false
+options:
+  options__active_tab: edit-options-settings
+  settings:
+    mobileFirst: true
+    asNavFor: ''
+    accessibility: true
+    adaptiveHeight: false
+    autoplay: false
+    pauseOnHover: true
+    pauseOnDotsHover: false
+    pauseOnFocus: true
+    autoplaySpeed: 3000
+    arrows: false
+    prevArrow: Previous
+    nextArrow: Next
+    downArrow: false
+    downArrowTarget: ''
+    downArrowOffset: 0
+    centerMode: false
+    centerPadding: 50px
+    dots: false
+    dotsClass: slick-dots
+    appendDots: ''
+    draggable: true
+    fade: false
+    focusOnSelect: false
+    infinite: true
+    initialSlide: 0
+    lazyLoad: blazy
+    mouseWheel: false
+    randomize: false
+    respondTo: slider
+    rtl: false
+    rows: 2
+    slidesPerRow: 6
+    slide: ''
+    slidesToShow: 12
+    slidesToScroll: 1
+    speed: 500
+    swipe: true
+    swipeToSlide: false
+    edgeFriction: 0.35
+    touchMove: true
+    touchThreshold: 5
+    useCSS: true
+    cssEase: ease
+    cssEaseBezier: ''
+    cssEaseOverride: ''
+    useTransform: true
+    easing: swing
+    variableWidth: false
+    vertical: false
+    verticalSwiping: false
+    waitForAnimate: true

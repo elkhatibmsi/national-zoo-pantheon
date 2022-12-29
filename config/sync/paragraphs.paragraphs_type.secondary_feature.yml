@@ -1,0 +1,19 @@
+uuid: c985df68-5a1a-4071-a306-567ccf504521
+langcode: en
+status: true
+dependencies:
+  module:
+    - layout_paragraphs
+    - micon_paragraphs
+third_party_settings:
+  micon_paragraphs:
+    icon: ''
+id: secondary_feature
+label: 'Secondary Feature'
+icon_uuid: null
+icon_default: null
+description: 'Image and centered text with a colored background'
+behavior_plugins:
+  layout_paragraphs:
+    enabled: false
+    available_layouts: {  }

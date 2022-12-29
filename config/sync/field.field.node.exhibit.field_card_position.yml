@@ -1,0 +1,25 @@
+uuid: a0d69c25-e22e-4add-b852-705ea2f9d07c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_card_position
+    - node.type.exhibit
+id: node.exhibit.field_card_position
+field_name: field_card_position
+entity_type: node
+bundle: exhibit
+label: 'Card position'
+description: 'Choose the position of the slideshow overlay card.'
+required: false
+translatable: false
+default_value:
+  -
+    tid: '153'
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    sort:
+      field: _none
+field_type: entity_reference

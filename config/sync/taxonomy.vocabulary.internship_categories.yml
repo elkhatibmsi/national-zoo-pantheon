@@ -1,0 +1,8 @@
+uuid: ac1fa4ee-f572-47bb-94e4-26b0d4e1aacd
+langcode: en
+status: true
+dependencies: {  }
+name: 'Internship categories'
+vid: internship_categories
+description: ''
+weight: 0

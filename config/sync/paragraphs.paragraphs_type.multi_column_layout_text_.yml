@@ -1,0 +1,15 @@
+uuid: 48a9af43-4740-4fc4-b540-1b3adf1a3498
+langcode: en
+status: true
+dependencies:
+  module:
+    - layout_paragraphs
+id: multi_column_layout_text_
+label: 'Multi-column Layout (text)'
+icon_uuid: null
+icon_default: null
+description: 'Migrated from paragraph bundle Multi-column Layout (text)'
+behavior_plugins:
+  layout_paragraphs:
+    enabled: false
+    available_layouts: {  }

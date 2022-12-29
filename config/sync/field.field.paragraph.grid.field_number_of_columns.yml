@@ -1,0 +1,23 @@
+uuid: a1a5b8bc-107d-4cda-bb03-5dad2e82c764
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_number_of_columns
+    - paragraphs.paragraphs_type.grid
+  module:
+    - options
+id: paragraph.grid.field_number_of_columns
+field_name: field_number_of_columns
+entity_type: paragraph
+bundle: grid
+label: 'Number of Columns'
+description: ''
+required: true
+translatable: true
+default_value:
+  -
+    value: 3
+default_value_callback: ''
+settings: {  }
+field_type: list_integer

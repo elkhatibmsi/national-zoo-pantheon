@@ -1,0 +1,8 @@
+uuid: 3ed93d2c-4c2d-4c25-ac66-35e6e2cb2b61
+langcode: en
+status: true
+dependencies: {  }
+id: menu-become-a-member
+label: 'Mega Menu Membership'
+description: 'Links related to becoming a member; Appears in the Membership dropdown of the mega menu'
+locked: false

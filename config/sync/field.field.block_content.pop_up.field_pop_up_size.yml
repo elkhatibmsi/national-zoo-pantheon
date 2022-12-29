@@ -1,0 +1,21 @@
+uuid: 72429f3f-01f9-4a7a-a437-096058466a7d
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.pop_up
+    - field.storage.block_content.field_pop_up_size
+  module:
+    - options
+id: block_content.pop_up.field_pop_up_size
+field_name: field_pop_up_size
+entity_type: block_content
+bundle: pop_up
+label: 'Pop Up Size'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

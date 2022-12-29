@@ -1,0 +1,122 @@
+uuid: 254ad1ad-8081-444d-b063-6baf92a454ba
+langcode: en
+status: true
+dependencies: {  }
+id: upgrade_d7_node_complete_corporate_partner
+class: Drupal\node\Plugin\migrate\D7NodeTranslation
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 7'
+  - Content
+migration_group: migrate_drupal_7
+label: 'Node complete (Corporate Partner)'
+source:
+  plugin: d7_node_complete
+  node_type: corporate_partner
+process:
+  nid:
+    -
+      plugin: get
+      source: tnid
+  vid:
+    -
+      plugin: get
+      source: vid
+  langcode:
+    -
+      plugin: default_value
+      source: language
+      default_value: und
+  title:
+    -
+      plugin: get
+      source: title
+  uid:
+    -
+      plugin: get
+      source: node_uid
+  status:
+    -
+      plugin: get
+      source: status
+  created:
+    -
+      plugin: get
+      source: created
+  changed:
+    -
+      plugin: get
+      source: timestamp
+  promote:
+    -
+      plugin: get
+      source: promote
+  sticky:
+    -
+      plugin: get
+      source: sticky
+  revision_uid:
+    -
+      plugin: get
+      source: revision_uid
+  revision_log:
+    -
+      plugin: get
+      source: log
+  revision_timestamp:
+    -
+      plugin: get
+      source: timestamp
+  content_translation_source:
+    -
+      plugin: get
+      source: source_langcode
+  comment_node_corporate_partner/0/status:
+    -
+      plugin: get
+      source: comment
+  body:
+    -
+      plugin: get
+      source: body
+    -
+      plugin: media_wysiwyg_filter
+    -
+      plugin: img_tag_to_embed
+  field_partner_level:
+    -
+      plugin: get
+      source: field_partner_level
+  field_featured:
+    -
+      plugin: get
+      source: field_featured
+  field_editorial_access:
+    -
+      plugin: sub_process
+      source: field_editorial_access
+      process:
+        target_id: tid
+  field_image:
+    -
+      plugin: media_migration_delta_sort
+      source: field_image
+    -
+      plugin: sub_process
+      process:
+        target_id: fid
+  field_url:
+    -
+      plugin: field_link
+      source: field_url
+destination:
+  plugin: 'entity_complete:node'
+  translations: true
+  default_bundle: corporate_partner
+migration_dependencies:
+  required:
+    - upgrade_d7_user
+    - upgrade_d7_node_type
+  optional:
+    - upgrade_d7_field_instance

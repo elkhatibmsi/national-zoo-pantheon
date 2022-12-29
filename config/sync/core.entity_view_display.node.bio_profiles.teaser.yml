@@ -1,0 +1,46 @@
+uuid: 7603acfc-b0de-4053-b013-cb984f5bdc04
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.bio_profiles.body
+    - field.field.node.bio_profiles.field_bio_profile_link
+    - field.field.node.bio_profiles.field_bio_profile_type
+    - field.field.node.bio_profiles.field_center_affiliation
+    - field.field.node.bio_profiles.field_center_and_staff_category
+    - field.field.node.bio_profiles.field_education
+    - field.field.node.bio_profiles.field_headshot
+    - field.field.node.bio_profiles.field_position
+    - field.field.node.bio_profiles.field_si_profiles_id
+    - node.type.bio_profiles
+  module:
+    - text
+    - user
+id: node.bio_profiles.teaser
+targetEntityType: node
+bundle: bio_profiles
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_bio_profile_link: true
+  field_bio_profile_type: true
+  field_center_affiliation: true
+  field_center_and_staff_category: true
+  field_education: true
+  field_headshot: true
+  field_position: true
+  field_si_profiles_id: true

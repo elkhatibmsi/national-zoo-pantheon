@@ -1,0 +1,39 @@
+uuid: acbf4e74-3534-459f-bdbb-acaffae364d2
+langcode: und
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_product_region
+field_name: field_product_region
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: Africa
+      label: Africa
+    -
+      value: Asia
+      label: Asia
+    -
+      value: 'Central America'
+      label: 'Central America'
+    -
+      value: 'Central/South America'
+      label: 'Central/South America'
+    -
+      value: India
+      label: India
+    -
+      value: 'South America'
+      label: 'South America'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,8 @@
+uuid: 387d0184-7382-4d9c-8fdf-58de4f3163e9
+langcode: en
+status: true
+dependencies: {  }
+name: 'Hours Types'
+vid: hours_types
+description: ''
+weight: 0

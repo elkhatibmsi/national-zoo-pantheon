@@ -1,0 +1,21 @@
+uuid: b269b33c-46b5-4491-8938-a0d98cd26941
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_nearby
+    - node.type.exhibit
+  module:
+    - text
+id: node.exhibit.field_nearby
+field_name: field_nearby
+entity_type: node
+bundle: exhibit
+label: Nearby
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

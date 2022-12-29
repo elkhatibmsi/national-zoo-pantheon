@@ -1,0 +1,7 @@
+filter_settings.nzp_migrations_config_filter:
+  type: filter
+  label: 'Config Filter filter'
+  mapping:
+    example:
+      type: string
+      label: Example

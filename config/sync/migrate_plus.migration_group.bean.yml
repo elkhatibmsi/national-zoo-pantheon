@@ -1,0 +1,10 @@
+uuid: af68c746-e55f-4623-9bf1-3be5888837e6
+langcode: en
+status: true
+dependencies: {  }
+id: bean
+label: Bean
+description: null
+source_type: null
+module: null
+shared_configuration: null

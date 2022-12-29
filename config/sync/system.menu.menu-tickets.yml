@@ -1,0 +1,8 @@
+uuid: ad5ecf50-9375-49c7-a314-ec3cc7156c8a
+langcode: en
+status: true
+dependencies: {  }
+id: menu-tickets
+label: Tickets
+description: 'Appear at the bottom of every page'
+locked: false

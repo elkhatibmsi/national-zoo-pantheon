@@ -1,0 +1,20 @@
+{#
+this blockquote component has a style block in order to style descendant selectors
+#}
+
+<style>
+    blockquote {
+        border-left: 5px solid #f8f8f8;
+        font-size: 1.25em;
+        font-style: normal;
+    }
+    blockquote p {
+        margin-bottom: 0;
+    }
+</style>
+
+{% if content %}
+    <blockquote class="mb2 pt1 pr2 pb1 pl2">
+        {{ content }}      
+    </blockquote>
+{% endif %}

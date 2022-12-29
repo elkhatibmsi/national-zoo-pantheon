@@ -1,0 +1,30 @@
+uuid: c691a139-06ac-4213-9b4c-1d659e4b0ff9
+langcode: en
+status: true
+dependencies:
+  module:
+    - layout_paragraphs
+    - micon_paragraphs
+third_party_settings:
+  micon_paragraphs:
+    icon: ''
+id: section
+label: Section
+icon_uuid: null
+icon_default: null
+description: 'Migrated from paragraph bundle Section'
+behavior_plugins:
+  layout_paragraphs:
+    enabled: true
+    available_layouts:
+      layout_blank: 'nzp blank container'
+      layout_nzp_one_col: 'nzp One Column'
+      layout_nzp_two_col: 'nzp Two Column'
+      layout_nzp_three_col: 'nzp Three Column'
+      layout_masonry: 'Masonry Grid'
+      layout_accordion: Accordion
+      layout_blockquote: Blockquote
+      layout_callout: Callout
+      layout_card_banner: 'Card Banner'
+      layout_grid: Grid
+      layout_image_with_caption: 'Image w/ Caption'

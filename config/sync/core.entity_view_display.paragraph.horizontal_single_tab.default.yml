@@ -1,0 +1,33 @@
+uuid: ab8cc788-4258-4e8e-8a29-d6a55f9d04d3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.horizontal_single_tab.field_h_tab_content
+    - field.field.paragraph.horizontal_single_tab.field_h_tab_label
+    - paragraphs.paragraphs_type.horizontal_single_tab
+  module:
+    - entity_reference_revisions
+id: paragraph.horizontal_single_tab.default
+targetEntityType: paragraph
+bundle: horizontal_single_tab
+mode: default
+content:
+  field_h_tab_content:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: full
+      link: ''
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_h_tab_label:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

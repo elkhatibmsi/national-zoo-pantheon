@@ -1,0 +1,8 @@
+uuid: ab0cc33b-ce6e-42e5-b010-2a13ef25b462
+langcode: en
+status: true
+dependencies: {  }
+id: footer-donate
+label: 'Footer Donate'
+description: ''
+locked: false

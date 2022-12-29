@@ -1,0 +1,19 @@
+uuid: b052db06-96c3-4d73-a93d-396c778e7032
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_elevation
+    - node.type.coffee_purveyor
+id: node.coffee_purveyor.field_elevation
+field_name: field_elevation
+entity_type: node
+bundle: coffee_purveyor
+label: Elevation
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

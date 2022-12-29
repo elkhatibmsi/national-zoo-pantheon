@@ -1,0 +1,21 @@
+{#
+ /**
+  * @file
+  * Contains theme representation of control bar
+  *
+  * Available variables:
+  *  - results - the search results
+  */
+#}
+<div class="smithsonian-appliance-results-control-bar clearfix">
+    <div class="container-inline smithsonian-appliance-search-stats">
+        {{ results.getStatistics }}
+    </div>
+
+
+    <div class="container-inline smithsonian-appliance-sort-headers hidden">
+        {% for sortLink in results.getSortLinks  %}
+            <div class="smithsonian-appliance-sorter">{{ sortLink }}</div>
+        {% endfor %}
+    </div>
+</div>

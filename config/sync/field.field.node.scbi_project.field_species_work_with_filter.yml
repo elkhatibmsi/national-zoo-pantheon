@@ -1,0 +1,23 @@
+uuid: 6ae99e54-2610-465b-88f3-03a4c939e257
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_species_work_with_filter
+    - node.type.scbi_project
+id: node.scbi_project.field_species_work_with_filter
+field_name: field_species_work_with_filter
+entity_type: node
+bundle: scbi_project
+label: 'Add ''species we work with filter'' to subproject list'
+description: 'Check this box to add a dropdown filter above the subprojects list (if any) that will filter the list by the values contained in the "species we work with" and "other species" fields of those projects.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: ''
+  off_label: ''
+field_type: boolean

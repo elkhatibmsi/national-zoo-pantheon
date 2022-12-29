@@ -1,0 +1,109 @@
+uuid: 8bc19d70-a815-46d6-b7ea-326a43ee3368
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.info_card
+    - field.field.node.bio_profiles.body
+    - field.field.node.bio_profiles.field_bio_profile_link
+    - field.field.node.bio_profiles.field_bio_profile_type
+    - field.field.node.bio_profiles.field_center_affiliation
+    - field.field.node.bio_profiles.field_center_and_staff_category
+    - field.field.node.bio_profiles.field_education
+    - field.field.node.bio_profiles.field_headshot
+    - field.field.node.bio_profiles.field_position
+    - field.field.node.bio_profiles.field_si_profiles_id
+    - node.type.bio_profiles
+  module:
+    - field_group
+    - layout_builder
+    - micon_link
+    - text_field_formatter
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+  field_group:
+    group_blue_box:
+      children:
+        - field_position
+        - field_center_affiliation
+        - field_education
+        - field_bio_profile_link
+      label: 'Blue Box'
+      parent_name: ''
+      region: content
+      weight: 0
+      format_type: html_element
+      format_settings:
+        classes: 'bg-oxford-blue knockout'
+        show_empty_fields: false
+        id: ''
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+id: node.bio_profiles.info_card
+targetEntityType: node
+bundle: bio_profiles
+mode: info_card
+content:
+  field_bio_profile_link:
+    type: micon_link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: '0'
+      target: _blank
+      title: ''
+      icon: fa-external-link
+      position: after
+      text_only: 0
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_center_affiliation:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_education:
+    type: text_field_formatter
+    label: hidden
+    settings:
+      wrap_tag: h4
+      wrap_class: m-0
+      wrap_attributes: ''
+      override_link_label: ''
+      link_to_entity: 0
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_position:
+    type: text_field_formatter
+    label: hidden
+    settings:
+      wrap_tag: h3
+      wrap_class: m-0
+      wrap_attributes: ''
+      override_link_label: ''
+      link_to_entity: 0
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  body: true
+  field_bio_profile_type: true
+  field_center_and_staff_category: true
+  field_headshot: true
+  field_si_profiles_id: true
+  links: true

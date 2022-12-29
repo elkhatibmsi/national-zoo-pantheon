@@ -1,0 +1,10 @@
+uuid: f09eb598-9943-48f4-bfbc-369271319232
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.info_card
+label: info_card
+targetEntityType: node
+cache: true

@@ -1,0 +1,21 @@
+uuid: f97a0c03-7ae9-4e8f-9659-085b0433e361
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_times
+    - paragraphs.paragraphs_type.class_session
+  module:
+    - datetime
+id: paragraph.class_session.field_times
+field_name: field_times
+entity_type: paragraph
+bundle: class_session
+label: Times
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

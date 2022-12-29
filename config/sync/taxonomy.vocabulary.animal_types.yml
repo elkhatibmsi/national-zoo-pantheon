@@ -1,0 +1,8 @@
+uuid: 732b4342-e0a8-40d5-8258-32ee55668e42
+langcode: en
+status: true
+dependencies: {  }
+name: 'Animal Types'
+vid: animal_types
+description: 'Birds, Mammals, etc.'
+weight: 0

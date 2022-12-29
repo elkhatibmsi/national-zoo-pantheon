@@ -1,0 +1,20 @@
+<div class="teaser--card rounded overflow-hidden shadow-lg relative">
+  <a href="{{ link }}" class="flex flex-row flex-wrap">
+    <div class="w-full teaser-card--topbar px-2 py-4 flex justify-between items-center border-t-4 border-{{
+      bar_color
+      }}">
+      <strong>{{ title }}</strong> <span class="text-xl">{{ icon }}</span>
+    </div>
+    <div class="teaser--image w-full bottom-0 left-0 h-[200px] overflow-hidden">
+      {{ image }}
+    </div>
+  </a>
+      {% if showdescription == true %}
+  <div class="px-6 py-4">
+      <div class="teaser--card-description">
+        {{ description }}
+      </div>
+  </div>
+      {% endif %}
+
+</div>

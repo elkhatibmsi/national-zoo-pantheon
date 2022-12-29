@@ -1,0 +1,33 @@
+uuid: 1a2215f7-ad24-4a2b-88cd-bb4fd3208d29
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.full_html
+    - node.type.event
+  module:
+    - contextual
+    - filter
+    - node
+    - system
+id: author_event
+label: 'author - event'
+weight: 6
+is_admin: null
+permissions:
+  - 'access administration menu'
+  - 'access administration pages'
+  - 'access contextual links'
+  - 'create event content'
+  - 'create files'
+  - 'edit any event content'
+  - 'edit any event_comestibles bean'
+  - 'edit own event content'
+  - 'use text format filtered_html'
+  - 'use text format full_html'
+  - 'view all unpublished content'
+  - 'view any event_comestibles bean'
+  - 'view bean revisions'
+  - 'view files'
+  - 'view moderation messages'
+  - 'view the administration theme'

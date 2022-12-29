@@ -1,0 +1,23 @@
+uuid: df8ec173-7e29-4983-aaa4-9d2f751ac302
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_coffee_retail_roaster_link
+    - node.type.coffee_retailer
+  module:
+    - link
+id: node.coffee_retailer.field_coffee_retail_roaster_link
+field_name: field_coffee_retail_roaster_link
+entity_type: node
+bundle: coffee_retailer
+label: 'Coffee Retail Roaster Link'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 0
+  link_type: 17
+field_type: link

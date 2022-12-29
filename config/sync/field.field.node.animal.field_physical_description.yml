@@ -1,0 +1,21 @@
+uuid: c5b1b6b5-bb40-4c03-b4e8-02c54c24512d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_physical_description
+    - node.type.animal
+  module:
+    - text
+id: node.animal.field_physical_description
+field_name: field_physical_description
+entity_type: node
+bundle: animal
+label: 'Physical Description'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

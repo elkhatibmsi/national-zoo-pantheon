@@ -1,0 +1,14 @@
+uuid: 7a370059-7269-4755-a748-c1a6615954d1
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.ocio_administrator
+  module:
+    - user
+id: user_remove_role_action.ocio_administrator
+label: 'Remove the OCIO administrator role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: ocio_administrator

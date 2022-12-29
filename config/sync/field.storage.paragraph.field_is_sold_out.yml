@@ -1,0 +1,18 @@
+uuid: 212be2f9-7a27-419e-9512-4b06e793a3a1
+langcode: und
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.field_is_sold_out
+field_name: field_is_sold_out
+entity_type: paragraph
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

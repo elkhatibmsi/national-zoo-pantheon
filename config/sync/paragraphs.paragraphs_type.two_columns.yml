@@ -1,0 +1,15 @@
+uuid: f0f647fb-1dbe-479a-aed2-65d09278d846
+langcode: en
+status: true
+dependencies:
+  module:
+    - layout_paragraphs
+id: two_columns
+label: 'Two Columns'
+icon_uuid: null
+icon_default: null
+description: 'Migrated from paragraph bundle Two Columns'
+behavior_plugins:
+  layout_paragraphs:
+    enabled: false
+    available_layouts: {  }

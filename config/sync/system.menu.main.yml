@@ -1,0 +1,10 @@
+uuid: ea48b0ba-1e90-4cce-9685-7b479f76933e
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: Q2Ra3jfoIVk0f3SjxJX61byRQFVBAbpzYDQOiY-kno8
+id: main
+label: 'Main menu'
+description: 'A master menu showing all sections and major pages. Sort of like a site map. Not really like a site map.'
+locked: true

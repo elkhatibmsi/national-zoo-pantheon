@@ -1,0 +1,26 @@
+uuid: ca46d7c2-7967-43b7-983d-3f10559927f8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_venue_media
+    - media.type.image
+    - media.type.video
+    - node.type.venue
+id: node.venue.field_venue_media
+field_name: field_venue_media
+entity_type: node
+bundle: venue
+label: 'Venue Media'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+      video: video
+field_type: entity_reference

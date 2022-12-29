@@ -1,0 +1,54 @@
+uuid: 49b16e77-06c1-4b39-ac8e-1ecbbe2f14f4
+langcode: und
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_taxonomic_class
+field_name: field_taxonomic_class
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: Amphibia
+      label: Amphibia
+    -
+      value: Anthozoa
+      label: Anthozoa
+    -
+      value: Aves
+      label: Aves
+    -
+      value: Malacostraca
+      label: Malacostraca
+    -
+      value: Mammalia
+      label: Mammalia
+    -
+      value: Actinopterygii
+      label: Actinopterygii
+    -
+      value: Anura
+      label: Anura
+    -
+      value: Arachnida
+      label: Arachnida
+    -
+      value: Chondrichthyes
+      label: Chondrichthyes
+    -
+      value: Reptilia
+      label: Reptilia
+    -
+      value: Teleostei
+      label: Teleostei
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,21 @@
+uuid: b6f82876-0f66-4e57-a87b-0fb3df918a6d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_benefits
+    - taxonomy.vocabulary.membership_levels
+  module:
+    - options
+id: taxonomy_term.membership_levels.field_benefits
+field_name: field_benefits
+entity_type: taxonomy_term
+bundle: membership_levels
+label: Benefits
+description: 'Select the benefits for this level. Membership offers for this level will inherit these benefits.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

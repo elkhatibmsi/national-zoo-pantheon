@@ -1,0 +1,41 @@
+{#
+/**
+ * @file
+ * nzp Tabbed Theme interface
+ *
+ * This template provides a tab interface
+ * the top, bottom and in the middle.
+ *
+ * Available variables:
+ * - content: The content for this layout.
+ * - attributes: HTML attributes for the layout <div>.
+ *
+ * @ingroup themeable
+ */
+#}
+{% set tabIndex = settings.num_tabs %}
+
+{% set tab_id = random(10000, 10000000) %}
+
+{%set tab_nav_classes = "nav-link block font-semi-bold leading-tight pr-6  py-2 hover:border-transparent hover:bg-off-white focus:border-transparent" %}
+
+{% if content %}
+		<div class="tab-wrapper container mx-auto p-4">
+			<ul class="nav nav-tabs flex flex-col md:flex-row flex-wrap list-none border-lightestgray border-b-2 pl-0 mb-4" id="tabs-tab" role="tablist" data-tabs="{{tab_id}}">
+				<li class="nav-item" role="presentation">
+					<a class="{{tab_nav_classes}} active" data-tabby-default href="#tab-{{tab_id}}-0">{{ settings.tab_title.tab[0]}}</a>
+				</li>
+				{% for index in range(1, tabIndex-1) %}
+					<li>
+						<a class="{{tab_nav_classes}}" href="#tab-{{tab_id}}-{{index}}">{{ settings.tab_title.tab[index]}}</a>
+					</li>
+				{% endfor %}
+			</ul>
+			{% for index in range(0, tabIndex-1) %}
+				<div {{attribute(region_attributes, 'tab_content_' ~index)}} id="tab-{{tab_id}}-{{index}}">
+					{{ attribute(content, 'tab_content_' ~ index) }}
+				</div>
+			{% endfor %}
+		</div>
+	</section>
+{% endif %}

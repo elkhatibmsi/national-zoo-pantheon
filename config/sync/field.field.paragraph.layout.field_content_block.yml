@@ -1,0 +1,185 @@
+uuid: 4f4f1d59-677c-48ce-a2b7-203e02176df4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_content_block
+    - paragraphs.paragraphs_type.image
+    - paragraphs.paragraphs_type.layout
+    - paragraphs.paragraphs_type.slideshow
+    - paragraphs.paragraphs_type.text
+  module:
+    - entity_reference_revisions
+id: paragraph.layout.field_content_block
+field_name: field_content_block
+entity_type: paragraph
+bundle: layout
+label: 'Section Content'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      image: image
+      slideshow: slideshow
+      text: text
+    negate: 0
+    target_bundles_drag_drop:
+      accordion:
+        weight: 52
+        enabled: false
+      accordion_tabs:
+        weight: 53
+        enabled: false
+      block_embed:
+        weight: 54
+        enabled: false
+      block_embed_no_title:
+        weight: 55
+        enabled: false
+      button_grid:
+        weight: 56
+        enabled: false
+      button_item:
+        weight: 57
+        enabled: false
+      callout:
+        weight: 58
+        enabled: false
+      card_grid:
+        weight: 59
+        enabled: false
+      card_item:
+        weight: 60
+        enabled: false
+      card_item_blank:
+        weight: 61
+        enabled: false
+      cell:
+        weight: 62
+        enabled: false
+      class_session:
+        weight: 63
+        enabled: false
+      collapsible_block:
+        weight: 64
+        enabled: false
+      content_video:
+        weight: 65
+        enabled: false
+      entity_list:
+        weight: 66
+        enabled: false
+      faq:
+        weight: 67
+        enabled: false
+      faq_item:
+        weight: 68
+        enabled: false
+      flipbook_grid:
+        weight: 69
+        enabled: false
+      flipbook_grid_item:
+        weight: 70
+        enabled: false
+      grid:
+        weight: 71
+        enabled: false
+      horizontal_single_tab:
+        weight: 72
+        enabled: false
+      horizontal_tabs:
+        weight: 73
+        enabled: false
+      hours:
+        weight: 74
+        enabled: false
+      icon_card_item:
+        weight: 75
+        enabled: false
+      image:
+        weight: 76
+        enabled: true
+      image_collection:
+        weight: 77
+        enabled: false
+      image_only:
+        weight: 78
+        enabled: false
+      layout:
+        weight: 79
+        enabled: false
+      looping_video:
+        weight: 80
+        enabled: false
+      menu_tabs:
+        weight: 81
+        enabled: false
+      modal_media_gallery:
+        weight: 82
+        enabled: false
+      multi_column_layout_text_:
+        weight: 83
+        enabled: false
+      promotion_one:
+        weight: 84
+        enabled: false
+      promotion_three:
+        weight: 85
+        enabled: false
+      promotion_two:
+        weight: 86
+        enabled: false
+      section:
+        weight: 87
+        enabled: false
+      section_heading:
+        weight: 88
+        enabled: false
+      single_image_with_caption:
+        weight: 89
+        enabled: false
+      slideshow:
+        weight: 90
+        enabled: true
+      slideshow_container:
+        weight: 91
+        enabled: false
+      sponsors:
+        weight: 92
+        enabled: false
+      sticky_anchor_menu:
+        weight: 93
+        enabled: false
+      text:
+        weight: 94
+        enabled: true
+      thumbnail_slideshow:
+        weight: 95
+        enabled: false
+      time_slot:
+        weight: 96
+        enabled: false
+      two_column_grid:
+        weight: 100
+        enabled: false
+      two_columns:
+        weight: 97
+        enabled: false
+      two_columns_40_60:
+        weight: 98
+        enabled: false
+      two_columns_equal:
+        weight: 99
+        enabled: false
+      view_embed:
+        weight: 101
+        enabled: false
+      webcam_embed:
+        weight: 102
+        enabled: false
+field_type: entity_reference_revisions

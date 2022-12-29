@@ -1,0 +1,18 @@
+uuid: b7ada485-d789-425d-9f5c-eab74049f820
+langcode: und
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_product_price
+field_name: field_product_price
+entity_type: node
+type: float
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

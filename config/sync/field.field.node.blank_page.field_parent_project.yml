@@ -1,0 +1,30 @@
+uuid: aa313a5e-d322-417b-9b9b-25062c199cd9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_parent_project
+    - node.type.blank_page
+    - node.type.scbi_project
+id: node.blank_page.field_parent_project
+field_name: field_parent_project
+entity_type: node
+bundle: blank_page
+label: 'Conservation parent project'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      scbi_project: scbi_project
+    sort:
+      field: _none
+      direction: ASC
+    behaviors:
+      views-select-list:
+        status: 0
+field_type: entity_reference

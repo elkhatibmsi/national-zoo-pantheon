@@ -1,0 +1,44 @@
+uuid: 9aaf43c9-528a-444a-8948-a53d919619de
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.storage.position_and_center.field_affiliated_center
+    - field.field.storage.position_and_center.field_position_type
+    - storage.storage_type.position_and_center
+id: storage.position_and_center.default
+targetEntityType: storage
+bundle: position_and_center
+mode: default
+content:
+  field_affiliated_center:
+    type: entity_reference_autocomplete
+    weight: 2
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_position_type:
+    type: entity_reference_autocomplete
+    weight: 1
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  status: true
+  user_id: true

@@ -1,0 +1,8 @@
+uuid: fadce59b-485b-4815-860d-d0d890e127e6
+langcode: en
+status: true
+dependencies: {  }
+id: emergency_message
+label: 'Emergency Message'
+revision: 0
+description: 'Zoo is closed or open late type messages that go at the very top of the web page.'

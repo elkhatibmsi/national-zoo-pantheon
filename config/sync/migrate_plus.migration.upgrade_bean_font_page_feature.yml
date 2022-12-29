@@ -1,0 +1,170 @@
+uuid: 9da59ece-86a4-4ea9-8f8e-88ab634820f7
+langcode: en
+status: true
+dependencies: {  }
+id: upgrade_bean_font_page_feature
+class: Drupal\migrate\Plugin\Migration
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 7'
+  - Content
+migration_group: migrate_drupal_7
+label: 'Bean (Front page feature)'
+source:
+  plugin: bean
+  type: font_page_feature
+process:
+  id:
+    -
+      plugin: migration_lookup
+      migration: upgrade_bean_font_page_feature
+      no_stub: true
+      source: bid
+    -
+      plugin: default_value
+      default_value:
+        - null
+        - null
+        - null
+    -
+      plugin: extract
+      index:
+        - 0
+  revision_id:
+    -
+      plugin: migration_lookup
+      migration: upgrade_bean_font_page_feature
+      no_stub: true
+      source:
+        - bid
+        - vid
+    -
+      plugin: default_value
+      default_value:
+        - null
+        - null
+        - null
+    -
+      plugin: extract
+      index:
+        - 1
+  uuid:
+    -
+      plugin: skip_on_empty
+      method: process
+      source: uuid
+  info:
+    -
+      plugin: get
+      source: label
+  type:
+    -
+      plugin: migration_lookup
+      migration: upgrade_bean_type_font_page_feature
+      no_stub: true
+      source: type
+    -
+      plugin: skip_on_empty
+      method: row
+  langcode:
+    -
+      plugin: default_value
+      source: language
+      default_value: und
+  uid:
+    -
+      plugin: get
+      source: uid
+  status:
+    -
+      plugin: get
+      source: status
+  changed:
+    -
+      plugin: get
+      source: changed
+  revision_user:
+    -
+      plugin: get
+      source: revision_uid
+  revision_log:
+    -
+      plugin: get
+      source: log
+  revision_created:
+    -
+      plugin: get
+      source: created
+  revision_default:
+    -
+      plugin: get
+      source: revision_default
+  content_translation_outdated:
+    -
+      plugin: default_value
+      source: translate
+      default_value: 0
+  content_translation_source:
+    -
+      plugin: default_value
+      source: source_language
+      default_value: und
+  content_translation_created:
+    -
+      plugin: get
+      source: etr_created
+  content_translation_uid:
+    -
+      plugin: get
+      source: etr_uid
+  title:
+    -
+      plugin: null_coalesce
+      source:
+        - title_field
+        - title
+  field_subtitle:
+    -
+      plugin: get
+      source: field_subtitle
+    -
+      plugin: media_wysiwyg_filter
+  field_landing_image:
+    -
+      plugin: media_migration_delta_sort
+      source: field_landing_image
+    -
+      plugin: sub_process
+      process:
+        target_id: fid
+  field_intro_text:
+    -
+      plugin: get
+      source: field_intro_text
+    -
+      plugin: media_wysiwyg_filter
+  field_url:
+    -
+      plugin: field_link
+      source: field_url
+  field_modal_iframe:
+    -
+      plugin: get
+      source: field_modal_iframe
+destination:
+  plugin: 'entity_complete:block_content'
+  translations: true
+migration_dependencies:
+  required:
+    - upgrade_bean_type_font_page_feature
+    - upgrade_bean_title_field_instance_font_page_feature
+  optional:
+    - upgrade_bean_title_field_formatter_font_page_feature
+    - upgrade_bean_title_field_widget_font_page_feature
+    - upgrade_d7_field_instance_widget_settings
+    - upgrade_d7_field_formatter_settings
+    - upgrade_d7_field_instance
+    - upgrade_d7_user
+    - upgrade_bean_font_page_feature
+    - upgrade_bean_type_font_page_feature

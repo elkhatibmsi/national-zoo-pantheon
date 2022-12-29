@@ -1,0 +1,19 @@
+uuid: 785e60a4-4cd8-41b9-ba84-d2df6415c605
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_path_to_landing_page
+    - taxonomy.vocabulary.website_areas
+id: taxonomy_term.website_areas.field_path_to_landing_page
+field_name: field_path_to_landing_page
+entity_type: taxonomy_term
+bundle: website_areas
+label: 'Path to landing page'
+description: 'If this website area has a landing page, enter the URL here. If it is an internal path, do not include the domain or the leading slash, e.g. just enter ''migratory-birds''. If it is an external path, enter the entire path, e.g. ''https://smconservation.gmu.edu/''.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

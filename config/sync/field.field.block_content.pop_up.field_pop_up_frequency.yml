@@ -1,0 +1,25 @@
+uuid: f7b1b457-7160-4431-849f-6ca51f696c22
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.pop_up
+    - field.storage.block_content.field_pop_up_frequency
+id: block_content.pop_up.field_pop_up_frequency
+field_name: field_pop_up_frequency
+entity_type: block_content
+bundle: pop_up
+label: 'Pop Up Frequency'
+description: 'enter in minutes, when this popup can appear again to users. Defaults to 60 mins.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 60
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

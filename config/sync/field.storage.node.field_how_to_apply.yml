@@ -1,0 +1,19 @@
+uuid: 6fc208cb-ca60-4255-a1a7-0bafa20985b4
+langcode: und
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_how_to_apply
+field_name: field_how_to_apply
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,23 @@
+uuid: 66ea52d3-6503-4808-9327-e8e3af18a0aa
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_minimum_age
+    - node.type.class
+id: node.class.field_minimum_age
+field_name: field_minimum_age
+entity_type: node
+bundle: class
+label: 'Minimum age'
+description: 'Enter the minimum age for this class. Must be a number 2 - 18. If you enter "18", it will appear as "adult" on the front end.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 0
+  max: 18
+  prefix: ''
+  suffix: ''
+field_type: integer

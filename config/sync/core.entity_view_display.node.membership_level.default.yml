@@ -1,0 +1,131 @@
+uuid: 97bc0b18-6acd-40bb-90b6-adfa5162b708
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.membership_level.body
+    - field.field.node.membership_level.field_cost
+    - field.field.node.membership_level.field_editorial_access
+    - field.field.node.membership_level.field_landing_image
+    - field.field.node.membership_level.field_membership_length
+    - field.field.node.membership_level.field_membership_level
+    - field.field.node.membership_level.field_title_override
+    - field.field.node.membership_level.field_tnew_id
+    - field.field.node.membership_level.field_tnew_id_gift
+    - field.field.node.membership_level.field_tnew_id_join_senior
+    - field.field.node.membership_level.field_tnew_id_renew
+    - field.field.node.membership_level.field_tnew_id_renew_senior
+    - field.field.node.membership_level.field_upsell_level
+    - node.type.membership_level
+  module:
+    - text
+    - user
+id: node.membership_level.default
+targetEntityType: node
+bundle: membership_level
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_cost:
+    type: number_decimal
+    label: hidden
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_landing_image:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 20
+    region: content
+  field_membership_level:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 18
+    region: content
+  field_title_override:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 21
+    region: content
+  field_tnew_id:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 14
+    region: content
+  field_tnew_id_gift:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 17
+    region: content
+  field_tnew_id_join_senior:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 15
+    region: content
+  field_tnew_id_renew:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 16
+    region: content
+  field_tnew_id_renew_senior:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 19
+    region: content
+  field_upsell_level:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 11
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_editorial_access: true
+  field_membership_length: true

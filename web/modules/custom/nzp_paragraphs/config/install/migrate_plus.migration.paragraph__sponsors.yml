@@ -1,0 +1,30 @@
+uuid: e1930e18-ece1-401b-a1ac-29a5e4fb52c8
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - nzp_paragraphs
+id: paragraph__sponsors
+class: null
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - Paragraphs
+migration_group: nzp_paragraphs
+label: 'sponsors paragraphs'
+source:
+  plugin: d7_field_collection_item
+  key: migrate
+  field_name: field_sponsors
+process:
+  target_id: target_id
+  revision_id: revision_id
+  field_sponsor_title: field_text
+  field_sponsors_content: field_sponsors_content
+destination:
+  plugin: 'entity_reference_revisions:paragraph'
+  default_bundle: sponsors
+migration_dependencies:
+  required: {  }
+  optional: {  }

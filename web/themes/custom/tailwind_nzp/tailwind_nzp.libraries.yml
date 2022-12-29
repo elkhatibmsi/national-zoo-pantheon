@@ -1,0 +1,66 @@
+global:
+  version: 1.x
+  header: true
+  css:
+    theme:
+      dist/css/style.css: {}
+  js:
+    dist/js/bundle.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+
+tailwindcss:
+  remote: https://tailwindcss.com
+  license:
+    name: MIT
+    version: 2.0.2
+    url: https://tailwindcss.com
+    gpl-compatible: true
+  css:
+    theme:
+      https://unpkg.com/tailwindcss@2.0.2/dist/tailwind.min.css: {type: external, minified: true}
+
+alpinejs:
+  header: false
+  remote: https://alpinejs.dev/
+  version: 3.4.2
+  license:
+    name: MIT
+    url: https://alpinejs.dev
+    gpl-compatible: true
+  js:
+    https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.4.2/cdn.js: { type: external, minified: true }
+
+
+swiperjs:
+  header: true
+  remote: https://swiperjs.com/
+  version: 6.8.4
+  license:
+    name: MIT
+    url: https://swiperjs.com
+    gpl-compatible: true
+  css:
+    theme:
+      https://unpkg.com/swiper@6.8.4/swiper-bundle.min.css: {type: external, minified: true}
+  js:
+    https://unpkg.com/swiper@6.8.4/swiper-bundle.min.js: { type: external, minified: true }
+
+alpine_accordion:
+  version: 1.x
+  header: true
+  js:
+    src/js/accordion.js: {}
+
+alpine_h_tabs:
+  version: 1.x
+  header: true
+  js:
+    src/js/h_tabs.js: {}
+
+alpine_mm_dropdown:
+  version: 1.x
+  header: true
+  js:
+    src/js/mm_dropdown.js: {}

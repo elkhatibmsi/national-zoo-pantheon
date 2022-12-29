@@ -1,0 +1,15 @@
+uuid: c8ff36f7-b96e-4a0c-99c5-e4f61391a3b2
+langcode: en
+status: true
+dependencies:
+  module:
+    - micon_paragraphs
+third_party_settings:
+  micon_paragraphs:
+    icon: ''
+id: class_session
+label: 'Class session'
+icon_uuid: null
+icon_default: null
+description: 'Migrated from field_collection field_class_session'
+behavior_plugins: {  }

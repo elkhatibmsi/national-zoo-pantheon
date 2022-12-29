@@ -1,0 +1,31 @@
+uuid: 54bbc9b2-2cde-4d07-8469-1caef5e2ea8b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_media_release_image
+    - media.type.image
+    - media.type.image_http
+    - node.type.media_release
+id: node.media_release.field_media_release_image
+field_name: field_media_release_image
+entity_type: node
+bundle: media_release
+label: 'Media Release Image'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+      image_http: image_http
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: image
+field_type: entity_reference

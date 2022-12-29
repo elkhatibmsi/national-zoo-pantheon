@@ -1,0 +1,19 @@
+uuid: 439c6648-0f8f-46f2-9fd8-ec612b97dc73
+langcode: und
+status: true
+dependencies:
+  module:
+    - link
+    - paragraphs
+id: paragraph.field_icon_grid_link
+field_name: field_icon_grid_link
+entity_type: paragraph
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

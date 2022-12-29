@@ -1,0 +1,60 @@
+uuid: deafc473-db9e-4835-9d2d-b9fa79786372
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.coffee_product.body
+    - field.field.node.coffee_product.field_product_amazon_link
+    - field.field.node.coffee_product.field_product_flavor_notes
+    - field.field.node.coffee_product.field_product_image
+    - field.field.node.coffee_product.field_product_price
+    - field.field.node.coffee_product.field_product_properties
+    - field.field.node.coffee_product.field_product_region
+    - field.field.node.coffee_product.field_product_roast
+    - field.field.node.coffee_product.field_product_roaster
+    - field.field.node.coffee_product.field_product_roaster_descriptio
+    - field.field.node.coffee_product.field_product_roaster_link
+    - field.field.node.coffee_product.field_product_unit
+    - field.field.node.coffee_product.field_product_wholesale
+    - node.type.coffee_product
+  module:
+    - text
+    - user
+id: node.coffee_product.teaser
+targetEntityType: node
+bundle: coffee_product
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_product_roaster_descriptio:
+    type: basic_string
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_product_amazon_link: true
+  field_product_flavor_notes: true
+  field_product_image: true
+  field_product_price: true
+  field_product_properties: true
+  field_product_region: true
+  field_product_roast: true
+  field_product_roaster: true
+  field_product_roaster_link: true
+  field_product_unit: true
+  field_product_wholesale: true

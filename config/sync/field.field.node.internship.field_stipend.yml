@@ -1,0 +1,22 @@
+uuid: b01ee91c-5ce9-4cea-b888-74f438b974a8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_stipend
+    - node.type.internship
+id: node.internship.field_stipend
+field_name: field_stipend
+entity_type: node
+bundle: internship
+label: Stipend
+description: 'Enter the internship stipend'
+required: true
+translatable: false
+default_value:
+  -
+    value: "This is an unpaid internship. Special consideration will be given to applicants who receive college credit for internship. Intern is responsible for obtaining necessary approvals from their university. Intern will be responsible for all transportation costs and personal health insurance.\r\n"
+    format: full_html
+default_value_callback: ''
+settings: {  }
+field_type: string_long

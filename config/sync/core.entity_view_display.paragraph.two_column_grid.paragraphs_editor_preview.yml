@@ -1,0 +1,35 @@
+uuid: b9b8142f-0484-4f5f-91ac-51a708823750
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.paragraphs_editor_preview
+    - field.field.paragraph.two_column_grid.field_column_one_single
+    - field.field.paragraph.two_column_grid.field_column_two_single
+    - paragraphs.paragraphs_type.two_column_grid
+  module:
+    - entity_reference_revisions
+id: paragraph.two_column_grid.paragraphs_editor_preview
+targetEntityType: paragraph
+bundle: two_column_grid
+mode: paragraphs_editor_preview
+content:
+  field_column_one_single:
+    type: entity_reference_revisions_entity_view
+    label: above
+    settings:
+      view_mode: full
+      link: ''
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_column_two_single:
+    type: entity_reference_revisions_entity_view
+    label: above
+    settings:
+      view_mode: full
+      link: ''
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden: {  }

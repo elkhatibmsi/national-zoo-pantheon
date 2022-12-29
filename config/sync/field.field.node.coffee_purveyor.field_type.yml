@@ -1,0 +1,21 @@
+uuid: 28d88393-2b51-4a6c-9ed4-96e1c91997d7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_type
+    - node.type.coffee_purveyor
+  module:
+    - options
+id: node.coffee_purveyor.field_type
+field_name: field_type
+entity_type: node
+bundle: coffee_purveyor
+label: Type
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,14 @@
+uuid: f860e4c8-6071-4d6c-bf40-0f6456d030f6
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.author_bios
+  module:
+    - user
+id: user_remove_role_action.author_bios
+label: 'Remove the author - bios role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: author_bios

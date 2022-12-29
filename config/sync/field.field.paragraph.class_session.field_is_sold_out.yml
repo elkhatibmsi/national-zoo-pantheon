@@ -1,0 +1,23 @@
+uuid: a6400914-7ee1-4be4-9983-430c8fa6c09d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_is_sold_out
+    - paragraphs.paragraphs_type.class_session
+id: paragraph.class_session.field_is_sold_out
+field_name: field_is_sold_out
+entity_type: paragraph
+bundle: class_session
+label: 'Session is Sold Out?'
+description: "Check this box to inform users that the session is sold out. This will disable the button's functionality. \r\n"
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: '1'
+  off_label: '0'
+field_type: boolean

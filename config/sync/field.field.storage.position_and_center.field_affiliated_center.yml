@@ -1,0 +1,29 @@
+uuid: 9ae9e92f-48c3-451b-b360-d2d8e325ecf1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.storage.field_affiliated_center
+    - storage.storage_type.position_and_center
+    - taxonomy.vocabulary.website_areas
+id: storage.position_and_center.field_affiliated_center
+field_name: field_affiliated_center
+entity_type: storage
+bundle: position_and_center
+label: 'Affiliated Center'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      website_areas: website_areas
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

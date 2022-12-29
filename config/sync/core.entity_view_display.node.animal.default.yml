@@ -1,0 +1,919 @@
+uuid: 04047740-49ea-4ef4-8645-f41f6ace4288
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.animal.body
+    - field.field.node.animal.field_animal_type
+    - field.field.node.animal.field_card_position
+    - field.field.node.animal.field_communication
+    - field.field.node.animal.field_conservation_efforts
+    - field.field.node.animal.field_editorial_access
+    - field.field.node.animal.field_exhibit
+    - field.field.node.animal.field_featured_video
+    - field.field.node.animal.field_feeding_time
+    - field.field.node.animal.field_food_eating_habits
+    - field.field.node.animal.field_fun_facts
+    - field.field.node.animal.field_genus_and_species
+    - field.field.node.animal.field_help_this_species
+    - field.field.node.animal.field_image
+    - field.field.node.animal.field_image_media
+    - field.field.node.animal.field_image_s_media
+    - field.field.node.animal.field_iucn_designation
+    - field.field.node.animal.field_lifespan
+    - field.field.node.animal.field_meet_the_animals
+    - field.field.node.animal.field_modal_gallery
+    - field.field.node.animal.field_native_habitat
+    - field.field.node.animal.field_nzp_location
+    - field.field.node.animal.field_physical_description
+    - field.field.node.animal.field_reproduction_developme
+    - field.field.node.animal.field_size
+    - field.field.node.animal.field_sleep_habits
+    - field.field.node.animal.field_social_structure
+    - field.field.node.animal.field_taxonomic_class
+    - field.field.node.animal.field_taxonomic_family
+    - field.field.node.animal.field_taxonomic_order
+    - node.type.animal
+    - views.view.media_release_and_news
+  module:
+    - ctools
+    - entity_reference_revisions
+    - image
+    - layout_builder
+    - layout_builder_restrictions
+    - nzp_layouts
+    - options
+    - system
+    - text
+    - user
+    - views
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: layout_card_banner
+        layout_settings:
+          context_mapping: {  }
+          custom_classes: ''
+          region_classes:
+            card: col-md-12
+            banner: col-md-12
+          container_classes: container
+          html_container_elements: div
+          html_region_elements:
+            card: div
+            banner: div
+          background_color: bg-none
+          region_background_color: null
+        components:
+          1f5850cd-d15d-41d5-9778-3b8d0e79d82d:
+            uuid: 1f5850cd-d15d-41d5-9778-3b8d0e79d82d
+            region: card
+            configuration:
+              id: 'field_block:node:animal:title'
+              label: Title
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: text_field_formatter
+                label: hidden
+                settings:
+                  link_to_entity: 0
+                  wrap_tag: h2
+                  wrap_class: ''
+                  wrap_attributes: ''
+                  override_link_label: ''
+                  token: ''
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          857aa1a5-cf6a-4621-a2b9-81f720eb20b0:
+            uuid: 857aa1a5-cf6a-4621-a2b9-81f720eb20b0
+            region: card
+            configuration:
+              id: 'field_block:node:animal:field_genus_and_species'
+              label: 'Genus and Species'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: text_field_formatter
+                label: hidden
+                settings:
+                  link_to_entity: 0
+                  wrap_tag: h4
+                  wrap_class: ''
+                  wrap_attributes: ''
+                  override_link_label: ''
+                  token: ''
+                third_party_settings: {  }
+            weight: 2
+            additional: {  }
+          bf97174c-9bfa-4156-a75c-1a65e155b3de:
+            uuid: bf97174c-9bfa-4156-a75c-1a65e155b3de
+            region: content
+            configuration:
+              id: 'extra_field_block:node:animal:content_moderation_control'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+            weight: 0
+            additional: {  }
+          09a84ff1-5429-4ab6-84ce-a0e5f4a53b33:
+            uuid: 09a84ff1-5429-4ab6-84ce-a0e5f4a53b33
+            region: card
+            configuration:
+              id: 'field_block:node:animal:field_exhibit'
+              label: Exhibit
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: entity_reference_label
+                label: hidden
+                settings:
+                  link: true
+                third_party_settings: {  }
+            weight: 3
+            additional: {  }
+          6016475d-3591-49fc-bfdd-fd4f6bb94aa3:
+            uuid: 6016475d-3591-49fc-bfdd-fd4f6bb94aa3
+            region: content
+            configuration:
+              id: 'field_block:node:animal:field_physical_description'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: text_default
+                label: above
+                settings: {  }
+                third_party_settings: {  }
+            weight: 2
+            additional: {  }
+          e0679085-b6cb-4cc7-9d4a-d02c40a440b0:
+            uuid: e0679085-b6cb-4cc7-9d4a-d02c40a440b0
+            region: content
+            configuration:
+              id: 'field_block:node:animal:field_social_structure'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: text_default
+                label: above
+                settings: {  }
+                third_party_settings: {  }
+            weight: 3
+            additional: {  }
+          fc641b92-4b98-4aa5-9225-bab7bb7c8748:
+            uuid: fc641b92-4b98-4aa5-9225-bab7bb7c8748
+            region: content
+            configuration:
+              id: 'field_block:node:animal:field_feeding_time'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: string
+                label: above
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            weight: 4
+            additional: {  }
+          d70cd672-5350-4312-af50-0fd708a60319:
+            uuid: d70cd672-5350-4312-af50-0fd708a60319
+            region: content
+            configuration:
+              id: 'field_block:node:animal:field_fun_facts'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: text_default
+                label: above
+                settings: {  }
+                third_party_settings: {  }
+            weight: 5
+            additional: {  }
+          24d785cc-6458-4bff-a790-3b39631534d6:
+            uuid: 24d785cc-6458-4bff-a790-3b39631534d6
+            region: content
+            configuration:
+              id: 'field_block:node:animal:field_lifespan'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: text_default
+                label: above
+                settings: {  }
+                third_party_settings: {  }
+            weight: 6
+            additional: {  }
+          8f60d221-c983-481e-9974-c71957af8897:
+            uuid: 8f60d221-c983-481e-9974-c71957af8897
+            region: content
+            configuration:
+              id: 'field_block:node:animal:field_communication'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: text_default
+                label: above
+                settings: {  }
+                third_party_settings: {  }
+            weight: 7
+            additional: {  }
+          6ae9a988-4bc8-48c6-b540-72284e5ed3d7:
+            uuid: 6ae9a988-4bc8-48c6-b540-72284e5ed3d7
+            region: content
+            configuration:
+              id: 'field_block:node:animal:field_reproduction_developme'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: text_default
+                label: above
+                settings: {  }
+                third_party_settings: {  }
+            weight: 8
+            additional: {  }
+          09418ca1-bd27-490e-8b23-9fe061f366ff:
+            uuid: 09418ca1-bd27-490e-8b23-9fe061f366ff
+            region: content
+            configuration:
+              id: 'field_block:node:animal:field_food_eating_habits'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: text_default
+                label: above
+                settings: {  }
+                third_party_settings: {  }
+            weight: 9
+            additional: {  }
+          8b994af0-8e45-42ef-808d-7fee6ab77497:
+            uuid: 8b994af0-8e45-42ef-808d-7fee6ab77497
+            region: content
+            configuration:
+              id: 'field_block:node:animal:field_sleep_habits'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: text_default
+                label: above
+                settings: {  }
+                third_party_settings: {  }
+            weight: 10
+            additional: {  }
+          4d1f4bdd-7af2-48a7-a9d0-dfc0f023b85e:
+            uuid: 4d1f4bdd-7af2-48a7-a9d0-dfc0f023b85e
+            region: content
+            configuration:
+              id: 'field_block:node:animal:field_conservation_efforts'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: text_default
+                label: above
+                settings: {  }
+                third_party_settings: {  }
+            weight: 11
+            additional: {  }
+          9f828476-b232-45d0-a891-3a03b5d13f67:
+            uuid: 9f828476-b232-45d0-a891-3a03b5d13f67
+            region: content
+            configuration:
+              id: 'field_block:node:animal:field_taxonomic_class'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: list_default
+                label: above
+                settings: {  }
+                third_party_settings: {  }
+            weight: 12
+            additional: {  }
+          a7beefa1-847f-414f-9d40-d1c981e57cdd:
+            uuid: a7beefa1-847f-414f-9d40-d1c981e57cdd
+            region: content
+            configuration:
+              id: 'field_block:node:animal:field_genus_and_species'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: string
+                label: above
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            weight: 13
+            additional: {  }
+          e23cc9a0-e6d8-4cd7-a1e8-a439fc656979:
+            uuid: e23cc9a0-e6d8-4cd7-a1e8-a439fc656979
+            region: content
+            configuration:
+              id: 'field_block:node:animal:field_size'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: text_default
+                label: above
+                settings: {  }
+                third_party_settings: {  }
+            weight: 14
+            additional: {  }
+          c63f7725-70dc-4753-a8e6-45188a221fa9:
+            uuid: c63f7725-70dc-4753-a8e6-45188a221fa9
+            region: content
+            configuration:
+              id: 'field_block:node:animal:field_native_habitat'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: text_default
+                label: above
+                settings: {  }
+                third_party_settings: {  }
+            weight: 15
+            additional: {  }
+          0ac182ff-f3ae-4734-a33c-99464716ce1a:
+            uuid: 0ac182ff-f3ae-4734-a33c-99464716ce1a
+            region: content
+            configuration:
+              id: 'field_block:node:animal:field_animal_type'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: entity_reference_label
+                label: above
+                settings:
+                  link: true
+                third_party_settings: {  }
+            weight: 16
+            additional: {  }
+          e03c821e-2ab7-41f6-95dd-f39430e3cadc:
+            uuid: e03c821e-2ab7-41f6-95dd-f39430e3cadc
+            region: content
+            configuration:
+              id: 'field_block:node:animal:field_taxonomic_order'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: list_default
+                label: above
+                settings: {  }
+                third_party_settings: {  }
+            weight: 17
+            additional: {  }
+          37ff1d6c-8b63-46e4-8389-18f793b2597c:
+            uuid: 37ff1d6c-8b63-46e4-8389-18f793b2597c
+            region: content
+            configuration:
+              id: 'field_block:node:animal:field_taxonomic_family'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: list_default
+                label: above
+                settings: {  }
+                third_party_settings: {  }
+            weight: 18
+            additional: {  }
+          6894fec1-bc77-497e-9fce-e2e114f8311a:
+            uuid: 6894fec1-bc77-497e-9fce-e2e114f8311a
+            region: content
+            configuration:
+              id: 'field_block:node:animal:field_iucn_designation'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: list_default
+                label: above
+                settings: {  }
+                third_party_settings: {  }
+            weight: 19
+            additional: {  }
+          c36bd2b8-55a9-45e2-b036-9d85a9eb97e1:
+            uuid: c36bd2b8-55a9-45e2-b036-9d85a9eb97e1
+            region: content
+            configuration:
+              id: 'field_block:node:animal:field_meet_the_animals'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: text_default
+                label: above
+                settings: {  }
+                third_party_settings: {  }
+            weight: 20
+            additional: {  }
+          65c60a4e-d617-4c32-8f62-94df2a567f89:
+            uuid: 65c60a4e-d617-4c32-8f62-94df2a567f89
+            region: content
+            configuration:
+              id: 'field_block:node:animal:field_help_this_species'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: list_default
+                label: above
+                settings: {  }
+                third_party_settings: {  }
+            weight: 21
+            additional: {  }
+          8f05741b-5b13-4f40-a81f-075b7e8907b6:
+            uuid: 8f05741b-5b13-4f40-a81f-075b7e8907b6
+            region: content
+            configuration:
+              id: 'field_block:node:animal:field_featured_video'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: entity_reference_entity_view
+                label: above
+                settings:
+                  view_mode: default
+                  link: false
+                third_party_settings: {  }
+            weight: 22
+            additional: {  }
+          f60dc09d-9599-46b2-ac8d-cecc9d9d84b1:
+            uuid: f60dc09d-9599-46b2-ac8d-cecc9d9d84b1
+            region: content
+            configuration:
+              id: 'field_block:node:animal:field_modal_gallery'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: entity_reference_revisions_entity_view
+                label: above
+                settings:
+                  view_mode: full
+                  link: ''
+                third_party_settings: {  }
+            weight: 23
+            additional: {  }
+          9f9b21c2-60ee-4112-9476-3ce52af74816:
+            uuid: 9f9b21c2-60ee-4112-9476-3ce52af74816
+            region: content
+            configuration:
+              id: 'field_block:node:animal:field_image'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: image
+                label: above
+                settings:
+                  image_link: ''
+                  image_style: ''
+                  image_loading:
+                    attribute: lazy
+                third_party_settings: {  }
+            weight: 24
+            additional: {  }
+          7b3b5f74-75eb-4a69-b492-0770e2773973:
+            uuid: 7b3b5f74-75eb-4a69-b492-0770e2773973
+            region: banner
+            configuration:
+              id: 'field_block:node:animal:field_featured_video'
+              label: 'Featured Video'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: entity_reference_entity_view
+                label: hidden
+                settings:
+                  view_mode: full
+                third_party_settings: {  }
+            weight: 2
+            additional: {  }
+          1ab4feb7-efa6-43b2-91ec-48bb257f129f:
+            uuid: 1ab4feb7-efa6-43b2-91ec-48bb257f129f
+            region: banner
+            configuration:
+              id: 'field_block:node:animal:field_image'
+              label: Images
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: image
+                label: hidden
+                settings:
+                  image_link: ''
+                  image_style: wide
+                  image_loading:
+                    attribute: lazy
+                third_party_settings: {  }
+            weight: 3
+            additional: {  }
+        third_party_settings: {  }
+      -
+        layout_id: layout_nzp_one_col
+        layout_settings:
+          context_mapping: {  }
+          custom_classes: ''
+          region_classes:
+            content: col-md-12
+          container_classes: container
+          html_container_elements: div
+          html_region_elements:
+            content: div
+          background_color: bg-none
+          region_background_color: null
+        components:
+          5d34ea32-98c2-4f71-bf5f-7c3db4d83a97:
+            uuid: 5d34ea32-98c2-4f71-bf5f-7c3db4d83a97
+            region: content
+            configuration:
+              id: system_breadcrumb_block
+              label: Breadcrumbs
+              label_display: '0'
+              provider: system
+              context_mapping: {  }
+            weight: 0
+            additional: {  }
+          7e0928fb-283f-4e39-a00d-913325d71e17:
+            uuid: 7e0928fb-283f-4e39-a00d-913325d71e17
+            region: content
+            configuration:
+              id: 'field_block:node:animal:body'
+              label: Overview
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            weight: 3
+            additional:
+              component_attributes:
+                block_attributes:
+                  id: ''
+                  class: text-lg
+                  style: ''
+                  data: ''
+                block_title_attributes:
+                  id: ''
+                  class: ''
+                  style: ''
+                  data: ''
+                block_content_attributes:
+                  id: ''
+                  class: ''
+                  style: ''
+                  data: ''
+          52f18c2b-e616-439a-bba4-00a506567f84:
+            uuid: 52f18c2b-e616-439a-bba4-00a506567f84
+            region: content
+            configuration:
+              id: 'field_block:node:animal:title'
+              label: Title
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: text_field_formatter
+                label: hidden
+                settings:
+                  link_to_entity: 0
+                  wrap_tag: h1
+                  wrap_class: page-title
+                  wrap_attributes: ''
+                  override_link_label: ''
+                  token: ''
+                third_party_settings: {  }
+            weight: 2
+            additional: {  }
+        third_party_settings: {  }
+      -
+        layout_id: layout_nzp_two_col
+        layout_settings:
+          context_mapping: {  }
+          custom_classes: ''
+          region_classes:
+            one_col: col-span-8
+            two_col: col-span-4
+          container_classes: 'container mx-auto'
+          html_container_elements: div
+          html_region_elements:
+            one_col: div
+            two_col: div
+          background_color: null
+          region_background_color:
+            one_col: bg-none
+            two_col: bg-none
+          getHtmlElements: div
+        components:
+          9c2feb8d-3519-43cc-828a-3eb895f11057:
+            uuid: 9c2feb8d-3519-43cc-828a-3eb895f11057
+            region: one_col
+            configuration:
+              id: 'entity_view:node'
+              label: 'Three Tabs'
+              label_display: '0'
+              provider: ctools
+              view_mode: info_card
+              context_mapping:
+                entity: layout_builder.entity
+            weight: 0
+            additional: {  }
+          04c82ed8-9953-417d-bb4d-615987e10152:
+            uuid: 04c82ed8-9953-417d-bb4d-615987e10152
+            region: two_col
+            configuration:
+              id: 'field_block:node:animal:field_fun_facts'
+              label: 'Fun Facts'
+              label_display: visible
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          eddfa6b1-8ead-4d84-bf0e-42f47fd8460d:
+            uuid: eddfa6b1-8ead-4d84-bf0e-42f47fd8460d
+            region: two_col
+            configuration:
+              id: 'field_block:node:animal:field_iucn_designation'
+              label: 'Conservation Status'
+              label_display: visible
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: list_default
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            weight: 1
+            additional: {  }
+          5c18d7e8-08ab-48ab-bb33-6d6193f325e4:
+            uuid: 5c18d7e8-08ab-48ab-bb33-6d6193f325e4
+            region: two_col
+            configuration:
+              id: 'views_block:media_release_and_news-block_2'
+              label: ''
+              label_display: '0'
+              provider: views
+              context_mapping: {  }
+              views_label: ''
+              items_per_page: none
+            weight: 2
+            additional: {  }
+        third_party_settings: {  }
+  layout_builder_restrictions:
+    allowed_block_categories: {  }
+    entity_view_mode_restriction:
+      allowed_layouts: {  }
+      denylisted_blocks: {  }
+      allowlisted_blocks: {  }
+      restricted_categories: {  }
+id: node.animal.default
+targetEntityType: node
+bundle: animal
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: -20
+    region: content
+  field_animal_type:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 18
+    region: content
+  field_communication:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 11
+    region: content
+  field_conservation_efforts:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 15
+    region: content
+  field_featured_video:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 27
+    region: content
+  field_feeding_time:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  field_food_eating_habits:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 13
+    region: content
+  field_fun_facts:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 9
+    region: content
+  field_genus_and_species:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_help_this_species:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 26
+    region: content
+  field_image:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 29
+    region: content
+  field_iucn_designation:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_lifespan:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  field_meet_the_animals:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 19
+    region: content
+  field_modal_gallery:
+    type: entity_reference_revisions_entity_view
+    label: above
+    settings:
+      view_mode: full
+      link: ''
+    third_party_settings: {  }
+    weight: 28
+    region: content
+  field_native_habitat:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 17
+    region: content
+  field_physical_description:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_reproduction_developme:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 12
+    region: content
+  field_size:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 16
+    region: content
+  field_sleep_habits:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 14
+    region: content
+  field_social_structure:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_taxonomic_class:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_taxonomic_family:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_taxonomic_order:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_card_position: true
+  field_editorial_access: true
+  field_exhibit: true
+  field_image_media: true
+  field_image_s_media: true
+  field_nzp_location: true

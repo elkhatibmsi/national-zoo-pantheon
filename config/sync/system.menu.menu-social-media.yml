@@ -1,0 +1,8 @@
+uuid: 080d12a8-fdfb-44ac-9cf8-8180d8679475
+langcode: en
+status: true
+dependencies: {  }
+id: menu-social-media
+label: 'Header icons'
+description: 'Small icons that appear in the top of the global header'
+locked: false

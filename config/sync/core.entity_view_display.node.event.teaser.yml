@@ -1,0 +1,182 @@
+uuid: 3dad6534-274e-4d34-a347-bd1394472ec8
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.event.body
+    - field.field.node.event.field_card_position
+    - field.field.node.event.field_custom_contact_block
+    - field.field.node.event.field_dates
+    - field.field.node.event.field_editorial_access
+    - field.field.node.event.field_event_components
+    - field.field.node.event.field_event_date_override
+    - field.field.node.event.field_exclude_from_next_event
+    - field.field.node.event.field_featured_video
+    - field.field.node.event.field_image
+    - field.field.node.event.field_landing_image
+    - field.field.node.event.field_menu_tabs
+    - field.field.node.event.field_modal_content
+    - field.field.node.event.field_modal_gallery
+    - field.field.node.event.field_modal_iframe
+    - field.field.node.event.field_promotion
+    - field.field.node.event.field_sponsors
+    - field.field.node.event.field_subtitle
+    - field.field.node.event.field_tags
+    - field.field.node.event.field_template_options
+    - field.field.node.event.field_times
+    - field.field.node.event.field_url
+    - field.field.node.event.field_zoo_fonz
+    - node.type.event
+  module:
+    - layout_builder
+    - nzp_layouts
+    - text
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: layout_blank
+        layout_settings:
+          label: ''
+          context_mapping: {  }
+          custom_class: event--teaser
+        components:
+          bc2dd495-7cf0-407e-8bfa-d2b76412bc57:
+            uuid: bc2dd495-7cf0-407e-8bfa-d2b76412bc57
+            region: content
+            configuration:
+              id: 'field_block:node:event:title'
+              label: Title
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: text_field_formatter
+                label: hidden
+                settings:
+                  link_to_entity: 1
+                  wrap_tag: h2
+                  wrap_class: block-title
+                  wrap_attributes: ''
+                  override_link_label: ''
+                  token: ''
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          e602486f-02d2-47d8-a5bd-a8f230aebc15:
+            uuid: e602486f-02d2-47d8-a5bd-a8f230aebc15
+            region: content
+            configuration:
+              id: 'field_block:node:event:field_image'
+              label: 'Event Slideshow'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: blazy
+                label: hidden
+                settings:
+                  caption:
+                    title: '0'
+                    alt: '0'
+                  current_view_mode: _custom
+                  style: ''
+                  background: false
+                  image_style: large
+                  media_switch: ''
+                  ratio: ''
+                  thumbnail_style: ''
+                  grid: null
+                  grid_medium: null
+                  grid_small: null
+                third_party_settings: {  }
+            weight: 1
+            additional: {  }
+          a5208550-189d-4a34-9b14-e12e83c32d09:
+            uuid: a5208550-189d-4a34-9b14-e12e83c32d09
+            region: content
+            configuration:
+              id: 'field_block:node:event:body'
+              label: 'Event Overview'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            weight: 2
+            additional: {  }
+          b24850cb-9f81-4628-b702-adf44f7f4d1d:
+            uuid: b24850cb-9f81-4628-b702-adf44f7f4d1d
+            region: content
+            configuration:
+              id: 'field_block:node:event:field_dates'
+              label: Date(s)
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: datetime_default
+                label: hidden
+                settings:
+                  timezone_override: ''
+                  format_type: olivero_medium
+                third_party_settings: {  }
+            weight: 3
+            additional: {  }
+        third_party_settings: {  }
+id: node.event.teaser
+targetEntityType: node
+bundle: event
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_card_position: true
+  field_custom_contact_block: true
+  field_dates: true
+  field_editorial_access: true
+  field_event_components: true
+  field_event_date_override: true
+  field_exclude_from_next_event: true
+  field_featured_video: true
+  field_image: true
+  field_landing_image: true
+  field_menu_tabs: true
+  field_modal_content: true
+  field_modal_gallery: true
+  field_modal_iframe: true
+  field_promotion: true
+  field_sponsors: true
+  field_subtitle: true
+  field_tags: true
+  field_template_options: true
+  field_times: true
+  field_url: true
+  field_zoo_fonz: true

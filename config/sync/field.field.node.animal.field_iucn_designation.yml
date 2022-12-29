@@ -1,0 +1,21 @@
+uuid: c3e80b16-1f26-4df7-bec5-fab2a6b79b20
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_iucn_designation
+    - node.type.animal
+  module:
+    - options
+id: node.animal.field_iucn_designation
+field_name: field_iucn_designation
+entity_type: node
+bundle: animal
+label: 'IUCN Designation'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

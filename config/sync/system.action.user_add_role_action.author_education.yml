@@ -1,0 +1,14 @@
+uuid: 860100de-352a-4079-9b03-1252a19ba635
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.author_education
+  module:
+    - user
+id: user_add_role_action.author_education
+label: 'Add the author - education role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: author_education

@@ -1,0 +1,23 @@
+uuid: e3b65df2-6772-4602-a1ae-e5bbaa891369
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_internship_category
+    - node.type.internship
+id: node.internship.field_internship_category
+field_name: field_internship_category
+entity_type: node
+bundle: internship
+label: 'Internship Category'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    sort:
+      field: _none
+field_type: entity_reference

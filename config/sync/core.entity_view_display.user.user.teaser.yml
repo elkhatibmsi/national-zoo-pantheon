@@ -1,0 +1,35 @@
+uuid: 6bdbb163-82c7-4627-9ff3-111f8ad5cd85
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.user.teaser
+    - field.field.user.user.ldap_user_current_dn
+    - field.field.user.user.ldap_user_last_checked
+    - field.field.user.user.ldap_user_ldap_exclude
+    - field.field.user.user.ldap_user_prov_entries
+    - field.field.user.user.ldap_user_puid
+    - field.field.user.user.ldap_user_puid_property
+    - field.field.user.user.ldap_user_puid_sid
+    - field.field.user.user.user_picture
+  module:
+    - user
+id: user.user.teaser
+targetEntityType: user
+bundle: user
+mode: teaser
+content:
+  member_for:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 5
+    region: content
+hidden:
+  ldap_user_current_dn: true
+  ldap_user_last_checked: true
+  ldap_user_ldap_exclude: true
+  ldap_user_prov_entries: true
+  ldap_user_puid: true
+  ldap_user_puid_property: true
+  ldap_user_puid_sid: true
+  user_picture: true

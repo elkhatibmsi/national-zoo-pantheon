@@ -1,0 +1,21 @@
+uuid: 3e2e6a3e-326d-4be8-9fda-96a17c1d0777
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_qualifications
+    - node.type.internship
+  module:
+    - text
+id: node.internship.field_qualifications
+field_name: field_qualifications
+entity_type: node
+bundle: internship
+label: Qualifications
+description: 'Describe the qualifications for this internship'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

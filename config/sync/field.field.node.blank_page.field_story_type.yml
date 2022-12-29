@@ -1,0 +1,23 @@
+uuid: ea7a3ba2-ee89-4377-9d1f-fbb5446380ca
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_story_type
+    - node.type.blank_page
+id: node.blank_page.field_story_type
+field_name: field_story_type
+entity_type: node
+bundle: blank_page
+label: 'Story Type'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    sort:
+      field: _none
+field_type: entity_reference

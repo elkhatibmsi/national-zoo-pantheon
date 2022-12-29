@@ -1,0 +1,17 @@
+<div class="w-full lg:max-w-full min-h-[150px] lg:flex shadow-md mb-4 rounded-md overflow-hidden">
+  {% if image|render %}
+    <div class="h-48 lg:h-auto lg:w-48 flex-none bg-cover text-center overflow-hidden">
+      {{ image }}
+    </div>
+  {% endif %}
+  <div class="card-horizontal--teaser p-4">
+      <div class="text-xs strong uppercase mb-2">
+      {{ authored_date }}
+    </div>
+    <a href="{{ link }}"><strong>{{ title }}</strong></a>
+
+    <div class="text-sm">
+      {{ summary }}
+    </div>
+  </div>
+</div>

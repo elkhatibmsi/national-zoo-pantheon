@@ -1,0 +1,19 @@
+uuid: 7f80bd9a-7539-4e76-b40d-6ade39538fc2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_notes
+    - media.type.image
+id: media.image.field_notes
+field_name: field_notes
+entity_type: media
+bundle: image
+label: Notes
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

@@ -1,0 +1,8 @@
+uuid: fc127c32-2b24-494e-9887-bde0b0d07651
+langcode: en
+status: true
+dependencies: {  }
+id: education-global-nav-links
+label: 'Education Global Nav Links'
+description: 'Education global nav menu'
+locked: false

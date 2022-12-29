@@ -1,0 +1,14 @@
+uuid: e0223009-eef9-46e3-9909-d50cd46f5f02
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.author_animals
+  module:
+    - user
+id: user_add_role_action.author_animals
+label: 'Add the author - animals role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: author_animals

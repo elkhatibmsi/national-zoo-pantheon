@@ -1,0 +1,19 @@
+uuid: 3c84d638-20f9-4544-af6b-20e4a516bd93
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_more_background
+    - node.type.nzp_scbi_staff
+id: node.nzp_scbi_staff.field_more_background
+field_name: field_more_background
+entity_type: node
+bundle: nzp_scbi_staff
+label: 'Optional: More background'
+description: "Optional: Personal history, your passions, what lead you to occupy the position you do today, special motivations or background.\r\n\r\ne.g. \"Raised believing in the existence of the crumple-horned snorkack, Lovegood was devastated to find it an entirely fictitious species. However, her search for the snorkack led her to further research on dragons and wyverns, which launched her biological career. She still hopes to be proven wrong about the snorkack\""
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

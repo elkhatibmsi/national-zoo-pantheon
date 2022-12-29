@@ -1,0 +1,24 @@
+uuid: a6bd7b2b-42dd-4275-b3e1-301cc5012db0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_landing_image
+    - media.type.image
+    - taxonomy.vocabulary.membership_levels
+id: taxonomy_term.membership_levels.field_landing_image
+field_name: field_landing_image
+entity_type: taxonomy_term
+bundle: membership_levels
+label: 'Teaser Image'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+field_type: entity_reference

@@ -1,0 +1,242 @@
+uuid: 2aa6cb6b-b5ba-41f8-8bb7-f8864d3305d0
+langcode: en
+status: true
+dependencies: {  }
+id: upgrade_d7_node_complete_webcam
+class: Drupal\node\Plugin\migrate\D7NodeTranslation
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 7'
+  - Content
+migration_group: migrate_drupal_7
+label: 'Node complete (Webcam)'
+source:
+  plugin: d7_node_complete
+  node_type: webcam
+process:
+  nid:
+    -
+      plugin: get
+      source: tnid
+  langcode:
+    -
+      plugin: default_value
+      source: language
+      default_value: und
+  title:
+    -
+      plugin: get
+      source: title
+  uid:
+    -
+      plugin: get
+      source: node_uid
+  status:
+    -
+      plugin: get
+      source: status
+  created:
+    -
+      plugin: get
+      source: created
+  changed:
+    -
+      plugin: get
+      source: timestamp
+  promote:
+    -
+      plugin: get
+      source: promote
+  sticky:
+    -
+      plugin: get
+      source: sticky
+  content_translation_source:
+    -
+      plugin: get
+      source: source_langcode
+  body:
+    -
+      plugin: get
+      source: body
+    -
+      plugin: media_wysiwyg_filter
+    -
+      plugin: img_tag_to_embed
+  field_camera_embed:
+    -
+      plugin: get
+      source: field_camera_embed
+    -
+      plugin: media_wysiwyg_filter
+  field_editorial_access:
+    -
+      plugin: sub_process
+      source: field_editorial_access
+      process:
+        target_id: tid
+  field_feature_one:
+    -
+      plugin: get
+      source: field_feature_one
+  field_feature_two:
+    -
+      plugin: get
+      source: field_feature_two
+  field_feature_three:
+    -
+      plugin: get
+      source: field_feature_three
+  field_promotion_three:
+    -
+      plugin: get
+      source: field_promotion_three
+  field_sponsored_by:
+    -
+      plugin: get
+      source: field_sponsored_by
+  field_related_animal:
+    -
+      plugin: get
+      source: field_related_animal
+  field_landing_image:
+    -
+      plugin: media_migration_delta_sort
+      source: field_landing_image
+    -
+      plugin: sub_process
+      process:
+        target_id: fid
+  field_content_block:
+    -
+      plugin: sub_process
+      source: field_content_block
+      process:
+        target_id:
+          -
+            plugin: migration_lookup
+            migration:
+              - paragraph__callout
+              - paragraph__content_video
+              - paragraph__flipbook_grid
+              - paragraph__faq
+              - paragraph__card_grid
+              - paragraph__horizontal_tabs
+              - paragraph__grid
+              - paragraph__modal_media_gallery
+              - paragraph__section_heading
+              - paragraph__slide
+              - paragraph__slideshow_image_only
+              - paragraph__single_image_with_caption
+              - paragraph__sticky_anchor_menu
+              - paragraph__text
+              - paragraph__thumbnail_slideshow
+              - paragraph__block_embed
+              - paragraph__block_embed_no_title
+              - paragraph__webcam_embed
+              - paragraph__view_embed
+            source: value
+          -
+            plugin: extract
+            index:
+              - 0
+        target_revision_id:
+          -
+            plugin: migration_lookup
+            migration:
+              - paragraph__callout
+              - paragraph__content_video
+              - paragraph__flipbook_grid
+              - paragraph__faq
+              - paragraph__card_grid
+              - paragraph__horizontal_tabs
+              - paragraph__grid
+              - paragraph__modal_media_gallery
+              - paragraph__section_heading
+              - paragraph__slide
+              - paragraph__slideshow_image_only
+              - paragraph__single_image_with_caption
+              - paragraph__sticky_anchor_menu
+              - paragraph__text
+              - paragraph__thumbnail_slideshow
+              - paragraph__block_embed
+              - paragraph__block_embed_no_title
+              - paragraph__webcam_embed
+              - paragraph__view_embed
+            source: value
+          -
+            plugin: extract
+            index:
+              - 1
+  field_sidebar_section_content:
+    -
+      plugin: sub_process
+      source: field_sidebar_section_content
+      process:
+        target_id:
+          -
+            plugin: migration_lookup
+            migration:
+              - paragraph__callout
+              - paragraph__content_video
+              - paragraph__flipbook_grid
+              - paragraph__faq
+              - paragraph__card_grid
+              - paragraph__horizontal_tabs
+              - paragraph__grid
+              - paragraph__modal_media_gallery
+              - paragraph__section_heading
+              - paragraph__slide
+              - paragraph__slideshow_image_only
+              - paragraph__single_image_with_caption
+              - paragraph__sticky_anchor_menu
+              - paragraph__text
+              - paragraph__thumbnail_slideshow
+              - paragraph__webcam_embed
+              - paragraph__block_embed
+              - paragraph__block_embed_no_title
+              - paragraph__view_embed
+            source: value
+          -
+            plugin: extract
+            index:
+              - 0
+        target_revision_id:
+          -
+            plugin: migration_lookup
+            migration:
+              - paragraph__callout
+              - paragraph__content_video
+              - paragraph__flipbook_grid
+              - paragraph__faq
+              - paragraph__card_grid
+              - paragraph__horizontal_tabs
+              - paragraph__grid
+              - paragraph__modal_media_gallery
+              - paragraph__section_heading
+              - paragraph__slide
+              - paragraph__slideshow_image_only
+              - paragraph__single_image_with_caption
+              - paragraph__sticky_anchor_menu
+              - paragraph__text
+              - paragraph__thumbnail_slideshow
+              - paragraph__webcam_embed
+              - paragraph__block_embed
+              - paragraph__block_embed_no_title
+              - paragraph__view_embed
+            source: value
+          -
+            plugin: extract
+            index:
+              - 1
+destination:
+  plugin: 'entity_complete:node'
+  translations: true
+  default_bundle: webcam
+migration_dependencies:
+  required:
+    - upgrade_d7_user
+    - upgrade_d7_node_type
+  optional:
+    - upgrade_d7_field_instance

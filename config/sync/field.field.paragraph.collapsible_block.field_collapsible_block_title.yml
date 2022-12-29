@@ -1,0 +1,19 @@
+uuid: 027114ae-eb8d-4907-bc03-501b81735428
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_collapsible_block_title
+    - paragraphs.paragraphs_type.collapsible_block
+id: paragraph.collapsible_block.field_collapsible_block_title
+field_name: field_collapsible_block_title
+entity_type: paragraph
+bundle: collapsible_block
+label: 'Collapsible Block Title'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

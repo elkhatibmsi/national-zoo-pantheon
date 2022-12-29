@@ -1,0 +1,21 @@
+uuid: fa5404eb-97b4-44a3-b5a5-be0df6eda46d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_conservation_efforts
+    - node.type.exhibit
+  module:
+    - text
+id: node.exhibit.field_conservation_efforts
+field_name: field_conservation_efforts
+entity_type: node
+bundle: exhibit
+label: 'Conservation Efforts'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

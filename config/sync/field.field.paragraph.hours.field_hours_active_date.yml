@@ -1,0 +1,21 @@
+uuid: 0f071b11-54bc-480c-ab62-9070190e4c14
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_hours_active_date
+    - paragraphs.paragraphs_type.hours
+  module:
+    - datetime
+id: paragraph.hours.field_hours_active_date
+field_name: field_hours_active_date
+entity_type: paragraph
+bundle: hours
+label: 'Active Date Range'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

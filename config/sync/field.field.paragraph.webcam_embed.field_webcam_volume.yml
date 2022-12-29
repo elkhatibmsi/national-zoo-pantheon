@@ -1,0 +1,23 @@
+uuid: 8d478af4-85a7-497d-8b1f-f973b88eee9c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_webcam_volume
+    - paragraphs.paragraphs_type.webcam_embed
+id: paragraph.webcam_embed.field_webcam_volume
+field_name: field_webcam_volume
+entity_type: paragraph
+bundle: webcam_embed
+label: 'Webcam Volume'
+description: 'Enter a number from 0-100. Enter "0" if you''d like the webcam to start with mute.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

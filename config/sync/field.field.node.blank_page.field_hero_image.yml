@@ -1,0 +1,24 @@
+uuid: 7a565dfe-87f1-42ec-bd54-8ffbe090a52b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_hero_image
+    - media.type.image
+    - node.type.blank_page
+id: node.blank_page.field_hero_image
+field_name: field_hero_image
+entity_type: node
+bundle: blank_page
+label: 'Hero Image'
+description: "Add a placeholder image. That can appear standalone or as a placeholder mobile banner when the video is hidden. \r\n"
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+field_type: entity_reference

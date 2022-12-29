@@ -1,0 +1,12 @@
+{% block paragraph %}
+	<div {{ attributes }}>
+		{{ content.controls }}
+				{%
+		include '@nzpComponents/carousel/slider.html.twig' with {
+			slides: content.field_image,
+			caption: content.field_image.name,
+		} 
+		%}
+	</div>
+{% endblock paragraph %}
+

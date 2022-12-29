@@ -1,0 +1,20 @@
+uuid: baae1426-32ce-485c-bdfb-1f35d2103fc6
+langcode: und
+status: true
+dependencies:
+  module:
+    - media
+    - paragraphs
+id: paragraph.field_icon_card_image
+field_name: field_icon_card_image
+entity_type: paragraph
+type: entity_reference
+settings:
+  target_type: media
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

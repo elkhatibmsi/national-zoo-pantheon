@@ -1,0 +1,25 @@
+uuid: 52852d1d-8b59-41e2-930b-1ee1919220bb
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.paragraphs_editor_preview
+    - field.field.paragraph.webcam_embed.field_webcam_poster_image
+    - field.field.paragraph.webcam_embed.field_webcam_preroll_video
+    - field.field.paragraph.webcam_embed.field_webcam_timeout
+    - field.field.paragraph.webcam_embed.field_webcam_timeout_message
+    - field.field.paragraph.webcam_embed.field_webcam_video_url
+    - field.field.paragraph.webcam_embed.field_webcam_volume
+    - paragraphs.paragraphs_type.webcam_embed
+id: paragraph.webcam_embed.paragraphs_editor_preview
+targetEntityType: paragraph
+bundle: webcam_embed
+mode: paragraphs_editor_preview
+content: {  }
+hidden:
+  field_webcam_poster_image: true
+  field_webcam_preroll_video: true
+  field_webcam_timeout: true
+  field_webcam_timeout_message: true
+  field_webcam_video_url: true
+  field_webcam_volume: true

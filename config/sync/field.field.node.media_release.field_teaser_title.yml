@@ -1,0 +1,19 @@
+uuid: 332f7ada-fc6f-4512-857e-4759930ab97e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_teaser_title
+    - node.type.media_release
+id: node.media_release.field_teaser_title
+field_name: field_teaser_title
+entity_type: node
+bundle: media_release
+label: 'Teaser Title'
+description: 'This will appear instead of the page title when this page is teased (e.g. in promos)'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

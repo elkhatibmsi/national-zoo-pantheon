@@ -1,0 +1,31 @@
+uuid: c89d4d1b-6b89-4b88-bfb9-db9af41d9d1d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.horizontal_link_bar.field_horizontal_link_item
+    - paragraphs.paragraphs_type.horizontal_link_bar
+  module:
+    - micon_link
+id: paragraph.horizontal_link_bar.default
+targetEntityType: paragraph
+bundle: horizontal_link_bar
+mode: default
+content:
+  field_horizontal_link_item:
+    type: micon_link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: '0'
+      target: '0'
+      title: ''
+      icon: ''
+      position: before
+      text_only: ''
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

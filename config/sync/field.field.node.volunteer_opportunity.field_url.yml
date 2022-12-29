@@ -1,0 +1,23 @@
+uuid: 2fe71e56-349c-4e65-8190-8d8b97e97ac4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_url
+    - node.type.volunteer_opportunity
+  module:
+    - link
+id: node.volunteer_opportunity.field_url
+field_name: field_url
+entity_type: node
+bundle: volunteer_opportunity
+label: 'Application link'
+description: 'Enter the application link'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 0
+  link_type: 17
+field_type: link

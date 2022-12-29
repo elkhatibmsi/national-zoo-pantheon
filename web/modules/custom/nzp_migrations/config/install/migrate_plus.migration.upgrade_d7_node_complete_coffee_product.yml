@@ -1,0 +1,153 @@
+uuid: c3a8685e-dc6c-4747-89fe-3eed1b9661d1
+langcode: en
+status: true
+dependencies: {  }
+id: upgrade_d7_node_complete_coffee_product
+class: Drupal\node\Plugin\migrate\D7NodeTranslation
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 7'
+  - Content
+migration_group: migrate_drupal_7
+label: 'Node complete (Coffee Product)'
+source:
+  plugin: d7_node_complete
+  node_type: coffee_product
+process:
+  nid:
+    -
+      plugin: get
+      source: tnid
+  vid:
+    -
+      plugin: get
+      source: vid
+  langcode:
+    -
+      plugin: default_value
+      source: language
+      default_value: und
+  title:
+    -
+      plugin: get
+      source: title
+  uid:
+    -
+      plugin: get
+      source: node_uid
+  status:
+    -
+      plugin: get
+      source: status
+  created:
+    -
+      plugin: get
+      source: created
+  changed:
+    -
+      plugin: get
+      source: timestamp
+  promote:
+    -
+      plugin: get
+      source: promote
+  sticky:
+    -
+      plugin: get
+      source: sticky
+  revision_uid:
+    -
+      plugin: get
+      source: revision_uid
+  revision_log:
+    -
+      plugin: get
+      source: log
+  revision_timestamp:
+    -
+      plugin: get
+      source: timestamp
+  content_translation_source:
+    -
+      plugin: get
+      source: source_langcode
+  comment_node_coffee_product/0/status:
+    -
+      plugin: get
+      source: comment
+  body:
+    -
+      plugin: get
+      source: body
+    -
+      plugin: media_wysiwyg_filter
+    -
+      plugin: img_tag_to_embed
+  field_product_amazon_link:
+    -
+      plugin: field_link
+      source: field_product_amazon_link
+  field_product_flavor_notes:
+    -
+      plugin: get
+      source: field_product_flavor_notes
+  field_product_image:
+    -
+      plugin: media_migration_delta_sort
+      source: field_product_image
+    -
+      plugin: sub_process
+      process:
+        target_id: fid
+  field_product_price:
+    -
+      plugin: get
+      source: field_product_price
+  field_product_properties:
+    -
+      plugin: sub_process
+      source: field_product_properties
+      process:
+        target_id: tid
+  field_product_region:
+    -
+      plugin: get
+      source: field_product_region
+  field_product_roast:
+    -
+      plugin: get
+      source: field_product_roast
+  field_product_roaster_descriptio:
+    -
+      plugin: get
+      source: field_product_roaster_descriptio
+  field_product_roaster_link:
+    -
+      plugin: field_link
+      source: field_product_roaster_link
+  field_product_unit:
+    -
+      plugin: get
+      source: field_product_unit
+  field_product_wholesale:
+    -
+      plugin: get
+      source: field_product_wholesale
+  field_product_roaster:
+    -
+      plugin: sub_process
+      source: field_product_roaster
+      process:
+        target_id: tid
+destination:
+  plugin: 'entity_complete:node'
+  translations: true
+  default_bundle: coffee_product
+migration_dependencies:
+  required:
+    - upgrade_d7_user
+    - upgrade_d7_node_type
+    - upgrade_d7_file_entity_image_public
+  optional:
+    - upgrade_d7_field_instance

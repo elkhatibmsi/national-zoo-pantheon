@@ -1,0 +1,165 @@
+uuid: 8bd41bd0-44b5-4350-83d9-80fedf011b86
+langcode: und
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_taxonomic_order
+field_name: field_taxonomic_order
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: Afrosoricida
+      label: Afrosoricida
+    -
+      value: Anseriformes
+      label: Anseriformes
+    -
+      value: Anura
+      label: Anura
+    -
+      value: Apterygiformes
+      label: Apterygiformes
+    -
+      value: Araneae
+      label: Araneae
+    -
+      value: Artiodactyla
+      label: Artiodactyla
+    -
+      value: Carnivora
+      label: Carnivora
+    -
+      value: Casuariformes
+      label: Casuariformes
+    -
+      value: Caudata
+      label: Caudata
+    -
+      value: Cetartiodactyla
+      label: Cetartiodactyla
+    -
+      value: Characiformes
+      label: Characiformes
+    -
+      value: Chelonia
+      label: Chelonia
+    -
+      value: 'Chelonia / Testudines'
+      label: 'Chelonia / Testudines'
+    -
+      value: Ciconiiformes
+      label: Ciconiiformes
+    -
+      value: Cingulata
+      label: Cingulata
+    -
+      value: Coraciiformes
+      label: Coraciiformes
+    -
+      value: Crocodylia
+      label: Crocodylia
+    -
+      value: Cypriniformes
+      label: Cypriniformes
+    -
+      value: Decapoda
+      label: Decapoda
+    -
+      value: Didelphimorphia
+      label: Didelphimorphia
+    -
+      value: Diprotodontia
+      label: Diprotodontia
+    -
+      value: Falconiformes
+      label: Falconiformes
+    -
+      value: Galliformes
+      label: Galliformes
+    -
+      value: Gruiformes
+      label: Gruiformes
+    -
+      value: Gymnophiona
+      label: Gymnophiona
+    -
+      value: Gymnotiformes
+      label: Gymnotiformes
+    -
+      value: Hyracoidea
+      label: Hyracoidea
+    -
+      value: Macroscelidea
+      label: Macroscelidea
+    -
+      value: Osteoglossiformes
+      label: Osteoglossiformes
+    -
+      value: Passeriformes
+      label: Passeriformes
+    -
+      value: Pelecaniformes
+      label: Pelecaniformes
+    -
+      value: Perciformes
+      label: Perciformes
+    -
+      value: Perissodactyla
+      label: Perissodactyla
+    -
+      value: Piciformes
+      label: Piciformes
+    -
+      value: Pilosa
+      label: Pilosa
+    -
+      value: Pinnipedia
+      label: Pinnipedia
+    -
+      value: Primates
+      label: Primates
+    -
+      value: Proboscidea
+      label: Proboscidea
+    -
+      value: Psittaciformes
+      label: Psittaciformes
+    -
+      value: Rajiformes
+      label: Rajiformes
+    -
+      value: Rodentia
+      label: Rodentia
+    -
+      value: Scandentia
+      label: Scandentia
+    -
+      value: Siluriformes
+      label: Siluriformes
+    -
+      value: Squamata
+      label: Squamata
+    -
+      value: Strigiformes
+      label: Strigiformes
+    -
+      value: Struthioniformes
+      label: Struthioniformes
+    -
+      value: Testudines
+      label: Testudines
+    -
+      value: Xenarthra
+      label: Xenarthra
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

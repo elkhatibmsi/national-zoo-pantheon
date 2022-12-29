@@ -1,0 +1,14 @@
+uuid: b599bfe7-47ca-4b24-aa72-25565a7e8763
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.author_bird_friendly_coffee
+  module:
+    - user
+id: user_add_role_action.author_bird_friendly_coffee
+label: 'Add the author - bird friendly coffee role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: author_bird_friendly_coffee

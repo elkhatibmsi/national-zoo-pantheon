@@ -1,0 +1,15 @@
+uuid: 80ab7d39-b958-4aee-a447-3ab0cb1d13ce
+langcode: en
+status: true
+dependencies:
+  module:
+    - micon_paragraphs
+third_party_settings:
+  micon_paragraphs:
+    icon: ''
+id: accordion
+label: Accordion
+icon_uuid: null
+icon_default: null
+description: 'Migrated from field_collection field_accordion'
+behavior_plugins: {  }

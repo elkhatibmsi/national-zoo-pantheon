@@ -1,0 +1,10 @@
+uuid: 640a553f-955a-4c25-85eb-1b226c688770
+langcode: en
+status: true
+dependencies: {  }
+id: temp_sick_bird_reports_results_access
+label: 'temp- sick bird reports results access'
+weight: 15
+is_admin: null
+permissions:
+  - 'access all webform results'

@@ -1,0 +1,40 @@
+uuid: 1f3439df-1e9d-4b65-ba99-cc832c923798
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - search
+    - system
+_core:
+  default_config_hash: btW6TFHajhy7Eo6YUvdFiPh4TcPggo8GBXYctjV6zag
+id: authenticated
+label: 'authenticated user'
+weight: 1
+is_admin: false
+permissions:
+  - 'access administration pages'
+  - 'access content'
+  - 'access media browser'
+  - 'access protected node password form'
+  - 'access unpublished view hashkey'
+  - 'access unpublished view unpublished node'
+  - 'access unpublished view workbench moderation drafts'
+  - 'access workbench access by role'
+  - access_google_appliance_content
+  - 'search content'
+  - 'skip CAPTCHA'
+  - 'view all unpublished content'
+  - 'view any basic_block bean'
+  - 'view any custom_block bean'
+  - 'view any disclaimer bean'
+  - 'view any event_comestibles bean'
+  - 'view any font_page_feature bean'
+  - 'view any landing_feature bean'
+  - 'view any temporary_content bean'
+  - 'view any webcam_ad bean'
+  - 'view files'
+  - 'view own unpublished content'
+  - 'view protected content'
+  - 'view the administration theme'
+  - 'vote on polls'

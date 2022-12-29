@@ -1,0 +1,182 @@
+uuid: e5d038ec-d522-445e-83bb-80078560c2c5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_event_components
+    - node.type.event
+  module:
+    - entity_reference_revisions
+id: node.event.field_event_components
+field_name: field_event_components
+entity_type: node
+bundle: event
+label: 'Event Components'
+description: 'Create paragraph content! This will display under the overview field. '
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles: null
+    negate: 0
+    target_bundles_drag_drop:
+      accordion:
+        weight: 66
+        enabled: false
+      accordion_tabs:
+        weight: 2
+        enabled: false
+      block_embed:
+        weight: 3
+        enabled: false
+      block_embed_no_title:
+        weight: 4
+        enabled: false
+      button_grid:
+        weight: 5
+        enabled: false
+      button_item:
+        weight: 6
+        enabled: false
+      callout:
+        weight: 7
+        enabled: false
+      card_grid:
+        weight: 8
+        enabled: false
+      card_item:
+        weight: 9
+        enabled: false
+      card_item_blank:
+        weight: 10
+        enabled: false
+      cell:
+        weight: 11
+        enabled: false
+      class_session:
+        weight: 67
+        enabled: false
+      collapsible_block:
+        weight: 12
+        enabled: false
+      collection:
+        weight: 68
+        enabled: false
+      content_video:
+        weight: 13
+        enabled: false
+      entity_list:
+        weight: 14
+        enabled: false
+      faq:
+        weight: 15
+        enabled: false
+      faq_item:
+        weight: 69
+        enabled: false
+      flipbook_grid:
+        weight: 16
+        enabled: false
+      flipbook_grid_item:
+        weight: 17
+        enabled: false
+      grid:
+        weight: 18
+        enabled: false
+      horizontal_single_tab:
+        weight: 70
+        enabled: false
+      horizontal_tabs:
+        weight: 19
+        enabled: false
+      hours:
+        weight: 71
+        enabled: false
+      icon_card_item:
+        weight: 20
+        enabled: false
+      image:
+        weight: 21
+        enabled: false
+      image_collection:
+        weight: 72
+        enabled: false
+      image_only:
+        weight: 22
+        enabled: false
+      layout:
+        weight: 73
+        enabled: false
+      looping_video:
+        weight: 23
+        enabled: false
+      menu_tabs:
+        weight: 74
+        enabled: false
+      modal_media_gallery:
+        weight: 24
+        enabled: false
+      multi_column_layout_text_:
+        weight: 25
+        enabled: false
+      promotion_one:
+        weight: 75
+        enabled: false
+      promotion_three:
+        weight: 76
+        enabled: false
+      promotion_two:
+        weight: 77
+        enabled: false
+      section:
+        weight: 26
+        enabled: false
+      section_heading:
+        weight: 62
+        enabled: false
+      single_image_with_caption:
+        weight: 27
+        enabled: false
+      slideshow:
+        weight: 28
+        enabled: false
+      slideshow_container:
+        weight: 78
+        enabled: false
+      sponsors:
+        weight: 79
+        enabled: false
+      sticky_anchor_menu:
+        weight: 65
+        enabled: false
+      text:
+        weight: 29
+        enabled: false
+      thumbnail_slideshow:
+        weight: -74
+        enabled: false
+      time_slot:
+        weight: 30
+        enabled: false
+      two_column_grid:
+        weight: 34
+        enabled: false
+      two_columns:
+        weight: 31
+        enabled: false
+      two_columns_40_60:
+        weight: 32
+        enabled: false
+      two_columns_equal:
+        weight: 33
+        enabled: false
+      view_embed:
+        weight: 35
+        enabled: false
+      webcam_embed:
+        weight: 80
+        enabled: false
+field_type: entity_reference_revisions

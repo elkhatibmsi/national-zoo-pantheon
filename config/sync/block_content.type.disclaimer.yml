@@ -1,0 +1,8 @@
+uuid: 5065fc01-4994-47c2-aa26-ccb39bf15b83
+langcode: en
+status: true
+dependencies: {  }
+id: disclaimer
+label: Disclaimer
+revision: 1
+description: 'Short notice that appears at the bottom of content such as webforms'

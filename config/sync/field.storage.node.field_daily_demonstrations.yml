@@ -1,0 +1,19 @@
+uuid: 03caae08-7443-4e4a-8e27-eadf239c6b75
+langcode: und
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_daily_demonstrations
+field_name: field_daily_demonstrations
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

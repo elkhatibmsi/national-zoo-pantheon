@@ -1,0 +1,23 @@
+uuid: e6de4541-efd2-4217-87de-3a511f6c2013
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_editorial_access
+    - node.type.news
+id: node.news.field_editorial_access
+field_name: field_editorial_access
+entity_type: node
+bundle: news
+label: 'News Category (Editorial Access)'
+description: 'Very important: Choose a website area for this news article. For example, if you choose "animals", the URL for this article will be /animals/news/[title], and it will go in the Animal news lists around the site. You must choose an area. There is no such thing as "general news."'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    sort:
+      field: _none
+field_type: entity_reference

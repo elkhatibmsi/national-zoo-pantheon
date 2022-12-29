@@ -1,0 +1,21 @@
+uuid: 8a2f8856-c599-4734-9d3f-9467935233ed
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_social_structure
+    - node.type.animal
+  module:
+    - text
+id: node.animal.field_social_structure
+field_name: field_social_structure
+entity_type: node
+bundle: animal
+label: 'Social Structure'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

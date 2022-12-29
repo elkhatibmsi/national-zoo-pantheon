@@ -1,0 +1,21 @@
+uuid: 97ae87c8-f41c-41ef-94f0-235bc03624c6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_site
+    - node.type.school_program
+  module:
+    - options
+id: node.school_program.field_site
+field_name: field_site
+entity_type: node
+bundle: school_program
+label: Site
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,26 @@
+{% set grid_classes = 'flex flex-wrap col-span-1 row-span-1 rounded' %}
+
+{% if content %}
+	<div{{attributes}}>
+		<div class="auto-cols-auto grid-cols-4 space-y-1 lg:space-y-0 grid gap-2 auto-rows-auto overflow-hidden overflow-x-auto w-auto">
+			<div  {{ region_attributes.area1.addclass("bg-off-white col-span-2 row-span-2 rounded overflow-hidden") }} >
+				{{ content.area1 }}
+			</div>
+				<div  {{ region_attributes.area2.addClass(grid_classes) }}>
+				{{ content.area2 }}
+				</div>
+			
+				<div  {{ region_attributes.area3.addClass(grid_classes) }}>
+				{{ content.area3 }}
+							</div>
+				<div  {{ region_attributes.area4.addClass(grid_classes) }}>
+				{{ content.area4 }}
+			</div>
+			
+				<div  {{ region_attributes.area5.addClass(grid_classes) }}>
+				{{ content.area5 }}
+			</div>
+
+		</div>
+	</div>
+{% endif %}

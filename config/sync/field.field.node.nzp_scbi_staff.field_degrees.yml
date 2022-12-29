@@ -1,0 +1,21 @@
+uuid: ce7b147b-f02a-47d7-ab48-00eaf3bc3f25
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_degrees
+    - node.type.nzp_scbi_staff
+  module:
+    - options
+id: node.nzp_scbi_staff.field_degrees
+field_name: field_degrees
+entity_type: node
+bundle: nzp_scbi_staff
+label: Degree(s)
+description: 'Select one or more degrees. These will be appended to the person''s name.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

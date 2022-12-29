@@ -1,0 +1,23 @@
+uuid: c91742a4-6784-4a8c-afe7-a640633166b7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_cost
+    - node.type.attraction
+id: node.attraction.field_cost
+field_name: field_cost
+entity_type: node
+bundle: attraction
+label: 'Ticket Cost'
+description: 'Enter the cost for this attraction. If the cost is free to visitors, leave blank.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: !!float 0
+  max: null
+  prefix: $
+  suffix: ''
+field_type: decimal

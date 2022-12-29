@@ -1,0 +1,21 @@
+uuid: cada406b-3e20-4b2a-b5d9-07e571353114
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.disclaimer
+    - field.storage.block_content.field_text
+  module:
+    - text
+id: block_content.disclaimer.field_text
+field_name: field_text
+entity_type: block_content
+bundle: disclaimer
+label: Text
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

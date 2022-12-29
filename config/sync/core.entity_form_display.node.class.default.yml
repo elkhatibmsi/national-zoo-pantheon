@@ -1,0 +1,104 @@
+uuid: 9fc8dbb0-e896-4151-aa16-c8d781e43810
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.class.body
+    - field.field.node.class.field_age_range
+    - field.field.node.class.field_class_length
+    - field.field.node.class.field_class_session
+    - field.field.node.class.field_class_type
+    - field.field.node.class.field_editorial_access
+    - field.field.node.class.field_landing_image
+    - field.field.node.class.field_maximum_age
+    - field.field.node.class.field_member_cost
+    - field.field.node.class.field_minimum_age
+    - field.field.node.class.field_non_member_cost
+    - field.field.node.class.field_status
+    - node.type.class
+  module:
+    - path
+    - text
+id: node.class.default
+targetEntityType: node
+bundle: class
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 121
+    region: content
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
+  created:
+    type: datetime_timestamp
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    weight: 15
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 120
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    weight: 16
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 5
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  url_redirects:
+    weight: 50
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_age_range: true
+  field_class_length: true
+  field_class_session: true
+  field_class_type: true
+  field_editorial_access: true
+  field_landing_image: true
+  field_maximum_age: true
+  field_member_cost: true
+  field_minimum_age: true
+  field_non_member_cost: true
+  field_status: true

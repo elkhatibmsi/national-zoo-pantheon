@@ -1,0 +1,15 @@
+uuid: e6cc6aea-693e-48f7-8c8d-870e1ac08d1e
+langcode: en
+status: true
+dependencies:
+  module:
+    - layout_paragraphs
+id: thumbnail_slideshow
+label: 'Thumbnail Slideshow'
+icon_uuid: null
+icon_default: null
+description: 'Migrated from paragraph bundle Thumbnail Slideshow'
+behavior_plugins:
+  layout_paragraphs:
+    enabled: false
+    available_layouts: {  }

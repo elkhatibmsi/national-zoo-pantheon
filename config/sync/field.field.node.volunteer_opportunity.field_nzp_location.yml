@@ -1,0 +1,23 @@
+uuid: 2ace4ae6-8d2b-45f0-8341-a9b5981f91a3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_nzp_location
+    - node.type.volunteer_opportunity
+id: node.volunteer_opportunity.field_nzp_location
+field_name: field_nzp_location
+entity_type: node
+bundle: volunteer_opportunity
+label: Location
+description: 'Choose the location of this opportunity.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    sort:
+      field: _none
+field_type: entity_reference

@@ -1,0 +1,19 @@
+uuid: deb2b1fb-1b60-4422-a477-eb07c28a5fdb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_educational_background
+    - node.type.nzp_scbi_staff
+id: node.nzp_scbi_staff.field_educational_background
+field_name: field_educational_background
+entity_type: node
+bundle: nzp_scbi_staff
+label: 'Educational background'
+description: "Give degrees and colleges (use complete sentences). Include research projects worked on or volunteered for, internships, externships, fellowship, postdocs, field training and relevant past employment (working in a wildlife rehab, for instance). \r\n\r\nIf any of your training took place at NZP/SCBI or alongside NZP/SCBI personnel (including internships, or attending classes, talks, or conferences) highlight this.\r\n\r\ne.g. \"Lovegood matriculated Hogwarts in 1999 as a Ravenclaw. She earned her masters of science in mythical biology from UC Santa Cruz in 2003, and her doctorate from Cornell University in 2007. She held a post-doctoral position at SCBI in 2008 and 2009, where she worked with Steve Monfort, Janine Brown, and Budhan Pukazhenthi. She volunteered at the Zoo’s Bird House, where she helped document the existence of the world’s first hobbit kiwi.\""
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

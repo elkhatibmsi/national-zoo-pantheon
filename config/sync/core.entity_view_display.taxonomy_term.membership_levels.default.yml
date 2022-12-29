@@ -1,0 +1,78 @@
+uuid: 2a746808-d3d0-41fa-a741-161ce50f13f0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.membership_levels.field_benefits
+    - field.field.taxonomy_term.membership_levels.field_cost
+    - field.field.taxonomy_term.membership_levels.field_landing_image
+    - field.field.taxonomy_term.membership_levels.field_membership_category
+    - field.field.taxonomy_term.membership_levels.field_promotion
+    - field.field.taxonomy_term.membership_levels.field_tour
+    - taxonomy.vocabulary.membership_levels
+  module:
+    - options
+    - text
+id: taxonomy_term.membership_levels.default
+targetEntityType: taxonomy_term
+bundle: membership_levels
+mode: default
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_benefits:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_cost:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_landing_image:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_membership_category:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_promotion:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_tour:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 6
+    region: content
+hidden: {  }

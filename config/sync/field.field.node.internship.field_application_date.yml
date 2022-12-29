@@ -1,0 +1,21 @@
+uuid: 9afa3bd7-e285-463c-856e-96b217e2ef0d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_application_date
+    - node.type.internship
+  module:
+    - datetime
+id: node.internship.field_application_date
+field_name: field_application_date
+entity_type: node
+bundle: internship
+label: 'Application deadline(s)'
+description: 'Choose the application deadline for this internship'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

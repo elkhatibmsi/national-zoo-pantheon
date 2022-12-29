@@ -1,0 +1,67 @@
+
+{% import directory ~ '/components/utils/macro.twig' as macro %}
+
+{{ attach_library('tailwind_nzp/alpinejs') }}
+{{ attach_library('tailwind_nzp/swiperjs') }}
+
+		<div x-data="{swiper: null}" x-init="swiper = new Swiper($refs.container, {
+			      loop: false,
+			      slidesPerView: 1,
+			      spaceBetween: 0,
+				   pagination: {
+					el: '.swiper-pagination',
+					type: 'bullets',
+ 					 },
+			
+			      breakpoints: {
+			        640: {
+			          slidesPerView: 1,
+			          spaceBetween: 0,
+			        },
+			        768: {
+			          slidesPerView: 1,
+			          spaceBetween: 0,
+			        },
+			        1024: {
+			          slidesPerView: 1,
+			          spaceBetween: 0,
+			        },
+			      },
+			    })">
+
+			<div class="swiper-container" x-ref="container">	
+				<div class="swiper-wrapper">
+				
+					<!-- Slides -->
+					{% for key, slide in slides if key|first != '#' %}
+					{% set slide = slide_attributes ? attribute(slide, slide_attributes) : slide %}
+					{% set caption = alt_caption == true ? slide["#media"].field_media_image[0].alt : caption %}
+
+						<div class="swiper-slide w-full">
+							{{ slide }}
+							{% if caption %}
+							<div class="slide--caption py-6 white">
+							{{ caption }}
+							</div>
+							{% endif %}
+						</div>
+					{% endfor %}
+				</div>
+						<div class="absolute inset-y-0 left-0 z-10 flex items-center">
+				<button @click="swiper.slidePrev()" class="bg-white ml-1 flex justify-center items-center w-10 h-10 rounded-full shadow focus:outline-none">
+					<svg viewbox="0 0 20 20" fill="currentColor" class="chevron-left w-6 h-6">
+						<path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+					</svg>
+				</button>
+			</div>
+				<div class="absolute inset-y-0 right-0 z-10 flex items-center">
+					<button @click="swiper.slideNext()" class="bg-white mr-1 flex justify-center items-center w-10 h-10 rounded-full shadow focus:outline-none">
+						<svg viewbox="0 0 20 20" fill="currentColor" class="chevron-right w-6 h-6">
+							<path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
+						</svg>
+					</button>
+				</div>
+			<div class="swiper-pagination"></div>
+			</div>
+
+		</div>

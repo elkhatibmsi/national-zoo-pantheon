@@ -1,0 +1,23 @@
+uuid: 8e780ee0-8e68-4411-9c86-ad2e22d873b4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_link_slide_to_modal
+    - paragraphs.paragraphs_type.slideshow
+id: paragraph.slideshow.field_link_slide_to_modal
+field_name: field_link_slide_to_modal
+entity_type: paragraph
+bundle: slideshow
+label: 'Link slide to modal?'
+description: 'Causes the slide to launch a modal window containing the contents of the "modal content" field below. This will only work if the "image link" field is empty.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: ''
+  off_label: ''
+field_type: boolean

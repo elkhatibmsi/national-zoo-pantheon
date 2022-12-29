@@ -1,0 +1,21 @@
+uuid: abcd8509-6009-486b-b947-6f20a7805561
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_product_wholesale
+    - node.type.coffee_product
+id: node.coffee_product.field_product_wholesale
+field_name: field_product_wholesale
+entity_type: node
+bundle: coffee_product
+label: 'Product Wholesale'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: 'Y'
+  off_label: 'N'
+field_type: boolean

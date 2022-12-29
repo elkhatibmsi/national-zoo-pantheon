@@ -1,0 +1,14 @@
+uuid: fad9498a-2424-411e-bbd6-3e549ec5080a
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.author_support
+  module:
+    - user
+id: user_remove_role_action.author_support
+label: 'Remove the author - support role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: author_support

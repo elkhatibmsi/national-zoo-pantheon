@@ -1,0 +1,109 @@
+uuid: c4dbfb59-4390-4059-ab29-39f18eadcd82
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.info_card
+    - field.field.node.event.body
+    - field.field.node.event.field_card_position
+    - field.field.node.event.field_custom_contact_block
+    - field.field.node.event.field_dates
+    - field.field.node.event.field_editorial_access
+    - field.field.node.event.field_event_components
+    - field.field.node.event.field_event_date_override
+    - field.field.node.event.field_exclude_from_next_event
+    - field.field.node.event.field_featured_video
+    - field.field.node.event.field_image
+    - field.field.node.event.field_landing_image
+    - field.field.node.event.field_menu_tabs
+    - field.field.node.event.field_modal_content
+    - field.field.node.event.field_modal_gallery
+    - field.field.node.event.field_modal_iframe
+    - field.field.node.event.field_promotion
+    - field.field.node.event.field_sponsors
+    - field.field.node.event.field_subtitle
+    - field.field.node.event.field_tags
+    - field.field.node.event.field_template_options
+    - field.field.node.event.field_times
+    - field.field.node.event.field_url
+    - field.field.node.event.field_zoo_fonz
+    - node.type.event
+  module:
+    - datetime
+    - link
+    - text
+    - user
+id: node.event.info_card
+targetEntityType: node
+bundle: event
+mode: info_card
+content:
+  field_dates:
+    type: datetime_default
+    label: hidden
+    settings:
+      timezone_override: ''
+      format_type: date_only
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_event_date_override:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_subtitle:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_times:
+    type: datetime_default
+    label: hidden
+    settings:
+      timezone_override: ''
+      format_type: ti
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_url:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  body: true
+  field_card_position: true
+  field_custom_contact_block: true
+  field_editorial_access: true
+  field_event_components: true
+  field_exclude_from_next_event: true
+  field_featured_video: true
+  field_image: true
+  field_landing_image: true
+  field_menu_tabs: true
+  field_modal_content: true
+  field_modal_gallery: true
+  field_modal_iframe: true
+  field_promotion: true
+  field_sponsors: true
+  field_tags: true
+  field_template_options: true
+  field_zoo_fonz: true

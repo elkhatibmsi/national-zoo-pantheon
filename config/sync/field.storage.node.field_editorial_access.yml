@@ -1,0 +1,20 @@
+uuid: c7890d77-be18-496a-a6c8-ecdcaa2d7c13
+langcode: und
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+id: node.field_editorial_access
+field_name: field_editorial_access
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

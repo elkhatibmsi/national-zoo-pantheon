@@ -1,0 +1,23 @@
+uuid: c2b2c619-aee7-4a48-af79-eb667b7a13c4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_card_border_settings
+    - paragraphs.paragraphs_type.card_grid
+id: paragraph.card_grid.field_card_border_settings
+field_name: field_card_border_settings
+entity_type: paragraph
+bundle: card_grid
+label: 'Include border?'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: card-border
+  off_label: no-card-border
+field_type: boolean

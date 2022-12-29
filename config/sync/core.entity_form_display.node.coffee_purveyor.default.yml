@@ -1,0 +1,122 @@
+uuid: c895f38f-bc4d-46d8-97e8-c64574ee177b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.coffee_purveyor.body
+    - field.field.node.coffee_purveyor.field_certification_expires
+    - field.field.node.coffee_purveyor.field_certifications
+    - field.field.node.coffee_purveyor.field_certifier
+    - field.field.node.coffee_purveyor.field_company_email
+    - field.field.node.coffee_purveyor.field_company_url
+    - field.field.node.coffee_purveyor.field_contact_fax
+    - field.field.node.coffee_purveyor.field_contact_name
+    - field.field.node.coffee_purveyor.field_editorial_access
+    - field.field.node.coffee_purveyor.field_elevation
+    - field.field.node.coffee_purveyor.field_featured_bird
+    - field.field.node.coffee_purveyor.field_harvest
+    - field.field.node.coffee_purveyor.field_hectares
+    - field.field.node.coffee_purveyor.field_number_of_growers
+    - field.field.node.coffee_purveyor.field_other_products
+    - field.field.node.coffee_purveyor.field_phone
+    - field.field.node.coffee_purveyor.field_pounds_of_coffee
+    - field.field.node.coffee_purveyor.field_related_coffee_products_
+    - field.field.node.coffee_purveyor.field_teaser_image
+    - field.field.node.coffee_purveyor.field_type
+    - field.field.node.coffee_purveyor.field_varietals
+    - node.type.coffee_purveyor
+  module:
+    - path
+    - text
+id: node.coffee_purveyor.default
+targetEntityType: node
+bundle: coffee_purveyor
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 121
+    region: content
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
+  created:
+    type: datetime_timestamp
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    weight: 15
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 120
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    weight: 16
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 5
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  url_redirects:
+    weight: 50
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_certification_expires: true
+  field_certifications: true
+  field_certifier: true
+  field_company_email: true
+  field_company_url: true
+  field_contact_fax: true
+  field_contact_name: true
+  field_editorial_access: true
+  field_elevation: true
+  field_featured_bird: true
+  field_harvest: true
+  field_hectares: true
+  field_number_of_growers: true
+  field_other_products: true
+  field_phone: true
+  field_pounds_of_coffee: true
+  field_related_coffee_products_: true
+  field_teaser_image: true
+  field_type: true
+  field_varietals: true

@@ -1,0 +1,30 @@
+uuid: db19d6e1-8bf1-4566-8a38-f0aa00e76b5c
+langcode: und
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_caption_position
+field_name: field_caption_position
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: bottom
+      label: Bottom
+    -
+      value: center
+      label: Center
+    -
+      value: top
+      label: Top
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

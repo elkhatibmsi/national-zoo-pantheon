@@ -1,0 +1,19 @@
+uuid: 91eb5fd1-a1c3-49b6-83d3-ee4f36e993fd
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+    - text
+id: paragraph.field_collapsible_block_content
+field_name: field_collapsible_block_content
+entity_type: paragraph
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

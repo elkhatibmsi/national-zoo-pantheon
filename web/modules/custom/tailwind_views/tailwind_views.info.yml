@@ -1,0 +1,7 @@
+name: 'tailwind_views'
+type: module
+description: 'Views Display Formatter using Tailwind'
+core_version_requirement: 9.x
+package: 'Custom'
+dependencies:
+  - views

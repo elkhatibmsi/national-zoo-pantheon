@@ -1,0 +1,15 @@
+uuid: 753fd8ee-b8e8-475a-9190-3b0fc7f857b3
+langcode: en
+status: true
+dependencies:
+  module:
+    - layout_paragraphs
+id: button_grid
+label: 'Button Grid'
+icon_uuid: null
+icon_default: null
+description: 'Migrated from paragraph bundle Button Grid'
+behavior_plugins:
+  layout_paragraphs:
+    enabled: false
+    available_layouts: {  }

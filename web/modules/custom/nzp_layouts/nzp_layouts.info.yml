@@ -1,0 +1,8 @@
+name: 'nzp Layouts'
+type: module
+description: 'A suite of Layouts and options for nzp'
+core: 8.x
+core_version_requirement: ^8 || ^9
+package: 'Custom'
+dependencies:
+  - layout_discovery

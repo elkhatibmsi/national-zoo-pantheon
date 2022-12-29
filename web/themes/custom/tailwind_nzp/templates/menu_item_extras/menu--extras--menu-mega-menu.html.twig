@@ -1,0 +1,77 @@
+{#
+/**
+ * @file
+ * Theme override to display a menu.
+ *
+ * Available variables:
+ * - menu_name: The machine name of the menu.
+ * - items: A nested list of menu items. Each menu item contains:
+ *   - attributes: HTML attributes for the menu item.
+ *   - content.children: The menu item child items.
+ *   - title: The menu link title.
+ *   - url: The menu link url, instance of \Drupal\Core\Url
+ *   - content: The field item content.
+ *   - localized_options: Menu link localized options.
+ *   - is_expanded: TRUE if the link has visible children within the current
+ *     menu tree.
+ *   - is_collapsed: TRUE if the link has children within the current menu tree
+ *     that are not currently visible.
+ *   - in_active_trail: TRUE if the link is in the active trail.
+ */
+#}
+
+{% import _self as menus %}
+
+{#
+  We call a macro which calls itself to render the full tree.
+  @see https://twig.symfony.com/doc/1.x/tags/macro.html
+#}
+{{ menus.menu_links(items, attributes, 0) }}
+
+{% macro menu_links(items, attributes, menu_level) %}
+	{% import _self as menus %}
+	{% if items %}
+  
+  {% set tw_classes_li = ['flex','flex-grow','lg:hover:text-darkergray','align-stretch'] %}
+  {% set tw_classes_ul = ['lg:h-full', 'lg:p-0', 'z-20', 'pb-8', 'lg:overflow-visible','overflow-y-auto', 'relative', 'h-full', 'lg:flex','md:flex-grow','main-menu--level-0'] %}
+  {% set tw_classes_dropdown = 'flex mega-menu lg:absolute lg:top-full relative shadow-2xl' %}
+
+  <div class="w-full">
+
+  	{% if menu_level == 0 %}
+			<ul{{ attributes.addClass('main-menu--level-0', tw_classes_ul) }}">
+		{% else %}
+			<ul {{attributes.addClass('main-menu--level-1') }}  >
+		{% endif %}
+
+		{% for item in items %}
+		{%
+      set classes = [
+        item.is_expanded ? 'dropdown-item',
+        item.is_collapsed ? 'collapsed',
+        item.in_active_trail ? 'active',
+      ]
+    %}
+
+	  <li x-data="mmDropdown"  {{ item.attributes.addClass("flex lg:px-4 pt-4 pb-2 lg:py-0 lg:px-0 lg:w-full", tw_classes_li) }} x-init="checkIsMobile()"  :class="{'active': (isMobile && isOpen) }">
+		  <span class="flex relative w-full">
+        <a href="#" class="toggle-dropdown absolute right-0"  x-on:click="clickToOpen()" >
+		      <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" fill="#fff" clip-rule="evenodd"><path d="M12 0c6.623 0 12 5.377 12 12s-5.377 12-12 12-12-5.377-12-12 5.377-12 12-12zm0 1c6.071 0 11 4.929 11 11s-4.929 11-11 11-11-4.929-11-11 4.929-11 11-11zm-3 5.753l6.44 5.247-6.44 5.263.678.737 7.322-6-7.335-6-.665.753z"/>
+          </svg>
+        </a>
+        {{ link(item.title, item.url) }}
+		  </span>
+      {% set rendered_content = item.content|without('')|render %}
+      {% if rendered_content %}
+        <div class="{{ tw_classes_dropdown }}" :class="{'dropdown-show': (isMobile && isOpen) }" >
+          {{ rendered_content }}
+        </div>
+      {% endif %}     
+    </li>
+				{% endfor %}
+			</ul>
+		{% endif %}
+  </div>
+	{% endmacro %}
+
+{{ menu.menu_links(items, attributes, 0) }}

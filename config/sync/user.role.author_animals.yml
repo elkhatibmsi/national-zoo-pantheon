@@ -1,0 +1,53 @@
+uuid: fd85d082-e470-40ad-ac4c-c8896f44666a
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.full_html
+    - node.type.animal
+    - node.type.blank_page
+    - node.type.media_release
+    - node.type.news
+  module:
+    - contextual
+    - filter
+    - node
+    - system
+id: author_animals
+label: 'author - animals'
+weight: 3
+is_admin: null
+permissions:
+  - 'access administration menu'
+  - 'access administration pages'
+  - 'access content overview'
+  - 'access contextual links'
+  - 'access media browser'
+  - 'access workbench'
+  - 'add media from remote sources'
+  - 'create animal content'
+  - 'create files'
+  - 'create media_release content'
+  - 'create news content'
+  - 'delete any animal content'
+  - 'delete own animal content'
+  - 'delete own media_release content'
+  - 'delete own news content'
+  - 'edit any animal content'
+  - 'edit any blank_page content'
+  - 'edit any media_release content'
+  - 'edit any news content'
+  - 'edit own animal content'
+  - 'edit own blank_page content'
+  - 'edit own media_release content'
+  - 'edit own news content'
+  - 'moderate content from draft to needs_review'
+  - 'moderate content from needs_review to draft'
+  - 'moderate content from needs_review to published'
+  - 'use media wysiwyg'
+  - 'use text format filtered_html'
+  - 'use text format full_html'
+  - 'use workbench_moderation my drafts tab'
+  - 'view all unpublished content'
+  - 'view files'
+  - 'view moderation messages'

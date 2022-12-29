@@ -1,0 +1,36 @@
+uuid: b73b47d4-7b33-490e-a192-6ab3a388a38a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.media.document_private.field_media_document
+    - field.field.media.document_private.field_media_document_private
+    - media.type.document_private
+  module:
+    - file
+id: media.document_private.default
+targetEntityType: media
+bundle: document_private
+mode: default
+content:
+  field_media_document:
+    type: file_default
+    label: visually_hidden
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_media_document_private:
+    type: file_default
+    label: visually_hidden
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  created: true
+  name: true
+  thumbnail: true
+  uid: true

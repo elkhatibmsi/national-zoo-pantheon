@@ -1,0 +1,31 @@
+What "should" work:
+* Settings form
+* Search page/form
+* Synonyms
+* Pager
+* Sorting
+* Search block
+
+Note, these are all tested.
+
+Most files contain @todo and @fixme parts.
+
+Files of the D7 version not even touched:
+	js/clicklog.js
+	js/jquery.gsa-clicks.js
+	js/jquery.gsa-clicks.min.js
+	theme/smithsonian-appliance-block-form.tpl.php
+	theme/smithsonian-appliance-keymatch.tpl.php
+	theme/smithsonian-appliance-onebox-module.tpl.php
+	theme/smithsonian-appliance-onebox-result.tpl.php
+	theme/smithsonian-appliance-search-form.tpl.php
+	theme/smithsonian-appliance-spelling-suggestion.tpl.php
+	theme/smithsonian_appliance.css
+
+To do:
+* Onebox results output
+* keymatch output
+* Spelling suggestion output
+* Click/JS/Posting click stats
+* Clustering
+* Language filtering

@@ -1,0 +1,15 @@
+uuid: 6362d54e-1237-4b83-95f4-806c10bfc90c
+langcode: en
+status: true
+dependencies:
+  module:
+    - layout_paragraphs
+id: two_column_grid
+label: 'Image Grid: Two Column'
+icon_uuid: null
+icon_default: null
+description: 'Migrated from paragraph bundle Image Grid: Two Column'
+behavior_plugins:
+  layout_paragraphs:
+    enabled: false
+    available_layouts: {  }

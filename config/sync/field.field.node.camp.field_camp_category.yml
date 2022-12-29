@@ -1,0 +1,23 @@
+uuid: 38a3dcf0-adc9-4dfd-9625-11fa39aceba3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_camp_category
+    - node.type.camp
+id: node.camp.field_camp_category
+field_name: field_camp_category
+entity_type: node
+bundle: camp
+label: 'Camp Category'
+description: 'Choose the category for this camp.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    sort:
+      field: _none
+field_type: entity_reference

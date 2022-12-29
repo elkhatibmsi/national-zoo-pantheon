@@ -1,0 +1,23 @@
+uuid: 66265dd4-dc74-4de5-bcc7-c1d7bf7e7492
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_member_cost
+    - node.type.class
+id: node.class.field_member_cost
+field_name: field_member_cost
+entity_type: node
+bundle: class
+label: 'Member cost'
+description: 'Enter the member cost of this class'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: !!float 0
+  max: null
+  prefix: $
+  suffix: ''
+field_type: decimal

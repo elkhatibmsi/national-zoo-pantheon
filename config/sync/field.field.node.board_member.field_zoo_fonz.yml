@@ -1,0 +1,23 @@
+uuid: 5fb2fa6c-15ae-4674-86fd-d05f8a562fa5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_zoo_fonz
+    - node.type.board_member
+id: node.board_member.field_zoo_fonz
+field_name: field_zoo_fonz
+entity_type: node
+bundle: board_member
+label: 'Zoo or FONZ?'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    sort:
+      field: _none
+field_type: entity_reference

@@ -1,0 +1,153 @@
+uuid: 2aa6cb6b-b5ba-41f8-8bb7-f8864d3305d0
+langcode: en
+status: true
+dependencies: {  }
+id: upgrade_d7_node_complete_webcam
+class: Drupal\node\Plugin\migrate\D7NodeTranslation
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 7'
+  - Content
+migration_group: migrate_drupal_7
+label: 'Node complete (Webcam)'
+source:
+  plugin: d7_node_complete
+  node_type: webcam
+process:
+  nid:
+    -
+      plugin: get
+      source: tnid
+  vid:
+    -
+      plugin: get
+      source: vid
+  langcode:
+    -
+      plugin: default_value
+      source: language
+      default_value: und
+  title:
+    -
+      plugin: get
+      source: title
+  uid:
+    -
+      plugin: get
+      source: node_uid
+  status:
+    -
+      plugin: get
+      source: status
+  created:
+    -
+      plugin: get
+      source: created
+  changed:
+    -
+      plugin: get
+      source: timestamp
+  promote:
+    -
+      plugin: get
+      source: promote
+  sticky:
+    -
+      plugin: get
+      source: sticky
+  revision_uid:
+    -
+      plugin: get
+      source: revision_uid
+  revision_log:
+    -
+      plugin: get
+      source: log
+  revision_timestamp:
+    -
+      plugin: get
+      source: timestamp
+  content_translation_source:
+    -
+      plugin: get
+      source: source_langcode
+  comment_node_webcam/0/status:
+    -
+      plugin: get
+      source: comment
+  body:
+    -
+      plugin: get
+      source: body
+    -
+      plugin: media_wysiwyg_filter
+    -
+      plugin: img_tag_to_embed
+  field_camera_embed:
+    -
+      plugin: get
+      source: field_camera_embed
+    -
+      plugin: media_wysiwyg_filter
+  field_editorial_access:
+    -
+      plugin: sub_process
+      source: field_editorial_access
+      process:
+        target_id: tid
+  field_feature_one:
+    -
+      plugin: get
+      source: field_feature_one
+  field_feature_two:
+    -
+      plugin: get
+      source: field_feature_two
+  field_feature_three:
+    -
+      plugin: get
+      source: field_feature_three
+  field_promotion_three:
+    -
+      plugin: get
+      source: field_promotion_three
+  field_sponsored_by:
+    -
+      plugin: get
+      source: field_sponsored_by
+  field_related_animal:
+    -
+      plugin: get
+      source: field_related_animal
+  field_landing_image:
+    -
+      plugin: media_migration_delta_sort
+      source: field_landing_image
+    -
+      plugin: sub_process
+      process:
+        target_id: fid
+  field_use_test_player:
+    -
+      plugin: get
+      source: field_use_test_player
+  field_content_block:
+    -
+      plugin: get
+      source: field_content_block
+  field_sidebar_section_content:
+    -
+      plugin: get
+      source: field_sidebar_section_content
+destination:
+  plugin: 'entity_complete:node'
+  translations: true
+  default_bundle: webcam
+migration_dependencies:
+  required:
+    - upgrade_d7_user
+    - upgrade_d7_node_type
+    - upgrade_d7_file_entity_image_public
+  optional:
+    - upgrade_d7_field_instance

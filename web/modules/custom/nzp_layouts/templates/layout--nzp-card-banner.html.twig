@@ -1,0 +1,21 @@
+{#
+this card banner box component reads the current page's path and then sets the 
+border color based on that path. E.g. if the page is in the visit section then
+the callout box gets an orange border.
+#}
+
+{% set path = path('<current>')|split('/')[1]|clean_class %}
+{% set borderClass = 'border-' ~ path %}
+
+{% if content %}
+<div {{ attributes.addClass(settings.container_classes).addClass(settings.custom_classes).addClass('mx-auto', 'relative', 'min-h-[400px]') }} >
+	<div class="relative banner w-full">
+		<div {{region_attributes.banner.addClass("banner")}}>
+			{{ content.banner }}
+		</div>
+		<div {{region_attributes.card.addClass(borderClass ~ ' knockout md:absolute z-10 border-t-8 text-white bg-oxford-blue text-center md:max-w-[350px] md:min-w-[225px] md:min-h-32 md:overflow-y-auto grid grid-rows-auto gap-2 content-center p-4 shadow-md top-12 right-12') }}>
+			{{ content.card }}
+		</div>
+	</div>
+</div>
+{% endif %}

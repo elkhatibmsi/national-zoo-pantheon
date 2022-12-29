@@ -1,0 +1,22 @@
+nzp_layouts-library:
+  js:
+    js/script.js: {}
+  dependencies:
+    - core/drupal.ajax
+
+nzp_tabs-library:
+  js: 
+    js/tabby/dist/js/tabby.js: {}    
+    js/nzp_tabs.js: {}
+
+
+nzp_offcanvas-library:
+  js:
+    js/js-offcanvas/dist/js/js-offcanvas.pkgd.min.js: {}
+    js/nzp_offcanvas.js: {}
+
+  css:
+      theme:
+        js/js-offcanvas/dist/css/js-offcanvas.css: {}
+
+

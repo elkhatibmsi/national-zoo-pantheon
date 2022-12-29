@@ -1,0 +1,37 @@
+{#
+/**
+ * @file
+ * Theme override for the messages block.
+ *
+ * Removes wrapper elements from block so that empty block does not appear when
+ * there are no messages.
+ *
+ * Available variables:
+ * - content: The content of this block.
+ */
+#}
+
+<div class="site-logo--inner col-span-full lg:col-span-6 grid grid-cols-4">
+  {% if site_logo %}
+    <a class="site-logo--image col-span-3" href="{{ path('<front>') }}" rel="home">
+      <img width="100%" class="max-h-24" src="{{ site_logo }}" alt="{{ 'Home'|t }}" />
+    </a>
+  {% endif %}
+  {% if site_name %}
+    <a class="site-logo--name max-h-24 col-span-3" href="{{ path('<front>') }}" rel="home">{{ site_name }}</a>
+  {% endif %}
+  {{ site_slogan }}
+  <div class="self-center justify-self-end lg:hidden" @click="expanded = !expanded" :aria-expanded="expanded">
+    <svg
+			class="w-6 h-6 text-white hover:cursor-pointer"
+			fill="none"
+			stroke-linecap="round"
+			stroke-linejoin="round"
+			stroke-width="2"
+			viewBox="0 0 24 24"
+			stroke="currentColor"
+		>
+		  <path d="M4 6h16M4 12h16M4 18h16"></path>
+		</svg>
+  </div>
+</div>

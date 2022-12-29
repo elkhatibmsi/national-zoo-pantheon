@@ -1,0 +1,10 @@
+smithsonian_appliance.admin:
+  path: 'admin/config/search/smithsonian_appliance/settings'
+  defaults:
+    _form: '\Drupal\smithsonian_appliance\Form\AdministrationForm'
+    _title: 'Smithsonian Appliance'
+  requirements:
+    _permission: 'administer smithsonian appliance'
+
+route_callbacks:
+  - '\Drupal\smithsonian_appliance\Routing\SearchViewRoute::getRoute'

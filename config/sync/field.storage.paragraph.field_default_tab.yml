@@ -1,0 +1,18 @@
+uuid: 51a96cc9-c775-4ac8-9d53-61bd667c829d
+langcode: und
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.field_default_tab
+field_name: field_default_tab
+entity_type: paragraph
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

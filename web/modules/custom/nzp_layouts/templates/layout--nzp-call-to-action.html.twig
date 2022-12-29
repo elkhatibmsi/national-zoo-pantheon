@@ -1,0 +1,28 @@
+{#
+this call to action component is quite visually striking
+#}
+
+<style>
+    .call-to-action:hover {
+        transform: scale(1.1,1) translate(16px);
+    }
+    .call-to-action, .call-to-action * {
+        color: white !important;
+        font-weight: bold;
+        text-transform: uppercase;
+        background-color: #c44d58; 
+        max-width: 300px; 
+        -webkit-clip-path: polygon(100% 100%, 97% 50%, 100% 0%, 0% 0%, 0% 100%); 
+        clip-path: polygon(100% 100%, 97% 50%, 100% 0%, 0% 0%, 0% 100%); 
+        transition: all 350ms
+    }
+    .call-to-action * {
+        margin-bottom: 0;
+    }
+</style>
+
+{% if content %}
+    <div class="pt1 pr1 pb1 pl1 mt1 mb1 call-to-action">
+        {{ content }}
+    </div>
+{% endif %}

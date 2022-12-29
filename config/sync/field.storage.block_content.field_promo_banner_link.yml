@@ -1,0 +1,19 @@
+uuid: 6b5f2aee-9ffc-41d9-abbe-74e74f0ee497
+langcode: und
+status: true
+dependencies:
+  module:
+    - block_content
+    - link
+id: block_content.field_promo_banner_link
+field_name: field_promo_banner_link
+entity_type: block_content
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

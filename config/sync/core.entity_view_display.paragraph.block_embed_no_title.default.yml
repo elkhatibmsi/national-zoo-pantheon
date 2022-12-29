@@ -1,0 +1,21 @@
+uuid: 84bf3278-d731-4d38-963a-1ed8d96ce15a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.block_embed_no_title.field_embed_block_no_title_title
+    - paragraphs.paragraphs_type.block_embed_no_title
+id: paragraph.block_embed_no_title.default
+targetEntityType: paragraph
+bundle: block_embed_no_title
+mode: default
+content:
+  field_embed_block_no_title_title:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

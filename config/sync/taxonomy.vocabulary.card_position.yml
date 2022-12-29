@@ -1,0 +1,8 @@
+uuid: ff28b8ee-3b5c-40b0-85c8-e455719284f6
+langcode: en
+status: true
+dependencies: {  }
+name: 'card position'
+vid: card_position
+description: 'Used to make slideshow overlay cards appear on the left or the right side of the slideshow'
+weight: 0

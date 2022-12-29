@@ -1,0 +1,64 @@
+uuid: f8cf355c-3e66-490f-af91-7b5716dd1388
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.paragraphs_editor_preview
+    - field.field.paragraph.secondary_feature.field_bg_color
+    - field.field.paragraph.secondary_feature.field_image
+    - field.field.paragraph.secondary_feature.field_image_placement
+    - field.field.paragraph.secondary_feature.field_link
+    - field.field.paragraph.secondary_feature.field_text
+    - field.field.paragraph.secondary_feature.field_title
+    - paragraphs.paragraphs_type.secondary_feature
+  module:
+    - layout_builder
+    - link
+    - text
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+id: paragraph.secondary_feature.paragraphs_editor_preview
+targetEntityType: paragraph
+bundle: secondary_feature
+mode: paragraphs_editor_preview
+content:
+  field_image:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_link:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_text:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_title:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  field_bg_color: true
+  field_image_placement: true

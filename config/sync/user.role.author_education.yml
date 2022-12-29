@@ -1,0 +1,61 @@
+uuid: 4bad70a1-cff4-4ac7-9a33-db906fc4ae1f
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.full_html
+    - node.type.basic_page
+    - node.type.camp
+    - node.type.class
+    - node.type.event
+    - node.type.school_program
+  module:
+    - contextual
+    - filter
+    - node
+    - system
+id: author_education
+label: 'author - education'
+weight: 10
+is_admin: null
+permissions:
+  - 'access administration menu'
+  - 'access administration pages'
+  - 'access content overview'
+  - 'access contextual links'
+  - 'access workbench'
+  - 'access workbench access by role'
+  - 'clone own nodes'
+  - 'create basic_page content'
+  - 'create camp content'
+  - 'create class content'
+  - 'create event content'
+  - 'create files'
+  - 'create school_program content'
+  - 'delete any camp content'
+  - 'delete any class content'
+  - 'delete own camp content'
+  - 'delete own class content'
+  - 'delete own school_program content'
+  - 'delete terms in 33'
+  - 'edit any basic_page content'
+  - 'edit any camp content'
+  - 'edit any class content'
+  - 'edit any school_program content'
+  - 'edit own basic_page content'
+  - 'edit own camp content'
+  - 'edit own class content'
+  - 'edit own school_program content'
+  - 'edit terms in 33'
+  - 'moderate content from draft to needs_review'
+  - 'moderate content from needs_review to draft'
+  - 'preview focal point'
+  - 'skip CAPTCHA'
+  - 'use text format filtered_html'
+  - 'use text format full_html'
+  - 'use workbench_moderation my drafts tab'
+  - 'view all unpublished content'
+  - 'view files'
+  - 'view moderation messages'
+  - 'view own unpublished content'
+  - 'view the administration theme'

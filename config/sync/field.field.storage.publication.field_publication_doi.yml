@@ -1,0 +1,19 @@
+uuid: 738cb687-8117-4337-9423-832c56d6e9dc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.storage.field_publication_doi
+    - storage.storage_type.publication
+id: storage.publication.field_publication_doi
+field_name: field_publication_doi
+entity_type: storage
+bundle: publication
+label: Doi
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

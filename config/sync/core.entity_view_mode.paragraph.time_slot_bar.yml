@@ -1,0 +1,10 @@
+uuid: 5627824a-cf38-4350-a6b5-402b144933ff
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.time_slot_bar
+label: time_slot_bar
+targetEntityType: paragraph
+cache: true

@@ -1,0 +1,8 @@
+uuid: 5ca18fa4-767b-460c-8b5e-a6a6d72dbdfd
+langcode: en
+status: true
+dependencies: {  }
+id: membership-global-nav-links
+label: 'Membership Global Nav Links'
+description: 'Membership global nav menu'
+locked: false

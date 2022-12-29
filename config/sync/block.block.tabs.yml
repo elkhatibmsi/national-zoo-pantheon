@@ -1,0 +1,20 @@
+uuid: c19a55a4-32e6-4c49-bbaa-d84800201847
+langcode: en
+status: true
+dependencies:
+  theme:
+    - claro
+id: tabs
+theme: claro
+region: header
+weight: 0
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: true
+visibility: {  }

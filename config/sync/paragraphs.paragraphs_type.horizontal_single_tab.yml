@@ -1,0 +1,15 @@
+uuid: 742183db-36ca-4b64-84d4-fb82f0ae8aa1
+langcode: en
+status: true
+dependencies:
+  module:
+    - layout_paragraphs
+id: horizontal_single_tab
+label: 'Horizontal Single Tab'
+icon_uuid: null
+icon_default: null
+description: 'Migrated from paragraph bundle Horizontal Single Tab'
+behavior_plugins:
+  layout_paragraphs:
+    enabled: false
+    available_layouts: {  }

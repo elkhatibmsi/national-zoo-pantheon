@@ -1,0 +1,22 @@
+{% block paragraph %}
+
+	<div {{ attributes }}>
+		{{ content.controls }}
+
+		{% set links = [] %}
+
+
+		{% for key, link in content.field_horizontal_link_item if key|first != '#' %}
+			{% set links = links|merge([content.field_horizontal_link_item[key]]) %}
+		{% endfor %}
+
+
+		{%
+            include '@nzpComponents/boxes/horizontal-links-bar.html.twig' with {
+            links: links,
+            }  
+            %}
+	</div>
+
+{% endblock paragraph %}
+

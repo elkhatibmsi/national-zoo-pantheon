@@ -1,0 +1,19 @@
+uuid: 80f19593-ff37-41bc-9aa5-015494238f08
+langcode: und
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_scbi_staff
+field_name: field_scbi_staff
+entity_type: node
+type: entity_reference
+settings:
+  target_type: node
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

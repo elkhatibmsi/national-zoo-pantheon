@@ -1,0 +1,35 @@
+uuid: e46b8859-2752-4746-b179-6a98b49af927
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.disclaimer
+    - field.field.block_content.disclaimer.field_disclaimer_text
+    - field.field.block_content.disclaimer.field_text
+    - field.field.block_content.disclaimer.title
+  module:
+    - text
+id: block_content.disclaimer.default
+targetEntityType: block_content
+bundle: disclaimer
+mode: default
+content:
+  field_disclaimer_text:
+    type: text_textarea
+    weight: 26
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  info:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  field_text: true
+  title: true

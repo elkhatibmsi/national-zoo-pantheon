@@ -1,0 +1,19 @@
+uuid: 1d1f300e-9a0f-481a-9532-e3b49445538b
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.parameterized_promos
+    - field.storage.block_content.field_promo_banner_parameter
+id: block_content.parameterized_promos.field_promo_banner_parameter
+field_name: field_promo_banner_parameter
+entity_type: block_content
+bundle: parameterized_promos
+label: 'Promo Banner Parameter'
+description: 'No spaces or punctuation! Please use only underscores, pluses or dashes. '
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

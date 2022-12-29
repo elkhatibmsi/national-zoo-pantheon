@@ -1,0 +1,25 @@
+uuid: 1e8e1ffb-929b-4e30-ac00-0a8411c2c303
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_editorial_access
+    - node.type.media_release
+id: node.media_release.field_editorial_access
+field_name: field_editorial_access
+entity_type: node
+bundle: media_release
+label: 'Website area'
+description: 'Relate this media release to a website area. If you choose "CCS" for example, this article will appear in the CCS "news" feed. Note that some website areas (like Visit) do not have their own news feeds. Selecting these areas will have no effect. If this is just general Zoo news, keep this field set to News.'
+required: true
+translatable: false
+default_value:
+  -
+    tid: '101'
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    sort:
+      field: _none
+field_type: entity_reference

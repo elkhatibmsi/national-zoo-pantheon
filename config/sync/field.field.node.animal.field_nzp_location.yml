@@ -1,0 +1,23 @@
+uuid: 4149b644-de50-4bc4-8775-b93671b7c91f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_nzp_location
+    - node.type.animal
+id: node.animal.field_nzp_location
+field_name: field_nzp_location
+entity_type: node
+bundle: animal
+label: 'Animal Location'
+description: 'Select the facilities that currently have this animal.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    sort:
+      field: _none
+field_type: entity_reference

@@ -1,0 +1,60 @@
+uuid: f03baf5a-655e-4947-aeb3-faa3c751c78e
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.token
+    - field.field.paragraph.icon_card_item.field_border_color
+    - field.field.paragraph.icon_card_item.field_icon_card_caption
+    - field.field.paragraph.icon_card_item.field_icon_card_icon
+    - field.field.paragraph.icon_card_item.field_icon_card_image
+    - field.field.paragraph.icon_card_item.field_icon_card_title
+    - field.field.paragraph.icon_card_item.field_icon_card_top_bar_color
+    - field.field.paragraph.icon_card_item.field_icon_grid_link
+    - paragraphs.paragraphs_type.icon_card_item
+  module:
+    - link
+    - options
+id: paragraph.icon_card_item.token
+targetEntityType: paragraph
+bundle: icon_card_item
+mode: token
+content:
+  field_icon_card_caption:
+    type: basic_string
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_icon_card_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_icon_card_top_bar_color:
+    type: list_key
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_icon_grid_link:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden:
+  field_border_color: true
+  field_icon_card_icon: true
+  field_icon_card_image: true

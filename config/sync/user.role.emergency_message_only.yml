@@ -1,0 +1,18 @@
+uuid: 7652eb15-f00f-4696-bf96-b97f7eed3b4e
+langcode: en
+status: true
+dependencies:
+  module:
+    - contextual
+    - system
+id: emergency_message_only
+label: 'emergency message only'
+weight: 2
+is_admin: null
+permissions:
+  - 'Administer Emergency Message'
+  - 'access administration menu'
+  - 'access administration pages'
+  - 'access contextual links'
+  - 'view files'
+  - 'view the administration theme'

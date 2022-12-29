@@ -1,0 +1,29 @@
+uuid: 11942a34-8f85-45ef-8856-f8ea1325ea50
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_center_and_staff_category
+    - node.type.bio_profiles
+    - storage.storage_type.position_and_center
+id: node.bio_profiles.field_center_and_staff_category
+field_name: field_center_and_staff_category
+entity_type: node
+bundle: bio_profiles
+label: 'Center and Staff Category'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:storage'
+  handler_settings:
+    target_bundles:
+      position_and_center: position_and_center
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

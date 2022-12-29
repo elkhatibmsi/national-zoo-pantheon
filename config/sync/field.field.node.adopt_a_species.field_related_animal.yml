@@ -1,0 +1,30 @@
+uuid: 8ade3e80-91fd-4a43-a39a-6c56a17611da
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_related_animal
+    - node.type.adopt_a_species
+    - node.type.animal
+id: node.adopt_a_species.field_related_animal
+field_name: field_related_animal
+entity_type: node
+bundle: adopt_a_species
+label: 'Related Animal'
+description: 'Choose the animal to which this adopt-a-species item is related.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      animal: animal
+    sort:
+      field: _none
+      direction: ASC
+    behaviors:
+      views-select-list:
+        status: 0
+field_type: entity_reference

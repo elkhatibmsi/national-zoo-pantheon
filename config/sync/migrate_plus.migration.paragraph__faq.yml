@@ -1,0 +1,50 @@
+uuid: c2ed7f4d-037b-4258-9fac-216b6fa96491
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - nzp_paragraphs
+id: paragraph__faq
+class: null
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - Paragraphs
+migration_group: nzp_paragraphs
+label: 'faq paragraph'
+source:
+  plugin: d7_paragraphs_item
+  bundle: faq
+process:
+  id: item_id
+  field_faq_item:
+    -
+      plugin: sub_process
+      source: field_faq
+      process:
+        target_id:
+          -
+            plugin: migration_lookup
+            migration: paragraph__faq_item
+            source: value
+          -
+            plugin: extract
+            index:
+              - 0
+        target_revision_id:
+          -
+            plugin: migration_lookup
+            migration: paragraph__faq_item
+            source: value
+          -
+            plugin: extract
+            index:
+              - 1
+destination:
+  plugin: 'entity_reference_revisions:paragraph'
+  default_bundle: faq
+migration_dependencies:
+  required:
+    - paragraph__faq_item
+  optional: {  }

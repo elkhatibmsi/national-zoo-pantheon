@@ -1,0 +1,19 @@
+uuid: 00cad493-30e7-4400-ab84-eb1f596a569c
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.disclaimer
+    - field.storage.block_content.title
+id: block_content.disclaimer.title
+field_name: title
+entity_type: block_content
+bundle: disclaimer
+label: Title
+description: 'The Title of the block.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,22 @@
+uuid: 8a1159ba-3cd3-4538-8e0b-af5cd5c4258d
+langcode: en
+status: true
+dependencies:
+  module:
+    - micon
+    - paragraphs
+id: paragraph.field_icon_card_icon
+field_name: field_icon_card_icon
+entity_type: paragraph
+type: string_micon
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: micon
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,22 @@
+uuid: 3786b985-df3a-4c0b-a0d4-797755dbc4bb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.looping_video.field_video
+    - paragraphs.paragraphs_type.looping_video
+id: paragraph.looping_video.default
+targetEntityType: paragraph
+bundle: looping_video
+mode: default
+content:
+  field_video:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: looping_video
+      link: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

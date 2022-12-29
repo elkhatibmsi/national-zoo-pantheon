@@ -1,0 +1,27 @@
+_core:
+  default_config_hash: cedHc8pWGYElkc7iwiIK3oB9i1RcuGlkzQ4ZlELc96c
+connection_info:
+  hostname: 'https://ossearch.si.edu'
+  collection: nationalzoo
+  frontend: nationalzoo
+  timeout: 15
+query_param:
+  autofilter: '1'
+  query_inspection: false
+display_settings:
+  drupal_path: search
+  search_title: Search
+  results_per_page: 20
+  spelling_suggestions: false
+  advanced_search_reporting: false
+  sitelinks_search_box: false
+  onebox_modules: {  }
+  error_gsa_no_results:
+    value: "<div class=\"item-list\">\r\n<ul>\r\n\t<li>Check if your spelling is correct.</li>\r\n\t<li>Remove quotes around phrases: <em>bike parking</em> will often show more results than <em>\"bike parking\"</em>.</li>\r\n\t<li>Try more general or different keywords.</li>\r\n</ul>\r\n</div>\r\n"
+    format: full_html
+  error_curl_error:
+    value: "<p>We cannot connect to the search service at this time. Please try your search again in a few minutes. If the problem persists, please contact us.</p>\r\n"
+    format: full_html
+  error_lib_xml_parse_error:
+    value: "<p>The response from the search service was unreadable. Please try your search again. If the problem persists, please contact us.</p>\r\n"
+    format: full_html

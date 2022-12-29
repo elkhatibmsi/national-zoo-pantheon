@@ -1,0 +1,13 @@
+uuid: e9409a49-0b1f-44e1-890d-63f723dcf6da
+langcode: en
+status: true
+dependencies: {  }
+id: document_https
+label: 'Document https'
+description: null
+source: file
+queue_thumbnail_downloads: false
+new_revision: false
+source_configuration:
+  source_field: field_media_document_https
+field_map: {  }

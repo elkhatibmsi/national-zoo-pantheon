@@ -1,0 +1,23 @@
+uuid: 6593cbad-d9ad-42e9-beda-aee8613ca4c8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tags
+    - node.type.blank_page
+id: node.blank_page.field_tags
+field_name: field_tags
+entity_type: node
+bundle: blank_page
+label: Tags
+description: 'Used to group this content with other content (often of different content types) in arbitrary ways, e.g. all the miscellaneous ways to support the Zoo.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    sort:
+      field: _none
+field_type: entity_reference

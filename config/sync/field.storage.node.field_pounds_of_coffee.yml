@@ -1,0 +1,20 @@
+uuid: 6f5b7f0f-72de-443c-ad24-2d7b86a3d376
+langcode: und
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_pounds_of_coffee
+field_name: field_pounds_of_coffee
+entity_type: node
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

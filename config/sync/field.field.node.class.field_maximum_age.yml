@@ -1,0 +1,23 @@
+uuid: a9d1b21a-acb4-4a86-aeb0-4a697fe7a12d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_maximum_age
+    - node.type.class
+id: node.class.field_maximum_age
+field_name: field_maximum_age
+entity_type: node
+bundle: class
+label: 'Maximum age'
+description: 'Enter the maximum age for this class. Must be a number 3 - 17.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 2
+  max: 17
+  prefix: ' - '
+  suffix: ''
+field_type: integer

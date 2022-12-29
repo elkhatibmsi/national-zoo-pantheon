@@ -1,0 +1,23 @@
+uuid: 6cd897c9-6762-43fa-8860-ffa99c81566a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_featured
+    - node.type.corporate_partner
+id: node.corporate_partner.field_featured
+field_name: field_featured
+entity_type: node
+bundle: corporate_partner
+label: 'Featured on the corporate partners list?'
+description: 'Select whether this partner is featured on the corporate partner list.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'Yes'
+  off_label: 'No'
+field_type: boolean

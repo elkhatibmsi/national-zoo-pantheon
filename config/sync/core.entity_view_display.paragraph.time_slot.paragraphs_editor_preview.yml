@@ -1,0 +1,17 @@
+uuid: df5715df-533a-4ffe-98eb-7c5d59b334c9
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.paragraphs_editor_preview
+    - field.field.paragraph.time_slot.field_hours_category
+    - field.field.paragraph.time_slot.field_hours_description
+    - paragraphs.paragraphs_type.time_slot
+id: paragraph.time_slot.paragraphs_editor_preview
+targetEntityType: paragraph
+bundle: time_slot
+mode: paragraphs_editor_preview
+content: {  }
+hidden:
+  field_hours_category: true
+  field_hours_description: true

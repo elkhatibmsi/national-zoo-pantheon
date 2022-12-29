@@ -1,0 +1,21 @@
+uuid: 0e94d41c-3c70-4d33-99b0-84f842f034e5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.spacer.field_number_of_pixels
+    - paragraphs.paragraphs_type.spacer
+id: paragraph.spacer.default
+targetEntityType: paragraph
+bundle: spacer
+mode: default
+content:
+  field_number_of_pixels:
+    type: options_select
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

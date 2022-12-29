@@ -1,0 +1,45 @@
+uuid: dd1bac4e-bcb0-4488-b2b2-911cea5b39d6
+langcode: en
+status: true
+dependencies:
+  module:
+    - contact
+    - content_moderation
+    - media
+    - paragraphs
+    - search
+    - system
+_core:
+  default_config_hash: pq_mEIu_B4widZN7Ap81iCJSjShFFdcL0jEiCi8VrDk
+id: anonymous
+label: 'anonymous user'
+weight: 0
+is_admin: false
+permissions:
+  - 'access content'
+  - 'access print'
+  - 'access protected node password form'
+  - 'access site-wide contact form'
+  - 'access unpublished view hashkey'
+  - 'access unpublished view unpublished node'
+  - 'access unpublished view workbench moderation drafts'
+  - access_google_appliance_content
+  - 'download any image files'
+  - 'search content'
+  - 'view any basic_block bean'
+  - 'view any custom_block bean'
+  - 'view any disclaimer bean'
+  - 'view any event_comestibles bean'
+  - 'view any font_page_feature bean'
+  - 'view any landing_feature bean'
+  - 'view any mega_menu_feature_block bean'
+  - 'view any paragraphs bean'
+  - 'view any parameterized_promos bean'
+  - 'view any pop_up bean'
+  - 'view any temporary_content bean'
+  - 'view any unpublished content'
+  - 'view any webcam_ad bean'
+  - 'view files'
+  - 'view media'
+  - 'view unpublished paragraphs'
+  - 'vote on polls'

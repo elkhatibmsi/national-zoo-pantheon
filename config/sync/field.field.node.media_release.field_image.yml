@@ -1,0 +1,35 @@
+uuid: 08a4f035-ba4a-48fa-8d2b-e45ab9b9ec33
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_image
+    - node.type.media_release
+  module:
+    - image
+id: node.media_release.field_image
+field_name: field_image
+entity_type: node
+bundle: media_release
+label: Image
+description: 'These images will display at the top of the media release page (in a slideshow) and as thumbnails at the bottom of the page with links to download the original files.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings:
+    target_bundles:
+      image: image
+  file_directory: newsroom
+  file_extensions: 'png gif jpg jpeg tif tiff'
+  max_filesize: '50 MB'
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: true
+  alt_field_required: true
+  title_field: true
+  title_field_required: false
+  default_image: 0
+field_type: image

@@ -1,0 +1,15 @@
+uuid: 888003c3-c021-4286-adb1-204d3c4f255f
+langcode: en
+status: true
+dependencies:
+  module:
+    - micon_paragraphs
+third_party_settings:
+  micon_paragraphs:
+    icon: ''
+id: feature
+label: Feature
+icon_uuid: null
+icon_default: null
+description: 'Image and text with a colored background'
+behavior_plugins: {  }

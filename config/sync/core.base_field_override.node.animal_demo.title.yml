@@ -1,0 +1,18 @@
+uuid: 15259823-4d8e-426c-9e1e-540a1c547999
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.animal_demo
+id: node.animal_demo.title
+field_name: title
+entity_type: node
+bundle: animal_demo
+label: Demo
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

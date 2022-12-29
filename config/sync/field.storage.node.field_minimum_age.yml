@@ -1,0 +1,20 @@
+uuid: dd1dcab3-6f97-45d2-bf91-1378442be65b
+langcode: und
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_minimum_age
+field_name: field_minimum_age
+entity_type: node
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

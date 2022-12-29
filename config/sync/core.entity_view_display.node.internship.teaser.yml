@@ -1,0 +1,44 @@
+uuid: ee8e470f-5064-4c15-a6f4-8f9b109e0346
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.internship.field_application_date
+    - field.field.node.internship.field_duties_and_responsibilitie
+    - field.field.node.internship.field_editorial_access
+    - field.field.node.internship.field_housing
+    - field.field.node.internship.field_how_to_apply
+    - field.field.node.internship.field_internship_category
+    - field.field.node.internship.field_nzp_location
+    - field.field.node.internship.field_parking
+    - field.field.node.internship.field_qualifications
+    - field.field.node.internship.field_status
+    - field.field.node.internship.field_stipend
+    - field.field.node.internship.field_term_of_appointment
+    - node.type.internship
+  module:
+    - user
+id: node.internship.teaser
+targetEntityType: node
+bundle: internship
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_application_date: true
+  field_duties_and_responsibilitie: true
+  field_editorial_access: true
+  field_housing: true
+  field_how_to_apply: true
+  field_internship_category: true
+  field_nzp_location: true
+  field_parking: true
+  field_qualifications: true
+  field_status: true
+  field_stipend: true
+  field_term_of_appointment: true

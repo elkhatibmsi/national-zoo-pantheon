@@ -1,0 +1,23 @@
+uuid: 2afb7df2-f16d-4dee-abe2-bec31c6e0a91
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_member_cost
+    - node.type.camp
+id: node.camp.field_member_cost
+field_name: field_member_cost
+entity_type: node
+bundle: camp
+label: 'Member Cost'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: !!float 0
+  max: null
+  prefix: $
+  suffix: ''
+field_type: decimal

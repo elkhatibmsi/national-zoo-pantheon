@@ -1,0 +1,15 @@
+uuid: 26e612b9-6a3a-42f0-966e-ec0781db3543
+langcode: en
+status: true
+dependencies: {  }
+name: 350_wide
+label: 350_wide
+effects:
+  0dda2032-60d9-4425-89c3-2fec9d90713e:
+    uuid: 0dda2032-60d9-4425-89c3-2fec9d90713e
+    id: image_scale
+    weight: 3
+    data:
+      width: 350
+      height: null
+      upscale: false

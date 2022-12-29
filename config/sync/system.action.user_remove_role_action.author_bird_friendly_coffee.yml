@@ -1,0 +1,14 @@
+uuid: fbc4360d-a8d0-457e-97d0-a66b1e11d21d
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.author_bird_friendly_coffee
+  module:
+    - user
+id: user_remove_role_action.author_bird_friendly_coffee
+label: 'Remove the author - bird friendly coffee role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: author_bird_friendly_coffee

@@ -1,0 +1,39 @@
+uuid: 96f8f7c1-5809-4d0e-839b-c506cd771fb5
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_bg_color
+field_name: field_bg_color
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: 'Oxford Blue'
+      label: 'Oxford Blue'
+    -
+      value: 'Sap Green'
+      label: 'Sap Green'
+    -
+      value: 'Blue Sapphire'
+      label: 'Blue Sapphire'
+    -
+      value: 'Tea Green'
+      label: 'Tea Green'
+    -
+      value: 'Sizzling Red'
+      label: 'Sizzling Red'
+    -
+      value: 'Cyber Yellow'
+      label: 'Cyber Yellow'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

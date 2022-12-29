@@ -1,0 +1,23 @@
+uuid: 2fcdec25-7463-4230-b89f-671d10be1a94
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_url
+    - node.type.corporate_partner
+  module:
+    - link
+id: node.corporate_partner.field_url
+field_name: field_url
+entity_type: node
+bundle: corporate_partner
+label: 'Website URL'
+description: 'Enter the URL for this partner''s website (note: This may not be their official website).'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 0
+  link_type: 17
+field_type: link

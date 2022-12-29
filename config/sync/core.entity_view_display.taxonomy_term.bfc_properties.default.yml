@@ -1,0 +1,31 @@
+uuid: e8989435-9e61-4adf-94ed-c669d66434fd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.bfc_properties.field_bfc_property_icon
+    - taxonomy.vocabulary.bfc_properties
+  module:
+    - text
+id: taxonomy_term.bfc_properties.default
+targetEntityType: taxonomy_term
+bundle: bfc_properties
+mode: default
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_bfc_property_icon:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: thumbnail
+      link: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden: {  }

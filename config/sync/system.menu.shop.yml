@@ -1,0 +1,8 @@
+uuid: 51e58814-9e17-40e3-9e25-b494f100a64a
+langcode: en
+status: true
+dependencies: {  }
+id: shop
+label: Shop
+description: ''
+locked: false

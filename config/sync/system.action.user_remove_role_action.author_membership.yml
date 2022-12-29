@@ -1,0 +1,14 @@
+uuid: 285f1319-bafe-44c2-a6f2-230d80de675c
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.author_membership
+  module:
+    - user
+id: user_remove_role_action.author_membership
+label: 'Remove the author - membership role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: author_membership

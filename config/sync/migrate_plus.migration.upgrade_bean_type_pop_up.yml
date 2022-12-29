@@ -1,0 +1,43 @@
+uuid: 2e44a921-333a-48e6-8c0a-0bfcf98bd6ff
+langcode: en
+status: true
+dependencies: {  }
+id: upgrade_bean_type_pop_up
+class: Drupal\migrate\Plugin\Migration
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 7'
+  - Configuration
+migration_group: migrate_drupal_7
+label: 'Bean type (pop_up)'
+source:
+  plugin: bean_type
+  entity_type: bean
+  constants:
+    revision: 1
+  type: pop_up
+process:
+  id:
+    -
+      plugin: bean_unique_type
+      source: type
+  label:
+    -
+      plugin: null_coalesce
+      source:
+        - label
+        - type
+  description:
+    -
+      plugin: get
+      source: description
+  revision:
+    -
+      plugin: get
+      source: constants/revision
+destination:
+  plugin: 'entity:block_content_type'
+migration_dependencies:
+  required: {  }
+  optional: {  }

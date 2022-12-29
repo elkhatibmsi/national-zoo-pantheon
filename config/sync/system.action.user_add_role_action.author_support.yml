@@ -1,0 +1,14 @@
+uuid: 6c4b4052-b165-404d-92dc-b0089e9d1f0e
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.author_support
+  module:
+    - user
+id: user_add_role_action.author_support
+label: 'Add the author - support role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: author_support

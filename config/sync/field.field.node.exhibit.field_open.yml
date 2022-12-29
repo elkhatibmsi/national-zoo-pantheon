@@ -1,0 +1,21 @@
+uuid: 39727aa6-3f21-43a6-8684-b5fe7875b117
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_open
+    - node.type.exhibit
+id: node.exhibit.field_open
+field_name: field_open
+entity_type: node
+bundle: exhibit
+label: 'is the exhibit open?'
+description: 'Is the exhibit open or closed? If you check no, this exhibit will no longer appear on the exhibits landing page and will no longer appear in the "other exhibits" carousel on exhibit pages.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: 'yes'
+  off_label: 'no'
+field_type: boolean

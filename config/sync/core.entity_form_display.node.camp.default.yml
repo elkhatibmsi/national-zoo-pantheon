@@ -1,0 +1,100 @@
+uuid: 9b935565-e47c-44d0-b12a-36e32e271fb7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.camp.body
+    - field.field.node.camp.field_camp_category
+    - field.field.node.camp.field_camp_dates
+    - field.field.node.camp.field_editorial_access
+    - field.field.node.camp.field_grades
+    - field.field.node.camp.field_landing_image
+    - field.field.node.camp.field_member_cost
+    - field.field.node.camp.field_non_member_cost
+    - field.field.node.camp.field_status
+    - field.field.node.camp.field_tessitura_id
+    - node.type.camp
+  module:
+    - path
+    - text
+id: node.camp.default
+targetEntityType: node
+bundle: camp
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 121
+    region: content
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
+  created:
+    type: datetime_timestamp
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    weight: 15
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 120
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    weight: 16
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 5
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  url_redirects:
+    weight: 50
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_camp_category: true
+  field_camp_dates: true
+  field_editorial_access: true
+  field_grades: true
+  field_landing_image: true
+  field_member_cost: true
+  field_non_member_cost: true
+  field_status: true
+  field_tessitura_id: true

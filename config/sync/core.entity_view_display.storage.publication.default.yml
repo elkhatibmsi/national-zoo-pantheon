@@ -1,0 +1,49 @@
+uuid: e190a7de-d6df-47b5-966f-1cfa24df5b72
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.storage.publication.field_publication_author
+    - field.field.storage.publication.field_publication_citation
+    - field.field.storage.publication.field_publication_doi
+    - storage.storage_type.publication
+  module:
+    - text
+id: storage.publication.default
+targetEntityType: storage
+bundle: publication
+mode: default
+content:
+  field_publication_author:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: -1
+    region: content
+  field_publication_citation:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: -3
+    region: content
+  field_publication_doi:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: -2
+    region: content
+  name:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: -5
+    region: content
+hidden:
+  user_id: true

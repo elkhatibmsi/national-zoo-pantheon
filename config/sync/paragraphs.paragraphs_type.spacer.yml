@@ -1,0 +1,15 @@
+uuid: ce909c48-9140-4d31-bc45-1a625e3c12b6
+langcode: en
+status: true
+dependencies:
+  module:
+    - micon_paragraphs
+third_party_settings:
+  micon_paragraphs:
+    icon: ''
+id: spacer
+label: Spacer
+icon_uuid: null
+icon_default: null
+description: 'Add whitespace between paragraphs for UX'
+behavior_plugins: {  }

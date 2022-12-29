@@ -1,0 +1,35 @@
+uuid: c7c65f19-81b1-44e3-a8b6-1099ffa574ec
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_image
+    - node.type.scbi_project
+  module:
+    - image
+id: node.scbi_project.field_image
+field_name: field_image
+entity_type: node
+bundle: scbi_project
+label: 'Page Image'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings:
+    target_bundles:
+      image: image
+  file_directory: conservation
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: true
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image: 0
+field_type: image

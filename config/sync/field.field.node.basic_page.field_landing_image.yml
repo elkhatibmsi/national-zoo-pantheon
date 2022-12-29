@@ -1,0 +1,24 @@
+uuid: a3f36f26-7a53-4767-9140-04c4ca4b4f38
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_landing_image
+    - media.type.image
+    - node.type.basic_page
+id: node.basic_page.field_landing_image
+field_name: field_landing_image
+entity_type: node
+bundle: basic_page
+label: 'Teaser Image'
+description: ' <strong>Will be displayed for the teaser of this page and when this page is shared on Facebook or Twitter.</strong>'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+field_type: entity_reference

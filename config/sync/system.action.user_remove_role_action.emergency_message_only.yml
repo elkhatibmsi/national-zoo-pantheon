@@ -1,0 +1,14 @@
+uuid: ce5e00ed-945a-4810-bda1-382496c04533
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.emergency_message_only
+  module:
+    - user
+id: user_remove_role_action.emergency_message_only
+label: 'Remove the emergency message only role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: emergency_message_only

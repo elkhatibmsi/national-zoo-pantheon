@@ -1,0 +1,14 @@
+uuid: 6d1e3e46-a760-4aca-89af-18e4f302056b
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module: null
+id: nzp_paragraphs
+label: 'NZP Paragraphs Import'
+description: 'Legacy paragraph content to be migrated to Drupal 8.'
+source_type: 'Drupal 7'
+module: null
+shared_configuration:
+  source:
+    key: migrate

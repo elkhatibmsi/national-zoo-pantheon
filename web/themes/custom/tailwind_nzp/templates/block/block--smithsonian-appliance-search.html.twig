@@ -1,0 +1,51 @@
+{#
+/**
+ * @file
+ * Theme override to display a block.
+ *
+ * Available variables:
+ * - plugin_id: The ID of the block implementation.
+ * - label: The configured label of the block if visible.
+ * - configuration: A list of the block's configuration values.
+ *   - label: The configured label for the block.
+ *   - label_display: The display settings for the label.
+ *   - provider: The module or other provider that provided this block plugin.
+ *   - Block plugin specific settings will also be stored here.
+ * - content: The content of this block.
+ * - attributes: array of HTML attributes populated by modules, intended to
+ *   be added to the main container tag of this template.
+ *   - id: A valid HTML ID and guaranteed unique.
+ * - title_attributes: Same as attributes, except applied to the main title
+ *   tag that appears in the template.
+ * - title_prefix: Additional output populated by modules, intended to be
+ *   displayed in front of the main title tag that appears in the template.
+ * - title_suffix: Additional output populated by modules, intended to be
+ *   displayed after the main title tag that appears in the template.
+ *
+ * @see template_preprocess_block()
+ */
+#}
+
+
+<div{{attributes.addClass('relative', 'h-full', 'flex', 'items-center')}} x-data="mmDropdown" x-transition>
+	<a href="#" class="z-[100] right-2 search-toggle absolute right-0" x-on:click="clickToOpen()" :class="{'fill-black': (!isMobile && isOpen) }">
+		<svg class="h-8 w-8 fill-white" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewbox="0 0 30 30">
+			<path stroke="white" d="M 13 3 C 7.4889971 3 3 7.4889971 3 13 C 3 18.511003 7.4889971  23 13 23 C 15.396508 23 17.597385 22.148986 19.322266 20.736328 L 25.292969 26.707031 A 1.0001 1.0001 0 1 0 26.707031 25.292969 L 20.736328 19.322266 C 22.148986 17.597385 23 15.396508 23 13 C 23 7.4889971 18.511003 3 13 3 z M 13 5 C 17.430123 5 21 8.5698774 21 13 C 21 17.430123 17.430123 21 13 21 C 8.5698774 21 5 17.430123 5 13 C 5 8.5698774 8.5698774 5 13 5 z"></path>
+		</svg>
+	</a>
+  <div class=" overflow:hidden search--box lg:absolute lg:z-[99] lg:right-0 transition-all ease-in-out delay-150"
+  :class="{
+	' lg:w-[300px] lg:opacity-1': (!isMobile && isOpen),
+  	'lg:w-[0px] lg:opacity-0 ': (!isMobile && !isOpen) 
+		}" >
+		{{ title_prefix }}
+		{% if label %}
+			<h2{{title_attributes.addClass('block-title',borderClass)}}>{{ label }}</h2>
+		{% endif %}
+		{{ title_suffix }}
+		{% block content %}
+			{{ content }}
+		{% endblock %}
+	</div>
+</div>
+

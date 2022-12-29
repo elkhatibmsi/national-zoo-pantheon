@@ -1,0 +1,19 @@
+uuid: 74f94e53-7bbd-42de-8987-bb4609c95642
+langcode: und
+status: true
+dependencies:
+  module:
+    - link
+    - node
+id: node.field_si_profile_link
+field_name: field_si_profile_link
+entity_type: node
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

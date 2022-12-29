@@ -1,0 +1,20 @@
+{% extends "block.html.twig" %}
+{#
+/**
+ * @file
+ * Theme override for a search block.
+ *
+ * Each branding element variable (logo, name, slogan) is only available if
+ * enabled in the block configuration.
+ * 
+ * Available variables:
+ * content: The content of this block.
+ */
+#}
+
+{% block content %}
+<span class="search-trigger"><i class="fa fa-search"></i> Search</span>
+<div class="search-form hidden">
+    {{ content }}
+</div>
+{% endblock %}

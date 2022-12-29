@@ -1,0 +1,12 @@
+{% block paragraph %}
+	{{ content.controls }}
+    <div {{attributes.addClass(classes)}} >
+        {%
+            include '@nzpComponents/overlay/single-image-with-caption.html.twig' with {
+                title: content.field_single_image_caption_title,
+                image: content.field_single_image_caption_image,
+                body: content.field_single_image_caption_body
+            } 
+        %}
+    </div>
+{% endblock %} 

@@ -1,0 +1,8 @@
+uuid: 20a9fc5c-2ba6-4dc4-9c1d-443d816cc525
+langcode: en
+status: true
+dependencies: {  }
+name: 'Bio Profile Categories'
+vid: bio_profile_categories
+description: ''
+weight: 0

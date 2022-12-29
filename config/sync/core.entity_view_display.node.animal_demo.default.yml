@@ -1,0 +1,46 @@
+uuid: e630d0f7-41d3-46e4-a52f-4b4bfddd8905
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.animal_demo.field_animal_demo_exhibit
+    - field.field.node.animal_demo.field_animal_demo_time
+    - node.type.animal_demo
+  module:
+    - time_field
+    - user
+id: node.animal_demo.default
+targetEntityType: node
+bundle: animal_demo
+mode: default
+content:
+  field_animal_demo_exhibit:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_animal_demo_time:
+    type: time_formatter
+    label: above
+    settings:
+      time_format: 'h:i a'
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_time:
+    type: time_formatter
+    label: hidden
+    settings:
+      time_format: 'g:i a'
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

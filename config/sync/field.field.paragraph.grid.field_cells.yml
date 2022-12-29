@@ -1,0 +1,185 @@
+uuid: 93c75875-f97f-4f31-835b-7b1fb9672bf7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_cells
+    - paragraphs.paragraphs_type.grid
+  module:
+    - entity_reference_revisions
+id: paragraph.grid.field_cells
+field_name: field_cells
+entity_type: paragraph
+bundle: grid
+label: Cells
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles: null
+    negate: 0
+    target_bundles_drag_drop:
+      accordion:
+        weight: 32
+        enabled: false
+      accordion_tabs:
+        weight: 2
+        enabled: false
+      block_embed:
+        weight: 3
+        enabled: false
+      block_embed_no_title:
+        weight: 33
+        enabled: false
+      button_grid:
+        weight: 34
+        enabled: false
+      button_item:
+        weight: 35
+        enabled: false
+      callout:
+        weight: 36
+        enabled: false
+      card_grid:
+        weight: 37
+        enabled: false
+      card_item:
+        weight: 38
+        enabled: false
+      card_item_blank:
+        weight: 39
+        enabled: false
+      cell:
+        weight: 4
+        enabled: false
+      class_session:
+        weight: 40
+        enabled: false
+      collapsible_block:
+        weight: 5
+        enabled: false
+      collection:
+        weight: 41
+        enabled: false
+      content_video:
+        weight: 24
+        enabled: false
+      entity_list:
+        weight: 6
+        enabled: false
+      faq:
+        weight: 7
+        enabled: false
+      faq_item:
+        weight: 42
+        enabled: false
+      flipbook_grid:
+        weight: 43
+        enabled: false
+      flipbook_grid_item:
+        weight: 44
+        enabled: false
+      grid:
+        weight: 8
+        enabled: false
+      horizontal_single_tab:
+        weight: 45
+        enabled: false
+      horizontal_tabs:
+        weight: 46
+        enabled: false
+      hours:
+        weight: 47
+        enabled: false
+      icon_card_item:
+        weight: 48
+        enabled: false
+      image:
+        weight: 9
+        enabled: false
+      image_collection:
+        weight: 49
+        enabled: false
+      image_only:
+        weight: 10
+        enabled: false
+      layout:
+        weight: 50
+        enabled: false
+      looping_video:
+        weight: 51
+        enabled: false
+      menu_tabs:
+        weight: 52
+        enabled: false
+      modal_media_gallery:
+        weight: 53
+        enabled: false
+      multi_column_layout_text_:
+        weight: 54
+        enabled: false
+      promotion_one:
+        weight: 55
+        enabled: false
+      promotion_three:
+        weight: 56
+        enabled: false
+      promotion_two:
+        weight: 57
+        enabled: false
+      restaurant:
+        weight: 11
+        enabled: false
+      section:
+        weight: 31
+        enabled: false
+      section_heading:
+        weight: 58
+        enabled: false
+      single_image_with_caption:
+        weight: 12
+        enabled: false
+      slideshow:
+        weight: 13
+        enabled: false
+      slideshow_container:
+        weight: 59
+        enabled: false
+      sponsors:
+        weight: 60
+        enabled: false
+      sticky_anchor_menu:
+        weight: 61
+        enabled: false
+      text:
+        weight: 14
+        enabled: false
+      thumbnail_slideshow:
+        weight: 62
+        enabled: false
+      time_slot:
+        weight: 63
+        enabled: false
+      two_column_grid:
+        weight: 17
+        enabled: false
+      two_columns:
+        weight: 64
+        enabled: false
+      two_columns_40_60:
+        weight: 15
+        enabled: false
+      two_columns_equal:
+        weight: 16
+        enabled: false
+      view_embed:
+        weight: 18
+        enabled: false
+      webcam_embed:
+        weight: 65
+        enabled: false
+field_type: entity_reference_revisions

@@ -1,0 +1,35 @@
+uuid: 6045e376-32df-4637-914e-0c87d2b6e855
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.event_comestibles
+    - field.field.block_content.event_comestibles.field_event_comestible_text
+    - field.field.block_content.event_comestibles.field_text
+    - field.field.block_content.event_comestibles.title
+  module:
+    - text
+id: block_content.event_comestibles.default
+targetEntityType: block_content
+bundle: event_comestibles
+mode: default
+content:
+  field_event_comestible_text:
+    type: text_textarea
+    weight: 26
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  info:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  field_text: true
+  title: true

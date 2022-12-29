@@ -1,0 +1,41 @@
+uuid: 5db6a29e-e7eb-4b36-9334-0830ec8d620e
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.full_html
+    - node.type.attraction
+    - node.type.basic_page
+  module:
+    - contextual
+    - filter
+    - node
+    - system
+id: author_visit
+label: 'author - visit'
+weight: 5
+is_admin: null
+permissions:
+  - 'access administration menu'
+  - 'access content overview'
+  - 'access contextual links'
+  - 'access workbench'
+  - 'access workbench access by role'
+  - 'create attraction content'
+  - 'create basic_page content'
+  - 'create files'
+  - 'delete any attraction content'
+  - 'delete own attraction content'
+  - 'edit any attraction content'
+  - 'edit own attraction content'
+  - 'moderate content from draft to needs_review'
+  - 'moderate content from needs_review to draft'
+  - 'skip CAPTCHA'
+  - 'use text format filtered_html'
+  - 'use text format full_html'
+  - 'use workbench_moderation my drafts tab'
+  - 'view all unpublished content'
+  - 'view files'
+  - 'view moderation messages'
+  - 'view own unpublished content'
+  - 'view the administration theme'

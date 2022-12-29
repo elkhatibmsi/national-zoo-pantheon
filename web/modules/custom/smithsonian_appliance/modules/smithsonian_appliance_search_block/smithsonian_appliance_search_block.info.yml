@@ -1,0 +1,7 @@
+name: Smithsonion Appliance Search Block
+description: This Module provides custom functionality for various features.
+package: Smithsonian
+type: module
+core_version_requirement: ^8.8.0 || ^9
+dependencies:
+ - drupal:views

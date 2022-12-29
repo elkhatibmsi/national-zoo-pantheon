@@ -1,0 +1,18 @@
+uuid: fc38f8c7-7519-4936-b275-458cd121aa9c
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main-menu
+    parent: 'main-menu:0:'
+name: Job
+type: job
+description: 'Add a job listing'
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: true

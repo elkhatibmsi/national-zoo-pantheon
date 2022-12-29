@@ -1,0 +1,8 @@
+uuid: 78db84b8-fdf1-4fca-bbb3-dbb3316b0ad2
+langcode: en
+status: true
+dependencies: {  }
+name: Markers
+vid: markers
+description: 'maps a node to a marker icon'
+weight: 0

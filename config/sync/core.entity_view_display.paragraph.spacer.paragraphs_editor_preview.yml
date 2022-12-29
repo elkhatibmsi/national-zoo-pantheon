@@ -1,0 +1,28 @@
+uuid: 274eaf6d-cb76-4f55-aec0-695e5c093194
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.paragraphs_editor_preview
+    - field.field.paragraph.spacer.field_number_of_pixels
+    - paragraphs.paragraphs_type.spacer
+  module:
+    - layout_builder
+    - options
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+id: paragraph.spacer.paragraphs_editor_preview
+targetEntityType: paragraph
+bundle: spacer
+mode: paragraphs_editor_preview
+content:
+  field_number_of_pixels:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

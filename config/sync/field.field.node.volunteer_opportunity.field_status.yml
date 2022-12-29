@@ -1,0 +1,21 @@
+uuid: a3fca8b0-a8e1-47d0-9a41-bca8fec0f107
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_status
+    - node.type.volunteer_opportunity
+  module:
+    - options
+id: node.volunteer_opportunity.field_status
+field_name: field_status
+entity_type: node
+bundle: volunteer_opportunity
+label: Status
+description: 'Choose the status of this opportunity.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

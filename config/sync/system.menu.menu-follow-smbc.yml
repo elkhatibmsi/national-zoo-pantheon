@@ -1,0 +1,8 @@
+uuid: 99731083-5f6f-4f5c-813a-d0ed02722aef
+langcode: en
+status: true
+dependencies: {  }
+id: menu-follow-smbc
+label: 'Follow SMBC'
+description: 'Social Media accounts for Migratory Birds Center'
+locked: false

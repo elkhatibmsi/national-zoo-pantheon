@@ -1,0 +1,15 @@
+uuid: 172ce3a0-a419-46e1-98bc-c35e876b451e
+langcode: en
+status: true
+dependencies:
+  module:
+    - layout_paragraphs
+id: button_item
+label: 'Button Item'
+icon_uuid: null
+icon_default: null
+description: 'Migrated from paragraph bundle Button Item'
+behavior_plugins:
+  layout_paragraphs:
+    enabled: false
+    available_layouts: {  }

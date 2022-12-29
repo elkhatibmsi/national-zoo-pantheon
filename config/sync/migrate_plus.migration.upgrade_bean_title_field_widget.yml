@@ -1,0 +1,107 @@
+uuid: 6b1a6dc1-1a0d-4d24-b710-dfec81c21a22
+langcode: en
+status: true
+dependencies: {  }
+id: upgrade_bean_title_field_widget
+class: Drupal\migrate\Plugin\Migration
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 7'
+  - Configuration
+migration_group: migrate_drupal_7
+label: 'Bean title field widget configuration'
+source:
+  key: migrate
+  plugin: bean_title_field_widget
+  entity_type: bean
+  constants:
+    form_mode: default
+    field_name: title
+    entity_type: block_content
+    widget_type: string_textfield
+    widget_settings:
+      size: '60,'
+      placeholder: ''
+    third_party_settings: {  }
+process:
+  bundle:
+    -
+      plugin: migration_lookup
+      migration:
+        - upgrade_bean_type_font_page_feature
+        - upgrade_bean_type_basic_block
+        - upgrade_bean_type_disclaimer
+        - upgrade_bean_type_event_comestibles
+        - upgrade_bean_type_parameterized_promos
+        - upgrade_bean_type_pop_up
+        - upgrade_bean_type_webcam_ad
+        - upgrade_bean_type
+      no_stub: true
+      source: type
+    -
+      plugin: skip_on_empty
+      method: row
+  form_mode:
+    -
+      plugin: get
+      source: constants/form_mode
+  field_name:
+    -
+      plugin: get
+      source: constants/field_name
+  entity_type:
+    -
+      plugin: get
+      source: constants/entity_type
+  options/weight:
+    -
+      plugin: get
+      source: widget_weight
+  options/type:
+    -
+      plugin: get
+      source: constants/widget_type
+  options/settings:
+    -
+      plugin: get
+      source: constants/widget_settings
+  options/third_party_settings:
+    -
+      plugin: get
+      source: constants/third_party_settings
+destination:
+  plugin: component_entity_form_display
+migration_dependencies:
+  required:
+    - upgrade_bean_title_field_instance_basic_block
+    - upgrade_bean_title_field_instance_disclaimer
+    - upgrade_bean_title_field_instance_event_comestibles
+    - upgrade_bean_title_field_instance_font_page_feature
+    - upgrade_bean_title_field_instance_parameterized_promos
+    - upgrade_bean_title_field_instance_pop_up
+    - upgrade_bean_title_field_instance_webcam_ad
+    - upgrade_bean_title_field_instance_font_page_feature
+    - upgrade_bean_title_field_instance_disclaimer
+    - upgrade_bean_title_field_instance_basic_block
+    - upgrade_bean_title_field_instance_event_comestibles
+    - upgrade_bean_title_field_instance_webcam_ad
+    - upgrade_bean_title_field_instance_parameterized_promos
+    - upgrade_bean_title_field_instance_pop_up
+    - upgrade_bean_title_field_instance
+  optional:
+    - upgrade_bean_type_basic_block
+    - upgrade_bean_type_disclaimer
+    - upgrade_bean_type_event_comestibles
+    - upgrade_bean_type_font_page_feature
+    - upgrade_bean_type_parameterized_promos
+    - upgrade_bean_type_pop_up
+    - upgrade_bean_type_webcam_ad
+    - upgrade_bean_type_font_page_feature
+    - upgrade_bean_type_basic_block
+    - upgrade_bean_type_disclaimer
+    - upgrade_bean_type_event_comestibles
+    - upgrade_bean_type_parameterized_promos
+    - upgrade_bean_type_pop_up
+    - upgrade_bean_type_webcam_ad
+    - upgrade_bean_type

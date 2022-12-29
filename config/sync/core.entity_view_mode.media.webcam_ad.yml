@@ -1,0 +1,10 @@
+uuid: bb505cda-aa35-46c9-bc33-a5eb777a7f40
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.webcam_ad
+label: webcam_ad
+targetEntityType: media
+cache: true

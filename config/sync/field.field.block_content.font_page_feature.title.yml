@@ -1,0 +1,19 @@
+uuid: b31a1450-3bf0-407b-9ea4-f31b1c00124e
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.font_page_feature
+    - field.storage.block_content.title
+id: block_content.font_page_feature.title
+field_name: title
+entity_type: block_content
+bundle: font_page_feature
+label: Title
+description: 'The Title of the block.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

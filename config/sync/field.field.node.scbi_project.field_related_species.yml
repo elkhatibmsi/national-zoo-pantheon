@@ -1,0 +1,30 @@
+uuid: fa5d3e3e-0129-40c0-a7e4-554efb976975
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_related_species
+    - node.type.animal
+    - node.type.scbi_project
+id: node.scbi_project.field_related_species
+field_name: field_related_species
+entity_type: node
+bundle: scbi_project
+label: 'Related Species'
+description: 'Add animals related to this project that have a page on this website.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      animal: animal
+    sort:
+      field: _none
+      direction: ASC
+    behaviors:
+      views-select-list:
+        status: 0
+field_type: entity_reference

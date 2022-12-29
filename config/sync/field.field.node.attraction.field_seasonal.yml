@@ -1,0 +1,23 @@
+uuid: 064e6665-ba45-4945-a4e9-6e25cd2dce06
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_seasonal
+    - node.type.attraction
+id: node.attraction.field_seasonal
+field_name: field_seasonal
+entity_type: node
+bundle: attraction
+label: Seasonal
+description: 'Check this box if the attraction is open seasonally. This appears on the page listing all the attractions, not the individual attraction pages.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'Open seasonally'
+  off_label: 'Open year-round'
+field_type: boolean

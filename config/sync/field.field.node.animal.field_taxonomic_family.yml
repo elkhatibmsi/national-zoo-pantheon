@@ -1,0 +1,21 @@
+uuid: 8d9703fd-f1c3-4a7b-8f6d-29f2361a2845
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_taxonomic_family
+    - node.type.animal
+  module:
+    - options
+id: node.animal.field_taxonomic_family
+field_name: field_taxonomic_family
+entity_type: node
+bundle: animal
+label: Family
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

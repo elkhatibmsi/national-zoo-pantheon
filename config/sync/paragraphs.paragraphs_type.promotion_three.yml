@@ -1,0 +1,15 @@
+uuid: e1e794da-a1b2-42e1-b14a-c2dc26a91923
+langcode: en
+status: true
+dependencies:
+  module:
+    - layout_paragraphs
+id: promotion_three
+label: 'Promotion three'
+icon_uuid: null
+icon_default: null
+description: 'Migrated from field_collection field_promotion_three'
+behavior_plugins:
+  layout_paragraphs:
+    enabled: false
+    available_layouts: {  }

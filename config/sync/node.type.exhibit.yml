@@ -1,0 +1,16 @@
+uuid: f9ddc552-b0c8-4ee0-830c-16e4bb372165
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    parent: 'main-menu:0:'
+name: Exhibit
+type: exhibit
+description: 'An Exhibit at the National Zoo'
+help: 'Do not include the word "exhibit" in the exhibit name. It will automatically be appended to the end of the exhibit name.'
+new_revision: true
+preview_mode: 1
+display_submitted: false

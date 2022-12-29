@@ -1,0 +1,27 @@
+uuid: bf363f18-5772-46f4-b7e1-b91777e34ca0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.media.document_http.field_media_document_http
+    - media.type.document_http
+  module:
+    - file
+id: media.document_http.default
+targetEntityType: media
+bundle: document_http
+mode: default
+content:
+  field_media_document_http:
+    type: file_default
+    label: visually_hidden
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  created: true
+  name: true
+  thumbnail: true
+  uid: true

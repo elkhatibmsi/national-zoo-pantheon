@@ -1,0 +1,62 @@
+uuid: a36e99a4-008a-4855-9a79-8854226de68b
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.scbi_project.body
+    - field.field.node.scbi_project.field_content_block
+    - field.field.node.scbi_project.field_editorial_access
+    - field.field.node.scbi_project.field_image
+    - field.field.node.scbi_project.field_landing_image
+    - field.field.node.scbi_project.field_other_species
+    - field.field.node.scbi_project.field_other_staff
+    - field.field.node.scbi_project.field_parent_project
+    - field.field.node.scbi_project.field_publications
+    - field.field.node.scbi_project.field_related_species
+    - field.field.node.scbi_project.field_scbi_staff
+    - field.field.node.scbi_project.field_species_work_with_filter
+    - field.field.node.scbi_project.field_tags
+    - node.type.scbi_project
+  module:
+    - text
+    - user
+id: node.scbi_project.teaser
+targetEntityType: node
+bundle: scbi_project
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_landing_image:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_content_block: true
+  field_editorial_access: true
+  field_image: true
+  field_other_species: true
+  field_other_staff: true
+  field_parent_project: true
+  field_publications: true
+  field_related_species: true
+  field_scbi_staff: true
+  field_species_work_with_filter: true
+  field_tags: true

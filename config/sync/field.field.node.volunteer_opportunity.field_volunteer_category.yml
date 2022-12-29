@@ -1,0 +1,23 @@
+uuid: 7964ddea-7a3a-43f5-8965-88ceff58df77
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_volunteer_category
+    - node.type.volunteer_opportunity
+id: node.volunteer_opportunity.field_volunteer_category
+field_name: field_volunteer_category
+entity_type: node
+bundle: volunteer_opportunity
+label: Category
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    sort:
+      field: _none
+field_type: entity_reference

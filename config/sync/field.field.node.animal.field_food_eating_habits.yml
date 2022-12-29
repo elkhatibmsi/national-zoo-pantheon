@@ -1,0 +1,21 @@
+uuid: 2ae10e5a-7c43-4d39-aad4-9cf36acaed91
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_food_eating_habits
+    - node.type.animal
+  module:
+    - text
+id: node.animal.field_food_eating_habits
+field_name: field_food_eating_habits
+entity_type: node
+bundle: animal
+label: 'Food/Eating Habits'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

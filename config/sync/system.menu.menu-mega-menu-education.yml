@@ -1,0 +1,8 @@
+uuid: 6df076f6-4aef-4a9c-9167-a3bf5099b5bf
+langcode: en
+status: true
+dependencies: {  }
+id: menu-mega-menu-education
+label: 'Mega Menu Education'
+description: 'Column 1 of the education dropdown in the Mega Menu'
+locked: false

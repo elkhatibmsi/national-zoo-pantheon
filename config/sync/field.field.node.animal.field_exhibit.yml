@@ -1,0 +1,30 @@
+uuid: 57c84ff2-b7e0-4752-9e25-95db75591de5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_exhibit
+    - node.type.animal
+    - node.type.exhibit
+id: node.animal.field_exhibit
+field_name: field_exhibit
+entity_type: node
+bundle: animal
+label: Exhibit
+description: 'Choose the exhibit to which this animal belongs. You may select multiple exhibits.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      exhibit: exhibit
+    sort:
+      field: title
+      direction: ASC
+    behaviors:
+      views-select-list:
+        status: 1
+field_type: entity_reference

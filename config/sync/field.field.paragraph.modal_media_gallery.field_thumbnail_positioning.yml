@@ -1,0 +1,23 @@
+uuid: a8460136-ac2e-4983-a920-354c1606c869
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_thumbnail_positioning
+    - paragraphs.paragraphs_type.modal_media_gallery
+  module:
+    - options
+id: paragraph.modal_media_gallery.field_thumbnail_positioning
+field_name: field_thumbnail_positioning
+entity_type: paragraph
+bundle: modal_media_gallery
+label: 'Thumbnail Alignment'
+description: "Determines the alignment of the media thumbnails. Default is set to left. \r\n "
+required: false
+translatable: false
+default_value:
+  -
+    value: '1'
+default_value_callback: ''
+settings: {  }
+field_type: list_string

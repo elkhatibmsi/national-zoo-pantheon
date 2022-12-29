@@ -1,0 +1,22 @@
+uuid: 3f877ac8-323f-45f2-9cfa-a315111a206d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.image_only.field_image
+    - paragraphs.paragraphs_type.image_only
+id: paragraph.image_only.default
+targetEntityType: paragraph
+bundle: image_only
+mode: default
+content:
+  field_image:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: carousel
+      link: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

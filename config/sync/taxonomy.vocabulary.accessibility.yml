@@ -1,0 +1,8 @@
+uuid: 3776abf3-2012-492a-a31e-5943df875064
+langcode: en
+status: true
+dependencies: {  }
+name: Accessibility
+vid: accessibility
+description: ''
+weight: 0

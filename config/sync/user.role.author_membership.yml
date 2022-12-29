@@ -1,0 +1,37 @@
+uuid: bafd0086-641f-4b7a-b780-14d880e750b2
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.adopt_a_species
+    - node.type.basic_page
+    - node.type.news
+  module:
+    - contextual
+    - node
+    - system
+id: author_membership
+label: 'author - membership'
+weight: 9
+is_admin: null
+permissions:
+  - 'access administration menu'
+  - 'access administration pages'
+  - 'access contextual links'
+  - 'access media browser'
+  - 'access workbench'
+  - 'access workbench access by role'
+  - 'create adopt_a_species content'
+  - 'create basic_page content'
+  - 'create files'
+  - 'create news content'
+  - 'delete own adopt_a_species content'
+  - 'delete own news content'
+  - 'edit any adopt_a_species content'
+  - 'edit any news content'
+  - 'edit own adopt_a_species content'
+  - 'edit own news content'
+  - 'edit terms in 30'
+  - 'view all unpublished content'
+  - 'view files'
+  - 'view the administration theme'

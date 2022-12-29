@@ -1,0 +1,18 @@
+uuid: 145ee790-4d0b-4155-b67d-1098410efdd6
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main-menu
+    parent: 'main-menu:0:'
+name: 'Corporate Partner'
+type: corporate_partner
+description: 'A corporate partner of the Zoo, e.g. an event sponsor'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

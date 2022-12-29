@@ -1,0 +1,22 @@
+uuid: 1379dbdc-26cd-4fdb-9f57-14d90abe98df
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_parking
+    - node.type.internship
+id: node.internship.field_parking
+field_name: field_parking
+entity_type: node
+bundle: internship
+label: Parking
+description: 'Enter parking information for this internship'
+required: true
+translatable: false
+default_value:
+  -
+    value: "The National Zoo and the Smithsonian Institution do not provide free parking to interns.\r\n"
+    format: full_html
+default_value_callback: ''
+settings: {  }
+field_type: string_long

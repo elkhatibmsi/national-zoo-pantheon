@@ -1,0 +1,15 @@
+uuid: 81304b0d-41b7-4f53-89c1-7947fda1d642
+langcode: en
+status: true
+dependencies:
+  module:
+    - layout_paragraphs
+id: card_grid
+label: 'Card Grid'
+icon_uuid: null
+icon_default: null
+description: 'Migrated from paragraph bundle Card Grid'
+behavior_plugins:
+  layout_paragraphs:
+    enabled: false
+    available_layouts: {  }

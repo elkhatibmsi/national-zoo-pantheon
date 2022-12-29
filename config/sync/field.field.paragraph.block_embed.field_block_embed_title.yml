@@ -1,0 +1,19 @@
+uuid: 1db8db16-3124-4eb0-b280-b63c06a27317
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_block_embed_title
+    - paragraphs.paragraphs_type.block_embed
+id: paragraph.block_embed.field_block_embed_title
+field_name: field_block_embed_title
+entity_type: paragraph
+bundle: block_embed
+label: 'Block Embed Title'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

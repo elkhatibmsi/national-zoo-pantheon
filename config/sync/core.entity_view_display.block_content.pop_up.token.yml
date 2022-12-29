@@ -1,0 +1,27 @@
+uuid: e9dec477-6674-4c5d-86b5-f45d38758019
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.pop_up
+    - core.entity_view_mode.block_content.token
+    - field.field.block_content.pop_up.field_pop_up_background
+    - field.field.block_content.pop_up.field_pop_up_content
+    - field.field.block_content.pop_up.field_pop_up_frequency
+    - field.field.block_content.pop_up.field_pop_up_size
+    - field.field.block_content.pop_up.field_pop_up_title
+    - field.field.block_content.pop_up.field_pop_up_tone
+    - field.field.block_content.pop_up.title
+id: block_content.pop_up.token
+targetEntityType: block_content
+bundle: pop_up
+mode: token
+content: {  }
+hidden:
+  field_pop_up_background: true
+  field_pop_up_content: true
+  field_pop_up_frequency: true
+  field_pop_up_size: true
+  field_pop_up_title: true
+  field_pop_up_tone: true
+  title: true

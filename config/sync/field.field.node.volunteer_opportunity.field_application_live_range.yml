@@ -1,0 +1,19 @@
+uuid: dbc925d3-821a-4181-9620-8abc05225878
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_application_live_range
+    - node.type.volunteer_opportunity
+id: node.volunteer_opportunity.field_application_live_range
+field_name: field_application_live_range
+entity_type: node
+bundle: volunteer_opportunity
+label: 'Application Link Live Range'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: timestamp

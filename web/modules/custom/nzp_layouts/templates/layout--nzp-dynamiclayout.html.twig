@@ -1,0 +1,25 @@
+{% if content %}
+  <div{{ attributes }}>
+
+    {% for subsection in content['#subsections'] %}
+
+      {% set subsection_render_array = {
+        '#theme': subsection.layout.theme,
+      } %}
+
+      {% set subsection_region_attributes = {} %}
+      {% set subsection_regions = {} %}
+      {% for region, shortname in subsection.regions %}
+        {% set subsection_region_attributes = subsection_region_attributes|merge({('#' ~ shortname ~ '_attributes'): region_attributes[region] }) %}
+        {% set subsection_regions = subsection_regions|merge({('#' ~ shortname): content[region] }) %}
+      {% endfor %}
+
+      {% set subsection_render_array = subsection_render_array|merge(subsection_regions) %}
+      {% set subsection_render_array = subsection_render_array|merge(subsection_region_attributes) %}
+
+      {{ subsection_render_array }}
+
+    {% endfor %}
+
+  </div>
+{% endif %}

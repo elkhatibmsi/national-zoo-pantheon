@@ -1,0 +1,36 @@
+uuid: 129202f9-ee31-4986-aa93-87879baa4455
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_headshot
+    - media.type.image
+    - media.type.image_http
+    - node.type.bio_profiles
+  content:
+    - 'media:image:0e4815f6-8bd3-4935-9509-9906e534be03'
+id: node.bio_profiles.field_headshot
+field_name: field_headshot
+entity_type: node
+bundle: bio_profiles
+label: Headshot
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    target_uuid: 0e4815f6-8bd3-4935-9509-9906e534be03
+    weight: 0
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+      image_http: image_http
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: image
+field_type: entity_reference

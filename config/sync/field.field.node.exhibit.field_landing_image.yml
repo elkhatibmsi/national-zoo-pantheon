@@ -1,0 +1,24 @@
+uuid: 4b178e81-a99f-4774-8b25-c9980621c274
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_landing_image
+    - media.type.image
+    - node.type.exhibit
+id: node.exhibit.field_landing_image
+field_name: field_landing_image
+entity_type: node
+bundle: exhibit
+label: 'Teaser image'
+description: 'This image will appear when this exhibit it promoted somewhere else on the site.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+field_type: entity_reference

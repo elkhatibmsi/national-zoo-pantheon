@@ -1,0 +1,31 @@
+uuid: 9bac5468-3cef-4e58-a745-9a5dea75f647
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.shop
+  module:
+    - menu_block
+  theme:
+    - tailwind_nzp
+id: shop
+theme: tailwind_nzp
+region: footer
+weight: -1
+provider: null
+plugin: 'menu_block:shop'
+settings:
+  id: 'menu_block:shop'
+  label: Shop
+  label_display: '0'
+  provider: menu_block
+  follow: false
+  follow_parent: child
+  label_link: false
+  label_type: block
+  level: 1
+  depth: 0
+  expand_all_items: false
+  parent: 'shop:'
+  suggestion: shop
+visibility: {  }

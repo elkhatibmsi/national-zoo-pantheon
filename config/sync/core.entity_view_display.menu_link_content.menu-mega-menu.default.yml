@@ -1,0 +1,57 @@
+uuid: ff3bc46d-f81d-4f39-9cc2-fac19e7010e8
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.menu-mega-menu
+  module:
+    - layout_builder
+    - layout_builder_restrictions
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: true
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          ec7e53b7-7eea-49cc-bfb5-6f0773f2c07d:
+            uuid: ec7e53b7-7eea-49cc-bfb5-6f0773f2c07d
+            region: content
+            configuration:
+              id: 'extra_field_block:menu_link_content:menu-mega-menu:children'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+            weight: 0
+            additional: {  }
+        third_party_settings: {  }
+  layout_builder_restrictions:
+    allowed_block_categories: {  }
+    entity_view_mode_restriction:
+      allowed_layouts: {  }
+      denylisted_blocks: {  }
+      allowlisted_blocks: {  }
+      restricted_categories:
+        - 'Chaos Tools'
+        - 'Content fields'
+        - Devel
+        - 'Devel PHP'
+        - Help
+        - System
+        - User
+        - core
+id: menu_link_content.menu-mega-menu.default
+targetEntityType: menu_link_content
+bundle: menu-mega-menu
+mode: default
+content:
+  children:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  layout_builder__layout: true

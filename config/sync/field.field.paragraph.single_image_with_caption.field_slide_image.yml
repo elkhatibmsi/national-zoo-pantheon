@@ -1,0 +1,24 @@
+uuid: ac252a6b-7059-4319-9653-f5ec1980524c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_slide_image
+    - media.type.image
+    - paragraphs.paragraphs_type.single_image_with_caption
+id: paragraph.single_image_with_caption.field_slide_image
+field_name: field_slide_image
+entity_type: paragraph
+bundle: single_image_with_caption
+label: 'Media Item'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+field_type: entity_reference

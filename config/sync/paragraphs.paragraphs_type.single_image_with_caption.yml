@@ -1,0 +1,15 @@
+uuid: 1401dece-fe41-4abc-b9f7-d0c2bcd72ad2
+langcode: en
+status: true
+dependencies:
+  module:
+    - layout_paragraphs
+id: single_image_with_caption
+label: 'Single Media Item with Caption'
+icon_uuid: null
+icon_default: null
+description: 'Migrated from paragraph bundle Single Media Item with Caption'
+behavior_plugins:
+  layout_paragraphs:
+    enabled: false
+    available_layouts: {  }

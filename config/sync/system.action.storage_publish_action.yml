@@ -1,0 +1,13 @@
+uuid: 5d7e711a-1454-484a-b0be-ab00447b8763
+langcode: en
+status: true
+dependencies:
+  module:
+    - storage
+_core:
+  default_config_hash: GshFz5aCFEMaI0o5MiR4Mw9gq6JQTU_Tw09_Uct9rAE
+id: storage_publish_action
+label: 'Publish storage data'
+type: storage
+plugin: 'entity:publish_action:storage'
+configuration: {  }

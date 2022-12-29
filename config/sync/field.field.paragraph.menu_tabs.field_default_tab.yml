@@ -1,0 +1,23 @@
+uuid: e8f2cfb9-b6e6-4b32-8f1c-83b4170bfd2c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_default_tab
+    - paragraphs.paragraphs_type.menu_tabs
+id: paragraph.menu_tabs.field_default_tab
+field_name: field_default_tab
+entity_type: paragraph
+bundle: menu_tabs
+label: 'Default Tab'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: ''
+  off_label: ''
+field_type: boolean

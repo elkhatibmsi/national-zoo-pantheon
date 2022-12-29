@@ -1,0 +1,57 @@
+uuid: aaa8c011-70eb-4971-9066-85a14974d551
+langcode: und
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_opportunities_available_in
+field_name: field_opportunities_available_in
+entity_type: node
+type: list_float
+settings:
+  allowed_values:
+    -
+      value: !!float 1
+      label: Amazonia
+    -
+      value: !!float 2
+      label: 'American Trail'
+    -
+      value: !!float 3
+      label: 'Animal Hospital'
+    -
+      value: !!float 4
+      label: 'Asia Trail'
+    -
+      value: !!float 5
+      label: Birds
+    -
+      value: !!float 6
+      label: Elephants
+    -
+      value: !!float 7
+      label: Horticulture
+    -
+      value: !!float 8
+      label: Nutrition/Commissary
+    -
+      value: !!float 9
+      label: Pathology
+    -
+      value: !!float 10
+      label: Primates
+    -
+      value: !!float 11
+      label: 'Reptile Discovery Center'
+    -
+      value: !!float 12
+      label: 'Small Mammal House'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

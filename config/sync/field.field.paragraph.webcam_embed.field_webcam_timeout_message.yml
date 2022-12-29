@@ -1,0 +1,24 @@
+uuid: 45704c3b-a052-42d0-948c-9d8daddb5fc4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_webcam_timeout_message
+    - paragraphs.paragraphs_type.webcam_embed
+  module:
+    - text
+id: paragraph.webcam_embed.field_webcam_timeout_message
+field_name: field_webcam_timeout_message
+entity_type: paragraph
+bundle: webcam_embed
+label: 'Webcam Timeout Message'
+description: "Add a timeout message. This content will appear in the modal window once paused. Html is allowed but use at your own risk! \r\n"
+required: false
+translatable: false
+default_value:
+  -
+    value: "<p>Your webcam stream is paused. Close this window and click on play to resume.</p>\r\n"
+    format: full_html
+default_value_callback: ''
+settings: {  }
+field_type: text_long

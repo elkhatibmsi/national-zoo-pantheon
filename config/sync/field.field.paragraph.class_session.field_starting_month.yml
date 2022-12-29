@@ -1,0 +1,21 @@
+uuid: 9fcb291e-f90d-469f-b23c-8f2dbaf9b6e5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_starting_month
+    - paragraphs.paragraphs_type.class_session
+  module:
+    - options
+id: paragraph.class_session.field_starting_month
+field_name: field_starting_month
+entity_type: paragraph
+bundle: class_session
+label: 'Starting Month'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

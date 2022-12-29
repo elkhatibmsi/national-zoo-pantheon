@@ -1,0 +1,23 @@
+uuid: 13b73cf5-0ff4-4231-be75-00602916ab7b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tnew_id_renew
+    - node.type.membership_level
+id: node.membership_level.field_tnew_id_renew
+field_name: field_tnew_id_renew
+entity_type: node
+bundle: membership_level
+label: 'TNEW_id (Renew)'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 0
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

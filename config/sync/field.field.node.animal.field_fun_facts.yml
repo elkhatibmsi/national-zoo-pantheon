@@ -1,0 +1,21 @@
+uuid: 4d62bc99-5e68-4db7-be40-880a58940293
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_fun_facts
+    - node.type.animal
+  module:
+    - text
+id: node.animal.field_fun_facts
+field_name: field_fun_facts
+entity_type: node
+bundle: animal
+label: 'Fun Facts'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

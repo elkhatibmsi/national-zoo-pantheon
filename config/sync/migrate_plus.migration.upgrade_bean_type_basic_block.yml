@@ -1,0 +1,43 @@
+uuid: c79de88b-43b1-42f0-a19b-3b51e3274873
+langcode: en
+status: true
+dependencies: {  }
+id: upgrade_bean_type_basic_block
+class: Drupal\migrate\Plugin\Migration
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 7'
+  - Configuration
+migration_group: migrate_drupal_7
+label: 'Bean type (basic_block)'
+source:
+  plugin: bean_type
+  entity_type: bean
+  constants:
+    revision: 1
+  type: basic_block
+process:
+  id:
+    -
+      plugin: bean_unique_type
+      source: type
+  label:
+    -
+      plugin: null_coalesce
+      source:
+        - label
+        - type
+  description:
+    -
+      plugin: get
+      source: description
+  revision:
+    -
+      plugin: get
+      source: constants/revision
+destination:
+  plugin: 'entity:block_content_type'
+migration_dependencies:
+  required: {  }
+  optional: {  }

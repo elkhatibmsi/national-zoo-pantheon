@@ -1,0 +1,18 @@
+uuid: 97bc2f9e-6dba-4f7f-a18b-31d04b78802a
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main-menu
+    parent: 'main-menu:0:'
+name: 'Coffee Purveyor'
+type: coffee_purveyor
+description: 'Bird Friendly coffee roasters, importers, certification agencies, and farmers'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: true

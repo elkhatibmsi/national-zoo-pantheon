@@ -1,0 +1,21 @@
+uuid: 976b7057-7221-4f79-8163-9fa3eba7a7ae
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ticket_info
+    - node.type.attraction
+  module:
+    - text
+id: node.attraction.field_ticket_info
+field_name: field_ticket_info
+entity_type: node
+bundle: attraction
+label: 'Ticket Information'
+description: 'Describe the ticket information for this attraction'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

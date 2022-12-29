@@ -1,0 +1,23 @@
+uuid: 41026be0-c89b-486f-b696-7e709066f818
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_class_type
+    - node.type.class
+id: node.class.field_class_type
+field_name: field_class_type
+entity_type: node
+bundle: class
+label: 'Class Type'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    sort:
+      field: _none
+field_type: entity_reference

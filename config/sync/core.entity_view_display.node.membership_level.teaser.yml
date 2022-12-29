@@ -1,0 +1,54 @@
+uuid: d55b3d9e-f0dd-44ec-8d49-55f967c130e7
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.membership_level.body
+    - field.field.node.membership_level.field_cost
+    - field.field.node.membership_level.field_editorial_access
+    - field.field.node.membership_level.field_landing_image
+    - field.field.node.membership_level.field_membership_length
+    - field.field.node.membership_level.field_membership_level
+    - field.field.node.membership_level.field_title_override
+    - field.field.node.membership_level.field_tnew_id
+    - field.field.node.membership_level.field_tnew_id_gift
+    - field.field.node.membership_level.field_tnew_id_join_senior
+    - field.field.node.membership_level.field_tnew_id_renew
+    - field.field.node.membership_level.field_tnew_id_renew_senior
+    - field.field.node.membership_level.field_upsell_level
+    - node.type.membership_level
+  module:
+    - text
+    - user
+id: node.membership_level.teaser
+targetEntityType: node
+bundle: membership_level
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_cost: true
+  field_editorial_access: true
+  field_landing_image: true
+  field_membership_length: true
+  field_membership_level: true
+  field_title_override: true
+  field_tnew_id: true
+  field_tnew_id_gift: true
+  field_tnew_id_join_senior: true
+  field_tnew_id_renew: true
+  field_tnew_id_renew_senior: true
+  field_upsell_level: true

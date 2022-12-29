@@ -1,0 +1,59 @@
+uuid: 05bc4e25-08db-4df1-b8d4-6c733ff2aead
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.paragraphs_editor_preview
+    - field.field.paragraph.feature.field_background_color
+    - field.field.paragraph.feature.field_image
+    - field.field.paragraph.feature.field_link
+    - field.field.paragraph.feature.field_subtitle
+    - field.field.paragraph.feature.field_text
+    - field.field.paragraph.feature.field_title
+    - paragraphs.paragraphs_type.feature
+  module:
+    - layout_builder
+    - text
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+id: paragraph.feature.paragraphs_editor_preview
+targetEntityType: paragraph
+bundle: feature
+mode: paragraphs_editor_preview
+content:
+  field_image:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_subtitle:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_text:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_title:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  field_background_color: true
+  field_link: true

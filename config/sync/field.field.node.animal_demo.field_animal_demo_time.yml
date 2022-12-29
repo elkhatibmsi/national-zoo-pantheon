@@ -1,0 +1,21 @@
+uuid: 376ab3f0-faee-4df3-8ce0-b065ba7dc5b9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_animal_demo_time
+    - node.type.animal_demo
+  module:
+    - time_field
+id: node.animal_demo.field_animal_demo_time
+field_name: field_animal_demo_time
+entity_type: node
+bundle: animal_demo
+label: Time
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: time

@@ -1,0 +1,23 @@
+uuid: eb44e902-f59b-4ea1-96ec-5442d41daa9f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tnew_id
+    - node.type.adopt_a_species
+id: node.adopt_a_species.field_tnew_id
+field_name: field_tnew_id
+entity_type: node
+bundle: adopt_a_species
+label: TNEW_id
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 0
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

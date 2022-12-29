@@ -1,0 +1,19 @@
+uuid: 2be7b69a-958b-4c04-9c06-c35949d4a60e
+langcode: und
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.field_icon_card_caption
+field_name: field_icon_card_caption
+entity_type: paragraph
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

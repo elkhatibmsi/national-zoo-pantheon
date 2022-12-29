@@ -1,0 +1,8 @@
+uuid: e546092d-d3b9-45fc-8a0d-6332afc70134
+langcode: en
+status: true
+dependencies: {  }
+name: 'Hide promotions'
+vid: hide_promotions
+description: ''
+weight: 0

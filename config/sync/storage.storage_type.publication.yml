@@ -1,0 +1,13 @@
+uuid: df6e7e6b-744d-4181-b9a5-cd8dc743d6ec
+langcode: en
+status: true
+dependencies: {  }
+id: publication
+label: Publication
+description: 'storage type for displaying publications by SI Affiliated staff'
+help: ''
+new_revision: false
+revision_expose: false
+revision_log: false
+name_pattern: ''
+has_canonical: false

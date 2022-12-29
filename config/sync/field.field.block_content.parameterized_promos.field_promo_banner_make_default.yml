@@ -1,0 +1,23 @@
+uuid: ebeb4710-68ba-45ea-80ee-ed65c16b0a1f
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.parameterized_promos
+    - field.storage.block_content.field_promo_banner_make_default
+id: block_content.parameterized_promos.field_promo_banner_make_default
+field_name: field_promo_banner_make_default
+entity_type: block_content
+bundle: parameterized_promos
+label: 'Make Default?'
+description: "Checking this setting will make this block appear without any query parameters defined. \r\n"
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: '1'
+  off_label: '0'
+field_type: boolean

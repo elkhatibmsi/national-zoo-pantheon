@@ -1,0 +1,19 @@
+uuid: b9446a3b-6d1d-47a3-97ea-04b7c5cf3108
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - time_field
+id: node.field_animal_demo_time
+field_name: field_animal_demo_time
+entity_type: node
+type: time
+settings: {  }
+module: time_field
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,19 @@
+uuid: 7e18835f-10a8-49a3-954f-b67893b194bd
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.parameterized_promos
+    - field.storage.block_content.title
+id: block_content.parameterized_promos.title
+field_name: title
+entity_type: block_content
+bundle: parameterized_promos
+label: Title
+description: 'The Title of the block.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

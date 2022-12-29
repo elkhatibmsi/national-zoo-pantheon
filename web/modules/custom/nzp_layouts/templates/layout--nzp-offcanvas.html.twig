@@ -1,0 +1,42 @@
+{#
+/**
+ * @file
+ * Default theme implementation for a one column layout.
+ *
+ * This template provides a two column display layout with full width areas at
+ * the top, bottom and in the middle.
+ *
+ * Available variables:
+ * - content: The content for this layout.
+ * - attributes: HTML attributes for the layout <div>.
+ *
+ * @ingroup themeable
+ */
+#}
+
+{% set oc_id = settings.oc_id_toggle ? settings.oc_custom_id : random(10000, 10000000) %}
+{% set oc_fullscreen = settings.oc_full_page_toggle ? 'c-full-screen' : '' %}
+{% if content %}
+    <div{{attributes}}> 
+
+    {% if settings.oc_id_toggle == false %}
+        <button class="c-button js-offcanvas-trigger" data-offcanvas-trigger="oc-{{ oc_id }}">
+<svg class="icon-menu" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 250 250">
+  <title>Menu</title>
+  <g>
+    <line class="line line--1" x1="20" y1="30" x2="190" y2="30"></line>
+    <line class="line line--2" x1="20" y1="90" x2="150" y2="90"></line>
+    <line class="line line--3" x1="20" y1="150" x2="190" y2="150"></line>
+  </g>
+</svg> 
+<span class="label">{{settings.oc_label}}</span></button>
+    {% endif %}
+        <aside aria-hidden="false" class="js-offcanvas {{ oc_fullscreen }}" data-offcanvas-options='{"modifiers":"{{settings.oc_position}},overlay"}' id="oc-{{ oc_id }}">
+            <div class="l-wrapper" style="padding:2em;">
+                {{ content.content }}
+            </div>
+                    <a href="#" class="c-button close-off-canvas js-offcanvas-trigger" data-offcanvas-trigger="oc-{{ oc_id }}"><i class="micon nzp-icons-cancel" aria-hidden="true"></i><span style="display:none;">close</span></a>
+        </aside>
+
+    </div>
+{% endif %}

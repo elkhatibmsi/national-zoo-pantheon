@@ -1,0 +1,8 @@
+uuid: b7e14156-7474-43ca-9111-4d9aefa2e97c
+langcode: en
+status: true
+dependencies: {  }
+id: menu-menu-si-logo-privacy
+label: 'Footer - SI logo, privacy, terms'
+description: '6th column of the footer with SI Logo, Privacy, and Terms link'
+locked: false

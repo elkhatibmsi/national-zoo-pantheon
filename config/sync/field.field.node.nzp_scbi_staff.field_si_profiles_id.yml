@@ -1,0 +1,19 @@
+uuid: 4e0cdc8b-9a72-4276-b6a2-c3b43034b0bc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_si_profiles_id
+    - node.type.nzp_scbi_staff
+id: node.nzp_scbi_staff.field_si_profiles_id
+field_name: field_si_profiles_id
+entity_type: node
+bundle: nzp_scbi_staff
+label: 'Si Profiles ID'
+description: 'The SI Profiles ID for this staff member. See: <a href="http://profiles.si.edu">profiles.si.edu</a>. Don''t include the leading "n". '
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,23 @@
+uuid: 428d2263-51d7-423a-9d49-32914c4316ee
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_card_position
+    - node.type.attraction
+id: node.attraction.field_card_position
+field_name: field_card_position
+entity_type: node
+bundle: attraction
+label: 'Card position'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    sort:
+      field: _none
+field_type: entity_reference

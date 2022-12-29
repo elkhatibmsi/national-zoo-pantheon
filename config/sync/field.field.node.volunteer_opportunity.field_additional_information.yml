@@ -1,0 +1,21 @@
+uuid: 17df2b2e-93c4-4c00-b133-b387331ccb83
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_additional_information
+    - node.type.volunteer_opportunity
+  module:
+    - text
+id: node.volunteer_opportunity.field_additional_information
+field_name: field_additional_information
+entity_type: node
+bundle: volunteer_opportunity
+label: 'Application Requirements'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

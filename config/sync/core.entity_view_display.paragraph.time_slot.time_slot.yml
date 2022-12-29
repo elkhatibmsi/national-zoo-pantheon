@@ -1,0 +1,24 @@
+uuid: 6d91b3f7-d3c8-43af-811b-de50034bd42b
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.time_slot
+    - field.field.paragraph.time_slot.field_hours_category
+    - field.field.paragraph.time_slot.field_hours_description
+    - paragraphs.paragraphs_type.time_slot
+id: paragraph.time_slot.time_slot
+targetEntityType: paragraph
+bundle: time_slot
+mode: time_slot
+content:
+  field_hours_category:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_hours_description: true

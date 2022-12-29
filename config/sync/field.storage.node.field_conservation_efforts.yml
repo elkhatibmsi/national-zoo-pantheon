@@ -1,0 +1,19 @@
+uuid: 5f858929-4a5e-424d-b340-2dc128128ac5
+langcode: und
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_conservation_efforts
+field_name: field_conservation_efforts
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

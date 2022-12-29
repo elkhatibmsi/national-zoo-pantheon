@@ -1,0 +1,44 @@
+uuid: 0a35816a-757a-4742-955e-e501c3970100
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.zoo_hours.field_date_range
+    - field.field.node.zoo_hours.field_editorial_access
+    - field.field.node.zoo_hours.field_time_slot
+    - node.type.zoo_hours
+  module:
+    - datetime
+    - entity_reference_revisions
+    - user
+id: node.zoo_hours.teaser
+targetEntityType: node
+bundle: zoo_hours
+mode: teaser
+content:
+  field_date_range:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: long
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_time_slot:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: full
+      link: ''
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_editorial_access: true

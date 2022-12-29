@@ -1,0 +1,18 @@
+
+{% block paragraph %}
+	{{ content.controls }}
+  <div{{ attributes }}>
+
+{%
+  include '@nzpComponents/cards/card--default.html.twig' with {
+    image: content.field_card_item_image,
+    description: content.field_card_item_text,
+    title: content.field_card_item_link,
+    link: content.field_card_item_link.0['#url'],
+    showdescription: true,
+
+  } 
+ 
+%}
+</div>
+{% endblock %}

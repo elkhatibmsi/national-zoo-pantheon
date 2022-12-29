@@ -1,0 +1,15 @@
+uuid: ca10e820-2c2b-4c73-bf22-0ee847ccd87b
+langcode: en
+status: true
+dependencies:
+  module:
+    - layout_paragraphs
+id: looping_video
+label: 'Looping Video'
+icon_uuid: null
+icon_default: null
+description: 'Migrated from paragraph bundle Looping Video'
+behavior_plugins:
+  layout_paragraphs:
+    enabled: false
+    available_layouts: {  }

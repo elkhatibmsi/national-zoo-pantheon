@@ -1,0 +1,35 @@
+uuid: dfa872b1-e81f-44ce-9cbe-454dee7e3f07
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.block_embed.field_block_embed_title
+    - field.field.paragraph.block_embed.field_block_field
+    - paragraphs.paragraphs_type.block_embed
+  module:
+    - block_field
+id: paragraph.block_embed.default
+targetEntityType: paragraph
+bundle: block_embed
+mode: default
+content:
+  field_block_embed_title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_block_field:
+    type: block_field_default
+    weight: 1
+    region: content
+    settings:
+      plugin_id: ''
+      settings: {  }
+      configuration_form: full
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

@@ -1,0 +1,15 @@
+uuid: 70ad1793-9ac9-4b27-ae68-83cc9de29297
+langcode: en
+status: true
+dependencies:
+  module:
+    - layout_paragraphs
+id: promotion_two
+label: 'Promotion two'
+icon_uuid: null
+icon_default: null
+description: 'Migrated from field_collection field_promotion_two'
+behavior_plugins:
+  layout_paragraphs:
+    enabled: false
+    available_layouts: {  }

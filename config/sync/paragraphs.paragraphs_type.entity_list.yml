@@ -1,0 +1,15 @@
+uuid: ce873989-84a7-4768-adcc-7690d16b139c
+langcode: en
+status: true
+dependencies:
+  module:
+    - layout_paragraphs
+id: entity_list
+label: 'Entity List'
+icon_uuid: null
+icon_default: null
+description: 'Migrated from paragraph bundle Entity List'
+behavior_plugins:
+  layout_paragraphs:
+    enabled: false
+    available_layouts: {  }

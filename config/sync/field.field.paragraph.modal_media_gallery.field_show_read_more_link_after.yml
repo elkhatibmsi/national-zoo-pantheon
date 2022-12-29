@@ -1,0 +1,23 @@
+uuid: 042447ee-13fb-4094-abbc-8f46c1c932b2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_show_read_more_link_after
+    - paragraphs.paragraphs_type.modal_media_gallery
+id: paragraph.modal_media_gallery.field_show_read_more_link_after
+field_name: field_show_read_more_link_after
+entity_type: paragraph
+bundle: modal_media_gallery
+label: 'Show read more link after'
+description: 'Enter the number of gallery items to display before adding a "View More" link. Leave empty to display all items and disable the gallery page. '
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: Items
+field_type: integer

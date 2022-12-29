@@ -1,0 +1,39 @@
+uuid: 4d8b9118-3758-4c73-a6bb-b3d25594a5b1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.storage.position_and_center.field_affiliated_center
+    - field.field.storage.position_and_center.field_position_type
+    - storage.storage_type.position_and_center
+id: storage.position_and_center.default
+targetEntityType: storage
+bundle: position_and_center
+mode: default
+content:
+  field_affiliated_center:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: -3
+    region: content
+  field_position_type:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: -4
+    region: content
+  name:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: -5
+    region: content
+hidden:
+  user_id: true

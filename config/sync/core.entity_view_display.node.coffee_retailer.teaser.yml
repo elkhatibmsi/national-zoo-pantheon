@@ -1,0 +1,44 @@
+uuid: 89ad7634-72b5-4c8c-8e74-8d3808c93516
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.coffee_retailer.field_coffee_retail_description
+    - field.field.node.coffee_retailer.field_coffee_retail_logo
+    - field.field.node.coffee_retailer.field_coffee_retail_purchase_lin
+    - field.field.node.coffee_retailer.field_coffee_retail_roaster_link
+    - field.field.node.coffee_retailer.field_coffee_retail_website
+    - field.field.node.coffee_retailer.field_editorial_access
+    - node.type.coffee_retailer
+  module:
+    - link
+    - user
+id: node.coffee_retailer.teaser
+targetEntityType: node
+bundle: coffee_retailer
+mode: teaser
+content:
+  field_coffee_retail_website:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_coffee_retail_description: true
+  field_coffee_retail_logo: true
+  field_coffee_retail_purchase_lin: true
+  field_coffee_retail_roaster_link: true
+  field_editorial_access: true

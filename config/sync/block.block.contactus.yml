@@ -1,0 +1,25 @@
+uuid: 7aaac01b-0cac-41f0-98ee-89b65b9db339
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:1be3543b-1172-4309-93f4-da49867b7610'
+  module:
+    - block_content
+  theme:
+    - tailwind_nzp
+id: contactus
+theme: tailwind_nzp
+region: footer
+weight: -6
+provider: null
+plugin: 'block_content:1be3543b-1172-4309-93f4-da49867b7610'
+settings:
+  id: 'block_content:1be3543b-1172-4309-93f4-da49867b7610'
+  label: 'Contact Us'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

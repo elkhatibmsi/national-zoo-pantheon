@@ -1,0 +1,21 @@
+uuid: cc71e3b0-2c99-440c-8a8a-58530e1a15ac
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.pop_up
+    - field.storage.block_content.field_pop_up_tone
+  module:
+    - options
+id: block_content.pop_up.field_pop_up_tone
+field_name: field_pop_up_tone
+entity_type: block_content
+bundle: pop_up
+label: 'Pop Up Tone'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,8 @@
+uuid: 3b277cb3-073a-451c-960d-c93ea8c48f2e
+langcode: en
+status: true
+dependencies: {  }
+name: 'Class types'
+vid: class_types
+description: ''
+weight: 0

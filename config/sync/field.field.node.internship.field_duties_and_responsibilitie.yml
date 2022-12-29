@@ -1,0 +1,21 @@
+uuid: 67db7cf2-e355-454a-925e-5e06d81c5785
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_duties_and_responsibilitie
+    - node.type.internship
+  module:
+    - text
+id: node.internship.field_duties_and_responsibilitie
+field_name: field_duties_and_responsibilitie
+entity_type: node
+bundle: internship
+label: 'Learning Objectives'
+description: 'List the learning objectives'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

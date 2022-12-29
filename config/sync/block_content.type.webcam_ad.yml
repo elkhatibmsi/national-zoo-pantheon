@@ -1,0 +1,8 @@
+uuid: de356209-e868-43a0-8601-d310f90733c4
+langcode: en
+status: true
+dependencies: {  }
+id: webcam_ad
+label: 'Webcam ad'
+revision: 1
+description: ''

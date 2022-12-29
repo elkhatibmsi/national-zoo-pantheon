@@ -1,0 +1,8 @@
+uuid: ab3bf402-16c1-45c1-ba23-b04dae18fe6e
+langcode: en
+status: true
+dependencies: {  }
+name: 'Volunteer Opportunity Categories'
+vid: volunteer_opportunity_categori
+description: ''
+weight: 0

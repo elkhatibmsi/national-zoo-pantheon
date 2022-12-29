@@ -1,0 +1,19 @@
+uuid: afccda2b-b29e-46a0-8e19-c3e0965a6a75
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_embed_block_no_title_title
+    - paragraphs.paragraphs_type.block_embed_no_title
+id: paragraph.block_embed_no_title.field_embed_block_no_title_title
+field_name: field_embed_block_no_title_title
+entity_type: paragraph
+bundle: block_embed_no_title
+label: 'Embed Block No Title Title'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

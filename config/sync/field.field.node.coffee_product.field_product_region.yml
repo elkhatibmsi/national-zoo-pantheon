@@ -1,0 +1,21 @@
+uuid: 9527a35c-b016-4519-9113-754bfcefd5cc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_product_region
+    - node.type.coffee_product
+  module:
+    - options
+id: node.coffee_product.field_product_region
+field_name: field_product_region
+entity_type: node
+bundle: coffee_product
+label: 'Product Region'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

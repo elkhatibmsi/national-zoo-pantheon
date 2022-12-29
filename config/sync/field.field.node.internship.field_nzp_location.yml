@@ -1,0 +1,23 @@
+uuid: 0aacd052-d241-402b-a806-a6b51c712f8a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_nzp_location
+    - node.type.internship
+id: node.internship.field_nzp_location
+field_name: field_nzp_location
+entity_type: node
+bundle: internship
+label: Location
+description: 'Select the location of this internship.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    sort:
+      field: _none
+field_type: entity_reference

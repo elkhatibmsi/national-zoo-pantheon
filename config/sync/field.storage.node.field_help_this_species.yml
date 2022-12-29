@@ -1,0 +1,99 @@
+uuid: 919e55a8-ace7-4edd-99a7-7e30a49019b3
+langcode: und
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_help_this_species
+field_name: field_help_this_species
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: '0'
+      label: 'Reduce, reuse and recycle — in that order! Cut back on single-use goods, and find creative ways to reuse products at the end of their life cycle. Choose recycling over trash when possible.'
+    -
+      value: '1'
+      label: 'Be a smart consumer, and check the ingredients label. More than 50 percent of packaged foods, as well as many soaps, cosmetics and household products, contain palm oil. Always choose certified palm oil products that support sustainable production and prevent deforestation.'
+    -
+      value: '2'
+      label: 'Be a smart consumer. Choose products made with sustainable ingredients, such as <a href="/migratory-birds/bird-friendly-coffee">Smithsonian certified Bird Friendly coffees</a>, which support farmers striving to limit their impact on wildlife and habitat.'
+    -
+      value: '3'
+      label: 'Be a smart consumer! Avoid animal-skin products, even those marked “faux,” to ensure you’re not contributing to the illegal hunting of this species.'
+    -
+      value: '4'
+      label: 'Practice ecotourism by being an advocate for the environment when you’re on vacation. During your travels, support, visit or volunteer with organizations that protect wildlife. Shop smart too! Avoid buying products made from animals, which could support poaching and the illegal wildlife trade.'
+    -
+      value: '5'
+      label: 'Choose your pets wisely, and do your research before bringing an animal home. Exotic animals don’t always make great pets. Many require special care and live for a long time. Tropical reptiles and small mammals are often traded internationally and may be victims of the illegal pet trade. Never release animals that have been kept as pets into the wild.'
+    -
+      value: '6'
+      label: 'Be a responsible cat owner, and keep cats indoors or under restraint when outside. Never release animals that have been kept as pets into the wild.'
+    -
+      value: '7'
+      label: 'Consider going meat-free one day each week to help reduce the demand on the livestock industry and decrease your carbon footprint!'
+    -
+      value: '8'
+      label: 'Organize or attend a stream, river, lake or other waterway cleanup in your area to preserve aquatic habitats for local species.'
+    -
+      value: '9'
+      label: 'Support organizations like the Smithsonian’s National Zoo and Conservation Biology Institute that research better ways to protect and care for this animal and other endangered species. Consider <a href="/support">donating your time, money or goods</a>.'
+    -
+      value: '10'
+      label: 'Are you a hunter? You can be an incredible ally for conservation! Check the conservation status of the animals you hunt and use methods that don’t impact other animals.'
+    -
+      value: '11'
+      label: 'If you see a snake in the wild, leave it alone and encourage others to do the same. Don’t assume it is a venomous species, and don’t attack it if it doesn’t pose a threat to your safety. Tell your friends and family about the eco-services that snakes provide, such as keeping rodent populations in check.'
+    -
+      value: '12'
+      label: 'Share the story of this animal with others. Simply raising awareness about this species can contribute to its overall protection.'
+    -
+      value: '13'
+      label: 'Avoid single-use plastics, such as plastic bottles, bags and utensils. Choosing reusable options instead can help reduce plastic pollution.'
+    -
+      value: '14'
+      label: 'Conservation starts with you! Join a citizen science project, such as FrogWatch or <a href="/migratory-birds/neighborhood-nestwatch">Neighborhood Nestwatch</a>, where you can help collect valuable data for scientists. Encourage your friends and family to get involved too.'
+    -
+      value: '15'
+      label: 'Are you a student? Did you love what you learned about this animal? Make it the topic of your next school project, or start a conservation club at your school. You''ll learn even more and share the importance of saving species with classmates and teachers, too.'
+    -
+      value: '16'
+      label: 'Try fundraising for conservation organizations in new and fun ways. You could donate your birthday to conservation, host a bakesale to benefit wildlife or <a href="/support/adopt">Adopt a Species</a>!'
+    -
+      value: '17'
+      label: 'Reduce electricity use by turning off lights, washing your clothes in cold water and adjusting your thermostat when you leave the house.'
+    -
+      value: '18'
+      label: 'Protect local waterways by using fewer pesticides when caring for your garden or lawn. Using fertilizers sparingly, keeping storm drains free of litter and picking up after your pet can also improve watershed health.'
+    -
+      value: '19'
+      label: 'Plant native flowers in your garden to help feed resident and migrating pollinators. You''ll <a href="/migratory-birds/bird-friendly-home-and-yard">make your lawn beautiful and help wildlife</a> at the same time!'
+    -
+      value: '20'
+      label: 'Save water by switching to low-energy appliances, fixing leaks and turning off faucets when they aren''t in use.'
+    -
+      value: '21'
+      label: 'Growing, transporting and preparing food uses a lot of resources, so choose local, seasonal produce when possible. A significant amount of food waste also ends up in landfills, so only buy what you can eat.'
+    -
+      value: '22'
+      label: 'Never release balloons. Animals often mistake them for food or become entangled in their strings. Looking for an alternative? Try blowing bubbles instead!'
+    -
+      value: '23'
+      label: 'Less is more. Cut down on the demand for resources by consuming less. Buy only what you need, and look for pre-owned or repurposed items before purchasing something brand new.'
+    -
+      value: '24'
+      label: 'Be a responsible consumer by ensuring that your food is legally sourced. It is illegal to buy live snakeheads in the continental United States and it is unlawful to import or possess dead snakeheads in several states.'
+    -
+      value: '25'
+      label: 'Share the story of this animal with others. Simply increasing awareness and educating others about the threats invasive species pose to local ecosystems can help protect native environments.'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

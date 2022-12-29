@@ -1,0 +1,21 @@
+uuid: ec2ca0ad-724f-451d-8cbd-b2360be48c9b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.layout.field_content_block
+    - paragraphs.paragraphs_type.layout
+id: paragraph.layout.default
+targetEntityType: paragraph
+bundle: layout
+mode: default
+content:
+  layout_paragraphs_fields:
+    weight: -200
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  field_content_block: true
+  status: true

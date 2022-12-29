@@ -1,0 +1,19 @@
+uuid: 4779b323-04d8-48fa-9cbc-314a8f041dbe
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_flipbook_title
+    - paragraphs.paragraphs_type.flipbook_grid_item
+id: paragraph.flipbook_grid_item.field_flipbook_title
+field_name: field_flipbook_title
+entity_type: paragraph
+bundle: flipbook_grid_item
+label: 'Flipbook Title'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

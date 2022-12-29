@@ -1,0 +1,14 @@
+uuid: 7f41c47d-5530-4787-8d79-5a156d54a5e6
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.sitewide_publisher
+  module:
+    - user
+id: user_remove_role_action.sitewide_publisher
+label: 'Remove the sitewide publisher role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: sitewide_publisher

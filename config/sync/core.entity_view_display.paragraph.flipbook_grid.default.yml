@@ -1,0 +1,28 @@
+uuid: b5267c4c-bc83-4572-a0a1-7c1e94449deb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.flipbook_grid.field_flipbook_grid_item
+    - field.field.paragraph.flipbook_grid.field_number_of_columns
+    - field.field.paragraph.flipbook_grid.field_overlay_background
+    - paragraphs.paragraphs_type.flipbook_grid
+  module:
+    - entity_reference_revisions
+id: paragraph.flipbook_grid.default
+targetEntityType: paragraph
+bundle: flipbook_grid
+mode: default
+content:
+  field_flipbook_grid_item:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: full
+      link: ''
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_number_of_columns: true
+  field_overlay_background: true

@@ -1,0 +1,40 @@
+uuid: 432ad11c-55f4-46fc-bec0-899d4a94ab1b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.membership_level_categories.field_cost_range
+    - field.field.taxonomy_term.membership_level_categories.field_landing_image
+    - taxonomy.vocabulary.membership_level_categories
+  module:
+    - text
+id: taxonomy_term.membership_level_categories.default
+targetEntityType: taxonomy_term
+bundle: membership_level_categories
+mode: default
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_cost_range:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_landing_image:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden: {  }

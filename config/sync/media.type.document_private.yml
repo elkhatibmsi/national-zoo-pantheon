@@ -1,0 +1,13 @@
+uuid: 3673dbc4-b711-4982-8b85-cf126583f8d1
+langcode: en
+status: true
+dependencies: {  }
+id: document_private
+label: 'Document private'
+description: null
+source: file
+queue_thumbnail_downloads: false
+new_revision: false
+source_configuration:
+  source_field: field_media_document_private
+field_map: {  }

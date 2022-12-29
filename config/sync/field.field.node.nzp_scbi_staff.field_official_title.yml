@@ -1,0 +1,19 @@
+uuid: 7f18ad4c-577b-407f-ad94-dc4a662da310
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_official_title
+    - node.type.nzp_scbi_staff
+id: node.nzp_scbi_staff.field_official_title
+field_name: field_official_title
+entity_type: node
+bundle: nzp_scbi_staff
+label: Title
+description: 'Enter your official title, e.g. "Conservation Biologist"'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

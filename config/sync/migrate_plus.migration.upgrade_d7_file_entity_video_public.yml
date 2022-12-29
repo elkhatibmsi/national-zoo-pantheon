@@ -1,0 +1,70 @@
+uuid: 1c3c0838-3c63-477b-825f-11cc7bc291d3
+langcode: en
+status: true
+dependencies: {  }
+id: upgrade_d7_file_entity_video_public
+class: Drupal\migrate\Plugin\Migration
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 7'
+  - Content
+  - 'Media Migration'
+  - 'Media Entity'
+migration_group: migrate_drupal_7
+label: 'File Entity migration (Video)'
+source:
+  plugin: d7_file_entity_item
+  type: video
+  scheme: public
+  destination_media_type_id: video
+process:
+  uuid:
+    -
+      plugin: media_migrate_uuid
+      source: fid
+  mid:
+    -
+      plugin: get
+      source: fid
+  uid:
+    -
+      plugin: get
+      source: uid
+  bundle:
+    -
+      plugin: get
+      source: bundle
+  name:
+    -
+      plugin: get
+      source: filename
+  created:
+    -
+      plugin: get
+      source: timestamp
+  status:
+    -
+      plugin: get
+      source: status
+  field_media_video_file/target_id:
+    -
+      plugin: get
+      source: fid
+  field_media_video_file/display:
+    -
+      plugin: get
+      source: display
+  field_media_video_file/description:
+    -
+      plugin: get
+      source: description
+destination:
+  plugin: 'entity:media'
+migration_dependencies:
+  required:
+    - upgrade_d7_file_entity_type_video
+    - upgrade_d7_file_entity_source_field_config_video
+    - upgrade_d7_user
+    - upgrade_d7_file
+  optional: {  }

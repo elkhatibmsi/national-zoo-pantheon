@@ -1,0 +1,39 @@
+uuid: 00032b8c-1366-4e54-acdc-4823632c4ef8
+langcode: und
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_icon_card_top_bar_color
+field_name: field_icon_card_top_bar_color
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: '#C8DC65'
+      label: Animals
+    -
+      value: '#627e9c'
+      label: Conservation
+    -
+      value: '#C44D58'
+      label: Education
+    -
+      value: '#F26B6C'
+      label: Membership
+    -
+      value: '#5AC4BE'
+      label: Support
+    -
+      value: '#F18B21'
+      label: Visit
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

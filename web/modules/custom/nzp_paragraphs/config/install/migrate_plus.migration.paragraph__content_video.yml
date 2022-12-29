@@ -1,0 +1,34 @@
+uuid: a173e53a-6eea-469d-9e26-7f92f19c4800
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - nzp_paragraphs
+id: paragraph__content_video
+class: null
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - Paragraphs
+migration_group: nzp_paragraphs
+label: 'Content Video Paragraph'
+source:
+  plugin: d7_paragraphs_item
+  bundle: content_video
+process:
+  id: item_id
+  field_video:
+    -
+      plugin: media_migration_delta_sort
+      source: field_video
+    -
+      plugin: sub_process
+      process:
+        target_id: fid
+destination:
+  plugin: 'entity_reference_revisions:paragraph'
+  default_bundle: content_video
+migration_dependencies:
+  required: {  }
+  optional: {  }

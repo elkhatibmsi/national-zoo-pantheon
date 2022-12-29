@@ -1,0 +1,79 @@
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - nzp_paragraphs
+id: paragraph__menu_tabs
+class: null
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - Paragraphs
+migration_group: nzp_paragraphs
+label: 'Menu Tabs paragraph'
+source:
+  plugin: d7_field_collection_item
+  field_name: field_menu_tabs
+process:
+  target_id: target_id
+  revision_id: revision_id
+  field_default_tab: field_default_tab
+  field_tab_title: field_title
+  field_tab_content:
+    -
+      plugin: sub_process
+      source: field_tab_content
+      process:
+        target_id:
+          -
+            plugin: migration_lookup
+            migration:
+              - paragraph__accordion_tabs
+              - paragraph__two_column_grid
+              - paragraph__collapsible_block
+              - paragraph__text
+              - paragraph__slide
+              - paragraph__two_columns_40_60
+              - paragraph__two_columns_equal
+              - paragraph__entity_list
+              - paragraph__single_image_with_caption
+            source: value
+          -
+            plugin: extract
+            index:
+              - 0
+        target_revision_id:
+          -
+            plugin: migration_lookup
+            migration:
+              - paragraph__accordion_tabs
+              - paragraph__two_column_grid
+              - paragraph__collapsible_block
+              - paragraph__text
+              - paragraph__slide
+              - paragraph__two_columns_40_60
+              - paragraph__two_columns_equal
+              - paragraph__entity_list
+              - paragraph__single_image_with_caption
+            source: value
+          -
+            plugin: extract
+            index:
+              - 1
+destination:
+  plugin: 'entity_reference_revisions:paragraph'
+  default_bundle: menu_tabs
+migration_dependencies:
+  required:
+    - paragraph__accordion_tabs
+    - paragraph__two_column_grid
+    - paragraph__collapsible_block
+    - paragraph__text
+    - paragraph__slide
+    - paragraph__image
+    - paragraph__two_columns_40_60
+    - paragraph__two_columns_equal
+    - paragraph__entity_list
+    - paragraph__single_image_with_caption
+  optional: {  }

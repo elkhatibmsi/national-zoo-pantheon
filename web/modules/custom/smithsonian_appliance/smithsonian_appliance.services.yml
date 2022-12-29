@@ -1,0 +1,7 @@
+services:
+  smithsonian_appliance.search:
+    class: \Drupal\smithsonian_appliance\Service\Search
+    arguments: ['@config.factory', '@module_handler', '@http_client', '@smithsonian_appliance.parser']
+  smithsonian_appliance.parser:
+    class: \Drupal\smithsonian_appliance\Service\Parser
+    arguments: ['@module_handler']

@@ -1,0 +1,19 @@
+uuid: fe269218-4172-400a-b53a-92caf740bc08
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.pop_up
+    - field.storage.block_content.field_pop_up_title
+id: block_content.pop_up.field_pop_up_title
+field_name: field_pop_up_title
+entity_type: block_content
+bundle: pop_up
+label: 'Popup Title'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

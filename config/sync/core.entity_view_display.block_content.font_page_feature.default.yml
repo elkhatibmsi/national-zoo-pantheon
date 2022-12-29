@@ -1,0 +1,57 @@
+uuid: f95aee7a-70eb-4678-833b-367da84657f9
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.font_page_feature
+    - field.field.block_content.font_page_feature.field_landing_image
+    - field.field.block_content.font_page_feature.field_modal_iframe
+    - field.field.block_content.font_page_feature.field_subtitle
+    - field.field.block_content.font_page_feature.field_url
+    - field.field.block_content.font_page_feature.title
+  module:
+    - link
+    - options
+id: block_content.font_page_feature.default
+targetEntityType: block_content
+bundle: font_page_feature
+mode: default
+content:
+  field_landing_image:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_modal_iframe:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_url:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_subtitle: true

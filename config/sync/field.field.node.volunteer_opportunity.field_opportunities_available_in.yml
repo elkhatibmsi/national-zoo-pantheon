@@ -1,0 +1,21 @@
+uuid: cb157134-2ce7-4784-9cd7-6bf65012971b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_opportunities_available_in
+    - node.type.volunteer_opportunity
+  module:
+    - options
+id: node.volunteer_opportunity.field_opportunities_available_in
+field_name: field_opportunities_available_in
+entity_type: node
+bundle: volunteer_opportunity
+label: 'Opportunities Available in the Following Zoo Areas'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_float

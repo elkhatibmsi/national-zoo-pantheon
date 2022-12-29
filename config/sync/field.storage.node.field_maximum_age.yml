@@ -1,0 +1,20 @@
+uuid: 31cae911-cfc1-4d7a-96bf-20b1b2dc69c2
+langcode: und
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_maximum_age
+field_name: field_maximum_age
+entity_type: node
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

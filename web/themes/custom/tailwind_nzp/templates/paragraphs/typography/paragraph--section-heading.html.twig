@@ -1,0 +1,12 @@
+{% block paragraph %}
+  <div {{attributes}}>
+  	{{ content.controls }}
+  {%
+  include '@nzpComponents/typography/section-heading.html.twig' with {
+    section_heading: content,
+    styles: paragraph.field_heading_properties.value,
+  } 
+
+%}
+</div>
+{% endblock %}

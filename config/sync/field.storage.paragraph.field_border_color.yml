@@ -1,0 +1,39 @@
+uuid: d56cf35a-26a8-44ce-9f35-bc846d17f1f8
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_border_color
+field_name: field_border_color
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: animals
+      label: animals
+    -
+      value: education
+      label: education
+    -
+      value: visit
+      label: visit
+    -
+      value: conservation
+      label: conservation
+    -
+      value: support
+      label: support
+    -
+      value: membership
+      label: membership
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

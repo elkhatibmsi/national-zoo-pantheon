@@ -1,0 +1,21 @@
+uuid: a06e551e-2406-4e14-bfcb-e6faf9ece896
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_border_color
+    - paragraphs.paragraphs_type.icon_card_item
+  module:
+    - options
+id: paragraph.icon_card_item.field_border_color
+field_name: field_border_color
+entity_type: paragraph
+bundle: icon_card_item
+label: 'Top Bar Color'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

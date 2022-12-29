@@ -1,0 +1,42 @@
+uuid: fb5697dd-8492-4e10-91c5-4e316d36b138
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_related_content
+    - node.type.animal
+    - node.type.basic_page
+    - node.type.event
+    - node.type.exhibit
+    - node.type.news
+    - node.type.nzp_scbi_staff
+    - node.type.scbi_project
+    - node.type.webcam
+id: node.news.field_related_content
+field_name: field_related_content
+entity_type: node
+bundle: news
+label: 'Related content'
+description: "Enter other content on the website that relates to this news article. You can choose animals, SCBI projects, SCBI staff, events, exhibits, and possibly others. \"Teasers\" for content you choose will appear in the right sidebar of this article's page. Other news articles related to the content you choose will appear in a \"related news\" block on this article's page.\r\n\r\n<strong>Do not relate this article to an exhibit just because it is related to an animal within that exhibit. The animal's exhibit will still pick up the article. Only relate this article to an exhibit if it is specifically related to the exhibit itself.</strong>"
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      animal: animal
+      basic_page: basic_page
+      event: event
+      exhibit: exhibit
+      news: news
+      scbi_project: scbi_project
+      nzp_scbi_staff: nzp_scbi_staff
+      webcam: webcam
+    sort:
+      field: title
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: animal
+field_type: entity_reference

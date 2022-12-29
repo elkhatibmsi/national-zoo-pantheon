@@ -1,0 +1,25 @@
+uuid: 157d564d-e103-4c71-9261-760542468bdb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_editorial_access
+    - node.type.camp
+id: node.camp.field_editorial_access
+field_name: field_editorial_access
+entity_type: node
+bundle: camp
+label: 'Editorial Access'
+description: 'Choose the editorial permissions for this content'
+required: true
+translatable: false
+default_value:
+  -
+    tid: '5'
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    sort:
+      field: _none
+field_type: entity_reference

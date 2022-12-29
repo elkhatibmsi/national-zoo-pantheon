@@ -1,0 +1,19 @@
+uuid: 7ce17d61-33db-4446-bd18-7a04301e5e24
+langcode: en
+status: true
+dependencies:
+  module:
+    - storage
+    - text
+id: storage.field_publication_citation
+field_name: field_publication_citation
+entity_type: storage
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

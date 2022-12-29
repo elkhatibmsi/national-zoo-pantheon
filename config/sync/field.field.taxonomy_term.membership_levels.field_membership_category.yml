@@ -1,0 +1,23 @@
+uuid: d140fe96-0dd2-48be-9a7c-556045513dc3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_membership_category
+    - taxonomy.vocabulary.membership_levels
+id: taxonomy_term.membership_levels.field_membership_category
+field_name: field_membership_category
+entity_type: taxonomy_term
+bundle: membership_levels
+label: 'Membership Category'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    sort:
+      field: _none
+field_type: entity_reference

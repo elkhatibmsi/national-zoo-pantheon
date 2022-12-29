@@ -1,0 +1,21 @@
+uuid: aad19dca-449e-4ddd-9b18-fb1887331c8e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_native_habitat
+    - node.type.animal
+  module:
+    - text
+id: node.animal.field_native_habitat
+field_name: field_native_habitat
+entity_type: node
+bundle: animal
+label: 'Native Habitat'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

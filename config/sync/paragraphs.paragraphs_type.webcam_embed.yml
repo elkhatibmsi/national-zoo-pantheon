@@ -1,0 +1,15 @@
+uuid: 851da716-e5e5-4b68-a0b0-8c5f16f0f2c8
+langcode: en
+status: true
+dependencies:
+  module:
+    - layout_paragraphs
+id: webcam_embed
+label: 'Webcam Embed'
+icon_uuid: null
+icon_default: null
+description: 'Migrated from paragraph bundle Webcam Embed'
+behavior_plugins:
+  layout_paragraphs:
+    enabled: false
+    available_layouts: {  }

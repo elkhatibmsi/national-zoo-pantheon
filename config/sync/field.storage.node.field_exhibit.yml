@@ -1,0 +1,19 @@
+uuid: cce1bc4f-e520-45b6-a958-c02b9ee738bf
+langcode: und
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_exhibit
+field_name: field_exhibit
+entity_type: node
+type: entity_reference
+settings:
+  target_type: node
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

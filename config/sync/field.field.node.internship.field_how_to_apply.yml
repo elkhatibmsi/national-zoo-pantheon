@@ -1,0 +1,24 @@
+uuid: fa240d18-bdef-4505-83ed-3db87573ab85
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_how_to_apply
+    - node.type.internship
+  module:
+    - text
+id: node.internship.field_how_to_apply
+field_name: field_how_to_apply
+entity_type: node
+bundle: internship
+label: 'How to Apply'
+description: 'Describe how to apply to this internship.'
+required: false
+translatable: false
+default_value:
+  -
+    value: "<p>To apply, go to: https://solaa.si.edu. Select \"Don't have an Account? Create An Account.\" Complete the information to create an account.</p>\r\n\r\n<p>Information that will be requested (in SOLAA) includes:</p>\r\n\r\n<ul>\r\n\t<li>Basic personal information</li>\r\n\t<li>Professional resume or CV</li>\r\n\t<li>A one-page statement of your interest in pursuing this position. The statement should mention relevant experience, career goals, your reasons for wanting this internship, and what you hope to gain from the experience. Your statement is very important during application evaluations</li>\r\n\t<li>Transcripts from your current and/or previous institutions. Unofficial transcripts are acceptable.</li>\r\n\t<li>Two letters of reference (one must be from a current or a former supervisor)</li>\r\n\t<li>Schedule of availability.</li>\r\n</ul>\r\n\r\n<p>Once you create your account and provide the information above, you will see a screen where you select the type of appointment you are interested in. You will select:</p>\r\n\r\n<ul>\r\n\t<li>Type of appointment: “Internship”</li>\r\n\t<li>Unit of interest: “National Zoological Park”</li>\r\n\t<li>Program: “National Zoological Park Internship Program”</li>\r\n\t<li>Project: “[current-page:title]”</li>\r\n</ul>\r\n\r\n<p>IMPORTANT: Your application is considered complete when you hit “Submit.” Your SOLAA-submitted application with references must be received by the deadlines as noted above.</p>\r\n"
+    format: full_html
+default_value_callback: ''
+settings: {  }
+field_type: text_long

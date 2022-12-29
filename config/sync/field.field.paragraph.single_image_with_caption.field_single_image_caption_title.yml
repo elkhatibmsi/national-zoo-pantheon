@@ -1,0 +1,21 @@
+uuid: 1e2d5d4b-40c9-478d-9eb1-2786bd52d092
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_single_image_caption_title
+    - paragraphs.paragraphs_type.single_image_with_caption
+  module:
+    - text
+id: paragraph.single_image_with_caption.field_single_image_caption_title
+field_name: field_single_image_caption_title
+entity_type: paragraph
+bundle: single_image_with_caption
+label: 'Single Image Caption Title'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

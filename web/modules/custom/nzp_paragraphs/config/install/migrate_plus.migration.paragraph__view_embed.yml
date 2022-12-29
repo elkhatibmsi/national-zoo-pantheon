@@ -1,0 +1,27 @@
+uuid: a866cb03-90d7-420b-83d9-855cc44a76ff
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - nzp_paragraphs
+id: paragraph__view_embed
+class: null
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - Paragraphs
+migration_group: nzp_paragraphs
+label: 'View Embed paragraph'
+source:
+  plugin: d7_paragraphs_item
+  bundle: view_embed
+process:
+  id: item_id
+  field_view_embed_title: field_text
+destination:
+  plugin: 'entity_reference_revisions:paragraph'
+  default_bundle: view_embed
+migration_dependencies:
+  required: {  }
+  optional: {  }

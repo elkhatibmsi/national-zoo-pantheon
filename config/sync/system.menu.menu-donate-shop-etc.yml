@@ -1,0 +1,8 @@
+uuid: 82ad938d-6bb5-4704-b697-33f2a8116dd5
+langcode: en
+status: true
+dependencies: {  }
+id: menu-donate-shop-etc
+label: 'Footer - Donate shop etc'
+description: '5th column of the footer'
+locked: false

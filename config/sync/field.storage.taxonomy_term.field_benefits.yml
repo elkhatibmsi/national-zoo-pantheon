@@ -1,0 +1,165 @@
+uuid: 35abdfb7-fc49-427b-b24b-aeb5866426b9
+langcode: und
+status: true
+dependencies:
+  module:
+    - options
+    - taxonomy
+id: taxonomy_term.field_benefits
+field_name: field_benefits
+entity_type: taxonomy_term
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: 2018-1
+      label: 'Exclusive Ambassador Tour'
+    -
+      value: 2018-3
+      label: 'Exclusive Explorer Tour or two-hour driving tour of SCBI in Front Royal, Virginia'
+    -
+      value: 2018-2
+      label: 'Exclusive Director Tour'
+    -
+      value: 2018-45
+      label: 'Private, in-depth tour of SCBI in Front Royal, Virginia'
+    -
+      value: 2018-46
+      label: 'Adopt-an-Animal-Trail, a special name-recognition opportunity at select Zoo sites for one year'
+    -
+      value: 2018-44
+      label: 'Invitation to special Members'' Roundtable discussion with senior staff or curator'
+    -
+      value: 2018-37
+      label: 'Insider Group Van Tour at SCBI in Front Royal, Virginia'
+    -
+      value: 2018-4
+      label: 'One exclusive Meet-a-Keeper Tour'
+    -
+      value: 2018-5
+      label: 'One Guided Specialty Tour of your choice'
+    -
+      value: 2018-6
+      label: 'Two Guided Specialty Tours of your choice'
+    -
+      value: 2018-7
+      label: 'Invitation to an annual dinner honoring Council members'
+    -
+      value: 2018-8
+      label: 'Invitation to enroll in annual Conservation Immersion Seminar Weekend at the Smithsonian Conservation Biology Institute'
+    -
+      value: 2018-9
+      label: 'Invitations to private receptions, annual programs and exclusive events sponsored by Smithsonian Institution, including the annual Smithsonian Weekend'
+    -
+      value: 2018-10
+      label: 'Invitations to Smithsonian-sponsored events hosted in various cities throughout the U.S.'
+    -
+      value: 2018-11
+      label: 'Invitations to VIP exhibit openings*'
+    -
+      value: 2018-12
+      label: 'Name recognition in Smithsonian Institution''s annual report'
+    -
+      value: 2018-13
+      label: 'Name recognition in the Zoo Visitor Center lobby'
+    -
+      value: 2018-14
+      label: 'Members'' Breakfast with the Curators*'
+    -
+      value: 2018-15
+      label: 'Two single-use, reserved parking passes (with advance registration)'
+    -
+      value: 2018-16
+      label: 'One single-use, reserved parking pass (with advance registration)'
+    -
+      value: 2018-17
+      label: 'Opportunities to attend talks with animal experts*'
+    -
+      value: 2018-18
+      label: 'E-newsletter updates about Smithsonian campaign and Smithsonian Conservation Biology Institute'
+    -
+      value: 2018-19
+      label: 'Up to three named adult cardholders'
+    -
+      value: 2018-20
+      label: 'Up to two named adult cardholders'
+    -
+      value: 2018-21
+      label: 'One named adult cardholder'
+    -
+      value: 2018-22
+      label: 'Access to free parking during regular, daytime visits to the Zoo*'
+    -
+      value: 2018-23
+      label: '20% discount in Zoo stores and a 15% discount on food'
+    -
+      value: 2018-24
+      label: '15% discount on food and merchandise'
+    -
+      value: 2018-47
+      label: '15% discount on souvenir green screen photos'
+    -
+      value: 2018-25
+      label: 'Unlimited carousel, train and other seasonal attraction rides with your member card during regular, daytime visits to the Zoo for up to 4 riders per visit*'
+    -
+      value: 2018-26
+      label: 'Punch card valid for eight carousel, train or other seasonal attraction rides*'
+    -
+      value: 2018-27
+      label: 'Priority registration and big discounts on Zoo education programs'
+    -
+      value: 2018-50
+      label: 'Priority registration and big discounts on popular Zoo event tickets'
+    -
+      value: 2018-28
+      label: 'Invitations to animal previews and exhibit openings*'
+    -
+      value: 2018-29
+      label: 'Discounts on Zoo education programs'
+    -
+      value: 2018-51
+      label: 'Discounts on popular Zoo event tickets*'
+    -
+      value: 2018-30
+      label: 'A subscription to the members-only magazine, <em>Wild.Life.</em>'
+    -
+      value: 2018-31
+      label: 'Weekly Zoo Friends members-only e-newsletter'
+    -
+      value: 2018-32
+      label: 'Free or discounted admission to more than 100 other zoos and aquariums nationwide'
+    -
+      value: 2018-33
+      label: 'Access to host birthday parties at the Zoo'
+    -
+      value: 2018-34
+      label: 'Access to the Cyber Safari mobile scavenger hunt'
+    -
+      value: 2018-35
+      label: 'Discounts on stroller rentals*'
+    -
+      value: 2018-36
+      label: 'Access to the <a href="/membership/fonz-photo-club" target="_blank">FONZ Photo Club</a>'
+    -
+      value: 2018-38
+      label: 'Invitations to private receptions, annual programs, select events and VIP exhibit openings'
+    -
+      value: 2018-39
+      label: 'Invitation to an Annual Donor Dinner'
+    -
+      value: 2018-40
+      label: 'Name recognition in Smithsonian Institution annual report and Zoo Visitor Center lobby'
+    -
+      value: 2018-41
+      label: 'Quarterly Donor Impact email update'
+    -
+      value: 2018-42
+      label: 'E-newsletters to keep you in the know'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

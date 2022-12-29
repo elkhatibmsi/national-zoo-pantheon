@@ -1,0 +1,73 @@
+{#
+ /**
+  * @file
+  * Contains theme representation of search results
+  *
+  * Available variables:
+  *  - form - the search form
+  *  - results - the search results
+  */
+#}
+<div class="container mx-auto">
+    <h2 id="search-results-heading">{{ results.getSearchTitle }}</h2>
+    <div>
+        {% if results.hasSpellingSuggestions %}
+            <ol>
+                {% for suggestion in results.getSpellingSuggestions %}
+                    <li>{{ suggestion }}</li>
+                {% endfor %}
+            </ol>
+        {% endif %}
+    </div>
+    <div>
+        {% if results.hasSynonyms %}
+            <div class="synonyms smithsonian-appliance-synonyms">
+                <span class="p">You may also try:</span>
+                <ul>
+                    {% for synonym in results.getSynonyms %}
+                        <li>{{ synonym.getLink }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        {% endif %}
+    </div>
+    <div>
+        {{ pager }}
+    </div>
+    <div>
+        {% include '@smithsonian_appliance/smithsonian-appliance-results-control-bar.html.twig' with {
+        results: results,
+        } only %}
+        {% if results.hasKeyMatch %}
+            <ol class="keymatch-results smithsonian-appliance-keymatch-results">
+                {# @todo: keymatch results #}
+            </ol>
+        {% endif %}
+
+        {% if results.hasResults %}
+            <ol class="search-results smithsonian-appliance-results list-none ml-0 pl-0">
+                {% for result in results.getResults %}
+                    <li class="search-result mt-8 pl-0">
+                        <div class="container">
+                            <div class="search-result__title">
+                                <a class="font-bold" href="{{ result.getAbsoluteUrl }}">
+                                    {{ result.getTitle|replace({'| Smithsonian\'s National Zoo':'','<b>':'','</b>':''}) }}
+                                </a>
+                            </div>
+                            <div class="text-sm">  {{result.getAbsoluteUrl}} </div>
+                        </div>
+                    </li>
+                {% endfor %}
+            </ol>
+        {% else %}
+            <span>No results found.</span>
+        {% endif %}
+
+        {% include '@smithsonian_appliance/smithsonian-appliance-results-control-bar.html.twig' with {
+        results: results,
+        } only %}
+    </div>
+    <div class="mt-8">
+        {{  results.getPager }}
+    </div>
+</div>

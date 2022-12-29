@@ -1,0 +1,23 @@
+uuid: 51dd08f6-3324-4639-bbc8-9ae0503b3253
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sort_order
+    - node.type.adopt_a_species
+id: node.adopt_a_species.field_sort_order
+field_name: field_sort_order
+entity_type: node
+bundle: adopt_a_species
+label: 'Sort Order'
+description: 'Put the Adopt a Species packages in the preferred order.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

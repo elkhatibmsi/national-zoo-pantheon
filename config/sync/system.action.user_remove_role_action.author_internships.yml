@@ -1,0 +1,14 @@
+uuid: 18e34e59-0395-455f-8430-2df814b0daf5
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.author_internships
+  module:
+    - user
+id: user_remove_role_action.author_internships
+label: 'Remove the author - internships role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: author_internships

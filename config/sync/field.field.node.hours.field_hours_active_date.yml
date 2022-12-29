@@ -1,0 +1,21 @@
+uuid: b51f6e70-7e71-481f-bc40-80ebf39e4055
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_hours_active_date
+    - node.type.hours
+  module:
+    - datetime
+id: node.hours.field_hours_active_date
+field_name: field_hours_active_date
+entity_type: node
+bundle: hours
+label: 'Active Date Range'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

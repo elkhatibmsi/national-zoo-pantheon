@@ -1,0 +1,67 @@
+uuid: f92dc8b4-e1c1-4a0b-9842-5a37852c92bb
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.node_embed
+    - field.field.node.basic_page.body
+    - field.field.node.basic_page.field_card_position
+    - field.field.node.basic_page.field_card_subtitle
+    - field.field.node.basic_page.field_content_block
+    - field.field.node.basic_page.field_editorial_access
+    - field.field.node.basic_page.field_feature_one
+    - field.field.node.basic_page.field_feature_three
+    - field.field.node.basic_page.field_feature_two
+    - field.field.node.basic_page.field_featured_video
+    - field.field.node.basic_page.field_has_promotions
+    - field.field.node.basic_page.field_landing_image
+    - field.field.node.basic_page.field_modal_gallery
+    - field.field.node.basic_page.field_page_type
+    - field.field.node.basic_page.field_promotion_one
+    - field.field.node.basic_page.field_promotion_three
+    - field.field.node.basic_page.field_promotion_two
+    - field.field.node.basic_page.field_slideshow
+    - field.field.node.basic_page.field_subtitle
+    - field.field.node.basic_page.field_tags
+    - field.field.node.basic_page.field_teaser_title
+    - field.field.node.basic_page.layout_builder__layout
+    - node.type.basic_page
+  module:
+    - user
+id: node.basic_page.node_embed
+targetEntityType: node
+bundle: basic_page
+mode: node_embed
+content:
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: -20
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  body: true
+  field_card_position: true
+  field_card_subtitle: true
+  field_content_block: true
+  field_editorial_access: true
+  field_feature_one: true
+  field_feature_three: true
+  field_feature_two: true
+  field_featured_video: true
+  field_has_promotions: true
+  field_landing_image: true
+  field_modal_gallery: true
+  field_page_type: true
+  field_promotion_one: true
+  field_promotion_three: true
+  field_promotion_two: true
+  field_slideshow: true
+  field_subtitle: true
+  field_tags: true
+  field_teaser_title: true
+  layout_builder__layout: true

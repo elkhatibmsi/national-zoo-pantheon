@@ -1,0 +1,11 @@
+uuid: da70c781-e080-4fd5-820e-bae4afccf24e
+langcode: en
+status: true
+dependencies: {  }
+name: 'User Alert'
+type: user_alert
+description: 'A User Alert is a short Twitter like message displayed at the top of the site, alerting users to critical information like an online sale, new blog post, or breaking news. After viewing it, they can click and close the message.'
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: true

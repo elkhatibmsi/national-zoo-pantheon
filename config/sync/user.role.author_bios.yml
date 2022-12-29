@@ -1,0 +1,38 @@
+uuid: f20b6271-df71-42db-8f6e-bdcb29ffb1b2
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.full_html
+    - node.type.blank_page
+  module:
+    - contextual
+    - filter
+    - node
+    - system
+id: author_bios
+label: 'author - bios'
+weight: 4
+is_admin: null
+permissions:
+  - 'access administration menu'
+  - 'access administration pages'
+  - 'access content overview'
+  - 'access contextual links'
+  - 'access workbench'
+  - 'create files'
+  - 'create scbi_staff content'
+  - 'delete any scbi_staff content'
+  - 'delete own scbi_staff content'
+  - 'edit any blank_page content'
+  - 'edit any scbi_staff content'
+  - 'edit own blank_page content'
+  - 'edit own scbi_staff content'
+  - 'moderate content from draft to needs_review'
+  - 'moderate content from needs_review to draft'
+  - 'use text format filtered_html'
+  - 'use text format full_html'
+  - 'use workbench_moderation my drafts tab'
+  - 'view all unpublished content'
+  - 'view files'
+  - 'view moderation messages'

@@ -1,0 +1,15 @@
+uuid: 22e149c3-e891-48de-8d13-f45bf4a901e2
+langcode: en
+status: true
+dependencies:
+  module:
+    - layout_paragraphs
+id: view_embed
+label: 'View Embed'
+icon_uuid: null
+icon_default: null
+description: 'Migrated from paragraph bundle View Embed'
+behavior_plugins:
+  layout_paragraphs:
+    enabled: false
+    available_layouts: {  }

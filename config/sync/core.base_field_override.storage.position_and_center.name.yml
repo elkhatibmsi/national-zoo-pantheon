@@ -1,0 +1,18 @@
+uuid: 94ab70eb-9f93-43ef-b819-f757402257dc
+langcode: en
+status: true
+dependencies:
+  config:
+    - storage.storage_type.position_and_center
+id: storage.position_and_center.name
+field_name: name
+entity_type: storage
+bundle: position_and_center
+label: label
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

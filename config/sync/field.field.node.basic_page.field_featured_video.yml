@@ -1,0 +1,24 @@
+uuid: ff0550a3-dbed-4f41-9c73-2b44ffe404ac
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_featured_video
+    - media.type.video
+    - node.type.basic_page
+id: node.basic_page.field_featured_video
+field_name: field_featured_video
+entity_type: node
+bundle: basic_page
+label: 'Featured Video'
+description: "Select a featured video to be added to the carousel. If populated, this will replace the image slider. \r\n"
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      video: video
+field_type: entity_reference

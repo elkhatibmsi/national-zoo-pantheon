@@ -1,0 +1,25 @@
+uuid: 6980a2db-d933-4425-a644-fecb4dda20fb
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:accf415c-09fd-4e6a-b3a7-7ad235cf8655'
+  module:
+    - block_content
+  theme:
+    - tailwind_nzp
+id: emailsignup
+theme: tailwind_nzp
+region: footer
+weight: 1
+provider: null
+plugin: 'block_content:accf415c-09fd-4e6a-b3a7-7ad235cf8655'
+settings:
+  id: 'block_content:accf415c-09fd-4e6a-b3a7-7ad235cf8655'
+  label: 'Signup for Emails'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

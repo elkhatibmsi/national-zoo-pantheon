@@ -1,0 +1,17 @@
+uuid: 9990e263-f916-48a4-a50a-52c05741fcb6
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.time_slot_hours_and_description_
+    - field.field.paragraph.time_slot.field_hours_category
+    - field.field.paragraph.time_slot.field_hours_description
+    - paragraphs.paragraphs_type.time_slot
+id: paragraph.time_slot.time_slot_hours_and_description_
+targetEntityType: paragraph
+bundle: time_slot
+mode: time_slot_hours_and_description_
+content: {  }
+hidden:
+  field_hours_category: true
+  field_hours_description: true

@@ -1,0 +1,15 @@
+uuid: 5958070a-4570-40d8-9d4e-6a80d0a3964d
+langcode: en
+status: true
+dependencies:
+  module:
+    - layout_paragraphs
+id: collapsible_block
+label: 'Collapsible Block'
+icon_uuid: null
+icon_default: null
+description: 'Migrated from paragraph bundle Collapsible Block'
+behavior_plugins:
+  layout_paragraphs:
+    enabled: false
+    available_layouts: {  }

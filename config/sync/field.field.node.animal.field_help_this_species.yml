@@ -1,0 +1,21 @@
+uuid: d3eddd17-34d4-43f2-b879-e7f1f2f84ac4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_help_this_species
+    - node.type.animal
+  module:
+    - options
+id: node.animal.field_help_this_species
+field_name: field_help_this_species
+entity_type: node
+bundle: animal
+label: 'Help this Species'
+description: 'Select one or more ways that people can help save this species. They will show up as a bulleted list in this animal''s "conservation" tab.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

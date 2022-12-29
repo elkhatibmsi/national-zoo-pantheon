@@ -1,0 +1,21 @@
+uuid: 082d66ba-872e-44a7-89d7-8d0a8083c919
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_icon_card_top_bar_color
+    - paragraphs.paragraphs_type.icon_card_item
+  module:
+    - options
+id: paragraph.icon_card_item.field_icon_card_top_bar_color
+field_name: field_icon_card_top_bar_color
+entity_type: paragraph
+bundle: icon_card_item
+label: 'Top Bar Color'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,50 @@
+{# Read value from spacer paragraph type and assign to variable #}
+{% set whitespace = content['field_number_of_pixels'][0]['#markup'] %}
+
+{# Assign bottom margin class based on variable #}
+{% if '2' == whitespace %}
+    {% set marginbottom = 'mb-0.5' %}   
+{% elseif '4' == whitespace %}
+    {% set marginbottom = 'mb-1' %} 
+{% elseif '6' == whitespace %}
+    {% set marginbottom = 'mb-1.5' %} 
+{% elseif '8' == whitespace %}
+    {% set marginbottom = 'mb-2' %} 
+{% elseif '10' == whitespace %}
+    {% set marginbottom = 'mb-2.5' %} 
+{% elseif '12' == whitespace %}
+    {% set marginbottom = 'mb-3' %} 
+{% elseif '14' == whitespace %}
+    {% set marginbottom = 'mb-3.5' %} 
+{% elseif '20' == whitespace %}
+    {% set marginbottom = 'mb-5' %} 
+{% elseif '24' == whitespace %}
+    {% set marginbottom = 'mb-6' %} 
+{% elseif '28' == whitespace %}
+    {% set marginbottom = 'mb-7' %} 
+{% elseif '32' == whitespace %}
+    {% set marginbottom = 'mb-8' %} 
+{% elseif '36' == whitespace %}
+    {% set marginbottom = 'mb-9' %} 
+{% elseif '40' == whitespace %}
+    {% set marginbottom = 'mb-10' %} 
+{% elseif '44' == whitespace %}
+    {% set marginbottom = 'mb-11' %}
+{% elseif '48' == whitespace %}
+    {% set marginbottom = 'mb-12' %} 
+{% elseif '56' == whitespace %}
+    {% set marginbottom = 'mb-14' %} 
+{% elseif '64' == whitespace %}
+    {% set marginbottom = 'mb-16' %} 
+{% elseif '80' == whitespace %}
+    {% set marginbottom = 'mb-20' %}                                                                              
+{% else %}
+    {% set marginbottom = 'mb-4' %}     
+{% endif %}
+
+{# Output class in html #}
+{% block paragraph %}
+    <div {{attributes}}>
+   <div class={{ marginbottom }}><hr style="color: transparent; margin:0px;"></hr></div>  
+    </div>      
+{% endblock paragraph %}    

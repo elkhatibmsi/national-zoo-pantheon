@@ -1,0 +1,19 @@
+uuid: b44e815e-ced3-4c92-aa30-dd3ed560919a
+langcode: und
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_native_habitat
+field_name: field_native_habitat
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

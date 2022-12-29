@@ -1,0 +1,14 @@
+uuid: 04beab18-5212-4fb5-a271-b36a36175630
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.author_internships
+  module:
+    - user
+id: user_add_role_action.author_internships
+label: 'Add the author - internships role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: author_internships

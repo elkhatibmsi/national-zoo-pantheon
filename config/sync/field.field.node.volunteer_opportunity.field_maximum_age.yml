@@ -1,0 +1,23 @@
+uuid: afc7f346-b881-4514-8994-21a1d99bc4de
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_maximum_age
+    - node.type.volunteer_opportunity
+id: node.volunteer_opportunity.field_maximum_age
+field_name: field_maximum_age
+entity_type: node
+bundle: volunteer_opportunity
+label: 'Maximum age'
+description: 'Optional. If you enter a number here the "age range" field will look like this: Age Range: min_age-max_age. If you leave this blank, it will look like this: Age Range: min_age+'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 0
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

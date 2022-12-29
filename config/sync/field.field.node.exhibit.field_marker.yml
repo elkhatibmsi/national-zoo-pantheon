@@ -1,0 +1,29 @@
+uuid: 28d86d60-e627-41d5-a7a5-dd1e99254f43
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_marker
+    - node.type.exhibit
+    - taxonomy.vocabulary.markers
+id: node.exhibit.field_marker
+field_name: field_marker
+entity_type: node
+bundle: exhibit
+label: Marker
+description: 'Please do not change this value. Doing so will break the location map.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      markers: markers
+    sort:
+      field: _none
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

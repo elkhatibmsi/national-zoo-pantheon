@@ -1,0 +1,19 @@
+uuid: d10be2f3-e2a3-48e9-b6dd-bcf74387ec5f
+langcode: und
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_feature_one
+field_name: field_feature_one
+entity_type: node
+type: entity_reference
+settings:
+  target_type: node
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,33 @@
+uuid: b7a834b8-0514-4645-890f-9738d830cee7
+langcode: en
+status: true
+dependencies:
+  module:
+    - blazy
+    - media
+name: ds_code
+format: ds_code
+weight: 0
+filters:
+  blazy_filter:
+    id: blazy_filter
+    provider: blazy
+    status: false
+    weight: 3
+    settings:
+      media_switch: ''
+      hybrid_style: ''
+      box_style: ''
+      box_caption: ''
+      filter_tags:
+        img: img
+        iframe: iframe
+      use_data_uri: '0'
+  slick_filter:
+    id: slick_filter
+    provider: slick
+    status: false
+    weight: 4
+    settings:
+      optionset: default
+      media_switch: ''

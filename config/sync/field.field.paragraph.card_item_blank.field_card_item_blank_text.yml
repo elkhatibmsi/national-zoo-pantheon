@@ -1,0 +1,21 @@
+uuid: 6cd7ac66-4412-4bfc-8791-7321609e8127
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_card_item_blank_text
+    - paragraphs.paragraphs_type.card_item_blank
+  module:
+    - text
+id: paragraph.card_item_blank.field_card_item_blank_text
+field_name: field_card_item_blank_text
+entity_type: paragraph
+bundle: card_item_blank
+label: Text
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

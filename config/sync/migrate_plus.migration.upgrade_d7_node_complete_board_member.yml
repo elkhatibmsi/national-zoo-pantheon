@@ -1,0 +1,64 @@
+uuid: 2d5ddc7c-114e-4ad2-bfe1-7077d4e0ac5c
+langcode: en
+status: true
+dependencies: {  }
+id: upgrade_d7_node_complete_board_member
+class: Drupal\node\Plugin\migrate\D7NodeTranslation
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 7'
+  - Content
+migration_group: migrate_drupal_7
+label: 'Node complete (Board Member)'
+source:
+  plugin: d7_node_complete
+  node_type: board_member
+process:
+  nid:
+    -
+      plugin: get
+      source: tnid
+  title:
+    -
+      plugin: get
+      source: title
+  body:
+    -
+      plugin: get
+      source: body
+    -
+      plugin: media_wysiwyg_filter
+    -
+      plugin: img_tag_to_embed
+  field_position:
+    -
+      plugin: get
+      source: field_official_title
+    -
+      plugin: media_wysiwyg_filter
+  field_editorial_access:
+    -
+      plugin: sub_process
+      source: field_editorial_access
+      process:
+        target_id: tid
+  field_headshot:
+    -
+      plugin: media_migration_delta_sort
+      source: field_image
+    -
+      plugin: sub_process
+      process:
+        target_id: fid
+  field_bio_profile_type:
+    -
+      plugin: default_value
+      default_value: 419
+      process:
+        target_id: tid
+destination:
+  plugin: 'entity_complete:node'
+  translations: true
+  default_bundle: bio_profiles
+migration_dependencies: null

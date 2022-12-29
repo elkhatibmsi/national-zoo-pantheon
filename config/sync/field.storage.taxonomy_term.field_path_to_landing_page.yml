@@ -1,0 +1,21 @@
+uuid: d0ca5662-ebb3-4f46-907e-a5dca6919b5c
+langcode: und
+status: true
+dependencies:
+  module:
+    - taxonomy
+id: taxonomy_term.field_path_to_landing_page
+field_name: field_path_to_landing_page
+entity_type: taxonomy_term
+type: string
+settings:
+  max_length: 255
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

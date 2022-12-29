@@ -1,0 +1,13 @@
+name: Smithsonian Appliance test
+description: Provides test smithsonian appliance responses
+type: module
+hidden: TRUE
+# core: 8.x
+dependencies:
+  - smithsonian_appliance
+
+# Information added by Drupal.org packaging script on 2017-06-15
+version: '8.x-1.0-alpha1'
+core: '8.x'
+project: 'smithsonian_appliance'
+datestamp: 1497490147

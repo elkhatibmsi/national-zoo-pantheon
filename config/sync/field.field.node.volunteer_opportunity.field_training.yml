@@ -1,0 +1,21 @@
+uuid: 0182aa9e-21c6-4362-9326-75e8d3e78589
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_training
+    - node.type.volunteer_opportunity
+  module:
+    - text
+id: node.volunteer_opportunity.field_training
+field_name: field_training
+entity_type: node
+bundle: volunteer_opportunity
+label: Training
+description: 'Describe any training to be provided.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

@@ -1,0 +1,19 @@
+uuid: dc8e353d-1493-4762-af5d-45ce58a8cb07
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_varietals
+    - node.type.coffee_purveyor
+id: node.coffee_purveyor.field_varietals
+field_name: field_varietals
+entity_type: node
+bundle: coffee_purveyor
+label: Varietals
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

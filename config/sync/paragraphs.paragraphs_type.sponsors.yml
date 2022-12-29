@@ -1,0 +1,15 @@
+uuid: 36ba68e1-a7ef-4704-8769-1e16cd1f6705
+langcode: en
+status: true
+dependencies:
+  module:
+    - layout_paragraphs
+id: sponsors
+label: Sponsors
+icon_uuid: null
+icon_default: null
+description: 'Migrated from field_collection field_sponsors'
+behavior_plugins:
+  layout_paragraphs:
+    enabled: false
+    available_layouts: {  }

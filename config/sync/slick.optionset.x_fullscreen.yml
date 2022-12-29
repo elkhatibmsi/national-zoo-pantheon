@@ -1,0 +1,23 @@
+uuid: 57805f3a-e123-4692-be3f-ddda9d959fe9
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - slick_example
+_core:
+  default_config_hash: NyprSPYawwi5UCJOwnW1Jc-PgDv38oo830K90O2ZKQg
+id: x_fullscreen
+name: x_fullscreen
+weight: -6
+label: 'X Fullscreen'
+group: main
+skin: fullscreen
+breakpoints: 0
+optimized: true
+options:
+  settings:
+    dots: true
+    lazyLoad: blazy
+    slidesToShow: 1
+    cssEase: 'cubic-bezier(0.680, -0.550, 0.265, 1.550)'

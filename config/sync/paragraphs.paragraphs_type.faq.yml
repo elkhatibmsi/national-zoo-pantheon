@@ -1,0 +1,15 @@
+uuid: 9c120bd1-d264-4f00-96b1-725f9be4ffbd
+langcode: en
+status: true
+dependencies:
+  module:
+    - layout_paragraphs
+id: faq
+label: Faq
+icon_uuid: null
+icon_default: null
+description: 'Migrated from field_collection field_faq'
+behavior_plugins:
+  layout_paragraphs:
+    enabled: false
+    available_layouts: {  }

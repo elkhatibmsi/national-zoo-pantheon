@@ -1,0 +1,31 @@
+uuid: f5bc8366-b1ca-4cef-ae93-ccd433fd2e2c
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.menu-follow-us-on-social-media
+  module:
+    - menu_block
+  theme:
+    - tailwind_nzp
+id: followusonsocialmedia
+theme: tailwind_nzp
+region: footer
+weight: 0
+provider: null
+plugin: 'menu_block:menu-follow-us-on-social-media'
+settings:
+  id: 'menu_block:menu-follow-us-on-social-media'
+  label: 'Follow us on social media'
+  label_display: '0'
+  provider: menu_block
+  follow: false
+  follow_parent: child
+  label_link: false
+  label_type: block
+  level: 1
+  depth: 0
+  expand_all_items: false
+  parent: 'menu-follow-us-on-social-media:'
+  suggestion: menu_follow_us_on_social_media
+visibility: {  }

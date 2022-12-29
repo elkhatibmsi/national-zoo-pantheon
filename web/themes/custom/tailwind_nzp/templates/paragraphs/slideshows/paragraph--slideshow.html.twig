@@ -1,0 +1,19 @@
+{% set caption = content.field_slide_caption %}
+{% set link = content.field_url %}
+{% set slide_image = content.field_slide_image %}
+
+
+{% block paragraph %}
+
+	<div {{ attributes }}>
+		{{ content.controls }}
+				{%
+		include '@nzpComponents/carousel/slide.html.twig' with {
+			slide: slide_image,
+            caption: caption
+		} 
+		%}
+	</div>
+ {% endblock %}
+
+

@@ -1,0 +1,18 @@
+{% block paragraph %}
+  <div{{ attributes }}>
+  	{{ content.controls }}
+
+{%
+  include '@nzpComponents/cards/card--icon.html.twig' with {
+    image: content.field_icon_card_image,
+    description: content.field_icon_card_caption,
+    title: content.field_icon_card_title,
+    link: content.field_icon_grid_link.0['#url'],
+    icon: content.field_icon_card_icon,
+    bar_color: paragraph.field_border_color.value,
+    showdescription: false,
+  } 
+ 
+%}
+</div>
+{% endblock %}

@@ -1,0 +1,24 @@
+uuid: 2ff5afe5-05f9-45ba-bcb4-e7928d448c5b
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.webcam_ad
+    - field.storage.block_content.field_ad_image
+    - media.type.image
+id: block_content.webcam_ad.field_ad_image
+field_name: field_ad_image
+entity_type: block_content
+bundle: webcam_ad
+label: 'Ad Image'
+description: 'Must be exactly 850px wide. Height can be anywhere between 10px and 500px. File size cannot exceed 1 MB.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+field_type: entity_reference

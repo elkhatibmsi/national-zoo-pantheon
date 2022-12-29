@@ -1,0 +1,21 @@
+uuid: b2718f73-d81d-4506-a7a4-ead3f1d8bb66
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_lifespan
+    - node.type.animal
+  module:
+    - text
+id: node.animal.field_lifespan
+field_name: field_lifespan
+entity_type: node
+bundle: animal
+label: Lifespan
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

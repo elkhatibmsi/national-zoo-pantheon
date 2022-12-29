@@ -1,0 +1,31 @@
+uuid: 0de1f6ee-9576-4ec6-9d31-89e56ce0d20a
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.about-the-zoo
+  module:
+    - menu_block
+  theme:
+    - tailwind_nzp
+id: aboutthezoo
+theme: tailwind_nzp
+region: footer
+weight: -5
+provider: null
+plugin: 'menu_block:about-the-zoo'
+settings:
+  id: 'menu_block:about-the-zoo'
+  label: 'About the Zoo'
+  label_display: visible
+  provider: menu_block
+  follow: false
+  follow_parent: child
+  label_link: false
+  label_type: block
+  level: 1
+  depth: 0
+  expand_all_items: false
+  parent: 'about-the-zoo:'
+  suggestion: about_the_zoo
+visibility: {  }

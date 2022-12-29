@@ -1,0 +1,8 @@
+uuid: aeaa37e2-3e3f-4c5d-a262-c3eebeaa4f0a
+langcode: en
+status: true
+dependencies: {  }
+id: menu-style-guide-menu
+label: 'Style Guide Menu'
+description: 'Sample sidebar menu for the style guide'
+locked: false

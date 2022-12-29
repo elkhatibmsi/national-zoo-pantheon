@@ -1,0 +1,15 @@
+uuid: 4c304519-1c49-4098-877c-9b8ba3e4e09e
+langcode: en
+status: true
+dependencies:
+  module:
+    - layout_paragraphs
+id: two_columns_40_60
+label: 'Two Columns, 40/60'
+icon_uuid: null
+icon_default: null
+description: 'Migrated from paragraph bundle Two Columns, 40/60'
+behavior_plugins:
+  layout_paragraphs:
+    enabled: false
+    available_layouts: {  }

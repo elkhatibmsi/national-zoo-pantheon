@@ -1,0 +1,19 @@
+uuid: 65920484-778e-46b5-b676-43616ea5a2e4
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.token
+    - field.field.paragraph.flipbook_grid.field_flipbook_grid_item
+    - field.field.paragraph.flipbook_grid.field_number_of_columns
+    - field.field.paragraph.flipbook_grid.field_overlay_background
+    - paragraphs.paragraphs_type.flipbook_grid
+id: paragraph.flipbook_grid.token
+targetEntityType: paragraph
+bundle: flipbook_grid
+mode: token
+content: {  }
+hidden:
+  field_flipbook_grid_item: true
+  field_number_of_columns: true
+  field_overlay_background: true

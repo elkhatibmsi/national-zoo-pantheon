@@ -1,0 +1,21 @@
+uuid: 9012e1d6-ba0b-427a-83db-71d08e60e46b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.storage.field_publication_citation
+    - storage.storage_type.publication
+  module:
+    - text
+id: storage.publication.field_publication_citation
+field_name: field_publication_citation
+entity_type: storage
+bundle: publication
+label: 'Publication Citation'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

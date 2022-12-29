@@ -1,0 +1,31 @@
+uuid: c52ac7a0-503c-4500-9f49-eeb4e0103648
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.header-links
+  module:
+    - menu_block
+  theme:
+    - tailwind_nzp
+id: headerlinks
+theme: tailwind_nzp
+region: utility_menu
+weight: 0
+provider: null
+plugin: 'menu_block:header-links'
+settings:
+  id: 'menu_block:header-links'
+  label: 'Header Links'
+  label_display: '0'
+  provider: menu_block
+  follow: false
+  follow_parent: child
+  label_link: false
+  label_type: block
+  level: 1
+  depth: 0
+  expand_all_items: false
+  parent: 'header-links:'
+  suggestion: header_links
+visibility: {  }

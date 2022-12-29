@@ -1,0 +1,51 @@
+uuid: 94370eac-0f8f-419e-b75a-8c15e09bd2da
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_block_field
+    - paragraphs.paragraphs_type.block_embed
+  module:
+    - block_field
+id: paragraph.block_embed.field_block_field
+field_name: field_block_field
+entity_type: paragraph
+bundle: block_embed
+label: 'Block Field'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  selection: categories
+  selection_settings:
+    categories:
+      Block: Block
+      Custom: Custom
+      Forms: Forms
+      System: System
+      'Chaos Tools': '0'
+      'Comment fields': '0'
+      'Contact message fields': '0'
+      'Content fields': '0'
+      'Content moderation state fields': '0'
+      core: '0'
+      'Custom block fields': '0'
+      'Custom menu link fields': '0'
+      Devel: '0'
+      'Devel PHP': '0'
+      'File fields': '0'
+      Help: '0'
+      'Inline blocks': '0'
+      'Lists (Views)': '0'
+      'Media fields': '0'
+      Menus: '0'
+      'Paragraph fields': '0'
+      'Redirect fields': '0'
+      'Shortcut link fields': '0'
+      'Taxonomy term fields': '0'
+      'URL alias fields': '0'
+      User: '0'
+      'User fields': '0'
+field_type: block_field

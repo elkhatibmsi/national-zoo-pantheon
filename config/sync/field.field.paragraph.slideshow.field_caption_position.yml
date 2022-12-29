@@ -1,0 +1,21 @@
+uuid: cc6a4730-bce7-4a6e-8056-0d2d4d75cfec
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_caption_position
+    - paragraphs.paragraphs_type.slideshow
+  module:
+    - options
+id: paragraph.slideshow.field_caption_position
+field_name: field_caption_position
+entity_type: paragraph
+bundle: slideshow
+label: 'Caption Position'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

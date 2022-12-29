@@ -1,0 +1,32 @@
+uuid: c0f12c7d-a9b6-4ee1-98ea-c087a4a12f2c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_certifier
+    - node.type.coffee_purveyor
+id: node.coffee_purveyor.field_certifier
+field_name: field_certifier
+entity_type: node
+bundle: coffee_purveyor
+label: Certifier
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles: null
+    sort:
+      field: _none
+      direction: ASC
+    view:
+      view_name: coffee_purveyor
+      display_name: entityreference_1
+      args: {  }
+    behaviors:
+      views-select-list:
+        status: 0
+field_type: entity_reference

@@ -1,0 +1,8 @@
+uuid: ca4f81a7-e3b1-4143-9ff3-bbc61c0a04d7
+langcode: en
+status: true
+dependencies: {  }
+id: news
+label: 'News & Media'
+description: 'footer menu'
+locked: false

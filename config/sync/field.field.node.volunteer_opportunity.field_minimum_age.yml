@@ -1,0 +1,23 @@
+uuid: 76cfbd96-95fa-4969-b9a5-eb067b0b923c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_minimum_age
+    - node.type.volunteer_opportunity
+id: node.volunteer_opportunity.field_minimum_age
+field_name: field_minimum_age
+entity_type: node
+bundle: volunteer_opportunity
+label: 'Minimum Age'
+description: 'Enter the minimum age for this opportunity.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 0
+  max: 21
+  prefix: ''
+  suffix: ''
+field_type: integer

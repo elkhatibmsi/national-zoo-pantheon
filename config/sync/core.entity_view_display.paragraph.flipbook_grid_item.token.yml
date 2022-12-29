@@ -1,0 +1,34 @@
+uuid: ac0bf1c9-24f8-4ee6-9d05-6be412e6a534
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.token
+    - field.field.paragraph.flipbook_grid_item.field_flipbook_media
+    - field.field.paragraph.flipbook_grid_item.field_flipbook_overlay
+    - field.field.paragraph.flipbook_grid_item.field_flipbook_title
+    - paragraphs.paragraphs_type.flipbook_grid_item
+  module:
+    - text
+id: paragraph.flipbook_grid_item.token
+targetEntityType: paragraph
+bundle: flipbook_grid_item
+mode: token
+content:
+  field_flipbook_overlay:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_flipbook_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_flipbook_media: true

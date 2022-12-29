@@ -1,0 +1,21 @@
+uuid: f3864ed9-0d95-44ff-9561-228e0f9068cd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_upcoming
+    - node.type.exhibit
+id: node.exhibit.field_upcoming
+field_name: field_upcoming
+entity_type: node
+bundle: exhibit
+label: 'Is this an upcoming exhibit?'
+description: "Is this an upcoming exhibit? If so check here. \r\n"
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: 'yes'
+  off_label: 'no'
+field_type: boolean

@@ -1,0 +1,29 @@
+uuid: 544d3c2a-e723-40cb-a02e-1fa2ea6fb89b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.slideshow_container.field_slideshow_slide
+    - paragraphs.paragraphs_type.slideshow_container
+  module:
+    - paragraphs
+id: paragraph.slideshow_container.default
+targetEntityType: paragraph
+bundle: slideshow_container
+mode: default
+content:
+  field_slideshow_slide:
+    type: entity_reference_paragraphs
+    weight: 0
+    region: content
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

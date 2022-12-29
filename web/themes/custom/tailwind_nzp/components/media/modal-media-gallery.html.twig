@@ -1,0 +1,9 @@
+{{ attach_library('tailwind_nzp/modal_media_gallery') }}
+{{ attach_library('tailwind_nzp/swiperjs') }}
+
+
+<div class="modal-media-gallery-container grid-cols-6 grid gap-2">
+{% for key, item in gallery %}
+<div class="modal-media-item media-{{key + 1}}" lightbox-toggle>{{ item }}</div>
+{% endfor %}
+</div>

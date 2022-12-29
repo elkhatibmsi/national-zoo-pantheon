@@ -1,0 +1,27 @@
+uuid: b59c4e50-798c-451b-a49a-c49a884a07e5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.sticky_anchor_menu.field_sticky_anchor_menu_link
+    - paragraphs.paragraphs_type.sticky_anchor_menu
+  module:
+    - link
+id: paragraph.sticky_anchor_menu.default
+targetEntityType: paragraph
+bundle: sticky_anchor_menu
+mode: default
+content:
+  field_sticky_anchor_menu_link:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

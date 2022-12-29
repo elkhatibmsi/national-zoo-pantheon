@@ -1,0 +1,14 @@
+uuid: af2c08d3-948f-40fa-9d92-d2ab38dff019
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.temp_sick_bird_reports_results_access
+  module:
+    - user
+id: user_remove_role_action.temp_sick_bird_reports_results_access
+label: 'Remove the temp- sick bird reports results access role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: temp_sick_bird_reports_results_access

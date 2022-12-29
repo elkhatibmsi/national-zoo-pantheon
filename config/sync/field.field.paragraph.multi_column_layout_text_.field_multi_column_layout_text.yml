@@ -1,0 +1,21 @@
+uuid: 8225b7eb-033d-4c8f-a53d-880a8c3aca2a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_multi_column_layout_text
+    - paragraphs.paragraphs_type.multi_column_layout_text_
+  module:
+    - text
+id: paragraph.multi_column_layout_text_.field_multi_column_layout_text
+field_name: field_multi_column_layout_text
+entity_type: paragraph
+bundle: multi_column_layout_text_
+label: Content
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

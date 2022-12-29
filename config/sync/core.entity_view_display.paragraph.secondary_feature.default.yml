@@ -1,0 +1,72 @@
+uuid: 32dc4bda-467d-4f5f-a181-b320d5b3613b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.secondary_feature.field_bg_color
+    - field.field.paragraph.secondary_feature.field_image
+    - field.field.paragraph.secondary_feature.field_image_placement
+    - field.field.paragraph.secondary_feature.field_link
+    - field.field.paragraph.secondary_feature.field_text
+    - field.field.paragraph.secondary_feature.field_title
+    - paragraphs.paragraphs_type.secondary_feature
+  module:
+    - link
+    - options
+    - text
+id: paragraph.secondary_feature.default
+targetEntityType: paragraph
+bundle: secondary_feature
+mode: default
+content:
+  field_bg_color:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_image:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_image_placement:
+    type: list_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_link:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_text:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden: {  }

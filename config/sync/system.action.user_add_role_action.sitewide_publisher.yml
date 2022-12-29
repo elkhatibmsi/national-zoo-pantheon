@@ -1,0 +1,14 @@
+uuid: 3618bf51-8570-487c-9e6d-9fda1330d292
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.sitewide_publisher
+  module:
+    - user
+id: user_add_role_action.sitewide_publisher
+label: 'Add the sitewide publisher role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: sitewide_publisher

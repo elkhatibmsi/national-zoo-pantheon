@@ -1,0 +1,29 @@
+uuid: f860f4cb-231e-4f5a-b6b9-846a0490ca0a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_center_affiliation
+    - node.type.bio_profiles
+    - taxonomy.vocabulary.website_areas
+id: node.bio_profiles.field_center_affiliation
+field_name: field_center_affiliation
+entity_type: node
+bundle: bio_profiles
+label: 'Center Affiliation'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      website_areas: website_areas
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

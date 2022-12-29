@@ -1,0 +1,21 @@
+uuid: 62a465db-0f92-4411-ae2c-a0f9ea518add
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_dates
+    - paragraphs.paragraphs_type.class_session
+  module:
+    - datetime
+id: paragraph.class_session.field_dates
+field_name: field_dates
+entity_type: paragraph
+bundle: class_session
+label: Date(s)
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

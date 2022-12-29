@@ -1,0 +1,24 @@
+uuid: 369f2ac9-fcd4-4b67-bb31-6f05066220d6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_bfc_property_icon
+    - media.type.image
+    - taxonomy.vocabulary.bfc_properties
+id: taxonomy_term.bfc_properties.field_bfc_property_icon
+field_name: field_bfc_property_icon
+entity_type: taxonomy_term
+bundle: bfc_properties
+label: 'BFC Property Icon'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+field_type: entity_reference

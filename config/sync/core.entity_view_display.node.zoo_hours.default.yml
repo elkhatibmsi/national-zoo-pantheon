@@ -1,0 +1,43 @@
+uuid: b022299b-288d-429c-8315-52704a9c766e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.zoo_hours.field_date_range
+    - field.field.node.zoo_hours.field_editorial_access
+    - field.field.node.zoo_hours.field_time_slot
+    - node.type.zoo_hours
+  module:
+    - datetime
+    - entity_reference_revisions
+    - user
+id: node.zoo_hours.default
+targetEntityType: node
+bundle: zoo_hours
+mode: default
+content:
+  field_date_range:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: long
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_time_slot:
+    type: entity_reference_revisions_entity_view
+    label: above
+    settings:
+      view_mode: full
+      link: ''
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_editorial_access: true

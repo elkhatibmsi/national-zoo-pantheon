@@ -1,0 +1,17 @@
+{% block paragraph %}
+
+<div  {{ attributes }}>
+{%
+  include '@nzpComponents/features/feature.html.twig' with {
+    feature_image: content.field_image,
+    feature_title:  content.field_title,
+    feature_subtitle: content.field_subtitle,
+    feature_description: content.field_text,
+    feature_options: content.field_background_color.0['#markup'],
+    feature_link_url: content.field_link.0['#url'], 
+    feature_link_text: content.field_link.0['#title'], 
+  }  
+%}
+</div>
+
+{% endblock paragraph %}

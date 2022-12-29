@@ -1,0 +1,18 @@
+uuid: b13acf3f-805f-48bd-ae74-a9bb2726e3c8
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main-menu
+    parent: 'main-menu:0:'
+name: 'School Program'
+type: school_program
+description: ''
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

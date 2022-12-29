@@ -1,0 +1,19 @@
+uuid: a01c3b23-9426-4081-a7be-277c97369d5d
+langcode: en
+status: true
+dependencies:
+  module:
+    - layout_paragraphs
+    - micon_paragraphs
+third_party_settings:
+  micon_paragraphs:
+    icon: ''
+id: layout
+label: Layout
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins:
+  layout_paragraphs:
+    enabled: false
+    available_layouts: {  }

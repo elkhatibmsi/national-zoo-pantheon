@@ -1,0 +1,24 @@
+uuid: df65e549-0c46-427a-9ec5-b8779a40abac
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.font_page_feature
+    - field.storage.block_content.field_landing_image
+    - media.type.image
+id: block_content.font_page_feature.field_landing_image
+field_name: field_landing_image
+entity_type: block_content
+bundle: font_page_feature
+label: Image
+description: 'Add an image for this teaser.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+field_type: entity_reference

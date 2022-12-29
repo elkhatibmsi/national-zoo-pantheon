@@ -1,0 +1,23 @@
+uuid: a8a49848-d879-478e-a9b6-41765240dcc8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tnew_id
+    - node.type.membership_level
+id: node.membership_level.field_tnew_id
+field_name: field_tnew_id
+entity_type: node
+bundle: membership_level
+label: 'TNEW_id (Join)'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 0
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

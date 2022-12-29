@@ -1,0 +1,30 @@
+uuid: 36c5f985-1cdc-4ea8-b0da-1c8bc4c6ad9b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_related_animal
+    - node.type.animal
+    - node.type.webcam
+id: node.webcam.field_related_animal
+field_name: field_related_animal
+entity_type: node
+bundle: webcam
+label: 'Related Animal'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      animal: animal
+    sort:
+      field: _none
+      direction: ASC
+    behaviors:
+      views-select-list:
+        status: 0
+field_type: entity_reference

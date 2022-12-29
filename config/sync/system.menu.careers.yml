@@ -1,0 +1,8 @@
+uuid: 73fde541-74f1-4d67-8af1-a72f8b59ce08
+langcode: en
+status: true
+dependencies: {  }
+id: careers
+label: Careers
+description: 'footer menu'
+locked: false

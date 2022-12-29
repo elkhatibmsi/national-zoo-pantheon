@@ -1,0 +1,19 @@
+uuid: b52a18c0-41bd-4ca1-8df8-b7df5110f13c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_cost_range
+    - taxonomy.vocabulary.membership_level_categories
+id: taxonomy_term.membership_level_categories.field_cost_range
+field_name: field_cost_range
+entity_type: taxonomy_term
+bundle: membership_level_categories
+label: 'Cost Range'
+description: 'Enter the cost range'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

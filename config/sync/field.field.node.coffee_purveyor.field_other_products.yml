@@ -1,0 +1,19 @@
+uuid: 7a87f1a6-b3a6-4cac-9f70-63d392f85378
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_other_products
+    - node.type.coffee_purveyor
+id: node.coffee_purveyor.field_other_products
+field_name: field_other_products
+entity_type: node
+bundle: coffee_purveyor
+label: 'Other Products'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

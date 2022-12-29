@@ -1,0 +1,23 @@
+uuid: db243d37-6746-45bb-9ece-9382014c4ef5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_obituary
+    - node.type.media_release
+id: node.media_release.field_obituary
+field_name: field_obituary
+entity_type: node
+bundle: media_release
+label: Obituary
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: ''
+  off_label: ''
+field_type: boolean

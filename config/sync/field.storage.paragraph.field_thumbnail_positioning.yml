@@ -1,0 +1,33 @@
+uuid: 8c959fa3-b8f6-470a-9202-0f5aecc97d7a
+langcode: und
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_thumbnail_positioning
+field_name: field_thumbnail_positioning
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: '1'
+      label: left
+    -
+      value: '2'
+      label: centered
+    -
+      value: '3'
+      label: right
+    -
+      value: '4'
+      label: justified
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

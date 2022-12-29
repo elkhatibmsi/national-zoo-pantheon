@@ -1,0 +1,33 @@
+uuid: dea8b1ad-a914-4620-8475-4493624b00c4
+langcode: und
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_heading_properties
+field_name: field_heading_properties
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: centered
+      label: Centered
+    -
+      value: border
+      label: 'Bottom Border'
+    -
+      value: 'centered border'
+      label: 'Centered and Bottom Border'
+    -
+      value: knockout
+      label: Knockout
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

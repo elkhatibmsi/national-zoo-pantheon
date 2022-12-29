@@ -1,0 +1,30 @@
+uuid: c89d68a9-6989-4e77-9f34-9fea8f1dfa1b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_related_coffee_products_
+    - node.type.coffee_product
+    - node.type.coffee_purveyor
+id: node.coffee_purveyor.field_related_coffee_products_
+field_name: field_related_coffee_products_
+entity_type: node
+bundle: coffee_purveyor
+label: "Related Coffee Products\t"
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      coffee_product: coffee_product
+    sort:
+      field: _none
+      direction: ASC
+    behaviors:
+      views-select-list:
+        status: 0
+field_type: entity_reference

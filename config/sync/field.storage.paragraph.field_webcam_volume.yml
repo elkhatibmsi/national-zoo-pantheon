@@ -1,0 +1,20 @@
+uuid: a33e7c33-a2ef-4537-8e9a-6c173e86e47f
+langcode: und
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.field_webcam_volume
+field_name: field_webcam_volume
+entity_type: paragraph
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

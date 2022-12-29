@@ -1,0 +1,19 @@
+uuid: 0496fca9-d0c7-44c4-b58f-199b1c3ce0fb
+langcode: und
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_coffee_retail_description
+field_name: field_coffee_retail_description
+entity_type: node
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,21 @@
+uuid: 537d6116-fd1d-4efa-a68c-3b1b70719bad
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_custom_contact_block
+    - node.type.event
+  module:
+    - text
+id: node.event.field_custom_contact_block
+field_name: field_custom_contact_block
+entity_type: node
+bundle: event
+label: 'Custom contact block'
+description: 'If you put anything in this field, it will replace the default event contact block that appears in the right sidebar on all event pages.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

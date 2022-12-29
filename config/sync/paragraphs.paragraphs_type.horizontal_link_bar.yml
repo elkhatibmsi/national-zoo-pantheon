@@ -1,0 +1,15 @@
+uuid: fb1e469c-6dec-4e46-ab71-cc2decd4836f
+langcode: en
+status: true
+dependencies:
+  module:
+    - micon_paragraphs
+third_party_settings:
+  micon_paragraphs:
+    icon: ''
+id: horizontal_link_bar
+label: 'Horizontal Link Bar'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

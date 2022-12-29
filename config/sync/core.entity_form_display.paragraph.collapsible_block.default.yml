@@ -1,0 +1,38 @@
+uuid: 4e0ade0b-f959-4059-8991-f42ea0bcd552
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.collapsible_block.field_collapsible_block_content
+    - field.field.paragraph.collapsible_block.field_collapsible_block_title
+    - field.field.paragraph.collapsible_block.field_teaser
+    - field.field.paragraph.collapsible_block.field_text
+    - paragraphs.paragraphs_type.collapsible_block
+  module:
+    - text
+id: paragraph.collapsible_block.default
+targetEntityType: paragraph
+bundle: collapsible_block
+mode: default
+content:
+  field_collapsible_block_content:
+    type: text_textarea
+    weight: 1
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_collapsible_block_title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  field_teaser: true
+  field_text: true
+  status: true

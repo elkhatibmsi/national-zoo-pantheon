@@ -1,0 +1,41 @@
+uuid: af647e22-829d-4252-be31-2907e26ad156
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.website_areas.field_contact_email
+    - field.field.taxonomy_term.website_areas.field_display_name
+    - field.field.taxonomy_term.website_areas.field_path_to_landing_page
+    - taxonomy.vocabulary.website_areas
+  module:
+    - text
+id: taxonomy_term.website_areas.default
+targetEntityType: taxonomy_term
+bundle: website_areas
+mode: default
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_display_name:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_path_to_landing_page:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 4
+    region: content
+hidden:
+  field_contact_email: true

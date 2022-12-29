@@ -1,0 +1,22 @@
+uuid: dfe5f058-9a50-4213-b92e-d341ef697a22
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_housing
+    - node.type.internship
+id: node.internship.field_housing
+field_name: field_housing
+entity_type: node
+bundle: internship
+label: Housing
+description: 'Describe the housing for this internship'
+required: true
+translatable: false
+default_value:
+  -
+    value: "The intern will make his or her own housing arrangements in the Washington, D.C., area.\r\n"
+    format: full_html
+default_value_callback: ''
+settings: {  }
+field_type: string_long

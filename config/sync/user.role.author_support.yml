@@ -1,0 +1,48 @@
+uuid: 84aed988-7403-4f1a-9230-3756e0123a35
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.full_html
+    - node.type.basic_page
+    - node.type.event
+    - node.type.volunteer_opportunity
+  module:
+    - contextual
+    - filter
+    - node
+    - system
+id: author_support
+label: 'author - support'
+weight: 7
+is_admin: null
+permissions:
+  - 'access administration menu'
+  - 'access administration pages'
+  - 'access content overview'
+  - 'access contextual links'
+  - 'access workbench'
+  - 'access workbench access by role'
+  - 'clone own nodes'
+  - 'create basic_page content'
+  - 'create event content'
+  - 'create files'
+  - 'create volunteer_opportunity content'
+  - 'delete any volunteer_opportunity content'
+  - 'delete own volunteer_opportunity content'
+  - 'edit any event content'
+  - 'edit any volunteer_opportunity content'
+  - 'edit own event content'
+  - 'edit own volunteer_opportunity content'
+  - 'moderate content from draft to needs_review'
+  - 'moderate content from needs_review to draft'
+  - 'preview focal point'
+  - 'skip CAPTCHA'
+  - 'use text format filtered_html'
+  - 'use text format full_html'
+  - 'use workbench_moderation my drafts tab'
+  - 'view all unpublished content'
+  - 'view files'
+  - 'view moderation messages'
+  - 'view own unpublished content'
+  - 'view the administration theme'

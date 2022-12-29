@@ -1,0 +1,11 @@
+<div class="slide relative">
+<div class="slide--image">{{ slide }}</div>
+{% if caption.0['#text'] is not empty %}
+<div class="flex slide--caption absolute bottom-0 inset-x-0 items-center flex-wrap text-2xl p-8 bg-opacity-50 font-sans font-semibold text-white">
+    {{ caption }} 
+    <a class="ml-2 h-6 w-6 p-1 rounded-full text-lightergray" href="#"><svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+      </svg></a>
+</div>
+    {% endif %}
+</div>

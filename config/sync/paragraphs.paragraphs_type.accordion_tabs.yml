@@ -1,0 +1,15 @@
+uuid: df75eb2c-bdb3-483e-80db-19818bd5bfa5
+langcode: en
+status: true
+dependencies:
+  module:
+    - layout_paragraphs
+id: accordion_tabs
+label: 'Accordion Tabs'
+icon_uuid: null
+icon_default: null
+description: 'Migrated from paragraph bundle Accordion Tabs'
+behavior_plugins:
+  layout_paragraphs:
+    enabled: false
+    available_layouts: {  }

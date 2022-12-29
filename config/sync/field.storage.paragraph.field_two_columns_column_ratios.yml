@@ -1,0 +1,30 @@
+uuid: da0bb537-dc11-4e0f-82c6-a96f45ad2bfe
+langcode: und
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_two_columns_column_ratios
+field_name: field_two_columns_column_ratios
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: columns-38-62
+      label: 38/62
+    -
+      value: columns-50-50
+      label: 50/50
+    -
+      value: columns-62-38
+      label: 62/38
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

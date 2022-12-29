@@ -1,0 +1,14 @@
+_core:
+  default_config_hash: yTxtFqBHnEWxQswuWvkjE8mKw2t8oKuCL1q8KnfHuGE
+langcode: en
+uuid: 976e9f19-b583-4c8a-9b9d-632e4a158f1a
+name: 'Smithsonian''s National Zoo and Conservation Biology Institute'
+mail: elkhatibm@si.edu
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /node/6716
+admin_compact_mode: false
+weight_select_max: 100
+default_langcode: en

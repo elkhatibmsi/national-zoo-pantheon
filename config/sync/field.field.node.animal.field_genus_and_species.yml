@@ -1,0 +1,19 @@
+uuid: c52345da-a10b-4b2b-86d6-2e18e9ef29ad
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_genus_and_species
+    - node.type.animal
+id: node.animal.field_genus_and_species
+field_name: field_genus_and_species
+entity_type: node
+bundle: animal
+label: 'Genus and Species'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

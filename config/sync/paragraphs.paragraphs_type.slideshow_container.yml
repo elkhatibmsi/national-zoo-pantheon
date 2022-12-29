@@ -1,0 +1,15 @@
+uuid: c5e3d9c3-f466-4dd0-8c67-6a55c0ac3d18
+langcode: en
+status: true
+dependencies:
+  module:
+    - layout_paragraphs
+id: slideshow_container
+label: 'Slideshow Container'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins:
+  layout_paragraphs:
+    enabled: false
+    available_layouts: {  }

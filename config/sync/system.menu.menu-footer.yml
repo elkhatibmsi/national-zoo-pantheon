@@ -1,0 +1,8 @@
+uuid: 69ab2588-a843-4891-9433-6f9d86c5dd23
+langcode: en
+status: true
+dependencies: {  }
+id: menu-footer
+label: Footer
+description: 'First 4 columns of the footer'
+locked: false

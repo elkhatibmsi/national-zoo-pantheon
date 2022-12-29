@@ -1,0 +1,21 @@
+uuid: 6a498601-7c37-4e1b-bc91-6c4b7c7e6ac7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_reproduction_developme
+    - node.type.animal
+  module:
+    - text
+id: node.animal.field_reproduction_developme
+field_name: field_reproduction_developme
+entity_type: node
+bundle: animal
+label: 'Reproduction and Development'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

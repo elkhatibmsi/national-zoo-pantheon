@@ -1,0 +1,31 @@
+uuid: 15de1e24-d42a-4f21-ba93-9b4f11ad4cce
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.menu-mega-menu
+  module:
+    - menu_block
+  theme:
+    - tailwind_nzp
+id: megamenu
+theme: tailwind_nzp
+region: navigation
+weight: 0
+provider: null
+plugin: 'menu_block:menu-mega-menu'
+settings:
+  id: 'menu_block:menu-mega-menu'
+  label: 'Mega menu'
+  label_display: '0'
+  provider: menu_block
+  follow: false
+  follow_parent: child
+  label_link: false
+  label_type: block
+  level: 1
+  depth: 0
+  expand_all_items: false
+  parent: 'menu-mega-menu:'
+  suggestion: menu_mega_menu
+visibility: {  }

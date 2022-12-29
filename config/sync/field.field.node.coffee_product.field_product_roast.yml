@@ -1,0 +1,21 @@
+uuid: c33cbe8b-90ff-468c-a77b-62099431e98b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_product_roast
+    - node.type.coffee_product
+  module:
+    - options
+id: node.coffee_product.field_product_roast
+field_name: field_product_roast
+entity_type: node
+bundle: coffee_product
+label: 'Product Roast'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

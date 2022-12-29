@@ -1,0 +1,15 @@
+uuid: 68b80192-848c-40fe-9af5-1edfa09cf28b
+langcode: en
+status: true
+dependencies:
+  module:
+    - layout_paragraphs
+id: slideshow
+label: Slide
+icon_uuid: null
+icon_default: null
+description: 'Migrated from field_collection field_slideshow'
+behavior_plugins:
+  layout_paragraphs:
+    enabled: false
+    available_layouts: {  }

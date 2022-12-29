@@ -1,0 +1,25 @@
+uuid: 80d7ba54-d5e5-4999-a2a6-45cae82abbc1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.advpoll_max_choices
+    - node.type.advpoll
+id: node.advpoll.advpoll_max_choices
+field_name: advpoll_max_choices
+entity_type: node
+bundle: advpoll
+label: 'Maximum choices'
+description: 'Select the maximum number of choices that can be voted upon.'
+required: true
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  min: 1
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

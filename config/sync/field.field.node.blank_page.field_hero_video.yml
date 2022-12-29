@@ -1,0 +1,24 @@
+uuid: b3a25118-3af4-452f-a093-8e8acf17217f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_hero_video
+    - media.type.video
+    - node.type.blank_page
+id: node.blank_page.field_hero_video
+field_name: field_hero_video
+entity_type: node
+bundle: blank_page
+label: 'Hero Video'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      video: video
+field_type: entity_reference

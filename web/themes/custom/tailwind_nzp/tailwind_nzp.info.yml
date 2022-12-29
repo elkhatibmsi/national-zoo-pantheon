@@ -1,0 +1,25 @@
+name: National Zoo Theme
+type: theme
+description: "Tailwind Version: Official Theme of the Smithsonian's National Zoo and Conservation Biology Institute"
+package: Other
+core: 8.x
+libraries:
+  - tailwind_nzp/global
+core_version_requirement: ^8 || ^9
+ 
+base theme: stable
+
+regions:
+  offcanvas: OffCanvas
+  logo: Logo
+  topbar: TopBar
+  utility_menu: Utility
+  navigation: Navigation
+  search: Search
+  hours: Hours
+  content: Content
+  footer: Footer
+
+components:
+  namespaces:
+    nzpComponents: components

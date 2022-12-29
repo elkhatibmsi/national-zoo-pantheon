@@ -1,0 +1,59 @@
+uuid: 48f3001f-2682-422c-af86-ee223ea536e9
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.webcam_ad
+    - field.field.block_content.webcam_ad.field_ad_image
+    - field.field.block_content.webcam_ad.field_include_in_rotation
+    - field.field.block_content.webcam_ad.field_url
+    - field.field.block_content.webcam_ad.title
+  module:
+    - link
+id: block_content.webcam_ad.default
+targetEntityType: block_content
+bundle: webcam_ad
+mode: default
+content:
+  field_ad_image:
+    type: entity_reference_autocomplete
+    weight: 2
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_include_in_rotation:
+    type: boolean_checkbox
+    weight: 1
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_url:
+    type: link_default
+    weight: 3
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  info:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 4
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

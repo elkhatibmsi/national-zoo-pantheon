@@ -1,0 +1,31 @@
+uuid: 41c2f519-7374-4190-be5a-5fd589574b99
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.menu-menu-si-logo-privacy
+  module:
+    - menu_block
+  theme:
+    - tailwind_nzp
+id: footersilogoprivacyterms
+theme: tailwind_nzp
+region: footer
+weight: 2
+provider: null
+plugin: 'menu_block:menu-menu-si-logo-privacy'
+settings:
+  id: 'menu_block:menu-menu-si-logo-privacy'
+  label: 'Footer - SI logo, privacy, terms'
+  label_display: '0'
+  provider: menu_block
+  follow: false
+  follow_parent: child
+  label_link: false
+  label_type: block
+  level: 1
+  depth: 0
+  expand_all_items: false
+  parent: 'menu-menu-si-logo-privacy:'
+  suggestion: menu_menu_si_logo_privacy
+visibility: {  }

@@ -1,0 +1,23 @@
+uuid: 7378b200-962b-48a0-bee3-1d62de2d170d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_sticky_anchor_menu_link
+    - paragraphs.paragraphs_type.sticky_anchor_menu
+  module:
+    - link
+id: paragraph.sticky_anchor_menu.field_sticky_anchor_menu_link
+field_name: field_sticky_anchor_menu_link
+entity_type: paragraph
+bundle: sticky_anchor_menu
+label: 'Anchor Link'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 2
+  link_type: 17
+field_type: link

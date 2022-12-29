@@ -1,0 +1,15 @@
+uuid: 9fa290f5-3d1e-4a73-96f6-6e701d98605e
+langcode: en
+status: true
+dependencies:
+  module:
+    - layout_paragraphs
+id: icon_card_item
+label: 'Icon Card Item'
+icon_uuid: null
+icon_default: null
+description: 'Migrated from paragraph bundle Icon Card Item'
+behavior_plugins:
+  layout_paragraphs:
+    enabled: false
+    available_layouts: {  }

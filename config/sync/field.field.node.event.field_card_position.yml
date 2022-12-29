@@ -1,0 +1,25 @@
+uuid: 3e59a45d-8d37-432d-a55c-ec3f98fed26b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_card_position
+    - node.type.event
+id: node.event.field_card_position
+field_name: field_card_position
+entity_type: node
+bundle: event
+label: 'Card position'
+description: 'Choose the position of the slideshow overlay card. By default, the card is on the left.'
+required: false
+translatable: false
+default_value:
+  -
+    tid: '153'
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    sort:
+      field: _none
+field_type: entity_reference

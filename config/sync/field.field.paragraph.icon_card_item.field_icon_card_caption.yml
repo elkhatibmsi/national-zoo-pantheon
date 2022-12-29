@@ -1,0 +1,19 @@
+uuid: cfc818f7-e874-4f84-be4f-ba1773d1558d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_icon_card_caption
+    - paragraphs.paragraphs_type.icon_card_item
+id: paragraph.icon_card_item.field_icon_card_caption
+field_name: field_icon_card_caption
+entity_type: paragraph
+bundle: icon_card_item
+label: 'Icon Card Caption'
+description: 'optional: caption will appear as an absolutely positioned overlay over the image'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

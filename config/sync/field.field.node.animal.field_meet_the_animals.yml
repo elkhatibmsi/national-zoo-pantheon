@@ -1,0 +1,21 @@
+uuid: f5c2b05f-70ab-4f96-a9da-629e53d36f77
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_meet_the_animals
+    - node.type.animal
+  module:
+    - text
+id: node.animal.field_meet_the_animals
+field_name: field_meet_the_animals
+entity_type: node
+bundle: animal
+label: 'Meet the Animals'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

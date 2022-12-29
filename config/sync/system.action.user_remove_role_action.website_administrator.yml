@@ -1,0 +1,14 @@
+uuid: 5c9c2754-a94c-456c-aa1c-5c98e9b5f82a
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.website_administrator
+  module:
+    - user
+id: user_remove_role_action.website_administrator
+label: 'Remove the website administrator role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: website_administrator

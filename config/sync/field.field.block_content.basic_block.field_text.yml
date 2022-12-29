@@ -1,0 +1,21 @@
+uuid: 1d5e08dd-19d3-44d4-8f28-5cb9dcd1baf3
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.basic_block
+    - field.storage.block_content.field_text
+  module:
+    - text
+id: block_content.basic_block.field_text
+field_name: field_text
+entity_type: block_content
+bundle: basic_block
+label: Body
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

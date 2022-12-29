@@ -1,0 +1,21 @@
+uuid: 33d91dfc-af2d-4c1e-b64d-18610e2cceb6
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.event_comestibles
+    - field.storage.block_content.field_event_comestible_text
+  module:
+    - text
+id: block_content.event_comestibles.field_event_comestible_text
+field_name: field_event_comestible_text
+entity_type: block_content
+bundle: event_comestibles
+label: 'Event Comestible Text'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

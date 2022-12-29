@@ -1,0 +1,8 @@
+uuid: 8c8bdc93-066b-42bb-b8ff-8e96536c6f24
+langcode: en
+status: true
+dependencies: {  }
+name: 'Membership Levels'
+vid: membership_levels
+description: 'Default information for FONZ membership levels'
+weight: 0

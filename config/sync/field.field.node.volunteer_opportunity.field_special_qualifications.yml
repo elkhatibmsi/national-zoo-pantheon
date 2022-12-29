@@ -1,0 +1,19 @@
+uuid: 726c3c9c-5a2c-4cd6-b18d-c1b371c8c1a4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_special_qualifications
+    - node.type.volunteer_opportunity
+id: node.volunteer_opportunity.field_special_qualifications
+field_name: field_special_qualifications
+entity_type: node
+bundle: volunteer_opportunity
+label: 'Special qualifications'
+description: 'Describe any required special qualifications.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

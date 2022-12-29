@@ -1,0 +1,19 @@
+uuid: 2335fd1d-c4eb-4f0c-b25a-6d5a2963ec87
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_heading_text_
+    - paragraphs.paragraphs_type.section_heading
+id: paragraph.section_heading.field_heading_text_
+field_name: field_heading_text_
+entity_type: paragraph
+bundle: section_heading
+label: "Heading Text\t"
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

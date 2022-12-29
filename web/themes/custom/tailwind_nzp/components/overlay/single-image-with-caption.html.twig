@@ -1,0 +1,14 @@
+
+<div class="image-caption">
+    <figure class="bg-darkergray w-full image-caption-title-container mb-0">
+        <div class="image-caption-image w-full">
+            <div class="media--picture min-h-full flex">{{image}}</div>
+        </div>
+        {% if (title|render) or (body|render) %}
+        <figcaption class="text-white ml-2 pb-2">    
+            <div class="image-caption-title ml-2 text-2xl font-bold">{{title}}</div>
+            <div class="image-caption-text ml-2">{{body}}</div>
+        </figcaption>
+        {% endif %}
+    </figure>
+</div>     

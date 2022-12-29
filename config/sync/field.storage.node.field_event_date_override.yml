@@ -1,0 +1,20 @@
+uuid: f4bdaee0-3dab-4287-8e6c-03387d4879e6
+langcode: und
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_event_date_override
+field_name: field_event_date_override
+entity_type: node
+type: text
+settings:
+  max_length: 255
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

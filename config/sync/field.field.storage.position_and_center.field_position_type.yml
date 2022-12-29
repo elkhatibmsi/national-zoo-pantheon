@@ -1,0 +1,29 @@
+uuid: 2dce1c53-ec8b-42af-afe3-0b913b1dcaae
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.storage.field_position_type
+    - storage.storage_type.position_and_center
+    - taxonomy.vocabulary.bio_profile_categories
+id: storage.position_and_center.field_position_type
+field_name: field_position_type
+entity_type: storage
+bundle: position_and_center
+label: 'Position Type'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      bio_profile_categories: bio_profile_categories
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

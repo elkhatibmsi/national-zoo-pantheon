@@ -1,0 +1,8 @@
+uuid: a1dde4a6-78d5-469a-adc8-3af5fcb5aadc
+langcode: en
+status: true
+dependencies: {  }
+name: 'Camp categories'
+vid: camp_categories
+description: ''
+weight: 0

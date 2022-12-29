@@ -1,0 +1,21 @@
+uuid: cccbd723-44ee-4f99-82b9-8b9215b45aad
+langcode: und
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.field_h_tab_label
+field_name: field_h_tab_label
+entity_type: paragraph
+type: string
+settings:
+  max_length: 255
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

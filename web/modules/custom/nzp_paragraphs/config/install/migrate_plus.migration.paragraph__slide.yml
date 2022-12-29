@@ -1,0 +1,39 @@
+uuid: 106daa12-f1bf-48ff-9964-ecf3fea19047
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - nzp_paragraphs
+id: paragraph__slide
+class: null
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - Paragraphs
+migration_group: nzp_paragraphs
+label: 'Slideshow Slide'
+source:
+  plugin: d7_field_collection_item
+  key: migrate
+  field_name: field_slideshow
+process:
+  target_id: target_id
+  revision_id: revision_id
+  field_url: field_url
+  field_slide_caption: field_text
+  field_modal_content: field_modal_content
+  field_slide_image:
+    -
+      plugin: media_migration_delta_sort
+      source: field_slide_image
+    -
+      plugin: sub_process
+      process:
+        target_id: fid
+destination:
+  plugin: 'entity_reference_revisions:paragraph'
+  default_bundle: slideshow
+migration_dependencies:
+  required: {  }
+  optional: {  }

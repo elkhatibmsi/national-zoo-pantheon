@@ -1,0 +1,12 @@
+
+{%
+  include '@nzpComponents/cards/card--list.html.twig' with {
+    title: node.label,
+    link: url,
+    content_type: content_type,
+    authored_date: node.getCreatedTime()|format_date('short'),
+
+  } 
+
+%}
+

@@ -1,0 +1,8 @@
+uuid: 0cd779b8-804f-4e69-aa73-e2ab535c957a
+langcode: en
+status: true
+dependencies: {  }
+id: menu-donate-shop
+label: donate-shop-etc
+description: 'Ecommerce links in the footer section.'
+locked: false

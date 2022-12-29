@@ -1,0 +1,14 @@
+uuid: f04f8f91-4517-444d-88f3-e3b4e0f5bd8e
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.author_animals
+  module:
+    - user
+id: user_remove_role_action.author_animals
+label: 'Remove the author - animals role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: author_animals

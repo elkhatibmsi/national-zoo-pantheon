@@ -1,0 +1,25 @@
+uuid: c9ad7960-9d99-4037-ae68-5bd448710ac7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_has_promotions
+    - node.type.basic_page
+id: node.basic_page.field_has_promotions
+field_name: field_has_promotions
+entity_type: node
+bundle: basic_page
+label: 'Hide promotions?'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    tid: '133'
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    sort:
+      field: _none
+field_type: entity_reference

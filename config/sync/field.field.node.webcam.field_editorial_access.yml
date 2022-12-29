@@ -1,0 +1,25 @@
+uuid: 154b82be-2d47-444b-bb77-9f47ef2fa38b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_editorial_access
+    - node.type.webcam
+id: node.webcam.field_editorial_access
+field_name: field_editorial_access
+entity_type: node
+bundle: webcam
+label: 'Editorial Access'
+description: 'Assign this content to an editorial section of the website.'
+required: true
+translatable: false
+default_value:
+  -
+    tid: '35'
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    sort:
+      field: _none
+field_type: entity_reference

@@ -1,0 +1,100 @@
+uuid: af3bba35-a27a-4939-979e-e5d232fa8796
+langcode: en
+status: true
+dependencies: {  }
+id: upgrade_d7_taxonomy_term_staff_categories
+class: Drupal\migrate\Plugin\Migration
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 7'
+  - Content
+migration_group: migrate_drupal_7
+label: 'Taxonomy terms (Staff Categories)'
+source:
+  plugin: d7_taxonomy_term
+  bundle: staff_categories
+process:
+  tid:
+    -
+      plugin: get
+      source: tid
+  vid:
+    -
+      plugin: migration_lookup
+      migration: upgrade_d7_taxonomy_vocabulary
+      source: vid
+  name:
+    -
+      plugin: get
+      source: name
+  description/value:
+    -
+      plugin: get
+      source: description
+  description/format:
+    -
+      plugin: get
+      source: format
+  weight:
+    -
+      plugin: get
+      source: weight
+  parent_id:
+    -
+      plugin: skip_on_empty
+      method: process
+      source: parent
+    -
+      plugin: migration_lookup
+      migration:
+        - upgrade_d7_taxonomy_term_tags
+        - upgrade_d7_taxonomy_term_website_areas
+        - upgrade_d7_taxonomy_term_membership_level_categories
+        - upgrade_d7_taxonomy_term_nzp_locations
+        - upgrade_d7_taxonomy_term_media_release_categories
+        - upgrade_d7_taxonomy_term_camp_categories
+        - upgrade_d7_taxonomy_term_page_types
+        - upgrade_d7_taxonomy_term_animal_types
+        - upgrade_d7_taxonomy_term_volunteer_opportunity_categories
+        - upgrade_d7_taxonomy_term_story_types
+        - upgrade_d7_taxonomy_term_markers
+        - upgrade_d7_taxonomy_term_class_types
+        - upgrade_d7_taxonomy_term_hide_promotions
+        - upgrade_d7_taxonomy_term_internship_categories
+        - upgrade_d7_taxonomy_term_card_position
+        - upgrade_d7_taxonomy_term_hours_types
+        - upgrade_d7_taxonomy_term_zoo_or_fonz
+        - upgrade_d7_taxonomy_term_membership_levels
+        - upgrade_d7_taxonomy_term_accessibility
+        - upgrade_d7_taxonomy_term_media_tags
+        - upgrade_d7_taxonomy_term_age_ranges
+        - upgrade_d7_taxonomy_term_bfc_properties
+        - upgrade_d7_taxonomy_term_coffee_roasters
+        - upgrade_d7_taxonomy_term_staff_categories
+  parent:
+    -
+      plugin: default_value
+      default_value: 0
+      source: '@parent_id'
+  forum_container:
+    -
+      plugin: get
+      source: is_container
+  changed:
+    -
+      plugin: get
+      source: timestamp
+  langcode:
+    -
+      plugin: get
+      source: language
+destination:
+  plugin: 'entity:taxonomy_term'
+  default_bundle: staff_categories
+migration_dependencies:
+  required:
+    - upgrade_d7_taxonomy_vocabulary
+  optional:
+    - upgrade_d7_field_instance
+    - upgrade_d7_taxonomy_vocabulary

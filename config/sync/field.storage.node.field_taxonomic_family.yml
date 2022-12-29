@@ -1,0 +1,405 @@
+uuid: d67c9682-12e5-4339-9631-8d63c79881c0
+langcode: und
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_taxonomic_family
+field_name: field_taxonomic_family
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: Accipitridae
+      label: Accipitridae
+    -
+      value: Agamidae
+      label: Agamidae
+    -
+      value: Agaminae
+      label: Agaminae
+    -
+      value: Ailuridae
+      label: Ailuridae
+    -
+      value: Alcedinidae
+      label: Alcedinidae
+    -
+      value: Alligatoridae
+      label: Alligatoridae
+    -
+      value: Ambystomatidae
+      label: Ambystomatidae
+    -
+      value: Anatidae
+      label: Anatidae
+    -
+      value: Anguidae
+      label: Anguidae
+    -
+      value: Anostomidae
+      label: Anostomidae
+    -
+      value: Apterygidae
+      label: Apterygidae
+    -
+      value: Ardeidae
+      label: Ardeidae
+    -
+      value: Bathyergidae
+      label: Bathyergidae
+    -
+      value: Boidae
+      label: Boidae
+    -
+      value: Bovidae
+      label: Bovidae
+    -
+      value: Bucerotidae
+      label: Bucerotidae
+    -
+      value: Bucorvidae
+      label: Bucorvidae
+    -
+      value: Bufonidae
+      label: Bufonidae
+    -
+      value: Callitrichidae
+      label: Callitrichidae
+    -
+      value: Camelidae
+      label: Camelidae
+    -
+      value: Canidae
+      label: Canidae
+    -
+      value: Carettochelyidae
+      label: Carettochelyidae
+    -
+      value: Castoridae
+      label: Castoridae
+    -
+      value: Cathartidae
+      label: Cathartidae
+    -
+      value: Caviidae
+      label: Caviidae
+    -
+      value: Cebidae
+      label: Cebidae
+    -
+      value: Cercopithecidae
+      label: Cercopithecidae
+    -
+      value: Cervidae
+      label: Cervidae
+    -
+      value: Chamaeleonidae
+      label: Chamaeleonidae
+    -
+      value: Characidae
+      label: Characidae
+    -
+      value: Chelidae
+      label: Chelidae
+    -
+      value: Chelydridae
+      label: Chelydridae
+    -
+      value: Chinchillidae
+      label: Chinchillidae
+    -
+      value: Chlamyphoridae
+      label: Chlamyphoridae
+    -
+      value: Coenobita
+      label: Coenobita
+    -
+      value: Colubridae
+      label: Colubridae
+    -
+      value: Cordylidae
+      label: Cordylidae
+    -
+      value: Corvidae
+      label: Corvidae
+    -
+      value: Cracidae
+      label: Cracidae
+    -
+      value: Crocodylidae
+      label: Crocodylidae
+    -
+      value: Cryptobranchidae
+      label: Cryptobranchidae
+    -
+      value: Cyprinidae
+      label: Cyprinidae
+    -
+      value: Dactyloidae
+      label: Dactyloidae
+    -
+      value: Dasypodidae
+      label: Dasypodidae
+    -
+      value: Dasyproctidae
+      label: Dasyproctidae
+    -
+      value: Dendrobatidae
+      label: Dendrobatidae
+    -
+      value: Didelphidae
+      label: Didelphidae
+    -
+      value: Dipsadidae
+      label: Dipsadidae
+    -
+      value: Discoglossidae
+      label: Discoglossidae
+    -
+      value: Doradidae
+      label: Doradidae
+    -
+      value: Dromaiidae
+      label: Dromaiidae
+    -
+      value: Elapidae
+      label: Elapidae
+    -
+      value: Elephantidae
+      label: Elephantidae
+    -
+      value: Emberizidae
+      label: Emberizidae
+    -
+      value: Emydidae
+      label: Emydidae
+    -
+      value: Equidae
+      label: Equidae
+    -
+      value: Erethizontidae
+      label: Erethizontidae
+    -
+      value: Eublepharidae
+      label: Eublepharidae
+    -
+      value: Eurypygidae
+      label: Eurypygidae
+    -
+      value: Felidae
+      label: Felidae
+    -
+      value: Felidae/Pantherinae
+      label: Felidae/Pantherinae
+    -
+      value: Fringillidae
+      label: Fringillidae
+    -
+      value: Gavialidae
+      label: Gavialidae
+    -
+      value: Gekkonidae
+      label: Gekkonidae
+    -
+      value: Geoemydidae
+      label: Geoemydidae
+    -
+      value: Gruidae
+      label: Gruidae
+    -
+      value: Gymnotidae
+      label: Gymnotidae
+    -
+      value: Helodermatidae
+      label: Helodermatidae
+    -
+      value: Herpestidae
+      label: Herpestidae
+    -
+      value: Hominidae
+      label: Hominidae
+    -
+      value: Hylidae
+      label: Hylidae
+    -
+      value: Hylobatidae
+      label: Hylobatidae
+    -
+      value: Ictaluridae
+      label: Ictaluridae
+    -
+      value: Iguanidae
+      label: Iguanidae
+    -
+      value: Laniidae
+      label: Laniidae
+    -
+      value: Lemuridae
+      label: Lemuridae
+    -
+      value: Loricariidae
+      label: Loricariidae
+    -
+      value: Macropodidae
+      label: Macropodidae
+    -
+      value: Macroscelididae
+      label: Macroscelididae
+    -
+      value: Mantellidae
+      label: Mantellidae
+    -
+      value: Megalonychidae
+      label: Megalonychidae
+    -
+      value: Mephitidae
+      label: Mephitidae
+    -
+      value: Microhylidae
+      label: Microhylidae
+    -
+      value: Muridae
+      label: Muridae
+    -
+      value: Mustelidae
+      label: Mustelidae
+    -
+      value: Myrmecophagidae
+      label: Myrmecophagidae
+    -
+      value: Nesomyidae
+      label: Nesomyidae
+    -
+      value: Octodontidae
+      label: Octodontidae
+    -
+      value: Osteoglossidae
+      label: Osteoglossidae
+    -
+      value: Otariidae
+      label: Otariidae
+    -
+      value: Otididae
+      label: Otididae
+    -
+      value: Pelicanidae
+      label: Pelicanidae
+    -
+      value: Pelomedusidae
+      label: Pelomedusidae
+    -
+      value: Phasianidae
+      label: Phasianidae
+    -
+      value: Phocidae
+      label: Phocidae
+    -
+      value: Phoenicopteridae
+      label: Phoenicopteridae
+    -
+      value: Pipidae
+      label: Pipidae
+    -
+      value: Pitheciidae
+      label: Pitheciidae
+    -
+      value: Plethodontidae
+      label: Plethodontidae
+    -
+      value: Potamotrygonidae
+      label: Potamotrygonidae
+    -
+      value: Potoroidae
+      label: Potoroidae
+    -
+      value: Procaviidae
+      label: Procaviidae
+    -
+      value: Prochilodontidae
+      label: Prochilodontidae
+    -
+      value: Psittacidae
+      label: Psittacidae
+    -
+      value: Procyonidae
+      label: Procyonidae
+    -
+      value: Pythonidae
+      label: Pythonidae
+    -
+      value: Rallidae
+      label: Rallidae
+    -
+      value: Ramphastidae
+      label: Ramphastidae
+    -
+      value: Rhacophoridae
+      label: Rhacophoridae
+    -
+      value: Rheidae
+      label: Rheidae
+    -
+      value: Salamandridae
+      label: Salamandridae
+    -
+      value: Sciuridae
+      label: Sciuridae
+    -
+      value: Serrasalmidae
+      label: Serrasalmidae
+    -
+      value: Shinisauridae
+      label: Shinisauridae
+    -
+      value: Strigidae
+      label: Strigidae
+    -
+      value: Suidae
+      label: Suidae
+    -
+      value: Teiidae
+      label: Teiidae
+    -
+      value: Tenrecidae
+      label: Tenrecidae
+    -
+      value: Testudinidae
+      label: Testudinidae
+    -
+      value: Theraphosidae
+      label: Theraphosidae
+    -
+      value: Threskiornithidae
+      label: Threskiornithidae
+    -
+      value: Tragulidae
+      label: Tragulidae
+    -
+      value: Tupaiidae
+      label: Tupaiidae
+    -
+      value: Typhlonectidae
+      label: Typhlonectidae
+    -
+      value: Ursidae
+      label: Ursidae
+    -
+      value: Varanidae
+      label: Varanidae
+    -
+      value: Viperidae
+      label: Viperidae
+    -
+      value: Channidae
+      label: Channidae
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

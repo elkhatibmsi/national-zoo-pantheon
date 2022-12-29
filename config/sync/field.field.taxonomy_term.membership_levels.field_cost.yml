@@ -1,0 +1,23 @@
+uuid: 0341d7e7-ea8b-48f8-bc9d-0db588b8778b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_cost
+    - taxonomy.vocabulary.membership_levels
+id: taxonomy_term.membership_levels.field_cost
+field_name: field_cost
+entity_type: taxonomy_term
+bundle: membership_levels
+label: Cost
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: !!float 0
+  max: null
+  prefix: $
+  suffix: ''
+field_type: decimal

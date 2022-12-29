@@ -1,0 +1,15 @@
+
+<div {{ attributes }}>
+
+{%
+  include '@nzpComponents/cards/card--horizontal.html.twig' with {
+    title: label,
+    link: url,
+    image: content.field_landing_image,
+    authored_date: node.getCreatedTime()|format_date('short'),
+    summary: node.body.summary|striptags,
+  } 
+
+%}
+
+</div>

@@ -1,0 +1,20 @@
+uuid: 855e71ee-ec5c-487f-bf92-fb63fc38f61a
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+id: node.field_bio_profile_type
+field_name: field_bio_profile_type
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

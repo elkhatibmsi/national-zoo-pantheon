@@ -1,0 +1,36 @@
+uuid: 0f271faf-1082-45e1-b780-21c36e29b887
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.token
+    - field.field.paragraph.card_grid.field_card
+    - field.field.paragraph.card_grid.field_card_border_settings
+    - field.field.paragraph.card_grid.field_number_of_columns
+    - paragraphs.paragraphs_type.card_grid
+  module:
+    - entity_reference_revisions
+    - options
+id: paragraph.card_grid.token
+targetEntityType: paragraph
+bundle: card_grid
+mode: token
+content:
+  field_card:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: full
+      link: ''
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_card_border_settings:
+    type: list_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  field_number_of_columns: true

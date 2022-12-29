@@ -1,0 +1,27 @@
+uuid: 8b820774-6c8e-40a9-a3df-9b581985d9e7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.media.document_https.field_media_document_https
+    - media.type.document_https
+  module:
+    - file
+id: media.document_https.default
+targetEntityType: media
+bundle: document_https
+mode: default
+content:
+  field_media_document_https:
+    type: file_default
+    label: visually_hidden
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  created: true
+  name: true
+  thumbnail: true
+  uid: true

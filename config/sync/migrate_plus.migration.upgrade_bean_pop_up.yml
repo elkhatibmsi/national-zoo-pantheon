@@ -1,0 +1,191 @@
+uuid: 67394c12-bff8-4fb0-9602-19a211ae1789
+langcode: en
+status: true
+dependencies: {  }
+id: upgrade_bean_pop_up
+class: Drupal\migrate\Plugin\Migration
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 7'
+  - Content
+migration_group: migrate_drupal_7
+label: 'Bean (Pop Up)'
+source:
+  plugin: bean
+  type: pop_up
+process:
+  id:
+    -
+      plugin: migration_lookup
+      migration: upgrade_bean_pop_up
+      no_stub: true
+      source: bid
+    -
+      plugin: default_value
+      default_value:
+        - null
+        - null
+        - null
+    -
+      plugin: extract
+      index:
+        - 0
+  revision_id:
+    -
+      plugin: migration_lookup
+      migration: upgrade_bean_pop_up
+      no_stub: true
+      source:
+        - bid
+        - vid
+    -
+      plugin: default_value
+      default_value:
+        - null
+        - null
+        - null
+    -
+      plugin: extract
+      index:
+        - 1
+  uuid:
+    -
+      plugin: skip_on_empty
+      method: process
+      source: uuid
+  info:
+    -
+      plugin: get
+      source: label
+  type:
+    -
+      plugin: migration_lookup
+      migration: upgrade_bean_type_pop_up
+      no_stub: true
+      source: type
+    -
+      plugin: skip_on_empty
+      method: row
+  langcode:
+    -
+      plugin: default_value
+      source: language
+      default_value: und
+  uid:
+    -
+      plugin: get
+      source: uid
+  status:
+    -
+      plugin: get
+      source: status
+  changed:
+    -
+      plugin: get
+      source: changed
+  revision_user:
+    -
+      plugin: get
+      source: revision_uid
+  revision_log:
+    -
+      plugin: get
+      source: log
+  revision_created:
+    -
+      plugin: get
+      source: created
+  revision_default:
+    -
+      plugin: get
+      source: revision_default
+  content_translation_outdated:
+    -
+      plugin: default_value
+      source: translate
+      default_value: 0
+  content_translation_source:
+    -
+      plugin: default_value
+      source: source_language
+      default_value: und
+  content_translation_created:
+    -
+      plugin: get
+      source: etr_created
+  content_translation_uid:
+    -
+      plugin: get
+      source: etr_uid
+  title:
+    -
+      plugin: null_coalesce
+      source:
+        - title_field
+        - title
+  field_pop_up_title:
+    -
+      plugin: get
+      source: field_pop_up_title
+    -
+      plugin: media_wysiwyg_filter
+  field_pop_up_content:
+    -
+      plugin: sub_process
+      source: field_pop_up_content
+      process:
+        target_id:
+          -
+            plugin: migration_lookup
+            migration: paragraph__text
+            source: value
+          -
+            plugin: extract
+            index:
+              - 0
+        target_revision_id:
+          -
+            plugin: migration_lookup
+            migration: paragraph__text
+            source: value
+          -
+            plugin: extract
+            index:
+              - 1
+  field_pop_up_frequency:
+    -
+      plugin: get
+      source: field_pop_up_frequency
+  field_pop_up_background:
+    -
+      plugin: media_migration_delta_sort
+      source: field_pop_up_background
+    -
+      plugin: sub_process
+      process:
+        target_id: fid
+  field_pop_up_size:
+    -
+      plugin: get
+      source: field_pop_up_size
+  field_pop_up_tone:
+    -
+      plugin: get
+      source: field_pop_up_tone
+destination:
+  plugin: 'entity_complete:block_content'
+  translations: true
+migration_dependencies:
+  required:
+    - upgrade_bean_type_pop_up
+    - upgrade_bean_title_field_instance_pop_up
+  optional:
+    - upgrade_bean_title_field_formatter_pop_up
+    - upgrade_bean_title_field_widget_pop_up
+    - upgrade_d7_field_instance_widget_settings
+    - upgrade_d7_field_formatter_settings
+    - upgrade_d7_field_instance
+    - upgrade_d7_user
+    - upgrade_bean_pop_up
+    - upgrade_bean_type_pop_up

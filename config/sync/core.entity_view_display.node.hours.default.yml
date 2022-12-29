@@ -1,0 +1,41 @@
+uuid: 1a8f95e4-9f4c-4bdc-b5a6-03b03a3e7292
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.hours.field_editorial_access
+    - field.field.node.hours.field_hours_active_date
+    - field.field.node.hours.field_hours_category
+    - node.type.hours
+  module:
+    - datetime
+    - user
+id: node.hours.default
+targetEntityType: node
+bundle: hours
+mode: default
+content:
+  field_hours_active_date:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: long
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_hours_category:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_editorial_access: true

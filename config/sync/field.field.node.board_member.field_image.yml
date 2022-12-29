@@ -1,0 +1,35 @@
+uuid: 5badd652-3868-4d0b-bc58-f59703efdc61
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_image
+    - node.type.board_member
+  module:
+    - image
+id: node.board_member.field_image
+field_name: field_image
+entity_type: node
+bundle: board_member
+label: Headshot
+description: 'Upload the official headshot of this boardmember.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings:
+    target_bundles:
+      image: image
+  file_directory: about/board-member
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: '10 MB'
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: true
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image: 0
+field_type: image

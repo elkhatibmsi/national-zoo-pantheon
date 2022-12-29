@@ -1,0 +1,15 @@
+uuid: 38b3007c-6778-4958-b43f-6d518b6b9c37
+langcode: en
+status: true
+dependencies:
+  module:
+    - layout_paragraphs
+id: time_slot
+label: 'Time Slot'
+icon_uuid: null
+icon_default: null
+description: 'Migrated from paragraph bundle Time Slot'
+behavior_plugins:
+  layout_paragraphs:
+    enabled: false
+    available_layouts: {  }

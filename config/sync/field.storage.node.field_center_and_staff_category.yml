@@ -1,0 +1,20 @@
+uuid: 05d68f02-b202-4c6c-87e7-fab086303084
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - storage
+id: node.field_center_and_staff_category
+field_name: field_center_and_staff_category
+entity_type: node
+type: entity_reference
+settings:
+  target_type: storage
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

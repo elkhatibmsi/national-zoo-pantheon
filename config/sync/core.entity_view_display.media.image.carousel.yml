@@ -1,0 +1,68 @@
+uuid: 3cd3bdc8-d55e-4740-8205-145767947d04
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.carousel
+    - field.field.media.image.field_dams_number
+    - field.field.media.image.field_image_alt_text
+    - field.field.media.image.field_media_image
+    - field.field.media.image.field_media_tags
+    - field.field.media.image.field_notes
+    - field.field.media.image.field_photographer
+    - field.field.media.image.field_we_do_not_own
+    - image.style.wide
+    - media.type.image
+  module:
+    - blazy
+id: media.image.carousel
+targetEntityType: media
+bundle: image
+mode: carousel
+content:
+  field_media_image:
+    type: blazy
+    label: hidden
+    settings:
+      caption:
+        title: '0'
+        alt: '0'
+      icon: ''
+      layout: ''
+      view_mode: ''
+      cache: 0
+      current_view_mode: carousel
+      skin: ''
+      fx: ''
+      style: ''
+      background: false
+      box_caption: ''
+      box_caption_custom: ''
+      box_media_style: ''
+      responsive_image_style: ''
+      box_style: ''
+      image_style: wide
+      media_switch: ''
+      ratio: ''
+      thumbnail_style: ''
+      _uri: ''
+      breakpoints: {  }
+      sizes: ''
+      grid_header: ''
+      grid: ''
+      grid_medium: ''
+      grid_small: ''
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  created: true
+  field_dams_number: true
+  field_image_alt_text: true
+  field_media_tags: true
+  field_notes: true
+  field_photographer: true
+  field_we_do_not_own: true
+  name: true
+  thumbnail: true
+  uid: true

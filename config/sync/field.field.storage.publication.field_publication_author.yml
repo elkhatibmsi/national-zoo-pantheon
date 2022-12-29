@@ -1,0 +1,29 @@
+uuid: 6ef327f2-fa1b-436f-9a28-94545639760b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.storage.field_publication_author
+    - node.type.bio_profiles
+    - storage.storage_type.publication
+id: storage.publication.field_publication_author
+field_name: field_publication_author
+entity_type: storage
+bundle: publication
+label: 'Publication Author'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      bio_profiles: bio_profiles
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

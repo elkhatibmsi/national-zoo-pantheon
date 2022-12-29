@@ -1,0 +1,31 @@
+uuid: e1af9901-0f19-4c89-b14a-c1f54d8eca8c
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.menu-newsroom-media-resources
+  module:
+    - menu_block
+  theme:
+    - tailwind_nzp
+id: news
+theme: tailwind_nzp
+region: footer
+weight: -3
+provider: null
+plugin: 'menu_block:menu-newsroom-media-resources'
+settings:
+  id: 'menu_block:menu-newsroom-media-resources'
+  label: 'Newsroom Media Resources'
+  label_display: visible
+  provider: menu_block
+  follow: false
+  follow_parent: child
+  label_link: false
+  label_type: block
+  level: 1
+  depth: 0
+  expand_all_items: false
+  parent: 'menu-newsroom-media-resources:'
+  suggestion: news
+visibility: {  }

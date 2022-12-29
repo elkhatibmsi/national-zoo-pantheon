@@ -1,0 +1,8 @@
+uuid: 73e7361d-b2e3-487d-a77c-61172f6d85a9
+langcode: en
+status: true
+dependencies: {  }
+name: 'Membership Level Categories'
+vid: membership_level_categories
+description: 'Used to categorize membership levels'
+weight: 0

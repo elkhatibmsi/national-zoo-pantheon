@@ -1,0 +1,19 @@
+uuid: cbd83830-d7ef-4083-9c0c-ce3761c757f0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_position
+    - node.type.bio_profiles
+id: node.bio_profiles.field_position
+field_name: field_position
+entity_type: node
+bundle: bio_profiles
+label: Position
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,19 @@
+uuid: 5c120109-60e7-4e28-bde1-95fe5eed1e81
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_other_species
+    - node.type.scbi_project
+id: node.scbi_project.field_other_species
+field_name: field_other_species
+entity_type: node
+bundle: scbi_project
+label: 'Other species'
+description: 'Add animals related to this project that do not have a page on this website.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

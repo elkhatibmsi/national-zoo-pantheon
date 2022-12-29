@@ -1,0 +1,29 @@
+uuid: 287f1d80-f242-48de-9533-34c8e70d1f5d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_animal_demo_exhibit
+    - node.type.animal_demo
+    - node.type.exhibit
+id: node.animal_demo.field_animal_demo_exhibit
+field_name: field_animal_demo_exhibit
+entity_type: node
+bundle: animal_demo
+label: Exhibit
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      exhibit: exhibit
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

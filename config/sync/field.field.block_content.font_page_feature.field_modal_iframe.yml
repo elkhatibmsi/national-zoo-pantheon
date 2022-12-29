@@ -1,0 +1,23 @@
+uuid: 8725011f-bbe4-43bf-9a36-915165cebb24
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.font_page_feature
+    - field.storage.block_content.field_modal_iframe
+id: block_content.font_page_feature.field_modal_iframe
+field_name: field_modal_iframe
+entity_type: block_content
+bundle: font_page_feature
+label: 'modal iframe'
+description: 'If you check this box, the web page you link to will be placed in an iframe which will appear inside a modal window (i.e., the user will not leave the site)'
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: ''
+  off_label: ''
+field_type: boolean

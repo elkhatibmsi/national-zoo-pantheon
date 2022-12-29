@@ -1,0 +1,10 @@
+uuid: e6cbfc0a-c7e3-46b4-b256-f276cb6ad4aa
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.350_width
+label: '350 Width'
+targetEntityType: media
+cache: true

@@ -1,0 +1,29 @@
+uuid: a9d89ccb-4f2c-4b7c-a61b-8834281ccf75
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_bio_profile_type
+    - node.type.bio_profiles
+    - taxonomy.vocabulary.bio_profile_categories
+id: node.bio_profiles.field_bio_profile_type
+field_name: field_bio_profile_type
+entity_type: node
+bundle: bio_profiles
+label: 'Bio Profile Type'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      bio_profile_categories: bio_profile_categories
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

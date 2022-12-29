@@ -1,0 +1,103 @@
+uuid: 3615480e-2aea-4311-a169-b41fc7d2bf9b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.membership_levels.field_benefits
+    - field.field.taxonomy_term.membership_levels.field_cost
+    - field.field.taxonomy_term.membership_levels.field_landing_image
+    - field.field.taxonomy_term.membership_levels.field_membership_category
+    - field.field.taxonomy_term.membership_levels.field_promotion
+    - field.field.taxonomy_term.membership_levels.field_tour
+    - taxonomy.vocabulary.membership_levels
+  module:
+    - path
+    - text
+id: taxonomy_term.membership_levels.default
+targetEntityType: taxonomy_term
+bundle: membership_levels
+mode: default
+content:
+  description:
+    type: text_textarea
+    weight: 1
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_benefits:
+    type: options_select
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_cost:
+    type: number
+    weight: 6
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_landing_image:
+    type: entity_reference_autocomplete
+    weight: 7
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_membership_category:
+    type: entity_reference_autocomplete
+    weight: 8
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_promotion:
+    type: entity_reference_autocomplete
+    weight: 9
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_tour:
+    type: text_textarea_with_summary
+    weight: 4
+    region: content
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 3
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+hidden: {  }

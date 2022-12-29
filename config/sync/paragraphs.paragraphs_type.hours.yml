@@ -1,0 +1,15 @@
+uuid: eee06225-a2bd-44f7-a984-581d112d7b2f
+langcode: en
+status: true
+dependencies:
+  module:
+    - layout_paragraphs
+id: hours
+label: Hours
+icon_uuid: null
+icon_default: null
+description: 'Migrated from field_collection field_hours'
+behavior_plugins:
+  layout_paragraphs:
+    enabled: false
+    available_layouts: {  }

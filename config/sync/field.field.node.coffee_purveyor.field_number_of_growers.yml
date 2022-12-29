@@ -1,0 +1,23 @@
+uuid: 2d51e066-f15a-4776-9116-b5d393a308d9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_number_of_growers
+    - node.type.coffee_purveyor
+id: node.coffee_purveyor.field_number_of_growers
+field_name: field_number_of_growers
+entity_type: node
+bundle: coffee_purveyor
+label: 'Number of growers'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

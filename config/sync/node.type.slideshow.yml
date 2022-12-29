@@ -1,0 +1,18 @@
+uuid: 73706815-19c0-40ee-afd2-3f0f9fc7ee31
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: slideshow
+type: slideshow
+description: 'example content type (will delete)'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: true

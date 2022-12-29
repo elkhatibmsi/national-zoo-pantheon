@@ -1,0 +1,23 @@
+uuid: a54c5cec-0967-4e50-95fa-d5f7e93aa6d8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_media_release_category
+    - node.type.media_release
+id: node.media_release.field_media_release_category
+field_name: field_media_release_category
+entity_type: node
+bundle: media_release
+label: 'Media Release Category'
+description: 'Choose the type of media release'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    sort:
+      field: _none
+field_type: entity_reference

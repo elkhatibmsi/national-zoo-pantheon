@@ -1,0 +1,117 @@
+uuid: b0670024-ddb5-4e81-ac47-6e1b1313c440
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.accordion.field_accordion_tab_title
+    - field.field.paragraph.accordion.field_tab_content
+    - paragraphs.paragraphs_type.accordion
+  module:
+    - entity_reference_revisions
+    - layout_builder
+    - nzp_layouts
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: layout_accordion
+        layout_settings:
+          label: ''
+          context_mapping: {  }
+        components:
+          74133195-6fa5-4afe-8a0c-0f3280198961:
+            uuid: 74133195-6fa5-4afe-8a0c-0f3280198961
+            region: summary
+            configuration:
+              id: 'field_block:paragraph:accordion:field_accordion_tab_title'
+              label: 'Accordion Tab Title'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: string
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          adf0d307-2e42-4eb6-89f8-27c973f6a2ac:
+            uuid: adf0d307-2e42-4eb6-89f8-27c973f6a2ac
+            region: content
+            configuration:
+              id: 'field_block:paragraph:accordion:field_tab_content'
+              label: 'Tab Content'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: entity_reference_revisions_entity_view
+                label: hidden
+                settings:
+                  view_mode: default
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          ce5d4313-3232-41d5-9731-85f0240d9a4c:
+            uuid: ce5d4313-3232-41d5-9731-85f0240d9a4c
+            region: content
+            configuration:
+              id: 'field_block:paragraph:accordion:field_accordion_tab_title'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: string
+                label: above
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            weight: 1
+            additional: {  }
+          9c60cfa3-c69b-494d-a1aa-9da3f8f442fc:
+            uuid: 9c60cfa3-c69b-494d-a1aa-9da3f8f442fc
+            region: content
+            configuration:
+              id: 'field_block:paragraph:accordion:field_tab_content'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: entity_reference_revisions_entity_view
+                label: above
+                settings:
+                  view_mode: default
+                  link: ''
+                third_party_settings: {  }
+            weight: 2
+            additional: {  }
+        third_party_settings: {  }
+id: paragraph.accordion.default
+targetEntityType: paragraph
+bundle: accordion
+mode: default
+content:
+  field_accordion_tab_title:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_tab_content:
+    type: entity_reference_revisions_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden: {  }

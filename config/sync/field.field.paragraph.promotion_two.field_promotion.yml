@@ -1,0 +1,60 @@
+uuid: f4d269e7-fe95-422c-b82f-8ce093ddfd39
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_promotion
+    - node.type.adopt_a_species
+    - node.type.animal
+    - node.type.attraction
+    - node.type.basic_page
+    - node.type.camp
+    - node.type.class
+    - node.type.event
+    - node.type.exhibit
+    - node.type.internship
+    - node.type.media_release
+    - node.type.news
+    - node.type.scbi_project
+    - node.type.school_program
+    - node.type.volunteer_opportunity
+    - node.type.webcam
+    - node.type.webform
+    - paragraphs.paragraphs_type.promotion_two
+id: paragraph.promotion_two.field_promotion
+field_name: field_promotion
+entity_type: paragraph
+bundle: promotion_two
+label: Promotion
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      adopt_a_species: adopt_a_species
+      animal: animal
+      attraction: attraction
+      basic_page: basic_page
+      camp: camp
+      class: class
+      event: event
+      exhibit: exhibit
+      internship: internship
+      media_release: media_release
+      news: news
+      scbi_project: scbi_project
+      school_program: school_program
+      volunteer_opportunity: volunteer_opportunity
+      webcam: webcam
+      webform: webform
+    sort:
+      field: _none
+      direction: ASC
+    behaviors:
+      views-select-list:
+        status: 0
+field_type: entity_reference

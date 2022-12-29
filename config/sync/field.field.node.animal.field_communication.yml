@@ -1,0 +1,21 @@
+uuid: 646f7ecd-2848-4fe1-b2a7-b341241036f4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_communication
+    - node.type.animal
+  module:
+    - text
+id: node.animal.field_communication
+field_name: field_communication
+entity_type: node
+bundle: animal
+label: Communication
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

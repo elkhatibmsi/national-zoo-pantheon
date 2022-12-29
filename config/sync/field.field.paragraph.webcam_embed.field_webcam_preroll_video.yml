@@ -1,0 +1,24 @@
+uuid: a19c99ca-7d1c-4d54-b142-2569aa2c63af
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_webcam_preroll_video
+    - media.type.video
+    - paragraphs.paragraphs_type.webcam_embed
+id: paragraph.webcam_embed.field_webcam_preroll_video
+field_name: field_webcam_preroll_video
+entity_type: paragraph
+bundle: webcam_embed
+label: 'Preroll Video'
+description: 'Add a preroll video to the webcam. File must be in mp4 format. '
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      video: video
+field_type: entity_reference

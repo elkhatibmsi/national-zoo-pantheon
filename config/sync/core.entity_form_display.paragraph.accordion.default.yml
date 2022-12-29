@@ -1,0 +1,25 @@
+uuid: 0ddaf2f2-74b2-476f-9f77-3e2cbf82605d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.accordion.field_accordion_tab_title
+    - field.field.paragraph.accordion.field_tab_content
+    - paragraphs.paragraphs_type.accordion
+id: paragraph.accordion.default
+targetEntityType: paragraph
+bundle: accordion
+mode: default
+content:
+  field_accordion_tab_title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  field_tab_content: true
+  status: true

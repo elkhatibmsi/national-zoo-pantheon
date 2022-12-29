@@ -1,0 +1,34 @@
+uuid: 6c095cf1-1573-44b6-b1d3-8d51e77994ad
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - nzp_paragraphs
+id: paragraph__slideshow_image_only
+class: null
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - Paragraphs
+migration_group: nzp_paragraphs
+label: 'slideshow paragraph'
+source:
+  plugin: d7_paragraphs_item
+  bundle: image_only
+process:
+  id: item_id
+  field_image:
+    -
+      plugin: media_migration_delta_sort
+      source: field_image
+    -
+      plugin: sub_process
+      process:
+        target_id: fid
+destination:
+  plugin: 'entity_reference_revisions:paragraph'
+  default_bundle: image_only
+migration_dependencies:
+  required: {  }
+  optional: {  }

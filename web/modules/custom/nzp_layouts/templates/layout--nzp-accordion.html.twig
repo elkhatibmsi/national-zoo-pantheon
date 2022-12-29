@@ -1,0 +1,10 @@
+{% if content %}
+    <details>
+    <summary {{region_attributes.summary}}>
+        {{ content.summary }}
+      </summary>
+      <div {{region_attributes.content}}>
+        {{ content.content }}
+      </div>
+    </details>
+{% endif %}

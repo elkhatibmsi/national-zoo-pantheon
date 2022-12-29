@@ -1,0 +1,22 @@
+uuid: 93318995-057d-4f1d-ad93-07fea5252ab5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.multi_column_layout_text_.field_multi_column_layout_text
+    - paragraphs.paragraphs_type.multi_column_layout_text_
+  module:
+    - text
+id: paragraph.multi_column_layout_text_.default
+targetEntityType: paragraph
+bundle: multi_column_layout_text_
+mode: default
+content:
+  field_multi_column_layout_text:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

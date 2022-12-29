@@ -1,0 +1,21 @@
+uuid: ff5860f6-a924-44ca-9ffd-fb78ead9f91f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_term_of_appointment
+    - node.type.internship
+  module:
+    - text
+id: node.internship.field_term_of_appointment
+field_name: field_term_of_appointment
+entity_type: node
+bundle: internship
+label: 'Term of appointment'
+description: 'Enter the term of appointment for this internship'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

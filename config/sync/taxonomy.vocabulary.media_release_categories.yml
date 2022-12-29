@@ -1,0 +1,8 @@
+uuid: 45d3696f-3b5e-4848-83da-d4a44d4b9e9f
+langcode: en
+status: true
+dependencies: {  }
+name: 'Media release categories'
+vid: media_release_categories
+description: ''
+weight: 0

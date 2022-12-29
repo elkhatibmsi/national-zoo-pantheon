@@ -1,0 +1,171 @@
+uuid: a3262947-bde6-4d37-bbe7-a1d54c28ae54
+langcode: en
+status: true
+dependencies: {  }
+id: upgrade_d7_url_alias
+class: Drupal\migrate\Plugin\Migration
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 7'
+  - Content
+migration_group: migrate_drupal_7
+label: 'URL aliases'
+source:
+  plugin: d7_url_alias
+  constants:
+    slash: /
+process:
+  id:
+    -
+      plugin: get
+      source: pid
+  _path:
+    -
+      plugin: concat
+      source:
+        - constants/slash
+        - source
+  alias:
+    -
+      plugin: concat
+      source:
+        - constants/slash
+        - alias
+  node_translation:
+    -
+      plugin: explode
+      source: source
+      delimiter: /
+    -
+      plugin: extract
+      default: INVALID_NID
+      index:
+        - 1
+    -
+      plugin: migration_lookup
+      migration:
+        - upgrade_d7_node_complete_adopt_a_species
+        - upgrade_d7_node_complete_advpoll
+        - upgrade_d7_node_complete_animal
+        - upgrade_d7_node_complete_attraction
+        - upgrade_d7_node_complete_basic_page
+        - upgrade_d7_node_complete_blank_page
+        - upgrade_d7_node_complete_board_member
+        - upgrade_d7_node_complete_camp
+        - upgrade_d7_node_complete_class
+        - upgrade_d7_node_complete_coffee_product
+        - upgrade_d7_node_complete_coffee_purveyor
+        - upgrade_d7_node_complete_coffee_retailer
+        - upgrade_d7_node_complete_corporate_partner
+        - upgrade_d7_node_complete_document
+        - upgrade_d7_node_complete_event
+        - upgrade_d7_node_complete_exhibit
+        - upgrade_d7_node_complete_hours
+        - upgrade_d7_node_complete_internship
+        - upgrade_d7_node_complete_job
+        - upgrade_d7_node_complete_media_release
+        - upgrade_d7_node_complete_membership_level
+        - upgrade_d7_node_complete_news
+        - upgrade_d7_node_complete_panel
+        - upgrade_d7_node_complete_poll
+        - upgrade_d7_node_complete_restaurant
+        - upgrade_d7_node_complete_scbi_project
+        - upgrade_d7_node_complete_scbi_staff
+        - upgrade_d7_node_complete_school_program
+        - upgrade_d7_node_complete_timed_content
+        - upgrade_d7_node_complete_user_alert
+        - upgrade_d7_node_complete_venue
+        - upgrade_d7_node_complete_volunteer_opportunity
+        - upgrade_d7_node_complete_webcam
+        - upgrade_d7_node_complete_webform
+        - upgrade_d7_node_complete_zoo_hours
+    -
+      plugin: node_complete_node_translation_lookup
+  langcode:
+    -
+      plugin: null_coalesce
+      source:
+        - '@node_translation/1'
+        - language
+  path:
+    -
+      plugin: path_set_translated
+      source:
+        - '@_path'
+        - '@node_translation'
+destination:
+  plugin: 'entity:path_alias'
+migration_dependencies:
+  required: {  }
+  optional:
+    - upgrade_d7_node_complete_adopt_a_species
+    - upgrade_d7_node_complete_advpoll
+    - upgrade_d7_node_complete_animal
+    - upgrade_d7_node_complete_attraction
+    - upgrade_d7_node_complete_basic_page
+    - upgrade_d7_node_complete_blank_page
+    - upgrade_d7_node_complete_board_member
+    - upgrade_d7_node_complete_camp
+    - upgrade_d7_node_complete_class
+    - upgrade_d7_node_complete_coffee_product
+    - upgrade_d7_node_complete_coffee_purveyor
+    - upgrade_d7_node_complete_coffee_retailer
+    - upgrade_d7_node_complete_corporate_partner
+    - upgrade_d7_node_complete_document
+    - upgrade_d7_node_complete_event
+    - upgrade_d7_node_complete_exhibit
+    - upgrade_d7_node_complete_hours
+    - upgrade_d7_node_complete_internship
+    - upgrade_d7_node_complete_job
+    - upgrade_d7_node_complete_media_release
+    - upgrade_d7_node_complete_membership_level
+    - upgrade_d7_node_complete_news
+    - upgrade_d7_node_complete_panel
+    - upgrade_d7_node_complete_poll
+    - upgrade_d7_node_complete_restaurant
+    - upgrade_d7_node_complete_scbi_project
+    - upgrade_d7_node_complete_scbi_staff
+    - upgrade_d7_node_complete_school_program
+    - upgrade_d7_node_complete_timed_content
+    - upgrade_d7_node_complete_user_alert
+    - upgrade_d7_node_complete_venue
+    - upgrade_d7_node_complete_volunteer_opportunity
+    - upgrade_d7_node_complete_webcam
+    - upgrade_d7_node_complete_webform
+    - upgrade_d7_node_complete_zoo_hours
+    - upgrade_d7_node_complete_adopt_a_species
+    - upgrade_d7_node_complete_advpoll
+    - upgrade_d7_node_complete_animal
+    - upgrade_d7_node_complete_attraction
+    - upgrade_d7_node_complete_basic_page
+    - upgrade_d7_node_complete_blank_page
+    - upgrade_d7_node_complete_board_member
+    - upgrade_d7_node_complete_camp
+    - upgrade_d7_node_complete_class
+    - upgrade_d7_node_complete_coffee_product
+    - upgrade_d7_node_complete_coffee_purveyor
+    - upgrade_d7_node_complete_coffee_retailer
+    - upgrade_d7_node_complete_corporate_partner
+    - upgrade_d7_node_complete_document
+    - upgrade_d7_node_complete_event
+    - upgrade_d7_node_complete_exhibit
+    - upgrade_d7_node_complete_hours
+    - upgrade_d7_node_complete_internship
+    - upgrade_d7_node_complete_job
+    - upgrade_d7_node_complete_media_release
+    - upgrade_d7_node_complete_membership_level
+    - upgrade_d7_node_complete_news
+    - upgrade_d7_node_complete_panel
+    - upgrade_d7_node_complete_poll
+    - upgrade_d7_node_complete_restaurant
+    - upgrade_d7_node_complete_scbi_project
+    - upgrade_d7_node_complete_scbi_staff
+    - upgrade_d7_node_complete_school_program
+    - upgrade_d7_node_complete_timed_content
+    - upgrade_d7_node_complete_user_alert
+    - upgrade_d7_node_complete_venue
+    - upgrade_d7_node_complete_volunteer_opportunity
+    - upgrade_d7_node_complete_webcam
+    - upgrade_d7_node_complete_webform
+    - upgrade_d7_node_complete_zoo_hours

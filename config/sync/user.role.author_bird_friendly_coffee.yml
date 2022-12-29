@@ -1,0 +1,68 @@
+uuid: 9772715d-eae8-4a49-a39f-656831540f18
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.full_html
+    - node.type.basic_page
+    - node.type.class
+    - node.type.coffee_product
+    - node.type.coffee_purveyor
+    - node.type.coffee_retailer
+  module:
+    - filter
+    - node
+    - system
+id: author_bird_friendly_coffee
+label: 'author - bird friendly coffee'
+weight: 14
+is_admin: null
+permissions:
+  - 'access administration menu'
+  - 'access administration pages'
+  - 'access content'
+  - 'access content overview'
+  - 'access geocoder autocomplete'
+  - 'access workbench'
+  - 'administer files'
+  - 'bypass workbench moderation'
+  - 'clear coffee_product_importer feeds'
+  - 'clear coffee_retailer_import feeds'
+  - 'create basic_page content'
+  - 'create coffee_product content'
+  - 'create coffee_purveyor content'
+  - 'create coffee_retailer content'
+  - 'create files'
+  - 'delete any class content'
+  - 'delete any coffee_product content'
+  - 'delete any coffee_purveyor content'
+  - 'delete any coffee_retailer content'
+  - 'delete any image files'
+  - 'delete own coffee_product content'
+  - 'delete own coffee_purveyor content'
+  - 'delete own coffee_retailer content'
+  - 'delete own image files'
+  - 'delete terms in 34'
+  - 'edit any basic_page content'
+  - 'edit any coffee_product content'
+  - 'edit any coffee_purveyor content'
+  - 'edit any coffee_retailer content'
+  - 'edit any image files'
+  - 'edit own basic_page content'
+  - 'edit own coffee_product content'
+  - 'edit own coffee_purveyor content'
+  - 'edit own coffee_retailer content'
+  - 'edit terms in 34'
+  - 'import coffee_product_importer feeds'
+  - 'import coffee_retailer_import feeds'
+  - 'submit latitude/longitude'
+  - 'unlock coffee_product_importer feeds'
+  - 'unlock coffee_retailer_import feeds'
+  - 'use text format filtered_html'
+  - 'use text format full_html'
+  - 'view all unpublished content'
+  - 'view files'
+  - 'view location directory'
+  - 'view moderation history'
+  - 'view node location table'
+  - 'view node map'

@@ -1,0 +1,23 @@
+uuid: 50608964-df94-4331-80aa-0aa44a5f80f3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_media_tags
+    - media.type.image
+id: media.image.field_media_tags
+field_name: field_media_tags
+entity_type: media
+bundle: image
+label: Tag(s)
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    sort:
+      field: _none
+field_type: entity_reference

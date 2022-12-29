@@ -1,0 +1,13 @@
+
+{% block paragraph %}
+	{{ content.controls }}
+	<div{{attributes}}>
+		{%
+		include '@nzpComponents/accordions/accordion.html.twig' with {
+			label: content.field_faq_question,
+			body: content.field_faq_answer,
+		} 
+		%}
+	</div>
+{% endblock paragraph %}
+

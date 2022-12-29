@@ -1,0 +1,10 @@
+{% if content %}
+    <dl class="mt1 mb1" style="all: unset; display: grid; grid-template-columns: max-content 1fr; grid-gap: 1em">
+        <dt style="all: unset; font-weight: bold">
+            {{ content.term }}
+        </dt>
+        <dd style="all: unset">
+            {{ content.definition }}
+        </dd>       
+    </dl>
+{% endif %}

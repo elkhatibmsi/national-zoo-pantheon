@@ -1,0 +1,21 @@
+uuid: 6e6f346d-a20e-4126-b2a2-375d2fefacac
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_certification_expires
+    - node.type.coffee_purveyor
+  module:
+    - datetime
+id: node.coffee_purveyor.field_certification_expires
+field_name: field_certification_expires
+entity_type: node
+bundle: coffee_purveyor
+label: 'Certification expires'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

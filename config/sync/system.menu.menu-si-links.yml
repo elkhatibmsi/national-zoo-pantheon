@@ -1,0 +1,8 @@
+uuid: 02999440-90f1-4c7b-b1c7-6ecbaf8705e3
+langcode: en
+status: true
+dependencies: {  }
+id: menu-si-links
+label: 'SI Links'
+description: 'Links to Smithsonian that typically appear as small print in the footer.'
+locked: false

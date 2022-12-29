@@ -1,0 +1,16 @@
+{% set card_array = content %}
+
+{% block paragraph %}
+	{{ content.controls }}
+  <div{{ attributes }}>
+
+{%
+  include '@nzpComponents/card-grid/card-grid.html.twig' with {
+    cards: card_array,
+    card_column_count: paragraph.field_number_of_columns.value,
+  } 
+
+ 
+%}
+</div>
+{% endblock %}

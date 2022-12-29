@@ -1,0 +1,46 @@
+uuid: ab359740-bc2f-444c-8425-73694f570c86
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.blank_page.body
+    - field.field.node.blank_page.field_content_block
+    - field.field.node.blank_page.field_editorial_access
+    - field.field.node.blank_page.field_hero_image
+    - field.field.node.blank_page.field_hero_video
+    - field.field.node.blank_page.field_landing_image
+    - field.field.node.blank_page.field_parent_project
+    - field.field.node.blank_page.field_story_type
+    - field.field.node.blank_page.field_tags
+    - node.type.blank_page
+  module:
+    - text
+    - user
+id: node.blank_page.teaser
+targetEntityType: node
+bundle: blank_page
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_content_block: true
+  field_editorial_access: true
+  field_hero_image: true
+  field_hero_video: true
+  field_landing_image: true
+  field_parent_project: true
+  field_story_type: true
+  field_tags: true

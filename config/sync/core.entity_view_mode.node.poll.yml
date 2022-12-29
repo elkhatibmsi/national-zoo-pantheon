@@ -1,0 +1,10 @@
+uuid: c5a1f703-d125-46cd-8158-0852f6b41539
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.poll
+label: poll
+targetEntityType: node
+cache: true

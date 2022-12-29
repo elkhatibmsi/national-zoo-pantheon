@@ -1,0 +1,47 @@
+uuid: ff1e6bc2-4612-4eb1-b54b-9613ad200374
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.slick
+    - field.field.media.remote_video.field_media_oembed_video
+    - image.style.slick_square
+    - media.type.remote_video
+  module:
+    - blazy
+    - layout_builder
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+_core:
+  default_config_hash: gUaDZKMQD3lmLKWPn727X3JHVdKJ525g4EJCCcDVAqk
+id: media.remote_video.slick
+targetEntityType: media
+bundle: remote_video
+mode: slick
+content:
+  field_media_oembed_video:
+    type: blazy_oembed
+    label: hidden
+    settings:
+      caption: {  }
+      background: false
+      box_caption: ''
+      box_caption_custom: ''
+      box_media_style: ''
+      responsive_image_style: ''
+      box_style: ''
+      image_style: slick_square
+      media_switch: slick_lightbox
+      ratio: ''
+      thumbnail_style: ''
+      _uri: ''
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  created: true
+  name: true
+  thumbnail: true
+  uid: true

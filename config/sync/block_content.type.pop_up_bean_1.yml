@@ -1,0 +1,8 @@
+uuid: 2f172df1-a0b7-4734-8d30-3ce4178b4db1
+langcode: en
+status: true
+dependencies: {  }
+id: pop_up_bean_1
+label: 'Pop Up'
+revision: 1
+description: "create popup blocks that can be referenced via Context or Paragraphs via the Block Reference field. \r\n"

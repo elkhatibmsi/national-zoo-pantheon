@@ -1,0 +1,15 @@
+uuid: a4c0d987-7e86-4659-954b-a1f70670c53a
+langcode: en
+status: true
+dependencies:
+  module:
+    - layout_paragraphs
+id: modal_media_gallery
+label: 'Modal Media Gallery'
+icon_uuid: null
+icon_default: null
+description: 'Migrated from paragraph bundle Modal Media Gallery'
+behavior_plugins:
+  layout_paragraphs:
+    enabled: false
+    available_layouts: {  }

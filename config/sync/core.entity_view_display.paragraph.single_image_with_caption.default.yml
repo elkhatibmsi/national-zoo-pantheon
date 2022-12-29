@@ -1,0 +1,74 @@
+uuid: e9fda59b-48d8-4e53-b159-574e3e5d440b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.single_image_with_caption.field_single_image_caption_body
+    - field.field.paragraph.single_image_with_caption.field_single_image_caption_image
+    - field.field.paragraph.single_image_with_caption.field_single_image_caption_title
+    - paragraphs.paragraphs_type.single_image_with_caption
+  module:
+    - blazy
+    - text
+id: paragraph.single_image_with_caption.default
+targetEntityType: paragraph
+bundle: single_image_with_caption
+mode: default
+content:
+  field_single_image_caption_body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_single_image_caption_image:
+    type: blazy_media
+    label: hidden
+    settings:
+      caption: {  }
+      class: ''
+      id: ''
+      image: ''
+      link: ''
+      overlay: ''
+      title: ''
+      vanilla: false
+      layout: ''
+      view_mode: default
+      cache: 0
+      skin: ''
+      style: ''
+      background: false
+      box_caption: ''
+      box_caption_custom: ''
+      box_media_style: ''
+      responsive_image_style: ''
+      box_style: ''
+      image_style: ''
+      media_switch: ''
+      ratio: ''
+      thumbnail_style: ''
+      grid: ''
+      grid_medium: ''
+      grid_small: ''
+      breakpoints: {  }
+      current_view_mode: ''
+      fx: ''
+      icon: ''
+      sizes: ''
+      grid_header: ''
+      _uri: ''
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_single_image_caption_title:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  field_slide_image: true
+  field_text: true

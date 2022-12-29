@@ -1,0 +1,23 @@
+uuid: b1d4c904-67bc-44c5-be7f-60a44147cdc2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_pounds_of_coffee
+    - node.type.coffee_purveyor
+id: node.coffee_purveyor.field_pounds_of_coffee
+field_name: field_pounds_of_coffee
+entity_type: node
+bundle: coffee_purveyor
+label: 'Pounds of coffee'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

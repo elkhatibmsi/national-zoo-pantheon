@@ -1,0 +1,8 @@
+uuid: f317ae3f-6720-4343-b02e-3bbac311327c
+langcode: en
+status: true
+dependencies: {  }
+id: paragraph_block
+label: 'Paragraph Block'
+revision: 0
+description: ''

@@ -1,0 +1,21 @@
+uuid: f6b44b02-87d6-4168-9d9a-e035a8fd298d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_date_range
+    - node.type.zoo_hours
+  module:
+    - datetime
+id: node.zoo_hours.field_date_range
+field_name: field_date_range
+entity_type: node
+bundle: zoo_hours
+label: 'Date Range'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

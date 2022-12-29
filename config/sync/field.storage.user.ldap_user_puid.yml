@@ -1,0 +1,21 @@
+uuid: fc549e10-3aeb-40f5-bead-150d1a6c7c69
+langcode: und
+status: true
+dependencies:
+  module:
+    - user
+id: user.ldap_user_puid
+field_name: ldap_user_puid
+entity_type: user
+type: string
+settings:
+  max_length: 255
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

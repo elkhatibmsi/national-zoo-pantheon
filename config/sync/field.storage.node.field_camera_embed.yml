@@ -1,0 +1,19 @@
+uuid: 44bbcc4b-dd9b-4e14-94b1-3d34b0c54c7d
+langcode: und
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_camera_embed
+field_name: field_camera_embed
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 3
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

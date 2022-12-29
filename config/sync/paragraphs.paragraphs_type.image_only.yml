@@ -1,0 +1,15 @@
+uuid: 3b3c0fbb-90b3-430d-b5df-c5581bdff3a1
+langcode: en
+status: true
+dependencies:
+  module:
+    - layout_paragraphs
+id: image_only
+label: 'Slideshow (images only)'
+icon_uuid: null
+icon_default: null
+description: 'Migrated from paragraph bundle Slideshow (images only)'
+behavior_plugins:
+  layout_paragraphs:
+    enabled: false
+    available_layouts: {  }

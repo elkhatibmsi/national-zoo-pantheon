@@ -1,0 +1,64 @@
+uuid: e4bc6d84-81bf-479a-be79-4a62b5703c5e
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.advpoll.advpoll_behavior
+    - field.field.node.advpoll.advpoll_closed
+    - field.field.node.advpoll.advpoll_cookie_duration
+    - field.field.node.advpoll.advpoll_dates
+    - field.field.node.advpoll.advpoll_max_choices
+    - field.field.node.advpoll.advpoll_mode
+    - field.field.node.advpoll.advpoll_options
+    - field.field.node.advpoll.advpoll_results
+    - field.field.node.advpoll.body
+    - field.field.node.advpoll.field_editorial_access
+    - field.field.node.advpoll.field_feature_one
+    - field.field.node.advpoll.field_feature_three
+    - field.field.node.advpoll.field_feature_two
+    - field.field.node.advpoll.field_landing_image
+    - field.field.node.advpoll.field_paragraph_component
+    - field.field.node.advpoll.field_poll_heading
+    - field.field.node.advpoll.field_promotion_three
+    - field.field.node.advpoll.field_related_animal
+    - node.type.advpoll
+  module:
+    - text
+    - user
+id: node.advpoll.teaser
+targetEntityType: node
+bundle: advpoll
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  advpoll_behavior: true
+  advpoll_closed: true
+  advpoll_cookie_duration: true
+  advpoll_dates: true
+  advpoll_max_choices: true
+  advpoll_mode: true
+  advpoll_options: true
+  advpoll_results: true
+  field_editorial_access: true
+  field_feature_one: true
+  field_feature_three: true
+  field_feature_two: true
+  field_landing_image: true
+  field_paragraph_component: true
+  field_poll_heading: true
+  field_promotion_three: true
+  field_related_animal: true

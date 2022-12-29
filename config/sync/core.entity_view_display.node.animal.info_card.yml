@@ -1,0 +1,408 @@
+uuid: db61e9c8-2215-422c-a64a-16c74a2856d0
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.info_card
+    - field.field.node.animal.body
+    - field.field.node.animal.field_animal_type
+    - field.field.node.animal.field_card_position
+    - field.field.node.animal.field_communication
+    - field.field.node.animal.field_conservation_efforts
+    - field.field.node.animal.field_editorial_access
+    - field.field.node.animal.field_exhibit
+    - field.field.node.animal.field_featured_video
+    - field.field.node.animal.field_feeding_time
+    - field.field.node.animal.field_food_eating_habits
+    - field.field.node.animal.field_fun_facts
+    - field.field.node.animal.field_genus_and_species
+    - field.field.node.animal.field_help_this_species
+    - field.field.node.animal.field_image
+    - field.field.node.animal.field_image_media
+    - field.field.node.animal.field_image_s_media
+    - field.field.node.animal.field_iucn_designation
+    - field.field.node.animal.field_lifespan
+    - field.field.node.animal.field_meet_the_animals
+    - field.field.node.animal.field_modal_gallery
+    - field.field.node.animal.field_native_habitat
+    - field.field.node.animal.field_nzp_location
+    - field.field.node.animal.field_physical_description
+    - field.field.node.animal.field_reproduction_developme
+    - field.field.node.animal.field_size
+    - field.field.node.animal.field_sleep_habits
+    - field.field.node.animal.field_social_structure
+    - field.field.node.animal.field_taxonomic_class
+    - field.field.node.animal.field_taxonomic_family
+    - field.field.node.animal.field_taxonomic_order
+    - node.type.animal
+  module:
+    - entity_reference_revisions
+    - image
+    - layout_builder
+    - nzp_layouts
+    - options
+    - text
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: layout_nzp_tab
+        layout_settings:
+          label: ''
+          context_mapping: {  }
+          tab_title:
+            tab:
+              - 'Fact Sheet'
+              - Conservation
+              - 'Meet the Animals'
+          num_tabs: 3
+        components:
+          0d1548c0-80d1-4709-a94e-a80ae1b7fcac:
+            uuid: 0d1548c0-80d1-4709-a94e-a80ae1b7fcac
+            region: tab_content_0
+            configuration:
+              id: 'field_block:node:animal:field_physical_description'
+              label: 'Physical Description'
+              label_display: visible
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          9f91c26d-416b-4660-8ca0-53e094ae5c17:
+            uuid: 9f91c26d-416b-4660-8ca0-53e094ae5c17
+            region: tab_content_0
+            configuration:
+              id: 'field_block:node:animal:field_size'
+              label: Size
+              label_display: visible
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            weight: 1
+            additional: {  }
+          54d8afdc-bd04-47a0-bd32-b361b913e597:
+            uuid: 54d8afdc-bd04-47a0-bd32-b361b913e597
+            region: tab_content_0
+            configuration:
+              id: 'field_block:node:animal:field_native_habitat'
+              label: 'Native Habitat'
+              label_display: visible
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            weight: 2
+            additional: {  }
+          9a5171f7-c675-4b3e-9860-ee8468326016:
+            uuid: 9a5171f7-c675-4b3e-9860-ee8468326016
+            region: tab_content_0
+            configuration:
+              id: 'field_block:node:animal:field_communication'
+              label: Communication
+              label_display: visible
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            weight: 3
+            additional: {  }
+          a2aca01d-6ac6-4886-8d87-f9aa5e6f389a:
+            uuid: a2aca01d-6ac6-4886-8d87-f9aa5e6f389a
+            region: tab_content_0
+            configuration:
+              id: 'field_block:node:animal:field_food_eating_habits'
+              label: 'Food/Eating Habits'
+              label_display: visible
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            weight: 4
+            additional: {  }
+          123f33e2-73a5-4345-b22e-6aee01f9427e:
+            uuid: 123f33e2-73a5-4345-b22e-6aee01f9427e
+            region: tab_content_0
+            configuration:
+              id: 'field_block:node:animal:field_social_structure'
+              label: 'Social Structure'
+              label_display: visible
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            weight: 5
+            additional: {  }
+          0fcc903d-65e3-44f8-a15b-02105d8a0f72:
+            uuid: 0fcc903d-65e3-44f8-a15b-02105d8a0f72
+            region: tab_content_1
+            configuration:
+              id: 'field_block:node:animal:field_conservation_efforts'
+              label: 'Conservation Efforts'
+              label_display: visible
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          77c46111-3bd7-4ee1-ae00-269fb9473131:
+            uuid: 77c46111-3bd7-4ee1-ae00-269fb9473131
+            region: tab_content_2
+            configuration:
+              id: 'field_block:node:animal:field_meet_the_animals'
+              label: 'Meet the Animals'
+              label_display: visible
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+        third_party_settings: {  }
+id: node.animal.info_card
+targetEntityType: node
+bundle: animal
+mode: info_card
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: -20
+    region: content
+  field_animal_type:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 18
+    region: content
+  field_communication:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 11
+    region: content
+  field_conservation_efforts:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 15
+    region: content
+  field_featured_video:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 27
+    region: content
+  field_feeding_time:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  field_food_eating_habits:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 13
+    region: content
+  field_fun_facts:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 9
+    region: content
+  field_genus_and_species:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_help_this_species:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 26
+    region: content
+  field_image:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 29
+    region: content
+  field_iucn_designation:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_lifespan:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  field_meet_the_animals:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 19
+    region: content
+  field_modal_gallery:
+    type: entity_reference_revisions_entity_view
+    label: above
+    settings:
+      view_mode: full
+      link: ''
+    third_party_settings: {  }
+    weight: 28
+    region: content
+  field_native_habitat:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 17
+    region: content
+  field_physical_description:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_reproduction_developme:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 12
+    region: content
+  field_size:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 16
+    region: content
+  field_sleep_habits:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 14
+    region: content
+  field_social_structure:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_taxonomic_class:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_taxonomic_family:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_taxonomic_order:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_card_position: true
+  field_editorial_access: true
+  field_exhibit: true
+  field_image_media: true
+  field_image_s_media: true
+  field_nzp_location: true

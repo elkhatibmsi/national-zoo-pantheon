@@ -1,0 +1,19 @@
+uuid: fe1a8f4c-fc2e-436c-8555-caf86e1a8850
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+    - text
+id: paragraph.field_single_image_caption_body
+field_name: field_single_image_caption_body
+entity_type: paragraph
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,17 @@
+<div class="card--list mb-4 pb-4 border-b-[1px] border-lightergray">
+	<div class="text-xs mb-2 uppercase font-bold">
+		{% if hide_meta == false %}
+			<span>{{ authored_date }}</span>
+			|
+			<span>{{ content_type }}</span>
+		</div>
+	{% endif %}
+	<a href="{{ link }}">
+		<strong class="text-sm">{{ title }}</strong>
+	</a>
+</div>
+{% if more_content == true %}
+	<div class="list--content">
+		{{ content }}
+	</div>
+{% endif %}</div>

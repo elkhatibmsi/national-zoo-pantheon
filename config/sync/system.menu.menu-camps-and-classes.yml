@@ -1,0 +1,8 @@
+uuid: b3a3641a-bb5b-4171-803e-16da5d98001f
+langcode: en
+status: true
+dependencies: {  }
+id: menu-camps-and-classes
+label: 'Camps and Classes'
+description: 'This menu lives on the /education landing page'
+locked: false

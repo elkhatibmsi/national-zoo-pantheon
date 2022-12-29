@@ -1,0 +1,21 @@
+uuid: f3a9e3d3-398e-46da-b719-2fa93b73a9c8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_number_of_columns
+    - paragraphs.paragraphs_type.flipbook_grid
+  module:
+    - options
+id: paragraph.flipbook_grid.field_number_of_columns
+field_name: field_number_of_columns
+entity_type: paragraph
+bundle: flipbook_grid
+label: 'Number of Columns'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_integer

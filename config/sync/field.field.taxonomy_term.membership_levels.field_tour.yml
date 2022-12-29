@@ -1,0 +1,21 @@
+uuid: 1a8b9bbb-6acb-451c-9473-f0f49697b3b0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_tour
+    - taxonomy.vocabulary.membership_levels
+id: taxonomy_term.membership_levels.field_tour
+field_name: field_tour
+entity_type: taxonomy_term
+bundle: membership_levels
+label: Tour
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+  required_summary: false
+field_type: text_with_summary

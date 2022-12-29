@@ -1,0 +1,143 @@
+uuid: 6fb8c69b-4af3-4791-8c13-d7aa867b13e1
+langcode: en
+status: true
+dependencies: {  }
+id: upgrade_d7_node_complete_school_program
+class: Drupal\node\Plugin\migrate\D7NodeTranslation
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 7'
+  - Content
+migration_group: migrate_drupal_7
+label: 'Node complete (School Program)'
+source:
+  plugin: d7_node_complete
+  node_type: school_program
+process:
+  nid:
+    -
+      plugin: get
+      source: tnid
+  vid:
+    -
+      plugin: get
+      source: vid
+  langcode:
+    -
+      plugin: default_value
+      source: language
+      default_value: und
+  title:
+    -
+      plugin: get
+      source: title
+  uid:
+    -
+      plugin: get
+      source: node_uid
+  status:
+    -
+      plugin: get
+      source: status
+  created:
+    -
+      plugin: get
+      source: created
+  changed:
+    -
+      plugin: get
+      source: timestamp
+  promote:
+    -
+      plugin: get
+      source: promote
+  sticky:
+    -
+      plugin: get
+      source: sticky
+  revision_uid:
+    -
+      plugin: get
+      source: revision_uid
+  revision_log:
+    -
+      plugin: get
+      source: log
+  revision_timestamp:
+    -
+      plugin: get
+      source: timestamp
+  content_translation_source:
+    -
+      plugin: get
+      source: source_langcode
+  comment_node_school_program/0/status:
+    -
+      plugin: get
+      source: comment
+  body:
+    -
+      plugin: get
+      source: body
+    -
+      plugin: media_wysiwyg_filter
+    -
+      plugin: img_tag_to_embed
+  field_grades:
+    -
+      plugin: get
+      source: field_grades
+  field_editorial_access:
+    -
+      plugin: sub_process
+      source: field_editorial_access
+      process:
+        target_id: tid
+  field_program_length:
+    -
+      plugin: get
+      source: field_program_length
+    -
+      plugin: media_wysiwyg_filter
+  field_cost_text:
+    -
+      plugin: get
+      source: field_cost_text
+    -
+      plugin: media_wysiwyg_filter
+  field_cost_text2:
+    -
+      plugin: get
+      source: field_cost_text2
+    -
+      plugin: media_wysiwyg_filter
+  field_number_of_students:
+    -
+      plugin: get
+      source: field_number_of_students
+    -
+      plugin: media_wysiwyg_filter
+  field_landing_image:
+    -
+      plugin: media_migration_delta_sort
+      source: field_landing_image
+    -
+      plugin: sub_process
+      process:
+        target_id: fid
+  field_site:
+    -
+      plugin: get
+      source: field_site
+destination:
+  plugin: 'entity_complete:node'
+  translations: true
+  default_bundle: school_program
+migration_dependencies:
+  required:
+    - upgrade_d7_user
+    - upgrade_d7_node_type
+    - upgrade_d7_file_entity_image_public
+  optional:
+    - upgrade_d7_field_instance

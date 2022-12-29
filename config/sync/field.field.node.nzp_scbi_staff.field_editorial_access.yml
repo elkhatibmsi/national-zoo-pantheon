@@ -1,0 +1,23 @@
+uuid: 0c337a62-d270-402d-ad23-c435f3df1764
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_editorial_access
+    - node.type.nzp_scbi_staff
+id: node.nzp_scbi_staff.field_editorial_access
+field_name: field_editorial_access
+entity_type: node
+bundle: nzp_scbi_staff
+label: Center
+description: 'Assign this person to a Conservation Center'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    sort:
+      field: _none
+field_type: entity_reference

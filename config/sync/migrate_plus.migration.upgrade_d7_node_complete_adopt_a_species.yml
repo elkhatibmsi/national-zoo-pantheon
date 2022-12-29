@@ -1,0 +1,156 @@
+uuid: ee45475a-e32f-40a6-89c6-4d803885e66c
+langcode: en
+status: true
+dependencies: {  }
+id: upgrade_d7_node_complete_adopt_a_species
+class: Drupal\node\Plugin\migrate\D7NodeTranslation
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 7'
+  - Content
+migration_group: migrate_drupal_7
+label: 'Node complete (Adopt a Species)'
+source:
+  plugin: d7_node_complete
+  node_type: adopt_a_species
+process:
+  nid:
+    -
+      plugin: get
+      source: tnid
+  vid:
+    -
+      plugin: get
+      source: vid
+  langcode:
+    -
+      plugin: default_value
+      source: language
+      default_value: und
+  title:
+    -
+      plugin: get
+      source: title
+  uid:
+    -
+      plugin: get
+      source: node_uid
+  status:
+    -
+      plugin: get
+      source: status
+  created:
+    -
+      plugin: get
+      source: created
+  changed:
+    -
+      plugin: get
+      source: timestamp
+  promote:
+    -
+      plugin: get
+      source: promote
+  sticky:
+    -
+      plugin: get
+      source: sticky
+  revision_uid:
+    -
+      plugin: get
+      source: revision_uid
+  revision_log:
+    -
+      plugin: get
+      source: log
+  revision_timestamp:
+    -
+      plugin: get
+      source: timestamp
+  content_translation_source:
+    -
+      plugin: get
+      source: source_langcode
+  comment_node_adopt_a_species/0/status:
+    -
+      plugin: get
+      source: comment
+  field_image:
+    -
+      plugin: media_migration_delta_sort
+      source: field_image
+    -
+      plugin: sub_process
+      process:
+        target_id: fid
+  field_landing_image:
+    -
+      plugin: media_migration_delta_sort
+      source: field_landing_image
+    -
+      plugin: sub_process
+      process:
+        target_id: fid
+  field_editorial_access:
+    -
+      plugin: sub_process
+      source: field_editorial_access
+      process:
+        target_id: tid
+  field_related_animal:
+    -
+      plugin: get
+      source: field_related_animal
+  body:
+    -
+      plugin: get
+      source: body
+    -
+      plugin: media_wysiwyg_filter
+    -
+      plugin: img_tag_to_embed
+  field_tnew_id:
+    -
+      plugin: get
+      source: field_tnew_id
+  field_additional_information:
+    -
+      plugin: get
+      source: field_additional_information
+    -
+      plugin: media_wysiwyg_filter
+  field_sort_order:
+    -
+      plugin: get
+      source: field_sort_order
+  field_adopt_featured:
+    -
+      plugin: get
+      source: field_adopt_featured
+  field_paragraph_component:
+    -
+      plugin: get
+      source: field_paragraph_component
+  field_tnew_sale_id:
+    -
+      plugin: get
+      source: field_tnew_sale_id
+  field_adopt_sidebar_paragraphs_:
+    -
+      plugin: get
+      source: field_adopt_sidebar_paragraphs_
+  field_sold_out:
+    -
+      plugin: get
+      source: field_sold_out
+destination:
+  plugin: 'entity_complete:node'
+  translations: true
+  default_bundle: adopt_a_species
+migration_dependencies:
+  required:
+    - upgrade_d7_user
+    - upgrade_d7_node_type
+  optional:
+    - upgrade_d7_field_instance

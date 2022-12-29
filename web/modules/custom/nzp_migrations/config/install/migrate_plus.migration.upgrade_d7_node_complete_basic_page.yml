@@ -1,0 +1,275 @@
+uuid: 03012f72-6e2a-4568-b41f-f2edfc1eea44
+langcode: en
+status: true
+dependencies: {  }
+id: upgrade_d7_node_complete_basic_page
+class: Drupal\node\Plugin\migrate\D7NodeTranslation
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 7'
+  - Content
+migration_group: migrate_drupal_7
+label: 'Node complete (Basic Page)'
+source:
+  plugin: d7_node_complete
+  node_type: basic_page
+process:
+  nid:
+    -
+      plugin: get
+      source: tnid
+  vid:
+    -
+      plugin: get
+      source: vid
+  langcode:
+    -
+      plugin: default_value
+      source: language
+      default_value: und
+  title:
+    -
+      plugin: get
+      source: title
+  uid:
+    -
+      plugin: get
+      source: node_uid
+  status:
+    -
+      plugin: get
+      source: status
+  created:
+    -
+      plugin: get
+      source: created
+  changed:
+    -
+      plugin: get
+      source: timestamp
+  promote:
+    -
+      plugin: get
+      source: promote
+  sticky:
+    -
+      plugin: get
+      source: sticky
+  revision_uid:
+    -
+      plugin: get
+      source: revision_uid
+  revision_log:
+    -
+      plugin: get
+      source: log
+  revision_timestamp:
+    -
+      plugin: get
+      source: timestamp
+  content_translation_source:
+    -
+      plugin: get
+      source: source_langcode
+  comment_node_basic_page/0/status:
+    -
+      plugin: get
+      source: comment
+  body:
+    -
+      plugin: get
+      source: body
+    -
+      plugin: media_wysiwyg_filter
+    -
+      plugin: img_tag_to_embed
+  field_tags:
+    -
+      plugin: sub_process
+      source: field_tags
+      process:
+        target_id: tid
+  field_subtitle:
+    -
+      plugin: get
+      source: field_subtitle
+    -
+      plugin: media_wysiwyg_filter
+  
+  field_content_block : 
+    - plugin: sub_process
+      source: field_content_block
+      process:
+        target_id:
+          - plugin: migration_lookup
+            migration: 
+              - paragraph__callout
+              - paragraph__content_video
+              - paragraph__flipbook_grid
+              - paragraph__faq
+              - paragraph__card_grid
+              - paragraph__horizontal_tabs
+              - paragraph__grid
+              - paragraph__modal_media_gallery
+              - paragraph__slide
+              - paragraph__slideshow_image_only
+              - paragraph__single_image_with_caption
+              - paragraph__sticky_anchor_menu
+              - paragraph__text
+              - paragraph__thumbnail_slideshow
+              - paragraph__webcam_embed
+            source: value
+          - plugin: extract
+            index:
+              - 0
+        target_revision_id:
+          - plugin: migration_lookup
+            migration: 
+              - paragraph__callout
+              - paragraph__content_video
+              - paragraph__flipbook_grid
+              - paragraph__faq
+              - paragraph__card_grid
+              - paragraph__horizontal_tabs
+              - paragraph__grid
+              - paragraph__modal_media_gallery
+              - paragraph__slide
+              - paragraph__slideshow_image_only
+              - paragraph__single_image_with_caption
+              - paragraph__sticky_anchor_menu
+              - paragraph__text
+              - paragraph__thumbnail_slideshow
+              - paragraph__webcam_embed
+            source: value
+          - plugin: extract
+            index:
+              - 1
+
+  field_landing_image:
+    -
+      plugin: media_migration_delta_sort
+      source: field_landing_image
+    -
+      plugin: sub_process
+      process:
+        target_id: fid
+  field_editorial_access:
+    -
+      plugin: sub_process
+      source: field_editorial_access
+      process:
+        target_id: tid
+  field_slideshow:
+    -
+      plugin: get
+      source: field_slideshow
+  field_page_type:
+    -
+      plugin: sub_process
+      source: field_page_type
+      process:
+        target_id: tid
+  field_card_subtitle:
+    -
+      plugin: get
+      source: field_card_subtitle
+    -
+      plugin: media_wysiwyg_filter
+  field_promotion_one:
+    -
+      plugin: get
+      source: field_promotion_one
+  field_promotion_two:
+    -
+      plugin: get
+      source: field_promotion_two
+  field_promotion_three:
+    -
+      plugin: get
+      source: field_promotion_three
+  field_feature_one:
+    -
+      plugin: get
+      source: field_feature_one
+  field_feature_two:
+    -
+      plugin: get
+      source: field_feature_two
+  field_feature_three:
+    -
+      plugin: get
+      source: field_feature_three
+  field_has_promotions:
+    -
+      plugin: sub_process
+      source: field_has_promotions
+      process:
+        target_id: tid
+  field_card_position:
+    -
+      plugin: sub_process
+      source: field_card_position
+      process:
+        target_id: tid
+  field_teaser_title:
+    -
+      plugin: get
+      source: field_teaser_title
+    -
+      plugin: media_wysiwyg_filter
+  field_embed_block_1:
+    -
+      plugin: get
+      source: field_embed_block_1
+  field_embed_block_2:
+    -
+      plugin: get
+      source: field_embed_block_2
+  field_modal_gallery : 
+  - plugin: sub_process
+    source: field_modal_gallery
+    process:
+      target_id:
+        - plugin: migration_lookup
+          migration: 
+            - paragraph__modal_media_gallery
+          source: value
+        - plugin: extract
+          index:
+            - 0
+      target_revision_id:
+        - plugin: migration_lookup
+          migration: 
+            - paragraph__modal_media_gallery
+          source: value
+        - plugin: extract
+          index:
+            - 1
+
+destination:
+  plugin: 'entity_complete:node'
+  translations: true
+  default_bundle: basic_page
+migration_dependencies:
+  required:
+    - upgrade_d7_user
+    - upgrade_d7_node_type
+    - upgrade_d7_file_entity_image_public
+    - paragraph__callout
+    - paragraph__content_video
+    - paragraph__flipbook_grid
+    - paragraph__faq
+    - paragraph__card_grid
+    - paragraph__horizontal_tabs
+    - paragraph__grid
+    - paragraph__modal_media_gallery
+    - paragraph__slide
+    - paragraph__slideshow_image_only
+    - paragraph__single_image_with_caption
+    - paragraph__sticky_anchor_menu
+    - paragraph__text
+    - paragraph__thumbnail_slideshow
+    - paragraph__webcam_embed
+  optional:
+    - upgrade_d7_field_instance

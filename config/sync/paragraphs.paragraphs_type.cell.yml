@@ -1,0 +1,15 @@
+uuid: 81b0955c-d66e-45dd-9a86-04ffc95f9378
+langcode: en
+status: true
+dependencies:
+  module:
+    - layout_paragraphs
+id: cell
+label: Cell
+icon_uuid: null
+icon_default: null
+description: 'Migrated from paragraph bundle Cell'
+behavior_plugins:
+  layout_paragraphs:
+    enabled: false
+    available_layouts: {  }

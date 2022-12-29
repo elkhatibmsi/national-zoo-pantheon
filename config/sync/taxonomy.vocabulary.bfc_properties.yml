@@ -1,0 +1,8 @@
+uuid: af828699-c1c7-4187-8308-3e61269821a1
+langcode: en
+status: true
+dependencies: {  }
+name: 'BFC Coffee Properties'
+vid: bfc_properties
+description: ''
+weight: 0

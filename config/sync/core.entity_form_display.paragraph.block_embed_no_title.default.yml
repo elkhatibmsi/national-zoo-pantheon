@@ -1,0 +1,23 @@
+uuid: c9b547f1-4956-4c7b-a613-743acb2b8959
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.block_embed_no_title.field_embed_block_no_title_title
+    - paragraphs.paragraphs_type.block_embed_no_title
+id: paragraph.block_embed_no_title.default
+targetEntityType: paragraph
+bundle: block_embed_no_title
+mode: default
+content:
+  field_embed_block_no_title_title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

@@ -1,0 +1,23 @@
+uuid: 50ee1ebf-63c2-4f05-8fb6-7058f064c07f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_we_do_not_own
+    - media.type.image
+id: media.image.field_we_do_not_own
+field_name: field_we_do_not_own
+entity_type: media
+bundle: image
+label: 'We Do Not Own'
+description: 'Checking this box will hide this file from the media browser.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: ''
+  off_label: ''
+field_type: boolean

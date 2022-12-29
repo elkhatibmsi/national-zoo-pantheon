@@ -1,0 +1,25 @@
+uuid: e16e2cb6-be66-4be1-8168-4dd3c1d3d070
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.sponsors.field_sponsor_title
+    - field.field.paragraph.sponsors.field_sponsors_content
+    - paragraphs.paragraphs_type.sponsors
+id: paragraph.sponsors.default
+targetEntityType: paragraph
+bundle: sponsors
+mode: default
+content:
+  field_sponsor_title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  field_sponsors_content: true
+  status: true

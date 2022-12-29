@@ -1,0 +1,23 @@
+uuid: 5de1d650-eddf-4182-be65-a85b6aeaaae1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.bio_profiles
+  module:
+    - text
+id: node.bio_profiles.body
+field_name: body
+entity_type: node
+bundle: bio_profiles
+label: Biography
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

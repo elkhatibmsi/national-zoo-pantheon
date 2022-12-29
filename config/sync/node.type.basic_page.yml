@@ -1,0 +1,20 @@
+uuid: 208f049b-3aff-49f6-b27f-cdda516ebcd5
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - menu-support---donor
+      - main-menu
+      - menu-smbc
+    parent: 'main-menu:0:'
+name: 'Basic Page'
+type: basic_page
+description: 'Use this content type for general unstructured content.'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

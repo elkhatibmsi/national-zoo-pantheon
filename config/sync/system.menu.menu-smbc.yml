@@ -1,0 +1,8 @@
+uuid: b2cbafc1-cd7a-4add-957c-4637e8ad5738
+langcode: en
+status: true
+dependencies: {  }
+id: menu-smbc
+label: SMBC
+description: 'Main menu for the SMBC section of the site'
+locked: false

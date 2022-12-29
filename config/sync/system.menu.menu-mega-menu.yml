@@ -1,0 +1,8 @@
+uuid: 67bb9179-918e-41d0-8982-3291e255d09d
+langcode: en
+status: true
+dependencies: {  }
+id: menu-mega-menu
+label: 'Mega menu'
+description: 'Contains the parent items of the mega menu - the six major sections of the website.'
+locked: false

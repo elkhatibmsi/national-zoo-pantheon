@@ -1,0 +1,11 @@
+uuid: 0a5f17be-5652-49ac-ba5b-a80301e4339f
+langcode: en
+status: true
+dependencies: {  }
+name: 'Zoo Hours'
+type: zoo_hours
+description: 'For Managing Zoo Hours.'
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: true

@@ -1,0 +1,36 @@
+{#
+/**
+ * @file
+ * Default theme implementation to each level of menu.
+ */
+#}
+{% import _self as menu %}
+
+  {% set tw_classes_li = ['h-[60px]', 'flex','flex-grow', 'bg-white','hover:bg-lightergray','align-stretch'] %}
+  {% set tw_classes_ul = ['flex','flex-grow','main-menu--level-0'] %}
+  {% set tw_classes_dropdown = ['flex'] %}
+	
+{{ menu.menu_links(items, attributes, 0) }}
+
+{% macro menu_links(items, attributes, menu_level) %}
+<h1>hello</h1>
+
+  <ul class="menu menu-level-{{ items.add|first.menu_level }}">
+  {% for key, item in items if key|first != '#' %}
+    {% set menu_item_classes = [
+      'menu-item',
+      item.is_expanded ? 'visible',
+      item.is_collapsed ? 'hidden',
+      item.in_active_trail ? 'menu-item--active-trail',
+    ] %}
+
+    <li{{ item.attributes.addClass(menu_item_classes) }}>
+      {{ link(item.title, item.url) }}
+      {% set rendered_content = item.content|without('')|render %}
+      {% if rendered_content %}
+        {{ rendered_content }}
+      {% endif %}
+    </li>
+  {% endfor %}
+  </ul>
+{% endmacro %}

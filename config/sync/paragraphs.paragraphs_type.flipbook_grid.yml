@@ -1,0 +1,15 @@
+uuid: 7ef9d0ff-324e-47e5-8148-f7288e8be00d
+langcode: en
+status: true
+dependencies:
+  module:
+    - layout_paragraphs
+id: flipbook_grid
+label: 'Flipbook Grid'
+icon_uuid: null
+icon_default: null
+description: 'Migrated from paragraph bundle Flipbook Grid'
+behavior_plugins:
+  layout_paragraphs:
+    enabled: false
+    available_layouts: {  }

@@ -1,0 +1,23 @@
+uuid: 3851f42f-8482-4a0f-9eb6-e91230cf5232
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_border_color
+    - paragraphs.paragraphs_type.callout
+  module:
+    - options
+id: paragraph.callout.field_border_color
+field_name: field_border_color
+entity_type: paragraph
+bundle: callout
+label: 'Border Color'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: animals
+default_value_callback: ''
+settings: {  }
+field_type: list_string

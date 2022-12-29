@@ -1,0 +1,24 @@
+uuid: 3e0811b4-55c7-470b-88e0-fc634d19b11a
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.pop_up
+    - field.storage.block_content.field_pop_up_background
+    - media.type.image
+id: block_content.pop_up.field_pop_up_background
+field_name: field_pop_up_background
+entity_type: block_content
+bundle: pop_up
+label: 'Pop Up Background'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+field_type: entity_reference

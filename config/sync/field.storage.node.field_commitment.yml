@@ -1,0 +1,30 @@
+uuid: a60a832b-0ecc-478e-9bc4-a2fd50cc064b
+langcode: und
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_commitment
+field_name: field_commitment
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: one-day
+      label: one-day
+    -
+      value: short-term
+      label: short-term
+    -
+      value: long-term
+      label: long-term
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

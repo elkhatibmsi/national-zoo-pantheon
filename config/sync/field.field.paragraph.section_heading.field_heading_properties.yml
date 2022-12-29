@@ -1,0 +1,21 @@
+uuid: 2cbe3a28-a111-4cf4-8ef2-ee11f589dc80
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_heading_properties
+    - paragraphs.paragraphs_type.section_heading
+  module:
+    - options
+id: paragraph.section_heading.field_heading_properties
+field_name: field_heading_properties
+entity_type: paragraph
+bundle: section_heading
+label: 'Style Options'
+description: 'Select from the list of options below'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

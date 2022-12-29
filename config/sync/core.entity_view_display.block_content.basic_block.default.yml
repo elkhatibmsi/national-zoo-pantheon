@@ -1,0 +1,24 @@
+uuid: 83a1cbdf-d0f3-45e7-ab0f-3e7a8619cc32
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.basic_block
+    - field.field.block_content.basic_block.field_text
+    - field.field.block_content.basic_block.title
+  module:
+    - text
+id: block_content.basic_block.default
+targetEntityType: block_content
+bundle: basic_block
+mode: default
+content:
+  field_text:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  title: true

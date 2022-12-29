@@ -1,0 +1,249 @@
+uuid: 0119a908-bb17-47f1-aa07-907367c54cfe
+langcode: en
+status: true
+dependencies: {  }
+id: upgrade_d7_node_complete_animal
+class: Drupal\node\Plugin\migrate\D7NodeTranslation
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 7'
+  - Content
+migration_group: migrate_drupal_7
+label: 'Node complete (Animal)'
+source:
+  plugin: d7_node_complete
+  node_type: animal
+process:
+  nid:
+    -
+      plugin: get
+      source: tnid
+  vid:
+    -
+      plugin: get
+      source: vid
+  langcode:
+    -
+      plugin: default_value
+      source: language
+      default_value: und
+  title:
+    -
+      plugin: get
+      source: title
+  uid:
+    -
+      plugin: get
+      source: node_uid
+  status:
+    -
+      plugin: get
+      source: status
+  created:
+    -
+      plugin: get
+      source: created
+  changed:
+    -
+      plugin: get
+      source: timestamp
+  promote:
+    -
+      plugin: get
+      source: promote
+  sticky:
+    -
+      plugin: get
+      source: sticky
+  revision_uid:
+    -
+      plugin: get
+      source: revision_uid
+  revision_log:
+    -
+      plugin: get
+      source: log
+  revision_timestamp:
+    -
+      plugin: get
+      source: timestamp
+  content_translation_source:
+    -
+      plugin: get
+      source: source_langcode
+  comment_node_animal/0/status:
+    -
+      plugin: get
+      source: comment
+  body:
+    -
+      plugin: get
+      source: body
+    -
+      plugin: media_wysiwyg_filter
+    -
+      plugin: img_tag_to_embed
+  field_physical_description:
+    -
+      plugin: get
+      source: field_physical_description
+    -
+      plugin: media_wysiwyg_filter
+  field_social_structure:
+    -
+      plugin: get
+      source: field_social_structure
+    -
+      plugin: media_wysiwyg_filter
+  field_feeding_time:
+    -
+      plugin: get
+      source: field_feeding_time
+    -
+      plugin: media_wysiwyg_filter
+  field_fun_facts:
+    -
+      plugin: get
+      source: field_fun_facts
+    -
+      plugin: media_wysiwyg_filter
+  field_lifespan:
+    -
+      plugin: get
+      source: field_lifespan
+    -
+      plugin: media_wysiwyg_filter
+  field_communication:
+    -
+      plugin: get
+      source: field_communication
+    -
+      plugin: media_wysiwyg_filter
+  field_reproduction_developme:
+    -
+      plugin: get
+      source: field_reproduction_developme
+    -
+      plugin: media_wysiwyg_filter
+  field_food_eating_habits:
+    -
+      plugin: get
+      source: field_food_eating_habits
+    -
+      plugin: media_wysiwyg_filter
+  field_sleep_habits:
+    -
+      plugin: get
+      source: field_sleep_habits
+    -
+      plugin: media_wysiwyg_filter
+  field_conservation_efforts:
+    -
+      plugin: get
+      source: field_conservation_efforts
+    -
+      plugin: media_wysiwyg_filter
+  field_exhibit:
+    -
+      plugin: get
+      source: field_exhibit
+  field_editorial_access:
+    -
+      plugin: sub_process
+      source: field_editorial_access
+      process:
+        target_id: tid
+  field_taxonomic_class:
+    -
+      plugin: get
+      source: field_taxonomic_class
+  field_genus_and_species:
+    -
+      plugin: get
+      source: field_genus_and_species
+    -
+      plugin: media_wysiwyg_filter
+  field_size:
+    -
+      plugin: get
+      source: field_size
+    -
+      plugin: media_wysiwyg_filter
+  field_native_habitat:
+    -
+      plugin: get
+      source: field_native_habitat
+    -
+      plugin: media_wysiwyg_filter
+  field_animal_type:
+    -
+      plugin: sub_process
+      source: field_animal_type
+      process:
+        target_id: tid
+  field_taxonomic_order:
+    -
+      plugin: get
+      source: field_taxonomic_order
+  field_taxonomic_family:
+    -
+      plugin: get
+      source: field_taxonomic_family
+  field_iucn_designation:
+    -
+      plugin: get
+      source: field_iucn_designation
+  field_meet_the_animals:
+    -
+      plugin: get
+      source: field_meet_the_animals
+    -
+      plugin: media_wysiwyg_filter
+  field_image:
+    -
+      plugin: media_migration_delta_sort
+      source: field_image
+    -
+      plugin: sub_process
+      process:
+        target_id: fid
+  field_card_position:
+    -
+      plugin: sub_process
+      source: field_card_position
+      process:
+        target_id: tid
+  field_nzp_location:
+    -
+      plugin: sub_process
+      source: field_nzp_location
+      process:
+        target_id: tid
+  field_help_this_species:
+    -
+      plugin: get
+      source: field_help_this_species
+  field_featured_video:
+    -
+      plugin: media_migration_delta_sort
+      source: field_featured_video
+    -
+      plugin: sub_process
+      process:
+        target_id: fid
+  field_modal_gallery:
+    -
+      plugin: get
+      source: field_modal_gallery
+destination:
+  plugin: 'entity_complete:node'
+  translations: true
+  default_bundle: animal
+migration_dependencies:
+  required:
+    - upgrade_d7_user
+    - upgrade_d7_node_type
+    - upgrade_d7_file_entity_image_public
+  optional:
+    - upgrade_d7_field_instance

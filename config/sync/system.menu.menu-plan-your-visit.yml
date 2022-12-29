@@ -1,0 +1,8 @@
+uuid: 42b2f9c9-737b-459f-8510-db23ee8f1e76
+langcode: en
+status: true
+dependencies: {  }
+id: menu-plan-your-visit
+label: 'Plan Your Visit'
+description: 'Appears on the Tier 2 (main landing page) of the Visit section.  '
+locked: false

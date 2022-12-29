@@ -1,0 +1,21 @@
+uuid: 986047ce-4ffc-4b28-adb5-94b6b7f629d1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_teaser
+    - paragraphs.paragraphs_type.collapsible_block
+  module:
+    - text
+id: paragraph.collapsible_block.field_teaser
+field_name: field_teaser
+entity_type: paragraph
+bundle: collapsible_block
+label: Teaser
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

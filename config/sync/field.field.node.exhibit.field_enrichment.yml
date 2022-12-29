@@ -1,0 +1,21 @@
+uuid: 3fd4d11f-b736-4da8-ba7a-6dcc293f990d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_enrichment
+    - node.type.exhibit
+  module:
+    - text
+id: node.exhibit.field_enrichment
+field_name: field_enrichment
+entity_type: node
+bundle: exhibit
+label: Enrichment
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

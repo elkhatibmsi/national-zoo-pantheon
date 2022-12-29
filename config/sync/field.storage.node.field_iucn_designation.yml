@@ -1,0 +1,45 @@
+uuid: f5069feb-b8f4-4bef-9b12-c6c80969cbe2
+langcode: und
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_iucn_designation
+field_name: field_iucn_designation
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: 'Least concern'
+      label: 'Least concern'
+    -
+      value: 'Near threatened'
+      label: 'Near threatened'
+    -
+      value: Vulnerable
+      label: Vulnerable
+    -
+      value: Endangered
+      label: Endangered
+    -
+      value: 'Critically endangered'
+      label: 'Critically endangered'
+    -
+      value: 'Extinct in the Wild'
+      label: 'Extinct in the Wild'
+    -
+      value: 'Data deficient'
+      label: 'Data deficient'
+    -
+      value: 'Not Evaluated'
+      label: 'Not Evaluated'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

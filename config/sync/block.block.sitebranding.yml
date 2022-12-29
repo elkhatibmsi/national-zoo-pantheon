@@ -1,0 +1,23 @@
+uuid: 774dd632-3f38-44c6-a72a-d7b1a11092d1
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - tailwind_nzp
+id: sitebranding
+theme: tailwind_nzp
+region: logo
+weight: 0
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  label_display: '0'
+  provider: system
+  use_site_logo: true
+  use_site_name: false
+  use_site_slogan: false
+visibility: {  }

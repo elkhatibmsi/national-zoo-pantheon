@@ -1,0 +1,24 @@
+uuid: 45a6d2c9-a557-4e8b-b049-bc4d59bae279
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_landing_image
+    - media.type.image
+    - node.type.event
+id: node.event.field_landing_image
+field_name: field_landing_image
+entity_type: node
+bundle: event
+label: 'Event logo'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+field_type: entity_reference

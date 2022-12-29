@@ -1,0 +1,23 @@
+uuid: 50dbf0d8-b0d5-4f6d-ad88-4d029d3e9f73
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_number_of_pixels
+    - paragraphs.paragraphs_type.spacer
+  module:
+    - options
+id: paragraph.spacer.field_number_of_pixels
+field_name: field_number_of_pixels
+entity_type: paragraph
+bundle: spacer
+label: 'Number of Pixels'
+description: 'Number of pixels below a paragraph.'
+required: true
+translatable: false
+default_value:
+  -
+    value: '4'
+default_value_callback: ''
+settings: {  }
+field_type: list_string

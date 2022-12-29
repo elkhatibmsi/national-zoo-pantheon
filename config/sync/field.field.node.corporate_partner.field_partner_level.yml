@@ -1,0 +1,21 @@
+uuid: bf3faa29-0d0a-48a6-854b-64e336c08842
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_partner_level
+    - node.type.corporate_partner
+  module:
+    - options
+id: node.corporate_partner.field_partner_level
+field_name: field_partner_level
+entity_type: node
+bundle: corporate_partner
+label: 'Partner level'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

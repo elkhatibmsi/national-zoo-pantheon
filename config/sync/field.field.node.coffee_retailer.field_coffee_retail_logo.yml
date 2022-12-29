@@ -1,0 +1,24 @@
+uuid: a5770680-b91a-4198-bc7f-fa464143c347
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_coffee_retail_logo
+    - media.type.image
+    - node.type.coffee_retailer
+id: node.coffee_retailer.field_coffee_retail_logo
+field_name: field_coffee_retail_logo
+entity_type: node
+bundle: coffee_retailer
+label: 'Coffee Retail Logo'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+field_type: entity_reference

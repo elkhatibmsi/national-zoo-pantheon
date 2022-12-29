@@ -1,0 +1,53 @@
+uuid: 82331703-b2b7-42a0-8110-876a0f1c4c8e
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.font_page_feature
+    - field.field.block_content.font_page_feature.field_landing_image
+    - field.field.block_content.font_page_feature.field_modal_iframe
+    - field.field.block_content.font_page_feature.field_subtitle
+    - field.field.block_content.font_page_feature.field_url
+    - field.field.block_content.font_page_feature.title
+id: block_content.font_page_feature.default
+targetEntityType: block_content
+bundle: font_page_feature
+mode: default
+content:
+  field_landing_image:
+    type: entity_reference_autocomplete
+    weight: 2
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_subtitle:
+    type: string_textfield
+    weight: 3
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  info:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  field_modal_iframe: true
+  field_url: true

@@ -1,0 +1,14 @@
+uuid: 7183173d-ff3e-4028-a7e7-58e0f6e70710
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.temp_sick_bird_reports_results_access
+  module:
+    - user
+id: user_add_role_action.temp_sick_bird_reports_results_access
+label: 'Add the temp- sick bird reports results access role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: temp_sick_bird_reports_results_access

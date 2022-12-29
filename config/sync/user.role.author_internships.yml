@@ -1,0 +1,41 @@
+uuid: 3d81813b-8792-409f-80c3-43d71a6b1a19
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.full_html
+    - node.type.internship
+  module:
+    - contextual
+    - filter
+    - node
+    - system
+id: author_internships
+label: 'author - internships'
+weight: 8
+is_admin: null
+permissions:
+  - 'access administration menu'
+  - 'access administration pages'
+  - 'access content overview'
+  - 'access contextual links'
+  - 'access workbench'
+  - 'access workbench access by role'
+  - 'create files'
+  - 'create internship content'
+  - 'delete any internship content'
+  - 'delete own internship content'
+  - 'edit any internship content'
+  - 'edit own internship content'
+  - 'moderate content from draft to needs_review'
+  - 'skip CAPTCHA'
+  - 'use text format filtered_html'
+  - 'use text format full_html'
+  - 'use workbench_moderation my drafts tab'
+  - 'use workbench_moderation needs review tab'
+  - 'view all unpublished content'
+  - 'view files'
+  - 'view moderation history'
+  - 'view moderation messages'
+  - 'view own unpublished content'
+  - 'view the administration theme'

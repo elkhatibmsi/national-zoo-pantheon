@@ -1,0 +1,71 @@
+uuid: a463b7f8-0ff3-444d-ab29-4df27ecb39e4
+langcode: en
+status: true
+dependencies: {  }
+id: upgrade_bean_title_field_widget_pop_up
+class: Drupal\migrate\Plugin\Migration
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 7'
+  - Configuration
+migration_group: migrate_drupal_7
+label: 'Bean title field widget configuration (pop_up)'
+source:
+  plugin: bean_title_field_widget
+  entity_type: bean
+  constants:
+    form_mode: default
+    field_name: title
+    entity_type: block_content
+    widget_type: string_textfield
+    widget_settings:
+      size: '60,'
+      placeholder: ''
+    third_party_settings: {  }
+  type: pop_up
+process:
+  bundle:
+    -
+      plugin: migration_lookup
+      migration: upgrade_bean_type_pop_up
+      no_stub: true
+      source: type
+    -
+      plugin: skip_on_empty
+      method: row
+  form_mode:
+    -
+      plugin: get
+      source: constants/form_mode
+  field_name:
+    -
+      plugin: get
+      source: constants/field_name
+  entity_type:
+    -
+      plugin: get
+      source: constants/entity_type
+  options/weight:
+    -
+      plugin: get
+      source: widget_weight
+  options/type:
+    -
+      plugin: get
+      source: constants/widget_type
+  options/settings:
+    -
+      plugin: get
+      source: constants/widget_settings
+  options/third_party_settings:
+    -
+      plugin: get
+      source: constants/third_party_settings
+destination:
+  plugin: component_entity_form_display
+migration_dependencies:
+  required:
+    - upgrade_bean_title_field_instance_pop_up
+  optional:
+    - upgrade_bean_type_pop_up

@@ -1,0 +1,13 @@
+uuid: ec59844f-81d1-4fef-bdf2-ffff89ca6bf8
+langcode: en
+status: true
+dependencies: {  }
+id: image_http
+label: 'Image http'
+description: null
+source: image
+queue_thumbnail_downloads: false
+new_revision: false
+source_configuration:
+  source_field: field_media_image_http
+field_map: {  }

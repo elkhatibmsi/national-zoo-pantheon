@@ -1,0 +1,16 @@
+uuid: a1ff0340-e3e1-4fa4-9b51-2ebc45c8707f
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    parent: 'main-menu:0:'
+name: Attraction
+type: attraction
+description: 'E.g. Carousel'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

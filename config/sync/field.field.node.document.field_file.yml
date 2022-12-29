@@ -1,0 +1,30 @@
+uuid: 750c9a6d-b0db-4509-9b4d-9ad6ef60c7d1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_file
+    - media.type.audio
+    - media.type.document
+    - media.type.image
+    - media.type.video
+    - node.type.document
+id: node.document.field_file
+field_name: field_file
+entity_type: node
+bundle: document
+label: File
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+      video: video
+      audio: audio
+      document: document
+field_type: entity_reference

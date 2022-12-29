@@ -1,0 +1,21 @@
+uuid: b9fa1918-10a0-43fb-9b53-6b0d15456e17
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sleep_habits
+    - node.type.animal
+  module:
+    - text
+id: node.animal.field_sleep_habits
+field_name: field_sleep_habits
+entity_type: node
+bundle: animal
+label: 'Sleep Habits'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

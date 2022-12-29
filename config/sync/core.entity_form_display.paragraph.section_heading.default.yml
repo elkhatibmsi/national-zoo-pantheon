@@ -1,0 +1,30 @@
+uuid: db6e8a9c-059b-44a7-898c-fe6638e8af06
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.section_heading.field_heading_properties
+    - field.field.paragraph.section_heading.field_heading_text_
+    - paragraphs.paragraphs_type.section_heading
+id: paragraph.section_heading.default
+targetEntityType: paragraph
+bundle: section_heading
+mode: default
+content:
+  field_heading_properties:
+    type: options_select
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_heading_text_:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

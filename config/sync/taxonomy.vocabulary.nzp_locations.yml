@@ -1,0 +1,8 @@
+uuid: ad4ef9d9-81fb-4860-b48d-eb7fb466e72a
+langcode: en
+status: true
+dependencies: {  }
+name: 'NZP Locations'
+vid: nzp_locations
+description: 'Use to group content by the two Zoo locations'
+weight: 0

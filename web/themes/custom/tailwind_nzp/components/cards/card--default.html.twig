@@ -1,0 +1,18 @@
+<div class="teaser--card rounded overflow-hidden shadow-lg h-full h-max-[400px]">
+{% if link is not empty %}
+<a href="{{ link }}">
+{% endif %}
+<div class="teaser--image">{{image}}
+{% if link is not empty %}
+</a>
+{% endif %}
+</div>
+<div class="px-6 py-4">
+	<div class="teaser--card-title">
+		<h3>{{title}}</h3>
+	</div>
+	{% if showdescription == true %}
+	<div class="teaser--card-description">{{description}}</div>
+	{% endif %}
+</div>
+</div>

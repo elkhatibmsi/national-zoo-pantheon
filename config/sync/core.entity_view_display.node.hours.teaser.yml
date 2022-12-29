@@ -1,0 +1,26 @@
+uuid: feaf39d9-4550-4c2f-a2e9-cb7acae184b2
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.hours.field_editorial_access
+    - field.field.node.hours.field_hours_active_date
+    - field.field.node.hours.field_hours_category
+    - node.type.hours
+  module:
+    - user
+id: node.hours.teaser
+targetEntityType: node
+bundle: hours
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_editorial_access: true
+  field_hours_active_date: true
+  field_hours_category: true

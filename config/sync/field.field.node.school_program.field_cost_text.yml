@@ -1,0 +1,19 @@
+uuid: 9d0c4b82-a659-4092-9623-b286bf2947e1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_cost_text
+    - node.type.school_program
+id: node.school_program.field_cost_text
+field_name: field_cost_text
+entity_type: node
+bundle: school_program
+label: 'Cost Per Program'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

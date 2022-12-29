@@ -1,0 +1,23 @@
+uuid: 695f71d6-3be0-4189-a9a7-7f590120fe13
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_hours_category
+    - paragraphs.paragraphs_type.time_slot
+id: paragraph.time_slot.field_hours_category
+field_name: field_hours_category
+entity_type: paragraph
+bundle: time_slot
+label: 'Hours Category'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    sort:
+      field: _none
+field_type: entity_reference

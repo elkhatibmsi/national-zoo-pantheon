@@ -1,0 +1,32 @@
+uuid: ff4daedc-a23b-4f35-9248-a283e82c1b5a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_scbi_staff
+    - node.type.scbi_project
+id: node.scbi_project.field_scbi_staff
+field_name: field_scbi_staff
+entity_type: node
+bundle: scbi_project
+label: 'Scientific Staff'
+description: "Reference staff members involved with this project. PLEASE NOTE: Staff members that are unpublished will not display in this list! \r\n\r\n "
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles: null
+    sort:
+      field: _none
+      direction: ASC
+    view:
+      view_name: scbi_staff
+      display_name: entityreference_1
+      args: {  }
+    behaviors:
+      views-select-list:
+        status: 0
+field_type: entity_reference

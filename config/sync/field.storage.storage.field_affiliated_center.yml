@@ -1,0 +1,20 @@
+uuid: 6bac2b0f-1aff-4c40-a64a-498f5f261bec
+langcode: en
+status: true
+dependencies:
+  module:
+    - storage
+    - taxonomy
+id: storage.field_affiliated_center
+field_name: field_affiliated_center
+entity_type: storage
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

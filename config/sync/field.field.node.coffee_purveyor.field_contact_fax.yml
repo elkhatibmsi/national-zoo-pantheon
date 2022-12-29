@@ -1,0 +1,19 @@
+uuid: 7dc74dc8-0ed8-4296-bae7-f2715135a123
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_contact_fax
+    - node.type.coffee_purveyor
+id: node.coffee_purveyor.field_contact_fax
+field_name: field_contact_fax
+entity_type: node
+bundle: coffee_purveyor
+label: 'Contact fax'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

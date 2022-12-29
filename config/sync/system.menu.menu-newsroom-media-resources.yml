@@ -1,0 +1,8 @@
+uuid: 0ec51311-5916-4cd5-a904-5952f1e527a9
+langcode: en
+status: true
+dependencies: {  }
+id: menu-newsroom-media-resources
+label: 'Newsroom Media Resources'
+description: ''
+locked: false

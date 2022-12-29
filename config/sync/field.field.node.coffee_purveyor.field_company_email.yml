@@ -1,0 +1,19 @@
+uuid: 2753081e-130a-4cd1-bebb-0b849be3b9c2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_company_email
+    - node.type.coffee_purveyor
+id: node.coffee_purveyor.field_company_email
+field_name: field_company_email
+entity_type: node
+bundle: coffee_purveyor
+label: 'Company email'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

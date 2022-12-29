@@ -1,0 +1,15 @@
+uuid: db510fdc-3465-4de7-9ecd-88c1f738ae8d
+langcode: en
+status: true
+dependencies:
+  module:
+    - layout_paragraphs
+id: callout
+label: Callout
+icon_uuid: null
+icon_default: null
+description: 'Migrated from paragraph bundle Callout'
+behavior_plugins:
+  layout_paragraphs:
+    enabled: false
+    available_layouts: {  }

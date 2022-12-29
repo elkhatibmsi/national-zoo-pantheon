@@ -1,0 +1,87 @@
+uuid: 82b0cc92-8f3c-4486-9122-21bf386c9cff
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.school_program.body
+    - field.field.node.school_program.field_cost_text
+    - field.field.node.school_program.field_cost_text2
+    - field.field.node.school_program.field_editorial_access
+    - field.field.node.school_program.field_grades
+    - field.field.node.school_program.field_landing_image
+    - field.field.node.school_program.field_number_of_students
+    - field.field.node.school_program.field_program_length
+    - field.field.node.school_program.field_site
+    - node.type.school_program
+  module:
+    - options
+    - text
+    - user
+id: node.school_program.default
+targetEntityType: node
+bundle: school_program
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_cost_text:
+    type: string
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_cost_text2:
+    type: string
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_grades:
+    type: list_default
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_landing_image:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  field_number_of_students:
+    type: string
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_program_length:
+    type: string
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_editorial_access: true
+  field_site: true

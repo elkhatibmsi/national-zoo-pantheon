@@ -1,0 +1,37 @@
+uuid: e9b16f05-a8e7-4131-818a-0a3efbc40634
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - nzp_paragraphs
+id: paragraph__modal_media_gallery
+class: null
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - Paragraphs
+migration_group: nzp_paragraphs
+label: 'modal media gallery paragraph'
+source:
+  plugin: d7_paragraphs_item
+  bundle: modal_media_gallery
+process:
+  id: item_id
+  field_modal_gallery_media:
+    -
+      plugin: media_migration_delta_sort
+      source: field_modal_gallery_media
+    -
+      plugin: sub_process
+      process:
+        target_id: fid
+  field_modal_gallery_title: field_modal_gallery_title
+  field_show_read_more_link_after: field_show_read_more_link_after
+  field_thumbnail_positioning: field_thumbnail_positioning
+destination:
+  plugin: 'entity_reference_revisions:paragraph'
+  default_bundle: modal_media_gallery
+migration_dependencies:
+  required: {  }
+  optional: {  }

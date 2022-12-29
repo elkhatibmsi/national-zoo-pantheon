@@ -1,0 +1,21 @@
+uuid: b0a996e3-8010-4d20-8bfd-0af9991f46b6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_card_subtitle
+    - node.type.basic_page
+  module:
+    - text
+id: node.basic_page.field_card_subtitle
+field_name: field_card_subtitle
+entity_type: node
+bundle: basic_page
+label: 'Card Subtitle'
+description: 'Enter text that will appear below the page title in the slideshow card. If this is the homepage, the text will appear above the subtitle in the card.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

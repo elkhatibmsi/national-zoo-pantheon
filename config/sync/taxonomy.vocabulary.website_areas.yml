@@ -1,0 +1,8 @@
+uuid: 724ab963-2c2a-4f7c-9ebd-7b28d802aa8b
+langcode: en
+status: true
+dependencies: {  }
+name: 'Website Areas'
+vid: website_areas
+description: ''
+weight: -4

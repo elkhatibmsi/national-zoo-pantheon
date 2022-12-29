@@ -1,0 +1,23 @@
+uuid: 39e30aca-4963-4ab7-95be-5f47bb1c37a6
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.webcam_ad
+    - field.storage.block_content.field_include_in_rotation
+id: block_content.webcam_ad.field_include_in_rotation
+field_name: field_include_in_rotation
+entity_type: block_content
+bundle: webcam_ad
+label: 'Include in Rotation'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: ''
+  off_label: ''
+field_type: boolean

@@ -1,0 +1,30 @@
+uuid: 027d1516-d167-44d0-9739-bff9d0b103b1
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.timed_content.body
+    - node.type.timed_content
+  module:
+    - text
+    - user
+id: node.timed_content.teaser
+targetEntityType: node
+bundle: timed_content
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

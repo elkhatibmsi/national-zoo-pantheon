@@ -1,0 +1,19 @@
+uuid: 9a2462c8-a5a2-4ac4-9d54-99e9f405b1bb
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+    - text
+id: block_content.field_event_comestible_text
+field_name: field_event_comestible_text
+entity_type: block_content
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

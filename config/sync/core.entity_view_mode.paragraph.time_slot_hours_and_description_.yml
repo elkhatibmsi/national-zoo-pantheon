@@ -1,0 +1,10 @@
+uuid: 5d6390db-9adb-4a30-9383-4a7434ca280b
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.time_slot_hours_and_description_
+label: time_slot_hours_and_description_
+targetEntityType: paragraph
+cache: true

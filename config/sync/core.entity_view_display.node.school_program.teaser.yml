@@ -1,0 +1,54 @@
+uuid: f035f7d9-70c7-45b3-a464-0d53f5b538f2
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.school_program.body
+    - field.field.node.school_program.field_cost_text
+    - field.field.node.school_program.field_cost_text2
+    - field.field.node.school_program.field_editorial_access
+    - field.field.node.school_program.field_grades
+    - field.field.node.school_program.field_landing_image
+    - field.field.node.school_program.field_number_of_students
+    - field.field.node.school_program.field_program_length
+    - field.field.node.school_program.field_site
+    - node.type.school_program
+  module:
+    - text
+    - user
+id: node.school_program.teaser
+targetEntityType: node
+bundle: school_program
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_landing_image:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_cost_text: true
+  field_cost_text2: true
+  field_editorial_access: true
+  field_grades: true
+  field_number_of_students: true
+  field_program_length: true
+  field_site: true

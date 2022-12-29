@@ -1,0 +1,15 @@
+uuid: 641d84f2-a839-4d24-9b8d-f983a7b45ed6
+langcode: en
+status: true
+dependencies:
+  module:
+    - layout_paragraphs
+id: image_collection
+label: 'Image collection'
+icon_uuid: null
+icon_default: null
+description: 'Migrated from field_collection field_image_collection'
+behavior_plugins:
+  layout_paragraphs:
+    enabled: false
+    available_layouts: {  }

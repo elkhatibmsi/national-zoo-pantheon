@@ -1,0 +1,31 @@
+uuid: 76a77065-2010-466f-b507-a5b3fde8a612
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.media.image_http.field_media_image_http
+    - image.style.large
+    - media.type.image_http
+  module:
+    - image
+id: media.image_http.default
+targetEntityType: media
+bundle: image_http
+mode: default
+content:
+  field_media_image_http:
+    type: image
+    label: visually_hidden
+    settings:
+      image_link: ''
+      image_style: large
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  created: true
+  name: true
+  thumbnail: true
+  uid: true

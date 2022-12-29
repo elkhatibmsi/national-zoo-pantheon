@@ -1,0 +1,20 @@
+uuid: c89fa08a-6e76-4110-bdd4-d887c285e4bc
+langcode: und
+status: true
+dependencies:
+  module:
+    - datetime
+    - paragraphs
+id: paragraph.field_hours_active_date
+field_name: field_hours_active_date
+entity_type: paragraph
+type: datetime
+settings:
+  datetime_type: date
+module: datetime
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

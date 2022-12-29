@@ -1,0 +1,10 @@
+{{ attach_library('tailwind_nzp/alpinejs') }}
+{{ attach_library('tailwind_nzp/alpine_mm_dropdown') }}
+<header class="bg-oxford-blue">
+    <div class="lg:container mx-auto grid grid-cols-1 lg:grid-cols-12 gap-4 p-4" x-data="{ expanded: (window.innerWidth >= 1024) ? true : false }" @resize.window="width = (window.innerWidth > 0) ? window.innerWidth : screen.width; if (width >= 1024) { expanded = true } else { expanded = false }">		    
+    <div class="site-logo--inner col-span-full lg:col-span-8 grid grid-cols-4">{{ page.logo }}</div>
+    <div x-show="expanded" class="col-span-full lg:col-span-4 mt-4">{{ page.utility_menu }}</div>
+    <div x-show="expanded" class="col-span-full lg:col-span-3 lg:ml-20 pt-1.5 text-cyber-yellow">{{ page.hours }}</div>
+    <div class=" lg:col-span-8" x-show="expanded" x-transition="">{{ page.navigation }}</div>
+    <div class=" lg:col-span-1" x-show="expanded" x-transition="">{{ page.search }}</div></div> 
+</header>

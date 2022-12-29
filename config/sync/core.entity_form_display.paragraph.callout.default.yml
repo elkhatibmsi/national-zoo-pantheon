@@ -1,0 +1,32 @@
+uuid: cbe1bf0b-4540-4e41-bedb-47ac0ead202e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.callout.field_border_color
+    - field.field.paragraph.callout.field_callout_text
+    - paragraphs.paragraphs_type.callout
+  module:
+    - text
+id: paragraph.callout.default
+targetEntityType: paragraph
+bundle: callout
+mode: default
+content:
+  field_border_color:
+    type: options_select
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_callout_text:
+    type: text_textarea
+    weight: 1
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

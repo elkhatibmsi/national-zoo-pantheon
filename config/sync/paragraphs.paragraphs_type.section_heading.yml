@@ -1,0 +1,15 @@
+uuid: 3ce29c1f-ed67-49c6-830b-3a582688ef99
+langcode: en
+status: true
+dependencies:
+  module:
+    - layout_paragraphs
+id: section_heading
+label: 'Section Heading'
+icon_uuid: null
+icon_default: null
+description: 'Migrated from paragraph bundle Section Heading'
+behavior_plugins:
+  layout_paragraphs:
+    enabled: false
+    available_layouts: {  }

@@ -1,0 +1,19 @@
+uuid: 2d5fa109-734e-4c8b-b72e-58a8ad7416fb
+langcode: und
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_sleep_habits
+field_name: field_sleep_habits
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

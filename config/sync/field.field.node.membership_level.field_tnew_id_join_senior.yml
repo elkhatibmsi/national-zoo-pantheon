@@ -1,0 +1,23 @@
+uuid: 463654bb-5964-46ca-968a-a52d6798f8ad
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tnew_id_join_senior
+    - node.type.membership_level
+id: node.membership_level.field_tnew_id_join_senior
+field_name: field_tnew_id_join_senior
+entity_type: node
+bundle: membership_level
+label: 'TNEW_id (Join Senior)'
+description: 'Enter the unique tessitura ID for this transaction. <strong>IMPORTANT: If you put something here, a link will appear on the front end telling people that there is a senior discount for this level</strong>'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 0
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

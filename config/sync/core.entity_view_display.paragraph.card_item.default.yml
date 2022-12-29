@@ -1,0 +1,59 @@
+uuid: 63881846-625d-438c-adbd-de8acbddbc7b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.card_item.field_card_item_image
+    - field.field.paragraph.card_item.field_card_item_link
+    - field.field.paragraph.card_item.field_card_item_text
+    - paragraphs.paragraphs_type.card_item
+  module:
+    - layout_builder
+    - layout_builder_restrictions
+    - link
+    - text
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+  layout_builder_restrictions:
+    allowed_block_categories: {  }
+    entity_view_mode_restriction:
+      allowed_layouts: {  }
+      denylisted_blocks: {  }
+      allowlisted_blocks: {  }
+      restricted_categories: {  }
+id: paragraph.card_item.default
+targetEntityType: paragraph
+bundle: card_item
+mode: default
+content:
+  field_card_item_image:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_card_item_link:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_card_item_text:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden: {  }

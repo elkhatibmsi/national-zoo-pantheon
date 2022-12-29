@@ -1,0 +1,19 @@
+uuid: 78e1971c-0a89-49d0-9c6b-3eb4258ad173
+langcode: und
+status: true
+dependencies:
+  module:
+    - link
+    - paragraphs
+id: paragraph.field_sticky_anchor_menu_link
+field_name: field_sticky_anchor_menu_link
+entity_type: paragraph
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

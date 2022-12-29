@@ -1,0 +1,229 @@
+uuid: 9d05c1f8-1eff-4e7a-827b-bb2b8f001b84
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.exhibit.body
+    - field.field.node.exhibit.field_card_position
+    - field.field.node.exhibit.field_conservation_efforts
+    - field.field.node.exhibit.field_daily_demonstrations
+    - field.field.node.exhibit.field_editorial_access
+    - field.field.node.exhibit.field_enrichment
+    - field.field.node.exhibit.field_hours
+    - field.field.node.exhibit.field_landing_image
+    - field.field.node.exhibit.field_map
+    - field.field.node.exhibit.field_marker
+    - field.field.node.exhibit.field_nearby
+    - field.field.node.exhibit.field_open
+    - field.field.node.exhibit.field_paragraph_component
+    - field.field.node.exhibit.field_tags
+    - field.field.node.exhibit.field_upcoming
+    - node.type.exhibit
+  module:
+    - entity_reference_revisions
+    - layout_builder
+    - nzp_layouts
+    - text
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: layout_nzp_one_col
+        layout_settings:
+          context_mapping: {  }
+          custom_classes: ''
+          region_classes:
+            content: col-md-12
+          container_classes: container
+          html_container_elements: div
+          html_region_elements:
+            content: div
+          background_color: bg-none
+          region_background_color: null
+        components:
+          7b0129b3-a2c9-4711-82b6-5fdc49269356:
+            uuid: 7b0129b3-a2c9-4711-82b6-5fdc49269356
+            region: content
+            configuration:
+              id: 'field_block:node:exhibit:body'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            weight: 3
+            additional: {  }
+          5ff3bc2f-43b4-4a34-9932-4b19ec783029:
+            uuid: 5ff3bc2f-43b4-4a34-9932-4b19ec783029
+            region: content
+            configuration:
+              id: 'field_block:node:exhibit:title'
+              label: Title
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: text_field_formatter
+                label: hidden
+                settings:
+                  link_to_entity: 0
+                  wrap_tag: h1
+                  wrap_class: ''
+                  wrap_attributes: ''
+                  override_link_label: ''
+                  token: ''
+                third_party_settings: {  }
+            weight: 2
+            additional: {  }
+          ffe3c963-5a16-4c95-bef9-fad0db03e8eb:
+            uuid: ffe3c963-5a16-4c95-bef9-fad0db03e8eb
+            region: content
+            configuration:
+              id: 'field_block:node:exhibit:field_paragraph_component'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: entity_reference_revisions_entity_view
+                label: hidden
+                settings:
+                  view_mode: full
+                  link: ''
+                third_party_settings: {  }
+            weight: 4
+            additional: {  }
+          450a582f-c740-4a94-b2d4-55a07d1fdb0a:
+            uuid: 450a582f-c740-4a94-b2d4-55a07d1fdb0a
+            region: content
+            configuration:
+              id: 'field_block:node:exhibit:field_landing_image'
+              label: 'Teaser image'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: blazy_media
+                label: hidden
+                settings:
+                  caption:
+                    field_dams_number: '0'
+                    field_image_alt_text: '0'
+                    field_media_tags: '0'
+                    field_notes: '0'
+                    field_photographer: '0'
+                    field_we_do_not_own: '0'
+                    title: '0'
+                    alt: '0'
+                  view_mode: default
+                  background: false
+                  box_caption: ''
+                  box_caption_custom: ''
+                  box_media_style: ''
+                  box_style: ''
+                  image_style: slick_fullscreen
+                  media_switch: ''
+                  ratio: ''
+                  thumbnail_style: ''
+                  current_view_mode: _custom
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          4d84c813-d50a-4ffa-b8d6-69cd4fd235e0:
+            uuid: 4d84c813-d50a-4ffa-b8d6-69cd4fd235e0
+            region: content
+            configuration:
+              id: 'field_block:node:exhibit:field_paragraph_component'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: entity_reference_revisions_entity_view
+                label: hidden
+                settings:
+                  view_mode: full
+                  link: ''
+                third_party_settings: {  }
+            weight: 6
+            additional: {  }
+          d6fc401e-a1e6-4c0a-8471-4d91120d0cc8:
+            uuid: d6fc401e-a1e6-4c0a-8471-4d91120d0cc8
+            region: content
+            configuration:
+              id: 'extra_field_block:node:exhibit:links'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+            weight: 7
+            additional: {  }
+          afe97aad-0511-4454-b4de-14aa403bfd53:
+            uuid: afe97aad-0511-4454-b4de-14aa403bfd53
+            region: content
+            configuration:
+              id: 'field_block:node:exhibit:body'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            weight: 8
+            additional: {  }
+        third_party_settings: {  }
+id: node.exhibit.default
+targetEntityType: node
+bundle: exhibit
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: -20
+    region: content
+  field_paragraph_component:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: full
+      link: ''
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_card_position: true
+  field_conservation_efforts: true
+  field_daily_demonstrations: true
+  field_editorial_access: true
+  field_enrichment: true
+  field_hours: true
+  field_landing_image: true
+  field_map: true
+  field_marker: true
+  field_nearby: true
+  field_open: true
+  field_slideshow: true
+  field_tags: true
+  field_upcoming: true

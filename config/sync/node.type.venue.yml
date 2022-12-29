@@ -1,0 +1,11 @@
+uuid: b9ca871a-d91c-4e5a-8952-f2c58508bb59
+langcode: en
+status: true
+dependencies: {  }
+name: Venue
+type: venue
+description: "For adding and managing venues at the Zoo. \r\n\r\n"
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: true

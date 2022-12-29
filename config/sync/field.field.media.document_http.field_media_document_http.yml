@@ -1,0 +1,27 @@
+uuid: 039eaa6e-f72a-4554-8f5f-5e4171b3bba7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_media_document_http
+    - media.type.document_http
+  module:
+    - file
+id: media.document_http.field_media_document_http
+field_name: field_media_document_http
+entity_type: media
+bundle: document_http
+label: Document
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'txt doc docx pdf edu/ids/deliveryService?id=NZP-20091222-152MM edu/ids/deliveryService?id=NZP-20080410-221MM m3u8'
+  max_filesize: ''
+  description_field: true
+field_type: file

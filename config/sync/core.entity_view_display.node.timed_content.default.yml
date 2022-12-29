@@ -1,0 +1,28 @@
+uuid: 4b062b37-dead-41e0-97ae-fd7df15a2bbc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.timed_content.body
+    - node.type.timed_content
+  module:
+    - text
+    - user
+id: node.timed_content.default
+targetEntityType: node
+bundle: timed_content
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

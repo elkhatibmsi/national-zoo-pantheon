@@ -1,0 +1,108 @@
+uuid: c0d0e522-03c6-460b-bc23-cd2ab438439c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.slideshow.field_caption_position
+    - field.field.paragraph.slideshow.field_link_slide_to_modal
+    - field.field.paragraph.slideshow.field_modal_content
+    - field.field.paragraph.slideshow.field_slide_caption
+    - field.field.paragraph.slideshow.field_slide_image
+    - field.field.paragraph.slideshow.field_text
+    - field.field.paragraph.slideshow.field_url
+    - image.style.wide
+    - paragraphs.paragraphs_type.slideshow
+  module:
+    - blazy
+    - layout_builder
+    - link
+    - text
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+id: paragraph.slideshow.default
+targetEntityType: paragraph
+bundle: slideshow
+mode: default
+content:
+  field_grid_style:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_slide_caption:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_slide_image:
+    type: blazy_media
+    label: hidden
+    settings:
+      caption:
+        field_dams_number: '0'
+        field_image_alt_text: '0'
+        field_media_tags: '0'
+        field_notes: '0'
+        field_photographer: '0'
+        field_we_do_not_own: '0'
+        title: '0'
+        alt: '0'
+      class: ''
+      id: ''
+      image: ''
+      link: ''
+      overlay: ''
+      title: ''
+      vanilla: false
+      layout: ''
+      view_mode: default
+      cache: 0
+      skin: ''
+      style: ''
+      background: false
+      box_caption: ''
+      box_caption_custom: ''
+      box_media_style: ''
+      responsive_image_style: ''
+      box_style: ''
+      image_style: wide
+      media_switch: ''
+      ratio: ''
+      thumbnail_style: ''
+      grid: ''
+      grid_medium: ''
+      grid_small: ''
+      breakpoints: {  }
+      current_view_mode: default
+      fx: ''
+      icon: ''
+      sizes: ''
+      grid_header: ''
+      _uri: ''
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_url:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden:
+  field_caption_position: true
+  field_link_slide_to_modal: true
+  field_modal_content: true
+  field_slideshow: true
+  field_text: true

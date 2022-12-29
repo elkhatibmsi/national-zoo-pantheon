@@ -1,0 +1,23 @@
+uuid: ccfc7f0b-d10d-4b2a-8ab9-0f0550dc9d17
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_product_properties
+    - node.type.coffee_product
+id: node.coffee_product.field_product_properties
+field_name: field_product_properties
+entity_type: node
+bundle: coffee_product
+label: 'Product Properties'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    sort:
+      field: _none
+field_type: entity_reference

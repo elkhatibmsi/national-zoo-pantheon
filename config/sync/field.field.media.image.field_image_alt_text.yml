@@ -1,0 +1,19 @@
+uuid: d8605f82-1e59-4e3e-bead-7d9237b05c4f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_image_alt_text
+    - media.type.image
+id: media.image.field_image_alt_text
+field_name: field_image_alt_text
+entity_type: media
+bundle: image
+label: 'Image Alt Text'
+description: 'Enter something descriptive that captures the meaning of the image for people who cannot see it due to impaired vision.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

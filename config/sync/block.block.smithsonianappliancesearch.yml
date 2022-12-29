@@ -1,0 +1,20 @@
+uuid: fab68e8e-b189-4002-832f-6f2e4bf983eb
+langcode: en
+status: true
+dependencies:
+  module:
+    - smithsonian_appliance
+  theme:
+    - tailwind_nzp
+id: smithsonianappliancesearch
+theme: tailwind_nzp
+region: search
+weight: 0
+provider: null
+plugin: smithsonian_appliance_search
+settings:
+  id: smithsonian_appliance_search
+  label: 'Smithsonian Appliance Search'
+  label_display: '0'
+  provider: smithsonian_appliance
+visibility: {  }

@@ -1,0 +1,8 @@
+uuid: 4312f1f1-c71a-4934-a325-c64359ec41bf
+langcode: en
+status: true
+dependencies: {  }
+id: menu-webcam---about-the-giant-pa
+label: 'webcam - About the Giant Panda'
+description: 'Appears on the Giant Panda Webcam page'
+locked: false

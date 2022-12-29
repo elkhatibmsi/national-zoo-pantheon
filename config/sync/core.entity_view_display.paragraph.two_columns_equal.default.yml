@@ -1,0 +1,34 @@
+uuid: f1d0c7c7-d72c-4cf8-9812-7dad78eacdb2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.two_columns_equal.field_column_1
+    - field.field.paragraph.two_columns_equal.field_column_2
+    - paragraphs.paragraphs_type.two_columns_equal
+  module:
+    - entity_reference_revisions
+id: paragraph.two_columns_equal.default
+targetEntityType: paragraph
+bundle: two_columns_equal
+mode: default
+content:
+  field_column_1:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: full
+      link: ''
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_column_2:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: full
+      link: ''
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden: {  }

@@ -1,0 +1,236 @@
+layout_blank:
+  label: 'nzp blank container'
+  path: templates
+  template: layout--nzp-blank
+  class: '\Drupal\nzp_layouts\Plugin\Layout\NzpBlankLayout'
+  category: 'Columns: 1'
+  default_region: content
+  icon_map:
+    - [content]
+  regions:
+    content:
+      label: 'Main Content'
+
+
+layout_nzp_one_col:
+  label: 'nzp One Column'
+  path: templates
+  template: layout--nzp-one-col
+  category: 'Columns: 1'
+  default_region: content
+  class: '\Drupal\nzp_layouts\Plugin\Layout\NzpOneColLayouts'
+  icon_map:
+    - [content]
+  regions:
+    content:
+      label: 'Main Content'
+
+layout_nzp_two_col:
+  label: 'nzp Two Column'
+  path: templates
+  template: layout--nzp-two-col
+  category: 'Columns: 2'
+  default_region: one_col
+  class: '\Drupal\nzp_layouts\Plugin\Layout\NzpTwoColLayouts'
+  icon_map:
+    - [first, second]
+  regions:
+    one_col:
+      label: Column 1
+    two_col:
+      label: Column 2
+
+layout_nzp_three_col:
+  label: 'nzp Three Column'
+  path: templates
+  template: layout--nzp-three-col
+  category: 'Columns: 3'
+  default_region: one_col
+  class: '\Drupal\nzp_layouts\Plugin\Layout\NzpThreeColLayouts'
+  icon_map:
+    - [first, second, third]
+  regions:
+    one_col:
+      label: Column 1
+    two_col:
+      label: Column 2
+    three_col:
+      label: Column 3
+
+layout_accordion:
+  label: 'Accordion'
+  template: templates/layout--nzp-accordion
+  category: 'Components'
+  default_region: content
+  regions:
+    summary:
+      label: summary
+    content:
+      label: content
+  icon_map:
+    - [top]
+    - [bottom]
+
+layout_nzp_tab:
+  label: 'Tabbed Interface'
+  template: templates/layout--nzp-tab
+  class: '\Drupal\nzp_layouts\Plugin\Layout\NzpTabLayouts'
+  library: nzp_layouts/nzp_tabs-library
+  category: 'Components'
+  default_region: content
+  icon_map:
+    - [top]
+    - [bottom]
+  regions:
+    tab_title:
+      label: Tab Title
+    tab_content_0:
+      label: Tab 1
+    tab_content_1:
+      label: Tab 2
+    tab_content_2:
+      label: Tab 3
+    tab_content_3:
+      label: Tab 4
+    tab_content_4:
+      label: Tab 5
+    tab_content_5:
+      label: Tab 6
+    
+
+layout_flyout:
+  label: 'nzp OffCanvas'
+  path: templates
+  template: layout--nzp-offcanvas
+  library: nzp_layouts/nzp_offcanvas-library
+  category: ''
+  default_region: content
+  class: '\Drupal\nzp_layouts\Plugin\Layout\NzpOffCanvasLayout'
+  icon_map:
+    - [top]
+    - [bottom]
+  regions:
+    content:
+      label: Content
+
+layout_image_with_caption:  
+  label: 'Image w/ Caption'
+  template: templates/layout--nzp-image-with-caption
+  category: 'Components'
+  default_region: content
+  icon_map:
+   - [top] 
+   - [top]
+   - [top]
+   - [bottom]
+  regions:
+    image:
+      label: image
+    caption:
+      label: caption
+
+layout_grid:  
+  label: 'Grid'
+  template: templates/layout--nzp-grid
+  category: 'Components'
+  class: '\Drupal\nzp_layouts\Plugin\Layout\NzpGrid'
+  default_region: content
+  icon_map:
+   - [first_above, second_above, third_above]
+   - [first_middle, second_middle, third_middle]
+   - [first_below, second_below, third_below]
+  regions:
+    content:
+      label: content
+
+layout_definition:  
+  label: 'Definition'
+  template: templates/layout--nzp-definition
+  category: 'Components'
+  default_region: content
+  icon_map:
+   - [first_above, second_above, second_above]
+   - [first_middle, second_middle, second_middle]
+   - [first_below, second_below, second_below]   
+  regions:
+    term:
+      label: term
+    definition:
+      label: definition   
+      
+layout_blockquote:  
+  label: 'Blockquote'
+  template: templates/layout--nzp-blockquote
+  icon_map:
+    - [content]
+  category: 'Components'
+  default_region: content  
+  regions:
+    content:
+      label: content   
+
+layout_callout:  
+  label: 'Callout'
+  template: templates/layout--nzp-callout
+  category: 'Components'
+  default_region: content
+  icon_map:
+    - [content]
+  regions:
+    content:
+      label: content  
+
+layout_call_to_action:  
+  label: 'Call to Action'
+  template: templates/layout--nzp-call-to-action
+  category: 'Components'
+  default_region: content  
+  icon_map:
+    - [content]
+  regions:
+    content:
+      label: content
+
+layout_button:  
+  label: 'Button'
+  template: templates/layout--nzp-button
+  class: '\Drupal\nzp_layouts\Plugin\Layout\NzpButton'
+  category: 'Components'
+  icon_map:
+    - [content]
+
+layout_masonry:
+  label: 'Masonry Grid'
+  path: templates
+  template: layout--nzp-masonry
+  category: 'Columns: 5'
+  default_region: content
+  icon_map:
+    - [content]
+  regions:
+    area1:
+      label: 'Featured'
+    area2:
+      label: 'Area One'
+    area3:
+      label: 'Area Two'
+    area4:
+      label: 'Area Three'
+    area5:
+      label: 'Area Four'
+
+
+layout_card_banner:  
+  label: 'Card Banner'
+  path: templates
+  template: layout--nzp-card-banner
+  class: \Drupal\nzp_layouts\Plugin\Layout\NzpOneColLayouts
+  category: 'Components'
+  default_region: content
+  icon_map:
+    - [content]
+  regions:
+    card: 
+      label: card
+    banner:
+      label: banner

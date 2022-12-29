@@ -1,0 +1,21 @@
+uuid: 6937972b-1a96-4432-8aa1-f15082fa6a48
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_additional_information
+    - node.type.adopt_a_species
+  module:
+    - text
+id: node.adopt_a_species.field_additional_information
+field_name: field_additional_information
+entity_type: node
+bundle: adopt_a_species
+label: 'Package Description'
+description: 'Appears in right sidebar under the picture of the package.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

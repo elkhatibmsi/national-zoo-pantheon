@@ -1,0 +1,43 @@
+uuid: f7046bd3-44c3-497b-a86a-756ffbc84706
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.time_slot.field_hours_category
+    - field.field.paragraph.time_slot.field_hours_description
+    - paragraphs.paragraphs_type.time_slot
+  module:
+    - layout_builder
+    - layout_builder_restrictions
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+  layout_builder_restrictions:
+    allowed_block_categories: {  }
+    entity_view_mode_restriction:
+      allowed_layouts: {  }
+      denylisted_blocks: {  }
+      allowlisted_blocks: {  }
+      restricted_categories: {  }
+id: paragraph.time_slot.default
+targetEntityType: paragraph
+bundle: time_slot
+mode: default
+content:
+  field_hours_category:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_hours_description:
+    type: basic_string
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden: {  }

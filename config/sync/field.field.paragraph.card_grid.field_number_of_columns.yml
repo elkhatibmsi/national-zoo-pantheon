@@ -1,0 +1,23 @@
+uuid: c2f6f1ec-eff7-474d-bef7-68ed28530594
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_number_of_columns
+    - paragraphs.paragraphs_type.card_grid
+  module:
+    - options
+id: paragraph.card_grid.field_number_of_columns
+field_name: field_number_of_columns
+entity_type: paragraph
+bundle: card_grid
+label: 'Number of Columns'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 3
+default_value_callback: ''
+settings: {  }
+field_type: list_integer

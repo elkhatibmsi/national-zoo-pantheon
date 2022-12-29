@@ -1,0 +1,31 @@
+uuid: 671b9938-30f5-4341-992f-6715cf9116e4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_single_image_caption_image
+    - media.type.image
+    - media.type.image_http
+    - paragraphs.paragraphs_type.single_image_with_caption
+id: paragraph.single_image_with_caption.field_single_image_caption_image
+field_name: field_single_image_caption_image
+entity_type: paragraph
+bundle: single_image_with_caption
+label: 'Single Image Caption Image'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+      image_http: image_http
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: image
+field_type: entity_reference

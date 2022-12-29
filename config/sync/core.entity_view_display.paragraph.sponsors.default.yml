@@ -1,0 +1,31 @@
+uuid: 4a694bfa-979f-45de-86e8-bb81276363b1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.sponsors.field_sponsor_title
+    - field.field.paragraph.sponsors.field_sponsors_content
+    - paragraphs.paragraphs_type.sponsors
+  module:
+    - text
+id: paragraph.sponsors.default
+targetEntityType: paragraph
+bundle: sponsors
+mode: default
+content:
+  field_sponsor_title:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_sponsors_content:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden: {  }

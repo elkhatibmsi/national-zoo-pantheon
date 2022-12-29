@@ -1,0 +1,23 @@
+uuid: 055206b0-e853-457e-b9f7-f75768b9183a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_reception_capacity
+    - node.type.venue
+id: node.venue.field_reception_capacity
+field_name: field_reception_capacity
+entity_type: node
+bundle: venue
+label: 'Reception Capacity'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

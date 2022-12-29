@@ -1,0 +1,18 @@
+uuid: a04e1825-ff30-4e2c-975a-b944987a30ff
+langcode: und
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_product_wholesale
+field_name: field_product_wholesale
+entity_type: node
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

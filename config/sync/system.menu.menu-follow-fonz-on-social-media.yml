@@ -1,0 +1,8 @@
+uuid: 61dd3036-2829-43e1-814c-a6383b44b6cf
+langcode: en
+status: true
+dependencies: {  }
+id: menu-follow-fonz-on-social-media
+label: 'Follow FONZ'
+description: 'Social Media accounts for FONZ'
+locked: false

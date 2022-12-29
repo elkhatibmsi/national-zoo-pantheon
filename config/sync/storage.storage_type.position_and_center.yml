@@ -1,0 +1,13 @@
+uuid: 54084998-03df-4442-b515-39c1811cc34f
+langcode: en
+status: true
+dependencies: {  }
+id: position_and_center
+label: 'Position and Center'
+description: ''
+help: ''
+new_revision: false
+revision_expose: false
+revision_log: false
+name_pattern: ''
+has_canonical: false

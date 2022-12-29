@@ -1,0 +1,39 @@
+{#
+/**
+ * Tailwind Grid Views Display Formatter.
+ *
+ * Available variables:
+ * - options: View plugin style options:
+ *   - row_classes: CSS classes.
+ *   - column_count: number of columns per grid
+ *
+ * @see template_preprocess_views_view_tailwind_views()
+ *
+ * @ingroup themeable
+ */
+#}
+
+{% if title %}
+  <h3>{{ title }}</h3>
+{% endif %}
+
+<div class="grid-cols-12 grid gap-2">
+    {% for row in rows %}
+
+            {%
+  set classes = [
+
+   view.style_plugin.options['column_count'],
+   view.style_plugin.options['row_classes'],
+
+  ]
+%}
+
+    <div {{attributes.addClass(classes)}}>
+            {{row}}
+      </div>
+    {% endfor %}
+
+</div>
+
+</div>

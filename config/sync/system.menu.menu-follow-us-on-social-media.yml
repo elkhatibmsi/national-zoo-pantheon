@@ -1,0 +1,8 @@
+uuid: 6a72c46c-9f21-4758-a0fb-f8d7c3d3765d
+langcode: en
+status: true
+dependencies: {  }
+id: menu-follow-us-on-social-media
+label: 'Follow us on social media'
+description: 'Social media accounts for the Zoo'
+locked: false

@@ -1,0 +1,8 @@
+uuid: 7b9cfcb6-f22a-471c-880c-419a3ca0dbaa
+langcode: en
+status: true
+dependencies: {  }
+name: 'Page Types'
+vid: page_types
+description: 'Categorizes basic pages'
+weight: 0

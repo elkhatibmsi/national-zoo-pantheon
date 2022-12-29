@@ -1,0 +1,24 @@
+uuid: f3910879-f26c-440d-bf2c-d7de95c4bbbd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_icon_card_image
+    - media.type.image
+    - paragraphs.paragraphs_type.icon_card_item
+id: paragraph.icon_card_item.field_icon_card_image
+field_name: field_icon_card_image
+entity_type: paragraph
+bundle: icon_card_item
+label: 'Card Image'
+description: 'Upload or select an image that will appear as the card''s background. '
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+field_type: entity_reference

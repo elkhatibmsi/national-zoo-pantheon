@@ -1,0 +1,22 @@
+{% macro get_attribute(object, attributes) %}
+    {% apply spaceless %}
+    {% set attributes = attributes|split('.') %}
+
+    {% set value = object %}
+    {% for attribute in attributes %}
+        {% set value = attribute(value, attribute|trim) is defined ? attribute(value, attribute|trim) : null %}
+    {% endfor %}
+    {{ value }}
+    {% endapply %}    
+{% endmacro %}
+
+
+{% macro section_color(color_array, default) %}
+  {% apply spaceless %}
+  {# grab the path from the website url, this path will be used to check against the colors defined in the color_array #}
+  {% set path = path('<current>')|split('/')[1]|clean_class %}
+  {# if the path is in color_array, output border, otherwise default to the default class #}
+  {% set color_class = path in color_array ? path : default %}
+  {{color_class}}
+  {% endapply %}
+{% endmacro %}

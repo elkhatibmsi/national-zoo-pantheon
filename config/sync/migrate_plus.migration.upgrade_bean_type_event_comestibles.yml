@@ -1,0 +1,43 @@
+uuid: af7461e6-4579-4df0-a1ce-80d6689b793e
+langcode: en
+status: true
+dependencies: {  }
+id: upgrade_bean_type_event_comestibles
+class: Drupal\migrate\Plugin\Migration
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 7'
+  - Configuration
+migration_group: migrate_drupal_7
+label: 'Bean type (event_comestibles)'
+source:
+  plugin: bean_type
+  entity_type: bean
+  constants:
+    revision: 1
+  type: event_comestibles
+process:
+  id:
+    -
+      plugin: bean_unique_type
+      source: type
+  label:
+    -
+      plugin: null_coalesce
+      source:
+        - label
+        - type
+  description:
+    -
+      plugin: get
+      source: description
+  revision:
+    -
+      plugin: get
+      source: constants/revision
+destination:
+  plugin: 'entity:block_content_type'
+migration_dependencies:
+  required: {  }
+  optional: {  }

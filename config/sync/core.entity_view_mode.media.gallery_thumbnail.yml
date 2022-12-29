@@ -1,0 +1,10 @@
+uuid: a219fdac-2887-46d0-92ca-5ea0b75b4ce3
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.gallery_thumbnail
+label: gallery_thumbnail
+targetEntityType: media
+cache: true

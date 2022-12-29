@@ -1,0 +1,8 @@
+uuid: 59f3e903-efec-400c-9fb8-24ff796a37f9
+langcode: en
+status: true
+dependencies: {  }
+id: animals-global-nav-links
+label: 'Animals Global Nav Links'
+description: 'Animals global nav menu'
+locked: false

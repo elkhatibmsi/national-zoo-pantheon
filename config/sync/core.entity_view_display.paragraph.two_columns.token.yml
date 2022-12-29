@@ -1,0 +1,44 @@
+uuid: 4c5abab3-bb76-43a5-b641-b9c7b1b290af
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.token
+    - field.field.paragraph.two_columns.field_two_columns_column_1
+    - field.field.paragraph.two_columns.field_two_columns_column_2
+    - field.field.paragraph.two_columns.field_two_columns_column_ratios
+    - paragraphs.paragraphs_type.two_columns
+  module:
+    - entity_reference_revisions
+    - options
+id: paragraph.two_columns.token
+targetEntityType: paragraph
+bundle: two_columns
+mode: token
+content:
+  field_two_columns_column_1:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: full
+      link: ''
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_two_columns_column_2:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: full
+      link: ''
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_two_columns_column_ratios:
+    type: list_key
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

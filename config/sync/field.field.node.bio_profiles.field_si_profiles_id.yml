@@ -1,0 +1,19 @@
+uuid: 22000255-333f-477e-8a60-bd74c741bb10
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_si_profiles_id
+    - node.type.bio_profiles
+id: node.bio_profiles.field_si_profiles_id
+field_name: field_si_profiles_id
+entity_type: node
+bundle: bio_profiles
+label: 'Si Profiles ID'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

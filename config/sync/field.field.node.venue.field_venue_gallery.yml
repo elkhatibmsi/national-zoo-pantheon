@@ -1,0 +1,24 @@
+uuid: 3a067eb3-baad-4248-850a-611f4ce6a1c8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_venue_gallery
+    - media.type.image
+    - node.type.venue
+id: node.venue.field_venue_gallery
+field_name: field_venue_gallery
+entity_type: node
+bundle: venue
+label: Gallery
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+field_type: entity_reference

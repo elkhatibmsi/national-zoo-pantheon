@@ -1,0 +1,18 @@
+uuid: 6c5c5659-d456-4512-9783-c12624e42a55
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main-menu
+    parent: 'main-menu:0:'
+name: 'Adopt a Species'
+type: adopt_a_species
+description: ''
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

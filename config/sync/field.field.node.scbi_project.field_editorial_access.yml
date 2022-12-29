@@ -1,0 +1,23 @@
+uuid: f45a4706-64e8-4aa6-abe2-118fa83669b5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_editorial_access
+    - node.type.scbi_project
+id: node.scbi_project.field_editorial_access
+field_name: field_editorial_access
+entity_type: node
+bundle: scbi_project
+label: Center
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    sort:
+      field: _none
+field_type: entity_reference

@@ -22,6 +22,7 @@
   /* 2 */
 }
 
+
 ::before,
 ::after {
   --tw-content: '';
@@ -54,6 +55,7 @@ html {
 */
 
 body {
+  background: green !important;
   margin: 0;
   /* 1 */
   line-height: inherit;

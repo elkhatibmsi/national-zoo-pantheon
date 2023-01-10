@@ -29,7 +29,6 @@ dependencies:
   module:
     - content_moderation
     - field_group
-    - layout_paragraphs
     - media_library
     - paragraphs
     - path
@@ -38,13 +37,12 @@ third_party_settings:
   field_group:
     group_authoring:
       children:
-        - field_editorial_access
         - moderation_state
-      label: Workflow
+      label: Publishing
       region: content
       parent_name: ''
-      weight: 1
-      format_type: details
+      weight: 2
+      format_type: details_sidebar
       format_settings:
         classes: ''
         show_empty_fields: false
@@ -52,34 +50,14 @@ third_party_settings:
         open: false
         description: ''
         required_fields: true
-        formatter: closed
-        effect: none
-        weight: 0
+        weight: -6
     group_content:
       children:
-        - body
         - field_content_block
-      label: Content
+      label: 'Page Content'
       region: content
       parent_name: group_tabs
-      weight: 22
-      format_type: tab
-      format_settings:
-        classes: ''
-        show_empty_fields: false
-        id: ''
-        formatter: closed
-        description: ''
-        required_fields: true
-    group_extra_content:
-      children:
-        - field_slideshow
-        - field_modal_gallery
-        - field_featured_video
-      label: 'Extra Content'
-      region: content
-      parent_name: group_tabs
-      weight: 23
+      weight: 2
       format_type: tab
       format_settings:
         classes: ''
@@ -91,13 +69,12 @@ third_party_settings:
     group_tabs:
       children:
         - group_basic_information
-        - group_teaser
         - group_content
-        - group_extra_content
+        - group_page_media
       label: Tabs
       region: content
       parent_name: ''
-      weight: 0
+      weight: 1
       format_type: tabs
       format_settings:
         classes: ''
@@ -107,6 +84,7 @@ third_party_settings:
         width_breakpoint: 640
     group_layout:
       children:
+        - field_page_type
         - field_card_position
         - field_card_subtitle
       label: Layout
@@ -145,28 +123,30 @@ third_party_settings:
       children:
         - field_teaser_title
         - field_landing_image
+        - body
       label: Teaser
       region: content
-      parent_name: group_tabs
-      weight: 21
-      format_type: tab
+      parent_name: group_basic_information
+      weight: 4
+      format_type: details
       format_settings:
         classes: ''
         show_empty_fields: false
         id: ''
-        formatter: closed
-        description: ''
+        open: false
+        description: 'Enter optional overrides for title, image, and summary to be used specifically in teasers and other content views on other pages of the site.'
         required_fields: true
     group_basic_information:
       children:
-        - field_page_type
+        - field_editorial_access
         - title
         - field_subtitle
         - field_tags
+        - group_teaser
       label: 'Basic Information'
       region: content
       parent_name: group_tabs
-      weight: 20
+      weight: 1
       format_type: tab
       format_settings:
         classes: ''
@@ -183,7 +163,7 @@ third_party_settings:
       label: Legacy
       region: content
       parent_name: ''
-      weight: 2
+      weight: 3
       format_type: details
       format_settings:
         classes: ''
@@ -210,6 +190,23 @@ third_party_settings:
         id: ''
         description: ''
         required_fields: true
+    group_page_media:
+      children:
+        - field_featured_video
+        - field_modal_gallery
+        - field_slideshow
+      label: 'Page Media'
+      region: content
+      parent_name: group_tabs
+      weight: 3
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
 id: node.basic_page.default
 targetEntityType: node
 bundle: basic_page
@@ -217,7 +214,7 @@ mode: default
 content:
   body:
     type: text_textarea_with_summary
-    weight: 3
+    weight: 6
     region: content
     settings:
       rows: 9
@@ -227,13 +224,13 @@ content:
     third_party_settings: {  }
   created:
     type: datetime_timestamp
-    weight: 9
+    weight: 10
     region: content
     settings: {  }
     third_party_settings: {  }
   field_card_position:
     type: entity_reference_autocomplete
-    weight: 0
+    weight: 6
     region: content
     settings:
       match_operator: CONTAINS
@@ -243,25 +240,33 @@ content:
     third_party_settings: {  }
   field_card_subtitle:
     type: text_textfield
-    weight: 1
+    weight: 7
     region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
   field_content_block:
-    type: layout_paragraphs
+    type: paragraphs
     weight: 4
     region: content
     settings:
-      preview_view_mode: default
-      nesting_depth: 2
-      require_layouts: 0
-      empty_message: ''
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      closed_mode: summary
+      autocollapse: none
+      closed_mode_threshold: 0
+      add_mode: modal
+      form_display_mode: default
+      default_paragraph_type: _none
+      features:
+        collapse_edit_all: collapse_edit_all
+        duplicate: duplicate
     third_party_settings: {  }
   field_editorial_access:
     type: options_select
-    weight: 4
+    weight: 0
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -297,7 +302,7 @@ content:
     third_party_settings: {  }
   field_featured_video:
     type: media_library_widget
-    weight: 8
+    weight: 7
     region: content
     settings:
       media_types: {  }
@@ -310,20 +315,29 @@ content:
     third_party_settings: {  }
   field_landing_image:
     type: media_library_widget
-    weight: 3
+    weight: 5
     region: content
     settings:
       media_types: {  }
     third_party_settings: {  }
   field_modal_gallery:
-    type: layout_paragraphs
-    weight: 7
+    type: paragraphs
+    weight: 8
     region: content
     settings:
-      preview_view_mode: default
-      nesting_depth: 2
-      require_layouts: 0
-      empty_message: ''
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      closed_mode: summary
+      autocollapse: none
+      closed_mode_threshold: 0
+      add_mode: button
+      form_display_mode: default
+      default_paragraph_type: _none
+      features:
+        add_above: '0'
+        collapse_edit_all: collapse_edit_all
+        duplicate: duplicate
     third_party_settings: {  }
   field_page_type:
     type: options_select
@@ -386,18 +400,27 @@ content:
         duplicate: duplicate
     third_party_settings: {  }
   field_slideshow:
-    type: layout_paragraphs
-    weight: 6
+    type: paragraphs
+    weight: 9
     region: content
     settings:
-      preview_view_mode: default
-      nesting_depth: 2
-      require_layouts: 0
-      empty_message: ''
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      closed_mode: summary
+      autocollapse: none
+      closed_mode_threshold: 0
+      add_mode: button
+      form_display_mode: default
+      default_paragraph_type: _none
+      features:
+        add_above: '0'
+        collapse_edit_all: collapse_edit_all
+        duplicate: duplicate
     third_party_settings: {  }
   field_subtitle:
     type: string_textfield
-    weight: 7
+    weight: 2
     region: content
     settings:
       size: 60
@@ -405,7 +428,7 @@ content:
     third_party_settings: {  }
   field_tags:
     type: entity_reference_autocomplete_tags
-    weight: 9
+    weight: 3
     region: content
     settings:
       match_operator: CONTAINS
@@ -415,7 +438,7 @@ content:
     third_party_settings: {  }
   field_teaser_title:
     type: string_textfield
-    weight: 2
+    weight: 4
     region: content
     settings:
       size: 60
@@ -429,34 +452,34 @@ content:
     third_party_settings: {  }
   path:
     type: path
-    weight: 6
+    weight: 7
     region: content
     settings: {  }
     third_party_settings: {  }
   promote:
     type: boolean_checkbox
-    weight: 8
+    weight: 9
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   status:
     type: boolean_checkbox
-    weight: 4
+    weight: 5
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
-    weight: 5
+    weight: 6
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   title:
     type: string_textfield
-    weight: 6
+    weight: 1
     region: content
     settings:
       size: 60
@@ -464,7 +487,7 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 3
+    weight: 4
     region: content
     settings:
       match_operator: CONTAINS
@@ -473,7 +496,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
   url_redirects:
-    weight: 7
+    weight: 8
     region: content
     settings: {  }
     third_party_settings: {  }

@@ -1,0 +1,13 @@
+uuid: 703f49e2-c901-4193-827a-d70c98696778
+langcode: en
+status: true
+dependencies: {  }
+id: hours
+label: Hours
+description: ''
+help: ''
+new_revision: false
+revision_expose: false
+revision_log: false
+name_pattern: ''
+has_canonical: false

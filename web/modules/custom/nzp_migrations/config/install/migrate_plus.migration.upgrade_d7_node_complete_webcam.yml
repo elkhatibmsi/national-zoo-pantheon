@@ -84,34 +84,12 @@ process:
       plugin: media_wysiwyg_filter
     -
       plugin: img_tag_to_embed
-  field_camera_embed:
-    -
-      plugin: get
-      source: field_camera_embed
-    -
-      plugin: media_wysiwyg_filter
   field_editorial_access:
     -
       plugin: sub_process
       source: field_editorial_access
       process:
         target_id: tid
-  field_feature_one:
-    -
-      plugin: get
-      source: field_feature_one
-  field_feature_two:
-    -
-      plugin: get
-      source: field_feature_two
-  field_feature_three:
-    -
-      plugin: get
-      source: field_feature_three
-  field_promotion_three:
-    -
-      plugin: get
-      source: field_promotion_three
   field_sponsored_by:
     -
       plugin: get
@@ -128,18 +106,10 @@ process:
       plugin: sub_process
       process:
         target_id: fid
-  field_use_test_player:
-    -
-      plugin: get
-      source: field_use_test_player
   field_content_block:
     -
       plugin: get
       source: field_content_block
-  field_sidebar_section_content:
-    -
-      plugin: get
-      source: field_sidebar_section_content
 destination:
   plugin: 'entity_complete:node'
   translations: true

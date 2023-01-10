@@ -9,8 +9,8 @@ id: node.basic_page.field_subtitle
 field_name: field_subtitle
 entity_type: node
 bundle: basic_page
-label: Subtitle
-description: 'Optional: Enter a subtitle'
+label: Subheading
+description: 'Optional: Enter up to two subheadings.'
 required: false
 translatable: false
 default_value: {  }

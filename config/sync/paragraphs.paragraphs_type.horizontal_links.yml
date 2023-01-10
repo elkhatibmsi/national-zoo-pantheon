@@ -1,0 +1,15 @@
+uuid: e3a19fe2-1b14-4e49-81de-a30907556235
+langcode: en
+status: true
+dependencies:
+  module:
+    - micon_paragraphs
+third_party_settings:
+  micon_paragraphs:
+    icon: ''
+id: horizontal_links
+label: 'Horizontal Links Item'
+icon_uuid: null
+icon_default: null
+description: 'A row of links with icons against a colored background'
+behavior_plugins: {  }

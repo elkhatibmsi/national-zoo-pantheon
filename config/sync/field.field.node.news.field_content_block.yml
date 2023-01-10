@@ -11,7 +11,7 @@ id: node.news.field_content_block
 field_name: field_content_block
 entity_type: node
 bundle: news
-label: 'Other Content'
+label: Content
 description: ''
 required: false
 translatable: false
@@ -62,9 +62,6 @@ settings:
       collapsible_block:
         weight: 4
         enabled: false
-      collection:
-        weight: 78
-        enabled: false
       content_video:
         weight: 31
         enabled: false
@@ -76,6 +73,9 @@ settings:
         enabled: false
       faq_item:
         weight: 79
+        enabled: false
+      feature:
+        weight: 72
         enabled: false
       flipbook_grid:
         weight: -50
@@ -131,6 +131,9 @@ settings:
       promotion_two:
         weight: 87
         enabled: false
+      secondary_feature:
+        weight: 91
+        enabled: false
       section:
         weight: 39
         enabled: false
@@ -145,6 +148,9 @@ settings:
         enabled: false
       slideshow_container:
         weight: 88
+        enabled: false
+      spacer:
+        weight: 97
         enabled: false
       sponsors:
         weight: 89

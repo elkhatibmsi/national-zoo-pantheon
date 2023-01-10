@@ -11,7 +11,7 @@ id: node.basic_page.field_content_block
 field_name: field_content_block
 entity_type: node
 bundle: basic_page
-label: 'Other Content'
+label: Content
 description: 'Add custom content to this page.'
 required: false
 translatable: false
@@ -62,9 +62,6 @@ settings:
       collapsible_block:
         weight: 3
         enabled: false
-      collection:
-        weight: 103
-        enabled: false
       content_video:
         weight: 32
         enabled: false
@@ -76,6 +73,9 @@ settings:
         enabled: false
       faq_item:
         weight: 104
+        enabled: false
+      feature:
+        weight: 72
         enabled: false
       flipbook_grid:
         weight: -48
@@ -131,6 +131,9 @@ settings:
       promotion_two:
         weight: 111
         enabled: false
+      secondary_feature:
+        weight: 91
+        enabled: false
       section:
         weight: -38
         enabled: false
@@ -145,6 +148,9 @@ settings:
         enabled: false
       slideshow_container:
         weight: 112
+        enabled: false
+      spacer:
+        weight: 97
         enabled: false
       sponsors:
         weight: 113

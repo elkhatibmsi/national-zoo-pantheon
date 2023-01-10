@@ -1,0 +1,19 @@
+name: National Zoo Theme
+type: theme
+description: "Official Theme of the Smithsonian's National Zoo and Conservation Biology Institute"
+package: Other
+core: 8.x
+libraries:
+  - theme_nzp/global
+core_version_requirement: ^8 || ^9
+ 
+base theme: stable
+
+regions:
+  offcanvas: OffCanvas
+  topbar: TopBar
+  branding: Branding
+  navigation: Navigation
+  header_utility: Header Utility
+  content: Content
+  footer: Footer

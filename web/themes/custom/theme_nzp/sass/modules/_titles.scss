@@ -1,0 +1,22 @@
+@mixin tophat($color: $nzp-green){
+    position:relative;
+    &:before {
+        content:"";
+        background: linear-gradient(45deg, $color, darken($color, 10%));
+        height: 4px;
+        display:inline-block;
+        width:50px;
+        position:absolute;
+        top: -0.5em;
+        }
+}
+
+h1.page-title {
+    margin: 1em 0 2em;
+    @include tophat($nzp-green);
+}
+
+.block-title {
+    margin-bottom:1em;
+    @include tophat($nzp-scarlet);
+}

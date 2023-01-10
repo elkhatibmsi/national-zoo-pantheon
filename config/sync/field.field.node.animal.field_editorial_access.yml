@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.storage.node.field_editorial_access
     - node.type.animal
+    - taxonomy.vocabulary.website_areas
 id: node.animal.field_editorial_access
 field_name: field_editorial_access
 entity_type: node
@@ -13,13 +14,16 @@ label: 'Editorial Access'
 description: 'Assign this content to an editorial section of the website.'
 required: true
 translatable: false
-default_value:
-  -
-    tid: '35'
+default_value: {  }
 default_value_callback: ''
 settings:
   handler: 'default:taxonomy_term'
   handler_settings:
+    target_bundles:
+      website_areas: website_areas
     sort:
       field: _none
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
 field_type: entity_reference

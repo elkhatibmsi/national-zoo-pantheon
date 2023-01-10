@@ -1,0 +1,12 @@
+uuid: c0ddbfd8-f9c7-42da-aba5-eb055ea1f8a8
+langcode: en
+status: true
+dependencies: {  }
+id: form_styling_template
+label: 'Form Styling Template'
+recipients:
+  - goughg@si.edu
+reply: ''
+weight: 0
+message: ''
+redirect: ''

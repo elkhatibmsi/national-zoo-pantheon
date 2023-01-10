@@ -9,7 +9,7 @@ id: node.news.field_subtitle
 field_name: field_subtitle
 entity_type: node
 bundle: news
-label: Subtitle
+label: Subheading
 description: ''
 required: false
 translatable: false

@@ -1,0 +1,25 @@
+alpinejs:
+  header: false
+  remote: https://alpinejs.dev/
+  version: 3.4.2
+  license:
+    name: MIT
+    url: https://alpinejs.dev
+    gpl-compatible: true
+  js:
+    https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.4.2/cdn.js: { type: external, minified: true }
+
+
+swiperjs:
+  header: true
+  remote: https://swiperjs.com/
+  version: 6.8.4
+  license:
+    name: MIT
+    url: https://swiperjs.com
+    gpl-compatible: true
+  css:
+    theme:
+      https://unpkg.com/swiper@6.8.4/swiper-bundle.min.css: {type: external, minified: true}
+  js:
+    https://unpkg.com/swiper@6.8.4/swiper-bundle.min.js: { type: external, minified: true }

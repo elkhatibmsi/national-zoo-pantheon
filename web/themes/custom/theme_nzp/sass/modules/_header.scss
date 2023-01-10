@@ -1,0 +1,7 @@
+
+header {
+    .header--inner {
+        @include flexify(unset, flex-start, wrap);
+        position:relative;
+    }
+    }

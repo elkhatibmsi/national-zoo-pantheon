@@ -1,0 +1,21 @@
+uuid: ed44c204-03e3-4437-ac22-d5183207ac3b
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.form_styling_template
+    - field.storage.contact_message.field_favorite_birds
+  module:
+    - options
+id: contact_message.form_styling_template.field_favorite_birds
+field_name: field_favorite_birds
+entity_type: contact_message
+bundle: form_styling_template
+label: 'Favorite Birds'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,75 @@
+{#
+/**
+ * Tailwind Grid Views Display Formatter.
+ *
+ * Available variables:
+ * - options: View plugin style options:
+ *   - row_classes: CSS classes.
+ *   - column_count: number of columns per grid
+ *
+ * @see template_preprocess_views_view_tailwind_views()
+ *
+ * @ingroup themeable
+ */
+#}
+
+
+{% set items_per_slide =  view.style_plugin.options['items_per_slide'] %}
+{% set show_controls =  view.style_plugin.options['show_controls'] %}
+{% set show_pagination =  view.style_plugin.options['show_pagination'] %}
+
+{{ attach_library('tailwind_views/alpinejs') }}
+{{ attach_library('tailwind_views/swiperjs') }}
+
+<div x-data="{swiper: null}" x-init="swiper = new Swiper($refs.container, {
+					      loop: false,
+					      slidesPerView: {{items_per_slide}},
+					      spaceBetween: 30,
+						   pagination: {
+							el: '.swiper-pagination',
+							type: 'bullets',
+		 					 },
+		
+					      breakpoints: {
+					        640: {
+					          slidesPerView: 1,
+					          spaceBetween: 0,
+					        },
+					        768: {
+					          slidesPerView: 1,
+					          spaceBetween: 0,
+					        },
+					        1024: {
+					          slidesPerView: {{items_per_slide}},
+					          spaceBetween: 30,
+					        },
+					      },
+					    })">
+	<div class="swiper-container" x-ref="container">
+		<div class="swiper-wrapper ">
+			{% for row in rows %}
+				<div class="swiper-slide h-auto">
+					{{ row }}
+				</div>
+		{% endfor %}
+	</div>
+	{% if show_controls %}
+		<div class="absolute inset-y-0 left-0 z-10 flex items-center">
+			<button @click="swiper.slidePrev()" class="bg-white ml-1 flex justify-center items-center w-10 h-10 rounded-full shadow focus:outline-none">
+				<svg viewbox="0 0 20 20" fill="currentColor" class="chevron-left w-6 h-6">
+					<path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+				</svg>
+			</button>
+		</div>
+		<div class="absolute inset-y-0 right-0 z-10 flex items-center">
+			<button @click="swiper.slideNext()" class="bg-white mr-1 flex justify-center items-center w-10 h-10 rounded-full shadow focus:outline-none">
+				<svg viewbox="0 0 20 20" fill="currentColor" class="chevron-right w-6 h-6">
+					<path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
+				</svg>
+			</button>
+		</div>
+	{% endif %}
+	{% if show_pagination %}
+		<div class="swiper-pagination"></div>
+	{% endif %}
+</div></div>

@@ -11,7 +11,7 @@ id: node.media_release.field_content_block
 field_name: field_content_block
 entity_type: node
 bundle: media_release
-label: 'Paragraph Components'
+label: Content
 description: ''
 required: false
 translatable: false
@@ -62,9 +62,6 @@ settings:
       collapsible_block:
         weight: 12
         enabled: false
-      collection:
-        weight: 42
-        enabled: false
       content_video:
         weight: 13
         enabled: false
@@ -76,6 +73,9 @@ settings:
         enabled: false
       faq_item:
         weight: 43
+        enabled: false
+      feature:
+        weight: 72
         enabled: false
       flipbook_grid:
         weight: 16
@@ -131,6 +131,9 @@ settings:
       promotion_two:
         weight: 51
         enabled: false
+      secondary_feature:
+        weight: 91
+        enabled: false
       section:
         weight: 26
         enabled: false
@@ -145,6 +148,9 @@ settings:
         enabled: false
       slideshow_container:
         weight: 52
+        enabled: false
+      spacer:
+        weight: 97
         enabled: false
       sponsors:
         weight: 53

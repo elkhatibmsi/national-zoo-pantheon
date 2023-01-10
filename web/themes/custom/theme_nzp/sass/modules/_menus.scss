@@ -1,0 +1,79 @@
+// Styling Overrides for all Menus
+
+//Social Media Links
+
+
+.menu--menu-follow-us-on-social-media {
+.menu {
+        bottom: 0;
+        width: 100%;
+        left: 0;
+        @include flexify();
+        padding:0.5em;
+        li {
+            margin:0 0.5em;
+        }
+    }
+    .icon-label {
+        display:none;
+    }
+}
+
+
+
+
+
+
+
+
+//Main Nav
+.site--main-nav {
+    padding-left:0px;
+    ul.main-menu--level-0 {
+        @include flexify(center, flex-start, nowrap);
+      li {
+          padding:1em 0.5em;
+          width:100%;
+          height: 100%;
+          text-align: center;
+          &:first-child{
+            border-bottom: 8px solid #F18B21;
+          }
+      
+          &:nth-child(2) {
+            border-bottom: 8px solid #C8DC65;
+          }
+      
+          &:nth-child(3) {
+            border-bottom: 8px solid #5AC4BE;
+          }
+      
+          &:nth-child(4) {
+            border-bottom: 8px solid #F26B6C;
+          }
+      
+          &:nth-child(5) {
+            border-bottom: 8px solid #C44D58;
+          }
+      
+          &:nth-child(6) {
+            border-bottom: 8px solid #627E9C;
+          }
+          a {
+              font-weight: bold;
+              font-size: 1.2em;
+              color: $nzp-slate;
+              font-family: $font-family--primary;
+              letter-spacing: 1.5px;
+              &:hover {
+                  color: $nzp-green;
+              }
+              .micon {
+                  padding-right:0.5em;
+              }
+            }
+      }
+
+        
+      }
+    }

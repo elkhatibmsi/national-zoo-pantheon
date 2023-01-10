@@ -1,0 +1,23 @@
+.slideshow {
+    position: relative;
+    max-height:480px;
+    overflow:hidden;
+
+    .slideshow--image {
+        img {
+            min-width:100%;
+        }
+    }
+
+.slideshow--caption {
+    position:absolute;
+    font-size:1.2em;
+    padding:1em;
+    bottom:0;
+    width:100%;
+    color: white;
+    font-weight: bold;
+    @include opacity($nzp-slate, 0.75 );
+}
+
+}

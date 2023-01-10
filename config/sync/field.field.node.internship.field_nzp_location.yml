@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.storage.node.field_nzp_location
     - node.type.internship
+    - taxonomy.vocabulary.nzp_locations
 id: node.internship.field_nzp_location
 field_name: field_nzp_location
 entity_type: node
@@ -18,6 +19,11 @@ default_value_callback: ''
 settings:
   handler: 'default:taxonomy_term'
   handler_settings:
+    target_bundles:
+      nzp_locations: nzp_locations
     sort:
       field: _none
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
 field_type: entity_reference

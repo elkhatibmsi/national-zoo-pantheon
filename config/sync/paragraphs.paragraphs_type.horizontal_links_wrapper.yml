@@ -1,0 +1,15 @@
+uuid: cdf92397-9735-4883-a27a-53af4c75a418
+langcode: en
+status: true
+dependencies:
+  module:
+    - micon_paragraphs
+third_party_settings:
+  micon_paragraphs:
+    icon: ''
+id: horizontal_links_wrapper
+label: 'Horizontal Links'
+icon_uuid: null
+icon_default: null
+description: 'the container row for a series of horizontal links'
+behavior_plugins: {  }

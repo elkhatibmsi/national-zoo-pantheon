@@ -18,7 +18,6 @@ dependencies:
     - field.field.node.animal.field_help_this_species
     - field.field.node.animal.field_image
     - field.field.node.animal.field_image_media
-    - field.field.node.animal.field_image_s_media
     - field.field.node.animal.field_iucn_designation
     - field.field.node.animal.field_lifespan
     - field.field.node.animal.field_meet_the_animals
@@ -33,6 +32,8 @@ dependencies:
     - field.field.node.animal.field_taxonomic_class
     - field.field.node.animal.field_taxonomic_family
     - field.field.node.animal.field_taxonomic_order
+    - field.field.node.animal.field_teaser_image
+    - field.field.node.animal.field_teaser_title
     - node.type.animal
     - views.view.media_release_and_news
   module:
@@ -520,19 +521,19 @@ third_party_settings:
                 third_party_settings: {  }
             weight: 2
             additional: {  }
-          1ab4feb7-efa6-43b2-91ec-48bb257f129f:
-            uuid: 1ab4feb7-efa6-43b2-91ec-48bb257f129f
+          29458bad-6a06-4dc2-b16f-3ec644b4da2e:
+            uuid: 29458bad-6a06-4dc2-b16f-3ec644b4da2e
             region: banner
             configuration:
-              id: 'field_block:node:animal:field_image'
-              label: Images
+              id: 'field_block:node:animal:field_image_media'
+              label: 'Images Media'
               label_display: '0'
               provider: layout_builder
               context_mapping:
                 entity: layout_builder.entity
                 view_mode: view_mode
               formatter:
-                type: image
+                type: media_thumbnail
                 label: hidden
                 settings:
                   image_link: ''
@@ -639,7 +640,7 @@ third_party_settings:
           html_container_elements: div
           html_region_elements:
             one_col: div
-            two_col: div
+            two_col: aside
           background_color: null
           region_background_color:
             one_col: bg-none
@@ -658,7 +659,23 @@ third_party_settings:
               context_mapping:
                 entity: layout_builder.entity
             weight: 0
-            additional: {  }
+            additional:
+              component_attributes:
+                block_attributes:
+                  id: ''
+                  class: ''
+                  style: ''
+                  data: ''
+                block_title_attributes:
+                  id: ''
+                  class: ''
+                  style: ''
+                  data: ''
+                block_content_attributes:
+                  id: ''
+                  class: 'knockout bg-sizzling-red'
+                  style: ''
+                  data: ''
           04c82ed8-9953-417d-bb4d-615987e10152:
             uuid: 04c82ed8-9953-417d-bb4d-615987e10152
             region: two_col
@@ -676,7 +693,23 @@ third_party_settings:
                 settings: {  }
                 third_party_settings: {  }
             weight: 0
-            additional: {  }
+            additional:
+              component_attributes:
+                block_attributes:
+                  id: ''
+                  class: ''
+                  style: ''
+                  data: ''
+                block_title_attributes:
+                  id: ''
+                  class: ''
+                  style: ''
+                  data: ''
+                block_content_attributes:
+                  id: ''
+                  class: ''
+                  style: ''
+                  data: ''
           eddfa6b1-8ead-4d84-bf0e-42f47fd8460d:
             uuid: eddfa6b1-8ead-4d84-bf0e-42f47fd8460d
             region: two_col
@@ -917,3 +950,5 @@ hidden:
   field_image_media: true
   field_image_s_media: true
   field_nzp_location: true
+  field_teaser_image: true
+  field_teaser_title: true

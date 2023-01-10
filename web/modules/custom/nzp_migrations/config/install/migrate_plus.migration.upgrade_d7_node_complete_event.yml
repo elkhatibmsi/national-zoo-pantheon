@@ -116,16 +116,7 @@ process:
       plugin: sub_process
       process:
         target_id: fid
-  field_dates:
-    -
-      plugin: sub_process
-      source: field_dates
-      process:
-        value:
-          plugin: format_date
-          from_format: 'Y-m-d H:i:s'
-          to_format: Y-m-d
-          source: value
+
   field_times:
     -
       plugin: sub_process
@@ -158,12 +149,6 @@ process:
       plugin: media_wysiwyg_filter
     -
       plugin: img_tag_to_embed
-  field_zoo_fonz:
-    -
-      plugin: sub_process
-      source: field_zoo_fonz
-      process:
-        target_id: tid
   field_promotion:
     -
       plugin: get
@@ -210,10 +195,6 @@ process:
     -
       plugin: get
       source: field_event_components
-  field_template_options:
-    -
-      plugin: get
-      source: field_template_options
 destination:
   plugin: 'entity_complete:node'
   translations: true

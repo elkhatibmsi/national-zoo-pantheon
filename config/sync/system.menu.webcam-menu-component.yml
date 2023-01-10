@@ -1,0 +1,8 @@
+uuid: da1406c4-6416-4cbe-b502-b52dcd532979
+langcode: en
+status: true
+dependencies: {  }
+id: webcam-menu-component
+label: 'Webcam Menu Component'
+description: 'A new webcam menu from Courtney''s design, maybe for the home page?'
+locked: false

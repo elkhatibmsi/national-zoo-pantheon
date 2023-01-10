@@ -9,7 +9,6 @@ dependencies:
     - node.type.event
     - node.type.exhibit
     - node.type.news
-    - node.type.nzp_scbi_staff
     - node.type.scbi_project
     - node.type.webcam
 id: node.news.field_related_content
@@ -32,7 +31,6 @@ settings:
       exhibit: exhibit
       news: news
       scbi_project: scbi_project
-      nzp_scbi_staff: nzp_scbi_staff
       webcam: webcam
     sort:
       field: title

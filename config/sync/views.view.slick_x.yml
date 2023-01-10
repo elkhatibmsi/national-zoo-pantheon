@@ -288,7 +288,6 @@ display:
             caption:
               title: '0'
               alt: '0'
-            current_view_mode: _custom
             style: ''
             background: false
             box_caption: ''
@@ -302,6 +301,7 @@ display:
             grid: null
             grid_medium: null
             grid_small: null
+            current_view_mode: _custom
           group_column: ''
           group_columns: {  }
           group_rows: true
@@ -450,11 +450,11 @@ display:
           vanilla: false
           layout: ''
           cache: 0
-          current_view_mode: block_asnavfor_multi_value
           skin: default
           grid: null
           grid_medium: null
           grid_small: null
+          current_view_mode: block_asnavfor_multi_value
           overridables:
             arrows: '0'
             autoplay: '0'
@@ -639,7 +639,6 @@ display:
             optionset: x_slick_for
             layout: stage-zebra
             cache: 0
-            current_view_mode: _custom
             skin: classic
             style: ''
             background: false
@@ -654,6 +653,7 @@ display:
             grid: null
             grid_medium: null
             grid_small: null
+            current_view_mode: _custom
             overridables:
               arrows: '0'
               autoplay: '0'
@@ -885,7 +885,6 @@ display:
             optionset: x_slick_for
             layout: split-zebra
             cache: 0
-            current_view_mode: _custom
             skin: split
             style: ''
             background: false
@@ -900,6 +899,7 @@ display:
             grid: null
             grid_medium: null
             grid_small: null
+            current_view_mode: _custom
             overridables:
               draggable: draggable
               infinite: infinite
@@ -1068,7 +1068,6 @@ display:
             optionset: x_carousel
             layout: ''
             cache: 0
-            current_view_mode: _custom
             skin: boxed-carousel
             style: ''
             background: false
@@ -1083,6 +1082,7 @@ display:
             grid: null
             grid_medium: null
             grid_small: null
+            current_view_mode: _custom
             overridables:
               arrows: '0'
               autoplay: '0'
@@ -1340,7 +1340,6 @@ display:
             optionset: x_fullscreen
             layout: center-top
             cache: 0
-            current_view_mode: _custom
             skin: fullscreen
             style: ''
             background: true
@@ -1355,6 +1354,7 @@ display:
             grid: null
             grid_medium: null
             grid_small: null
+            current_view_mode: _custom
             overridables:
               draggable: draggable
               infinite: infinite
@@ -1583,7 +1583,6 @@ display:
             caption:
               title: '0'
               alt: '0'
-            current_view_mode: _custom
             style: grid
             background: false
             box_caption: title
@@ -1596,6 +1595,7 @@ display:
             grid: null
             grid_medium: null
             grid_small: null
+            current_view_mode: _custom
           group_column: ''
           group_columns: {  }
           group_rows: true
@@ -1738,11 +1738,11 @@ display:
           vanilla: false
           layout: ''
           cache: 0
-          current_view_mode: block_grid
           skin: grid
           grid: '5'
           grid_medium: '3'
           grid_small: '2'
+          current_view_mode: block_grid
           overridables:
             arrows: '0'
             autoplay: '0'
@@ -1857,7 +1857,6 @@ display:
             optionset: x_main
             layout: center-top
             cache: 0
-            current_view_mode: _custom
             skin: fullwidth
             style: ''
             background: false
@@ -1872,6 +1871,7 @@ display:
             grid: null
             grid_medium: null
             grid_small: null
+            current_view_mode: _custom
             overridables:
               arrows: '0'
               autoplay: '0'

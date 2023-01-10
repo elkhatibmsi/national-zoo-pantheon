@@ -1,0 +1,34 @@
+uuid: 883ce32d-600b-44ee-ab2d-6f312dc06b9e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.horizontal_links.field_icon
+    - field.field.paragraph.horizontal_links.field_link
+    - paragraphs.paragraphs_type.horizontal_links
+  module:
+    - link
+    - micon
+id: paragraph.horizontal_links.default
+targetEntityType: paragraph
+bundle: horizontal_links
+mode: default
+content:
+  field_icon:
+    type: string_micon
+    weight: 1
+    region: content
+    settings:
+      packages: {  }
+    third_party_settings: {  }
+  field_link:
+    type: link_default
+    weight: 0
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

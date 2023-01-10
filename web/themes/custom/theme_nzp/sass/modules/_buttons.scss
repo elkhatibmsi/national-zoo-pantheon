@@ -1,0 +1,71 @@
+.btn {
+    padding: 1em 0.75em;
+    border: 2px solid;
+    border-radius: 3px;
+    background: $nzp-slate;
+    color: $white;
+    cursor: pointer;
+    position:relative;
+    &:hover {
+    color: #fff;
+    padding-right: 30px;
+    transition: all 0.4s ease-in;
+    }
+    &:after {
+        content: "\f054";
+        font-family: 'fa';
+        width:0;
+        overflow:hidden;
+        transition: all 0.4s ease-out;
+        top: 0;
+        right: 0px;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        font-size: 15px;
+        text-align: center;
+
+
+    }
+    &:hover:after {
+        transition: all 0.4s ease-out;
+        width: 20px;
+        background-color: rgba(255, 255, 255, 0.3);
+    }
+    &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        width: 0;
+        height: 2px;
+        left:0;
+        }
+    &:hover:before {
+        width:100%;
+        transition:all 0.3s ease-in-out;
+        transition-delay:0.2s;
+    }
+
+
+
+    @include m(primary) {
+        background:$nzp-scarlet;
+        &:before {
+            background: $nzp-scarlet;
+        }
+    }
+
+    @include m(secondary) {
+        border-color: $nzp-mauve;
+        &:before {
+            background: $nzp-mauve;
+        }
+    }
+}
+
+input[type="submit"] {
+    @extend .btn;
+    @extend .btn-primary;
+}

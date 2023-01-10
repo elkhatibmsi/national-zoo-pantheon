@@ -1,0 +1,21 @@
+
+<div class="border-2 border-gray grid">
+  <div class="vertical-card w-full lg:max-w-full min-h-[150px] lg:flex flex-col justify-center items-center overflow-hidden">
+
+    {% if image|render %}
+      <div class="teaser-img-container w-full lg:h-auto flex-none bg-cover text-center overflow-hidden">
+        {{ image }}
+      </div>
+    {% endif %}
+    <div class="card-vertical--teaser p-8">
+        <div class="text-xs strong uppercase mb-2">
+        {{ authored_date }}
+      </div>
+      <a href="{{ link }}"><h4 class="font-bold text-2xl">{{ title }}</h4></a>
+ 
+      <div class="text-sm">
+        {{ summary }}
+      </div> 
+    </div>
+  </div>
+</div>

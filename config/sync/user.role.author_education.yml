@@ -5,10 +5,7 @@ dependencies:
   config:
     - filter.format.full_html
     - node.type.basic_page
-    - node.type.camp
-    - node.type.class
     - node.type.event
-    - node.type.school_program
   module:
     - contextual
     - filter
@@ -27,25 +24,11 @@ permissions:
   - 'access workbench access by role'
   - 'clone own nodes'
   - 'create basic_page content'
-  - 'create camp content'
-  - 'create class content'
   - 'create event content'
   - 'create files'
-  - 'create school_program content'
-  - 'delete any camp content'
-  - 'delete any class content'
-  - 'delete own camp content'
-  - 'delete own class content'
-  - 'delete own school_program content'
   - 'delete terms in 33'
   - 'edit any basic_page content'
-  - 'edit any camp content'
-  - 'edit any class content'
-  - 'edit any school_program content'
   - 'edit own basic_page content'
-  - 'edit own camp content'
-  - 'edit own class content'
-  - 'edit own school_program content'
   - 'edit terms in 33'
   - 'moderate content from draft to needs_review'
   - 'moderate content from needs_review to draft'

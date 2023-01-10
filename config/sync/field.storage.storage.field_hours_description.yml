@@ -1,0 +1,19 @@
+uuid: 2d67fa77-331a-49b2-91d1-d337e9b8cf32
+langcode: en
+status: true
+dependencies:
+  module:
+    - storage
+    - text
+id: storage.field_hours_description
+field_name: field_hours_description
+entity_type: storage
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

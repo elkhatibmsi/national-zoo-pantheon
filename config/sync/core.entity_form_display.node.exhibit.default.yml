@@ -17,6 +17,7 @@ dependencies:
     - field.field.node.exhibit.field_open
     - field.field.node.exhibit.field_paragraph_component
     - field.field.node.exhibit.field_tags
+    - field.field.node.exhibit.field_teaser_title
     - field.field.node.exhibit.field_upcoming
     - node.type.exhibit
     - workflows.workflow.editorial
@@ -32,8 +33,8 @@ third_party_settings:
     group_tabs:
       children:
         - group_basic_information
-        - group_teaser
         - group_page_content
+        - group_page_media
         - group_exhibit
       label: Tabs
       region: content
@@ -48,10 +49,12 @@ third_party_settings:
         width_breakpoint: 640
     group_basic_information:
       children:
+        - field_editorial_access
         - title
         - field_tags
         - field_open
         - field_upcoming
+        - group_teaser
       label: 'Basic Information'
       region: content
       parent_name: group_tabs
@@ -66,13 +69,11 @@ third_party_settings:
         required_fields: true
     group_page_content:
       children:
-        - field_slideshow
-        - body
         - field_paragraph_component
       label: 'Page Content'
       region: content
       parent_name: group_tabs
-      weight: 28
+      weight: 27
       format_type: tab
       format_settings:
         classes: ''
@@ -83,14 +84,13 @@ third_party_settings:
         required_fields: true
     group_workflow:
       children:
-        - field_editorial_access
         - moderation_state
         - status
-      label: Workflow
+      label: Publishing
       region: content
       parent_name: ''
       weight: 1
-      format_type: details
+      format_type: details_sidebar
       format_settings:
         classes: ''
         show_empty_fields: false
@@ -98,7 +98,7 @@ third_party_settings:
         open: false
         description: ''
         required_fields: true
-        formatter: closed
+        weight: -10
     group_exhibit:
       children:
         - field_map
@@ -111,7 +111,7 @@ third_party_settings:
       label: Exhibit
       region: content
       parent_name: group_tabs
-      weight: 29
+      weight: 30
       format_type: tab
       format_settings:
         classes: ''
@@ -137,11 +137,28 @@ third_party_settings:
         required_fields: true
     group_teaser:
       children:
+        - field_teaser_title
         - field_landing_image
+        - body
       label: Teaser
       region: content
-      parent_name: group_tabs
+      parent_name: group_basic_information
       weight: 27
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+    group_page_media:
+      children:
+        - field_slideshow
+      label: 'Page Media'
+      region: content
+      parent_name: group_tabs
+      weight: 28
       format_type: tab
       format_settings:
         classes: ''
@@ -157,7 +174,7 @@ mode: default
 content:
   body:
     type: text_textarea_with_summary
-    weight: 17
+    weight: 33
     region: content
     settings:
       rows: 9
@@ -223,7 +240,7 @@ content:
     third_party_settings: {  }
   field_landing_image:
     type: media_library_widget
-    weight: 4
+    weight: 32
     region: content
     settings:
       media_types: {  }
@@ -251,7 +268,7 @@ content:
     third_party_settings: {  }
   field_open:
     type: boolean_checkbox
-    weight: 5
+    weight: 25
     region: content
     settings:
       display_label: true
@@ -268,7 +285,7 @@ content:
     third_party_settings: {  }
   field_tags:
     type: entity_reference_autocomplete_tags
-    weight: 3
+    weight: 24
     region: content
     settings:
       match_operator: CONTAINS
@@ -276,9 +293,17 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+  field_teaser_title:
+    type: string_textfield
+    weight: 31
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
   field_upcoming:
     type: boolean_checkbox
-    weight: 6
+    weight: 26
     region: content
     settings:
       display_label: true
@@ -318,7 +343,7 @@ content:
     third_party_settings: {  }
   title:
     type: string_textfield
-    weight: 2
+    weight: 23
     region: content
     settings:
       size: 60

@@ -7,7 +7,6 @@ dependencies:
     - field.field.node.media_release.body
     - field.field.node.media_release.field_content_block
     - field.field.node.media_release.field_editorial_access
-    - field.field.node.media_release.field_image
     - field.field.node.media_release.field_landing_image
     - field.field.node.media_release.field_media_release_category
     - field.field.node.media_release.field_media_release_image
@@ -55,13 +54,10 @@ content:
       overlay: ''
       title: ''
       vanilla: false
-      icon: ''
       layout: ''
       view_mode: default
       cache: 0
-      current_view_mode: teaser
       skin: ''
-      fx: ''
       style: ''
       background: false
       box_caption: ''
@@ -73,20 +69,22 @@ content:
       media_switch: ''
       ratio: ''
       thumbnail_style: ''
-      _uri: ''
-      breakpoints: {  }
-      sizes: ''
-      grid_header: ''
       grid: ''
       grid_medium: ''
       grid_small: ''
+      breakpoints: {  }
+      current_view_mode: teaser
+      fx: ''
+      icon: ''
+      sizes: ''
+      grid_header: ''
+      _uri: ''
     third_party_settings: {  }
     weight: 0
     region: content
 hidden:
   field_content_block: true
   field_editorial_access: true
-  field_image: true
   field_media_release_category: true
   field_media_release_image: true
   field_obituary: true

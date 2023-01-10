@@ -1,0 +1,29 @@
+uuid: c5c03558-0893-4e7e-baf8-88e44f16a94c
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.webcam-menu-component
+  module:
+    - menu_item_extras
+    - micon_menu
+id: menu_link_content.webcam-menu-component.default
+targetEntityType: menu_link_content
+bundle: webcam-menu-component
+mode: default
+content:
+  title:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  view_mode:
+    type: menu_item_extras_view_mode_selector_select
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

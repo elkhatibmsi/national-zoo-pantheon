@@ -1,0 +1,36 @@
+.card-grid--inner {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    grid-gap: 1em;
+}
+
+
+.card-item {
+
+
+    .card-item--link {
+        border-bottom: 4px solid $nzp-orange;
+        padding: 0.5em;
+        font-weight: bold;
+
+    }
+
+    .card-item--image {
+        overflow:hidden;
+        img {
+            height:200px;
+            object-fit: fill;
+            width:auto;
+        }
+
+    }
+
+    .card-item--text {
+        padding:0.5em;
+        font-size: 0.9rem;
+        line-height: normal;
+
+    }
+
+
+}

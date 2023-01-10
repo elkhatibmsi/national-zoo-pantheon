@@ -1,0 +1,11 @@
+global:
+  version: 1.x
+  header: true
+  css:
+    theme:
+      dist/css/style.css: {}
+  js:
+    dist/js/bundle.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal

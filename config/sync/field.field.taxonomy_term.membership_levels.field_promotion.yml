@@ -4,22 +4,17 @@ status: true
 dependencies:
   config:
     - field.storage.taxonomy_term.field_promotion
-    - node.type.adopt_a_species
     - node.type.animal
     - node.type.attraction
     - node.type.basic_page
-    - node.type.camp
-    - node.type.class
     - node.type.event
     - node.type.exhibit
     - node.type.internship
     - node.type.media_release
     - node.type.news
     - node.type.scbi_project
-    - node.type.school_program
     - node.type.volunteer_opportunity
     - node.type.webcam
-    - node.type.webform
     - taxonomy.vocabulary.membership_levels
 id: taxonomy_term.membership_levels.field_promotion
 field_name: field_promotion
@@ -35,22 +30,17 @@ settings:
   handler: 'default:node'
   handler_settings:
     target_bundles:
-      adopt_a_species: adopt_a_species
       animal: animal
       attraction: attraction
       basic_page: basic_page
-      camp: camp
-      class: class
       event: event
       exhibit: exhibit
       internship: internship
       media_release: media_release
       news: news
       scbi_project: scbi_project
-      school_program: school_program
       volunteer_opportunity: volunteer_opportunity
       webcam: webcam
-      webform: webform
     sort:
       field: _none
       direction: ASC

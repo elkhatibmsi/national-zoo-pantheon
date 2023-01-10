@@ -1,0 +1,28 @@
+uuid: f8a0d2c5-458e-4e1c-bbce-0aaaace9b7c6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.storage.hours.field_dates_active
+    - field.field.storage.hours.field_hours_available
+    - field.field.storage.hours.field_hours_description
+    - storage.storage_type.hours
+  module:
+    - text
+id: storage.hours.default
+targetEntityType: storage
+bundle: hours
+mode: default
+content:
+  field_hours_description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_dates_active: true
+  field_hours_available: true
+  name: true
+  user_id: true

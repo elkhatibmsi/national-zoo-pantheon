@@ -11,7 +11,7 @@ entity_type: node
 bundle: media_release
 label: 'Teaser Title'
 description: 'This will appear instead of the page title when this page is teased (e.g. in promos)'
-required: true
+required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''

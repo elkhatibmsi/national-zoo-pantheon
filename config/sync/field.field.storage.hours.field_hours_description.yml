@@ -1,0 +1,21 @@
+uuid: 91dd0415-f7c4-4565-bdf5-d0a86ab4af3d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.storage.field_hours_description
+    - storage.storage_type.hours
+  module:
+    - text
+id: storage.hours.field_hours_description
+field_name: field_hours_description
+entity_type: storage
+bundle: hours
+label: 'Hours Message'
+description: 'Text shown to the public'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

@@ -1,0 +1,20 @@
+uuid: 2d9b0a37-ec15-4586-a905-03f45573ca20
+langcode: en
+status: true
+dependencies:
+  module:
+    - datetime_range
+    - storage
+id: storage.field_dates_active
+field_name: field_dates_active
+entity_type: storage
+type: daterange
+settings:
+  datetime_type: date
+module: datetime_range
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

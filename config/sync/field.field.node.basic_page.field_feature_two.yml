@@ -4,12 +4,10 @@ status: true
 dependencies:
   config:
     - field.storage.node.field_feature_two
-    - node.type.adopt_a_species
     - node.type.animal
     - node.type.attraction
     - node.type.basic_page
     - node.type.blank_page
-    - node.type.class
     - node.type.event
     - node.type.exhibit
     - node.type.internship
@@ -18,7 +16,6 @@ dependencies:
     - node.type.scbi_project
     - node.type.volunteer_opportunity
     - node.type.webcam
-    - node.type.webform
 id: node.basic_page.field_feature_two
 field_name: field_feature_two
 entity_type: node
@@ -33,12 +30,10 @@ settings:
   handler: 'default:node'
   handler_settings:
     target_bundles:
-      adopt_a_species: adopt_a_species
       animal: animal
       attraction: attraction
       basic_page: basic_page
       blank_page: blank_page
-      class: class
       event: event
       exhibit: exhibit
       internship: internship
@@ -47,7 +42,6 @@ settings:
       scbi_project: scbi_project
       volunteer_opportunity: volunteer_opportunity
       webcam: webcam
-      webform: webform
     sort:
       field: _none
       direction: ASC

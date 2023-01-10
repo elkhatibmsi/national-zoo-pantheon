@@ -1,0 +1,8 @@
+//Top bar styling
+
+.topbar {
+  background: $nzp-tan;
+  & * {
+    color: $nzp-slate;
+  }
+}

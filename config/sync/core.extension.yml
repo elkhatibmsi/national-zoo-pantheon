@@ -12,6 +12,8 @@ module:
   block_content: 0
   block_field: 0
   breakpoint: 0
+  chosen: 0
+  chosen_lib: 0
   ckeditor: 0
   color: 0
   comment: 0
@@ -23,7 +25,9 @@ module:
   content_moderation: 0
   contextual: 0
   ctools: 0
+  date_range_formatter: 0
   datetime: 0
+  datetime_range: 0
   dblog: 0
   devel: 0
   devel_generate: 0

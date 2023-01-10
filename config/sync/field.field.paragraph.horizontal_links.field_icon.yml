@@ -1,0 +1,21 @@
+uuid: d204a596-4c9e-4ecb-bbda-dee9ad0a7445
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_icon
+    - paragraphs.paragraphs_type.horizontal_links
+  module:
+    - micon
+id: paragraph.horizontal_links.field_icon
+field_name: field_icon
+entity_type: paragraph
+bundle: horizontal_links
+label: Icon
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_micon

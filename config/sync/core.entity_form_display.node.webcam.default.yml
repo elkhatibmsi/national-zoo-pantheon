@@ -4,23 +4,137 @@ status: true
 dependencies:
   config:
     - field.field.node.webcam.body
-    - field.field.node.webcam.field_camera_embed
     - field.field.node.webcam.field_content_block
     - field.field.node.webcam.field_editorial_access
-    - field.field.node.webcam.field_feature_one
-    - field.field.node.webcam.field_feature_three
-    - field.field.node.webcam.field_feature_two
     - field.field.node.webcam.field_landing_image
-    - field.field.node.webcam.field_promotion_three
     - field.field.node.webcam.field_related_animal
-    - field.field.node.webcam.field_sidebar_section_content
     - field.field.node.webcam.field_sponsored_by
-    - field.field.node.webcam.field_use_test_player
+    - field.field.node.webcam.field_teaser_title
     - node.type.webcam
   module:
+    - content_moderation
+    - field_group
+    - media_library
     - paragraphs
     - path
     - text
+third_party_settings:
+  field_group:
+    group_tabs:
+      children:
+        - group_basic_information
+        - group_page_content
+        - group_webcam
+        - group_publishing
+        - group_legacy
+      label: Tabs
+      region: content
+      parent_name: ''
+      weight: 0
+      format_type: tabs
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        direction: horizontal
+        width_breakpoint: 640
+    group_basic_information:
+      children:
+        - field_editorial_access
+        - title
+        - field_sponsored_by
+        - group_teaser
+      label: 'Basic Information'
+      region: content
+      parent_name: group_tabs
+      weight: 20
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+    group_page_content:
+      children:
+        - field_content_block
+      label: 'Page Content'
+      region: content
+      parent_name: group_tabs
+      weight: 21
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+    group_webcam:
+      children:
+        - field_related_animal
+      label: Webcam
+      region: content
+      parent_name: group_tabs
+      weight: 22
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+    group_legacy:
+      children: {  }
+      label: Legacy
+      region: content
+      parent_name: group_tabs
+      weight: 24
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        open: false
+        description: ''
+        required_fields: true
+        formatter: closed
+    group_teaser:
+      children:
+        - field_teaser_title
+        - field_landing_image
+        - body
+      label: Teaser
+      region: content
+      parent_name: group_basic_information
+      weight: 12
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        open: false
+        description: ''
+        required_fields: true
+    group_publishing:
+      children:
+        - moderation_state
+        - status
+      label: Publishing
+      region: content
+      parent_name: group_tabs
+      weight: 23
+      format_type: details_sidebar
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        open: false
+        description: ''
+        required_fields: true
+        weight: -10
 id: node.webcam.default
 targetEntityType: node
 bundle: webcam
@@ -28,7 +142,7 @@ mode: default
 content:
   body:
     type: text_textarea_with_summary
-    weight: 8
+    weight: 28
     region: content
     settings:
       rows: 9
@@ -41,14 +155,6 @@ content:
     weight: 2
     region: content
     settings: {  }
-    third_party_settings: {  }
-  field_camera_embed:
-    type: text_textarea
-    weight: 11
-    region: content
-    settings:
-      rows: 5
-      placeholder: ''
     third_party_settings: {  }
   field_content_block:
     type: paragraphs
@@ -69,6 +175,19 @@ content:
         duplicate: duplicate
     third_party_settings: {  }
   field_editorial_access:
+    type: options_select
+    weight: 8
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_landing_image:
+    type: media_library_widget
+    weight: 27
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+  field_related_animal:
     type: entity_reference_autocomplete
     weight: 12
     region: content
@@ -78,53 +197,25 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-  field_landing_image:
-    type: entity_reference_autocomplete
-    weight: 15
-    region: content
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-  field_related_animal:
-    type: entity_reference_autocomplete
-    weight: 14
-    region: content
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-  field_sidebar_section_content:
-    type: paragraphs
-    weight: 10
-    region: content
-    settings:
-      title: Paragraph
-      title_plural: Paragraphs
-      edit_mode: open
-      closed_mode: summary
-      autocollapse: none
-      closed_mode_threshold: 0
-      add_mode: dropdown
-      form_display_mode: default
-      default_paragraph_type: ''
-      features:
-        collapse_edit_all: collapse_edit_all
-        duplicate: duplicate
-    third_party_settings: {  }
   field_sponsored_by:
-    type: entity_reference_autocomplete
-    weight: 13
+    type: options_select
+    weight: 11
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_teaser_title:
+    type: string_textfield
+    weight: 26
     region: content
     settings:
-      match_operator: CONTAINS
-      match_limit: 10
       size: 60
       placeholder: ''
+    third_party_settings: {  }
+  moderation_state:
+    type: moderation_state_default
+    weight: 9
+    region: content
+    settings: {  }
     third_party_settings: {  }
   path:
     type: path
@@ -141,7 +232,7 @@ content:
     third_party_settings: {  }
   status:
     type: boolean_checkbox
-    weight: 7
+    weight: 10
     region: content
     settings:
       display_label: true
@@ -155,7 +246,7 @@ content:
     third_party_settings: {  }
   title:
     type: string_textfield
-    weight: 0
+    weight: 9
     region: content
     settings:
       size: 60
@@ -176,9 +267,4 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-hidden:
-  field_feature_one: true
-  field_feature_three: true
-  field_feature_two: true
-  field_promotion_three: true
-  field_use_test_player: true
+hidden: {  }

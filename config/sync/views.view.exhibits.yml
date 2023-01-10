@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
+    - node.type.animal
     - node.type.exhibit
   module:
     - node
@@ -169,30 +170,26 @@ display:
         - 'languages:language_interface'
         - 'user.node_grants:view'
       tags:
-        - 'config:core.entity_view_display.node.adopt_a_species.default'
-        - 'config:core.entity_view_display.node.adopt_a_species.teaser'
         - 'config:core.entity_view_display.node.advpoll.default'
         - 'config:core.entity_view_display.node.advpoll.example_node_list'
         - 'config:core.entity_view_display.node.advpoll.poll'
         - 'config:core.entity_view_display.node.advpoll.teaser'
         - 'config:core.entity_view_display.node.animal.default'
+        - 'config:core.entity_view_display.node.animal.info_card'
         - 'config:core.entity_view_display.node.animal.teaser'
-        - 'config:core.entity_view_display.node.article.default'
-        - 'config:core.entity_view_display.node.article.rss'
-        - 'config:core.entity_view_display.node.article.teaser'
+        - 'config:core.entity_view_display.node.animal_demo.default'
+        - 'config:core.entity_view_display.node.animal_demo.teaser'
         - 'config:core.entity_view_display.node.attraction.default'
         - 'config:core.entity_view_display.node.attraction.teaser'
         - 'config:core.entity_view_display.node.basic_page.default'
         - 'config:core.entity_view_display.node.basic_page.node_embed'
         - 'config:core.entity_view_display.node.basic_page.teaser'
+        - 'config:core.entity_view_display.node.bio_profiles.default'
+        - 'config:core.entity_view_display.node.bio_profiles.info_card'
+        - 'config:core.entity_view_display.node.bio_profiles.list'
+        - 'config:core.entity_view_display.node.bio_profiles.teaser'
         - 'config:core.entity_view_display.node.blank_page.default'
         - 'config:core.entity_view_display.node.blank_page.teaser'
-        - 'config:core.entity_view_display.node.board_member.default'
-        - 'config:core.entity_view_display.node.board_member.teaser'
-        - 'config:core.entity_view_display.node.camp.default'
-        - 'config:core.entity_view_display.node.camp.teaser'
-        - 'config:core.entity_view_display.node.class.default'
-        - 'config:core.entity_view_display.node.class.teaser'
         - 'config:core.entity_view_display.node.coffee_product.default'
         - 'config:core.entity_view_display.node.coffee_product.teaser'
         - 'config:core.entity_view_display.node.coffee_purveyor.default'
@@ -205,48 +202,24 @@ display:
         - 'config:core.entity_view_display.node.document.node_embed'
         - 'config:core.entity_view_display.node.document.teaser'
         - 'config:core.entity_view_display.node.document.token'
-        - 'config:core.entity_view_display.node.event.default'
-        - 'config:core.entity_view_display.node.event.info_card'
-        - 'config:core.entity_view_display.node.event.node_embed'
-        - 'config:core.entity_view_display.node.event.teaser'
         - 'config:core.entity_view_display.node.exhibit.default'
         - 'config:core.entity_view_display.node.exhibit.teaser'
-        - 'config:core.entity_view_display.node.hours.default'
-        - 'config:core.entity_view_display.node.hours.teaser'
         - 'config:core.entity_view_display.node.internship.default'
         - 'config:core.entity_view_display.node.internship.teaser'
-        - 'config:core.entity_view_display.node.job.default'
-        - 'config:core.entity_view_display.node.job.teaser'
         - 'config:core.entity_view_display.node.media_release.default'
         - 'config:core.entity_view_display.node.media_release.teaser'
-        - 'config:core.entity_view_display.node.membership_level.default'
-        - 'config:core.entity_view_display.node.membership_level.node_embed'
-        - 'config:core.entity_view_display.node.membership_level.teaser'
         - 'config:core.entity_view_display.node.news.default'
         - 'config:core.entity_view_display.node.news.teaser'
-        - 'config:core.entity_view_display.node.nzp_scbi_staff.default'
-        - 'config:core.entity_view_display.node.nzp_scbi_staff.teaser'
-        - 'config:core.entity_view_display.node.restaurant.default'
-        - 'config:core.entity_view_display.node.restaurant.teaser'
         - 'config:core.entity_view_display.node.scbi_project.default'
         - 'config:core.entity_view_display.node.scbi_project.teaser'
-        - 'config:core.entity_view_display.node.school_program.default'
-        - 'config:core.entity_view_display.node.school_program.teaser'
         - 'config:core.entity_view_display.node.slideshow.default'
         - 'config:core.entity_view_display.node.slideshow.teaser'
-        - 'config:core.entity_view_display.node.timed_content.default'
-        - 'config:core.entity_view_display.node.timed_content.teaser'
-        - 'config:core.entity_view_display.node.user_alert.default'
-        - 'config:core.entity_view_display.node.user_alert.teaser'
         - 'config:core.entity_view_display.node.venue.default'
         - 'config:core.entity_view_display.node.venue.teaser'
         - 'config:core.entity_view_display.node.volunteer_opportunity.default'
         - 'config:core.entity_view_display.node.volunteer_opportunity.teaser'
         - 'config:core.entity_view_display.node.webcam.default'
         - 'config:core.entity_view_display.node.webcam.teaser'
-        - 'config:core.entity_view_display.node.webform.default'
-        - 'config:core.entity_view_display.node.webform.node_embed'
-        - 'config:core.entity_view_display.node.webform.teaser'
         - 'config:core.entity_view_display.node.zoo_hours.default'
         - 'config:core.entity_view_display.node.zoo_hours.teaser'
   block_1:
@@ -263,30 +236,26 @@ display:
         - 'languages:language_interface'
         - 'user.node_grants:view'
       tags:
-        - 'config:core.entity_view_display.node.adopt_a_species.default'
-        - 'config:core.entity_view_display.node.adopt_a_species.teaser'
         - 'config:core.entity_view_display.node.advpoll.default'
         - 'config:core.entity_view_display.node.advpoll.example_node_list'
         - 'config:core.entity_view_display.node.advpoll.poll'
         - 'config:core.entity_view_display.node.advpoll.teaser'
         - 'config:core.entity_view_display.node.animal.default'
+        - 'config:core.entity_view_display.node.animal.info_card'
         - 'config:core.entity_view_display.node.animal.teaser'
-        - 'config:core.entity_view_display.node.article.default'
-        - 'config:core.entity_view_display.node.article.rss'
-        - 'config:core.entity_view_display.node.article.teaser'
+        - 'config:core.entity_view_display.node.animal_demo.default'
+        - 'config:core.entity_view_display.node.animal_demo.teaser'
         - 'config:core.entity_view_display.node.attraction.default'
         - 'config:core.entity_view_display.node.attraction.teaser'
         - 'config:core.entity_view_display.node.basic_page.default'
         - 'config:core.entity_view_display.node.basic_page.node_embed'
         - 'config:core.entity_view_display.node.basic_page.teaser'
+        - 'config:core.entity_view_display.node.bio_profiles.default'
+        - 'config:core.entity_view_display.node.bio_profiles.info_card'
+        - 'config:core.entity_view_display.node.bio_profiles.list'
+        - 'config:core.entity_view_display.node.bio_profiles.teaser'
         - 'config:core.entity_view_display.node.blank_page.default'
         - 'config:core.entity_view_display.node.blank_page.teaser'
-        - 'config:core.entity_view_display.node.board_member.default'
-        - 'config:core.entity_view_display.node.board_member.teaser'
-        - 'config:core.entity_view_display.node.camp.default'
-        - 'config:core.entity_view_display.node.camp.teaser'
-        - 'config:core.entity_view_display.node.class.default'
-        - 'config:core.entity_view_display.node.class.teaser'
         - 'config:core.entity_view_display.node.coffee_product.default'
         - 'config:core.entity_view_display.node.coffee_product.teaser'
         - 'config:core.entity_view_display.node.coffee_purveyor.default'
@@ -299,47 +268,204 @@ display:
         - 'config:core.entity_view_display.node.document.node_embed'
         - 'config:core.entity_view_display.node.document.teaser'
         - 'config:core.entity_view_display.node.document.token'
-        - 'config:core.entity_view_display.node.event.default'
-        - 'config:core.entity_view_display.node.event.info_card'
-        - 'config:core.entity_view_display.node.event.node_embed'
-        - 'config:core.entity_view_display.node.event.teaser'
         - 'config:core.entity_view_display.node.exhibit.default'
         - 'config:core.entity_view_display.node.exhibit.teaser'
-        - 'config:core.entity_view_display.node.hours.default'
-        - 'config:core.entity_view_display.node.hours.teaser'
         - 'config:core.entity_view_display.node.internship.default'
         - 'config:core.entity_view_display.node.internship.teaser'
-        - 'config:core.entity_view_display.node.job.default'
-        - 'config:core.entity_view_display.node.job.teaser'
         - 'config:core.entity_view_display.node.media_release.default'
         - 'config:core.entity_view_display.node.media_release.teaser'
-        - 'config:core.entity_view_display.node.membership_level.default'
-        - 'config:core.entity_view_display.node.membership_level.node_embed'
-        - 'config:core.entity_view_display.node.membership_level.teaser'
         - 'config:core.entity_view_display.node.news.default'
         - 'config:core.entity_view_display.node.news.teaser'
-        - 'config:core.entity_view_display.node.nzp_scbi_staff.default'
-        - 'config:core.entity_view_display.node.nzp_scbi_staff.teaser'
-        - 'config:core.entity_view_display.node.restaurant.default'
-        - 'config:core.entity_view_display.node.restaurant.teaser'
         - 'config:core.entity_view_display.node.scbi_project.default'
         - 'config:core.entity_view_display.node.scbi_project.teaser'
-        - 'config:core.entity_view_display.node.school_program.default'
-        - 'config:core.entity_view_display.node.school_program.teaser'
         - 'config:core.entity_view_display.node.slideshow.default'
         - 'config:core.entity_view_display.node.slideshow.teaser'
-        - 'config:core.entity_view_display.node.timed_content.default'
-        - 'config:core.entity_view_display.node.timed_content.teaser'
-        - 'config:core.entity_view_display.node.user_alert.default'
-        - 'config:core.entity_view_display.node.user_alert.teaser'
         - 'config:core.entity_view_display.node.venue.default'
         - 'config:core.entity_view_display.node.venue.teaser'
         - 'config:core.entity_view_display.node.volunteer_opportunity.default'
         - 'config:core.entity_view_display.node.volunteer_opportunity.teaser'
         - 'config:core.entity_view_display.node.webcam.default'
         - 'config:core.entity_view_display.node.webcam.teaser'
-        - 'config:core.entity_view_display.node.webform.default'
-        - 'config:core.entity_view_display.node.webform.node_embed'
-        - 'config:core.entity_view_display.node.webform.teaser'
+        - 'config:core.entity_view_display.node.zoo_hours.default'
+        - 'config:core.entity_view_display.node.zoo_hours.teaser'
+  block_2:
+    id: block_2
+    display_title: 'Animals in Exhibit'
+    display_plugin: block
+    position: 2
+    display_options:
+      arguments:
+        field_exhibit_target_id:
+          id: field_exhibit_target_id
+          table: node__field_exhibit
+          field: field_exhibit_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: numeric
+          default_action: default
+          exception:
+            value: all
+            title_enable: false
+            title: All
+          title_enable: false
+          title: ''
+          default_argument_type: node
+          default_argument_options: {  }
+          default_argument_skip_url: false
+          summary_options:
+            base_path: ''
+            count: true
+            override: false
+            items_per_page: 25
+          summary:
+            sort_order: asc
+            number_of_records: 0
+            format: default_summary
+          specify_validation: false
+          validate:
+            type: none
+            fail: 'not found'
+          validate_options: {  }
+          break_phrase: false
+          not: false
+      filters:
+        status:
+          id: status
+          table: node_field_data
+          field: status
+          entity_type: node
+          entity_field: status
+          plugin_id: boolean
+          value: '1'
+          group: 1
+          expose:
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+          operator: in
+          value:
+            animal: animal
+            exhibit: exhibit
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+      style:
+        type: tailwindSwiper
+        options:
+          uses_fields: false
+          items_per_slide: '4'
+          show_controls: 1
+          show_pagination: 0
+      row:
+        type: 'entity:node'
+        options:
+          relationship: none
+          view_mode: teaser
+      defaults:
+        style: false
+        row: false
+        arguments: false
+        filters: false
+        filter_groups: false
+      display_description: ''
+      display_extenders: {  }
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_interface'
+        - url
+        - 'user.node_grants:view'
+      tags:
+        - 'config:core.entity_view_display.node.advpoll.default'
+        - 'config:core.entity_view_display.node.advpoll.example_node_list'
+        - 'config:core.entity_view_display.node.advpoll.poll'
+        - 'config:core.entity_view_display.node.advpoll.teaser'
+        - 'config:core.entity_view_display.node.animal.default'
+        - 'config:core.entity_view_display.node.animal.info_card'
+        - 'config:core.entity_view_display.node.animal.teaser'
+        - 'config:core.entity_view_display.node.animal_demo.default'
+        - 'config:core.entity_view_display.node.animal_demo.teaser'
+        - 'config:core.entity_view_display.node.attraction.default'
+        - 'config:core.entity_view_display.node.attraction.teaser'
+        - 'config:core.entity_view_display.node.basic_page.default'
+        - 'config:core.entity_view_display.node.basic_page.node_embed'
+        - 'config:core.entity_view_display.node.basic_page.teaser'
+        - 'config:core.entity_view_display.node.bio_profiles.default'
+        - 'config:core.entity_view_display.node.bio_profiles.info_card'
+        - 'config:core.entity_view_display.node.bio_profiles.list'
+        - 'config:core.entity_view_display.node.bio_profiles.teaser'
+        - 'config:core.entity_view_display.node.blank_page.default'
+        - 'config:core.entity_view_display.node.blank_page.teaser'
+        - 'config:core.entity_view_display.node.coffee_product.default'
+        - 'config:core.entity_view_display.node.coffee_product.teaser'
+        - 'config:core.entity_view_display.node.coffee_purveyor.default'
+        - 'config:core.entity_view_display.node.coffee_purveyor.teaser'
+        - 'config:core.entity_view_display.node.coffee_retailer.default'
+        - 'config:core.entity_view_display.node.coffee_retailer.teaser'
+        - 'config:core.entity_view_display.node.corporate_partner.default'
+        - 'config:core.entity_view_display.node.corporate_partner.teaser'
+        - 'config:core.entity_view_display.node.document.default'
+        - 'config:core.entity_view_display.node.document.node_embed'
+        - 'config:core.entity_view_display.node.document.teaser'
+        - 'config:core.entity_view_display.node.document.token'
+        - 'config:core.entity_view_display.node.exhibit.default'
+        - 'config:core.entity_view_display.node.exhibit.teaser'
+        - 'config:core.entity_view_display.node.internship.default'
+        - 'config:core.entity_view_display.node.internship.teaser'
+        - 'config:core.entity_view_display.node.media_release.default'
+        - 'config:core.entity_view_display.node.media_release.teaser'
+        - 'config:core.entity_view_display.node.news.default'
+        - 'config:core.entity_view_display.node.news.teaser'
+        - 'config:core.entity_view_display.node.scbi_project.default'
+        - 'config:core.entity_view_display.node.scbi_project.teaser'
+        - 'config:core.entity_view_display.node.slideshow.default'
+        - 'config:core.entity_view_display.node.slideshow.teaser'
+        - 'config:core.entity_view_display.node.venue.default'
+        - 'config:core.entity_view_display.node.venue.teaser'
+        - 'config:core.entity_view_display.node.volunteer_opportunity.default'
+        - 'config:core.entity_view_display.node.volunteer_opportunity.teaser'
+        - 'config:core.entity_view_display.node.webcam.default'
+        - 'config:core.entity_view_display.node.webcam.teaser'
         - 'config:core.entity_view_display.node.zoo_hours.default'
         - 'config:core.entity_view_display.node.zoo_hours.teaser'

@@ -200,7 +200,7 @@ process:
       source: field_meet_the_animals
     -
       plugin: media_wysiwyg_filter
-  field_image:
+  field_image_media:
     -
       plugin: media_migration_delta_sort
       source: field_image
@@ -261,10 +261,4 @@ destination:
   plugin: 'entity_complete:node'
   translations: true
   default_bundle: animal
-migration_dependencies:
-  required:
-    - upgrade_d7_user
-    - upgrade_d7_node_type
-    - paragraph__modal_media_gallery
-  optional:
-    - upgrade_d7_field_instance
+migration_dependencies: null

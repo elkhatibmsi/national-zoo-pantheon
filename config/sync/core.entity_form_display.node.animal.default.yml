@@ -17,6 +17,7 @@ dependencies:
     - field.field.node.animal.field_genus_and_species
     - field.field.node.animal.field_help_this_species
     - field.field.node.animal.field_image
+    - field.field.node.animal.field_image_media
     - field.field.node.animal.field_iucn_designation
     - field.field.node.animal.field_lifespan
     - field.field.node.animal.field_meet_the_animals
@@ -31,15 +32,203 @@ dependencies:
     - field.field.node.animal.field_taxonomic_class
     - field.field.node.animal.field_taxonomic_family
     - field.field.node.animal.field_taxonomic_order
+    - field.field.node.animal.field_teaser_image
+    - field.field.node.animal.field_teaser_title
     - image.style.thumbnail
     - node.type.animal
     - workflows.workflow.editorial
   module:
     - content_moderation
+    - field_group
     - image
+    - media_library
     - paragraphs
     - path
     - text
+third_party_settings:
+  field_group:
+    group_tabs:
+      children:
+        - group_basic_information
+        - group_animal_information
+        - group_animal_media
+        - group_fact_sheet
+        - group_conservation
+      label: Tabs
+      region: content
+      parent_name: ''
+      weight: 0
+      format_type: tabs
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        direction: horizontal
+        width_breakpoint: 640
+    group_basic_information:
+      children:
+        - field_editorial_access
+        - title
+        - group_teaser
+      label: 'Basic Information'
+      region: content
+      parent_name: group_tabs
+      weight: 39
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+    group_teaser:
+      children:
+        - field_teaser_title
+        - field_teaser_image
+        - body
+      label: Teaser
+      region: content
+      parent_name: group_basic_information
+      weight: 36
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        open: false
+        description: ''
+        required_fields: true
+        formatter: closed
+    group_legacy:
+      children:
+        - field_image
+        - field_card_position
+      label: Legacy
+      region: content
+      parent_name: ''
+      weight: 2
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        open: false
+        description: ''
+        required_fields: true
+    group_animal_information:
+      children:
+        - field_nzp_location
+        - field_exhibit
+        - field_animal_type
+        - field_meet_the_animals
+        - field_fun_facts
+        - group_taxonomic_classification
+      label: 'Animal Information'
+      region: content
+      parent_name: group_tabs
+      weight: 41
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+    group_fact_sheet:
+      children:
+        - field_physical_description
+        - field_size
+        - field_native_habitat
+        - field_communication
+        - field_food_eating_habits
+        - field_feeding_time
+        - field_social_structure
+        - field_reproduction_developme
+        - field_sleep_habits
+        - field_lifespan
+      label: 'Fact Sheet'
+      region: content
+      parent_name: group_tabs
+      weight: 43
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+    group_conservation:
+      children:
+        - field_iucn_designation
+        - field_conservation_efforts
+        - field_help_this_species
+      label: Conservation
+      region: content
+      parent_name: group_tabs
+      weight: 44
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+    group_animal_media:
+      children:
+        - field_featured_video
+        - field_image_media
+        - field_modal_gallery
+      label: 'Animal Media'
+      region: content
+      parent_name: group_tabs
+      weight: 42
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+    group_taxonomic_classification:
+      children:
+        - field_taxonomic_class
+        - field_taxonomic_order
+        - field_taxonomic_family
+        - field_genus_and_species
+      label: 'Taxonomic Classification'
+      region: content
+      parent_name: group_animal_information
+      weight: 33
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        open: false
+        description: ''
+        required_fields: true
+    group_publishing:
+      children:
+        - moderation_state
+        - status
+      label: Publishing
+      region: content
+      parent_name: ''
+      weight: 1
+      format_type: details_sidebar
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        open: false
+        description: ''
+        required_fields: true
+        weight: 0
 id: node.animal.default
 targetEntityType: node
 bundle: animal
@@ -47,7 +236,7 @@ mode: default
 content:
   body:
     type: text_textarea_with_summary
-    weight: 10
+    weight: 47
     region: content
     settings:
       rows: 9
@@ -57,11 +246,17 @@ content:
     third_party_settings: {  }
   created:
     type: datetime_timestamp
-    weight: 4
+    weight: 5
     region: content
     settings: {  }
     third_party_settings: {  }
   field_animal_type:
+    type: options_select
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_card_position:
     type: entity_reference_autocomplete
     weight: 11
     region: content
@@ -71,123 +266,7 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-  field_card_position:
-    type: entity_reference_autocomplete
-    weight: 25
-    region: content
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
   field_communication:
-    type: text_textarea
-    weight: 34
-    region: content
-    settings:
-      rows: 5
-      placeholder: ''
-    third_party_settings: {  }
-  field_conservation_efforts:
-    type: text_textarea
-    weight: 33
-    region: content
-    settings:
-      rows: 5
-      placeholder: ''
-    third_party_settings: {  }
-  field_editorial_access:
-    type: entity_reference_autocomplete
-    weight: 32
-    region: content
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-  field_exhibit:
-    type: entity_reference_autocomplete
-    weight: 31
-    region: content
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-  field_featured_video:
-    type: entity_reference_autocomplete
-    weight: 0
-    region: content
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-  field_feeding_time:
-    type: string_textfield
-    weight: 30
-    region: content
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-  field_food_eating_habits:
-    type: text_textarea
-    weight: 29
-    region: content
-    settings:
-      rows: 5
-      placeholder: ''
-    third_party_settings: {  }
-  field_fun_facts:
-    type: text_textarea
-    weight: 28
-    region: content
-    settings:
-      rows: 5
-      placeholder: ''
-    third_party_settings: {  }
-  field_genus_and_species:
-    type: string_textfield
-    weight: 27
-    region: content
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-  field_help_this_species:
-    type: options_select
-    weight: 26
-    region: content
-    settings: {  }
-    third_party_settings: {  }
-  field_image:
-    type: image_image
-    weight: 36
-    region: content
-    settings:
-      progress_indicator: throbber
-      preview_image_style: thumbnail
-    third_party_settings: {  }
-  field_iucn_designation:
-    type: options_select
-    weight: 24
-    region: content
-    settings: {  }
-    third_party_settings: {  }
-  field_lifespan:
-    type: text_textarea
-    weight: 12
-    region: content
-    settings:
-      rows: 5
-      placeholder: ''
-    third_party_settings: {  }
-  field_meet_the_animals:
     type: text_textarea
     weight: 23
     region: content
@@ -195,9 +274,111 @@ content:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
+  field_conservation_efforts:
+    type: text_textarea
+    weight: 12
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_editorial_access:
+    type: options_select
+    weight: 34
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_exhibit:
+    type: options_select
+    weight: 29
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_featured_video:
+    type: media_library_widget
+    weight: 6
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+  field_feeding_time:
+    type: string_textfield
+    weight: 26
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_food_eating_habits:
+    type: text_textarea
+    weight: 25
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_fun_facts:
+    type: text_textarea
+    weight: 32
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_genus_and_species:
+    type: string_textfield
+    weight: 14
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_help_this_species:
+    type: options_buttons
+    weight: 13
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_image:
+    type: image_image
+    weight: 9
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+  field_image_media:
+    type: media_library_widget
+    weight: 7
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+  field_iucn_designation:
+    type: options_select
+    weight: 11
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_lifespan:
+    type: text_textarea
+    weight: 30
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_meet_the_animals:
+    type: text_textarea
+    weight: 31
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
   field_modal_gallery:
     type: paragraphs
-    weight: 9
+    weight: 8
     region: content
     settings:
       title: Paragraph
@@ -222,18 +403,14 @@ content:
       placeholder: ''
     third_party_settings: {  }
   field_nzp_location:
-    type: entity_reference_autocomplete
-    weight: 21
+    type: options_select
+    weight: 27
     region: content
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
+    settings: {  }
     third_party_settings: {  }
   field_physical_description:
     type: text_textarea
-    weight: 18
+    weight: 20
     region: content
     settings:
       rows: 5
@@ -241,7 +418,7 @@ content:
     third_party_settings: {  }
   field_reproduction_developme:
     type: text_textarea
-    weight: 19
+    weight: 28
     region: content
     settings:
       rows: 5
@@ -249,7 +426,7 @@ content:
     third_party_settings: {  }
   field_size:
     type: text_textarea
-    weight: 17
+    weight: 21
     region: content
     settings:
       rows: 5
@@ -257,7 +434,7 @@ content:
     third_party_settings: {  }
   field_sleep_habits:
     type: text_textarea
-    weight: 16
+    weight: 29
     region: content
     settings:
       rows: 5
@@ -265,7 +442,7 @@ content:
     third_party_settings: {  }
   field_social_structure:
     type: text_textarea
-    weight: 15
+    weight: 27
     region: content
     settings:
       rows: 5
@@ -273,7 +450,7 @@ content:
     third_party_settings: {  }
   field_taxonomic_class:
     type: options_select
-    weight: 14
+    weight: 11
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -285,46 +462,61 @@ content:
     third_party_settings: {  }
   field_taxonomic_order:
     type: options_select
-    weight: 20
+    weight: 12
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_teaser_image:
+    type: media_library_widget
+    weight: 46
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+  field_teaser_title:
+    type: string_textfield
+    weight: 45
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
   moderation_state:
     type: moderation_state_default
-    weight: 35
+    weight: 10
     region: content
     settings: {  }
     third_party_settings: {  }
   path:
     type: path
-    weight: 6
+    weight: 7
     region: content
     settings: {  }
     third_party_settings: {  }
   promote:
     type: boolean_checkbox
-    weight: 5
+    weight: 6
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   status:
     type: boolean_checkbox
-    weight: 8
+    weight: 11
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
-    weight: 1
+    weight: 3
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   title:
     type: string_textfield
-    weight: 2
+    weight: 35
     region: content
     settings:
       size: 60
@@ -332,7 +524,7 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 3
+    weight: 4
     region: content
     settings:
       match_operator: CONTAINS
@@ -341,10 +533,8 @@ content:
       placeholder: ''
     third_party_settings: {  }
   url_redirects:
-    weight: 7
+    weight: 8
     region: content
     settings: {  }
     third_party_settings: {  }
-hidden:
-  field_image_media: true
-  field_image_s_media: true
+hidden: {  }

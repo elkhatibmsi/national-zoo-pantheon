@@ -17,14 +17,19 @@ dependencies:
     - field.field.node.exhibit.field_open
     - field.field.node.exhibit.field_paragraph_component
     - field.field.node.exhibit.field_tags
+    - field.field.node.exhibit.field_teaser_title
     - field.field.node.exhibit.field_upcoming
     - node.type.exhibit
+    - views.view.animal_demo
+    - views.view.exhibits
   module:
     - entity_reference_revisions
     - layout_builder
     - nzp_layouts
+    - system
     - text
     - user
+    - views
 third_party_settings:
   layout_builder:
     enabled: true
@@ -44,65 +49,38 @@ third_party_settings:
           background_color: bg-none
           region_background_color: null
         components:
-          7b0129b3-a2c9-4711-82b6-5fdc49269356:
-            uuid: 7b0129b3-a2c9-4711-82b6-5fdc49269356
+          6ed7593b-2292-48b6-9e36-62cdda1c2890:
+            uuid: 6ed7593b-2292-48b6-9e36-62cdda1c2890
             region: content
             configuration:
-              id: 'field_block:node:exhibit:body'
+              id: system_breadcrumb_block
+              label: Breadcrumbs
               label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              formatter:
-                type: text_default
-                label: hidden
-                settings: {  }
-                third_party_settings: {  }
-            weight: 3
+              provider: system
+              context_mapping: {  }
+            weight: 0
             additional: {  }
-          5ff3bc2f-43b4-4a34-9932-4b19ec783029:
-            uuid: 5ff3bc2f-43b4-4a34-9932-4b19ec783029
-            region: content
-            configuration:
-              id: 'field_block:node:exhibit:title'
-              label: Title
-              label_display: '0'
-              provider: layout_builder
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
-              formatter:
-                type: text_field_formatter
-                label: hidden
-                settings:
-                  link_to_entity: 0
-                  wrap_tag: h1
-                  wrap_class: ''
-                  wrap_attributes: ''
-                  override_link_label: ''
-                  token: ''
-                third_party_settings: {  }
-            weight: 2
-            additional: {  }
-          ffe3c963-5a16-4c95-bef9-fad0db03e8eb:
-            uuid: ffe3c963-5a16-4c95-bef9-fad0db03e8eb
-            region: content
-            configuration:
-              id: 'field_block:node:exhibit:field_paragraph_component'
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              formatter:
-                type: entity_reference_revisions_entity_view
-                label: hidden
-                settings:
-                  view_mode: full
-                  link: ''
-                third_party_settings: {  }
-            weight: 4
-            additional: {  }
+        third_party_settings: {  }
+      -
+        layout_id: layout_card_banner
+        layout_settings:
+          context_mapping: {  }
+          custom_classes: ''
+          region_classes:
+            card: col-md-12
+            banner: col-md-12
+          container_classes: container
+          html_container_elements: div
+          html_region_elements:
+            card: div
+            banner: div
+          background_color: bg-none
+          region_background_color: null
+          getHtmlElements: div
+        components:
           450a582f-c740-4a94-b2d4-55a07d1fdb0a:
             uuid: 450a582f-c740-4a94-b2d4-55a07d1fdb0a
-            region: content
+            region: banner
             configuration:
               id: 'field_block:node:exhibit:field_landing_image'
               label: 'Teaser image'
@@ -129,45 +107,145 @@ third_party_settings:
                   box_caption: ''
                   box_caption_custom: ''
                   box_media_style: ''
+                  loading: ''
+                  preload: false
                   box_style: ''
-                  image_style: slick_fullscreen
+                  image_style: slick_rectangle
                   media_switch: ''
                   ratio: ''
                   thumbnail_style: ''
-                  current_view_mode: _custom
                 third_party_settings: {  }
-            weight: 0
+            weight: 1
             additional: {  }
-          4d84c813-d50a-4ffa-b8d6-69cd4fd235e0:
-            uuid: 4d84c813-d50a-4ffa-b8d6-69cd4fd235e0
-            region: content
+          5ff3bc2f-43b4-4a34-9932-4b19ec783029:
+            uuid: 5ff3bc2f-43b4-4a34-9932-4b19ec783029
+            region: card
             configuration:
-              id: 'field_block:node:exhibit:field_paragraph_component'
+              id: 'field_block:node:exhibit:title'
+              label: Title
               label_display: '0'
+              provider: layout_builder
               context_mapping:
                 entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: text_field_formatter
+                label: hidden
+                settings:
+                  link_to_entity: 0
+                  wrap_tag: h1
+                  wrap_class: ''
+                  wrap_attributes: ''
+                  override_link_label: ''
+                  token: ''
+                third_party_settings: {  }
+            weight: 2
+            additional: {  }
+          cf320669-fe0d-4590-8edd-3b84d0dba056:
+            uuid: cf320669-fe0d-4590-8edd-3b84d0dba056
+            region: card
+            configuration:
+              id: 'field_block:node:exhibit:field_hours'
+              label: Hours
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
               formatter:
                 type: entity_reference_revisions_entity_view
                 label: hidden
                 settings:
-                  view_mode: full
-                  link: ''
+                  view_mode: default
+                third_party_settings: {  }
+            weight: 1
+            additional: {  }
+        third_party_settings: {  }
+      -
+        layout_id: layout_nzp_one_col
+        layout_settings:
+          context_mapping: {  }
+          custom_classes: ''
+          region_classes: null
+          container_classes: container
+          html_container_elements: div
+          html_region_elements: null
+          background_color: bg-none
+          region_background_color: null
+          getHtmlElements: div
+        components:
+          11690d88-b39b-4e7a-b5e5-da7cf2cc6de4:
+            uuid: 11690d88-b39b-4e7a-b5e5-da7cf2cc6de4
+            region: content
+            configuration:
+              id: 'views_block:exhibits-block_2'
+              label: 'Animals in this Exhibit'
+              label_display: visible
+              provider: views
+              context_mapping: {  }
+              views_label: 'Animals in this Exhibit'
+              items_per_page: none
+            weight: 2
+            additional: {  }
+        third_party_settings: {  }
+      -
+        layout_id: layout_nzp_one_col
+        layout_settings:
+          context_mapping: {  }
+          custom_classes: ''
+          region_classes: null
+          container_classes: container
+          html_container_elements: div
+          html_region_elements: null
+          background_color: bg-none
+          region_background_color: null
+          getHtmlElements: div
+        components: {  }
+        third_party_settings: {  }
+      -
+        layout_id: layout_nzp_two_col
+        layout_settings:
+          context_mapping: {  }
+          custom_classes: ''
+          region_classes:
+            one_col: col-span-8
+            two_col: col-span-4
+          container_classes: 'container mx-auto'
+          html_container_elements: div
+          html_region_elements:
+            one_col: div
+            two_col: div
+          background_color: null
+          region_background_color:
+            one_col: bg-none
+            two_col: bg-none
+          getHtmlElements: div
+        components:
+          ffe3c963-5a16-4c95-bef9-fad0db03e8eb:
+            uuid: ffe3c963-5a16-4c95-bef9-fad0db03e8eb
+            region: one_col
+            configuration:
+              id: 'field_block:node:exhibit:field_paragraph_component'
+              label: 'Paragraph Component'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: layout_paragraphs_builder
+                label: hidden
+                settings:
+                  preview_view_mode: default
+                  nesting_depth: 0
+                  require_layouts: 0
+                  empty_message: ''
                 third_party_settings: {  }
             weight: 6
             additional: {  }
-          d6fc401e-a1e6-4c0a-8471-4d91120d0cc8:
-            uuid: d6fc401e-a1e6-4c0a-8471-4d91120d0cc8
-            region: content
-            configuration:
-              id: 'extra_field_block:node:exhibit:links'
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-            weight: 7
-            additional: {  }
-          afe97aad-0511-4454-b4de-14aa403bfd53:
-            uuid: afe97aad-0511-4454-b4de-14aa403bfd53
-            region: content
+          7b0129b3-a2c9-4711-82b6-5fdc49269356:
+            uuid: 7b0129b3-a2c9-4711-82b6-5fdc49269356
+            region: one_col
             configuration:
               id: 'field_block:node:exhibit:body'
               label_display: '0'
@@ -178,7 +256,57 @@ third_party_settings:
                 label: hidden
                 settings: {  }
                 third_party_settings: {  }
-            weight: 8
+            weight: 5
+            additional: {  }
+          4e35dbfe-3817-4c12-908b-a20cf8829153:
+            uuid: 4e35dbfe-3817-4c12-908b-a20cf8829153
+            region: two_col
+            configuration:
+              id: 'views_block:animal_demo-block_2'
+              label: 'Daily Demos'
+              label_display: visible
+              provider: views
+              context_mapping: {  }
+              views_label: 'Daily Demos'
+              items_per_page: none
+            weight: 2
+            additional: {  }
+          b40b6605-3f2f-4e40-a106-dd60e5979337:
+            uuid: b40b6605-3f2f-4e40-a106-dd60e5979337
+            region: one_col
+            configuration:
+              id: 'field_block:node:exhibit:field_nearby'
+              label: Nearby
+              label_display: visible
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            weight: 7
+            additional: {  }
+          f7da42ed-3138-4a37-b9e5-bb421329fee9:
+            uuid: f7da42ed-3138-4a37-b9e5-bb421329fee9
+            region: two_col
+            configuration:
+              id: 'field_block:node:exhibit:field_map'
+              label: Map
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: entity_reference_entity_view
+                label: hidden
+                settings:
+                  view_mode: teaser
+                third_party_settings: {  }
+            weight: 1
             additional: {  }
         third_party_settings: {  }
 id: node.exhibit.default
@@ -197,6 +325,14 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: -20
+    region: content
+  field_exhibit_hours:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 102
     region: content
   field_paragraph_component:
     type: entity_reference_revisions_entity_view
@@ -226,4 +362,5 @@ hidden:
   field_open: true
   field_slideshow: true
   field_tags: true
+  field_teaser_title: true
   field_upcoming: true

@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.storage.node.field_editorial_access
     - node.type.scbi_project
+    - taxonomy.vocabulary.website_areas
 id: node.scbi_project.field_editorial_access
 field_name: field_editorial_access
 entity_type: node
@@ -18,6 +19,11 @@ default_value_callback: ''
 settings:
   handler: 'default:taxonomy_term'
   handler_settings:
+    target_bundles:
+      website_areas: website_areas
     sort:
       field: _none
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
 field_type: entity_reference

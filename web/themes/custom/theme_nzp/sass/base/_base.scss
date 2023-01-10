@@ -1,0 +1,114 @@
+// ==========================================================================
+// Base
+// A Base rule is applied to HTML element using an element selector, a
+// descendent selector, or a child selector, along with any pseudo-classes.
+// We cannot reference any element defined here by their respective class or ID name.
+// This defines the default styling for how that element should look.
+// Changes in style other than default should be overwritten using other partials.
+// ==========================================================================
+
+// Reset CSS
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  // Global Clearfixing
+  @if $grid-type == 'float'{
+    &:after{
+      clear: both;
+      content: "";
+      display: block;
+    }
+  }
+}
+
+// Base Code
+html, body{
+  font-size: 100%;
+}
+body{
+  -webkit-font-smoothing: antialiased;
+  color: $color-text;
+  font-family: $font-family--secondary;
+  text-rendering: optimizeLegibility;
+  line-height:2em;
+
+}
+a{
+  outline: none;
+  color: $color-link;
+  text-decoration: none;
+  transition: color .2s;
+  &:hover {
+    color:$color-link-hover;
+  }
+}
+
+p {
+  margin:0.5em 0 1em 0;
+}
+
+a, span, strong {
+  &:after{
+    @extend %clearfix-none;
+  }
+}
+ul,ol{
+  list-style: none;
+}
+
+// main   ul {
+//   margin-left:1em;
+//   list-style-type:circle;
+// }
+
+h1,h2,h3,h4,h5,h6{
+  font-family: $font-family--primary;
+  color: $nzp-slate;
+}
+h1{
+  font-size: $head1-font-size;
+  margin: 1em 0 1.5em;
+
+}
+h2{
+  font-size: $head2-font-size;
+  margin: 0.75em 0 1em;
+}
+h3{
+  font-size: $head3-font-size;
+  margin: 0.75em 0 1em;
+
+}
+img{
+  max-width: 100%;
+  height: auto;
+}
+
+input {
+  &[type="text"] {
+    padding:0.5em;
+    border: 1px solid $nzp-slate;
+    &:focus{
+      outline: none;
+      border-color: $nzp-green;
+    }
+  }
+}
+select{
+  border: 1px solid $nzp-slate;
+  cursor: pointer;
+  margin-top: 4px;
+  outline: none;
+  width: 100%;
+  padding: 0.5em;
+
+  &:focus{
+    outline: none;
+    border-color: $nzp-green;
+  }
+}
+option {
+  background-color: $nzp-tan;
+  color: $nzp-slate;
+}

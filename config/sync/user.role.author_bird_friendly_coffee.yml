@@ -5,7 +5,6 @@ dependencies:
   config:
     - filter.format.full_html
     - node.type.basic_page
-    - node.type.class
     - node.type.coffee_product
     - node.type.coffee_purveyor
     - node.type.coffee_retailer
@@ -33,7 +32,6 @@ permissions:
   - 'create coffee_purveyor content'
   - 'create coffee_retailer content'
   - 'create files'
-  - 'delete any class content'
   - 'delete any coffee_product content'
   - 'delete any coffee_purveyor content'
   - 'delete any coffee_retailer content'

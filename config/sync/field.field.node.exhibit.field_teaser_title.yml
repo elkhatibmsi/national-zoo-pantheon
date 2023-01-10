@@ -1,0 +1,19 @@
+uuid: 825cbb2b-20c9-41a8-9e1c-9093a25321c5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_teaser_title
+    - node.type.exhibit
+id: node.exhibit.field_teaser_title
+field_name: field_teaser_title
+entity_type: node
+bundle: exhibit
+label: 'Teaser Title'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

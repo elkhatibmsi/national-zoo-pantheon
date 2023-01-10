@@ -18,6 +18,7 @@ dependencies:
     - field.field.node.animal.field_genus_and_species
     - field.field.node.animal.field_help_this_species
     - field.field.node.animal.field_image
+    - field.field.node.animal.field_image_media
     - field.field.node.animal.field_iucn_designation
     - field.field.node.animal.field_lifespan
     - field.field.node.animal.field_meet_the_animals
@@ -32,12 +33,14 @@ dependencies:
     - field.field.node.animal.field_taxonomic_class
     - field.field.node.animal.field_taxonomic_family
     - field.field.node.animal.field_taxonomic_order
+    - field.field.node.animal.field_teaser_image
+    - field.field.node.animal.field_teaser_title
     - image.style.large
     - node.type.animal
   module:
-    - image
     - layout_builder
     - layout_builder_restrictions
+    - media
     - user
 third_party_settings:
   layout_builder:
@@ -55,11 +58,11 @@ targetEntityType: node
 bundle: animal
 mode: teaser
 content:
-  field_image:
-    type: image
+  field_image_media:
+    type: media_thumbnail
     label: hidden
     settings:
-      image_link: ''
+      image_link: content
       image_style: large
       image_loading:
         attribute: lazy
@@ -81,7 +84,7 @@ hidden:
   field_fun_facts: true
   field_genus_and_species: true
   field_help_this_species: true
-  field_image_media: true
+  field_image: true
   field_image_s_media: true
   field_iucn_designation: true
   field_lifespan: true
@@ -97,4 +100,6 @@ hidden:
   field_taxonomic_class: true
   field_taxonomic_family: true
   field_taxonomic_order: true
+  field_teaser_image: true
+  field_teaser_title: true
   links: true

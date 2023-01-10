@@ -96,29 +96,6 @@ h3 {
   @apply text-4xl pb-1 mb-1 mt-2 font-bold flex items-center;
 }
 
-.nav-tabs li {
-  @apply m-0;
-
-}
-
-.nav-tabs li a {
-  @apply text-gray h-full;
-}
-
-.nav-tabs li [aria-selected="true"] {
-  @apply border-b-4 h-full border-sizzling-red text-body;
-}
-
-/* .page-title:after {
-    content: "";
-    height: 4px;
-    position: relative;
-    vertical-align: middle;
-    flex: 15%;
-    margin: 0 10px;
-    background-color: #C8DC65;
-  } */
-
 .landing-title {
   @apply relative text-4xl pb-1 mb-1 mt-2 font-bold flex items-center text-center;
 }
@@ -158,8 +135,14 @@ p ul li > li {
   @apply list-disc ml-4;
 }
 
-.nav-tabs a [aria-selected="true"] {
-  @apply border-tea-green;
+/* Nav Tabs overrides */
+
+.nav-tabs a[aria-selected="true"] {
+  @apply border-sizzling-red border-b-2;
+}
+
+.nav-tabs > li {
+  margin:0;
 }
 
 .visually-hidden {
@@ -194,10 +177,15 @@ a {
   @apply font-semibold flex flex-grow lg:p-2 text-white lg:justify-center items-center;
 }
 
-.mega-menu {
-  @apply bg-white p-4 left-0 w-full hidden z-10;
+.main-nav:hover {
+  @apply lg:flex flex-none;
 }
 
+.mega-menu {
+  @apply lg:bg-white p-4 left-2/4 w-10/12 transform -translate-x-2/4 lg:mt-[59px] translate-y-[-10px] hidden z-10; 
+
+}
+ 
 .main-menu--level-0 li:hover > .mega-menu {
   @apply lg:block !important;
 }
@@ -380,6 +368,38 @@ img {
   @apply !text-oxford-blue;
 }
 
+/* Main Menu */
+
+header {
+  transition: all 0.5s ease;
+ 
+}
+
+header.scrolled {
+  @apply lg:translate-y-[-5em];
+}
+
+
+
+header.scrolled  .header--hours {
+  opacity: 0;
+}
+
+
+
+.menu_link_content { 
+   @apply mx-auto w-[80%];
+}
+
+.menu-promo {
+  @apply lg:border-l-2 lg:border-gray lg:pl-[2em];  
+}
+
+/* main content area */
+
+main {
+  @apply lg:relative lg:mt-[12em];
+}
 
 
 /* Layout Builder backgrounds */
@@ -396,7 +416,7 @@ img {
 /* Layout Builder Overrides */
 
 .knockout .layout-builder__add-block {
-  background:none;
+  background:none; 
 }
 
 
@@ -406,4 +426,16 @@ img {
 
 .lpb-enable__wrapper {
   @apply relative;
+}
+
+.teaser-img-container > img {
+  /* @apply w-[200px] h-[200px] inline-block align-top bg-cover bg-center; */
+  @apply w-full; 
+}
+
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }

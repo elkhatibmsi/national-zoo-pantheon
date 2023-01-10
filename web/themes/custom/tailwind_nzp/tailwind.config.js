@@ -136,7 +136,8 @@ module.exports = {
         'flex-nowrap',
         'flex-wrap',
         'flex-row-reverse',
-        'max-w-[350px]',        
+        'max-w-[350px]', 
+        'w-24',       
         'overflow-hidden'
       ],
     }),

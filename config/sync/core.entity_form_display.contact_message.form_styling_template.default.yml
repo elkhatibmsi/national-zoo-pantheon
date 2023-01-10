@@ -1,0 +1,55 @@
+uuid: 27f5ae82-445d-44a1-b992-253dd06b76f1
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.form_styling_template
+    - field.field.contact_message.form_styling_template.field_favorite_birds
+id: contact_message.form_styling_template.default
+targetEntityType: contact_message
+bundle: form_styling_template
+mode: default
+content:
+  copy:
+    weight: 6
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_favorite_birds:
+    type: options_buttons
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  mail:
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  message:
+    type: string_textarea
+    weight: 4
+    region: content
+    settings:
+      rows: 12
+      placeholder: ''
+    third_party_settings: {  }
+  name:
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  preview:
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  subject:
+    type: string_textfield
+    weight: 3
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

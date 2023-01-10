@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.storage.node.field_modal_gallery
     - node.type.basic_page
+    - paragraphs.paragraphs_type.modal_media_gallery
   module:
     - entity_reference_revisions
 id: node.basic_page.field_modal_gallery
@@ -20,7 +21,8 @@ default_value_callback: ''
 settings:
   handler: 'default:paragraph'
   handler_settings:
-    target_bundles: null
+    target_bundles:
+      modal_media_gallery: modal_media_gallery
     negate: 0
     target_bundles_drag_drop:
       accordion:
@@ -62,9 +64,6 @@ settings:
       collapsible_block:
         weight: 6
         enabled: false
-      collection:
-        weight: 32
-        enabled: false
       content_video:
         weight: 7
         enabled: false
@@ -76,6 +75,9 @@ settings:
         enabled: false
       faq_item:
         weight: 33
+        enabled: false
+      feature:
+        weight: 72
         enabled: false
       flipbook_grid:
         weight: 34
@@ -118,7 +120,7 @@ settings:
         enabled: false
       modal_media_gallery:
         weight: 14
-        enabled: false
+        enabled: true
       multi_column_layout_text_:
         weight: 43
         enabled: false
@@ -130,6 +132,9 @@ settings:
         enabled: false
       promotion_two:
         weight: 46
+        enabled: false
+      secondary_feature:
+        weight: 91
         enabled: false
       section:
         weight: 15
@@ -145,6 +150,9 @@ settings:
         enabled: false
       slideshow_container:
         weight: 48
+        enabled: false
+      spacer:
+        weight: 97
         enabled: false
       sponsors:
         weight: 49

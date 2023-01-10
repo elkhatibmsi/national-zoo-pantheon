@@ -9,8 +9,8 @@ id: node.attraction.field_subtitle
 field_name: field_subtitle
 entity_type: node
 bundle: attraction
-label: Subtitle
-description: ''
+label: Subheading
+description: 'Optional: Enter up to two subheadings.'
 required: false
 translatable: false
 default_value: {  }

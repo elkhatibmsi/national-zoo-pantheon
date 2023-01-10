@@ -6,7 +6,6 @@ dependencies:
     - field.field.node.media_release.body
     - field.field.node.media_release.field_content_block
     - field.field.node.media_release.field_editorial_access
-    - field.field.node.media_release.field_image
     - field.field.node.media_release.field_landing_image
     - field.field.node.media_release.field_media_release_category
     - field.field.node.media_release.field_media_release_image
@@ -39,6 +38,8 @@ third_party_settings:
           html_container_elements: div
           html_region_elements:
             content: div
+          background_color: bg-none
+          region_background_color: null
         components:
           795bc261-abab-4a50-aa5a-eabebbbca78c:
             uuid: 795bc261-abab-4a50-aa5a-eabebbbca78c
@@ -234,7 +235,6 @@ content:
     region: content
 hidden:
   field_editorial_access: true
-  field_image: true
   field_landing_image: true
   field_media_release_category: true
   field_obituary: true

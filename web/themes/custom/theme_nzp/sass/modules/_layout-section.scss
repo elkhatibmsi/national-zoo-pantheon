@@ -1,0 +1,51 @@
+// LAYOUT SECTION STYLING
+
+
+//knockout variations
+
+.layout {
+    padding-bottom:2em;
+}
+
+.knockout--nzp-tan {
+    background: $nzp-tan;
+    padding: 1em;
+}
+
+.knockout--nzp-green {
+    background: $nzp-green;
+    padding: 1em;
+    h1,h2,h3,h4,a,p,i {
+        color: $white;
+    }
+}
+
+.knockout--nzp-slate {
+    background: $nzp-slate;
+    padding: 1em;
+    h1,h2,h3,h4,a,p,i {
+        color: $white;
+    }
+}
+
+
+.flex--center {
+    @include flexify(center, center);
+    .layout {
+        @include flexify(center, center);
+    }
+
+}
+
+.text--center {
+    text-align:center;
+}
+
+.layout-builder-block {
+    background:none;
+}
+
+.layout-builder__add-block {
+    background-color: #1b4466;
+    margin: 0.5em 0;
+}

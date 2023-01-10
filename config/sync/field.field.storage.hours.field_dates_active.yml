@@ -1,0 +1,26 @@
+uuid: 1bd8246e-89f5-404e-93eb-dd4756c16ddd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.storage.field_dates_active
+    - storage.storage_type.hours
+  module:
+    - datetime_range
+id: storage.hours.field_dates_active
+field_name: field_dates_active
+entity_type: storage
+bundle: hours
+label: 'Dates Active'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    default_date_type: now
+    default_date: now
+    default_end_date_type: now
+    default_end_date: now
+default_value_callback: ''
+settings: {  }
+field_type: daterange

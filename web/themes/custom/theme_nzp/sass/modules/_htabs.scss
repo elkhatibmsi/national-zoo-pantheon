@@ -1,0 +1,36 @@
+
+//Styling for horizontal tabs
+
+
+.htabs--list-items {
+   @include flexify();
+    border-bottom:2px solid $nzp-green;
+    li.htabs--list-item {
+        padding:0.5em 1em;
+        border-top:3px solid $nzp-green;
+          
+            a {
+                color: $nzp-green;
+                font-size: 0.75em;
+                text-transform: uppercase;
+                font-family: $font-family--primary;
+                letter-spacing: 4px;
+                font-weight: bold;
+
+            }
+
+        }
+
+    }
+
+    //make local tasks fixed//
+
+    #block-theme-nzp-primary-local-tasks {
+        position:fixed;
+        top:80px;
+        right:0px;
+        opacity:0.5;
+        &:hover {
+            opacity:1;
+        }
+    }

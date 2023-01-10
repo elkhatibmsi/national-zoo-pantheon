@@ -1,0 +1,18 @@
+.icon-caption--wrapper {
+    height: 225px;
+    border: 1px solid #575759;
+    padding-top: 1em;
+    margin-bottom: 1em;
+    p {
+        line-height: normal;
+        font-size:0.9em;
+
+    }
+    .col-md-12 {
+        display: flex;
+        .micon {
+            font-size:1.5em;
+            padding-right:10px;
+        }
+    }
+} 

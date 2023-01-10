@@ -64,12 +64,6 @@ process:
       plugin: media_wysiwyg_filter
     -
       plugin: img_tag_to_embed
-  field_camera_embed:
-    -
-      plugin: get
-      source: field_camera_embed
-    -
-      plugin: media_wysiwyg_filter
   field_editorial_access:
     -
       plugin: sub_process

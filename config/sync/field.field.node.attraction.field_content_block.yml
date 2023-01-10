@@ -11,7 +11,7 @@ id: node.attraction.field_content_block
 field_name: field_content_block
 entity_type: node
 bundle: attraction
-label: 'Other Content'
+label: Content
 description: ''
 required: false
 translatable: false
@@ -62,9 +62,6 @@ settings:
       collapsible_block:
         weight: 4
         enabled: false
-      collection:
-        weight: 49
-        enabled: false
       content_video:
         weight: 29
         enabled: false
@@ -76,6 +73,9 @@ settings:
         enabled: false
       faq_item:
         weight: 50
+        enabled: false
+      feature:
+        weight: 72
         enabled: false
       flipbook_grid:
         weight: 51
@@ -131,6 +131,9 @@ settings:
       promotion_two:
         weight: 64
         enabled: false
+      secondary_feature:
+        weight: 91
+        enabled: false
       section:
         weight: 36
         enabled: false
@@ -145,6 +148,9 @@ settings:
         enabled: false
       slideshow_container:
         weight: 66
+        enabled: false
+      spacer:
+        weight: 97
         enabled: false
       sponsors:
         weight: 67

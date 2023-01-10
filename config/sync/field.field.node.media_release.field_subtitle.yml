@@ -9,7 +9,7 @@ id: node.media_release.field_subtitle
 field_name: field_subtitle
 entity_type: node
 bundle: media_release
-label: Subtitle
+label: Subheading
 description: ''
 required: false
 translatable: false

@@ -1,0 +1,14 @@
+.moderation-sidebar-toolbar-tab {
+    a.toolbar-item {
+        display: flex;
+        align-items: center;
+        background: #000;
+        &:after {
+            padding:0px;
+        }
+    }
+}
+
+.entity-view-display-layout-builder-form {
+    padding: 2em;
+}

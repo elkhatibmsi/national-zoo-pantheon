@@ -1,0 +1,51 @@
+uuid: 85b87182-519f-459f-9fd8-4adb42107458
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.storage.hours.field_dates_active
+    - field.field.storage.hours.field_hours_available
+    - field.field.storage.hours.field_hours_description
+    - storage.storage_type.hours
+  module:
+    - datetime_range
+    - text
+    - time_field
+id: storage.hours.default
+targetEntityType: storage
+bundle: hours
+mode: default
+content:
+  field_dates_active:
+    type: daterange_default
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_hours_available:
+    type: time_range_widget
+    weight: 3
+    region: content
+    settings:
+      enabled: false
+      step: 5
+    third_party_settings: {  }
+  field_hours_description:
+    type: text_textarea
+    weight: 1
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  status: true
+  user_id: true

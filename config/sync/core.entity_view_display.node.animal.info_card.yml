@@ -19,7 +19,6 @@ dependencies:
     - field.field.node.animal.field_help_this_species
     - field.field.node.animal.field_image
     - field.field.node.animal.field_image_media
-    - field.field.node.animal.field_image_s_media
     - field.field.node.animal.field_iucn_designation
     - field.field.node.animal.field_lifespan
     - field.field.node.animal.field_meet_the_animals
@@ -34,6 +33,8 @@ dependencies:
     - field.field.node.animal.field_taxonomic_class
     - field.field.node.animal.field_taxonomic_family
     - field.field.node.animal.field_taxonomic_order
+    - field.field.node.animal.field_teaser_image
+    - field.field.node.animal.field_teaser_title
     - node.type.animal
   module:
     - entity_reference_revisions
@@ -404,5 +405,6 @@ hidden:
   field_editorial_access: true
   field_exhibit: true
   field_image_media: true
-  field_image_s_media: true
   field_nzp_location: true
+  field_teaser_image: true
+  field_teaser_title: true

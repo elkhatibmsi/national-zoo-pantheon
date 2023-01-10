@@ -1,0 +1,24 @@
+uuid: d6c57e25-b49e-40d8-bba9-4c7843c802b6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.horizontal_links_wrapper.field_row
+    - paragraphs.paragraphs_type.horizontal_links_wrapper
+  module:
+    - entity_reference_revisions
+id: paragraph.horizontal_links_wrapper.default
+targetEntityType: paragraph
+bundle: horizontal_links_wrapper
+mode: default
+content:
+  field_row:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

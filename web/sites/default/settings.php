@@ -16,6 +16,20 @@ $settings['container_yamls'][] = __DIR__ . '/services.yml';
  */
 include __DIR__ . "/settings.pantheon.php";
 
+if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
+  $databases['migrate']['default'] = array(
+    'database' =>  "legacy",
+    'username' => $_ENV['DB_USER'],
+    'password' => $_ENV['DB_PASSWORD'],
+    'prefix' => '',
+    'host' => $_ENV['DB_HOST'],
+    'port' => $_ENV['DB_PORT'],
+    'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
+    'driver' => 'mysql',
+  );
+}
+
+
 
 /**
  * Skipping permissions hardening will make scaffolding

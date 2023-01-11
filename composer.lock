@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5034e4f8b11f55047efa0fef642f1055",
+    "content-hash": "542add66a52c2bbfcab173beb09f1b7d",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -6091,35 +6091,36 @@
         },
         {
             "name": "drupal/migrate_tools",
-            "version": "5.2.0",
+            "version": "6.0.1",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/migrate_tools.git",
-                "reference": "8.x-5.2"
+                "reference": "6.0.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/migrate_tools-8.x-5.2.zip",
-                "reference": "8.x-5.2",
-                "shasum": "e473c32780c567b62b3aa7dd92c2fb5227b9ee12"
+                "url": "https://ftp.drupal.org/files/projects/migrate_tools-6.0.1.zip",
+                "reference": "6.0.1",
+                "shasum": "8c07d1b61b319acd4fd395e22ef9bf34d23299ba"
             },
             "require": {
-                "drupal/core": "^9.1",
-                "drupal/migrate_plus": "^5",
-                "php": ">=7.1"
+                "drupal/core": ">=9.1",
+                "php": ">=7.4"
             },
             "require-dev": {
-                "drupal/migrate_source_csv": "^3.0",
-                "drush/drush": "^10"
+                "drupal/migrate_plus": ">=5",
+                "drupal/migrate_source_csv": ">=3",
+                "drush/drush": ">=11"
             },
             "suggest": {
-                "drush/drush": "^9 || ^10"
+                "drupal/migrate_plus": ">=5",
+                "drush/drush": ">=11"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-5.2",
-                    "datestamp": "1672425094",
+                    "version": "6.0.1",
+                    "datestamp": "1672424943",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -6127,7 +6128,7 @@
                 },
                 "drush": {
                     "services": {
-                        "drush.services.yml": "^9 || ^10"
+                        "drush.services.yml": ">=9"
                     }
                 }
             },

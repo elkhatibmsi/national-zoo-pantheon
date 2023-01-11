@@ -16,7 +16,7 @@ provider: null
 plugin: 'menu_block:menu-newsroom-media-resources'
 settings:
   id: 'menu_block:menu-newsroom-media-resources'
-  label: 'Newsroom Media Resources'
+  label: 'News & Media'
   label_display: visible
   provider: menu_block
   follow: false

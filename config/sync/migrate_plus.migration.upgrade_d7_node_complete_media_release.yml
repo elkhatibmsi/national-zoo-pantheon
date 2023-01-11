@@ -199,4 +199,4 @@ destination:
   plugin: 'entity_complete:node'
   translations: true
   default_bundle: media_release
-migration_dependencies: {}
+migration_dependencies: {  }

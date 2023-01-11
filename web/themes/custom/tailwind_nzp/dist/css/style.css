@@ -965,14 +965,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   left: 0px;
 }
 
-.inset-x-0{
-  left: 0px;
-  right: 0px;
-}
-
 .inset-y-0{
   top: 0px;
   bottom: 0px;
+}
+
+.inset-x-0{
+  left: 0px;
+  right: 0px;
 }
 
 .left-8{
@@ -991,20 +991,20 @@ Ensure the default browser behavior of the `hidden` attribute.
   right: 3rem;
 }
 
-.right-6{
-  right: 1.5rem;
-}
-
-.bottom-0{
-  bottom: 0px;
-}
-
 .left-0{
   left: 0px;
 }
 
 .right-0{
   right: 0px;
+}
+
+.right-6{
+  right: 1.5rem;
+}
+
+.bottom-0{
+  bottom: 0px;
 }
 
 .right-2{
@@ -1746,6 +1746,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-bottom: 1rem;
 }
 
+.ml-1{
+  margin-left: 0.25rem;
+}
+
 .mb-0{
   margin-bottom: 0px;
 }
@@ -1756,10 +1760,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .ml-2{
   margin-left: 0.5rem;
-}
-
-.ml-1{
-  margin-left: 0.25rem;
 }
 
 .ml-4{
@@ -1878,6 +1878,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: auto;
 }
 
+.h-10{
+  height: 2.5rem;
+}
+
+.h-6{
+  height: 1.5rem;
+}
+
 .h-full{
   height: 100%;
 }
@@ -1890,16 +1898,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: 200px;
 }
 
-.h-6{
-  height: 1.5rem;
-}
-
 .h-4{
   height: 1rem;
-}
-
-.h-10{
-  height: 2.5rem;
 }
 
 .h-14{
@@ -1942,6 +1942,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   min-height: 100vh;
 }
 
+.w-24{
+  width: 6rem;
+}
+
 .w-\[225px\]{
   width: 225px;
 }
@@ -1954,16 +1958,16 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: auto;
 }
 
+.w-10{
+  width: 2.5rem;
+}
+
 .w-6{
   width: 1.5rem;
 }
 
 .w-4{
   width: 1rem;
-}
-
-.w-10{
-  width: 2.5rem;
 }
 
 .w-8{
@@ -2305,12 +2309,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   border-radius: 0.25rem;
 }
 
-.rounded-none{
-  border-radius: 0px;
-}
-
 .rounded-full{
   border-radius: 9999px;
+}
+
+.rounded-none{
+  border-radius: 0px;
 }
 
 .rounded-b{
@@ -3258,6 +3262,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-left: 0.875rem;
 }
 
+.pb-\[0\.5em\]{
+  padding-bottom: 0.5em;
+}
+
 .text-left{
   text-align: left;
 }
@@ -3726,35 +3734,6 @@ h3{
   font-weight: 700;
 }
 
-.nav-tabs li{
-  margin: 0px;
-}
-
-.nav-tabs li a{
-  height: 100%;
-  --tw-text-opacity: 1;
-  color: rgb(163 163 163 / var(--tw-text-opacity));
-}
-
-.nav-tabs li [aria-selected="true"]{
-  height: 100%;
-  border-bottom-width: 4px;
-  --tw-border-opacity: 1;
-  border-color: rgb(240 81 90 / var(--tw-border-opacity));
-  --tw-text-opacity: 1;
-  color: rgb(64 64 64 / var(--tw-text-opacity));
-}
-
-/* .page-title:after {
-    content: "";
-    height: 4px;
-    position: relative;
-    vertical-align: middle;
-    flex: 15%;
-    margin: 0 10px;
-    background-color: #C8DC65;
-  } */
-
 .landing-title{
   position: relative;
   margin-bottom: 0.25rem;
@@ -3803,9 +3782,16 @@ p ul li > li{
   list-style-type: disc;
 }
 
-.nav-tabs a [aria-selected="true"]{
+/* Nav Tabs overrides */
+
+.nav-tabs a[aria-selected="true"]{
+  border-bottom-width: 2px;
   --tw-border-opacity: 1;
-  border-color: rgb(196 222 166 / var(--tw-border-opacity));
+  border-color: rgb(240 81 90 / var(--tw-border-opacity));
+}
+
+.nav-tabs > li {
+  margin:0;
 }
 
 .visually-hidden{
@@ -3868,17 +3854,37 @@ a{
   }
 }
 
+.main-nav:hover{
+  flex: none;
+}
+
+@media (min-width: 1024px){
+  .main-nav:hover{
+    display: flex;
+  }
+}
+
 .mega-menu{
-  left: 0px;
+  left: 50%;
   z-index: 10;
   display: none;
-  width: 100%;
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  width: 83.333333%;
+  --tw-translate-x: -50%;
+  --tw-translate-y: -10px;
+  transform: var(--tw-transform);
   padding: 1rem;
 }
 
 @media (min-width: 1024px){
+  .mega-menu{
+    margin-top: 59px;
+  }
+
+  .mega-menu{
+    --tw-bg-opacity: 1;
+    background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  }
+
   .main-menu--level-0 li:hover > .mega-menu{
     display: block !important;
   }
@@ -4268,6 +4274,56 @@ img{
   color: rgb(0 37 84 / var(--tw-text-opacity)) !important;
 }
 
+/* Main Menu */
+
+header {
+  transition: all 0.5s ease;
+}
+
+@media (min-width: 1024px){
+  header.scrolled{
+    --tw-translate-y: -5em;
+    transform: var(--tw-transform);
+  }
+}
+
+header.scrolled  .header--hours {
+  opacity: 0;
+}
+
+.menu_link_content{
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+}
+
+@media (min-width: 1024px){
+  .menu-promo{
+    border-left-width: 2px;
+  }
+
+  .menu-promo{
+    --tw-border-opacity: 1;
+    border-color: rgb(163 163 163 / var(--tw-border-opacity));
+  }
+
+  .menu-promo{
+    padding-left: 2em;
+  }
+}
+
+/* main content area */
+
+@media (min-width: 1024px){
+  main{
+    position: relative;
+  }
+
+  main{
+    margin-top: 12em;
+  }
+}
+
 /* Layout Builder backgrounds */
 
 .knockout{
@@ -4292,6 +4348,17 @@ img{
 
 .lpb-enable__wrapper{
   position: relative;
+}
+
+.teaser-img-container > img {
+  /* @apply w-[200px] h-[200px] inline-block align-top bg-cover bg-center; */
+  width: 100%;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .first\:pl-0:first-child{
@@ -5176,20 +5243,32 @@ img{
     }
   }
 
+  .lg\:fixed{
+    position: fixed;
+  }
+
   .lg\:absolute{
     position: absolute;
+  }
+
+  .lg\:relative{
+    position: relative;
   }
 
   .lg\:right-0{
     right: 0px;
   }
 
-  .lg\:top-full{
-    top: 100%;
+  .lg\:top-\[2\.2em\]{
+    top: 2.2em;
   }
 
   .lg\:z-\[99\]{
     z-index: 99;
+  }
+
+  .lg\:z-10{
+    z-index: 10;
   }
 
   .lg\:order-1{
@@ -5449,10 +5528,6 @@ img{
     height: 100%;
   }
 
-  .lg\:w-48{
-    width: 12rem;
-  }
-
   .lg\:w-\[300px\]{
     width: 300px;
   }
@@ -5677,18 +5752,12 @@ img{
     padding-right: 1rem;
   }
 
-  .lg\:py-0{
-    padding-top: 0px;
-    padding-bottom: 0px;
-  }
-
-  .lg\:px-0{
-    padding-left: 0px;
-    padding-right: 0px;
-  }
-
   .lg\:pl-3{
     padding-left: 0.75rem;
+  }
+
+  .lg\:pt-0{
+    padding-top: 0px;
   }
 
   .lg\:pb-0{
@@ -5706,11 +5775,6 @@ img{
 
   .lg\:opacity-0{
     opacity: 0;
-  }
-
-  .lg\:hover\:text-darkergray:hover{
-    --tw-text-opacity: 1;
-    color: rgb(82 82 82 / var(--tw-text-opacity));
   }
 }
 

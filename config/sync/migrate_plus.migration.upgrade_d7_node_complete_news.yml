@@ -193,4 +193,4 @@ destination:
   plugin: 'entity_complete:node'
   translations: true
   default_bundle: news
-migration_dependencies: {}
+migration_dependencies: {  }

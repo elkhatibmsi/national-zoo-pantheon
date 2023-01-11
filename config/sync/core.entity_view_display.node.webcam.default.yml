@@ -166,3 +166,4 @@ hidden:
   field_editorial_access: true
   field_landing_image: true
   field_related_animal: true
+  field_teaser_title: true

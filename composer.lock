@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "542add66a52c2bbfcab173beb09f1b7d",
+    "content-hash": "31a26d997f41fc1a314c9f6e7f7c5316",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -5461,17 +5461,11 @@
         },
         {
             "name": "drupal/media_migration",
-            "version": "1.0.0-alpha14",
+            "version": "dev-1.x",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/media_migration.git",
-                "reference": "8.x-1.0-alpha14"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/media_migration-8.x-1.0-alpha14.zip",
-                "reference": "8.x-1.0-alpha14",
-                "shasum": "d0c3617d4198b915a2eec116a5d8ca0873e03067"
+                "reference": "0f9e4781799112ddb35defecb70f8cf08a89d53c"
             },
             "require": {
                 "drupal/core": "^8.8 || ^9",
@@ -5496,12 +5490,15 @@
             },
             "type": "drupal-module",
             "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
                 "drupal": {
-                    "version": "8.x-1.0-alpha14",
-                    "datestamp": "1652782889",
+                    "version": "8.x-1.0-alpha14+9-dev",
+                    "datestamp": "1656579549",
                     "security-coverage": {
                         "status": "not-covered",
-                        "message": "Alpha releases are not covered by Drupal security advisories."
+                        "message": "Dev releases are not covered by Drupal security advisories."
                     }
                 }
             },
@@ -17116,7 +17113,7 @@
         "drupal/inline_entity_form": 5,
         "drupal/layout_paragraphs": 10,
         "drupal/linkit": 10,
-        "drupal/media_migration": 15,
+        "drupal/media_migration": 20,
         "drupal/micon": 10,
         "drupal/paragraphs_migration": 15,
         "drupal/slick_extras": 5,

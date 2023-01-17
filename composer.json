@@ -53,7 +53,7 @@
         "drupal/layout_builder_styles": "^1.0",
         "drupal/layout_paragraphs": "2.0.0-beta6",
         "drupal/linkit": "^6.0@beta",
-        "drupal/media_migration": "^1.0@alpha",
+        "drupal/media_migration": "1.x-dev@dev",
         "drupal/menu_block": "^1.7",
         "drupal/menu_breadcrumb": "^1.8",
         "drupal/menu_export": "^1.3",

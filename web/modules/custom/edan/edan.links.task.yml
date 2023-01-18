@@ -1,0 +1,10 @@
+edan.admin_settings_form:
+  title: 'API'
+  route_name: edan.admin_settings_form
+  base_route: edan.admin_settings_form
+  weight: -100
+edan.test_connection:
+  title: 'Connection Test'
+  route_name: edan.test_connection
+  base_route: edan.admin_settings_form
+  weight: 100

@@ -1,0 +1,11 @@
+view edan search form entity:
+  title: 'View EDAN Search entity'
+add edan search form entity:
+  title: 'Add EDAN Search entity'
+edit edan search form entity:
+  title: 'Edit EDAN Search entity'
+delete edan search form entity:
+  title: 'Delete EDAN Search entity'
+administer edan search form entity:
+  title: 'Administer EDAN Search entity'
+  restrict access: TRUE

@@ -1,0 +1,6 @@
+services:
+  edan_tabs.manager:
+    class: Drupal\edan_tabs\EdanTabManager
+    parent: edan.manager_base
+    calls:
+      - [setEdanSearchManager, ['@edan_search.manager']]

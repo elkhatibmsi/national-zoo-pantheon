@@ -1,0 +1,11 @@
+entity.edan_record.add_form:
+  route_name: entity.edan_record.add_form
+  title: 'Add Edan record'
+  appears_on:
+    - entity.edan_record.collection
+
+edan_record.edan_settings_form:
+  title: 'Settings'
+  route_name: edan_record.settings_form
+  appears_on:
+    - entity.edan_record.collection

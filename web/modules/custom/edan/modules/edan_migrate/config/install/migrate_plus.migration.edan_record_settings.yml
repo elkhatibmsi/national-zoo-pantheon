@@ -1,0 +1,33 @@
+id: edan_record_settings
+label: EDAN Record Settings
+migration_tags:
+  - Drupal 7
+  - Configuration
+  - edan
+migration_group: edan
+source:
+  plugin: variable
+  variables:
+    - edan_media
+    - edan_search
+process:
+  thumbnail: thumbnail
+  medium: medium
+  large: large
+  contrain: contrain
+  sliderSource: sliderSource
+  lazyload: lazyload
+  "viewer/mode": viewer_mode
+  "viewer/features":
+    -
+      plugin: edan_record_settings
+      source: viewer_settings
+  "viewer/navigatorPosition": "viewer_settings/navigatorPosition"
+  limit_to_local:
+    -
+      plugin: edan_record_settings
+      source: local_units
+  unit_codes: local_units
+destination:
+  plugin: config
+  config_name: edan_record.settings

@@ -1,0 +1,112 @@
+<!-- Location Record Page -->
+<div{{ attributes }}> <!-- //wrapper -->
+  {% if view_mode == 'list' and record.search_results %}
+  {{ record.search_results }}
+  {% else %}
+  {% set title = {
+    '#type':   'processed_text',
+    '#text':    record.title,
+    '#format':  'edan_html',
+  } %}
+  <div class="title-wrapper">
+    <{{ title_wrapper }} class="edan-record__title">{{ title|raw }}</{{ title_wrapper }}>
+</div>
+{% if (record.fields) %}
+  <div class="content-wrapper">
+    <div class="inner">
+      <aside class="location-info-wrapper">
+        {{ media }}
+        <div class="location-info">
+          <div class="location-address-wrapper">
+            {% if (address_full) %}
+              <address class="location-address">{{ address_full|raw }}</address>
+            {% endif %}
+            {% if (map_link) %}
+              {{ map_link }}
+            {% endif %}
+            {% if (museum_link) %}
+              <p class="spacing-half">{{ museum_link }}</p>
+            {% endif %}
+          </div>
+          <div class="location-hours-wrapper">
+            {% if record.content.hours %}
+              <div class="location-hours spacing-half">
+                {{ record.content.hours|raw }}
+              </div>
+            {% endif %}
+            {% if record.content.admission %}
+              <div class="location-admission spacing-half">
+                {{ record.content.admission|raw }}
+              </div>
+            {% endif %}
+            {% if (floor_plan_link) %}
+              <div class="spacing-half">{{ floor_plan_link }}</div>
+            {% endif %}
+          </div>
+        </div>
+      </aside>
+      <div class="content">
+        <div class="location-desciption spacing-bottom">
+          {% if record.content.description %}
+            <h2 class="h3">{{ "About"|t }}</h2>
+            {{ record.content.description|raw }}
+          {% endif %}
+          {% if record.content.highlights %}
+            <h2 class="h3">{{ "Highlights"|t }}</h2>
+            {{ record.content.highlights|raw }}
+          {% endif %}
+        </div>
+
+        {% if record.fields %}
+          {% for key,field in record.fields|without('description') %}
+          <div class="record-field {{ key|replace({':' : '-'})|clean_class }}">
+
+            {% if field is iterable %}
+              {{ field }}
+            {% else %}
+                {% set body = {
+                  '#type':   'processed_text',
+                  '#text':    field,
+                  '#format':  'edan_html',
+                } %}
+                {{ body }}
+            {% endif %}
+          </div>
+
+          {% endfor %}
+        {% endif %}
+        {% if record.content.accessibility_services %}
+          <details class="location-accessibility">
+            <summary class="location-accessibility-title h4 no-spacing">{{ "Accessibility"|t }}<span class="fa fa-chevron-right"></span></summary>
+              <p></p>
+              {{ record.content.accessibility_services|raw }}
+          </details>
+        {% endif %}
+        {% if record.content.public_transportation or record.content.parking %}
+          <details class="location-transportation">
+            <summary class="location-transportation-title h4 no-spacing">{{ "Getting Here"|t }}<span class="fa fa-chevron-right"></span></summary>
+              <p></p>
+              {% if record.content.public_transportation and record.content.public_transportation.extended %}
+                {% for key,field in record.content.public_transportation.extended %}
+                  {{ field|raw }}
+                {% endfor %}
+              {% endif %}
+              {% if record.content.parking %}
+                {{ record.content.parking|raw }}
+              {% endif %}
+          </details>
+        {% endif %}
+      </div>
+    </div>
+    {% if record.menuLinks %}
+      <div class="og-menu">
+        {{ record.menuLinks }}
+      </div>
+    {% endif %}
+  </div><!-- //content-wrapper -->
+{% endif %}
+    {% if record.search_results %}
+      {{ record.search_results }}
+    {% endif %}
+  {% endif %}
+</div><!-- //wrapper -->

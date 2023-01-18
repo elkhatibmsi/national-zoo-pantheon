@@ -1,0 +1,14 @@
+# Edan record menu items definition
+entity.edan_record.collection:
+  title: 'Record Entities'
+  route_name: entity.edan_record.collection
+  description: 'List Edan record (bundles)'
+  parent: edan.admin_config_edan
+  weight: 0
+
+edan_record.settings_form:
+  title: 'Settings'
+  route_name: edan_record.settings_form
+  description: 'Set record settings'
+  parent: entity.edan_record.collection
+  weight: 99

@@ -1,0 +1,22 @@
+{% if facets %}
+  <div class="edan-search-facet-list filter">
+    <ul class="root-facet-list">
+      {% for field,items in facets %}
+        <li>
+          <a data-toggle="collapse" href="#facet--{{ items.id }}" role="button" aria-expanded="false" aria-controls="facet--{{ items.id }}"><span class="icon"></span> {{ items.facet_label }}</a>
+          <ul id="facet--{{ items.id }}" class="facets collapse">
+            {% for item in items.values %}
+              <li class="facet">
+                <a href="{{ url('<current>') }}?{{ item.uri }}" class="facet-value"><span class="visually-hidden">{{ 'filter'|t }}</span> {{ item.value }}
+                  {% if item.count > 0 %}<span class="count">{{ item.count }}</span>{% endif %}<span class="icon"></span></a>
+                <a href="{{ url('<current>') }}?{{ item.exclude }}" class="exclude-btn"><span class="visually-hidden">{{ 'Exclude'|t }} {{ item.value }}</span> </a>
+              </li>
+            {% endfor %}
+
+          </ul>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+{% endif %}
+

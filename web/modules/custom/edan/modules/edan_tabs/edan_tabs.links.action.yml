@@ -1,0 +1,5 @@
+entity.edan_tab.add_form:
+  route_name: entity.edan_tab.add_form
+  title: 'Add EDAN Tabs'
+  appears_on:
+    - entity.edan_tab.collection

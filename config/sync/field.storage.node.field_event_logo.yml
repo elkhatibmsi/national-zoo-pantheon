@@ -1,0 +1,20 @@
+uuid: 2f3a7ef7-5b4e-4fa0-9d6b-9035ef9b750a
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+    - node
+id: node.field_event_logo
+field_name: field_event_logo
+entity_type: node
+type: entity_reference
+settings:
+  target_type: media
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

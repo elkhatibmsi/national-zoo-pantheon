@@ -1,0 +1,65 @@
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.edan-search .search-results.masonry .edan-search-result {
+  padding: 0 .75em .75em 0;
+  margin: 0;
+  float: left;
+  background: none;
+  border: none;
+}
+.edan-search .search-results.masonry .edan-search-result,
+.grid-sizer {
+  width: 16.67%;
+}
+.edan-search.with-facets .search-results.masonry .edan-search-result,
+.edan-search.with-facets .grid-sizer {
+  width: 25%
+}
+.edan-search ul .edan-search-result {
+
+}
+.edan-search .search-results.masonry .edan-search-result .inner {
+  padding: .5em;
+  background-color: #EFF3F4;
+  border: 1px solid #e9eef0;
+}
+
+@media (max-width: 1280px) {
+  .edan-search .search-results.masonry .edan-search-result,
+  .grid-sizer {
+    width: 25%;
+  }
+  .edan-search.with-facets .search-results.masonry .edan-search-result,
+  .edan-search.with-facets .grid-sizer {
+    width: 33.33%
+  }
+}
+
+@media (max-width: 899px) {
+  .edan-search .search-results.masonry .edan-search-result,
+  .grid-sizer,
+  .edan-search.with-facets .search-results.masonry .edan-search-result,
+  .edan-search.with-facets .grid-sizer{
+    width: 50%;
+  }
+}
+
+
+@media (max-width: 620px) {
+  .edan-search .search-results.masonry {
+    width: 100% !important;
+  }
+  .edan-search .search-results.masonry .edan-search-result {
+    padding: 0;
+    padding-bottom: 1em;
+  }
+  .edan-search .search-results.masonry .edan-search-result,
+  .grid-sizer,
+  .edan-search.with-facets .search-results.masonry .edan-search-result,
+  .edan-search.with-facets .grid-sizer{
+    width: 100%;
+  }
+}

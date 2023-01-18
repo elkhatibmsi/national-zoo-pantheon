@@ -1,0 +1,11 @@
+name: EDAN Migration
+type: module
+description: Migrate EDAN settings and custom search.
+package: edan
+core: 8.x
+core_version_requirement: ^8 || ^9
+version: 1.25
+dependencies:
+  - edan
+  - migrate_plus
+  - migrate_tools

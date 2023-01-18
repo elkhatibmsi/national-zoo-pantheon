@@ -1,0 +1,79 @@
+{% set mediaId = media.id|replace({'.': '_'}) %}
+<div{{ attributes }}>
+  {% if viewer %}
+    <div id="edan-image-toolbar-{{ mediaId }}" class="edan-image-toolbar">
+      {% for icon in viewer %}
+        {% set iconAttribute = create_attribute(icon.attributes) %}
+        <button {{ iconAttribute }}>
+          {{ icon.image|raw }}
+          <span class="visually-hidden">{{ icon.text }}</span>
+        </button>
+      {% endfor %}
+    </div>
+  {% endif %}
+  {% if accordion %}
+  <div class="accordion" id="media-tab-{{ mediaId }}" aria-live="polite">
+    <div class="accordion-inner">
+    {% for key,tab in accordion %}
+      {% set wrapper = create_attribute(tab.wrapper) %}
+      <div{{ wrapper }}>
+        {% set tabAttributes = create_attribute(tab.attributes) %}
+        <button {{ tabAttributes }}>
+          {% if key == 'usage' %}
+            <span class="usage--cc0"><span class="visually-hidden">CC0</span>{{ tab.image|raw }}</span>
+            <span class="usage--restricted">{{ 'Usage Conditions Apply'|t }}<span class="visually-hidden">{{ 'Click for more information.'|t }}</span></span>
+          {% else %}
+            <span class="visually-hidden">{{ tab.text }}</span>{{ tab.image|raw }}
+          {% endif %}
+        </button>
+      </div>
+
+    {% endfor %}
+    </div> <!-- inner -->
+    <div id="tab-usage-{{ mediaId }}" class="tab-usage collapse card-body"
+         aria-labelledby="heading-tab-usage-{{ mediaId }}"
+         data-parent="#media-tab-{{ mediaId }}">
+      <div class="usage {{ accordion.usage.data }}">
+        <div class="usage--conditions">
+					{{ accordion.usage.conditions|raw }}
+        </div>
+        {% if media.usage.text %}
+          <div class="extra">
+            {{ media.usage.text }}
+          </div>
+        {% endif %}
+
+        {% if media.usage.voyager %}
+          <div class="extra">
+            {{ media.usage.voyager }}
+          </div>
+        {% endif %}
+
+
+      </div>
+
+    </div>
+    {% if settings.has_ids %}
+        <div id="tab-download-{{ mediaId }}" class="collapse card-body tab-download"
+             aria-labelledby="heading-tab-download-{{ mediaId }}"
+             data-parent="#media-tab-{{ mediaId }}">
+        </div>
+
+        <div id="tab-iiif-{{ mediaId }}" class="collapse card-body tab-iiif"
+             aria-labelledby="heading-tab-iiif-{{ mediaId }}"
+             data-parent="#media-tab-{{ mediaId }}">
+          <div class="header">{{ 'International media Interoperability Framework'|t }}</div>
+          <div>{{ 'IIIF provides researchers rich metadata and media viewing options for comparison of works across cultural heritage collections. Visit the IIIF page to learn more.'|t }}</div>
+          <div class="iiif-data extra">
+            <a href="#" target="_blank" class="manifest">{{ 'View manifest'|t }}</a>
+            <a href="#" target="_blank" class="miradorViewer">{{ 'View in Mirador Viewer'|t }}</a>
+          </div>
+        </div>
+    {% endif %}
+  </div> <!-- accordion -->
+  {% endif %}
+  {% if expand %}
+    <button class="btn-viewer btn modal-trigger" data-toggle="modal" data-target="#viewerModal" data-source="{{ expand.source }}"><span class="visually-hidden">{{ expand.text }}</span>{{ expand.image|raw }}</button>
+
+  {% endif %}
+</div>

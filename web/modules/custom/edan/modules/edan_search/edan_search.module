@@ -1,0 +1,119 @@
+<?php
+
+/**
+ * @file
+ * Contains edan_search.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+use Drupal\Core\Template\Attribute;
+
+/**
+ * Implements hook_help().
+ */
+function edan_search_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the edan_search module.
+    case 'help.page.edan_search':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Adds EDAN based search functionality.') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+// function edan_search_theme() {
+function edan_search_theme($existing, $type, $theme, $path) {
+  $themes = [];
+
+  $themes['edan_search'] = [
+	  'render element' => 'element',
+//	  'variables' => [
+//      'query_string' => NULL,
+//      'search_form' => NULL,
+//      'message' => '',
+//      'record_count' => 0,
+//      'facets' => [],
+//	    'active_facets' => [],
+//      'rows' => [],
+//      'pager' => NULL,
+//      'edan_search' => NULL,
+//	    'executed' => TRUE,
+//      'info' => []
+//    ],
+	  'file' => 'templates/theme.inc',
+  ];
+
+
+	$themes['edan_search_facets'] = [
+	  'variables' => array(
+		  'facets' => NULL,
+		  'edan_search_id' => NULL,
+		  'info' => []
+	  ),
+	  'file' => 'templates/theme.inc',
+  ];
+
+	$themes['edan_search_facets_active'] = [
+		'variables' => array(
+			'facets' => NULL,
+			'message' => NULL,
+			'edan_search_id' => NULL,
+			'info' => []
+		),
+		'file' => 'templates/theme.inc',
+	];
+
+  return $themes;
+}
+
+
+/**
+ * Implements hook_theme_suggestions_HOOK().
+ */
+function edan_search_theme_suggestions_edan_search(array $vars) {
+  $suggestions = [];
+	$edan_search =  $vars['element']['#edan_search'];
+	$suggestions[] = 'edan_search__' .  $edan_search->id();
+	$text = '';
+  foreach($vars['element']['#info'] as $additional) {
+    $text .= '__'. $additional;
+    $suggestions[] = 'edan_search__'. $text;
+	  $suggestions[] = 'edan_search__' .  $edan_search->id() .'__'. $text;
+  }
+  return $suggestions;
+}
+
+
+/**
+ * Implements hook_theme_suggestions_HOOK().
+ */
+function edan_search_theme_suggestions_edan_search_facets(array $vars) {
+	$suggestions = [];
+	$suggestions[] = 'edan_edan_search_facets__' . $vars['edan_search_id'];
+	foreach($vars['info'] as $additional) {
+		$suggestions[] = 'edan_edan_search_facets__'.$additional;
+		$suggestions[] = 'edan_edan_search_facets__' . $vars['edan_search_id'] .'__'. $additional;
+	}
+	return $suggestions;
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK().
+ */
+function edan_search_theme_suggestions_edan_search_facets_active(array $vars) {
+	$suggestions = [];
+//	$edan_search =  $vars['edan_search'];
+	$suggestions[] = 'edan_edan_search_facets_active__' . $vars['edan_search_id'];
+	foreach($vars['info'] as $additional) {
+		$suggestions[] = 'edan_edan_search_facets_active__'.$additional;
+		$suggestions[] = 'edan_edan_search_facets_active__' . $vars['edan_search_id'] .'__'. $additional;
+	}
+	return $suggestions;
+}

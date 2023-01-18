@@ -1,0 +1,64 @@
+uuid: 8b3edf7f-c6b6-4059-8920-182d5f32f6a3
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 66a_aMvqtdEgmVM46LhHoIvvX08NYYwnZ17UojvAE80
+id: default
+label: 'Default Search'
+description: ''
+summary: ''
+edan_settings:
+  endpoint: /metadata/%s/metadata/search.htm
+  default_q: ''
+  fq_params: {  }
+  other_params: {  }
+  record_types:
+    - edanmdm
+  default_to_local_units: false
+  bq:
+    - 'online_visual_material:true^10.0'
+  debug: false
+render_settings:
+  pid: 17176
+  path: /collection/search
+  toggle_tabs: false
+  results_per_page: 24
+  results_count_message: true
+  results_empty_message: 'Your search found no results'
+  json_page: false
+  show_results_on_load: true
+  display_mode: grid
+  display_search_form: true
+  search_form_open_access: true
+  set_online_media: false
+  pager: true
+  page_title: 'Collection Search'
+fields:
+  label_replacements: {  }
+  mini_fields: {  }
+  result_fields: {  }
+facets:
+  facet_status: true
+  facet_labels:
+    unit_code: 'Museum / Unit'
+    data_source: 'Museum / Unit'
+    online_media_type: 'Media Type'
+    object_type: 'Resource Type'
+    culture: Culture
+    date: Date
+    place: Place
+    set_name: 'Set Name'
+    topic: Topic
+    media_usage: 'Media Usage'
+    metadata_usage: 'Metadata Usage'
+  facets_hide:
+    - data_source
+  facet_remove_message: 'Clear facet(s):'
+  facet_header_text: Facets
+  facet_limit: 25
+  facet_replacements:
+    online_media_type: 'Media type'
+    object_type: 'object type'
+    online_visual_material: 'Has media'
+    onPhysicalExhibit: 'On view'

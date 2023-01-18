@@ -1,0 +1,15 @@
+services:
+  edan_record.process:
+    class: Drupal\edan_record\EdanRecordProcess
+    parent: edan.manager_base
+    calls:
+      - [ setEdanRecordSettings ]
+  edan_record.manager:
+    class: Drupal\edan_record\EdanRecordManager
+    parent: edan_record.process
+  logger.channel.edan_record:
+    parent: logger.channel_base
+    arguments: ['edan_record']
+  edan_record.media:
+    class: Drupal\edan_record\EdanRecordMedia
+    arguments: ['@config.factory']

@@ -1,0 +1,3 @@
+administer edan:
+  title: 'Configure EDAN'
+  restrict access: TRUE

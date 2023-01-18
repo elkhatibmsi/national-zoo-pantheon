@@ -1,0 +1,29 @@
+<div class="edan-media-item">
+  <figure{{ attributes }}>
+    {% if media.type == 'images' %}
+      {% if link %}
+    <button class="modal-trigger" data-toggle="modal" data-target="#viewerModal" data-source="{{ link }}">
+      <div class="media-inner {{ media.type }}">
+        {{ item }}
+      </div>
+      <span class="visually-hidden">{{ 'Click to open image viewer.'|t }}</span>
+    </button>
+        {% else %}
+          {{ item }}
+      {% endif %}
+    {% else %}
+      {{ item }}
+    {% endif %}
+    {% if caption %}
+      <figcaption>
+        {% set body = {
+          '#type':   'processed_text',
+          '#text':    caption,
+          '#format':  'edan_html',
+        } %}
+        {{ body }}
+      </figcaption>
+    {% endif %}
+  </figure>
+</div>
+<!-- //wrapper -->

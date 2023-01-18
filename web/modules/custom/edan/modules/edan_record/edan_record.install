@@ -1,0 +1,366 @@
+<?php
+
+/**
+ * @file
+ * Installation actions for edan_search.
+ */
+
+use Symfony\Component\Yaml\Yaml;
+use Drupal\Core\Config\InstallStorage;
+
+/**
+ * Implement hook_install()
+ */
+function edan_record_install() {
+  $configFactory = \Drupal::configFactory();
+  $settings = $configFactory->getEditable('edan_record.settings');
+  if (!\Drupal::service('module_handler')->moduleExists('blazy')) {
+    $settings->set('lazyload', FALSE);
+  }
+  if (!\Drupal::service('module_handler')->moduleExists('slick')) {
+    $settings->set('sliderSource', 'theme');
+  }
+  $settings->save(TRUE);
+}
+/**
+ * Install edan record config entities if they don't exist
+ */
+function edan_record_update_8101() {
+  $config_install_path = \Drupal::service('extension.list.module')
+      ->getPath('edan_record') . '/' . InstallStorage::CONFIG_INSTALL_DIRECTORY;
+  if (is_dir($config_install_path)) {
+    // scan directory for record config entities.
+    $settings_config_files = \Drupal::service('file_system')->scanDirectory($config_install_path, '/^edan_record\.type\..*\.yml$/i');
+    $entityManager = \Drupal::service('entity_type.manager');
+    if (isset($settings_config_files) && is_array($settings_config_files)) {
+      foreach ($settings_config_files as $settings_config_file) {
+        $settings_config_file_content = file_get_contents(DRUPAL_ROOT . '/' . $settings_config_file->uri);
+        $settings_config_file_data = (array) Yaml::parse($settings_config_file_content);
+        $entity = $entityManager ->getStorage('edan_record')->load($settings_config_file_data['id']);
+        if (!$entity) {
+          $config_factory = \Drupal::configFactory()->getEditable($settings_config_file->name);
+          $config_factory->setData($settings_config_file_data)->save(TRUE);
+        }
+      }
+    }
+  }
+}
+
+/**
+ * Add edan_nav slick optionset config entity if it doesn't exist and the slick module is enabled
+ */
+function edan_record_update_8102() {
+  $config_install_path =  \Drupal::service('extension.list.module')
+      ->getPath('edan_record') . '/' . InstallStorage::CONFIG_OPTIONAL_DIRECTORY;
+  if (is_dir($config_install_path)) {
+    // scan directory for record config entities.
+    $settings_config_files = \Drupal::service('file_system')->scanDirectory($config_install_path, '/^slick\.optionset\.edan_nav\.yml$/i');
+    $entityManager = \Drupal::service('entity_type.manager');
+    if (\Drupal::service('module_handler')->moduleExists('slick') && isset($settings_config_files) && is_array($settings_config_files)) {
+      foreach ($settings_config_files as $settings_config_file) {
+        $settings_config_file_content = file_get_contents(DRUPAL_ROOT . '/' . $settings_config_file->uri);
+        $settings_config_file_data = (array) Yaml::parse($settings_config_file_content);
+        $entity = $entityManager ->getStorage('slick')->load($settings_config_file_data['id']);
+        if (!$entity) {
+          $config_factory = \Drupal::configFactory()->getEditable($settings_config_file->name);
+          $config_factory->setData($settings_config_file_data)->save(TRUE);
+        }
+      }
+    }
+  }
+}
+
+/**
+ * Add objectgroup config entity
+ */
+function edan_record_update_8103() {
+  drupal_flush_all_caches();
+  $config_install_path =  \Drupal::service('extension.list.module')
+      ->getPath('edan_record') . '/' . InstallStorage::CONFIG_INSTALL_DIRECTORY;
+  if (is_dir($config_install_path)) {
+    // scan directory for record config entities.
+    $settings_config_files = \Drupal::service('file_system')->scanDirectory($config_install_path, '/^edan_record\.type\..*\.yml$/i');
+    $entityManager = \Drupal::service('entity_type.manager');
+    if (isset($settings_config_files) && is_array($settings_config_files)) {
+      foreach ($settings_config_files as $settings_config_file) {
+        $settings_config_file_content = file_get_contents(DRUPAL_ROOT . '/' . $settings_config_file->uri);
+        $settings_config_file_data = (array) Yaml::parse($settings_config_file_content);
+        $entity = $entityManager ->getStorage('edan_record')->load($settings_config_file_data['id']);
+        if (!$entity) {
+          $config_factory = \Drupal::configFactory()->getEditable($settings_config_file->name);
+          $config_factory->setData($settings_config_file_data)->save(TRUE);
+        }
+      }
+    }
+  }
+}
+
+
+/**
+ * Flush drupal cache to update menu links
+ */
+function edan_record_update_8104() {
+  drupal_flush_all_caches();
+}
+
+/**
+ * Save unitCodes as record settings so limit_to_local setting can be used even if edan_search is not installed
+ *
+ */
+function edan_record_update_8105() {
+  $configFactory = \Drupal::configFactory();
+  $edanSearch = $configFactory->getEditable('edan_search.settings');
+  $unitCodes = $edanSearch->get('unit_codes');
+  $settings = $configFactory->getEditable('edan_record.settings');
+  if ($unitCodes) {
+    $settings->set('unit_codes', $unitCodes);
+    $settings->set('limit_to_local', TRUE);
+  }
+  else {
+    $settings->set('unit_codes', []);
+    $settings->set('limit_to_local', FALSE);
+  }
+  $edanSearch->delete();
+  $settings->save(TRUE);
+}
+
+/**
+ * update embedded edan_record fields to use id instead of url
+ */
+function edan_record_update_8106(&$sandbox) {
+
+  $edanRecordManager = \Drupal::service('edan_record.manager');
+  // Initialize some variables during the first pass through.
+  if (!isset($sandbox['total'])) {
+    $fields = [];
+    $count = 0;
+    foreach(\Drupal::service('entity_type.repository')->getEntityTypeLabels(TRUE)['Content'] as $typeName => $type) {
+      $items = [];
+      $edanFields = \Drupal::service('entity_type.manager')
+        ->getStorage('field_storage_config')
+        ->loadByProperties(
+          array(
+            'entity_type' => $typeName,
+            'type' => 'edan_record_reference',
+            'deleted' => FALSE,
+            'status' => 1,
+          )
+        );
+      if ($edanFields) {
+        foreach ($edanFields as $edanField) {
+          $field_name = $edanField->getName();
+          $table_mapping = \Drupal::entityTypeManager()->getStorage($typeName)->getTableMapping();
+
+          $field_table = $table_mapping->getFieldTableName($field_name);
+          $connection = \Drupal::database();
+          $result = $connection->select($field_table, 'f')
+            ->fields('f', array('entity_id'))
+            ->distinct(TRUE)
+            ->execute()->fetchCol();
+          if ($result) {
+            $count += count($result);
+            $items[$field_name] = isset($items[$field_name]) ? array_merge($result, $items[$field_name]) : $result;;
+          }
+        }
+      }
+      if ($items) $fields[$typeName] = $items;
+    }
+    $sandbox['total'] = $count;
+    $sandbox['current'] = 0;
+    $sandbox['entities'] = $fields;
+  }
+
+  foreach ($sandbox['entities'] as $entityType => $values) {
+    $storage = \Drupal::entityTypeManager()->getStorage($entityType);
+    foreach($values as $field_name => $info) {
+      // process 15 for each entityType
+      $count = min(15, $sandbox['entities'][$entityType][$field_name]);
+      for ($i = 1; $i <= $count; $i++) {
+        // For each id, load the entity, reset the values, and save it.
+        $id = array_shift($sandbox['entities'][$entityType][$field_name]);
+        $entity = $storage->load($id);
+        if ($entity) {
+          if ($entity->hasField($field_name)) {
+            $edanIds = $entity->{$field_name}->getValue();
+            $edanIds = is_array($edanIds) ? $edanIds : ['value' => $edanIds];
+            $data = [];
+            $save = FALSE;
+            foreach($edanIds as $delta => $edanId) {
+              if (strstr($edanId['value'], ':') == TRUE) {
+                $record = $edanRecordManager->getRecord($edanId['value'], '[edan:url]');
+                if ($record) {
+                  $data[$delta] = $record['id'];
+                  $save = TRUE;
+                }
+              }
+
+            }
+            if ($save) {
+              $entity->set($field_name, $data);
+              $entity->save();
+            }
+
+          }
+        }
+        else {
+          \Drupal::messenger()->addMessage( 'Unable to save @id @type.', ['@id' => $id, '@type' => $typeName]);
+        }
+        $sandbox['current']++;
+      }
+    }
+  }
+  // Set the "finished" status, to tell batch engine whether this function
+  // needs to run again. If you set a float, this will indicate the progress
+  // of the batch so the progress bar will update.
+  $sandbox['#finished'] = ($sandbox['current'] >= $sandbox['total']) ? TRUE : ($sandbox['current'] / $sandbox['total']);
+
+//  if ($sandbox['total'] == 0) {
+//    $sandbox['#finished'] = 1;
+//  } else {
+//    $sandbox['#finished'] = ($sandbox['current'] / $sandbox['total']);
+//  }
+  if ($sandbox['#finished']) {
+    // hook_update_N() may optionally return a string which will be displayed
+    // to the user.
+    return t('Finished updating id used for edan_record_reference fields');
+  }
+}
+
+/**
+ * Flush drupal cache to add moduleHandler as argument for EdanRecordProcess service
+ * Set EDAN record settings if slick or blazy is not installed
+ */
+function edan_record_update_8107() {
+  drupal_flush_all_caches();
+  $configFactory = \Drupal::configFactory();
+  $settings = $configFactory->getEditable('edan_record.settings');
+
+  if (!\Drupal::service('module_handler')->moduleExists('blazy')) {
+    $settings->set('lazyload', FALSE);
+  }
+  if (!\Drupal::service('module_handler')->moduleExists('slick')) {
+    $settings->set('sliderSource', 'theme');
+  }
+  $settings->save(TRUE);
+}
+/**
+ * Flush drupal cache to handle new router parameter
+ */
+function edan_record_update_8108(){
+  \Drupal::service("router.builder")->rebuild();
+  drupal_flush_all_caches();
+}
+
+/**
+ * Set record types that use alternate template
+ */
+function edan_record_update_8109() {
+  $configFactory = \Drupal::configFactory();
+  $settings = $configFactory->getEditable('edan_record.settings');
+  $settings->set('alt_template', ['event', 'objectgroup', 'page', 'si-unit', 'location'])->save();
+}
+
+
+/**
+ * update embedded edan_record fields to use url instead of id as id can change
+ */
+function edan_record_update_8110(&$sandbox) {
+
+  $edanRecordManager = \Drupal::service('edan_record.manager');
+  // Initialize some variables during the first pass through.
+  if (!isset($sandbox['total'])) {
+    $fields = [];
+    $count = 0;
+    $items = [];
+    foreach(\Drupal::service('entity_type.repository')->getEntityTypeLabels(TRUE)['Content'] as $typeName => $type) {
+      $edanFields = \Drupal::service('entity_type.manager')
+        ->getStorage('field_storage_config')
+        ->loadByProperties(
+          array(
+            'entity_type' => $typeName,
+            'type' => 'edan_record_reference',
+            'deleted' => FALSE,
+            'status' => 1,
+          )
+        );
+      if ($edanFields) {
+        foreach ($edanFields as $edanField) {
+          $field_name = $edanField->getName();
+          $table_mapping = \Drupal::entityTypeManager()->getStorage($typeName)->getTableMapping();
+
+          $field_table = $table_mapping->getFieldTableName($field_name);
+          $connection = \Drupal::database();
+          $result = $connection->select($field_table, 'f')
+            ->fields('f', array('entity_id'))
+            ->distinct(TRUE)
+            ->execute()->fetchCol();
+          if ($result) {
+            $count += count($result);
+            $items[$typeName][$field_name] = isset($items[$typeName][$field_name]) ? array_merge($result, $items[$typeName][$field_name]) : $result;
+          }
+        }
+      }
+    }
+    $sandbox['total'] = $count;
+    $sandbox['current'] = 0;
+    $sandbox['entities'] = $items;
+  }
+
+  foreach ($sandbox['entities'] as $entityType => $values) {
+    $storage = \Drupal::entityTypeManager()->getStorage($entityType);
+    foreach($values as $field_name => $info) {
+      // process 15 for each entityType
+      $count = min(15, $sandbox['entities'][$entityType][$field_name]);
+      for ($i = 1; $i <= $count; $i++) {
+        // For each id, load the entity, reset the values, and save it.
+        $id = array_shift($sandbox['entities'][$entityType][$field_name]);
+        if ($id) {
+          $entity = $storage->load($id);
+          if ($entity) {
+            if ($entity->hasField($field_name)) {
+              $edanIds = $entity->{$field_name}->getValue();
+              $edanIds = is_array($edanIds) ? $edanIds : ['value' => $edanIds];
+              $data = [];
+              $save = FALSE;
+              foreach($edanIds as $delta => $edanId) {
+                // check to make sure value is not url
+                if (strstr($edanId['value'], ':') == FALSE) {
+                  $record = $edanRecordManager->getRecord($edanId['value'], '[edan:id]');
+                  if ($record) {
+                    $data[$delta] = $record['url'];
+                    $save = TRUE;
+                  }
+                }
+
+              }
+              if ($save) {
+                $entity->set($field_name, $data);
+                $entity->save();
+              }
+
+            }
+          }
+          else {
+            \Drupal::messenger()->addMessage( 'Unable to save @id @type.', ['@id' => $id, '@type' => $typeName]);
+          }
+          $sandbox['current']++;
+        }
+      }
+    }
+  }
+  // Set the "finished" status, to tell batch engine whether this function
+  // needs to run again. If you set a float, this will indicate the progress
+  // of the batch so the progress bar will update.
+  $sandbox['#finished'] = ($sandbox['current'] >= $sandbox['total']) ? TRUE : ($sandbox['current'] / $sandbox['total']);
+
+//  if ($sandbox['total'] == 0) {
+//    $sandbox['#finished'] = 1;
+//  } else {
+//    $sandbox['#finished'] = ($sandbox['current'] / $sandbox['total']);
+//  }
+  if ($sandbox['#finished']) {
+    // hook_update_N() may optionally return a string which will be displayed
+    // to the user.
+    return t('Finished updating id used for edan_record_reference fields');
+  }
+}

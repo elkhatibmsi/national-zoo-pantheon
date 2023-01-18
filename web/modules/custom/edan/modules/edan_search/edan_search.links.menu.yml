@@ -1,0 +1,14 @@
+# Edan search entity menu items definition
+entity.edan_search.collection:
+  title: 'Searches'
+  route_name: entity.edan_search.collection
+  description: 'List Edan search entity (bundles)'
+  parent: edan.admin_config_edan
+  weight: 10
+
+entity.edan_search.add:
+  title: 'Add'
+  route_name: entity.edan_search.add_form
+  description: 'Add EDAN Search'
+  parent: entity.edan_search.collection
+  weight: 10

@@ -1,0 +1,11 @@
+langcode: en
+status: true
+dependencies: {  }
+id: edan
+label: 'EDAN D7 Import'
+description: 'Migrations for D7 EDAN settings and records'
+source_type: 'Drupal 7'
+module: edan_migrate
+shared_configuration:
+  source:
+    key: migrate

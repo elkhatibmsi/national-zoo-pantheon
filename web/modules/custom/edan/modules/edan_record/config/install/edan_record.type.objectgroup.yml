@@ -1,0 +1,12 @@
+id: objectgroup
+label: objectgroup
+path: '/spotlight/[edan:url]'
+path_key: '[edan:url]'
+summary_fields: ''
+record_fields:
+  description: description
+  content: content
+hidden_fields: ''
+teaser_fields: ''
+label_replacements: ''
+

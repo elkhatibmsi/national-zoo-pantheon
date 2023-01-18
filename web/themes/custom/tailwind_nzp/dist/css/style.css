@@ -933,6 +933,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   max-width: none;
 }
 
+.pointer-events-none{
+  pointer-events: none;
+}
+
 .visible{
   visibility: visible;
 }
@@ -6509,3 +6513,4 @@ header.scrolled  .header--hours {
     gap: 0.875rem;
   }
 }
+

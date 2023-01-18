@@ -1,0 +1,7 @@
+base:
+  version: VERSION
+#  js:
+#    js/edan-tabs.js: {}
+  css:
+    component:
+      css/edan-tabs.css: {}

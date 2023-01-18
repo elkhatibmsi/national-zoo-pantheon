@@ -1,0 +1,23 @@
+id: edan_settings
+label: EDAN configuration
+migration_tags:
+  - Drupal 7
+  - Configuration
+  - edan
+migration_group: edan
+source:
+  plugin: variable
+  variables:
+    - edan_server_url
+    - edan_app_id
+    - edan_auth_key
+    - edan_endpoint
+  source_module: edan
+process:
+  "api/url": edan_server_url
+  "api/app_id": edan_app_id
+  "api/auth_token": edan_auth_key
+  "api/version": edan_endpoint
+destination:
+  plugin: config
+  config_name: edan.settings

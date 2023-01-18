@@ -1,0 +1,62 @@
+edan_record.settings_form:
+  path: '/admin/config/edan/edan-record/settings'
+  defaults:
+    _form: '\Drupal\edan_record\Form\EdanRecordSettingsForm'
+    _title: 'Record Settings'
+  requirements:
+    _permission: 'administer site configuration'
+
+entity.edan_record.duplicate_form:
+  path: '/admin/config/edan/edan-record/{edan_record}/duplicate'
+  defaults:
+    _entity_form: 'edan_record.duplicate'
+    _title: 'Duplicate EDAN Record'
+  requirements:
+    _permission: 'administer site configuration'
+
+edan_record.record_page:
+  path: '/edan-record/{edan_id}'
+  defaults:
+    _controller: '\Drupal\edan_record\Controller\EdanPageController::viewSystemPage'
+    _title_callback: '\Drupal\edan_record\Controller\EdanPageController::getSystemTitle'
+  requirements:
+    _access: 'TRUE'
+    edan_id: '^[a-zA-Z0-9_\-\.:]+'  # apply argument sensitization
+
+edan_record.viewer:
+  path: '/object/viewer/{edan_id}'
+  defaults:
+    _controller: '\Drupal\edan_record\Controller\EdanViewerController::view'
+    _title_callback: '\Drupal\edan_record\Controller\EdanViewerController::getTitle'
+  requirements:
+    _access: 'TRUE'
+    edan_id: '^[a-zA-Z0-9_\-\.:]+'  # apply argument sensitization
+edan_record.ark_page:
+  path: '/object/ark:/65665/{edan_id}'
+  defaults:
+    _controller: '\Drupal\edan_record\Controller\EdanPageController::viewSystemPage'
+    _title_callback: '\Drupal\edan_record\Controller\EdanPageController::getSystemTitle'
+    ark: 'TRUE'
+  requirements:
+    _access: 'TRUE'
+    edan_id: '^[a-zA-Z0-9_\-\.:]+'  # apply argument sensitization
+
+edan_record.sample_page:
+  path: '/edan-record/flatten/{edan_id}'
+  defaults:
+    _controller: '\Drupal\edan_record\Controller\EdanSampleController::view'
+    _title: 'Sample Edan Records'
+  requirements:
+    _access: 'TRUE'
+    edan_id: '^[a-zA-Z0-9_\-\.:]+'  # apply argument sensitization
+
+
+edan_record.autocomplete:
+  path: '/edan_autocomplete/{target_type}/{entity_bundle}/{field_name}/{match_limit}'
+  defaults:
+    _controller: '\Drupal\edan_record\Controller\EdanRecordAutocompleteController::handleAutocomplete'
+  requirements:
+    _access: 'TRUE'
+
+route_callbacks:
+  - '\Drupal\edan_record\Routing\EdanRecordRoutes::routes'

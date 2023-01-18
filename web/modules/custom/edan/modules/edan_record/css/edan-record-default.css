@@ -1,0 +1,81 @@
+/**
+ * Record page wrapper
+ */
+.edan-record, .edan-record * {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/*.edan-record.full-page {*/
+/*  display: flex;*/
+/*  display: -webkit-flex;*/
+/*  display: -ms-flexbox;*/
+/*}*/
+.edan-record.full-page {
+  padding: 2em 0;
+}
+.edan-record.full-page dl {
+  /*display: flex;*/
+  /*flex-flow: column wrap;*/
+  margin: 0;
+}
+.edan-record.full-page.media-layout dl {
+  display: block;
+}
+.edan-record.full-page dt {
+  font-weight: bold;
+  margin-top: 1.5em;
+}
+
+.media-wrapper ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+.media-wrapper li{
+  list-style-type: none;
+  list-style-image: none;
+  padding: 0;
+  margin: 0;
+}
+
+.edan-record .media-container figure {
+  margin: 0;
+}
+.edan-record.has-media .inner {
+  flex-flow: column;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.edan-record.has-media .inner .content {
+  order: 2;
+}
+.edan-record .object-list {
+  margin-bottom: 1.5em;
+}
+
+.edan-record .object-list .record-link img {
+  margin: .5em;
+}
+.edan-record .object-list .details {
+  padding-left: 2em;
+}
+@media (min-width: 980px) {
+  .edan-record.media-layout .inner {
+    grid-column-gap: 40px;
+    display: grid;
+    grid-template-columns: 1fr 62%;
+  }
+  .edan-record.media-layout.has-menu .inner {
+    grid-template-columns: 1fr 70%;
+  }
+  .edan-record.media-layout .inner .content {
+    order: 0;
+  }
+  .edan-record.media-layout.has-menu .inner .content {
+    order: 2;
+  }
+}
+

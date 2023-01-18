@@ -1,0 +1,17 @@
+uuid: b5f6f346-3cc6-404e-b421-8e84ee58d3a2
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: OxMITY2IyIqIXNa4LgqoPsAumIlfLWadm2pH2cAHYW0
+id: objectgroup
+label: objectgroup
+path: '/spotlight/[edan:url]'
+path_key: '[edan:url]'
+summary_fields: ''
+record_fields:
+  description: description
+  content: content
+hidden_fields: ''
+teaser_fields: ''
+label_replacements: ''

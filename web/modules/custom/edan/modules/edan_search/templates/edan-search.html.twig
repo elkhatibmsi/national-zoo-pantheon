@@ -1,0 +1,117 @@
+{% set search_id = 'edan-search-results-' ~ ( search_name ? search_name : random()) %}
+<div{{ attributes }}>
+  {% if search_title %}
+    <h2 class="search-title">{{ search_title }}</h2>
+  {% endif %}
+  {{ description }}
+  {{ search_form }}
+  {{ message }}
+  {{ pager }}
+  {% if facets %}
+    <a href="#edan-search-facets" class="visually-hidden focusable edan-skip-to-link edan-skip-to-facets">
+      {{ "Skip to facets for narrowing search results"|t }}
+    </a>
+  {% endif %}
+  {% if rows %}
+    <div class="wrapper--search-results">
+      <ul id="{{ search_id }}" class="search-results {{ display_mode }}">
+        {% if display_mode == "masonry" %}
+          <li class="grid-sizer"></li>
+        {% endif %}
+        {% for row in rows %}
+          {% set recordTitle = {
+            '#type':   'processed_text',
+            '#text':    row.title,
+            '#format':  'edan_html',
+          } %}
+          {% set row_attributes = create_attribute(row.attributes) %}
+          {% set row_id = row.id|clean_class %}
+          <li {{ row_attributes.addClass(['edan-search-result']) }}>
+            {% if display_mode == "masonry" %}
+              <div class="inner">
+              {% endif %}
+                {% if display_mode == 'list' %}
+                <a href="{{ row.record_link }}">
+                  {% if row.thumbnail %}
+                    {{ row.rendered_image }}
+                  {% endif %}
+                </a>
+
+                <div class="info">
+                  <a href="{{ row.record_link }}" class="search-result-link"><span class="search-result-title"><strong>{{ recordTitle }}</strong></span></a>
+
+                  {% if row.mini_fields %}
+
+                    {% set body = {
+                      '#theme':   'edan_fields',
+                      '#rows':   row.mini_fields,
+                    } %}
+                    {{ body }}
+                    <button class="btn" type="button" data-toggle="collapse"
+                            data-target="#{{ search_name }}-{{ row_id }}" aria-expanded="false"
+                            aria-controls="{{ search_name }}-{{ row_id }}">Expand
+                    </button>
+                  {% endif %}
+                  {% if row.fields %}
+                    <div id="{{ search_name }}-{{ row_id }}"
+                         class="{{ row.mini_fields ? 'fields collapse' : 'fields' }} ">
+                      {% set body = {
+                        '#theme':   'edan_fields',
+                        '#rows':   row.fields,
+                      } %}
+                      {{ body }}
+                    </div>
+                  {% endif %}
+                </div>
+              {% else %}
+                <a href="{{ row.record_link }}" class="search-result-link">
+                    {% if row.thumbnail %}
+                      {{ row.rendered_image }}
+                    {% endif %}
+                    <span class="search-result-title"><strong>{{ recordTitle }}</strong></span>
+                </a>
+                {% if row.mini_fields %}
+                  {% set body = {
+                    '#theme':   'edan_fields',
+                    '#rows':   row.mini_fields,
+                  } %}
+                  {{ body }}
+                  <button class="btn" type="button" data-toggle="collapse" data-target="#{{ search_name }}-{{ row_id }}"
+                          aria-expanded="false" aria-controls="{{ search_name }}-{{ row_id }}">Expand
+                  </button>
+                {% endif %}
+                {% if row.fields %}
+                  <div id="{{ search_name }}-{{ row_id }}"
+                       class="{{ row.mini_fields ? 'fields collapse' : 'fields' }} ">
+                    {% set body = {
+                      '#theme':   'edan_fields',
+                      '#rows':   row.fields,
+                    } %}
+                    {{ body }}
+                  </div>
+                {% endif %}
+              {% endif %}
+              {% if display_mode == "masonry" %}
+            </div>
+            {% endif %}
+          </li>
+        {% endfor %}
+
+      </ul>
+
+      {% if facets %}
+        <div id="edan-search-facets" class="edan-search-facets">
+          <h3 class="edan-search-facets-title">{{ facets_header_text }}</h3>
+          {{ active_facets }}
+          {{ facets }}
+          <a href="#{{ search_id }}" class="visually-hidden focusable edan-skip-to-link edan-skip-to-results">
+            {{ "Skip to search results"|t }}
+          </a>
+
+        </div>
+      {% endif %}
+    </div>
+    {{ pager }}
+
+  {% endif %}
+</div>

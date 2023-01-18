@@ -119,9 +119,11 @@
             "drupal/core": {
                 "Workaround for field_label error in layout_builder": "https://www.drupal.org/files/issues/2020-04-08/2985882-field-85.patch",
                 "Title/Label not override for blocks added in layout builder": "https://www.drupal.org/files/issues/2021-08-17/3039185-46.patch"            },
-            "drupal/entity_reference_revisions": {
+            
+                "drupal/entity_reference_revisions": {
                 "fixed undefined translations when using paragraphs in conjunction with moderation": "https://www.drupal.org/files/issues/2021-09-30/3024588-28-invalid_translation_language.patch"
             },
+            
             "drupal/draggableviews": {
                 "enabling draggavle by heirarchy": "https://www.drupal.org/files/issues/2022-08-23/not_working_with_group_by-draggableviews-2867348-54.patch"
             }      

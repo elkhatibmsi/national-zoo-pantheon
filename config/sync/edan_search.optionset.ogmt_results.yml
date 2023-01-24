@@ -32,16 +32,6 @@ render_settings:
 fields: {  }
 facets:
   facet_status: true
-  facet_replacements:
-    online_media_type: 'Media type'
-    object_type: 'object type'
-    online_visual_material: 'Has media'
-    onPhysicalExhibit: 'On view'
-  facets_hide:
-    - data_source
-    - type
-    - online_visual_material
-    - online_media_type
   facet_labels:
     unit_code: 'Museum / Unit'
     data_source: 'Museum / Unit'
@@ -54,6 +44,16 @@ facets:
     topic: Topic
     media_usage: 'Media Usage'
     metadata_usage: 'Metadata Usage'
+  facets_hide:
+    - data_source
+    - type
+    - online_visual_material
+    - online_media_type
   facet_remove_message: 'Clear facet(s):'
   facet_header_text: Facets
   facet_limit: 25
+  facet_replacements:
+    online_media_type: 'Media type'
+    object_type: 'object type'
+    online_visual_material: 'Has media'
+    onPhysicalExhibit: 'On view'

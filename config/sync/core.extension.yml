@@ -104,6 +104,7 @@ module:
   slick_lightbox: 0
   slick_ui: 0
   slick_views: 0
+  smart_date: 0
   smart_sql_idmap: 0
   smithsonian_appliance: 0
   smithsonian_appliance_search_block: 0

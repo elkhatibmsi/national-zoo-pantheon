@@ -5,7 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.event.field_event_components
-    - field.field.node.event.field_event_date
+    - field.field.node.event.field_event_date_time
     - field.field.node.event.field_event_description
     - field.field.node.event.field_event_external_link
     - field.field.node.event.field_event_logo
@@ -13,7 +13,6 @@ dependencies:
     - field.field.node.event.field_event_teaser_title
     - node.type.event
   module:
-    - datetime_range
     - entity_reference_revisions
     - layout_builder
     - link
@@ -36,16 +35,6 @@ content:
       link: ''
     third_party_settings: {  }
     weight: 104
-    region: content
-  field_event_date:
-    type: daterange_default
-    label: above
-    settings:
-      timezone_override: ''
-      format_type: medium
-      separator: '-'
-    third_party_settings: {  }
-    weight: 101
     region: content
   field_event_description:
     type: text_default
@@ -97,4 +86,5 @@ content:
     third_party_settings: {  }
     weight: 100
     region: content
-hidden: {  }
+hidden:
+  field_event_date_time: true

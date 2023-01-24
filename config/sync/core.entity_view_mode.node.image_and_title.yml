@@ -1,10 +1,10 @@
-uuid: f09eb598-9943-48f4-bfbc-369271319232
+uuid: da40ed91-afc0-4659-9345-0b14f20916d3
 langcode: en
 status: true
 dependencies:
   module:
     - node
-id: node.info_card
-label: info_tabs
+id: node.image_and_title
+label: 'Image and Title'
 targetEntityType: node
 cache: true

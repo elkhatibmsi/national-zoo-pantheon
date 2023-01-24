@@ -435,13 +435,13 @@ third_party_settings:
                 third_party_settings: {  }
             weight: 1
             additional: {  }
-          5c18d7e8-08ab-48ab-bb33-6d6193f325e4:
-            uuid: 5c18d7e8-08ab-48ab-bb33-6d6193f325e4
+          438e8b0e-1b1c-4463-9427-a37b67264d69:
+            uuid: 438e8b0e-1b1c-4463-9427-a37b67264d69
             region: two_col
             configuration:
-              id: 'views_block:media_release_and_news-block_2'
+              id: 'views_block:media_release_and_news-block_3'
               label: ''
-              label_display: '0'
+              label_display: visible
               provider: views
               context_mapping: {  }
               views_label: ''

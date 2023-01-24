@@ -9,10 +9,12 @@ dependencies:
     - field.field.node.webcam.field_landing_image
     - field.field.node.webcam.field_related_animal
     - field.field.node.webcam.field_sponsored_by
+    - field.field.node.webcam.field_teaser_title
     - node.type.webcam
   module:
     - layout_builder
     - nzp_layouts
+    - system
     - text
     - user
 third_party_settings:
@@ -24,15 +26,14 @@ third_party_settings:
         layout_id: layout_nzp_one_col
         layout_settings:
           context_mapping: {  }
-          custom_classes: ''
-          region_classes:
-            content: col-md-12
+          custom_classes: mt-4
+          region_classes: null
           container_classes: container
           html_container_elements: div
-          html_region_elements:
-            content: div
+          html_region_elements: null
           background_color: bg-none
           region_background_color: null
+          getHtmlElements: div
         components:
           8debd6b6-6d8a-466d-8c10-cb23462850c4:
             uuid: 8debd6b6-6d8a-466d-8c10-cb23462850c4
@@ -47,7 +48,7 @@ third_party_settings:
                 label: hidden
                 settings: {  }
                 third_party_settings: {  }
-            weight: 1
+            weight: 2
             additional: {  }
           afe7a947-012b-43fb-be3c-5e95a48f6e83:
             uuid: afe7a947-012b-43fb-be3c-5e95a48f6e83
@@ -71,27 +72,24 @@ third_party_settings:
                   override_link_label: ''
                   token: ''
                 third_party_settings: {  }
-            weight: 0
-            additional: {  }
-          b480cbf8-18dd-4dba-bd23-fd5bee7ebf8f:
-            uuid: b480cbf8-18dd-4dba-bd23-fd5bee7ebf8f
-            region: content
-            configuration:
-              id: 'field_block:node:webcam:field_content_block'
-              label: 'Main Section Content'
-              label_display: '0'
-              provider: layout_builder
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
-              formatter:
-                type: entity_reference_revisions_entity_view
-                label: hidden
-                settings:
-                  view_mode: default
-                third_party_settings: {  }
-            weight: 2
-            additional: {  }
+            weight: 1
+            additional:
+              component_attributes:
+                block_attributes:
+                  id: ''
+                  class: ''
+                  style: ''
+                  data: ''
+                block_title_attributes:
+                  id: ''
+                  class: ''
+                  style: ''
+                  data: ''
+                block_content_attributes:
+                  id: ''
+                  class: ''
+                  style: ''
+                  data: ''
           16245e5b-ab1b-4114-8540-6daba5edfd99:
             uuid: 16245e5b-ab1b-4114-8540-6daba5edfd99
             region: content
@@ -133,6 +131,39 @@ third_party_settings:
                   link: false
                 third_party_settings: {  }
             weight: 5
+            additional: {  }
+          314e115c-ae4c-4cf1-8e56-64deeac05ed6:
+            uuid: 314e115c-ae4c-4cf1-8e56-64deeac05ed6
+            region: content
+            configuration:
+              id: 'field_block:node:webcam:field_content_block'
+              label: 'Main Section Content'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: layout_paragraphs_builder
+                label: hidden
+                settings:
+                  preview_view_mode: default
+                  nesting_depth: 4
+                  require_layouts: 0
+                  empty_message: ''
+                third_party_settings: {  }
+            weight: 6
+            additional: {  }
+          16f17dce-90e7-4bfe-b638-9b97d35d3e8c:
+            uuid: 16f17dce-90e7-4bfe-b638-9b97d35d3e8c
+            region: content
+            configuration:
+              id: system_breadcrumb_block
+              label: Breadcrumbs
+              label_display: '0'
+              provider: system
+              context_mapping: {  }
+            weight: 0
             additional: {  }
         third_party_settings: {  }
 id: node.webcam.default

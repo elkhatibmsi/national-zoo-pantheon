@@ -20,10 +20,10 @@ options:
     accessibility: true
     adaptiveHeight: false
     autoplay: false
-    autoplaySpeed: 4000
     pauseOnHover: true
     pauseOnDotsHover: false
     pauseOnFocus: true
+    autoplaySpeed: 4000
     arrows: true
     prevArrow: Previous
     nextArrow: Next
@@ -74,10 +74,10 @@ options:
         settings:
           adaptiveHeight: false
           autoplay: false
-          autoplaySpeed: 4000
           pauseOnHover: false
           pauseOnDotsHover: false
           pauseOnFocus: false
+          autoplaySpeed: 4000
           arrows: false
           centerMode: false
           centerPadding: 50px
@@ -111,10 +111,10 @@ options:
         settings:
           adaptiveHeight: false
           autoplay: false
-          autoplaySpeed: 4000
           pauseOnHover: false
           pauseOnDotsHover: false
           pauseOnFocus: false
+          autoplaySpeed: 4000
           arrows: true
           centerMode: false
           centerPadding: 50px
@@ -148,10 +148,10 @@ options:
         settings:
           adaptiveHeight: false
           autoplay: false
-          autoplaySpeed: 4000
           pauseOnHover: true
           pauseOnDotsHover: false
           pauseOnFocus: true
+          autoplaySpeed: 4000
           arrows: true
           centerMode: false
           centerPadding: 50px

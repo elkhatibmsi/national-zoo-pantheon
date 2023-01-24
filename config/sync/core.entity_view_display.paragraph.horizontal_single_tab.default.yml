@@ -20,14 +20,7 @@ content:
       view_mode: full
       link: ''
     third_party_settings: {  }
-    weight: 1
-    region: content
-  field_h_tab_label:
-    type: string
-    label: hidden
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
     weight: 0
     region: content
-hidden: {  }
+hidden:
+  field_h_tab_label: true

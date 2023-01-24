@@ -11,15 +11,15 @@
  
 #}
 {{ attach_library('tailwind_nzp/alpine_h_tabs') }}
-{%set classes = "flex content-center h-14 px-4 items-center nav-link block leading-tight hover:border-transparent hover:bg-white" %}
+{%set classes = "nav-link block font-semi-bold leading-tight pr-6  py-2 hover:border-transparent hover:bg-off-white focus:border-transparent" %}
 
 {% import directory ~ '/components/utils/macro.twig' as macro %}
 
 {# tab labels #}
-<div class="shadow-md tab-wrapper container mx-auto" x-data="h_tabs" >
-    <ul class="bg-white nav nav-tabs flex flex-col md:flex-row flex-wrap list-none pl-0" id="tabs-tab" role="tablist" data-tabs="{{tab_id}}">
+<div class="tab-wrapper container mx-auto" x-data="h_tabs" >
+    <ul class="nav nav-tabs flex flex-col md:flex-row flex-wrap list-none border-lightestgray border-b-2 pl-0 mb-4" id="tabs-tab" role="tablist" data-tabs="{{tab_id}}">
         {% for key, label in tab_labels %}
-            <li  @click.prevent="openTab = {{key + 1}}" class="not-prose m-0 p-0">
+            <li  @click.prevent="openTab = {{key + 1}}" class="nav-item">
                <a :class="openTab === {{key + 1}} ? activeClasses : inactiveClasses" class="{{classes}}" href="#">{{ label }}</a>
             </li>
         {% endfor %}

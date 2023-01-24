@@ -1,8 +1,6 @@
-{% import directory ~ '/components/utils/macro.twig' as macro %}
 
 
 {% set color_class %}
-{{macro.section_color(["visit", "events", "animals", "conservation", "support", "membership", "education"], 'darkergray')|trim}}
 {% endset %}
 
 {% set bg_color_class = 'bg-'~color_class %}
@@ -10,7 +8,7 @@
     {% if 'knockout' in styles %}
       {% set styles =
         styles|replace({
-          knockout: 'text-white px-2 py-4 '~ bg_color_class
+          knockout: 'text-white px-2 bg-sap-green'
         })
       %}
     {% endif %}
@@ -30,4 +28,4 @@
       %}
     {% endif %}
 
-<h2 class="section-header {{styles}}"> {{ section_heading }}</h2>
+<h2 class="section-header mt-0 {{styles}}"> {{ section_heading }}</h2>

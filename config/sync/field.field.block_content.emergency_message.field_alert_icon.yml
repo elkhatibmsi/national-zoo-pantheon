@@ -1,0 +1,23 @@
+uuid: 08b1288e-a22a-4491-be29-612cd08e6a43
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.emergency_message
+    - field.storage.block_content.field_alert_icon
+  module:
+    - micon
+id: block_content.emergency_message.field_alert_icon
+field_name: field_alert_icon
+entity_type: block_content
+bundle: emergency_message
+label: 'Alert Icon'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: fa-exclamation-circle
+default_value_callback: ''
+settings: {  }
+field_type: string_micon

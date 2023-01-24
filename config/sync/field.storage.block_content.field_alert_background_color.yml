@@ -1,0 +1,39 @@
+uuid: 059d3016-31c1-4879-b194-836e519e4ecb
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+    - options
+id: block_content.field_alert_background_color
+field_name: field_alert_background_color
+entity_type: block_content
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: oxford-blue
+      label: 'oxford blue'
+    -
+      value: sap-green
+      label: 'sap green'
+    -
+      value: blue-sapphire
+      label: 'blue sapphire'
+    -
+      value: tea-green
+      label: 'tea green'
+    -
+      value: sizzling-red
+      label: 'sizzling red'
+    -
+      value: cyber-yellow
+      label: 'cyber yellow'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

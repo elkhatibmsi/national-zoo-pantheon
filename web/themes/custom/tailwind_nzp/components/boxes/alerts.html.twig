@@ -1,0 +1,32 @@
+{# Read values from secondary feature paragraph type and assign to variables #}
+{% set skin = alert_bg_options %}
+
+{# Assign color classes based on variable #}
+{% if 'sap-green' in skin %}
+    {% set bgcolor = 'bg-sap-green' %}
+    {% set textcolor = 'text-white' %}
+{% elseif 'blue-sapphire' in skin %}
+    {% set bgcolor = 'bg-blue-sapphire' %}
+    {% set textcolor = 'text-white' %}   
+{% elseif 'tea-green' in skin  %}
+    {% set bgcolor = 'bg-tea-green' %}
+    {% set textcolor = 'text-black' %} 
+{% elseif 'sizzling-red' in skin  %}
+    {% set bgcolor = 'bg-sizzling-red' %}
+    {% set textcolor = 'text-white' %}
+{% elseif 'cyber-yellow' in skin  %}
+    {% set bgcolor = 'bg-cyber-yellow' %}
+    {% set textcolor = 'text-black' %}        
+{% else %}
+    {% set bgcolor = 'bg-blue-sapphire' %}
+    {% set textcolor = 'text-black' %}
+{% endif %}
+
+
+<div class="{{bgcolor}} {{textcolor}}  p-3 text-lg w-full" x-data="{open:true, toggle() { this.open = ! this.open }}">
+<div class="container lg:px-8 mx-auto relative !mb-0 flex gap-2">
+<div class="alert-icon text-4xl flex items-center">{{alert_icon}}</div>
+ <div class="alert-message flex items-center">{{ alert_message }}</div>
+ <span class="cursor-pointer absolute right-3" x-on:click=toggle()>&times;</span>
+ </div>
+</div>

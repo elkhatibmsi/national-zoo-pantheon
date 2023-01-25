@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.animal.body
+    - field.field.node.animal.field_animal_gallery
     - field.field.node.animal.field_animal_type
     - field.field.node.animal.field_card_position
     - field.field.node.animal.field_communication
@@ -249,6 +250,16 @@ content:
     weight: 5
     region: content
     settings: {  }
+    third_party_settings: {  }
+  field_animal_gallery:
+    type: entity_reference_autocomplete
+    weight: 48
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
   field_animal_type:
     type: options_select

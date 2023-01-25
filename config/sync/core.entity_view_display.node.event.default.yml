@@ -49,9 +49,48 @@ third_party_settings:
               context_mapping: {  }
             weight: 0
             additional: {  }
+        third_party_settings: {  }
+      -
+        layout_id: layout_nzp_two_col
+        layout_settings:
+          context_mapping: {  }
+          custom_classes: ''
+          region_classes:
+            one_col: col-span-6
+            two_col: col-span-6
+          container_classes: 'container mx-auto'
+          html_container_elements: div
+          html_region_elements:
+            one_col: div
+            two_col: div
+          background_color: null
+          region_background_color:
+            one_col: bg-none
+            two_col: 'knockout bg-oxford-blue'
+          getHtmlElements: div
+        components:
+          9a415d5d-8a1e-4a41-8a76-78fe03b49c83:
+            uuid: 9a415d5d-8a1e-4a41-8a76-78fe03b49c83
+            region: one_col
+            configuration:
+              id: 'field_block:node:event:field_event_media'
+              label: 'Event Media'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: entity_reference_entity_view
+                label: hidden
+                settings:
+                  view_mode: default
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
           99e534ea-162b-4911-9bc6-96a85071d479:
             uuid: 99e534ea-162b-4911-9bc6-96a85071d479
-            region: content
+            region: two_col
             configuration:
               id: 'field_block:node:event:title'
               label: Title
@@ -71,11 +110,54 @@ third_party_settings:
                   override_link_label: ''
                   token: ''
                 third_party_settings: {  }
-            weight: 1
+            weight: 0
             additional: {  }
+          0a52f5c1-b19f-41ab-8bc7-350bd770167f:
+            uuid: 0a52f5c1-b19f-41ab-8bc7-350bd770167f
+            region: two_col
+            configuration:
+              id: 'field_block:node:event:field_event_external_link'
+              label: 'Event External Link'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: micon_link
+                label: hidden
+                settings:
+                  trim_length: 80
+                  url_only: false
+                  url_plain: false
+                  rel: '0'
+                  target: '0'
+                  title: ''
+                  icon: ''
+                  text_only: 0
+                  position: before
+                third_party_settings: {  }
+            weight: 2
+            additional:
+              component_attributes:
+                block_attributes:
+                  id: ''
+                  class: 'button button--primary'
+                  style: ''
+                  data: ''
+                block_title_attributes:
+                  id: ''
+                  class: ''
+                  style: ''
+                  data: ''
+                block_content_attributes:
+                  id: ''
+                  class: ''
+                  style: ''
+                  data: ''
           7230dced-2b85-40eb-9599-757558504f13:
             uuid: 7230dced-2b85-40eb-9599-757558504f13
-            region: content
+            region: two_col
             configuration:
               id: 'field_block:node:event:field_event_date_time'
               label: 'Event Date Time'
@@ -95,7 +177,7 @@ third_party_settings:
                   time_wrapper: true
                   localize: false
                 third_party_settings: {  }
-            weight: 2
+            weight: 1
             additional:
               component_attributes:
                 block_attributes:
@@ -167,68 +249,6 @@ third_party_settings:
                   class: ''
                   style: ''
                   data: ''
-          0a52f5c1-b19f-41ab-8bc7-350bd770167f:
-            uuid: 0a52f5c1-b19f-41ab-8bc7-350bd770167f
-            region: one_col
-            configuration:
-              id: 'field_block:node:event:field_event_external_link'
-              label: 'Event External Link'
-              label_display: '0'
-              provider: layout_builder
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
-              formatter:
-                type: micon_link
-                label: hidden
-                settings:
-                  trim_length: 80
-                  url_only: false
-                  url_plain: false
-                  rel: '0'
-                  target: '0'
-                  title: ''
-                  icon: ''
-                  text_only: 0
-                  position: before
-                third_party_settings: {  }
-            weight: 5
-            additional:
-              component_attributes:
-                block_attributes:
-                  id: ''
-                  class: 'button button--primary'
-                  style: ''
-                  data: ''
-                block_title_attributes:
-                  id: ''
-                  class: ''
-                  style: ''
-                  data: ''
-                block_content_attributes:
-                  id: ''
-                  class: ''
-                  style: ''
-                  data: ''
-          9a415d5d-8a1e-4a41-8a76-78fe03b49c83:
-            uuid: 9a415d5d-8a1e-4a41-8a76-78fe03b49c83
-            region: two_col
-            configuration:
-              id: 'field_block:node:event:field_event_media'
-              label: 'Event Media'
-              label_display: '0'
-              provider: layout_builder
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
-              formatter:
-                type: entity_reference_entity_view
-                label: hidden
-                settings:
-                  view_mode: rounded
-                third_party_settings: {  }
-            weight: 0
-            additional: {  }
         third_party_settings: {  }
       -
         layout_id: layout_nzp_one_col

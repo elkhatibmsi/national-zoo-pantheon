@@ -5,6 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.node.image_and_title
     - field.field.node.animal.body
+    - field.field.node.animal.field_animal_gallery
     - field.field.node.animal.field_animal_type
     - field.field.node.animal.field_card_position
     - field.field.node.animal.field_communication
@@ -250,6 +251,7 @@ content:
     weight: 0
     region: content
 hidden:
+  field_animal_gallery: true
   field_card_position: true
   field_editorial_access: true
   field_exhibit: true

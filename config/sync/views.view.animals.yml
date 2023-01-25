@@ -441,7 +441,7 @@ display:
     display_options:
       defaults:
         use_ajax: false
-      use_ajax: true
+      use_ajax: false
       display_description: ''
       display_extenders: {  }
       allow:
@@ -693,6 +693,7 @@ display:
         - 'config:core.entity_view_display.node.advpoll.poll'
         - 'config:core.entity_view_display.node.advpoll.teaser'
         - 'config:core.entity_view_display.node.animal.default'
+        - 'config:core.entity_view_display.node.animal.image_and_title'
         - 'config:core.entity_view_display.node.animal.info_card'
         - 'config:core.entity_view_display.node.animal.teaser'
         - 'config:core.entity_view_display.node.animal_demo.default'
@@ -724,6 +725,7 @@ display:
         - 'config:core.entity_view_display.node.event.teaser'
         - 'config:core.entity_view_display.node.exhibit.default'
         - 'config:core.entity_view_display.node.exhibit.teaser'
+        - 'config:core.entity_view_display.node.gallery.default'
         - 'config:core.entity_view_display.node.internship.default'
         - 'config:core.entity_view_display.node.internship.teaser'
         - 'config:core.entity_view_display.node.media_release.default'

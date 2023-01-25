@@ -1003,6 +1003,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   right: 1.5rem;
 }
 
+.right-3{
+  right: 0.75rem;
+}
+
 .bottom-0{
   bottom: 0px;
 }
@@ -1754,6 +1758,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-bottom: 0px;
 }
 
+.\!mb-0{
+  margin-bottom: 0px !important;
+}
+
 .mb-2{
   margin-bottom: 0.5rem;
 }
@@ -1764,10 +1772,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .ml-4{
   margin-left: 1rem;
-}
-
-.\!mb-0{
-  margin-bottom: 0px !important;
 }
 
 .mb-8{
@@ -1918,12 +1922,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: 1.25rem;
 }
 
-.max-h-24{
-  max-height: 6rem;
+.max-h-\[200px\]{
+  max-height: 200px;
 }
 
-.min-h-\[400px\]{
-  min-height: 400px;
+.max-h-24{
+  max-height: 6rem;
 }
 
 .min-h-\[150px\]{
@@ -2623,16 +2627,16 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding: 1rem;
 }
 
+.p-3{
+  padding: 0.75rem;
+}
+
 .p-8{
   padding: 2rem;
 }
 
 .p-1{
   padding: 0.25rem;
-}
-
-.p-3{
-  padding: 0.75rem;
 }
 
 .p-2{
@@ -4362,6 +4366,12 @@ header.scrolled  .header--hours {
   flex-wrap: wrap;
 }
 
+.looping-video {
+  height: 0;
+  padding-bottom: 56.25%;
+  position: relative;
+}
+
 .first\:pl-0:first-child{
   padding-left: 0px;
 }
@@ -5015,6 +5025,14 @@ header.scrolled  .header--hours {
     margin-top: 0px;
   }
 
+  .md\:max-h-full{
+    max-height: 100%;
+  }
+
+  .md\:min-h-\[400px\]{
+    min-height: 400px;
+  }
+
   .md\:min-w-\[225px\]{
     min-width: 225px;
   }
@@ -5524,6 +5542,14 @@ header.scrolled  .header--hours {
     height: 100%;
   }
 
+  .lg\:max-h-full{
+    max-height: 100%;
+  }
+
+  .lg\:min-h-\[400px\]{
+    min-height: 400px;
+  }
+
   .lg\:w-\[300px\]{
     width: 300px;
   }
@@ -5741,6 +5767,11 @@ header.scrolled  .header--hours {
 
   .lg\:p-0{
     padding: 0px;
+  }
+
+  .lg\:px-8{
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
 
   .lg\:px-4{
@@ -6505,4 +6536,3 @@ header.scrolled  .header--hours {
     gap: 0.875rem;
   }
 }
-

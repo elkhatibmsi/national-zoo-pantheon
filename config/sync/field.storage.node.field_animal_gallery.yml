@@ -1,0 +1,19 @@
+uuid: 5ed8e1c5-006d-4076-83b3-fe19372d03ff
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_animal_gallery
+field_name: field_animal_gallery
+entity_type: node
+type: entity_reference
+settings:
+  target_type: node
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,20 @@
+uuid: 13afa5c5-fe73-465a-89e5-4e4f1aa827e8
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - tailwind_nzp
+id: messages
+theme: tailwind_nzp
+region: topbar
+weight: 0
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: Messages
+  label_display: '0'
+  provider: system
+visibility: {  }

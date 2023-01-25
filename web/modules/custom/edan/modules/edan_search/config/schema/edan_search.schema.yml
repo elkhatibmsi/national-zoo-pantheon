@@ -1,0 +1,151 @@
+edan_search.optionset.*:
+  type: config_entity
+  label: 'Edan search entity config'
+  mapping:
+    id:
+      type: string
+      label: 'ID'
+    label:
+      type: label
+      label: 'Label'
+    uuid:
+      type: string
+    description:
+      type: string
+      label: 'Search description for admin form'
+    summary:
+      type: text
+      label: 'Search description for block/page'
+    edan_settings:
+      type: mapping
+      label: 'EDAN Configuration'
+      mapping:
+        endpoint:
+          type: string
+          label: 'Endpoint'
+        default_q:
+          type: string
+          label: 'Search Term'
+        fq_params:
+          type: sequence
+          label: 'Search Parameters'
+        other_params:
+          type: sequence
+          label: 'Other Parameters'
+        record_types:
+          type: sequence
+          label: 'Record Types'
+        default_to_local_units:
+          type: boolean
+          label: 'Set unit code'
+        local_units:
+          type: sequence
+          label: 'Unit Codes'
+        default_to_online_media:
+          type: boolean
+          label: 'Only return results with media'
+        sort:
+          type: string
+          label: 'Sort'
+        bq:
+          type: sequence
+          label: 'Boost Field'
+        bf:
+          type: sequence
+          label: 'Boost Function'
+        debug:
+          type: boolean
+          label: 'Debug'
+    render_settings:
+      type: mapping
+      label: 'Rending Settings'
+      mapping:
+        pid:
+          type: integer
+          label: 'Path alias id'
+        path:
+          type: string
+          label: 'Page path'
+        toggle_tabs:
+          type: boolean
+          label: 'Tabs'
+        local_tab:
+          type: string
+          label: 'Title for local tab'
+        tab_order:
+          type: boolean
+          label: 'Display Unit Tab First'
+        results_per_page:
+          type: integer
+          label: 'Results Per Page'
+        results_count_message:
+          type: boolean
+          label: 'Results Count Message'
+        results_empty_message:
+          type: string
+          label: 'No Results Message'
+        json_page:
+          type: boolean
+          label: 'Display results as json'
+        show_results_on_load:
+          type: boolean
+          label: 'Display Results'
+        display_mode:
+          type: string
+          label: 'Display Mode'
+        display_search_form:
+          type: boolean
+          label: 'Display Search Form'
+        search_form_open_access:
+          type: boolean
+          label: 'Enable Open Access Checkbox'
+        set_online_media:
+          type: boolean
+          label: 'Enable Online Media Checkbox'
+        online_media_checkbox_text:
+          type: string
+          label: 'Text for online media checkbox'
+        pager:
+          type: boolean
+          label: 'Display Pager'
+    fields:
+      type: mapping
+      label: 'Fields and Labels'
+      mapping:
+        override_default:
+          type: boolean
+          label: 'Override Default'
+        teaser_fields:
+          type: sequence
+          label: 'Result Fields'
+        label_replacements:
+          type: sequence
+          label: 'Label Replacements'
+        mini_fields:
+          type: sequence
+          label: 'Mini Fields'
+    facets:
+      type: mapping
+      label: 'Facets'
+      mapping:
+        facet_status:
+          type: boolean
+          label: 'Display Facets'
+        facet_labels:
+          type: sequence
+          label: 'Facet Labels'
+        facets_hide:
+          type: sequence
+          label: 'Facets to Hide'
+        facet_fields:
+          type: sequence
+          label: 'Facet Fields'
+        facet_remove_message:
+          type: string
+          label: 'Facet Message'
+        facet_header_text:
+          type: string
+          label: 'Facet Header'
+        facet_limit:
+          type: integer
+          label: 'Facet Limit'

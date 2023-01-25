@@ -1,0 +1,17 @@
+uuid: 4008262b-5954-4306-b7e1-c20fafe98dba
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: LWcOfbe8HI4bH0VDrNUmcR3LNGJDBnID7pxgKIlnmO0
+id: edanmdm
+label: edanmdm
+path: '/object/[edan:url]'
+path_key: '[edan:url]'
+summary_fields:
+  'freetext:notes': 'freetext:notes'
+record_fields:
+  '*': '*'
+hidden_fields: {  }
+teaser_fields: {  }
+label_replacements: {  }

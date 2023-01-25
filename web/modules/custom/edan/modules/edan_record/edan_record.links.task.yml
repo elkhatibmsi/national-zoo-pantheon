@@ -1,0 +1,13 @@
+entity.edan_record.collection:
+  title: 'Record Settings'
+  route_name: entity.edan_record.collection
+  base_route: edan.admin_settings_form
+  weight: 2
+  parent: edan.admin_config_edan
+
+#edan_record.media_settings_form:
+#  title: 'Media Settings'
+#  route_name: edan_record.media_settings_form
+#  base_route: edan.admin_settings_form
+#  weight: 2
+#  parent: edan.admin_config_edan

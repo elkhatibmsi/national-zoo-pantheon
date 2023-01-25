@@ -1,0 +1,9 @@
+name: 'EDAN Search  Tabs'
+type: module
+description: 'Create edan search tabs'
+core: 8.x
+core_version_requirement: ^8 || ^9
+package: 'edan'
+version: 1.27
+dependencies:
+  - edan_search

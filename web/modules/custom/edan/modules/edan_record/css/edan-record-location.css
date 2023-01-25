@@ -1,0 +1,27 @@
+.edan-record.location .location-info-wrapper,
+.edan-record.location .inner .content {
+  margin-bottom: 2rem;
+}
+.edan-record.location .media-wrapper figure {
+  margin-right: 0;
+}
+
+@media (min-width: 980px) {
+  .edan-record.location .inner {
+    grid-column-gap: 40px;
+    display: grid;
+    grid-template-columns: 1fr 62%;
+  }
+  .edan-record.location.has-menu .inner {
+    grid-template-columns: 1fr 70%;
+  }
+  .edan-record.location .location-info-wrapper {
+    /* flex: 0 0 40%; */
+  }
+  .edan-record.location .inner .content {
+    order: 0;
+  }
+  .edan-record.location.has-menu .inner .content {
+    order: 2;
+  }
+}

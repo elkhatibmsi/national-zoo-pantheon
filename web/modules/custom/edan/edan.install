@@ -1,0 +1,69 @@
+<?php
+
+/**
+ * @file
+ * Installation actions for edan_search.
+ */
+
+use Symfony\Component\Yaml\Yaml;
+use Drupal\Core\Config\InstallStorage;
+
+
+
+/**
+ * Install edan filter format if it doesn't exist
+ */
+function edan_update_8101() {
+  $config_install_path = drupal_get_path('module', 'edan') . '/' . InstallStorage::CONFIG_INSTALL_DIRECTORY;
+  if (is_dir($config_install_path)) {
+    // scan directory for record.
+    $settings_config_files = \Drupal::service('file_system')->scanDirectory($config_install_path, '/^.*\.yml$/i');
+    $entityManager = \Drupal::service('entity_type.manager');
+    if (isset($settings_config_files) && is_array($settings_config_files)) {
+      foreach ($settings_config_files as $settings_config_file) {
+        $settings_config_file_content = file_get_contents(DRUPAL_ROOT . '/' . $settings_config_file->uri);
+        $settings_config_file_data = (array) Yaml::parse($settings_config_file_content);
+        $entity = $entityManager ->getStorage('filter_format')->load($settings_config_file_data['format']);
+        if (!$entity) {
+          $config_factory = \Drupal::configFactory()->getEditable($settings_config_file->name);
+          $config_factory->setData($settings_config_file_data)->save(TRUE);
+        }
+      }
+    }
+  }
+}
+
+/**
+ * Install edan filter format if it doesn't exist
+ */
+function edan_update_8102() {
+  $config_install_path = drupal_get_path('module', 'edan') . '/' . InstallStorage::CONFIG_OPTIONAL_DIRECTORY;
+  if (is_dir($config_install_path)) {
+    // scan directory for record.
+    $settings_config_files = \Drupal::service('file_system')->scanDirectory($config_install_path, '/^.*\.yml$/i');
+    $entityManager = \Drupal::service('entity_type.manager');
+    if (isset($settings_config_files) && is_array($settings_config_files)) {
+      foreach ($settings_config_files as $settings_config_file) {
+        $settings_config_file_content = file_get_contents(DRUPAL_ROOT . '/' . $settings_config_file->uri);
+        $settings_config_file_data = (array) Yaml::parse($settings_config_file_content);
+        $entity = $entityManager ->getStorage('filter_format')->load($settings_config_file_data['format']);
+        if (!$entity) {
+          $config_factory = \Drupal::configFactory()->getEditable($settings_config_file->name);
+          $config_factory->setData($settings_config_file_data)->save(TRUE);
+        }
+      }
+    }
+  }
+}
+
+/**
+ * allow span for edan_html filter
+ */
+function edan_update_8103() {
+  $entityManager = \Drupal::service('entity_type.manager');
+  $entity = $entityManager ->getStorage('filter_format')->load('edan_html');
+  $filters = $entity->get('filters');
+  $filters['filter_html']['settings']['allowed_html'] = '<a href hreflang> <em> <strong> <b> <cite> <blockquote cite> <code> <ul type> <ol start type> <li> <dl> <dt> <dd> <h2 id> <h3 id> <h4 id> <h5 id> <h6 id> <s> <sup> <sub> <img src alt data-entity-type data-entity-uuid data-align data-caption> <table> <caption> <tbody> <thead> <tfoot> <th> <td> <tr> <hr> <p> <h1> <pre> <br> <i> <figure> <figcaption> <u> <span class>';
+  $entity->set('filters', $filters)->save();
+
+}

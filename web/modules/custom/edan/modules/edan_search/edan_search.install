@@ -1,0 +1,95 @@
+<?php
+
+/**
+ * @file
+ * Installation actions for edan_search.
+ */
+
+use Symfony\Component\Yaml\Yaml;
+use Drupal\Core\Config\InstallStorage;
+
+
+/**
+ * Implement hook_install
+ */
+function edan_search_install() {
+  $search = \Drupal::service('entity_type.manager')->getStorage('edan_search')->load('default');
+  $config = $search->get('render_settings');
+  $path_alias = \Drupal\path_alias\Entity\PathAlias::create([
+    'path' => '/edan/search/default',
+    'alias' => '/collection/search',
+  ]);
+  $path_alias->save();
+  $config['pid'] = $path_alias->id();
+  $search->set('render_settings', $config);
+  $search->save();
+}
+
+/**
+ * Install default searches if they don't exist
+ */
+function edan_search_update_8101() {
+  _edan_search_config_create();
+}
+
+/**
+ * Exclude objectlists from the object_results search entity
+ */
+function edan_search_update_8102() {
+  $entityManager = \Drupal::service('entity_type.manager');
+  $entity = $entityManager ->getStorage('edan_search')->load('ogmt_results');
+  if (!$entity) {
+    _edan_search_config_create();
+  }
+  else {
+    $edan_settings = $entity->get('edan_settings');
+    $edan_settings['fq_params'] = ['-type:objectlists'];
+    $entity->set('edan_settings', $edan_settings);
+    $facet_settings = $entity->get('facets');
+    $facet_settings['facet_status'] = TRUE;
+    $entity->set('facets', $facet_settings);
+    $entity->save();
+  }
+}
+
+function _edan_search_config_create() {
+  $config_install_path = drupal_get_path('module', 'edan_search') . '/' . InstallStorage::CONFIG_INSTALL_DIRECTORY;
+  if (is_dir($config_install_path)) {
+    // scan directory for optionset.
+    $settings_config_files = \Drupal::service('file_system')->scanDirectory($config_install_path, '/^edan_search\.optionset\..*\.yml$/i');
+    $entityManager = \Drupal::service('entity_type.manager');
+    if (isset($settings_config_files) && is_array($settings_config_files)) {
+      foreach ($settings_config_files as $settings_config_file) {
+        $settings_config_file_content = file_get_contents(DRUPAL_ROOT . '/' . $settings_config_file->uri);
+        $settings_config_file_data = (array) Yaml::parse($settings_config_file_content);
+        $entity = $entityManager ->getStorage('edan_search')->load($settings_config_file_data['id']);
+        if (!$entity) {
+          $config_factory = \Drupal::configFactory()->getEditable($settings_config_file->name);
+          $config_factory->setData($settings_config_file_data)->save(TRUE);
+        }
+      }
+    }
+  }
+}
+
+/**
+ * update search config with summary key and pager setting
+ */
+function edan_search_update_8103() {
+  $config_factory = \Drupal::configFactory();
+  foreach ($config_factory->listAll('edan_search.') as $config_name) {
+    $search = $config_factory->getEditable($config_name);
+    $render_settings = $search->get('render_settings');
+    $render_settings['pager'] = TRUE;
+    $search->set('render_settings', $render_settings);
+    if (!$search->get('summary')) {
+      $search->set('summary', '');
+    }
+    else {
+      $summary =  $search->get('summary');
+      $summary = isset($summary['value']) ? $summary['value'] :  '';
+      $search->set('summary', $summary);
+    }
+    $search->save(TRUE);
+  }
+}

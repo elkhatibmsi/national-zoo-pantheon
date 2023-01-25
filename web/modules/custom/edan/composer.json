@@ -1,0 +1,12 @@
+{
+  "name": "drupal/edan",
+  "type": "drupal-custom-module",
+  "description": "EDAN",
+  "keywords": ["Drupal", "EDAN", "HTTP"],
+  "license": "proprietary",
+  "homepage": "http://edan.si.edu/",
+  "minimum-stability": "dev",
+  "require": {
+      "drupal/pathauto": "^1.3"
+  }
+}

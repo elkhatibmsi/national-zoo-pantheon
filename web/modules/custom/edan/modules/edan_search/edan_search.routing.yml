@@ -1,0 +1,58 @@
+# EDAN Search Form Entity paths
+# Route name can be used in several places; e.g. links, redirects, and local
+# actions.
+#entity.edan_search.canonical:
+#  path: '/edan/search/{edan_search}'
+#  defaults:
+#    # Calls the view controller, defined in the annotation of the EDAN Search entity
+#    _entity_view: 'edan_search'
+#    _title: 'EDAN Form Content'
+#  requirements:
+#    _entity_access: 'edan_search.view'
+
+entity.edan_search.edit_form:
+  path: '/edan/search/{edan_search}/edit'
+  defaults:
+  # Calls the form.edit controller, defined in the EDAN Search entity.
+    _entity_form: 'edan_search.edit'
+    # Title changed per WDEDAN-158 - krobinson
+    # _title: 'Edit EDAN Form'
+    _title: 'Edit EDAN Search'
+  requirements:
+    _entity_access: 'edan_search.edit'
+  options:
+    _admin_route: TRUE
+
+entity.edan_search.delete_form:
+  path: '/edan/search/{edan_search}/delete'
+  defaults:
+    # Calls the form.delete controller, defined in the EDAN Search entity.
+    _entity_form: edan_search.delete
+    # Title changed per WDEDAN-158 - krobinson
+    # _title: 'Delete EDAN Form'
+    _title: 'Delete EDAN Search'
+  requirements:
+    _entity_access: 'edan_search.delete'
+  options:
+    _admin_route: TRUE
+
+entity.edan_search.duplicate_form:
+  path: '/admin/config/edan/edan-search/{edan_search}/duplicate'
+  defaults:
+    _entity_form: 'edan_search.duplicate'
+    _title: 'Duplicate EDAN Search'
+  requirements:
+    _entity_access: 'edan_search.edit'
+
+edan_search.facets:
+    path: '/facet/{edan_search}'
+    defaults:
+      _controller: '\Drupal\edan_search\Controller\EdanFacetController::view'
+    requirements:
+      _permission: 'access content'
+    options:
+      parameters:
+        edan_search:
+          type: entity:edan_search
+      edan_search: '^[a-zA-Z0-9_\-\.:]+'
+

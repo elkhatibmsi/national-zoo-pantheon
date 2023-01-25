@@ -1,0 +1,14 @@
+{% if facets %}
+<div class="edan-search-facet-list active">
+  <p class="msg">{{ message }}</p>
+  <ul class="active-facet-list">
+    {% if facets|length > 1 %}
+    <li class="clear-all"><a href="{{ url('<current>') }}">{{ 'Clear All' | t }}</li>
+    {% endif %}
+    {% for item in facets %}
+            <li class="facet"><a href="{{ url('<current>') }}?{{ item.uri }}"><span class="icon"><span class="visually-hidden">{{ 'Clear'|t }}</span></span>{{ item.facet_title|raw }}</a></li>
+
+    {% endfor %}
+  </ul>
+</div>
+{% endif %}

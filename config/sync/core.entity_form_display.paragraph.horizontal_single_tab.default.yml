@@ -7,21 +7,23 @@ dependencies:
     - field.field.paragraph.horizontal_single_tab.field_h_tab_label
     - paragraphs.paragraphs_type.horizontal_single_tab
   module:
-    - layout_paragraphs
+    - paragraphs
 id: paragraph.horizontal_single_tab.default
 targetEntityType: paragraph
 bundle: horizontal_single_tab
 mode: default
 content:
   field_h_tab_content:
-    type: layout_paragraphs
+    type: entity_reference_paragraphs
     weight: 1
     region: content
     settings:
-      preview_view_mode: default
-      nesting_depth: 0
-      require_layouts: 0
-      empty_message: ''
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
     third_party_settings: {  }
   field_h_tab_label:
     type: string_textfield

@@ -20,7 +20,6 @@ dependencies:
     - field.field.node.basic_page.field_promotion_one
     - field.field.node.basic_page.field_promotion_three
     - field.field.node.basic_page.field_promotion_two
-    - field.field.node.basic_page.field_slideshow
     - field.field.node.basic_page.field_subtitle
     - field.field.node.basic_page.field_tags
     - field.field.node.basic_page.field_teaser_title
@@ -60,7 +59,6 @@ hidden:
   field_promotion_one: true
   field_promotion_three: true
   field_promotion_two: true
-  field_slideshow: true
   field_subtitle: true
   field_tags: true
   field_teaser_title: true

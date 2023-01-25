@@ -1,0 +1,28 @@
+edan.admin_config_edan:
+  path: '/admin/config/edan'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'EDAN'
+  requirements:
+    _permission: 'access administration pages'
+edan.admin_settings_form:
+  path: '/admin/config/edan/api'
+  defaults:
+    _form: '\Drupal\edan\Form\EdanAdminSettingsForm'
+    _title: 'EDAN API'
+  requirements:
+    _permission: 'administer site configuration'
+edan.test_connection:
+  path: '/admin/config/edan/test'
+  defaults:
+    _form: '\Drupal\edan\Form\TestConnectionForm'
+    _title: 'EDAN Connection Test'
+  requirements:
+    _permission: 'administer site configuration'
+edan.test_page:
+  path: '/admin/config/edan/test-page'
+  defaults:
+    _controller: '\Drupal\edan\Controller\TestController::render'
+    _title: 'Test Page'
+  requirements:
+    _permission: 'access content'

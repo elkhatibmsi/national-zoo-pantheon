@@ -1,0 +1,180 @@
+.page--edan-viewer {
+  background: #000;
+  color: #ccc;
+}
+.page--edan-viewer .main-content {
+  max-width: inherit;
+}
+.page--edan-viewer #edan-viewer,
+.page--edan-viewer #viewer-other {min-height: 75vh;}
+.page--edan-viewer .edan-viewer-container {
+  max-width: 96%;
+  position: relative;
+  padding-top: 2em;
+  padding-bottom: 2em;
+  margin-left: auto;
+  margin-right: auto;
+}
+#page-wrapper.page--edan-viewer > .content-wrapper {
+  background: #000;
+}
+.page--edan-viewer .media-metadata .btn {
+  background: #262626;
+}
+
+.page--edan-viewer .fill {
+  fill: #FFF;
+}
+.page--edan-viewer .stroke {
+  stroke: #FFF;
+}
+.page--edan-viewer .svg-bg {
+  fill:#262626;
+}
+
+.page--edan-viewer .btn:hover .fill,
+.page--edan-viewer .btn:focus .fill{
+  fill: #F0B323;
+}
+.page--edan-viewer .btn:hover .stroke,
+.page--edan-viewer .btn:focus .stroke{
+  stroke: #FFF;
+}
+.page--edan-viewer .btn-usage:hover .fill,
+.page--edan-viewer .btn-usage:focus .fill {
+  fill: #F0B323;
+}
+.page--edan-viewer .btn-usage:hover .svg-bg,
+.page--edan-viewer .btn-usage:focus .svg-bg {
+  fill: #262626;
+}
+.page--edan-viewer .media-metadata button {
+  width: 35px;
+  height: 35px;
+  margin-bottom: 1em;
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+}
+
+.page--edan-viewer .media-metadata svg {
+  width: 28px;
+}
+
+#rotate-left,
+#zoom-previous {
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+.page--edan-viewer .edan-image-toolbar {
+  margin: 0 0 1.5em;
+}
+
+.page--edan-viewer .media-metadata ,
+.page--edan-viewer .accordion-inner {
+  margin: 0;
+}
+.page--edan-viewer .heading-tab-iiif svg{
+  width: 19px;
+}
+.page--edan-viewer .media-metadata .heading-tab-usage {
+  background: transparent;
+  width: auto;
+}
+.page--edan-viewer .accordion-inner .btn {
+  background: transparent;
+}
+.page--edan-viewer .heading-tab-usage svg {
+  width: 40px;
+}
+.page--edan-viewer .media-metadata .icon.btn-usage {
+  width: 60px;
+}
+.page--edan-viewer .card-header.heading-tab-usage {
+  order: 1;
+}
+.page--edan-viewer .slick-prev .stroke, .page--edan-viewer .slick-next .stroke {stroke: transparent}
+.page--edan-viewer .slick-prev:before,
+.page--edan-viewer .slick-next:before{
+  border-color:transparent transparent transparent #fff;
+}
+.page--edan-viewer .slick-prev:after,
+.page--edan-viewer .slick-next:after{
+  border-color:transparent transparent transparent #000;
+}
+#viewer-other,
+.has-3d #edan-viewer{
+  display: none;
+}
+.has-3d .edan-image-toolbar button {
+  display: none !important;
+}
+
+.edan-record.edan-viewer-container .media-metadata .btn, .edan-record.edan-viewer-container .media-metadata button {color: #fff;}
+.heading-tab-usage, .has-download .heading-tab-download, .has-ids .heading-tab-iiif,
+.has-3d.has-slideshow .edan-image-toolbar #zoom-previous,
+.has-3d.has-slideshow .edan-image-toolbar #zoom-next{
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+}
+.has-3d #viewer-other {
+  display: block;
+}
+.page--edan-viewer .media-metadata,
+.page--edan-viewer .edan-image-toolbar,
+.page--edan-viewer .accordion-inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-flow: row;
+  padding: 0;
+  width: auto;
+  height: auto;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.page--edan-viewer .btn {
+  margin-left: 1em;
+}
+.page--edan-viewer .slick .slick-slide .slide__content {
+  background: #000;
+  border: none;
+}
+
+.page--edan-viewer .first #zoom-previous {
+  opacity: .25;
+}
+.page--edan-viewer #viewer-other,
+.page--edan-viewer #edan-viewer,
+.page--edan-viewer .media-slider {
+  width: 96%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.page--edan-viewer .media-slider {
+  border-top-color: #222;
+}
+@media (min-width: 680px) {
+  .page--edan-viewer .media-metadata {
+    position: absolute;
+    left: 0;
+  }
+  .page--edan-viewer .media-metadata,
+  .page--edan-viewer .edan-image-toolbar,
+  .page--edan-viewer .accordion-inner{
+    flex-flow: column;
+    flex-wrap: nowrap;
+  }
+
+  .page--edan-viewer #viewer-other,
+  .page--edan-viewer #edan-viewer,
+  .page--edan-viewer .media-slider {
+    width: 85%;
+  }
+  .page--edan-viewer .btn, .page--edan-viewer .btn + .btn {
+    margin-left: 0;
+  }
+}

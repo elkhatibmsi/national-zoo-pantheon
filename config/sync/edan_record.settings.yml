@@ -1,0 +1,21 @@
+_core:
+  default_config_hash: isUYhCl0UJ-RGyO9NkSdNkCPLvCKdHPfMagUv0HTES8
+thumbnail: 150
+medium: 360
+large: 980
+constrain: max
+sliderSource: module
+lazyload: false
+viewer:
+  mode: page
+  features: {  }
+  navigatorPosition: null
+limit_to_local: false
+unit_codes: {  }
+alt_template:
+  - event
+  - objectgroup
+  - page
+  - si-unit
+  - location
+media_records: {  }

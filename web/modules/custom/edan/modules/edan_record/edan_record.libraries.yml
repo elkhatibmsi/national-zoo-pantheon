@@ -1,0 +1,95 @@
+edan_record:
+  version: VERSION
+#  js:
+#    js/edan-record.js: {}
+  css:
+    theme:
+      css/edan-record.css: {}
+      css/edan-record-default.css: {}
+#  dependencies:
+#    - core/jquery.ui.accordion
+edan_record_alternate:
+  version: VERSION
+  #  js:
+  #    js/edan-record.js: {}
+  css:
+    theme:
+      css/edan-record.css: {}
+      css/edan-record-alternate.css: {}
+#  dependencies:
+#    - core/jquery.ui.accordion
+edan_record_location:
+  version: VERSION
+  css:
+    theme:
+      css/edan-record-location.css: {}
+media:
+  version: VERSION
+  js:
+    js/edanMedia.js: {}
+  css:
+    theme:
+      css/edanMedia.css: { }
+  dependencies:
+    - edan/plugin
+slick:
+  version: VERSION
+  css:
+    theme:
+      css/edanSlick.css: {}
+  js:
+    js/edanSlider.js: {}
+  dependencies:
+    - core/drupal
+    - core/drupalSettings
+    - core/jquery.once
+    - slick/slick.theme
+    - edan_record/media
+mediaelement:
+  version: VERSION
+  js:
+    //www.si.edu/sites/all/libraries/mediaelement/build/mediaelement-and-player.min.js: {weight: -2}
+  css:
+    theme:
+      //www.si.edu/sites/all/libraries/mediaelement/build/mediaelementplayer.min.css: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+vimeo:
+  version: VERSION
+  js:
+    //www.si.edu/sites/all/libraries/mediaelement/build/renderers/vimeo.min.js: {weight: -1}
+viewer:
+  version: VERSION
+  css:
+    theme:
+      css/edanViewer.css: {}
+  js:
+    //cdnjs.cloudflare.com/ajax/libs/openseadragon/3.0.0/openseadragon.js: {}
+    js/edanViewer.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/drupalSettings
+    - core/jquery.once
+    - edan_record/slick
+timeline:
+  version: VERSION
+  js:
+    js/edanTimeline.js: {}
+  # css:
+  #   theme:
+  #     css/edanTimeline.css: {}
+  dependencies:
+    - edan/plugin
+knightlab.timeline:
+  remote: https://github.com/NUKnightLab/TimelineJS3
+  version: 3.8.21
+  license:
+    name: Mozilla Public License 2.0
+    url: https://github.com/NUKnightLab/TimelineJS3/blob/master/LICENSE
+  js:
+    https://cdn.knightlab.com/libs/timeline3/latest/js/timeline.js: { type: external, minified: true }
+  css:
+    component:
+      https://cdn.knightlab.com/libs/timeline3/latest/css/themes/timeline.theme.contrast.css: { type: external }

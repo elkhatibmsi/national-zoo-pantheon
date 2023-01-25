@@ -1,0 +1,24 @@
+edan_tabs.tabs.*:
+  type: config_entity
+  label: 'Edan tab config'
+  mapping:
+    id:
+      type: string
+      label: 'ID'
+    label:
+      type: label
+      label: 'Search Page Title'
+    uuid:
+      type: string
+    path:
+      type: string
+      label: 'Search tab path'
+    landing:
+      type: boolean
+      label: 'Aggregate landing page'
+    landing_label:
+      type: string
+      label: 'Label for landing tab'
+    searches:
+      type: sequence
+      label: 'EDAN Searches'

@@ -1,0 +1,9 @@
+services:
+  logger.channel.edan_search:
+    parent: logger.channel_base
+    arguments: ['edan_search']
+  edan_search.manager:
+    class: Drupal\edan_search\EdanSearchManager
+    parent: edan.manager_base
+    calls:
+      - [setServices, ['@edan.search_params', '@edan_record.process', '@edan_record.media', '@theme.manager']]

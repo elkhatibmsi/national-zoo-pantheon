@@ -1902,10 +1902,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: 1rem;
 }
 
-.h-14{
-  height: 3.5rem;
-}
-
 .h-8{
   height: 2rem;
 }
@@ -2633,10 +2629,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .p-1{
   padding: 0.25rem;
-}
-
-.p-0{
-  padding: 0px;
 }
 
 .p-3{
@@ -3608,6 +3600,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-color: rgb(22 92 125 / var(--tw-bg-opacity));
 }
 
+.button--primary a {
+  color: white;
+}
+
 .btn-primary:hover, .button--primary:hover{
   --tw-bg-opacity: 1;
   background-color: rgb(83 120 43 / var(--tw-bg-opacity));
@@ -3728,9 +3724,10 @@ h3{
   margin-top: 0.5rem;
   display: flex;
   align-items: center;
-  padding-bottom: 0.25rem;
-  font-size: 2.25rem;
-  line-height: 2.5rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  font-size: 3.75rem;
+  line-height: 1;
   font-weight: 700;
 }
 
@@ -4334,6 +4331,10 @@ header.scrolled  .header--hours {
   color: white;
 }
 
+.knockout .layout-builder-block {
+  background: none;
+}
+
 /* Layout Builder Overrides */
 
 .knockout .layout-builder__add-block {
@@ -4371,11 +4372,6 @@ header.scrolled  .header--hours {
 
 .hover\:cursor-pointer:hover{
   cursor: pointer;
-}
-
-.hover\:bg-white:hover{
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
 .hover\:bg-lightergray:hover{
@@ -6509,3 +6505,4 @@ header.scrolled  .header--hours {
     gap: 0.875rem;
   }
 }
+

@@ -145,7 +145,7 @@ display:
         type: tailwindGrid
         options:
           uses_fields: false
-          column_count: grid-span-3
+          column_count: grid-span-6
           row_classes: ''
       row:
         type: 'entity:node'
@@ -202,6 +202,8 @@ display:
         - 'config:core.entity_view_display.node.document.node_embed'
         - 'config:core.entity_view_display.node.document.teaser'
         - 'config:core.entity_view_display.node.document.token'
+        - 'config:core.entity_view_display.node.event.default'
+        - 'config:core.entity_view_display.node.event.teaser'
         - 'config:core.entity_view_display.node.exhibit.default'
         - 'config:core.entity_view_display.node.exhibit.teaser'
         - 'config:core.entity_view_display.node.internship.default'
@@ -268,6 +270,8 @@ display:
         - 'config:core.entity_view_display.node.document.node_embed'
         - 'config:core.entity_view_display.node.document.teaser'
         - 'config:core.entity_view_display.node.document.token'
+        - 'config:core.entity_view_display.node.event.default'
+        - 'config:core.entity_view_display.node.event.teaser'
         - 'config:core.entity_view_display.node.exhibit.default'
         - 'config:core.entity_view_display.node.exhibit.teaser'
         - 'config:core.entity_view_display.node.internship.default'
@@ -449,6 +453,8 @@ display:
         - 'config:core.entity_view_display.node.document.node_embed'
         - 'config:core.entity_view_display.node.document.teaser'
         - 'config:core.entity_view_display.node.document.token'
+        - 'config:core.entity_view_display.node.event.default'
+        - 'config:core.entity_view_display.node.event.teaser'
         - 'config:core.entity_view_display.node.exhibit.default'
         - 'config:core.entity_view_display.node.exhibit.teaser'
         - 'config:core.entity_view_display.node.internship.default'

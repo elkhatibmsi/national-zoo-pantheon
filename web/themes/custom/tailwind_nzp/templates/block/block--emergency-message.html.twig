@@ -29,25 +29,13 @@
  * @ingroup themeable
  */
 #}
-{%
-  set content_classes = [
-    'p-3',
-    'text-black',
-    'font-bold',
-    'flex',
-    'justify-between'
-  ]
-%}
-<div{{ attributes.addClass(classes) }} x-data="{open:true, toggle() { this.open = ! this.open }}">
-  {{ title_prefix }}
-  {% if label %}
-    <h2{{ title_attributes }}>{{ label }}</h2>
-  {% endif %}
-  {{ title_suffix }}
+  <div  {{ attributes }}>
   {% block content %}
-    <div{{ content_attributes.addClass(content_classes) }} x-show="open" x-transition>
-      <span>{{ content }}</span>
-      <span class="cursor-pointer" x-on:click=toggle()>&times;</span>
-    </div>
+  {% include '@nzpComponents/boxes/alerts.html.twig' with {
+   alert_bg_options: content.field_alert_background_color.0['#markup'],
+   alert_message: content.body,
+   alert_icon: content.field_alert_icon,
+  }
+  %}
   {% endblock %}
 </div>

@@ -1,0 +1,23 @@
+uuid: 2d460ef5-8907-4f9d-9f08-38897990303c
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.emergency_message
+    - field.storage.block_content.field_alert_background_color
+  module:
+    - options
+id: block_content.emergency_message.field_alert_background_color
+field_name: field_alert_background_color
+entity_type: block_content
+bundle: emergency_message
+label: 'Alert Background Color'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: blue-sapphire
+default_value_callback: ''
+settings: {  }
+field_type: list_string

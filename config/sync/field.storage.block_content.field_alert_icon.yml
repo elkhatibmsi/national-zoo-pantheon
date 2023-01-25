@@ -1,0 +1,22 @@
+uuid: 5a41b63c-cd05-4380-8127-fd299eab7846
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+    - micon
+id: block_content.field_alert_icon
+field_name: field_alert_icon
+entity_type: block_content
+type: string_micon
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: micon
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

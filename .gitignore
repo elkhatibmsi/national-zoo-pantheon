@@ -99,3 +99,7 @@
 
 # Ignore ddev config folder
 .ddev
+
+
+#Ignore block content config files
+config/sync/block.block*.yml

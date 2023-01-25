@@ -66,7 +66,7 @@ third_party_settings:
           background_color: null
           region_background_color:
             one_col: bg-none
-            two_col: 'knockout bg-oxford-blue'
+            two_col: bg-none
           getHtmlElements: div
         components:
           9a415d5d-8a1e-4a41-8a76-78fe03b49c83:

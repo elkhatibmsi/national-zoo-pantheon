@@ -1,0 +1,25 @@
+uuid: 60d98c96-db1a-43ca-9047-a73854715bb0
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:emergency_message:f053f40a-9840-4a7a-baaa-0f44985fde34'
+  module:
+    - block_content
+  theme:
+    - tailwind_nzp
+id: webcamdownalert
+theme: tailwind_nzp
+region: topbar
+weight: 0
+provider: null
+plugin: 'block_content:f053f40a-9840-4a7a-baaa-0f44985fde34'
+settings:
+  id: 'block_content:f053f40a-9840-4a7a-baaa-0f44985fde34'
+  label: 'Webcam Down Alert'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

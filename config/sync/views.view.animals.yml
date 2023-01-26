@@ -439,6 +439,9 @@ display:
     display_plugin: block
     position: 1
     display_options:
+      defaults:
+        use_ajax: false
+      use_ajax: false
       display_description: ''
       display_extenders: {  }
       allow:
@@ -690,12 +693,20 @@ display:
         - 'config:core.entity_view_display.node.advpoll.poll'
         - 'config:core.entity_view_display.node.advpoll.teaser'
         - 'config:core.entity_view_display.node.animal.default'
+        - 'config:core.entity_view_display.node.animal.image_and_title'
+        - 'config:core.entity_view_display.node.animal.info_card'
         - 'config:core.entity_view_display.node.animal.teaser'
+        - 'config:core.entity_view_display.node.animal_demo.default'
+        - 'config:core.entity_view_display.node.animal_demo.teaser'
         - 'config:core.entity_view_display.node.attraction.default'
         - 'config:core.entity_view_display.node.attraction.teaser'
         - 'config:core.entity_view_display.node.basic_page.default'
         - 'config:core.entity_view_display.node.basic_page.node_embed'
         - 'config:core.entity_view_display.node.basic_page.teaser'
+        - 'config:core.entity_view_display.node.bio_profiles.default'
+        - 'config:core.entity_view_display.node.bio_profiles.info_card'
+        - 'config:core.entity_view_display.node.bio_profiles.list'
+        - 'config:core.entity_view_display.node.bio_profiles.teaser'
         - 'config:core.entity_view_display.node.blank_page.default'
         - 'config:core.entity_view_display.node.blank_page.teaser'
         - 'config:core.entity_view_display.node.coffee_product.default'
@@ -711,11 +722,10 @@ display:
         - 'config:core.entity_view_display.node.document.teaser'
         - 'config:core.entity_view_display.node.document.token'
         - 'config:core.entity_view_display.node.event.default'
-        - 'config:core.entity_view_display.node.event.info_card'
-        - 'config:core.entity_view_display.node.event.node_embed'
         - 'config:core.entity_view_display.node.event.teaser'
         - 'config:core.entity_view_display.node.exhibit.default'
         - 'config:core.entity_view_display.node.exhibit.teaser'
+        - 'config:core.entity_view_display.node.gallery.default'
         - 'config:core.entity_view_display.node.internship.default'
         - 'config:core.entity_view_display.node.internship.teaser'
         - 'config:core.entity_view_display.node.media_release.default'
@@ -724,8 +734,6 @@ display:
         - 'config:core.entity_view_display.node.news.teaser'
         - 'config:core.entity_view_display.node.scbi_project.default'
         - 'config:core.entity_view_display.node.scbi_project.teaser'
-        - 'config:core.entity_view_display.node.scbi_staff.default'
-        - 'config:core.entity_view_display.node.scbi_staff.teaser'
         - 'config:core.entity_view_display.node.slideshow.default'
         - 'config:core.entity_view_display.node.slideshow.teaser'
         - 'config:core.entity_view_display.node.venue.default'

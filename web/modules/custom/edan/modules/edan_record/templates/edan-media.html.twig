@@ -1,0 +1,28 @@
+<!-- Record Page -->
+<div{{ attributes }}>
+  {% for item in items %}
+    {% set itemAttributes = create_attribute(item.attributes) %}
+      <div {{ itemAttributes }}>
+        {{ item.rendered }}
+        {{ item.toolbar }}
+        {% if (media_extra and item.type == 'images') or item.slideshow|length > 0 %}
+          <div class="edan-modal fade" id="viewerModal" tabindex="-1" role="dialog" aria-labelledby="viewerModal" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-body">
+                  <div class="button-wrapper">
+                    <button type="button" class="close" data-dismiss="modal"
+                            aria-label="{{ "Click to close image viewer"|t }}">&times;
+                    </button>
+                  </div>
+                  <iframe width="100%" src="" id="modalIframe"></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+        {% endif %}
+        {{ item.slideshow }}
+      </div>
+
+  {% endfor %}
+</div> <!-- //wrapper -->

@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.storage.paragraph.field_h_tabs
+    - paragraphs.paragraphs_type.horizontal_single_tab
     - paragraphs.paragraphs_type.horizontal_tabs
   module:
     - entity_reference_revisions
@@ -20,7 +21,8 @@ default_value_callback: ''
 settings:
   handler: 'default:paragraph'
   handler_settings:
-    target_bundles: null
+    target_bundles:
+      horizontal_single_tab: horizontal_single_tab
     negate: 0
     target_bundles_drag_drop:
       accordion:
@@ -62,9 +64,6 @@ settings:
       collapsible_block:
         weight: 12
         enabled: false
-      collection:
-        weight: 43
-        enabled: false
       content_video:
         weight: 13
         enabled: false
@@ -77,6 +76,9 @@ settings:
       faq_item:
         weight: 44
         enabled: false
+      feature:
+        weight: 75
+        enabled: false
       flipbook_grid:
         weight: 16
         enabled: false
@@ -86,9 +88,18 @@ settings:
       grid:
         weight: 18
         enabled: false
+      horizontal_link_bar:
+        weight: 81
+        enabled: false
+      horizontal_links:
+        weight: 79
+        enabled: false
+      horizontal_links_wrapper:
+        weight: 80
+        enabled: false
       horizontal_single_tab:
         weight: 19
-        enabled: false
+        enabled: true
       horizontal_tabs:
         weight: 20
         enabled: false
@@ -131,6 +142,9 @@ settings:
       promotion_two:
         weight: 51
         enabled: false
+      secondary_feature:
+        weight: 97
+        enabled: false
       section:
         weight: 27
         enabled: false
@@ -145,6 +159,9 @@ settings:
         enabled: false
       slideshow_container:
         weight: 52
+        enabled: false
+      spacer:
+        weight: 103
         enabled: false
       sponsors:
         weight: 53

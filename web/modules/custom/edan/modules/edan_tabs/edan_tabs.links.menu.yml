@@ -1,0 +1,15 @@
+
+# Edan tab menu items definition
+entity.edan_tab.collection:
+  title: 'Edan Tabs'
+  route_name: entity.edan_tab.collection
+  description: 'List Edan tab (bundles)'
+  parent: edan.admin_config_edan
+  weight: 99
+
+entity.edan_tab.add:
+  title: 'Add'
+  route_name: entity.edan_tab.add_form
+  description: 'Add EDAN Search Tabs'
+  parent: entity.edan_tab.collection
+  weight: 10

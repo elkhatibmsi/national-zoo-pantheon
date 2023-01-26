@@ -17,6 +17,8 @@
 /web/sites/simpletest
 
 
+
+
 # Ignore custom modules managed by Composer.
 #
 # When a development team creates one or more custom modules that
@@ -99,3 +101,7 @@
 
 # Ignore ddev config folder
 .ddev
+
+
+#Ignore block content config files
+config/sync/block.block*.yml

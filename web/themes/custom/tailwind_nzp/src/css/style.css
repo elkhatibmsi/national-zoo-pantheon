@@ -32,17 +32,21 @@
 /* Buttons */
 
 .btn,
-.button {
+.button{
   @apply font-bold my-2 inline-block py-2 px-4 rounded bg-blue-sapphire text-white cursor-pointer shadow-sm hover:bg-blue-sapphire;
 }
 .btn-primary,
 .button--primary {
   @apply bg-blue-sapphire;
 }
+.button--primary a {
+  color: white;
+}
 .btn-primary:hover,
 .button--primary:hover {
   @apply bg-sap-green;
 }
+
 
 .layout-builder-form {
   @apply container mx-auto py-4;
@@ -93,7 +97,7 @@ h3 {
 }
 
 .page-title {
-  @apply text-4xl pb-1 mb-1 mt-2 font-bold flex items-center;
+  @apply text-6xl py-4 mb-1 mt-2 font-bold flex items-center;
 }
 
 .landing-title {
@@ -412,6 +416,11 @@ main {
   color: white;
 }
 
+.knockout .layout-builder-block {
+  background: none;
+
+}
+
 
 /* Layout Builder Overrides */
 
@@ -438,4 +447,10 @@ main {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+}
+
+.looping-video {
+  height: 0;
+  padding-bottom: 56.25%;
+  position: relative;
 }

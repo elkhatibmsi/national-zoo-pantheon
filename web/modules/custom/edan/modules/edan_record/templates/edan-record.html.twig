@@ -1,0 +1,60 @@
+<!-- Record Page -->
+<div{{ attributes }}> <!-- //wrapper -->
+  {% if view_mode == 'list' and record.search_results %}
+  {{ record.search_results }}
+{% else %}
+  {% if record.title %}
+  {% set title = {
+    '#type':   'processed_text',
+    '#text':    record.title,
+    '#format':  'edan_html',
+  } %}
+  <{{ title_wrapper }}>{{ title }}</{{ title_wrapper }}>
+{% endif %}
+{% if (record.fields or media) %}
+<div class="content-wrapper">
+<div class="inner">
+  <div class="content">
+      {% if record.fields %}
+        {% set body = {
+          '#theme':   'edan_fields',
+          '#rows':   record.fields,
+        } %}
+        {{ body }}
+      {% endif %}
+    {% if record.list %}
+      {% for object in record.list  %}
+        <div class="object-list">
+            <h2 class="h4 collapse-header" data-toggle="collapse" href="#object-{{ object.id }}" role="button" aria-expanded="false" aria-controls="object-{{ object.id }}">
+              <span class="icon"></span> {{ object.title }}
+            </h2>
+            <div class="collapse details" id="object-{{ object.id }}">
+              <p><a href="{{ object.record_link }}" target="_blank" class="record-link">{% if object.thumbnail %}<img src="{{ object.thumbnail['thumbnail'] }}" class="thumbnail" />{% endif %}
+                  <span class="read-more">View record <span class="visually-hidden"> for {{ object.title }}</span></span> </a></p>
+              {% if object.fields %}
+                {% set body = {
+                  '#theme':   'edan_fields',
+                  '#rows':   object.fields,
+                } %}
+                {{ body }}
+              {% endif %}
+          </div>
+
+        </div>
+      {% endfor %}
+      {% endif %}
+  </div>
+  {{ media }}
+</div>
+  {% if record.menuLinks %}
+    <div class="og-menu">
+    {{ record.menuLinks }}
+    </div>
+  {% endif %}
+</div><!-- //wrapper -->
+  {% endif %}
+{% if record.search_results %}
+  {{ record.search_results }}
+{% endif %}
+{% endif %}
+</div>

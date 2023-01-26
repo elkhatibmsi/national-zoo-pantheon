@@ -1,0 +1,9 @@
+name: EDAN
+type: module
+description: Manages EDAN requests.
+package: edan
+core: 8.x
+core_version_requirement: ^8 || ^9
+version: 1.27
+dependencies:
+  - filter

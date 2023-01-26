@@ -1,0 +1,13 @@
+name: EDAN Record
+type: module
+description: Embed records from EDAN in a Drupal node/content or any other entities which support fields such as Taxonomy and Block.
+package: edan
+core: 8.x
+core_version_requirement: ^8 || ^9
+version: 1.27
+dependencies:
+  - edan
+  - image
+  - token
+  - pathauto
+  - media

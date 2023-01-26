@@ -1,0 +1,72 @@
+<?php
+
+/**
+ * @file
+ * Contains edan_tabs.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function edan_tabs_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the edan_tabs module.
+    case 'help.page.edan_tabs':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Create edan search tabs') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function edan_tabs_theme() {
+  return [
+    'edan_tabs_page' => [
+      'variables' => [
+        'edanTab' => NULL,
+        'search_form' => NULL,
+        'total' => 0,
+        'searchTotals' => [],
+        'searchTerm' => NULL,
+        'tabs' => [],
+        'content' => [],
+      ],
+      'file' => 'templates/theme.inc',
+    ],
+    'edan_tabs_landing' => [
+      'variables' => [
+        'edanTab' => NULL,
+        'columns' => [],
+      ],
+      'file' => 'templates/theme.inc',
+    ],
+  ];
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK().
+ */
+function edan_tabs_theme_suggestions_edan_tabs_page(array $vars) {
+  $suggestions = [];
+  $suggestions[] = 'edan_tabs_page__' .  $vars['edanTab']->id();
+  foreach($vars['edanTab']->getSearches() as $search) {
+    $suggestions[] = 'edan_tabs_page__' .  $search['search'];
+  }
+  return $suggestions;
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK().
+ */
+function edan_tabs_theme_suggestions_edan_tabs_landing(array $vars) {
+  $suggestions = [];
+  $suggestions[] = 'edan_tabs_landing__' .  $vars['edanTab']->id();
+  return $suggestions;
+}

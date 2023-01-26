@@ -1,0 +1,35 @@
+<!-- Timeline Page -->
+<div{{ attributes }}> <!-- //wrapper -->
+{% if view_mode == 'list' and record.search_results %}
+  {{ record.search_results }}
+{% else %}
+  {% if record.title %}
+    {% set title = {
+      '#type':   'processed_text',
+      '#text':    record.title,
+      '#format':  'edan_html',
+    } %}
+    <{{ title_wrapper }}>{{ title }}</{{ title_wrapper }}>
+  {% endif %}
+  {% if (record.fields or media) %}
+  <div class="content-wrapper">
+    <div class="inner">
+      <div class="content">
+          {% if record.fields %}
+            {% set body = {
+              '#theme':   'edan_fields',
+              '#rows':   record.fields,
+            } %}
+            {{ body }}
+          {% endif %}
+      </div>
+      {{ media }}
+      <div id="timeline-{{record.id}}" style="height:650px;"></div>
+    </div>
+  </div><!-- //wrapper -->
+  {% endif %}
+  {% if record.search_results %}
+    {{ record.search_results }}
+  {% endif %}
+{% endif %}
+</div>

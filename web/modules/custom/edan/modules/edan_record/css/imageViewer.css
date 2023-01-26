@@ -1,0 +1,214 @@
+.edan-viewer-container {
+	background: #000;
+}
+.edan-viewer-container {
+  padding: 2em;
+  position: relative;
+}
+.edan-viewer-container.page {
+	height: 100vh;
+}
+.edan-viewer-container button, .edan-viewer-container .btn{
+	background: #262626;
+	padding: 0;
+  border:none;
+  width: 35px;
+  height: 35px;
+  color: #FFF;
+	display: -webkit-flex;
+	-webkit-justify-content: center;
+	-webkit-align-items: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.edan-viewer-container .viewer-other,
+.edan-viewer-container #edan-viewer {
+	-webkit-transition: opacity 0.15s linear;
+	transition: opacity 0.15s linear;
+	display: none;
+	opacity: 0;
+}
+.edan-viewer-container.no-ids .viewer-other,
+.edan-viewer-container.has-ids #edan-viewer{
+	display: block;
+	opacity: 1;
+}
+.edan-viewer-container.no-ids .viewer-other {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-flow: column;
+	flex-flow: column;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+}
+.edan-viewer-container .caption {
+	color: #FFF;
+	margin-top: 24px;
+}
+
+.edan-viewer-container .icon--viewer {
+	display: none !important;
+}
+.edan-viewer-container.has-ids .icon--viewer {
+	display: flex !important;
+}
+.edan-viewer-container .btn.btn-usage {
+	width: auto;
+	background: transparent;
+}
+.edan-viewer-container .fill {
+  fill: #fff;
+}
+.edan-viewer-container .stroke {
+  stroke: #fff;
+}
+.edan-viewer-container .svg-bg {
+  fill:#262626;
+}
+.edan-viewer-container .btn:hover,
+.edan-viewer-container .btn:focus {
+  color: #ffd400;
+}
+
+.edan-viewer-container .btn:hover .fill,
+.edan-viewer-container .btn:focus .fill{
+  fill: #ffd400;
+}
+.edan-viewer-container .btn:hover .stroke,
+.edan-viewer-container .btn:focus .stroke{
+  stroke: #ffd400;
+}
+
+#edan-viewer,
+.viewer-other{
+  width: 85%;
+  height: 100%;
+  position: relative;
+  background-color: #000;
+  margin: auto ;
+  overflow: hidden;
+}
+
+.edan-viewer-container .mobile #edanImageToolbar {
+	display: none;
+}
+
+.media-metadata .btn {
+  margin-bottom: 10px;
+}
+.edan-viewer-container .icon--previous svg, .edan-viewer-container .icon--rotate-left svg {
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+.edan-viewer-container .accordion svg {
+	width: 19px;
+}
+
+.edan-viewer-container .icon--home svg {
+	height: 28px;
+}
+.edan-viewer-container .btn-usage svg {
+	width: 50px;
+}
+
+.edan-viewer-container .media-metadata {
+	margin-bottom: 24px;
+}
+.edan-viewer-container .accordion .inner {
+	display: -webkit-flex;
+	-webkit-justify-content: space-between;
+	display: flex;
+	justify-content: space-between;
+}
+.edan-viewer-container .card-header {
+	margin-right: 10px;
+}
+
+.edan-viewer-container .media-slider .slide {
+  background: #262626;
+  margin: 0 5px;
+  padding: 2px;
+}
+.media-slider .slide:hover img {
+  opacity: .8;
+}
+.edan-viewer-container .media-slider .slide.active,
+.edan-viewer-container .media-slider .slide:hover{
+  opacity: 1;
+  background: #000;
+}
+
+.edan-viewer-container .slick-dots li.slick-active button {
+  background: #262626;
+}
+
+.edan-viewer-container .slick-dots li button {
+  border-color: #373737;
+}
+
+.edan-viewer-container .media-slider {
+	width: 85%;
+	margin-left: auto;
+  margin-right: auto;
+}
+.edan-viewer-container .media-slider .btn {
+  background: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+  display: block;
+  text-align: left;
+  position: relative;
+  line-height: 1;
+  box-shadow: none;
+}
+@media (min-width: 680px) {
+	#edan-viewer {
+		min-height: 90vh;
+	}
+  #edan-viewer.has-slideshow {
+    min-height: 70vh;
+  }
+	#edanImageToolbar, .media-metadata .accordion{
+		display: -webkit-flex;
+		-webkit-flex-direction: column;
+		display: flex;
+		flex-direction: column;
+	}
+	.edan-viewer-container .media-metadata {
+		top: 24px;
+		left: 24px;
+		position: absolute !important;
+	}
+
+	.edan-viewer-container .accordion .inner {
+		padding-bottom: 45px;
+	}
+	.edan-viewer-container .media--no-openaccess .accordion .inner {
+		padding-bottom: 60px;
+	}
+	.edan-viewer-container .accordion .btn.btn-usage {
+		display: block;
+		position: absolute;
+		bottom:-24px;
+		left: 0;
+		background: #000;
+		width: auto;
+		height: auto;
+	}
+	.edan-viewer-container .accordion .inner {
+		display: block;
+	}
+	.edan-viewer-container .card-header {
+		margin-right: 0;
+	}
+
+}

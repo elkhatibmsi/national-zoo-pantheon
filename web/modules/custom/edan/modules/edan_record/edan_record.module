@@ -1,0 +1,388 @@
+<?php
+
+/**
+ * @file
+ * Contains edan_record.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\Component\Utility\Html;
+use Drupal\Core\Template\Attribute;
+
+/**
+ * Implements hook_help().
+ */
+function edan_record_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the edan_record module.
+    case 'help.page.edan_record':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Allows you to embed your individual records from EDAN.') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function edan_record_theme() {
+  $themes = [];
+  $themes['edan_media'] = [
+    'variables' => [
+      'items' => [],
+      'record' => [],
+      'media' => [],
+      'media_extra' => TRUE
+    ],
+    'file' => 'templates/theme.inc',
+  ];
+
+  $themes['edan_toolbar'] = [
+    'variables' => [
+      'media' => [],
+      'record' => [],
+      'settings' => [],
+    ],
+    'file' => 'templates/theme.inc',
+  ];
+
+  $themes['edan_media_item'] = [
+    'variables' => [
+      'media' => [],
+      'item' => [],
+      'record' => [],
+      'caption' => NULL,
+    ],
+    'file' => 'templates/theme.inc',
+  ];
+  $themes['edan_fields'] = [
+    'variables' => [
+      'rows' => []
+    ],
+    'file' => 'templates/theme.inc',
+  ];
+  $themes['edan_record'] = [
+		'variables' => [
+			'record' => NULL,
+			'view_mode' => 'full',
+			'embedded' => FALSE,
+			'media' => NULL,
+		],
+		'file' => 'templates/theme.inc',
+	];
+
+  $themes['edan_viewer'] = [
+    'variables' => [
+      'idsId' => NULL,
+      'toolbar' => [],
+      'slideshow' => [],
+      'media' => []
+    ],
+    'file' => 'templates/theme.inc',
+  ];
+  $themes['page__object__viewer'] = [
+    'base hook' => 'page',
+  ];
+	$themes['edan_record__teaser'] = [
+		'base hook' => 'edan_record',
+	];
+  $themes['edan_record__alternate'] = [
+    'base hook' => 'edan_record',
+  ];
+  $themes['edan_record__location'] = [
+    'base hook' => 'edan_record',
+  ];
+  $themes['edan_record__timeline'] = [
+    'base hook' => 'edan_record',
+  ];
+  return $themes;
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK().
+ */
+function edan_record_theme_suggestions_edan_record(array $vars) {
+	$suggestions = [];
+	$type = $vars['record']['type'] === 'page' ? 'objectgroup' : $vars['record']['type'];
+	if ($vars['record']['alt_template']) {
+    $suggestions[] = 'edan_record__alternate';
+  }
+	$suggestions[] = 'edan_record__'. $vars['view_mode'];
+	$suggestions[] = 'edan_record__'. $type;
+	$suggestions[] = 'edan_record__'. $type .'__'. $vars['view_mode'];
+	$id = str_replace($vars['record']['type'] .':', '', $vars['record']['url']);
+	$id = str_replace('-', '_', $id);
+  if ($vars['embedded']) {
+    $suggestions[] = 'edan_record__embedded';
+    $suggestions[] = 'edan_record__embedded__'. $vars['view_mode'];
+    $suggestions[] = 'edan_record__embedded__'. $type;
+    $suggestions[] = 'edan_record__embedded__'. $type .'__'. $vars['view_mode'];
+  }
+	if (isset($vars['record']['objectgroup'])) {
+		$id_array = explode(':', $vars['record']['url']);
+		$suggestions[] = 'edan_record__'. $id_array[0];
+		$suggestions[] = 'edan_record__'.$vars['view_mode'] .'__'. $id_array[0];
+
+		if ($vars['record']['id'] !== $vars['record']['objectgroup']['content']['defaultPageId']) {
+			$suggestions[] = 'edan_record__'. end($id_array);
+			$suggestions[] = 'edan_record__'.$vars['view_mode'] .'__'. end($id_array);
+
+		}
+	}
+	else {
+
+		$suggestions[] = 'edan_record__'. $id;
+		$suggestions[] = 'edan_record__'.$vars['view_mode'] .'__'. $id;
+	}
+	return $suggestions;
+}
+
+/**
+ * Implements hook_token_info().
+ */
+
+function edan_record_token_info() {
+
+	$type = [
+		'name' => t('EDAN Record'),
+		'description' => t('Tokens related to EDAN records.'),
+		'needs-data' => 'edan',
+	];
+
+	$edan['title'] = [
+		'name' => t("EDAN Record Title"),
+		'description' => t('The record\'s title'),
+
+	];
+	$edan['description'] = [
+		'name' => t("EDAN Record Description"),
+		'description' => t('Description metadata for edan record'),
+	];
+
+	$edan['summary'] = [
+		'name' => t("EDAN Record Summary"),
+		'description' => t('Truncated description'),
+	];
+	$edan['url'] = array(
+		'name' => t('URL'),
+		'description' => t('Uri of the EDAN record'),
+	);
+	$edan['id'] = array(
+		'name' => t('EDAN Record ID'),
+	);
+	$edan['url_title'] = array(
+		'name' => t('Url Title'),
+		'description' => t('Use EDAN record title in the url'),
+	);
+	$edan['image'] = array(
+		'name' => t('Image URL'),
+		'description' => t('Image of the EDAN record'),
+	);
+
+	return [
+		'types' => ['edan' => $type],
+		'tokens' => ['edan' => $edan],
+	];
+
+}
+
+/**
+ * Implements hook_tokens().
+ */
+
+function edan_record_tokens($type, $tokens, array $data, array $options, \Drupal\Core\Render\BubbleableMetadata $bubbleable_metadata) {
+	$replacements = [];
+  if ($type == 'edan') {
+  	$doc = NULL;
+  	if (empty($data['edan'])) {
+		  $entity = \Drupal::routeMatch()->getParameter('entity');
+		  $edan_id = \Drupal::routeMatch()->getParameter('edan_id');
+		  $page_id = \Drupal::routeMatch()->getParameter('page_id');
+
+		  if ($edan_id && $entity) {
+			  $setting = $entity->getRecordSettings();
+			  if ($page_id) {
+				  $doc = $entity->getManager()
+					  ->getRecord($edan_id . ':' . $page_id, $entity->get('path_key'), 'page', $setting);
+			  }
+			  else {
+				  $doc = $entity->getManager()
+					  ->getRecord($edan_id, $entity->get('path_key'), $entity->id(), $setting);
+			  }
+		  }
+		  elseif (\Drupal::routeMatch()->getParameter('ark')) {
+			  $arkId = str_replace('-', '', \Drupal::routeMatch()->getParameter('edan_id'));
+			  // get the last portion of the guid
+			  $pos = strrpos($arkId, '/');
+			  $arkId = $pos ? substr($arkId, $pos + 1) : $arkId;
+
+			  $args = array(
+				  'fqs' => ['guid:*' . $arkId . ''],
+			  );
+			  $edanRecordManager = \Drupal::service('edan_record.manager');
+			  $doc = $edanRecordManager->getRecord($arkId, '[edan:url]', NULL, [], $args);
+			  if ($doc) {
+				  $entity = $edanRecordManager->entityLoad($doc['type'], 'edan_record');
+          $settings = $entity ? $entity->getRecordSettings() :  $edanRecordManager->getDefault();
+          $edanRecordManager->processData($doc, $settings);
+			  }
+		  }
+		  elseif ($edan_id) {
+			  $parsed_value = explode(':', $edan_id);
+			  $type = array_shift($parsed_value);
+			  $type = $type === 'page' ? 'objectgroup' : $type;
+			  $edanRecordManager = \Drupal::service('edan_record.manager');
+			  $entity = $edanRecordManager->entityLoad($type, 'edan_record');
+        $settings = $entity ? $entity->getRecordSettings() :  $edanRecordManager->getDefault();
+        $doc = $edanRecordManager->getRecord( $edan_id, ['edan:url'], NULL, $settings);
+		  }
+		  else {
+			  $doc = NULL;
+		  }
+	  }
+	  else {
+  		$doc = $data['edan'];
+	  }
+  	if ($doc) {
+		  foreach ($tokens as $name => $original) {
+			  $replacements[$original] = '';
+
+				  switch ($name) {
+					  case 'title':
+						  $replacements[$original] = $doc['title'];
+						  break;
+					  case 'description':
+						  $replacements[$original] = $doc['description'];
+						  break;
+					  case 'summary':
+						  $content = $doc['teaser'];
+						  $summary = $content;
+						  if (!empty($content)) {
+							  $summary = $content;
+							  $summary .= '... Learn more';
+						  }
+						  $replacements[$original] = $summary;
+
+						  break;
+					  case 'image':
+						  $replacements[$original]  = $doc['thumbnail'] ? ($doc['thumbnail']['type'] === 'Images' ? $doc['thumbnail']['content'] : $doc['thumbnail']['thumbnail']): NULL;
+						  break;
+					  case 'url':
+						  $replacements[$original] = isset($doc['objectgroup']) ? str_replace('objectgroup:', '', $doc['objectgroup']['url']) : str_replace($doc['type'] .':', '', $doc['url']);
+						  break;
+					  case 'url_title':
+						  $title = isset($doc['content']['short_title']) ? $doc['content']['short_title'] : (isset($doc['content']['title_shortname']) ? $doc['content']['title_shortname'] : $doc['title']);
+						  $title = \Drupal::service('pathauto.alias_cleaner')->cleanString($title);
+						  $id = trim(str_replace($doc['type'] .':', '', $doc['url']));
+						  $limit = 255 - strlen($id);
+						  $title = substr($title, 0, $limit);
+						  $replacements[$original] = $title .':'. $id;
+						  break;
+					  case 'id':
+						  $replacements[$original] = $doc['id'];
+						  break;
+				  }
+		  }
+	  }
+  }
+	return $replacements;
+
+}
+
+
+function edan_record_get_route_entity() {
+  $route_match = \Drupal::routeMatch();
+  // Entity will be found in the route parameters.
+  if (($route = $route_match->getRouteObject()) && ($parameters = $route->getOption('parameters'))) {
+    // Determine if the current route represents an entity.
+    foreach ($parameters as $name => $options) {
+      if (isset($options['type']) && strpos($options['type'], 'entity:') === 0) {
+        $entity = $route_match->getParameter($name);
+        if ($entity instanceof \Drupal\Core\Entity\ContentEntityInterface && $entity->hasLinkTemplate('canonical')) {
+          return $entity;
+        }
+
+        // Since entity was found, no need to iterate further.
+        return NULL;
+      }
+    }
+  }
+}
+
+/**
+ * Implements template_preprocess_html().
+ */
+function edan_record_preprocess_html(&$variables) {
+  // Hide admin toolbar.
+//  dump(\Drupal::routeMatch()->getRouteName());
+//  dump(\Drupal::routeMatch()->getRouteObject());
+//  dump(\Drupal::routeMatch()->getParameters());
+
+  if (\Drupal::routeMatch()->getRouteName() === 'edan_record.viewer') {
+    if (!empty($variables['attributes']['class'])) {
+      unset($variables['page_top']['toolbar']);
+      $variables['attributes']['class'] = array_filter($variables['attributes']['class'], function ($value) {
+        return strpos($value, 'toolbar-') !== 0;
+      });
+    }
+  }
+
+  if (\Drupal::routeMatch()->getParameter('edan_id')) {
+    $variables['attributes']['class'][] = 'edan-record-page';
+
+    $entity = \Drupal::routeMatch()->getParameter('entity');
+    $edan_id = \Drupal::routeMatch()->getParameter('edan_id');
+    $page_id = \Drupal::routeMatch()->getParameter('page_id');
+
+    if ($edan_id && $entity) {
+      $setting = $entity->getRecordSettings();
+      if ($page_id) {
+        $doc = $entity->getManager()
+          ->getRecord($edan_id . ':' . $page_id, $entity->get('path_key'), 'page', $setting);
+      } else {
+        $doc = $entity->getManager()
+          ->getRecord($edan_id, $entity->get('path_key'), $entity->id(), $setting);
+      }
+
+      if (!empty($doc)) {
+        if (isset($doc["title_plain"])) {
+          $og_title = array(
+            '#tag' => 'meta',
+            '#attributes' => array(
+              'property' => 'og:title',
+              'content' => $doc["title_plain"],
+            ),
+          );
+          $variables["page"]["#attached"]["html_head"][] = [$og_title, 'og_title'];
+        }
+
+        if (isset($doc["thumbnail"]["content"])) {
+          $thumb_url_orig = $doc["thumbnail"]["content"];
+          $thumb_url = (strpos($thumb_url_orig, 'https://ids.si.edu') === 0) ? $thumb_url_orig . "&max_w=1200" : $thumb_url_orig;
+          $og_image = array(
+            '#tag' => 'meta',
+            '#attributes' => array(
+              'property' => 'og:image',
+              'content' => $thumb_url,
+            ),
+          );
+          $variables["page"]["#attached"]["html_head"][] = [$og_image, 'og_image'];
+        }
+
+        if (isset($doc["teaser"])) {
+          $og_description = array(
+            '#tag' => 'meta',
+            '#attributes' => array(
+              "property" => "og:description",
+              "content" => $doc["teaser"],
+            ),
+          );
+          $variables["page"]["#attached"]["html_head"][] = [$og_description, 'og:description'];
+        }
+      }
+    }
+  }
+}

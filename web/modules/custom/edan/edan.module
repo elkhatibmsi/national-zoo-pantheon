@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains edan.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function edan_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the edan module.
+    case 'help.page.edan':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('EDAN') . '</p>';
+      return $output;
+
+    default:
+  }
+}

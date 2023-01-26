@@ -1,0 +1,33 @@
+uuid: c8c26e0c-7826-4796-b1f8-a1a9d27b4aed
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_gallery_items
+    - media.type.image
+    - media.type.remote_video
+    - media.type.video
+    - node.type.gallery
+id: node.gallery.field_gallery_items
+field_name: field_gallery_items
+entity_type: node
+bundle: gallery
+label: 'Gallery Items'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+      remote_video: remote_video
+      video: video
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: image
+field_type: entity_reference

@@ -5,7 +5,11 @@ dependencies:
   config:
     - block_content.type.emergency_message
     - field.field.block_content.emergency_message.body
+    - field.field.block_content.emergency_message.field_alert_background_color
+    - field.field.block_content.emergency_message.field_alert_icon
   module:
+    - micon
+    - options
     - text
 id: block_content.emergency_message.default
 targetEntityType: block_content
@@ -18,5 +22,19 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: 0
+    region: content
+  field_alert_background_color:
+    type: list_key
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_alert_icon:
+    type: string_micon
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
     region: content
 hidden: {  }

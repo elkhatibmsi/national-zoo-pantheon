@@ -1,0 +1,18 @@
+services:
+  edan.client:
+    class: Drupal\edan\EdanClient\EdanClient
+    arguments: ['@config.factory']
+  edan.connector:
+    class: Drupal\edan\Connector\EdanConnectorService
+    arguments: ['@edan.client']
+  logger.channel.edan:
+    parent: logger.channel_base
+    arguments: ['edan']
+  edan.search_params:
+    class: Drupal\edan\SearchParams
+  edan.form_helper:
+    class: Drupal\edan\EdanFormHelper
+  edan.manager_base:
+    abstract: true
+    class: Drupal\edan\EdanManagerBase
+    arguments: ['@entity_type.manager', '@module_handler', '@config.factory', '@edan.connector']

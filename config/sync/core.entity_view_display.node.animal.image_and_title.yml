@@ -1,0 +1,262 @@
+uuid: 48ed3692-51c9-41f9-9278-ec69843ed670
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.image_and_title
+    - field.field.node.animal.body
+    - field.field.node.animal.field_animal_gallery
+    - field.field.node.animal.field_animal_type
+    - field.field.node.animal.field_card_position
+    - field.field.node.animal.field_communication
+    - field.field.node.animal.field_conservation_efforts
+    - field.field.node.animal.field_editorial_access
+    - field.field.node.animal.field_exhibit
+    - field.field.node.animal.field_featured_video
+    - field.field.node.animal.field_feeding_time
+    - field.field.node.animal.field_food_eating_habits
+    - field.field.node.animal.field_fun_facts
+    - field.field.node.animal.field_genus_and_species
+    - field.field.node.animal.field_help_this_species
+    - field.field.node.animal.field_image
+    - field.field.node.animal.field_image_media
+    - field.field.node.animal.field_iucn_designation
+    - field.field.node.animal.field_lifespan
+    - field.field.node.animal.field_meet_the_animals
+    - field.field.node.animal.field_modal_gallery
+    - field.field.node.animal.field_native_habitat
+    - field.field.node.animal.field_nzp_location
+    - field.field.node.animal.field_physical_description
+    - field.field.node.animal.field_reproduction_developme
+    - field.field.node.animal.field_size
+    - field.field.node.animal.field_sleep_habits
+    - field.field.node.animal.field_social_structure
+    - field.field.node.animal.field_taxonomic_class
+    - field.field.node.animal.field_taxonomic_family
+    - field.field.node.animal.field_taxonomic_order
+    - field.field.node.animal.field_teaser_image
+    - field.field.node.animal.field_teaser_title
+    - node.type.animal
+  module:
+    - entity_reference_revisions
+    - image
+    - layout_builder
+    - layout_builder_restrictions
+    - options
+    - text
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+  layout_builder_restrictions:
+    allowed_block_categories: {  }
+    entity_view_mode_restriction:
+      allowed_layouts: {  }
+      denylisted_blocks: {  }
+      allowlisted_blocks: {  }
+      restricted_categories: {  }
+id: node.animal.image_and_title
+targetEntityType: node
+bundle: animal
+mode: image_and_title
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: -20
+    region: content
+  field_animal_type:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 18
+    region: content
+  field_communication:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 11
+    region: content
+  field_conservation_efforts:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 15
+    region: content
+  field_featured_video:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 27
+    region: content
+  field_feeding_time:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  field_food_eating_habits:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 13
+    region: content
+  field_fun_facts:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 9
+    region: content
+  field_genus_and_species:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_help_this_species:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 26
+    region: content
+  field_image:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 29
+    region: content
+  field_iucn_designation:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_lifespan:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  field_meet_the_animals:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 19
+    region: content
+  field_modal_gallery:
+    type: entity_reference_revisions_entity_view
+    label: above
+    settings:
+      view_mode: full
+      link: ''
+    third_party_settings: {  }
+    weight: 28
+    region: content
+  field_native_habitat:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 17
+    region: content
+  field_physical_description:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_reproduction_developme:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 12
+    region: content
+  field_size:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 16
+    region: content
+  field_sleep_habits:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 14
+    region: content
+  field_social_structure:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_taxonomic_class:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_taxonomic_family:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_taxonomic_order:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_animal_gallery: true
+  field_card_position: true
+  field_editorial_access: true
+  field_exhibit: true
+  field_image_media: true
+  field_image_s_media: true
+  field_nzp_location: true
+  field_teaser_image: true
+  field_teaser_title: true

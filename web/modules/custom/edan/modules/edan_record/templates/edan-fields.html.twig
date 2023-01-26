@@ -1,0 +1,34 @@
+{% for key,field in rows %}
+  {% if field is iterable %}
+    <dl class="{{ key|replace({':' : '-'})|clean_class }}">
+      {% set current_label = '' %}
+      {% for metadata in field %}
+        {% if current_label != metadata.label %}
+          {% set current_label = metadata.label %}
+          <dt class="record-label">{{ metadata.label }}</dt>
+        {% endif %}
+        {% if metadata.content is iterable %}
+          {{ metadata.content }}
+        {% else %}
+          {% set body = {
+            '#type':   'processed_text',
+            '#text':    metadata.content,
+            '#format':  'edan_html',
+          } %}
+          <dd class="record-content">{{ body }}</dd>
+        {% endif %}
+
+      {% endfor %}
+    </dl>
+  {% else %}
+    <div class="{{ key|replace({':' : '-'})|clean_class }}">
+      {% set body = {
+        '#type':   'processed_text',
+        '#text':    field,
+        '#format':  'edan_html',
+      } %}
+      {{ body }}
+    </div>
+  {% endif %}
+{% endfor %}
+

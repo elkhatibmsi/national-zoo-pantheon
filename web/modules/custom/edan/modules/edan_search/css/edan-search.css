@@ -1,0 +1,272 @@
+.edan-search ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.edan-search ul li {
+  list-style-type: none;
+  list-style-image: none;
+  padding: 0;
+  margin: 0;
+}
+.edan-search-result dl {
+    display: -webkit-flex;
+  display: flex;
+  flex-flow: row wrap;
+  margin: 0;
+}
+
+.edan-search-result dt {
+  flex-basis: 33%;
+  font-weight: bold;
+  margin: .5em 0;
+}
+
+.edan-search-result dd {
+  flex-basis: 65%;
+  margin: .5em 0;
+}
+
+.edan-search-facets,
+.edan-search ul .edan-search-result {
+  padding: .5em;
+  background-color: #EFF3F4;
+  border: 1px solid #e9eef0;
+}
+
+.edan-search-result img {
+  display: block;
+  width: 100%;
+  margin-bottom: .5em;
+}
+
+.edan-search-facet-list .category {
+  font-weight: bold;
+}
+.edan-search-facet-list .facets,
+.active-facet-list{
+  margin-bottom: 1em;
+  margin-left: 1em;
+}
+.edan-search-facet-list .facets {
+  margin-left: 2em;
+}
+.edan-search-facet-list .facet {
+  padding: 0 0 .5em;
+  /*font-size: .9em;*/
+}
+
+.edan-search-facets .active-facet-list > li a {
+  display: block;
+  padding-left: 1.5em;
+  position: relative;
+  color: #9f3050;;
+ }
+.edan-search-facets .icon {
+  display: inline-block;
+}
+/*.edan-search-facets .active-facet-list > li .icon {*/
+/*  width: .75em;*/
+/*  height: .75em;*/
+/*  margin-right: .75em;*/
+/*  margin-left: -1.5em;*/
+/*}*/
+.edan-search-facets .active-facet-list > li .icon:before, .edan-search-facets .active-facet-list > li .icon:after {
+  background: #9f3050;
+  top: .75em;
+  display: block;
+  height: 2px;
+  width: .75rem;
+  position: absolute;
+  left: 0;
+  content: '';
+}
+.edan-search-facets .active-facet-list > li .icon:before {
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg); }
+.edan-search-facets .active-facet-list > li .icon:after {
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg); }
+.edan-search-facets .active-facet-list.clear-all .icon {
+  width: 0;
+  height: 0;
+  margin: 0;
+}
+.edan-search-facets .root-facet-list [data-toggle="collapse"] {
+  color: #444;
+  position: relative;
+  padding-left: 1.5em;
+}
+
+.edan-search-facets .root-facet-list .icon:before,
+.edan-search-facets .root-facet-list .icon:after {
+  -webkit-transition: all .3s ease-out;
+  transition: all .3s ease-out;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+}
+.edan-search-facets .root-facet-list .icon:after{
+  top: .5em;
+  left: 0;
+  border-top: .5em solid #444;
+  border-right: .5em solid transparent;
+  border-bottom: 0;
+  border-left: .5em solid transparent;
+}
+.edan-search-facets .root-facet-list .icon:before{
+  top: .5em;
+  left: .15em;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-top: .375em solid #EFF3F4;
+  border-right: .375em solid transparent;
+  border-bottom: 0;
+  border-left: .375em solid transparent;
+  z-index: 10;
+}
+.edan-search-facets .root-facet-list [aria-expanded="true"] .icon:after,
+.edan-search-facets .root-facet-list [aria-expanded="true"] .icon:before {
+  -webkit-transform: rotate3d(0, 0, 1, -180deg);
+  transform: rotate3d(0, 0, 1, -180deg);
+}
+.edan-search-facets .root-facet-list [aria-expanded="true"] .icon:after {top: .3em}
+
+.root-facet-list .facet {
+  -webkit-align-items: center;
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+.root-facet-list .facet-value {
+  flex-basis: auto;
+  flex-grow: 1;
+  flex-shrink: 1;
+  position: relative;
+  padding-right: 30px;
+}
+
+.root-facet-list .facet-value .count::before {
+  content: '(';
+}
+.root-facet-list .facet-value .count::after {
+  content: ')';
+}
+.root-facet-list .facet-value .icon,
+.root-facet-list .exclude-btn {
+  flex-shrink: 0;
+  position: relative;
+  height: .75em;
+  width: .75em;
+  margin-left: .625em;
+}
+.root-facet-list .facet-value .icon {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.root-facet-list .facet-value .icon::before,
+.root-facet-list .facet-value .icon::after,
+.root-facet-list .exclude-btn::before {
+  background: currentColor;
+  border: none;
+  top: 38%;
+  display: block;
+  height: 2px;
+  width: 100%;
+  position: absolute;
+  left: 50%;
+  content: '';
+  transform: translateX(-50%);
+}
+.root-facet-list .facet-value .icon::after {
+  transform: translateX(-50%) rotate(90deg);
+}
+
+.edan-search.view--list .edan-search-result.has-media{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 1.25em;
+}
+.edan-search .edan-search-result {
+  margin-bottom: 1.5em;
+}
+
+.edan-search.view--grid .edan-search-result {
+    display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: column;
+  flex-flow: column;
+}
+.edan-search.view--grid .search-results {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-gap: 1.25em;
+}
+/*Facets Display*/
+
+.edan-search .edan-search-facets .edan-search-facet-list {
+  padding: 0 .5em;
+}
+.edan-search .pager {
+  margin: 1.5em auto;
+  clear: both;
+}
+@media (max-width: 679px) {
+  .edan-skip-to-link {
+    position: static !important;
+    overflow: visible;
+    clip: auto;
+    width: auto;
+    height: auto;
+  }
+}
+@media (min-width: 680px) {
+  .edan-search.view--grid .search-results .edan-search-result {
+    margin: 0;
+  }
+  .edan-search.with-facets .wrapper--search-results{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-gap: 2.5em;
+  }
+  .edan-search.view--list .edan-search-result.has-media{
+    grid-template-columns: 2fr 10fr;
+  }
+
+  .edan-search-result dt {
+    flex-basis: 20%;
+  }
+
+  .edan-search-result dd {
+    flex-basis: 79%;
+  }
+  .edan-search:not(.view--list) .edan-search-result dt {
+    flex-basis: 33%;
+  }
+
+  .edan-searchnot:not(.view--list)  .edan-search-result dd {
+    flex-basis: 65%;
+  }
+}
+@media (min-width:1280px) {
+  .edan-search.with-facets .wrapper--search-results{
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    grid-gap: 2.5em;
+  }
+}
+
+

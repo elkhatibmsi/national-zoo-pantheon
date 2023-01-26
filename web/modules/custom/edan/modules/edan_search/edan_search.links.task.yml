@@ -1,0 +1,22 @@
+# Removed per WDEDAN-157 - krobinson
+# global edan search settings form
+# displayed as tab under /admin/config/system/edan
+# edan_search.global_settings_form:
+#  title: 'Search Settings'
+#  route_name: edan_search.global_settings_form
+#  base_route: edan.admin_settings_form
+#  weight: 10
+
+
+# The "View/Edit/Delete" tabs for edan_search_form entity.
+# Appears on the view page for edan_search_form entity.
+entity.edan_search.view:
+  route_name: entity.edan_search.canonical
+  base_route: entity.edan_search.canonical
+  title: 'View'
+  weight: -10
+entity.edan_search.edit_form:
+  route_name: entity.edan_search.edit_form
+  base_route: entity.edan_search.canonical
+  title: 'Edit'
+  weight: 0

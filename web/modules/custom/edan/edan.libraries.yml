@@ -1,0 +1,15 @@
+edan_form:
+  version: VERSION
+  css:
+    component:
+      theme/edan-form.css: {}
+plugin:
+  version: VERSION
+  css:
+    component:
+      theme/plugin.css: {}
+  js:
+    theme/plugin.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal

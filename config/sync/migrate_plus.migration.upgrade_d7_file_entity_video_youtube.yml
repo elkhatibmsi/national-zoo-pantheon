@@ -57,5 +57,4 @@ migration_dependencies:
   required:
     - upgrade_d7_file_entity_type_remote_video
     - upgrade_d7_file_entity_source_field_config_remote_video
-    - upgrade_d7_user
   optional: {  }

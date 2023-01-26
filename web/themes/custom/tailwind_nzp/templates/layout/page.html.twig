@@ -42,11 +42,8 @@
 */
 #}
 
-{% set path = path('<current>')|split('/')[1]|clean_class %}
-{% set borderClass = 'border-' ~ path %}
-
 <div class="flex bg-lightergray">
-  <div class="container m-auto !mb-0 font-sans text-sm">
+  <div class="m-auto !mb-0 w-full">
     {{page.topbar}}
   </div>
 </div>

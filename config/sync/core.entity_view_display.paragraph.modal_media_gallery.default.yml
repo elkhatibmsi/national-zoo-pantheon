@@ -10,143 +10,31 @@ dependencies:
     - paragraphs.paragraphs_type.modal_media_gallery
   module:
     - layout_builder
-    - layout_discovery
-    - nzp_layouts
+    - layout_builder_restrictions
+    - single_media
 third_party_settings:
   layout_builder:
-    enabled: true
+    enabled: false
     allow_custom: false
-    sections:
-      -
-        layout_id: layout_blank
-        layout_settings:
-          label: ''
-          context_mapping: {  }
-          custom_class: ''
-        components:
-          6fa75223-f90e-406c-a30c-4a9e3467752c:
-            uuid: 6fa75223-f90e-406c-a30c-4a9e3467752c
-            region: content
-            configuration:
-              id: 'field_block:paragraph:modal_media_gallery:field_modal_gallery_title'
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              formatter:
-                type: string
-                label: hidden
-                settings:
-                  link_to_entity: false
-                third_party_settings: {  }
-            weight: 0
-            additional: {  }
-          7ed196dd-ba59-422a-b135-82d371e9926b:
-            uuid: 7ed196dd-ba59-422a-b135-82d371e9926b
-            region: content
-            configuration:
-              id: 'field_block:paragraph:modal_media_gallery:field_modal_gallery_media'
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              formatter:
-                type: entity_reference_entity_view
-                label: hidden
-                settings:
-                  view_mode: gallery_thumbnail
-                  link: false
-                third_party_settings: {  }
-            weight: 1
-            additional: {  }
-        third_party_settings: {  }
-      -
-        layout_id: layout_onecol
-        layout_settings:
-          label: ''
-        components:
-          a3af5929-5b89-4c32-9ac8-042e1dc58c3e:
-            uuid: a3af5929-5b89-4c32-9ac8-042e1dc58c3e
-            region: content
-            configuration:
-              id: 'field_block:paragraph:modal_media_gallery:field_modal_gallery_title'
-              label: 'Gallery Title'
-              label_display: '0'
-              provider: layout_builder
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
-              formatter:
-                type: text_field_formatter
-                label: hidden
-                settings:
-                  wrap_tag: h2
-                  wrap_class: block-title
-                  wrap_attributes: ''
-                  override_link_label: ''
-                  token: ''
-                third_party_settings: {  }
-            weight: 1
-            additional:
-              component_attributes:
-                block_attributes:
-                  id: ''
-                  class: ''
-                  style: ''
-                  data: ''
-                block_title_attributes:
-                  id: ''
-                  class: ''
-                  style: ''
-                  data: ''
-                block_content_attributes:
-                  id: ''
-                  class: ''
-                  style: ''
-                  data: ''
-          27abb6b5-1148-4fc8-9f4c-fd434ea77a2f:
-            uuid: 27abb6b5-1148-4fc8-9f4c-fd434ea77a2f
-            region: content
-            configuration:
-              id: 'field_block:paragraph:modal_media_gallery:field_modal_gallery_media'
-              label: 'Gallery Media'
-              label_display: '0'
-              provider: layout_builder
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
-              formatter:
-                type: slick_entityreference_vanilla
-                label: hidden
-                settings:
-                  optionset: x_grid
-                  view_mode: slick
-                  cache: 0
-                  current_view_mode: _custom
-                  skin: classic
-                  overridables:
-                    arrows: arrows
-                    dots: dots
-                    draggable: draggable
-                    autoplay: '0'
-                    infinite: '0'
-                    mouseWheel: '0'
-                    randomize: '0'
-                    variableWidth: '0'
-                  override: true
-                  use_theme_field: false
-                third_party_settings: {  }
-            weight: 2
-            additional: {  }
-        third_party_settings: {  }
+  layout_builder_restrictions:
+    allowed_block_categories: {  }
+    entity_view_mode_restriction:
+      allowed_layouts: {  }
+      denylisted_blocks: {  }
+      allowlisted_blocks: {  }
+      restricted_categories: {  }
 id: paragraph.modal_media_gallery.default
 targetEntityType: paragraph
 bundle: modal_media_gallery
 mode: default
 content:
   field_modal_gallery_media:
-    type: entity_reference_entity_view
+    type: media_single_formatter
     label: hidden
     settings:
-      view_mode: gallery_thumbnail
+      deltas: '0,1,2,3,4,5,6,7,8'
+      view_mode: default
+      deltas_reversed: 0
       link: false
     third_party_settings: {  }
     weight: 1

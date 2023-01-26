@@ -8,19 +8,20 @@ dependencies:
     - field.field.paragraph.modal_media_gallery.field_show_read_more_link_after
     - field.field.paragraph.modal_media_gallery.field_thumbnail_positioning
     - paragraphs.paragraphs_type.modal_media_gallery
-  module:
-    - media_library
 id: paragraph.modal_media_gallery.default
 targetEntityType: paragraph
 bundle: modal_media_gallery
 mode: default
 content:
   field_modal_gallery_media:
-    type: media_library_widget
+    type: entity_reference_autocomplete
     weight: 3
     region: content
     settings:
-      media_types: {  }
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
   field_modal_gallery_title:
     type: string_textfield

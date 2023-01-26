@@ -5,6 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.animal.body
+    - field.field.node.animal.field_animal_gallery
     - field.field.node.animal.field_animal_type
     - field.field.node.animal.field_card_position
     - field.field.node.animal.field_communication
@@ -72,6 +73,7 @@ content:
 hidden:
   body: true
   content_moderation_control: true
+  field_animal_gallery: true
   field_animal_type: true
   field_card_position: true
   field_communication: true

@@ -1,0 +1,19 @@
+uuid: 6d810da5-0499-4125-b4d9-56860939fdc6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_teaser_title
+    - node.type.gallery
+id: node.gallery.field_teaser_title
+field_name: field_teaser_title
+entity_type: node
+bundle: gallery
+label: 'Teaser Title'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

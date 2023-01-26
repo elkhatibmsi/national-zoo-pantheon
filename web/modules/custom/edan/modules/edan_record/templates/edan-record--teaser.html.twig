@@ -1,0 +1,53 @@
+<!-- Record Page -->
+<div{{ attributes }}> <!-- //wrapper -->
+    {% if record.thumbnail %}
+      <figure class="thumbnail">
+        <a href="{{ record.record_link }}">
+          <img src="{{ record.thumbnail.medium }}" alt="{{ record.thumbnail.alt_text }}"/>
+          <span class="title">{{ record.title }}</span>
+        </a>
+      </figure>
+      {% else %}
+      <div class="title"> <a href="{{ record.record_link }}">
+          {{ record.title }}
+        </a></div>
+	{% endif %}
+	{% if record.fields %}
+  <div class="edan-metadata">
+				{% for key,field in record.fields %}
+					{% if field is iterable %}
+            <dl class="{{ key }}">
+							{% set current_label = '' %}
+							{% for metadata in field %}
+								{% if current_label != metadata.label %}
+									{% set current_label = metadata.label %}
+                  <dt class="record-label">{{ metadata.label }}</dt>
+								{% endif %}
+								{% if metadata.content is iterable %}
+									{{ metadata.content }}
+								{% else %}
+									{% set body = {
+										'#type':   'processed_text',
+										'#text':    metadata.content,
+										'#format':  'edan_html',
+									} %}
+                  <dd class="record-content">{{ metadata.content }}</dd>
+								{% endif %}
+
+							{% endfor %}
+            </dl>
+					{% else %}
+            <div class="{{ key }}">
+							{% set body = {
+								'#type':   'processed_text',
+								'#text':    field,
+								'#format':  'edan_html',
+							} %}
+							{{ body }}
+            </div>
+					{% endif %}
+				{% endfor %}
+
+    </div> <!-- /.edan-metadata -->
+	{% endif %}
+</div> <!-- //wrapper -->

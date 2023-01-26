@@ -1,0 +1,43 @@
+edan_record.type.*:
+  type: config_entity
+  label: 'Edan record config'
+  mapping:
+    id:
+      type: string
+      label: 'ID'
+    label:
+      type: label
+      label: 'Label'
+    uuid:
+      type: string
+    path:
+      type: string
+      label: 'Record path'
+    path_key:
+      type: string
+      label: 'Path key'
+    summary_fields:
+      type: sequence
+      label: 'Summary Fields'
+    record_fields:
+      type: sequence
+      label: 'Record Fields'
+    hidden_fields:
+      type: sequence
+      label: 'Hidden Fields'
+    teaser_fields:
+      type: sequence
+      label: 'Search Fields'
+    label_replacements:
+      type: sequence
+      label: 'Label Replacements'
+    results_per_page:
+      type: integer
+      label: 'Results per page'
+    search_form:
+      type: boolean
+      label: 'Display Search Form'
+    facet_status:
+       type: boolean
+       label: 'Include Facet'
+

@@ -19,10 +19,9 @@
  *   - class: HTML classes.
  */
 #}
-<div data-drupal-messages >
-<div class="container mx-auto">
+<div data-drupal-messages class="w-full">
 {% for type, messages in message_list %}
-  <div role="contentinfo" class="border border-t-0 bg-sap-green rounded-b font-semibold text-white px-4 py-3 {{status_headings[type]|clean_class }}" aria-label="{{ status_headings[type] }}"{{ attributes|without('role', 'aria-label') }}>
+  <div role="contentinfo" class="bg-sap-green font-semibold text-white px-4 py-3 {{status_headings[type]|clean_class }}" aria-label="{{ status_headings[type] }}"{{ attributes|without('role', 'aria-label') }}>
     {% if type == 'error' %}
       <div role="alert">
     {% endif %}
@@ -43,5 +42,4 @@
     {% endif %}
   </div>
 {% endfor %}
-</div>
 </div>

@@ -1,0 +1,12 @@
+id: edanmdm
+label: edanmdm
+path: '/object/[edan:url]'
+path_key: '[edan:url]'
+summary_fields:
+  freetext:notes: freetext:notes
+record_fields:
+  '*': '*'
+hidden_fields: []
+teaser_fields: []
+label_replacements: []
+

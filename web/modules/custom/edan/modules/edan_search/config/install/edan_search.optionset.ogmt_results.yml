@@ -1,0 +1,54 @@
+langcode: en
+status: true
+id: ogmt_results
+label: 'Object List Settings'
+description: 'Settings used to render object group results'
+summary: ''
+edan_settings:
+  endpoint: /metadata/%s/metadata/getObjectLists.htm
+  default_q: ''
+  fq_params:
+    - '-type:objectlists'
+  other_params: []
+  record_types: []
+  default_to_local_units: false
+  debug: false
+render_settings:
+  toggle_tabs: false
+  results_per_page: 24
+  results_count_message: false
+  results_empty_message: 'Your search found no results'
+  json_page: false
+  show_results_on_load: true
+  display_mode: grid
+  display_search_form: false
+  search_form_open_access: true
+  set_online_media: false
+  pager: true
+facets:
+  facet_status: true
+  facet_replacements:
+    online_media_type: 'Media type'
+    object_type: 'object type'
+    online_visual_material: 'Has media'
+    onPhysicalExhibit: 'On view'
+  facets_hide:
+    - data_source
+    - type
+    - online_visual_material
+    - online_media_type
+  facet_labels:
+    unit_code: Museum / Unit
+    data_source: Museum / Unit
+    online_media_type: Media Type
+    object_type: Resource Type
+    culture: Culture
+    date: Date
+    place: Place
+    set_name: Set Name
+    topic: Topic
+    media_usage: Media Usage
+    metadata_usage: Metadata Usage
+  facet_remove_message: 'Clear facet(s):'
+  facet_header_text: 'Facets'
+  facet_limit: 25

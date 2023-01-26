@@ -1,0 +1,17 @@
+<!-- Add you custom twig html here -->
+<div{{ attributes }}>
+  <h1>{{ tab_page_title }}</h1>
+  <p class="search-summery">{{ summary }}</p>
+  {{ search_form }}
+  <div class="wrapper--search-tabs">
+    <nav role="navigation">
+      <ul class="menu wrapper--btn">
+        {% for tab in tabs %}
+        <li>{{ tab }}</li>
+        {% endfor %}
+      </ul>
+    </nav>
+
+  </div>
+  {{ content }}
+</div>

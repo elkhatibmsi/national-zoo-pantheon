@@ -1,0 +1,18 @@
+edan.admin_config_edan:
+  title: 'EDAN'
+  parent: system.admin_config
+  description: 'EDAN settings.'
+  route_name: edan.admin_config_edan
+  menu_name: admin
+edan.admin_settings_form:
+  title: 'API'
+  parent: edan.admin_config_edan
+  description: 'Configure EDAN related settings.'
+  route_name: edan.admin_settings_form
+  weight: -1
+edan.test_connection:
+  title: 'Test Connection'
+  parent: edan.admin_config_edan
+  description: 'Test EDAN connection.'
+  route_name: edan.test_connection
+  weight: 99

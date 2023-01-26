@@ -1,0 +1,164 @@
+uuid: 8b0e08d6-c21d-416d-ba77-63c0027a3711
+langcode: en
+status: open
+dependencies: {  }
+weight: 0
+open: null
+close: null
+uid: 1
+template: false
+archive: false
+id: webform_8272
+title: 'Media Contact'
+description: null
+category: null
+elements: |
+  your_name:
+    '#type': textfield
+    '#title': 'Your Name' 
+    '#description': ""
+    '#required': true
+  your_media_outlet:
+    '#type': textfield
+    '#title': 'Your Media Outlet' 
+    '#description': ""
+    '#required': true
+  phone_number:
+    '#title': 'Phone Number' 
+    '#description': ""
+    '#required': true
+  email:
+    '#type': email
+    '#size': 20
+    '#title': 'Email' 
+    '#description': ""
+    '#required': true
+  subject:
+    '#type': textfield
+    '#title': 'Subject' 
+    '#description': ""
+    '#required': true
+  deadline:
+    '#type': processed_text
+    '#format': full_html
+    '#text': "<h3>Deadline</h3>\n"
+    '#title': 'Deadline' 
+    '#description': ""
+  date:
+    '#type': date
+    '#title': 'Date' 
+    '#description': ""
+  time:
+    '#type': time
+    '#title': 'Time' 
+    '#description': ""
+  message:
+    '#type': textarea
+    '#title': 'Message' 
+    '#description': ""
+    '#required': true
+css: ''
+javascript: ''
+settings:
+  page: true
+  wizard_progress_bar: true
+  preview: 0
+  draft: '0'
+  draft_auto_save: false
+  confirmation_type: inline
+  confirmation_url: ''
+  confirmation_message: "<p>Thank you for your request, we will respond to your inquiry as soon as possible.</p>\r\n"
+  limit_total: null
+  limit_user: 3
+  form_submit_label: ''
+  wizard_complete: 1
+access:
+  create:
+    roles:
+      - anonymous
+      - authenticated
+    users: {  }
+handlers:
+  email_2:
+    id: email
+    handler_id: email_2
+    label: 'Email 2'
+    notes: ''
+    status: true
+    conditions: {  }
+    weight: 2
+    settings:
+      states:
+        - completed
+      to_mail: ZooSCBICommunications@si.edu
+      to_options: {  }
+      bcc_mail: ''
+      bcc_options: {  }
+      cc_mail: ''
+      cc_options: {  }
+      from_mail: '[webform_submission:values:email:raw]'
+      from_options: {  }
+      from_name: '[webform_submission:values:your_name:raw]'
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
+      subject: default
+      body: |
+        Submitted on [webform_submission:date:long]
+        Submitted by user: [webform_submission:user]
+        Submitted values are:
+        [webform_submission:values]
+      excluded_elements: {  }
+      ignore_access: false
+      exclude_empty: true
+      exclude_empty_checkbox: false
+      exclude_attachments: false
+      html: false
+      attachments: false
+      twig: false
+      theme_name: ''
+      parameters: {  }
+      debug: false
+  email_3:
+    id: email
+    handler_id: email_3
+    label: 'Email 3'
+    notes: ''
+    status: true
+    conditions: {  }
+    weight: 3
+    settings:
+      states:
+        - completed
+      to_mail: enchelmeyera@si.edu
+      to_options: {  }
+      bcc_mail: ''
+      bcc_options: {  }
+      cc_mail: ''
+      cc_options: {  }
+      from_mail: '[webform_submission:values:email:raw]'
+      from_options: {  }
+      from_name: '[webform_submission:values:your_name:raw]'
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
+      subject: default
+      body: |
+        Submitted on [webform_submission:date:long]
+        Submitted by user: [webform_submission:user]
+        Submitted values are:
+        [webform_submission:values]
+      excluded_elements: {  }
+      ignore_access: false
+      exclude_empty: true
+      exclude_empty_checkbox: false
+      exclude_attachments: false
+      html: false
+      attachments: false
+      twig: false
+      theme_name: ''
+      parameters: {  }
+      debug: false
+variants: {  }

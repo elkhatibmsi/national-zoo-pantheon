@@ -1,0 +1,216 @@
+uuid: 533776a8-e7cf-4360-9f19-74c32e19bb75
+langcode: en
+status: open
+dependencies: {  }
+weight: 0
+open: null
+close: null
+uid: 173
+template: false
+archive: false
+id: webform_16693
+title: 'Request for Use of Shorebird Tracking Data'
+description: null
+category: null
+elements: |
+  introduction:
+    '#type': processed_text
+    '#format': full_html
+    '#text': "<p>Collaborators across the Western Hemisphere have contributed tracking data from over 2,800 individuals representing 31 shorebird species as a single resource for use in management, conservation, and education and outreach. <a href='/migratory-birds/shorebird-collective'>Find out more here.</a></p>\n\n<p>If you have a project that could benefit from this resource, please use this form to provide details of your request. Requests should be specific and provide enough context for Shorebird Collective team members to understand the request. Completed forms will be reviewed by the Shorebird Collective and a team member will reply with additional questions and/or updates as needed. If you have any questions, <a href='mailto:StenzelC@si.edu?subject=Request%20for%20Use%20of%20Shorebird%20Tracking%20Data%20Inquiry'>please contact Regional Conservation Specialist, Candace Stenzel.</a></p>\n\n<h3>What data can the Shorebird Collective provide?</h3>\n\n<p>The Shorebird Collective team based at Smithsonian’s National Zoo and Conservation Biology Institute are the curators of the contributed data, but the data remained “owned” by the contributors and use is governed by a <a href='/migratory-birds/shorebird-science-and-conservation-collective-data-sharing-agreement-form'>Data Sharing Agreement</a>. We facilitate data discovery and requests for use. In many cases, contributors have provided permission for use in conservation or outreach without needing further requests. In other cases, we may require additional approval, especially for requests for raw data or use in scholarly work (for example, in scientific publications). Requests are therefore not guaranteed.</p>\n\n<p>The Shorebird Collective can provide maps and summary statistics for shorebird tracking data relevant to your project. A Shorebird Collective team member may also be able to collaborate with you on a needed analysis for your conservation project depending on time and priorities.</p>\nIf you would like to learn more about the Shorebird Collective and what data and resources may be relevant to your work before completing this form, <a href='mailto:StenzelC@si.edu?subject=Request%20for%20Use%20of%20Shorebird%20Tracking%20Data%20Inquiry'>please contact Regional Conservation Specialist, Candace Stenzel.</a>"
+    '#title': 'Introduction' 
+    '#description': ""
+  name:
+    '#type': textfield
+    '#default_value': 'ex: John Dove' 
+    '#title': 'Name' 
+    '#description': ""
+    '#required': true
+  job_title_organization:
+    '#type': textfield
+    '#default_value': 'Bird scientist, Bring Back the Birds' 
+    '#title': 'Job Title and Organization' 
+    '#description': ""
+    '#required': true
+  state_province_country:
+    '#type': textfield
+    '#default_value': 'Birdtown, USA' 
+    '#title': 'State/Province, Country' 
+    '#description': ""
+    '#required': true
+  email:
+    '#type': email
+    '#size': 20
+    '#default_value': 'birdsrock@birds.com' 
+    '#title': 'Email' 
+    '#description': ""
+    '#required': true
+  phone:
+    '#default_value': '123-456-7889' 
+    '#title': 'Phone' 
+    '#description': ""
+    '#required': true
+  names_and_organizations_of_any_co_requesters:
+    '#type': textfield
+    '#default_value': 'Joe Wren, Fly the Skies Org and Lana Duck, Water Foul Fanatic, LLC' 
+    '#title': 'Names and Organizations of any co-requesters' 
+    '#description': ""
+    '#required': true
+  brief_overview:
+    '#type': textarea
+    '#title': 'Please provide a brief overview of your request, with a general description of what information is needed, for what species and areas, and for what purposes.' 
+    '#description': ""
+    '#required': true
+  please_provide_details_of_who_will_use_and_or_view_any_data:
+    '#type': textarea
+    '#title': 'Please provide details of who will use and/or view any data or products provided by the Shorebird Collective and its contributors.' 
+    '#description': ""
+    '#required': true
+  what_end_product_are_you_requesting:
+    '#type': textarea
+    '#title': 'What end-product are you requesting (e.g., map, summary statistics, written description, other)?' 
+    '#description': ""
+    '#required': true
+  how_will_the_end_product_be_distributed:
+    '#type': textarea
+    '#title': 'How will the end-product be distributed? How many people will the end-product reach?' 
+    '#description': ""
+    '#required': true
+  what_is_your_timeline:
+    '#type': textarea
+    '#title': 'What is your timeline for receiving products for your request?' 
+    '#description': ""
+    '#required': true
+css: ''
+javascript: ''
+settings:
+  page: true
+  wizard_progress_bar: true
+  preview: 0
+  draft: '0'
+  draft_auto_save: false
+  confirmation_type: page
+  confirmation_url: ''
+  confirmation_message: ''
+  limit_total: null
+  limit_user: 1
+  form_submit_label: ''
+  wizard_complete: 1
+access:
+  create:
+    roles:
+      - anonymous
+      - authenticated
+    users: {  }
+handlers:
+  email_1:
+    id: email
+    handler_id: email_1
+    label: 'Email 1'
+    notes: ''
+    status: true
+    conditions: {  }
+    weight: 1
+    settings:
+      states:
+        - completed
+      to_mail: enchelmeyera@si.edu
+      to_options: {  }
+      bcc_mail: ''
+      bcc_options: {  }
+      cc_mail: ''
+      cc_options: {  }
+      from_mail: default
+      from_options: {  }
+      from_name: default
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
+      subject: default
+      body: default
+      excluded_elements: {  }
+      ignore_access: false
+      exclude_empty: true
+      exclude_empty_checkbox: false
+      exclude_attachments: false
+      html: false
+      attachments: false
+      twig: false
+      theme_name: ''
+      parameters: {  }
+      debug: false
+  email_2:
+    id: email
+    handler_id: email_2
+    label: 'Email 2'
+    notes: ''
+    status: true
+    conditions: {  }
+    weight: 2
+    settings:
+      states:
+        - completed
+      to_mail: StenzelC@si.edu
+      to_options: {  }
+      bcc_mail: ''
+      bcc_options: {  }
+      cc_mail: ''
+      cc_options: {  }
+      from_mail: default
+      from_options: {  }
+      from_name: default
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
+      subject: default
+      body: default
+      excluded_elements: {  }
+      ignore_access: false
+      exclude_empty: true
+      exclude_empty_checkbox: false
+      exclude_attachments: false
+      html: false
+      attachments: false
+      twig: false
+      theme_name: ''
+      parameters: {  }
+      debug: false
+  email_3:
+    id: email
+    handler_id: email_3
+    label: 'Email 3'
+    notes: ''
+    status: true
+    conditions: {  }
+    weight: 3
+    settings:
+      states:
+        - completed
+      to_mail: harrisonal@si.edu
+      to_options: {  }
+      bcc_mail: ''
+      bcc_options: {  }
+      cc_mail: ''
+      cc_options: {  }
+      from_mail: default
+      from_options: {  }
+      from_name: default
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
+      subject: default
+      body: default
+      excluded_elements: {  }
+      ignore_access: false
+      exclude_empty: true
+      exclude_empty_checkbox: false
+      exclude_attachments: false
+      html: false
+      attachments: false
+      twig: false
+      theme_name: ''
+      parameters: {  }
+      debug: false
+variants: {  }

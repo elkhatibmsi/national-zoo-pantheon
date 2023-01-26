@@ -1,0 +1,218 @@
+uuid: 61a76410-6916-429a-a9f3-04fda220b663
+langcode: en
+status: closed
+dependencies: {  }
+weight: 0
+open: null
+close: null
+uid: 1
+template: false
+archive: false
+id: webform_7654
+title: 'Photo club contact'
+description: null
+category: null
+elements: |
+  name:
+    '#type': textfield
+    '#title': 'Your Name' 
+    '#description': ""
+    '#required': true
+  your_email:
+    '#type': email
+    '#size': 20
+    '#title': 'Your Email' 
+    '#description': ""
+    '#required': true
+  member_number:
+    '#title': 'Member Number' 
+    '#description': ""
+    '#required': true
+  phone_number:
+    '#title': 'Phone Number' 
+    '#description': ""
+  message:
+    '#type': textarea
+    '#title': 'Message' 
+    '#description': ""
+  disclaimer:
+    '#type': processed_text
+    '#format': full_html
+    '#text': "[block:bean=fonz-privacy-disclamer]"
+    '#title': 'Disclaimer' 
+    '#description': ""
+css: ''
+javascript: ''
+settings:
+  page: true
+  wizard_progress_bar: true
+  preview: 0
+  draft: '0'
+  draft_auto_save: false
+  confirmation_type: inline
+  confirmation_url: ''
+  confirmation_message: "<p>Thank you for your submission. Someone will be in touch with your shortly.</p>\r\n"
+  limit_total: null
+  limit_user: 5
+  form_submit_label: ''
+  wizard_complete: 1
+access:
+  create:
+    roles:
+      - anonymous
+      - authenticated
+    users: {  }
+handlers:
+  email_2:
+    id: email
+    handler_id: email_2
+    label: 'Email 2'
+    notes: ''
+    status: true
+    conditions: {  }
+    weight: 2
+    settings:
+      states:
+        - completed
+      to_mail: enchelmeyera@si.edu
+      to_options: {  }
+      bcc_mail: ''
+      bcc_options: {  }
+      cc_mail: ''
+      cc_options: {  }
+      from_mail: default
+      from_options: {  }
+      from_name: default
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
+      subject: default
+      body: |
+        Submitted on [webform_submission:date:long]
+        Submitted by user: [webform_submission:user]
+        Submitted values are:
+        [webform_submission:values]
+      excluded_elements: {  }
+      ignore_access: false
+      exclude_empty: true
+      exclude_empty_checkbox: false
+      exclude_attachments: false
+      html: false
+      attachments: false
+      twig: false
+      theme_name: ''
+      parameters: {  }
+      debug: false
+  email_4:
+    id: email
+    handler_id: email_4
+    label: 'Email 4'
+    notes: ''
+    status: true
+    conditions: {  }
+    weight: 4
+    settings:
+      states:
+        - completed
+      to_mail: em4bstatas@comcast.net
+      to_options: {  }
+      bcc_mail: ''
+      bcc_options: {  }
+      cc_mail: ''
+      cc_options: {  }
+      from_mail: default
+      from_options: {  }
+      from_name: default
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
+      subject: default
+      body: default
+      excluded_elements: {  }
+      ignore_access: false
+      exclude_empty: true
+      exclude_empty_checkbox: false
+      exclude_attachments: false
+      html: false
+      attachments: false
+      twig: false
+      theme_name: ''
+      parameters: {  }
+      debug: false
+  email_7:
+    id: email
+    handler_id: email_7
+    label: 'Email 7'
+    notes: ''
+    status: true
+    conditions: {  }
+    weight: 7
+    settings:
+      states:
+        - completed
+      to_mail: fonzphotoclub.barb@gmail.com
+      to_options: {  }
+      bcc_mail: ''
+      bcc_options: {  }
+      cc_mail: ''
+      cc_options: {  }
+      from_mail: '[webform_submission:values:your_email:raw]'
+      from_options: {  }
+      from_name: '[webform_submission:values:name:raw]'
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
+      subject: default
+      body: default
+      excluded_elements: {  }
+      ignore_access: false
+      exclude_empty: true
+      exclude_empty_checkbox: false
+      exclude_attachments: false
+      html: false
+      attachments: false
+      twig: false
+      theme_name: ''
+      parameters: {  }
+      debug: false
+  email_8:
+    id: email
+    handler_id: email_8
+    label: 'Email 8'
+    notes: ''
+    status: true
+    conditions: {  }
+    weight: 8
+    settings:
+      states:
+        - completed
+      to_mail: ZooMembership@si.edu
+      to_options: {  }
+      bcc_mail: ''
+      bcc_options: {  }
+      cc_mail: ''
+      cc_options: {  }
+      from_mail: default
+      from_options: {  }
+      from_name: default
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
+      subject: default
+      body: default
+      excluded_elements: {  }
+      ignore_access: false
+      exclude_empty: true
+      exclude_empty_checkbox: false
+      exclude_attachments: false
+      html: false
+      attachments: false
+      twig: false
+      theme_name: ''
+      parameters: {  }
+      debug: false
+variants: {  }

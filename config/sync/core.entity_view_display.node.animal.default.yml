@@ -251,35 +251,9 @@ third_party_settings:
                 third_party_settings: {  }
             weight: 1
             additional: {  }
-        third_party_settings: {  }
-      -
-        layout_id: layout_nzp_one_col
-        layout_settings:
-          context_mapping: {  }
-          custom_classes: ''
-          region_classes:
-            content: col-md-12
-          container_classes: container
-          html_container_elements: div
-          html_region_elements:
-            content: div
-          background_color: bg-none
-          region_background_color: null
-        components:
-          5d34ea32-98c2-4f71-bf5f-7c3db4d83a97:
-            uuid: 5d34ea32-98c2-4f71-bf5f-7c3db4d83a97
-            region: content
-            configuration:
-              id: system_breadcrumb_block
-              label: Breadcrumbs
-              label_display: '0'
-              provider: system
-              context_mapping: {  }
-            weight: 0
-            additional: {  }
           7e0928fb-283f-4e39-a00d-913325d71e17:
             uuid: 7e0928fb-283f-4e39-a00d-913325d71e17
-            region: content
+            region: 'false:card'
             configuration:
               id: 'field_block:node:animal:body'
               label: Overview
@@ -311,6 +285,32 @@ third_party_settings:
                   class: ''
                   style: ''
                   data: ''
+        third_party_settings: {  }
+      -
+        layout_id: layout_nzp_one_col
+        layout_settings:
+          context_mapping: {  }
+          custom_classes: ''
+          region_classes:
+            content: col-md-12
+          container_classes: container
+          html_container_elements: div
+          html_region_elements:
+            content: div
+          background_color: bg-none
+          region_background_color: null
+        components:
+          5d34ea32-98c2-4f71-bf5f-7c3db4d83a97:
+            uuid: 5d34ea32-98c2-4f71-bf5f-7c3db4d83a97
+            region: content
+            configuration:
+              id: system_breadcrumb_block
+              label: Breadcrumbs
+              label_display: '0'
+              provider: system
+              context_mapping: {  }
+            weight: 0
+            additional: {  }
         third_party_settings: {  }
       -
         layout_id: layout_nzp_two_col

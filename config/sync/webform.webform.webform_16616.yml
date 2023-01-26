@@ -1,0 +1,372 @@
+uuid: 4f7fcbff-6b92-4e35-9abe-da2fa24b552e
+langcode: en
+status: open
+dependencies: {  }
+weight: 0
+open: null
+close: null
+uid: 173
+template: false
+archive: false
+id: webform_16616
+title: 'Shorebird Science and Conservation Collective Data Sharing Agreement Form'
+description: null
+category: null
+elements: |
+  first_page:
+    '#type': webform_wizard_page
+    '#title': Start
+    data_sharing_agreement:
+      '#type': processed_text
+      '#format': full_html
+      '#text': "<h4><a href='/migratory-birds/shorebird-collective'>&nbsp;Back to the Shorebird Science Collective&nbsp;webpage</a></h4>\n\n<h2>Background information and Detail of the Agreement</h2>\n\n<p>The Shorebird Science and Conservation Collective (hereafter, “Collective” or “Shorebird Collective”) is a partnership of scientists and practitioners working to translate the collective findings of shorebird scientists into effective on-the-ground conservation to help reverse the decline of shorebirds across the Western Hemisphere. We pledge to do this with transparency regarding how data are used to support conservation.</p>\n\n<p>Founded in late-2020 with three years of funding provided by the Knobloch Family Foundation, the work of the Collective is accomplished through three Knobloch Shorebird Conservation Fellows (hereafter Knobloch Fellows) based at the <a href='/migratory-birds'>Smithsonian Migratory Bird Center</a> that work with stakeholders across the Western Hemisphere. The Knobloch Fellows use available (i.e., from the literature or in the public domain) and contributed data to provide analytical and scientific support to multiple conservation and management stakeholders. An Advisory group composed of shorebird conservationists and researchers help guide the focus and priority projects of the Collective to ensure that the work of the Collective complements and supports existing efforts undertaken by individual scientists and organizations. A small amount of funding is also available to implement a limited number of projects on the ground. &nbsp;</p>\n\n<p>For an introduction to the idea of the Collective and its planned work, <a href='https://www.dropbox.com/s/ko6nd6xe63rgt0x/SSCCwebinar_2020Nov23.mp4?dl=0'>a recorded webinar is available here.</a></p>\n\n<p>We invite you to join the Shorebird Collective as a Data Contributor and Science Partner. Our hope is that our plan for including your data will provide allowances for a range of data-sharing permissions depending upon contributor needs (see below).</p>\n\n<h3>Ways your data may be used depending upon the permissions you set:</h3>\n\n<h4>1. Data exploration</h4>\n\n<p>Prior to use of data in any conservation applications or outreach materials (see options below), the Collective will first &nbsp;explore the data to determine its suitability for specific applications. This would include work to determine the time frame of the data, the geographic location of the data, data quality, data gaps, preliminary analyses, etc. This may result in your data not being used. The Collective will, however, send all generated products to the Data Contributor (e.g., modeled datasets, processed geolocator datasets, etc.) upon request.</p>\n\n<h4>2. Conservation applications and outreach products</h4>\n\n<p>We may compile, map, and or analyze the data you share to answer specific conservation questions. Maps, animations, and other visuals may be used in conservation workshops and/or for outreach products to illustrate conservation issues or concepts to stakeholders.</p>\n\n<p>Three example conservation questions are below that were submitted by partners to the Collective:</p>\n\n<ol>\n	<li><em><strong>Where should habitat conservation investments be made to benefit specific Canadian shorebird breeding&nbsp;populations?</strong></em><strong> </strong>\n\n	<ul>\n		<li>Example products: Connectivity and site use maps that can be searched by species (and groups of species), sub-species, population, and geography and linked to population trends to help determine where conservation dollars should be spent.</li>\n	</ul>\n	</li>\n	<li><em><strong>The prairie potholes region is difficult to accurately survey for shorebirds. From tracking data could you tell us the places that are used and the times shorebirds visit so we can target our habitat conservation work and landowner training?</strong></em>\n	<ul>\n		<li>Example products: Reports and outreach products (PowerPoint, handouts) that can be delivered to managers during workshops and training programs; these products might include animations of tracking data (if contributors agree) as outreach tools to aid in landowner training; data on the timing and duration of use to support applications for sites to become part of the Western Hemisphere Reserve Network or other conservation programs.</li>\n	</ul>\n	</li>\n	<li><em><strong>I am considering placing some of my ranch holdings into a conservation easement. Can you use shorebird&nbsp;tracking and count data to identify the best places for me to set aside for shorebirds?</strong></em>\n	<ul>\n		<li>Example products: Planning exercises to identify lands in need of conservation that would most benefit shorebirds.</li>\n	</ul>\n	</li>\n</ol>\n\n<h4>3. Websites and social media channels for educational and outreach purposes:</h4>\n\n<p>We may share conservation or outreach products on websites and social media channels for educational and outreach&nbsp;purposes, for example, on the Smithsonian Institution website, the Western Hemisphere Shorebird Group website, Shorebird &nbsp;Collective social media feeds, and other uses by request of Shorebird Collective partners.</p>\n\n<h4>4. Reports to funders</h4>\n\n<p>&nbsp;&nbsp;&nbsp; The Collective will provide reports to funders that may include maps or images of outreach products.</p>\n\n<h4>5. Scientific publications</h4>\n\n<p>Although not the primary focus of the Collective, we anticipate there may be opportunities for scientific publications, for example, methods papers, synthesis papers, or applied conservation papers.</p>\n\n<h3>You can decide how to share your data</h3>\n\n<p>To participate in the Collective, a Data Contributor provides permission to the Collective to use the data for all exploratory uses (Use Category 1 above) without additional approval. The contributor will be provided with any products or analyses produced &nbsp;upon request.</p>\n\n<p>For use category 2 above (Conservation Applications), you can specify one of two options:</p>\n\n<ol>\n	<li>The Collective may use the data for all uses without additional approval (“All uses are pre-approved”). The contributor will receive a notification of this use and will be provided with any products or analyses produced.</li>\n	<li>For each unique use, a Collective representative shall describe the intended use to the contributor and request&nbsp; specific permission for that use. The contributor will be provided with any products or analyses produced.</li>\n</ol>\n\n<p>For use categories 3 and 4 above, you can specify one of three options:</p>\n\n<ol>\n	<li>The Collective may use the data for all uses without additional approval (“All uses are pre-approved”). The contributor will receive a notification of this use and will be provided with any products or analyses produced.</li>\n	<li>For each unique use, a Collective representative shall describe the intended use to the contributor and request&nbsp; specific permission for that use. The contributor will be provided with any products or analyses produced.</li>\n	<li>The data are not available for this category of use at this time. The contributor may specify an available date by which&nbsp; the data would be available (e.g., 3 years after data has been contributed).</li>\n</ol>\n\n<p>For use category 5 above (scientific publications), you can specify one of two options. However, please note that data will never be used in a publication without permission, and we commit to early involvement of contributors in publication ideas. The two options are:</p>\n\n<ol>\n	<li>For any ideas for publications, the Data Contributor will be invited to participate early in the process. This may occur by email, or through a webinar with multiple potential authors. The Data Contributor can then decide whether they would like to participate as a co-author and have their data included.</li>\n	<li>The data are not available for this category of use at this time. The contributor may specify an available date by which the data would be available.</li>\n</ol>\n\n<h3>Data Ownership</h3>\n\n<p>Data contributed to the Shorebird Science and Conservation Collective remains the property of the data owner at all times and&nbsp;will not be shared with any third party without the previous agreement of the Data Contributor as noted below. If the Data Contributor would like to discontinue working with the Collective in the future, they may notify the Collective in writing (by&nbsp; email or letter) to revoke any permissions previously granted. This will nullify any previously signed Data Sharing Agreements.</p>\n\n<h3>Who will work with your data and how will it be protected?</h3>\n\n<p>Data sharing agreements with Data Contributors will be managed by staff supporting the Collective at the Smithsonian&nbsp;Migratory Bird Center. To transfer tracking data, contributors will be encouraged to share their data via <a href='http://www.movebank.org'>Movebank&nbsp;</a> (www.movebank.org) and to add the Shorebird Collective as a collaborator under sharing permissions. If Data Contributors do&nbsp; not wish to store their data in Movebank, they may also transfer the raw tracking data and associated metadata to the staff&nbsp;supporting the Collective at the Smithsonian Migratory Bird Center. Staff who may work with your data for the purposes of the Collective include:</p>\n\n<ul>\n	<li>Autumn-Lynn Harrison –Research Ecologist with the Smithsonian Migratory Bird Center</li>\n	<li>Three Knobloch Shorebird Conservation Fellows</li>\n</ul>\n\n<p>Data may also be shared with contractors, interns, students, or Collective collaborators solely for purposes of working on&nbsp;products designed for the Collective, all under the direction of the Smithsonian staff supporting the Collective and under the&nbsp;stipulations of this data sharing agreement. No contributed data will be shared outside of the stated uses of the Collective&nbsp;unless the Data Contributor expressly grants permission for the contributed data to be shared with other initiatives. For&nbsp;example, data will only be shared with the National Audubon Society’s Migratory Bird Initiative and the Smithsonian Institute’s&nbsp; Migratory Connectivity Project (to produce the “Atlas of Migratory Connectivity for the Birds of North America”) if copies of written agreements between the Data Contributor and these two other initiatives are provided.</p>\n\n<h3>For how long am I providing permission for data use?</h3>\n\n<p>The Collective is requesting permission to use the data indefinitely for the purposes describe above. No further use of the data will be permitted without your permission. Data contributors may choose to exit this agreement at any time and must notify a staff member of the Shorebird Collective by email.&nbsp;</p>\n\n<h3>How will my contribution be acknowledged?</h3>\n\n<p>Data Contributors will be acknowledged in all products that incorporate their data unless a contributor notifies the Collective&nbsp;that they wish not to be acknowledged. Data Contributors will be responsible for providing appropriate names, organizations,&nbsp;social media handles or other relevant citation materials for each dataset as needed. The Collective will maintain this&nbsp;information in our Data sharing permissions database.</p>\n\n<p>In addition, the Collective will establish a “wall of conservation sharing” on its website that lists each project that has agreed to&nbsp; provide their data for the conservation of shorebirds. To help you measure the conservation impact of your scientific&nbsp; contributions, this website will also include a list of conservation projects that used the data. We think giving credit to Data&nbsp;Contributors for advancing shorebird conservation is critically important.</p>\n\n<h3>What are my responsibilities as a Data Contributor and Science Partner?</h3>\n\n<p>Data Contributors should act in good faith as a science partner to assist the Collective’s staff in providing, understanding, analyzing, and applying their data so there is no misinterpretation of their data for conservation applications. Data&nbsp; Contributors shall inform the Collective of any issues with the timely submission of data, as well as updates on errors,&nbsp;inaccuracies or other problems with respect to their contributed data as soon as possible after becoming aware of such issues.&nbsp;Data Contributors are also obligated to provide regular updates on the best way for the Shorebird Collective to communicate&nbsp;with them (including updates to e-mail addresses or other preferred means of communication). The Data Contributor must&nbsp;notify the Collective if ownership of the data transfers hands so communication with the new leader can be established.</p>\n\n<p>Data Contributors are expected to respond in a timely manner to all requests for data uses that are not pre-approved according to the level of sharing agreed to in the submitted agreement. If no requested uses are approved by the Data Contributor in the&nbsp;first year of the Collective’s work, the Data Contributor will be notified that they will no longer be considered a scientific&nbsp;partner in the Shorebird Collective, and we will no longer investigate uses of their data. Their names will also be removed from the “wall of conservation sharing” (see above).</p>\n\n<p>In case of loss of contact with a data-owner (i.e., non-reply to e-mails from the Collective for more than 12 months), the&nbsp; Collective will manage the data request procedure on behalf of the data owner, consistent with any limitations originally&nbsp; stipulated by the Data Contributor.</p>\n\n<h3>Will I be notified of any revisions to this data sharing agreement?</h3>\n\n<p>As the Collective is a new initiative, we anticipate there may be a need to revise this agreement. For changes that do not affect&nbsp;the data use (i.e., to clarify potential uses), the Data Contributor will be notified without further action needed. All signatories&nbsp;will be notified of any changes that affect data use and can choose to opt out of future uses upon this notification.</p>\n\n<h3>May I use my own organization’s data sharing agreement?</h3>\n\n<p>Yes. If your organization has a standard data use agreement, you may request that we sign it, provided it will allow use of the data for the purposes described above in the categories you select in the Collective’s Data Sharing Agreement. Additionally, if you select data use options in any category that require users to seek permission before use, you are free to stipulate your own conditions in order to approve a specific data request.</p>\n"
+      '#title': 'Data Sharing Agreement' 
+      '#description': ""
+  begin_form:
+    '#type': webform_wizard_page
+    '#title': Begin Form
+    introduction:
+      '#type': processed_text
+      '#format': full_html
+      '#text': "<p></p>\n<span class='img-right-small'>[[{'fid':'13416','view_mode':'full','fields':{'format':'full','alignment':'','field_image_alt_text[und][0][value]':'Shorebirds flying over a sandy shoreline in the Delaware Bay','field_dams_number[und][0][value]':'20210517-dji_0159-001rp.jpg','field_photographer[und][0][value]':'Roshan Patel','field_notes[und][0][value]':'','external_url':''},'type':'media','field_deltas':{'1':{'format':'full','alignment':'','field_image_alt_text[und][0][value]':'Shorebirds flying over a sandy shoreline in the Delaware Bay','field_dams_number[und][0][value]':'20210517-dji_0159-001rp.jpg','field_photographer[und][0][value]':'Roshan Patel','field_notes[und][0][value]':'','external_url':''}},'attributes':{'alt':'Shorebirds flying over a sandy shoreline in the Delaware Bay','class':'media-element file-full','data-delta':'1'}}]]</span>\n\n<p></p>\n\n<p>Thank you for your interest in sharing data with the Shorebird Science and Conservation Collective.</p>\n\n<p><strong>How to use this form:</strong></p>\n\n<ul>\n	<li>A single form should be submitted for a given project (may include multiple species) by a designated lead contributor.\n	<ul>\n		<li>Other individuals involved in this project should be listed as 'contributors of the dataset.'&nbsp;</li>\n	</ul>\n	</li>\n	<li>If you have multiple types of data that you wish to share differently, please fill out a separate form in each case.&nbsp;\n	<ul>\n		<li>However, we encourage you to share as much data as possible and to keep the agreements as simple as possible.&nbsp;</li>\n	</ul>\n	</li>\n</ul>\n"
+      '#title': 'Introduction' 
+      '#description': ""
+  page_1:
+    '#type': webform_wizard_page
+    '#title': Contact Info
+    name_first_and_last:
+      '#type': textfield
+      '#default_value': 'ex: John Dove' 
+      '#title': 'Name (First and Last)' 
+      '#description': ""
+    job_title_and_organization:
+      '#type': textfield
+      '#default_value': 'ex: Senior Scientist, Birds are Best Org' 
+      '#title': 'Job Title and Organization' 
+      '#description': ""
+    state_province_country:
+      '#type': textfield
+      '#default_value': 'ex: Birdstown, USA' 
+      '#title': 'State, Province, Country' 
+      '#description': ""
+    email_address:
+      '#type': email
+      '#size': 20
+      '#default_value': 'dovej@birdsarebest.org' 
+      '#title': 'Email Address' 
+      '#description': ""
+    phone_number:
+      '#default_value': '555-555-5555' 
+      '#title': 'Phone Number' 
+      '#description': ""
+    preferred_form_of_communication:
+      '#type': radios
+      '#options':
+        1: 'Phone'
+        2: 'E-mail'
+      '#title': 'Preferred Form of Communication' 
+      '#description': ""
+  page_2:
+    '#type': webform_wizard_page
+    '#title': Data
+    data_information:
+      '#type': textarea
+      '#default_value': 'Please provide a brief description of the dataset you are contributing (include information on species, location tags deployed, question addressed. If your preferred data sharing permissions differ between species, then separate forms should be submitted for each species.' 
+      '#title': 'Data Information' 
+      '#description': ""
+    tracking_technology_information:
+      '#type': textarea
+      '#default_value': 'What tracking technology was used to collect the data? List all types separated by species if different; if your preferred data sharing permissions differ between technologies then separate forms should be submitted for each technology.' 
+      '#title': 'Tracking Technology Information' 
+      '#description': ""
+  page_3:
+    '#type': webform_wizard_page
+    '#title': Data Use
+    data_exploration:
+      '#type': radios
+      '#options':
+        1: 'I agree'
+        2: 'I do not agree'
+      '#default_value': '1' 
+      '#title': 'Data Exploration' 
+      '#description': "By contributing data to the Shorebird Collective, I agree to allow my data to be explored for conservation applications. For the following data uses, please select the level of sharing you would like us to apply"
+    conservation_applications_and_outreach:
+      '#type': radios
+      '#options':
+        1: 'I pre-approve all uses'
+        2: 'Please notify me before each use'
+      '#title': 'Conservation Applications and Outreach' 
+      '#description': ""
+    web_and_social_media_sharing:
+      '#type': radios
+      '#options':
+        1: 'I pre-approve all uses'
+        2: 'Please notify me prior to each use'
+        3: 'Do not use for this purpose at this time'
+      '#title': 'Web and Social Media Sharing' 
+      '#description': ""
+    funder_reports:
+      '#type': radios
+      '#options':
+        1: 'I pre-approve all uses'
+        2: 'Please notify me prior to each use'
+        3: 'Do not use for this purpose at this time'
+      '#title': 'Funder Reports' 
+      '#description': ""
+    scientific_publications:
+      '#type': radios
+      '#options':
+        1: 'Please notify me early in the process when considering how my data might contribute to an idea for a scientific publication and to request permission for use.'
+        3: 'Do not use for this purpose at this time'
+      '#title': 'Scientific Publications' 
+      '#description': ""
+  page_4:
+    '#type': webform_wizard_page
+    '#title': Contributors
+    additional_contributors:
+      '#type': textarea
+      '#default_value': 'Please list any additional contributors (i.e., co-owners) of the dataset.' 
+      '#title': 'Additional Contributors' 
+      '#description': ""
+    additional_contributors_permissions:
+      '#type': radios
+      '#options':
+        1: 'Yes'
+        2: 'Not yet'
+        3: 'There are no other contributors'
+      '#title': 'Additional Contributors Permissions' 
+      '#description': "I have checked with other contributors and all have given permission for data to be contributed and used as indicated in this agreement."
+  page_5:
+    '#type': webform_wizard_page
+    '#title': Data Sharing
+    data_sharing:
+      '#type': radios
+      '#options':
+        1: 'With Movebank (Our Movebank username is ShorebirdCollective)'
+        2: 'Direct Send'
+        3: 'Other'
+      '#title': 'Data Sharing' 
+      '#description': "How will you be sharing your data? If other, please describe below. "
+    data_sharing_other:
+      '#type': textarea
+      '#title': 'Data Sharing Other' 
+      '#description': "If other, please describe below."
+      '#states':
+        visible:
+          ':input[name="data_sharing"]':
+            value: '3'
+            
+    data_sharing_movebank_username:
+      '#type': textfield
+      '#title': 'Data Sharing Movebank Username' 
+      '#description': "If you will share your data with Movebank, please provide your username:"
+      '#states':
+        visible:
+          ':input[name="data_sharing"]':
+            value: '1'
+            
+    data_citation:
+      '#type': textarea
+      '#default_value': 'If these data have been published, please provide full citation.' 
+      '#title_display': inline
+      '#title': 'Data Citation' 
+      '#description': ""
+    not_published_citation_information:
+      '#type': textarea
+      '#default_value': 'ex: John Dove, Bird Tracking, Birds are Best Org' 
+      '#title': 'Not Published Citation Information' 
+      '#description': "If your data have not yet been published, how would you like the data to be cited? (e.g., contributor name, project name, and organization)?"
+  page_6:
+    '#type': webform_wizard_page
+    '#title': Additional Conditions
+    additional_conditions:
+      '#type': textarea
+      '#default_value': 'Please describe any additional conditions that must be met for this data sharing agreement to be finalized. If the condition is outside the scope of this agreement, an amendment may be necessary.' 
+      '#title': 'Additional Conditions' 
+      '#description': "Please describe any additional conditions that must be met for this data sharing agreement to be finalized. If the condition is outside the scope of this agreement, an amendment may be necessary."
+  page_7:
+    '#type': webform_wizard_page
+    '#title': Agreement
+    agreement_text:
+      '#type': processed_text
+      '#format': full_html
+      '#text': "<p>By submitting this form, you grant a non-exclusive, royalty-free license to the Smithsonian Migratory Bird Center to use, in whole or part, your contributed data in connection with the Shorebird Science and Conservation Collective as indicated in the data use section. By contributing data, Data Contributors and the Shorebird Collective team agree to adhere to the&nbsp;terms of use.<br />\n<br />\nPlease contact Autumn-Lynn Harrison <a href='mailto:HarrisonAL@si.edu?subject=Shorebird%20Collective%20Agreement%20Inquiry'>(HarrisonAL@si.edu)</a> with questions.</p>\n"
+      '#title': 'Agreement Text' 
+      '#description': ""
+    agreement:
+      '#type': radios
+      '#options':
+        1: 'I have read and agree to the terms of the Shorebird Science and Conservation Collective data contributor and license agreement.'
+      '#title': 'Agreement' 
+      '#description': "Please indicate your agreement:"
+css: ''
+javascript: ''
+settings:
+  page: true
+  wizard_progress_bar: true
+  preview: 0
+  draft: '0'
+  draft_auto_save: false
+  confirmation_type: page
+  confirmation_url: ''
+  confirmation_message: 'Thank you for your submission. Someone will be in touch with you shortly.'
+  limit_total: null
+  limit_user: 10
+  form_submit_label: ''
+  wizard_complete: 1
+access:
+  create:
+    roles:
+      - anonymous
+      - authenticated
+    users: {  }
+handlers:
+  email_1:
+    id: email
+    handler_id: email_1
+    label: 'Email 1'
+    notes: ''
+    status: true
+    conditions: {  }
+    weight: 1
+    settings:
+      states:
+        - completed
+      to_mail: enchelmeyera@si.edu
+      to_options: {  }
+      bcc_mail: ''
+      bcc_options: {  }
+      cc_mail: ''
+      cc_options: {  }
+      from_mail: default
+      from_options: {  }
+      from_name: default
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
+      subject: default
+      body: default
+      excluded_elements: {  }
+      ignore_access: false
+      exclude_empty: true
+      exclude_empty_checkbox: false
+      exclude_attachments: false
+      html: false
+      attachments: false
+      twig: false
+      theme_name: ''
+      parameters: {  }
+      debug: false
+  email_2:
+    id: email
+    handler_id: email_2
+    label: 'Email 2'
+    notes: ''
+    status: true
+    conditions: {  }
+    weight: 2
+    settings:
+      states:
+        - completed
+      to_mail: stenzelc@si.edu
+      to_options: {  }
+      bcc_mail: ''
+      bcc_options: {  }
+      cc_mail: ''
+      cc_options: {  }
+      from_mail: default
+      from_options: {  }
+      from_name: default
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
+      subject: default
+      body: default
+      excluded_elements: {  }
+      ignore_access: false
+      exclude_empty: true
+      exclude_empty_checkbox: false
+      exclude_attachments: false
+      html: false
+      attachments: false
+      twig: false
+      theme_name: ''
+      parameters: {  }
+      debug: false
+  email_3:
+    id: email
+    handler_id: email_3
+    label: 'Email 3'
+    notes: ''
+    status: true
+    conditions: {  }
+    weight: 3
+    settings:
+      states:
+        - completed
+      to_mail: harrisonal@si.edu
+      to_options: {  }
+      bcc_mail: ''
+      bcc_options: {  }
+      cc_mail: ''
+      cc_options: {  }
+      from_mail: default
+      from_options: {  }
+      from_name: default
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
+      subject: default
+      body: default
+      excluded_elements: {  }
+      ignore_access: false
+      exclude_empty: true
+      exclude_empty_checkbox: false
+      exclude_attachments: false
+      html: false
+      attachments: false
+      twig: false
+      theme_name: ''
+      parameters: {  }
+      debug: false
+  email_4:
+    id: email
+    handler_id: email_4
+    label: 'Email 4'
+    notes: ''
+    status: true
+    conditions: {  }
+    weight: 4
+    settings:
+      states:
+        - completed
+      to_mail: andersona@si.edu
+      to_options: {  }
+      bcc_mail: ''
+      bcc_options: {  }
+      cc_mail: ''
+      cc_options: {  }
+      from_mail: default
+      from_options: {  }
+      from_name: default
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
+      subject: default
+      body: default
+      excluded_elements: {  }
+      ignore_access: false
+      exclude_empty: true
+      exclude_empty_checkbox: false
+      exclude_attachments: false
+      html: false
+      attachments: false
+      twig: false
+      theme_name: ''
+      parameters: {  }
+      debug: false
+variants: {  }

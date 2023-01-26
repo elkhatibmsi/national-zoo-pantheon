@@ -1,0 +1,148 @@
+uuid: 6165d7ca-1ba2-4fcd-a616-3ee4d1aa33d5
+langcode: en
+status: open
+dependencies: {  }
+weight: 0
+open: null
+close: null
+uid: 992
+template: false
+archive: false
+id: webform_16446
+title: 'Group Ticket Reservations'
+description: null
+category: null
+elements: |
+  is_your_visit_within_the_next_30_days:
+    '#type': radios
+    '#options':
+      1: 'Yes'
+      2: 'No'
+    '#title': 'Is your visit within the next 30 days?' 
+    '#description': ""
+    '#required': true
+  continue:
+    '#type': processed_text
+    '#format': full_html
+    '#text': "<p>Great, please complete and submit this form. Someone will be in touch soon.</p>\n\n<p><strong>Please note:</strong>&nbsp;Group reservations are processed Monday through Friday. Requests must be made a&nbsp;minimum of 72-hours prior to the&nbsp;date of your visit.</p>\n"
+    '#title': 'Continue' 
+    '#description': ""
+    '#states':
+      visible:
+        ':input[name="is_your_visit_within_the_next_30_days"]':
+          value: '1'
+          
+  stop:
+    '#type': processed_text
+    '#format': full_html
+    '#text': "<strong><mark>Please only submit this form if your visit is within the next 30 days.</mark> At this time, we can only process group reservations up to 30 days in advance. </strong>If you need a reservation for a later date, please contact us closer to the date your visit."
+    '#title': 'Stop' 
+    '#description': ""
+    '#states':
+      visible:
+        ':input[name="is_your_visit_within_the_next_30_days"]':
+          value: '2'
+          
+  name:
+    '#type': textfield
+    '#title': 'Name' 
+    '#description': ""
+    '#required': true
+  email_address:
+    '#type': email
+    '#size': 20
+    '#title': 'Email Address' 
+    '#description': ""
+    '#required': true
+  date_of_visit:
+    '#type': textfield
+    '#title': 'Date of visit' 
+    '#description': ""
+    '#required': true
+  how_many_people_are_in_your_group:
+    '#type': textfield
+    '#size': 20
+    '#min': 
+    '#max': 
+    '#step': 
+    '#unique': false
+    '#title': 'How many people are in your group?' 
+    '#description': "Example: 17, 24, 120"
+    '#required': true
+  are_you_looking_for_parking:
+    '#type': radios
+    '#options':
+      1: 'Yes'
+      2: 'No'
+    '#title': 'Are you looking for parking?' 
+    '#description': ""
+    '#required': true
+  additional_information:
+    '#type': textarea
+    '#title': 'Additional information' 
+    '#description': ""
+css: ''
+javascript: ''
+settings:
+  page: true
+  wizard_progress_bar: true
+  preview: 0
+  draft: '0'
+  draft_auto_save: false
+  confirmation_type: page
+  confirmation_url: ''
+  confirmation_message: "<p>Thank you for submitting a group reservation request.&nbsp;We'lll get back to you as quickly as possible to confirm your reservation.</p>\r\n\r\n<p><strong>Please note:</strong>&nbsp;Group reservations are processed Monday through Friday. Requests for group reservations must be made a&nbsp;minimum of 72-hours prior to the&nbsp;date of your visit.</p>\r\n<!-- <p>Thank you for your inquiry. It's peak spring break season, and our group reservations team may be away from their desks.</p>\r\n\r\n<p>We're responding to requests in order of visitation date and will get back to you as quickly as possible to confirm your reservation.</p>\r\n\r\n<p>Please note that bus drop-off and parking inside the Zoo is unavailable from April 7-18.</p> -->"
+  limit_total: null
+  limit_user: null
+  form_submit_label: ''
+  wizard_complete: 1
+access:
+  create:
+    roles:
+      - anonymous
+      - authenticated
+    users: {  }
+handlers:
+  email_1:
+    id: email
+    handler_id: email_1
+    label: 'Email 1'
+    notes: ''
+    status: true
+    conditions: {  }
+    weight: 1
+    settings:
+      states:
+        - completed
+      to_mail: nzp-visitorservices@si.edu
+      to_options: {  }
+      bcc_mail: ''
+      bcc_options: {  }
+      cc_mail: ''
+      cc_options: {  }
+      from_mail: default
+      from_options: {  }
+      from_name: '[webform_submission:values:name:raw]'
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
+      subject: default
+      body: |-
+        Submitted on [webform_submission:date:long]
+
+        Submitted by user: [webform_submission:user]
+
+        [webform_submission:values]
+      excluded_elements: {  }
+      ignore_access: false
+      exclude_empty: true
+      exclude_empty_checkbox: false
+      exclude_attachments: false
+      html: false
+      attachments: false
+      twig: false
+      theme_name: ''
+      parameters: {  }
+      debug: false
+variants: {  }

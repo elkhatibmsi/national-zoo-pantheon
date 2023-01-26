@@ -1,0 +1,190 @@
+uuid: 55c7dbf8-98fc-4659-81f9-8111aafbc2f5
+langcode: en
+status: closed
+dependencies: {  }
+weight: 0
+open: null
+close: null
+uid: 992
+template: false
+archive: false
+id: webform_10117
+title: 'Name the Kiwi Chick Submission Form'
+description: null
+category: null
+elements: |
+  first_name:
+    '#type': textfield
+    '#title': 'First Name' 
+    '#description': ""
+    '#required': true
+  last_name:
+    '#type': textfield
+    '#title': 'Last Name' 
+    '#description': ""
+    '#required': true
+  email_address:
+    '#type': email
+    '#size': 20
+    '#title': 'Email Address' 
+    '#description': ""
+    '#required': true
+  country:
+    '#type': textfield
+    '#title': 'Country' 
+    '#description': ""
+    '#required': true
+  name_suggestion:
+    '#type': textfield
+    '#title': 'Name Suggestion' 
+    '#description': ""
+    '#required': true
+  explanation:
+    '#type': textfield
+    '#title': 'Explanation' 
+    '#description': "In a sentence or two, tell us why you chose this name."
+    '#required': true
+  email_sign_up:
+    '#type': checkboxes
+    '#options':
+      1: 'National Zoo News'
+      2: 'Giant Panda Update'
+      3: 'Smithsonian Conservation Biology Institute News'
+      4: 'Learn more about Zoo membership'
+    '#multiple': true
+    '#title': 'Email Sign Up' 
+    '#description': "Get exclusive animal content, photos, event information and more, right to your inbox! \nCheck the buttons below to sign up for e-newsletters from the Smithsonian's National Zoo and Conservation Biology Institute."
+css: ''
+javascript: ''
+settings:
+  page: true
+  wizard_progress_bar: true
+  preview: 0
+  draft: '0'
+  draft_auto_save: false
+  confirmation_type: url
+  confirmation_url: /animals/name-kiwi-chick
+  confirmation_message: "<h3>Thank you for your submission! Follow <a href=\"https://twitter.com/nationalzoo\">@NationalZoo</a> on Twitter to vote for your favorite name.</h3>\r\n"
+  limit_total: null
+  limit_user: 1
+  form_submit_label: ''
+  wizard_complete: 1
+access:
+  create:
+    roles:
+      - anonymous
+      - authenticated
+    users: {  }
+handlers:
+  email_1:
+    id: email
+    handler_id: email_1
+    label: 'Email 1'
+    notes: ''
+    status: true
+    conditions: {  }
+    weight: 1
+    settings:
+      states:
+        - completed
+      to_mail: goetza@si.edu
+      to_options: {  }
+      bcc_mail: ''
+      bcc_options: {  }
+      cc_mail: ''
+      cc_options: {  }
+      from_mail: default
+      from_options: {  }
+      from_name: default
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
+      subject: default
+      body: default
+      excluded_elements: {  }
+      ignore_access: false
+      exclude_empty: true
+      exclude_empty_checkbox: false
+      exclude_attachments: false
+      html: false
+      attachments: false
+      twig: false
+      theme_name: ''
+      parameters: {  }
+      debug: false
+  email_2:
+    id: email
+    handler_id: email_2
+    label: 'Email 2'
+    notes: ''
+    status: true
+    conditions: {  }
+    weight: 2
+    settings:
+      states:
+        - completed
+      to_mail: enchelmeyera@si.edu
+      to_options: {  }
+      bcc_mail: ''
+      bcc_options: {  }
+      cc_mail: ''
+      cc_options: {  }
+      from_mail: default
+      from_options: {  }
+      from_name: default
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
+      subject: default
+      body: default
+      excluded_elements: {  }
+      ignore_access: false
+      exclude_empty: true
+      exclude_empty_checkbox: false
+      exclude_attachments: false
+      html: false
+      attachments: false
+      twig: false
+      theme_name: ''
+      parameters: {  }
+      debug: false
+  email_3:
+    id: email
+    handler_id: email_3
+    label: 'Email 3'
+    notes: ''
+    status: true
+    conditions: {  }
+    weight: 3
+    settings:
+      states:
+        - completed
+      to_mail: meyeran@si.edu
+      to_options: {  }
+      bcc_mail: ''
+      bcc_options: {  }
+      cc_mail: ''
+      cc_options: {  }
+      from_mail: default
+      from_options: {  }
+      from_name: default
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
+      subject: default
+      body: default
+      excluded_elements: {  }
+      ignore_access: false
+      exclude_empty: true
+      exclude_empty_checkbox: false
+      exclude_attachments: false
+      html: false
+      attachments: false
+      twig: false
+      theme_name: ''
+      parameters: {  }
+      debug: false
+variants: {  }

@@ -1,0 +1,164 @@
+uuid: 2318499c-e8cf-4345-a77c-fc880df2fed3
+langcode: en
+status: open
+dependencies: {  }
+weight: 0
+open: null
+close: null
+uid: 169
+template: false
+archive: false
+id: webform_9505
+title: 'Bridging the Americas'
+description: null
+category: null
+elements: |
+  fieldset_maestroa:
+    '#type': fieldset
+    '#open': true
+    '#title': 'Teacher Info' 
+    '#description': ""
+    nombre_1:
+      '#type': textfield
+      '#title': 'Name' 
+      '#description': ""
+    email_1:
+      '#type': email
+      '#size': 20
+      '#title': 'Email' 
+      '#description': ""
+    telefono_1:
+      '#type': textfield
+      '#title': 'Phone' 
+      '#description': ""
+    comment_1:
+      '#type': processed_text
+      '#format': full_html
+      '#text': "<p>Briefly explain why you are interested in participating and what you would hope to gain.</p>\n"
+      '#title': 'comment' 
+      '#description': ""
+    explique_1:
+      '#type': textarea
+      '#title_display': invisible
+      '#title': 'Comment' 
+      '#description': "Por favor, explique brevemente por qué está interesado(a) en participar y qué espera del programa. ¿Habla Inglés? (No es necesario que hable inglés, pero sería étil para nosotros tener esta información)"
+  fieldset_escuela:
+    '#type': fieldset
+    '#open': true
+    '#title': 'School Info' 
+    '#description': ""
+    escuela2_7:
+      '#type': textfield
+      '#title': 'School' 
+      '#description': ""
+    direccion_7:
+      '#type': textfield
+      '#title': 'Street Address' 
+      '#description': ""
+    ciudad_7:
+      '#type': textfield
+      '#title': 'City' 
+      '#description': ""
+    pais_7:
+      '#type': textfield
+      '#title': 'State' 
+      '#description': ""
+    codigo_postal_7:
+      '#type': textfield
+      '#title': 'Zip Code' 
+      '#description': ""
+  fieldset_estudiantes:
+    '#type': fieldset
+    '#open': true
+    '#title': 'Student Info' 
+    '#description': ""
+    grado_2_numero_de_clases_13:
+      '#title': 'Grade 2: Number of classes' 
+      '#description': ""
+    grado_2_numero_de_estudiantes_13:
+      '#title': 'Grade 2: Number of students' 
+      '#description': ""
+    divider_2_13:
+      '#type': processed_text
+      '#format': full_html
+      '#text': "<p>&nbsp;</p>"
+      '#title': 'divider 2' 
+      '#description': ""
+    grado_3_numero_de_clases_13:
+      '#title': 'Grade 3: Number of classes' 
+      '#description': ""
+    grado_3_numero_de_estudiantes_13:
+      '#title': 'Grade 3: Number of students' 
+      '#description': ""
+    divider_3_13:
+      '#type': processed_text
+      '#format': full_html
+      '#text': "<p>&nbsp;</p>"
+      '#title': 'divider 3' 
+      '#description': ""
+    grado_4_numero_de_clases_13:
+      '#title': 'Grade 4: Number of classes' 
+      '#description': ""
+    grado_4_numero_de_estudiantes_13:
+      '#title': 'Grade 4: Number of students' 
+      '#description': ""
+css: ''
+javascript: ''
+settings:
+  page: true
+  wizard_progress_bar: true
+  preview: 0
+  draft: '0'
+  draft_auto_save: false
+  confirmation_type: page
+  confirmation_url: ''
+  confirmation_message: ''
+  limit_total: null
+  limit_user: null
+  form_submit_label: ''
+  wizard_complete: 1
+access:
+  create:
+    roles:
+      - anonymous
+      - authenticated
+    users: {  }
+handlers:
+  email_2:
+    id: email
+    handler_id: email_2
+    label: 'Email 2'
+    notes: ''
+    status: true
+    conditions: {  }
+    weight: 2
+    settings:
+      states:
+        - completed
+      to_mail: deinleinm@si.edu
+      to_options: {  }
+      bcc_mail: ''
+      bcc_options: {  }
+      cc_mail: ''
+      cc_options: {  }
+      from_mail: default
+      from_options: {  }
+      from_name: default
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
+      subject: 'Unidos por las Aves'
+      body: '[webform_submission:values]'
+      excluded_elements: {  }
+      ignore_access: false
+      exclude_empty: true
+      exclude_empty_checkbox: false
+      exclude_attachments: false
+      html: false
+      attachments: false
+      twig: false
+      theme_name: ''
+      parameters: {  }
+      debug: false
+variants: {  }

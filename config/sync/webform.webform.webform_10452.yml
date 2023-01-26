@@ -1,0 +1,43 @@
+uuid: 555b31ed-54c9-4333-92a8-919097d2ec5e
+langcode: en
+status: open
+dependencies: {  }
+weight: 0
+open: null
+close: null
+uid: 174
+template: false
+archive: false
+id: webform_10452
+title: 'Senior Discount'
+description: null
+category: null
+elements: |
+  enter_your_date_of_birth:
+    '#type': date
+    '#title': 'Enter your date of birth' 
+    '#description': ""
+    '#required': true
+css: ''
+javascript: ''
+settings:
+  page: true
+  wizard_progress_bar: true
+  preview: 0
+  draft: '0'
+  draft_auto_save: false
+  confirmation_type: page
+  confirmation_url: ''
+  confirmation_message: "<h2>Standard, Premier and Premier Plus Memberships</h2>\r\n\r\n<p>Help&nbsp;support the Smithsonian's National Zoo and Conservation Biology Institute's commitment to providing leadership in animal care, science, education&nbsp;and sustainability.</p>\r\n\r\n<p>Your Smithsonian National Zoo Membership includes great benefits and is the best way to support the outstanding wildlife conservation work of the Zoo, and to ensure your family's experience at the Zoo is always special and enriching. Memberships at the Premier level and above include free parking during regular daytime visits to the Zoo.</p>\r\n\r\n<p>Standard benefit highlights include:</p>\r\n\r\n<ul>\r\n\t<li>Members-only previews, exhibit openings, and events</li>\r\n\t<li>Reduced admission to other participating zoos and aquariums nationwide</li>\r\n\t<li>Savings on event tickets, including ZooFari and Boo at the Zoo</li>\r\n\t<li>Knowing that your&nbsp;membership supports the Zoo's extraordinary work in the conservation and care of some of the world's rarest animals</li>\r\n</ul>\r\n\r\n<p><strong>Membership benefits, including parking and rides, will be limited or canceled as a precaution due to COVID-19.</strong></p>\r\n\r\n<p>[block:quicktabs=fonz_membership_senior_discount]</p>\r\n"
+  limit_total: null
+  limit_user: null
+  form_submit_label: ''
+  wizard_complete: 1
+access:
+  create:
+    roles:
+      - anonymous
+      - authenticated
+    users: {  }
+handlers: {  }
+variants: {  }

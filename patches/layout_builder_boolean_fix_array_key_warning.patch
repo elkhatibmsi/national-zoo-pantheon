@@ -1,0 +1,24 @@
+diff --git a/src/Plugin/Derivative/LayoutBuilderBooleanDeriver.php b/src/Plugin/Derivative/LayoutBuilderBooleanDeriver.php
+index b658c71..b887576 100644
+--- a/src/Plugin/Derivative/LayoutBuilderBooleanDeriver.php
++++ b/src/Plugin/Derivative/LayoutBuilderBooleanDeriver.php
+@@ -76,15 +76,19 @@ class LayoutBuilderBooleanDeriver extends DeriverBase implements ContainerDerive
+       $derivative->setConfigDependencies(['module' => [$definition['provider']]]);
+ 
+       $regions = [];
++
++      if(!empty($definition['regions'])) {
+       foreach ($definition['regions'] as $key => $label) {
+         $regions["true:$key"] = $label;
+         $regions["false:$key"] = $label;
+       }
++    }
+       $derivative->setRegions($regions);
+ 
+       $derivative->addContextDefinition('entity', ContextDefinition::create('entity')->setRequired(FALSE));
+       $this->derivatives[$layout_id] = $derivative;
+     }
++
+     return $this->derivatives;
+   }
+ 

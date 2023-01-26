@@ -1,0 +1,194 @@
+uuid: 64b03c89-57b5-4924-81ff-2c643a788cb5
+langcode: en
+status: open
+dependencies: {  }
+weight: 0
+open: null
+close: null
+uid: 173
+template: false
+archive: false
+id: webform_8948
+title: 'General Contact Form'
+description: null
+category: null
+elements: |
+  i_have_a_question_about:
+    '#type': select
+    '#options':
+      12: 'Tickets'
+      11: 'Guest Services'
+      10: 'Giant Pandas'
+      1: 'Animals'
+      2: 'Membership'
+      3: 'Donations'
+      5: 'Education'
+      9: 'Events'
+      4: 'Volunteers'
+      6: 'Internships'
+      7: 'Media'
+    '#title': 'I have a question or comment about...' 
+    '#description': ""
+    '#required': true
+  please_check_out_the_panda_faqs_before_you_send_us_a_message:
+    '#type': processed_text
+    '#format': full_html
+    '#text': "<h4>We get A LOT of questions about our giant pandas!</h4>\n\n<h4><strong>Before you send us a message, </strong>be sure you've checked out all the FAQ pages to see if your question has already been answered.<strong> Hint: It probably has!</strong></h4>\n\n<p></p>\n\n<p><a href='/animals/giant-panda-faqs'>Giant Panda FAQs</a><br />\n<a href='/animals/giant-panda-cub-faqs'>Giant Panda Cub FAQs</a><br />\n<a href='/animals/giant-panda-estrus-faqs'>Giant Panda Estrus FAQs</a><br />\n<a href='/animals/giant-panda?qt-learn_more_about_the_animal=1#qt-learn_more_about_the_animal'>Giant Panda Facts</a></p>\n"
+    '#title': 'Please check out the Panda FAQs before you send us a message!' 
+    '#description': ""
+    '#states':
+      visible:
+        ':input[name="i_have_a_question_about"]':
+          value: '10'
+          
+  tickets_response:
+    '#type': processed_text
+    '#format': full_html
+    '#text': "<p><span class='underline'><strong>Before submitting this form, please see the <a href='/visit/faqs#paragraphs-item-6834'>Ticket FAQs</a> to see if your question has been answered.</strong></span></p>\n\n<p>Passes begin to open on a rolling basis, four weeks out. <strong>If you're looking for passes for a specific date, please check back four weeks before your intended visit, one week before your visit, and the day before and of your visit.</strong></p>\n\n<p><strong>Have passes you can no longer use?</strong></p>\n\n<p>If you have entry passes that you can no longer use, we encourage you to free up tickets for other guests by requesting a cancelation. Refunds for paid parking passes are available until the day before your reservation; same-day parking refunds are not available. To cancel an entry pass or request a parking pass refund,&nbsp;<a href='/visit/zoo-passes-tickets-help-form'>please contact us via our ticket form</a>.</p>\n\n<p><strong>Need to exchange your passes for a different date?</strong></p>\n\n<p>If you can no longer visit the Zoo on the date of your entry pass, you can exchange your passes for a different day. Exchange is dependent upon availability of entry passes. If you have a parking pass, you can request an exchange up until the day before your visit. Exchange is dependent upon availability of parking passes. Same-day parking exchanges are not available.</p>\n\n<p>To exchange your passes, <a href='/visit/zoo-passes-tickets-help-form'>please contact us via our ticket form.&nbsp;&nbsp;</a></p>\n"
+    '#title': 'Tickets Response' 
+    '#description': ""
+    '#states':
+      visible:
+        ':input[name="i_have_a_question_about"]':
+          value: '12'
+          
+  i_have_a_compliment_or_a_complaint:
+    '#type': radios
+    '#options':
+      1: 'I would like to extend a compliment'
+      2: 'I would like to make a formal complaint'
+      3: 'I have a suggestion or other comment'
+    '#title': 'Which best describes your feedback?' 
+    '#description': ""
+    '#required': true
+    '#states':
+      visible:
+        ':input[name="i_have_a_question_about"]':
+          value: '11'
+          
+  question:
+    '#type': textarea
+    '#title': 'Question or Comment' 
+    '#description': ""
+    '#required': true
+  first_name:
+    '#type': textfield
+    '#title': 'First Name' 
+    '#description': ""
+    '#required': true
+  last_name:
+    '#type': textfield
+    '#title': 'Last name' 
+    '#description': ""
+    '#required': true
+  phone_number:
+    '#title': 'Phone number' 
+    '#description': ""
+    '#required': true
+  my_email:
+    '#type': email
+    '#size': 20
+    '#title': 'Email address' 
+    '#description': "Please provide an email address so we can respond to you!"
+    '#required': true
+css: ''
+javascript: ''
+settings:
+  page: true
+  wizard_progress_bar: true
+  preview: 0
+  draft: '0'
+  draft_auto_save: false
+  confirmation_type: page
+  confirmation_url: ''
+  confirmation_message: "<p>Thank you for contacting us. We will respond to your inquiry as soon as possible.</p>\r\n"
+  limit_total: null
+  limit_user: null
+  form_submit_label: ''
+  wizard_complete: 1
+access:
+  create:
+    roles:
+      - anonymous
+      - authenticated
+    users: {  }
+handlers:
+  email_1:
+    id: email
+    handler_id: email_1
+    label: 'Email 1'
+    notes: ''
+    status: true
+    conditions: {  }
+    weight: 1
+    settings:
+      states:
+        - completed
+      to_mail: '[webform_submission:values:i_have_a_question_about:raw]'
+      to_options: {  }
+      bcc_mail: ''
+      bcc_options: {  }
+      cc_mail: ''
+      cc_options: {  }
+      from_mail: '[webform_submission:values:my_email:raw]'
+      from_options: {  }
+      from_name: '[webform_submission:values:first_name:raw]'
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
+      subject: ''
+      body: |
+        Submitted on [webform_submission:date:long]
+
+        Message:
+        [webform_submission:values]
+      excluded_elements: {  }
+      ignore_access: false
+      exclude_empty: true
+      exclude_empty_checkbox: false
+      exclude_attachments: false
+      html: false
+      attachments: false
+      twig: false
+      theme_name: ''
+      parameters: {  }
+      debug: false
+  email_2:
+    id: email
+    handler_id: email_2
+    label: 'Email 2'
+    notes: ''
+    status: true
+    conditions: {  }
+    weight: 2
+    settings:
+      states:
+        - completed
+      to_mail: enchelmeyera@si.edu
+      to_options: {  }
+      bcc_mail: ''
+      bcc_options: {  }
+      cc_mail: ''
+      cc_options: {  }
+      from_mail: default
+      from_options: {  }
+      from_name: default
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
+      subject: default
+      body: default
+      excluded_elements: {  }
+      ignore_access: false
+      exclude_empty: true
+      exclude_empty_checkbox: false
+      exclude_attachments: false
+      html: false
+      attachments: false
+      twig: false
+      theme_name: ''
+      parameters: {  }
+      debug: false
+variants: {  }

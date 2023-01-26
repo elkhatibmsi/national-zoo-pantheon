@@ -1,0 +1,43 @@
+uuid: 8d8e0722-90fb-4fa9-8159-4bb2657179c7
+langcode: en
+status: closed
+dependencies: {  }
+weight: 0
+open: null
+close: null
+uid: 193
+template: false
+archive: false
+id: webform_9042
+title: ' Member ID check: Winter camps'
+description: null
+category: null
+elements: |
+  please_enter_your_member_id:
+    '#min': 0
+    '#title': 'Please enter your member ID' 
+    '#description': "Enter your FONZ member ID"
+    '#required': true
+css: ''
+javascript: ''
+settings:
+  page: true
+  wizard_progress_bar: true
+  preview: 0
+  draft: '0'
+  draft_auto_save: false
+  confirmation_type: url
+  confirmation_url: 'https://thriva.activenetwork.com/Reg4/Form.aspx?IDTD=1379&RF=11109805&mode=0'
+  confirmation_message: ''
+  limit_total: null
+  limit_user: 10
+  form_submit_label: ''
+  wizard_complete: 1
+access:
+  create:
+    roles:
+      - anonymous
+      - authenticated
+    users: {  }
+handlers: {  }
+variants: {  }

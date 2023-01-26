@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.animal.body
+    - field.field.node.animal.field_animal_gallery
     - field.field.node.animal.field_animal_type
     - field.field.node.animal.field_card_position
     - field.field.node.animal.field_communication
@@ -310,30 +311,6 @@ third_party_settings:
                   class: ''
                   style: ''
                   data: ''
-          52f18c2b-e616-439a-bba4-00a506567f84:
-            uuid: 52f18c2b-e616-439a-bba4-00a506567f84
-            region: content
-            configuration:
-              id: 'field_block:node:animal:title'
-              label: Title
-              label_display: '0'
-              provider: layout_builder
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
-              formatter:
-                type: text_field_formatter
-                label: hidden
-                settings:
-                  link_to_entity: 0
-                  wrap_tag: h1
-                  wrap_class: page-title
-                  wrap_attributes: ''
-                  override_link_label: ''
-                  token: ''
-                third_party_settings: {  }
-            weight: 2
-            additional: {  }
         third_party_settings: {  }
       -
         layout_id: layout_nzp_two_col
@@ -651,6 +628,7 @@ content:
     weight: 0
     region: content
 hidden:
+  field_animal_gallery: true
   field_card_position: true
   field_editorial_access: true
   field_exhibit: true

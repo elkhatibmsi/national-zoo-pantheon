@@ -103,5 +103,5 @@
 .ddev
 
 
-# Ignore Block Content Blocks in configuration.
-/config/sync/block.block*
+#Ignore block content config files
+config/sync/block.block*.yml

@@ -287,7 +287,7 @@ a {
 .views-exposed-form {
   @apply flex flex-wrap;
 }
-.form-item {
+.form-item, .form-actions {
   @apply py-4 mr-4 flex flex-wrap flex-col;
 }
 
@@ -296,27 +296,23 @@ a {
 }
 
 .form-item [type="text"], [type="email"], [type="number"], textarea, select {
-  @apply mt-2 bg-lightestgray appearance-none border-2 border-lightestgray rounded w-full py-2 px-4 text-darkgray leading-tight focus:outline-none focus:bg-white focus:border-blue-sapphire transition-all;
+  @apply mt-2 bg-lightestgray border-2 border-lightestgray rounded w-full py-2 px-4 text-darkgray leading-tight focus:outline-none focus:bg-white focus:border-blue-sapphire transition-all;
 }
 
 select {
   @apply bg-lightestgray;
 }
 
-[type="email"] {
-}
+
 .form-text, .form-email,
 .form-select {
   @apply h-12 px-4 mb-2 text-lg focus:shadow-md;
 }
 
 .form-actions {
-  @apply flex items-center mt-[1.5rem];
+  @apply flex justify-center;
 }
 
-.form-actions input {
-  @apply -mt-1;
-}
 
 .js-form-type-radio {
   @apply flex flex-row content-center;

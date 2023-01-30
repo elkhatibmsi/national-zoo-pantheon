@@ -4149,7 +4149,7 @@ a{
   flex-wrap: wrap;
 }
 
-.form-item{
+.form-item, .form-actions{
   margin-right: 1rem;
   display: flex;
   flex-direction: column;
@@ -4171,9 +4171,6 @@ a{
 .form-item [type="text"], [type="email"], [type="number"], textarea, select{
   margin-top: 0.5rem;
   width: 100%;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
   border-radius: 0.25rem;
   border-width: 2px;
   --tw-border-opacity: 1;
@@ -4206,9 +4203,6 @@ select{
   background-color: rgb(245 245 245 / var(--tw-bg-opacity));
 }
 
-[type="email"] {
-}
-
 .form-text, .form-email, .form-select{
   margin-bottom: 0.5rem;
   height: 3rem;
@@ -4225,13 +4219,8 @@ select{
 }
 
 .form-actions{
-  margin-top: 1.5rem;
   display: flex;
-  align-items: center;
-}
-
-.form-actions input{
-  margin-top: -0.25rem;
+  justify-content: center;
 }
 
 .js-form-type-radio{

@@ -97,7 +97,7 @@ h3 {
 }
 
 .page-title {
-  @apply text-6xl py-4 mb-1 mt-2 font-bold flex items-center;
+  @apply text-6xl py-4 mb-1 mt-2 font-bold flex items-center text-black;
 }
 
 .landing-title {
@@ -292,21 +292,19 @@ a {
 }
 
 .form-item label, legend {
-  @apply font-semibold pl-2 border-oxford-blue uppercase text-gray;
+  @apply space-x-1 pl-2 border-oxford-blue uppercase;
 }
 
 .form-item [type="text"], [type="email"], [type="number"], textarea, select {
-  @apply mt-2 bg-lightestgray border-2 border-lightestgray rounded w-full py-2 px-4 text-darkgray leading-tight focus:outline-none focus:bg-white focus:border-blue-sapphire transition-all;
+  @apply mt-2 bg-lightestgray border-2 border-lightestgray rounded w-full py-2 px-4 text-darkgray leading-tight focus:outline-none focus:bg-white focus:border-blue-sapphire transition-all h-12 mb-2 text-lg focus:shadow-md;
+}
+
+textarea {
+  @apply h-auto;
 }
 
 select {
   @apply bg-lightestgray;
-}
-
-
-.form-text, .form-email,
-.form-select {
-  @apply h-12 px-4 mb-2 text-lg focus:shadow-md;
 }
 
 .form-actions {

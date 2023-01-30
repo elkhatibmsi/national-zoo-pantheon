@@ -291,17 +291,23 @@ a {
   @apply py-4 mr-4 flex flex-wrap flex-col;
 }
 
-.form-item label {
-  @apply font-semibold;
+.form-item label, legend {
+  @apply font-semibold pl-2 border-oxford-blue uppercase text-gray;
 }
 
-.form-item.form-no-label {
-  @apply mt-[1.5rem];
+.form-item [type="text"], [type="email"], [type="number"], textarea, select {
+  @apply mt-2 bg-lightestgray appearance-none border-2 border-lightestgray rounded w-full py-2 px-4 text-darkgray leading-tight focus:outline-none focus:bg-white focus:border-blue-sapphire transition-all;
 }
 
-.form-text,
+select {
+  @apply bg-lightestgray;
+}
+
+[type="email"] {
+}
+.form-text, .form-email,
 .form-select {
-  @apply h-12 px-4 mb-2 text-lg border-2 rounded-lg focus:shadow-md;
+  @apply h-12 px-4 mb-2 text-lg focus:shadow-md;
 }
 
 .form-actions {
@@ -311,6 +317,20 @@ a {
 .form-actions input {
   @apply -mt-1;
 }
+
+.js-form-type-radio {
+  @apply flex flex-row content-center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left:1em;
+
+}
+.js-form-type-radio label {
+  @apply normal-case;
+}
+
+
 
 .site--logo {
   box-shadow: 0px 20px 25px -16px rgb(0 0 0 / 22%);

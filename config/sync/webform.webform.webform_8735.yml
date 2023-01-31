@@ -1,0 +1,46 @@
+uuid: c51f616a-09bc-4225-8391-3ae8cba0286d
+langcode: en
+status: closed
+dependencies: {  }
+weight: 0
+open: null
+close: null
+uid: 193
+template: false
+archive: false
+id: webform_8735
+title: 'Membership Parking Discount'
+description: null
+category: null
+elements: |
+  9_digit_code:
+    '#min': 100000000
+    '#max': 999999999
+    '#unique': true
+    '#title_display': inline
+    '#title': '9 digit code' 
+    '#description': "Enter the nine digit ORDER ID printed on the top of your Etix paid parking receipt."
+    '#required': true
+css: ''
+javascript: ''
+settings:
+  page: true
+  wizard_progress_bar: true
+  preview: 0
+  draft: '0'
+  draft_auto_save: false
+  confirmation_type: page
+  confirmation_url: ''
+  confirmation_message: '[block:quicktabs=fonz_membership_parking_discount]'
+  limit_total: null
+  limit_user: null
+  form_submit_label: ''
+  wizard_complete: 1
+access:
+  create:
+    roles:
+      - anonymous
+      - authenticated
+    users: {  }
+handlers: {  }
+variants: {  }

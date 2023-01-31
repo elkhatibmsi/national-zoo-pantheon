@@ -1,0 +1,178 @@
+uuid: 77a322b3-425e-4e37-b6c5-9a27e4c9af04
+langcode: en
+status: open
+dependencies: {  }
+weight: 0
+open: null
+close: null
+uid: 2230
+template: false
+archive: false
+id: webform_16565
+title: 'Webcam Feedback Form'
+description: null
+category: null
+elements: |
+  webcam:
+    '#type': radios
+    '#options':
+      1: 'Cam 1'
+      2: 'Cam 2'
+    '#title': 'Which cam are you having technical issues with?' 
+    '#description': ""
+  what_went_wrong:
+    '#type': checkboxes
+    '#options':
+      1: 'Webcam feed is continuously buffering and will not resume without a browser refresh'
+      2: 'Webcam feed won"t load and the screen stays black when play is pressed'
+      3: 'Webcam controls are unresponsive'
+      4: 'Webcam stream is slow and buffers frequently'
+      5: 'Other'
+    '#multiple': true
+    '#title': 'What issue are you encountering?' 
+    '#description': ""
+  other_issue_encountered:
+    '#type': textfield
+    '#title': 'Describe the issue you"re having' 
+    '#description': ""
+    '#states':
+      visible:
+        ':input[name="what_went_wrong[5]"]':
+          checked: true
+          
+  date_of_issue:
+    '#type': date
+    '#default_value': 'now' 
+    '#title': 'Date of issue' 
+    '#description': ""
+  time_of_issue:
+    '#type': time
+    '#time_format': 'g:i A'
+    '#default_value': 'now' 
+    '#title': 'Time of issue (can be approximate)' 
+    '#description': ""
+  what_browser_are_you_using:
+    '#type': radios
+    '#options':
+      1: 'Chrome'
+      2: 'Microsoft Edge'
+      3: 'Safari'
+      4: 'Firefox'
+      5: 'Other'
+    '#title': 'What browser are you using?' 
+    '#description': ""
+  other_browser:
+    '#type': textfield
+    '#title': 'Enter name of browser below' 
+    '#description': ""
+    '#states':
+      visible:
+        ':input[name="what_browser_are_you_using"]':
+          value: '5'
+          
+  browser_info_block:
+    '#type': processed_text
+    '#format': full_html
+    '#text': "<p><strong>(Optional) What browser version are you using?</strong></p>\n\n<p>Visit&nbsp;<a href='https://browserhow.com/how-to-check-browser-version' target='_blank'>&nbsp;https://browserhow.com/how-to-check-browser-version</a>&nbsp;for instructions on how to obtain your browser version.&nbsp;</p>\n"
+    '#title': 'Browser Version Info Block (Optional)' 
+    '#description': ""
+  browser_version:
+    '#type': textfield
+    '#size': 
+    '#title_display': invisible
+    '#title': 'Browser version' 
+    '#description': "Leave blank if you don't know"
+  device:
+    '#type': radios
+    '#options':
+      1: 'Windows 10 laptop/desktop'
+      2: 'Mac OS laptop/desktop'
+      3: 'Android handset/tablet'
+      4: 'iOS handset/tablet'
+      5: 'Other'
+    '#title': 'What device are you using?' 
+    '#description': ""
+  other_device:
+    '#type': textfield
+    '#title': 'Enter device type not listed above' 
+    '#description': ""
+    '#states':
+      visible:
+        ':input[name="device"]':
+          value: '5'
+          
+  internet_speed_info_block:
+    '#type': processed_text
+    '#format': full_html
+    '#text': "<p><strong>What's your internet speed?</strong></p>\n\n<p>Visit&nbsp;<a href='https://fast.com/' target='_blank'>https://fast.com/</a> to obtain a reading of your internet speeds. Link will open in a new window.&nbsp;</p>\n\n<p></p>\n"
+    '#title': 'Internet Speed Info Block' 
+    '#description': ""
+  broadband_speed:
+    '#type': textfield
+    '#title_display': invisible
+    '#title': 'What is your internet speed? (in Mbps)' 
+    '#description': ""
+  additional_information:
+    '#type': textarea
+    '#title': 'Additional comments' 
+    '#description': "Provide any additional details about your experience that may not have been covered in the questions above. "
+css: ''
+javascript: ''
+settings:
+  page: true
+  wizard_progress_bar: true
+  preview: 0
+  draft: '0'
+  draft_auto_save: false
+  confirmation_type: page
+  confirmation_url: ''
+  confirmation_message: "<p><strong>The Zoo family thanks you for your feedback and participation!&nbsp;</strong></p>\r\n\r\n<p><a class=\"btn btn-primary\" href=\"/webcams/panda-cam\"><strong>Back to Panda Cams</strong></a></p>\r\n[[{\"fid\":\"13240\",\"view_mode\":\"teaser\",\"fields\":{\"alt\":\"Adult male giant panda Tian Tian soaks up some sun while he eats bamboo. \",\"class\":\"media-element file-full cke_widget_element\",\"data-delta\":\"1\",\"format\":\"teaser\",\"alignment\":\"\",\"field_image_alt_text[und][0][value]\":\"Adult male giant panda Tian Tian soaks up some sun while he eats bamboo. \",\"field_dams_number[und][0][value]\":\"20220307-026SB\",\"field_photographer[und][0][value]\":\"Skip Brown\",\"field_notes[und][0][value]\":\"\",\"external_url\":\"\"},\"type\":\"media\",\"field_deltas\":{\"1\":{\"alt\":\"Adult male giant panda Tian Tian soaks up some sun while he eats bamboo. \",\"class\":\"media-element file-full cke_widget_element\",\"data-delta\":\"1\",\"format\":\"teaser\",\"alignment\":\"\",\"field_image_alt_text[und][0][value]\":\"Adult male giant panda Tian Tian soaks up some sun while he eats bamboo. \",\"field_dams_number[und][0][value]\":\"20220307-026SB\",\"field_photographer[und][0][value]\":\"Skip Brown\",\"field_notes[und][0][value]\":\"\",\"external_url\":\"\"}},\"attributes\":{\"alt\":\"Adult male giant panda Tian Tian soaks up some sun while he eats bamboo. \",\"class\":\"media-element file-teaser\",\"data-delta\":\"1\"}}]]\r\n\r\n<p></p>\r\n"
+  limit_total: null
+  limit_user: null
+  form_submit_label: ''
+  wizard_complete: 1
+access:
+  create:
+    roles:
+      - anonymous
+      - authenticated
+    users: {  }
+handlers:
+  email_1:
+    id: email
+    handler_id: email_1
+    label: 'Email 1'
+    notes: ''
+    status: true
+    conditions: {  }
+    weight: 1
+    settings:
+      states:
+        - completed
+      to_mail: elkhatibm@si.edu
+      to_options: {  }
+      bcc_mail: ''
+      bcc_options: {  }
+      cc_mail: ''
+      cc_options: {  }
+      from_mail: default
+      from_options: {  }
+      from_name: default
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
+      subject: default
+      body: default
+      excluded_elements: {  }
+      ignore_access: false
+      exclude_empty: true
+      exclude_empty_checkbox: false
+      exclude_attachments: false
+      html: false
+      attachments: false
+      twig: false
+      theme_name: ''
+      parameters: {  }
+      debug: false
+variants: {  }

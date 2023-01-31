@@ -1,0 +1,183 @@
+uuid: 060f769f-c22f-4d43-bd52-724b83fc4a29
+langcode: en
+status: closed
+dependencies: {  }
+weight: 0
+open: null
+close: null
+uid: 173
+template: false
+archive: false
+id: webform_8343
+title: 'Events Contact'
+description: null
+category: null
+elements: |
+  fieldset_events_contact:
+    '#type': fieldset
+    '#open': true
+    '#title': 'General Event Questions' 
+    '#description': ""
+    contact_reason_6:
+      '#type': radios
+      '#options':
+        1: 'Ticketing Question'
+        2: 'General Inquiry'
+      '#title': 'Contact Reason' 
+      '#description': ""
+      '#required': true
+    your_name_6:
+      '#type': textfield
+      '#title': 'Your Name' 
+      '#description': ""
+      '#required': true
+    your_email_6:
+      '#type': email
+      '#size': 20
+      '#title': 'Your Email' 
+      '#description': ""
+      '#required': true
+    phone_number_6:
+      '#title': 'Phone Number' 
+      '#description': ""
+      '#required': true
+    event_6:
+      '#type': radios
+      '#options':
+        2: 'Animal Discovery Days'
+        13: 'Boo at the Zoo'
+        3: 'Brew at the Zoo'
+        14: 'BrewLights at ZooLights'
+        15: 'Conservation Discovery Day'
+        16: 'Earth Optimism Day'
+        4: 'Easter Monday: A Washington Family Tradition'
+        6: 'The Fast & the Fierce 5k'
+        8: 'Night of the Living Zoo'
+        17: 'Wildlife Migration Day'
+        9: 'ZooFari: Bite Night'
+        11: 'ZooFiesta'
+        18: 'ZooLights'
+        19: 'Zoo Uncorked'
+        12: 'Other (please specify which event in your message below)'
+      '#title': 'Event' 
+      '#description': "Which event do you have a question about?"
+      '#required': true
+    message_6:
+      '#type': textarea
+      '#title': 'Message' 
+      '#description': ""
+      '#required': true
+  disclaimer:
+    '#type': processed_text
+    '#format': full_html
+    '#text': "[block:bean=fonz-privacy-disclamer]"
+    '#title': 'Disclaimer' 
+    '#description': ""
+css: ''
+javascript: ''
+settings:
+  page: true
+  wizard_progress_bar: true
+  preview: 0
+  draft: '0'
+  draft_auto_save: false
+  confirmation_type: inline
+  confirmation_url: ''
+  confirmation_message: "<p>Thank you for contacting the Smithsonian's National Zoo and Conservation Biology Institute. Someone will be in touch with you shortly.</p>\r\n"
+  limit_total: null
+  limit_user: 1
+  form_submit_label: ''
+  wizard_complete: 1
+access:
+  create:
+    roles:
+      - anonymous
+      - authenticated
+    users: {  }
+handlers:
+  email_2:
+    id: email
+    handler_id: email_2
+    label: 'Email 2'
+    notes: ''
+    status: true
+    conditions: {  }
+    weight: 2
+    settings:
+      states:
+        - completed
+      to_mail: enchelmeyera@si.edu
+      to_options: {  }
+      bcc_mail: ''
+      bcc_options: {  }
+      cc_mail: ''
+      cc_options: {  }
+      from_mail: '[webform_submission:values:your_email:raw]'
+      from_options: {  }
+      from_name: '[webform_submission:values:your_name:raw]'
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
+      subject: '[webform_submission:values:event:raw]'
+      body: |
+        Submitted on [webform_submission:date:long]
+        Submitted by user: [webform_submission:user]
+        Submitted values are:
+        [webform_submission:values]
+      excluded_elements: {  }
+      ignore_access: false
+      exclude_empty: true
+      exclude_empty_checkbox: false
+      exclude_attachments: false
+      html: false
+      attachments: false
+      twig: false
+      theme_name: ''
+      parameters: {  }
+      debug: false
+  email_5:
+    id: email
+    handler_id: email_5
+    label: 'Email 5'
+    notes: ''
+    status: true
+    conditions: {  }
+    weight: 5
+    settings:
+      states:
+        - completed
+      to_mail: '[webform_submission:values:contact_reason:raw]'
+      to_options: {  }
+      bcc_mail: ''
+      bcc_options: {  }
+      cc_mail: ''
+      cc_options: {  }
+      from_mail: '[webform_submission:values:your_email:raw]'
+      from_options: {  }
+      from_name: '[webform_submission:values:your_name:raw]'
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
+      subject: default
+      body: |-
+        Submitted on [webform_submission:date:long]
+
+        Submitted values are:
+        [webform_submission:values]
+
+        Please reply to this email to respond to the customer.
+      excluded_elements:
+        disclaimer: disclaimer
+      ignore_access: false
+      exclude_empty: true
+      exclude_empty_checkbox: false
+      exclude_attachments: false
+      html: false
+      attachments: false
+      twig: false
+      theme_name: ''
+      parameters: {  }
+      debug: false
+variants: {  }

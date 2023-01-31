@@ -1,0 +1,174 @@
+uuid: 1b8d7b19-7c63-46ad-abd8-5233737ef2f6
+langcode: en
+status: closed
+dependencies: {  }
+weight: 0
+open: null
+close: null
+uid: 169
+template: false
+archive: false
+id: webform_11286
+title: 'SCBI School Program Request Form'
+description: null
+category: null
+elements: |
+  program:
+    '#type': radios
+    '#options':
+      1: 'Grades 6-8: Bottleneck Genes & Species Survival Plan'
+      2: 'Grades 3-5: What"s for Lunch?'
+    '#title': 'Program' 
+    '#description': ""
+    '#required': true
+  school_name:
+    '#type': textfield
+    '#title': 'School Name' 
+    '#description': ""
+    '#required': true
+  lead_teacher_contact_name:
+    '#type': textfield
+    '#title': 'Lead Teacher/Contact Name' 
+    '#description': ""
+  lead_teacher_contact_email:
+    '#type': email
+    '#size': 20
+    '#title': 'Lead Teacher/Contact Email' 
+    '#description': ""
+    '#required': true
+  lead_teacher_phone:
+    '#title': 'Lead Teacher/Phone' 
+    '#description': ""
+  grade_level:
+    '#type': textfield
+    '#title': 'Grade Level' 
+    '#description': ""
+  total_number_of_programs_per_day:
+    '#type': textfield
+    '#size': 20
+    '#min': 
+    '#max': 
+    '#step': 
+    '#unique': false
+    '#title': 'Total Number of Programs per Day' 
+    '#description': "30 student maximum per program"
+  total_number_of_days:
+    '#type': textfield
+    '#size': 20
+    '#min': 
+    '#max': 
+    '#step': 
+    '#unique': false
+    '#title': 'Total Number of Days' 
+    '#description': ""
+  preferred_date:
+    '#type': date
+    '#title': 'Preferred Date' 
+    '#description': "Only available Tuesday, Wednesday, or Thursday"
+    '#required': true
+  secondary_date:
+    '#type': date
+    '#title': 'Secondary Date' 
+    '#description': "In case we can't accommodate your preferred date."
+  tertiary_date:
+    '#type': date
+    '#title': 'Tertiary Date' 
+    '#description': ""
+  approximate_start_time_for_first_class:
+    '#type': time
+    '#time_format': 'g:i A'
+    '#title': 'Approximate Start Time for First Class' 
+    '#description': ""
+  approximate_end_time_for_last_class:
+    '#type': time
+    '#time_format': 'g:i A'
+    '#title': 'Approximate End Time for Last Class' 
+    '#description': ""
+  school_district_county:
+    '#type': radios
+    '#options':
+      1: 'Clarke'
+      2: 'Fauquier'
+      3: 'Frederick (includes Winchester)'
+      4: 'Page'
+      5: 'Rappahannock'
+      6: 'Shenandoah'
+      7: 'Warren'
+    '#title': 'School District/County' 
+    '#description': ""
+    '#required': true
+  does_your_school_have_title_i_status:
+    '#type': radios
+    '#options':
+      1: 'Yes'
+      2: 'No'
+    '#title': 'Does Your School Have Title I Status?' 
+    '#description': ""
+  do_your_students_have_any_special_needs_that_would_be_helpful_for_us_to_know:
+    '#type': textarea
+    '#title': 'Do Your Students Have Any Special Needs That Would Be Helpful for Us to Know?' 
+    '#description': ""
+  additional_note_or_questions:
+    '#type': textarea
+    '#title': 'Additional Note or Questions' 
+    '#description': ""
+css: ''
+javascript: ''
+settings:
+  page: true
+  wizard_progress_bar: true
+  preview: 0
+  draft: '0'
+  draft_auto_save: false
+  confirmation_type: page
+  confirmation_url: ''
+  confirmation_message: ''
+  limit_total: null
+  limit_user: null
+  form_submit_label: ''
+  wizard_complete: 1
+access:
+  create:
+    roles:
+      - anonymous
+      - authenticated
+    users: {  }
+handlers:
+  email_1:
+    id: email
+    handler_id: email_1
+    label: 'Email 1'
+    notes: ''
+    status: true
+    conditions: {  }
+    weight: 1
+    settings:
+      states:
+        - completed
+      to_mail: nzp-education@si.edu
+      to_options: {  }
+      bcc_mail: ''
+      bcc_options: {  }
+      cc_mail: ''
+      cc_options: {  }
+      from_mail: default
+      from_options: {  }
+      from_name: default
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
+      subject: default
+      body: default
+      excluded_elements: {  }
+      ignore_access: false
+      exclude_empty: true
+      exclude_empty_checkbox: false
+      exclude_attachments: false
+      html: false
+      attachments: false
+      twig: false
+      theme_name: ''
+      parameters: {  }
+      debug: false
+variants: {  }

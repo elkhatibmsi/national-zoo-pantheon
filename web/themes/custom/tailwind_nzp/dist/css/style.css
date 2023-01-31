@@ -1015,10 +1015,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   right: 0.5rem;
 }
 
-.right-3{
-  right: 0.75rem;
-}
-
 .z-10{
   z-index: 10;
 }
@@ -1113,10 +1109,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .m-0{
   margin: 0px;
-}
-
-.\!m-0{
-  margin: 0px !important;
 }
 
 .mx-0{
@@ -2323,11 +2315,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .rounded-none{
   border-radius: 0px;
-}
-
-.rounded-b{
-  border-bottom-right-radius: 0.25rem;
-  border-bottom-left-radius: 0.25rem;
 }
 
 .border-0{
@@ -3741,6 +3728,8 @@ h3{
   font-size: 3.75rem;
   line-height: 1;
   font-weight: 700;
+  --tw-text-opacity: 1;
+  color: rgb(23 23 23 / var(--tw-text-opacity));
 }
 
 .landing-title{
@@ -4162,7 +4151,7 @@ a{
   flex-wrap: wrap;
 }
 
-.form-item{
+.form-item, .form-actions{
   margin-right: 1rem;
   display: flex;
   flex-direction: column;
@@ -4171,39 +4160,79 @@ a{
   padding-bottom: 1rem;
 }
 
-.form-item label{
-  font-weight: 600;
+.form-item label > :not([hidden]) ~ :not([hidden]), legend > :not([hidden]) ~ :not([hidden]){
+  --tw-space-x-reverse: 0;
+  margin-right: calc(0.25rem * var(--tw-space-x-reverse));
+  margin-left: calc(0.25rem * calc(1 - var(--tw-space-x-reverse)));
 }
 
-.form-item.form-no-label{
-  margin-top: 1.5rem;
+.form-item label, legend{
+  --tw-border-opacity: 1;
+  border-color: rgb(0 37 84 / var(--tw-border-opacity));
+  padding-left: 0.5rem;
+  text-transform: uppercase;
 }
 
-.form-text, .form-select{
+.form-item [type="text"], [type="email"], [type="number"], textarea, select{
+  margin-top: 0.5rem;
   margin-bottom: 0.5rem;
   height: 3rem;
-  border-radius: 0.5rem;
+  width: 100%;
+  border-radius: 0.25rem;
   border-width: 2px;
+  --tw-border-opacity: 1;
+  border-color: rgb(245 245 245 / var(--tw-border-opacity));
+  --tw-bg-opacity: 1;
+  background-color: rgb(245 245 245 / var(--tw-bg-opacity));
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
   padding-left: 1rem;
   padding-right: 1rem;
   font-size: 1.125rem;
-  line-height: 1.75rem;
+  line-height: 1.25;
+  --tw-text-opacity: 1;
+  color: rgb(115 115 115 / var(--tw-text-opacity));
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
 }
 
-.form-text:focus, .form-select:focus{
+.form-item [type="text"]:focus, [type="email"]:focus, [type="number"]:focus, textarea:focus, select:focus{
+  --tw-border-opacity: 1;
+  border-color: rgb(22 92 125 / var(--tw-border-opacity));
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
   --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+textarea{
+  height: auto;
+}
+
+select{
+  --tw-bg-opacity: 1;
+  background-color: rgb(245 245 245 / var(--tw-bg-opacity));
 }
 
 .form-actions{
-  margin-top: 1.5rem;
   display: flex;
-  align-items: center;
+  justify-content: center;
 }
 
-.form-actions input{
-  margin-top: -0.25rem;
+.js-form-type-radio{
+  align-content: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left:1em;
+}
+
+.js-form-type-radio label{
+  text-transform: none;
 }
 
 .site--logo {
@@ -5550,14 +5579,6 @@ header.scrolled  .header--hours {
     height: 100%;
   }
 
-  .lg\:max-h-full{
-    max-height: 100%;
-  }
-
-  .lg\:min-h-\[400px\]{
-    min-height: 400px;
-  }
-
   .lg\:w-\[300px\]{
     width: 300px;
   }
@@ -5785,11 +5806,6 @@ header.scrolled  .header--hours {
   .lg\:px-4{
     padding-left: 1rem;
     padding-right: 1rem;
-  }
-
-  .lg\:px-8{
-    padding-left: 2rem;
-    padding-right: 2rem;
   }
 
   .lg\:pl-3{

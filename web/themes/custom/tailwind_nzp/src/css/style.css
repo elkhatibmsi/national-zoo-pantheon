@@ -97,7 +97,7 @@ h3 {
 }
 
 .page-title {
-  @apply text-6xl py-4 mb-1 mt-2 font-bold flex items-center;
+  @apply text-6xl py-4 mb-1 mt-2 font-bold flex items-center text-black;
 }
 
 .landing-title {
@@ -287,30 +287,44 @@ a {
 .views-exposed-form {
   @apply flex flex-wrap;
 }
-.form-item {
+.form-item, .form-actions {
   @apply py-4 mr-4 flex flex-wrap flex-col;
 }
 
-.form-item label {
-  @apply font-semibold;
+.form-item label, legend {
+  @apply space-x-1 pl-2 border-oxford-blue uppercase;
 }
 
-.form-item.form-no-label {
-  @apply mt-[1.5rem];
+.form-item [type="text"], [type="email"], [type="number"], textarea, select {
+  @apply mt-2 bg-lightestgray border-2 border-lightestgray rounded w-full py-2 px-4 text-darkgray leading-tight focus:outline-none focus:bg-white focus:border-blue-sapphire transition-all h-12 mb-2 text-lg focus:shadow-md;
 }
 
-.form-text,
-.form-select {
-  @apply h-12 px-4 mb-2 text-lg border-2 rounded-lg focus:shadow-md;
+textarea {
+  @apply h-auto;
+}
+
+select {
+  @apply bg-lightestgray;
 }
 
 .form-actions {
-  @apply flex items-center mt-[1.5rem];
+  @apply flex justify-center;
 }
 
-.form-actions input {
-  @apply -mt-1;
+
+.js-form-type-radio {
+  @apply flex flex-row content-center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left:1em;
+
 }
+.js-form-type-radio label {
+  @apply normal-case;
+}
+
+
 
 .site--logo {
   box-shadow: 0px 20px 25px -16px rgb(0 0 0 / 22%);

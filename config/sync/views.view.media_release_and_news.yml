@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.list
+    - core.entity_view_mode.node.list_variant
     - core.entity_view_mode.node.teaser
     - node.type.media_release
     - node.type.news
@@ -532,8 +533,11 @@ display:
         - 'config:core.entity_view_display.node.internship.default'
         - 'config:core.entity_view_display.node.internship.teaser'
         - 'config:core.entity_view_display.node.media_release.default'
+        - 'config:core.entity_view_display.node.media_release.list'
+        - 'config:core.entity_view_display.node.media_release.list_variant'
         - 'config:core.entity_view_display.node.media_release.teaser'
         - 'config:core.entity_view_display.node.news.default'
+        - 'config:core.entity_view_display.node.news.list'
         - 'config:core.entity_view_display.node.news.teaser'
         - 'config:core.entity_view_display.node.scbi_project.default'
         - 'config:core.entity_view_display.node.scbi_project.teaser'
@@ -553,7 +557,7 @@ display:
     display_plugin: block
     position: 1
     display_options:
-      title: 'Related News'
+      title: ''
       fields:
         rendered_entity:
           id: rendered_entity
@@ -605,7 +609,7 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          view_mode: list
+          view_mode: list_variant
       sorts:
         created:
           id: created
@@ -784,6 +788,7 @@ display:
         arguments: false
         filters: false
         filter_groups: false
+        header: false
       relationships:
         field_related_content:
           id: field_related_content
@@ -810,6 +815,20 @@ display:
       use_more_text: 'More News'
       link_display: custom_url
       link_url: 'news/archive?related={{ raw_arguments.nid }}'
+      header:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: text
+          empty: false
+          content:
+            value: '<div class="mt-12 mb-6 bg-sap-green px-4 py-2"><strong class="text-white">Related News</strong></div>'
+            format: full_html
+          tokenize: false
       display_extenders: {  }
     cache_metadata:
       max-age: -1
@@ -860,8 +879,11 @@ display:
         - 'config:core.entity_view_display.node.internship.default'
         - 'config:core.entity_view_display.node.internship.teaser'
         - 'config:core.entity_view_display.node.media_release.default'
+        - 'config:core.entity_view_display.node.media_release.list'
+        - 'config:core.entity_view_display.node.media_release.list_variant'
         - 'config:core.entity_view_display.node.media_release.teaser'
         - 'config:core.entity_view_display.node.news.default'
+        - 'config:core.entity_view_display.node.news.list'
         - 'config:core.entity_view_display.node.news.teaser'
         - 'config:core.entity_view_display.node.scbi_project.default'
         - 'config:core.entity_view_display.node.scbi_project.teaser'

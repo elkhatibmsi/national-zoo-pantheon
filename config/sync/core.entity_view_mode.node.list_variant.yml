@@ -1,0 +1,10 @@
+uuid: ab43e657-6bc5-40d8-8559-a183ab6c3cca
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.list_variant
+label: list_variant
+targetEntityType: node
+cache: true

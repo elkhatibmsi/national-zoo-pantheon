@@ -35,29 +35,26 @@ third_party_settings:
     allow_custom: false
     sections:
       -
-        layout_id: layout_nzp_three_col
+        layout_id: layout_nzp_two_col
         layout_settings:
           context_mapping: {  }
-          custom_classes: ''
+          custom_classes: pl-1.5
           region_classes:
-            one_col: col-span-6
+            one_col: col-span-9
             two_col: col-span-3
-            three_col: col-span-3
           container_classes: 'container mx-auto'
           html_container_elements: div
           html_region_elements:
             one_col: div
             two_col: div
-            three_col: div
           background_color: null
           region_background_color:
             one_col: bg-none
             two_col: bg-none
-            three_col: bg-none
           getHtmlElements: div
         components:
-          52c0d850-4a60-4ca5-b25b-610e92cc347e:
-            uuid: 52c0d850-4a60-4ca5-b25b-610e92cc347e
+          31e5119a-df20-4ff5-8d7a-0955cfbfef70:
+            uuid: 31e5119a-df20-4ff5-8d7a-0955cfbfef70
             region: two_col
             configuration:
               id: 'block_content:00e96ad5-7f42-4626-acaa-90de39b21851'
@@ -70,8 +67,8 @@ third_party_settings:
               context_mapping: {  }
             weight: 0
             additional: {  }
-          32b0d87d-0416-4012-acd6-699090f94a2b:
-            uuid: 32b0d87d-0416-4012-acd6-699090f94a2b
+          4aa60b00-838d-4ce6-8b28-2f61dc92cd2e:
+            uuid: 4aa60b00-838d-4ce6-8b28-2f61dc92cd2e
             region: one_col
             configuration:
               id: system_breadcrumb_block
@@ -81,26 +78,12 @@ third_party_settings:
               context_mapping: {  }
             weight: 0
             additional: {  }
-          9996de9d-3ac9-40d3-95c2-6fff964cb2a4:
-            uuid: 9996de9d-3ac9-40d3-95c2-6fff964cb2a4
-            region: three_col
-            configuration:
-              id: 'block_content:00e96ad5-7f42-4626-acaa-90de39b21851'
-              label: Spacer
-              label_display: '0'
-              provider: block_content
-              status: true
-              info: ''
-              view_mode: full
-              context_mapping: {  }
-            weight: 0
-            additional: {  }
         third_party_settings: {  }
       -
         layout_id: layout_nzp_one_col
         layout_settings:
           context_mapping: {  }
-          custom_classes: ''
+          custom_classes: px-4
           region_classes: null
           container_classes: container
           html_container_elements: div
@@ -157,7 +140,7 @@ third_party_settings:
               component_attributes:
                 block_attributes:
                   id: ''
-                  class: italic
+                  class: 'italic text-lightgray'
                   style: ''
                   data: ''
                 block_title_attributes:
@@ -175,7 +158,7 @@ third_party_settings:
         layout_id: layout_nzp_three_col
         layout_settings:
           context_mapping: {  }
-          custom_classes: ''
+          custom_classes: px-4
           region_classes:
             one_col: col-span-6
             two_col: col-span-3
@@ -250,6 +233,85 @@ third_party_settings:
               context_mapping: {  }
               views_label: ''
               items_per_page: none
+            weight: 1
+            additional: {  }
+        third_party_settings: {  }
+      -
+        layout_id: layout_nzp_two_col
+        layout_settings:
+          context_mapping: {  }
+          custom_classes: gap-96
+          region_classes:
+            one_col: col-span-8
+            two_col: col-span-4
+          container_classes: 'container mx-auto'
+          html_container_elements: div
+          html_region_elements:
+            one_col: div
+            two_col: div
+          background_color: null
+          region_background_color:
+            one_col: bg-none
+            two_col: bg-none
+          getHtmlElements: div
+        components:
+          5f7e68fd-fddc-47f4-a18c-817416c7d6d3:
+            uuid: 5f7e68fd-fddc-47f4-a18c-817416c7d6d3
+            region: one_col
+            configuration:
+              id: 'field_block:node:media_release:body'
+              label: Body
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          0f9af128-a61f-4d1b-a6a7-c668eb37aa05:
+            uuid: 0f9af128-a61f-4d1b-a6a7-c668eb37aa05
+            region: two_col
+            configuration:
+              id: 'block_content:ac0dfe1d-2d6e-42a8-bff4-e7247bf08a3b'
+              label: 'Email Signup Sidebar'
+              label_display: '0'
+              provider: block_content
+              status: true
+              info: ''
+              view_mode: full
+              context_mapping: {  }
+            weight: 0
+            additional: {  }
+          1c79b0b6-4bd9-4545-bd28-e4720d2f96f5:
+            uuid: 1c79b0b6-4bd9-4545-bd28-e4720d2f96f5
+            region: two_col
+            configuration:
+              id: 'views_block:media_release_and_news-block_4'
+              label: ''
+              label_display: '0'
+              provider: views
+              context_mapping: {  }
+              views_label: ''
+              items_per_page: none
+            weight: 2
+            additional: {  }
+          ee74d239-bb10-4a0e-92c8-a970cbc2284f:
+            uuid: ee74d239-bb10-4a0e-92c8-a970cbc2284f
+            region: two_col
+            configuration:
+              id: 'block_content:00e96ad5-7f42-4626-acaa-90de39b21851'
+              label: Spacer
+              label_display: '0'
+              provider: block_content
+              status: true
+              info: ''
+              view_mode: full
+              context_mapping: {  }
             weight: 1
             additional: {  }
         third_party_settings: {  }

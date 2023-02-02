@@ -22,21 +22,21 @@
 #}
 {% if content %}
 	<div{{attributes}}>
-		<{{settings.html_container_elements}} {{attributes.addClass(settings.container_classes).addClass(settings.custom_classes)}}>
+		<{{settings.html_container_elements}} {{attributes.addClass(settings.container_classe, settings.custom_classes, settings.background_color)}}>
 		        <div class="grid md:grid-cols-12 gap-6">
 			{% if content.one_col %}
-				<{{settings.html_region_elements.one_col}} {{ region_attributes.one_col.addClass(settings.region_classes.one_col).addClass(settings.region_background_color.one_col) }}>
+				<{{settings.html_region_elements.one_col}} {{ region_attributes.one_col.addClass(settings.region_classes.one_col, settings.region_background_color.one_col, settings.custom_region_classes.one_col) }}>
 					{{ content.one_col }}
 				</{{settings.html_region_elements.one_col}}>
 			{% endif %}
 
 			{% if content.two_col %}
-				<{{settings.html_region_elements.two_col}} {{ region_attributes.two_col.addClass(settings.region_classes.two_col).addClass(settings.region_background_color.two_col) }}>
+				<{{settings.html_region_elements.two_col}} {{ region_attributes.two_col.addClass(settings.region_classes.two_col, settings.region_background_color.two_col, settings.custom_region_classes.two_col) }}>
 					{{ content.two_col }}
 				</{{settings.html_region_elements.two_col}}>
 			{% endif %}
 			{% if content.three_col %}
-				<{{settings.html_region_elements.three_col}} {{ region_attributes.three_col.addClass(settings.region_classes.three_col).addClass(settings.region_background_color.three_col) }}>
+				<{{settings.html_region_elements.three_col}} {{ region_attributes.three_col.addClass(settings.region_classes.three_col, settings.region_background_color.three_col, settings.custom_region_classes.three_col) }}>
 					{{ content.three_col }}
 				</{{settings.html_region_elements.three_col}}>
 			{% endif %}

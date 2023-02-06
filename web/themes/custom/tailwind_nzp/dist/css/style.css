@@ -1023,6 +1023,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   z-index: 100;
 }
 
+.z-30{
+  z-index: 30;
+}
+
+.z-50{
+  z-index: 50;
+}
+
 .z-20{
   z-index: 20;
 }
@@ -1986,6 +1994,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   max-width: 350px;
 }
 
+.max-w-3xl{
+  max-width: 48rem;
+}
+
+.max-w-none{
+  max-width: none;
+}
+
 .max-w-xs{
   max-width: 20rem;
 }
@@ -2009,6 +2025,18 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .translate-y-0{
   --tw-translate-y: 0px;
+  transform: var(--tw-transform);
+}
+
+.scale-90{
+  --tw-scale-x: .9;
+  --tw-scale-y: .9;
+  transform: var(--tw-transform);
+}
+
+.scale-100{
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
   transform: var(--tw-transform);
 }
 
@@ -2287,6 +2315,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .justify-self-end{
   justify-self: end;
+}
+
+.overflow-auto{
+  overflow: auto;
 }
 
 .overflow-hidden{
@@ -4449,6 +4481,12 @@ header.scrolled  .header--hours {
 .focus\:outline-none:focus{
   outline: 2px solid transparent;
   outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: no-preference){
+  .motion-safe\:ease-out{
+    transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
 }
 
 @media (min-width: 640px){

@@ -1,0 +1,12 @@
+name: 'NZP Gallery Migrations'
+type: module
+description: 'config migration entities for migrating content from the nzp-public d7 site to d8'
+core: 8.x
+core_version_requirement: ^8 || ^9
+package: 'Custom'
+dependencies:
+  - migrate
+  - migrate_tools
+  - migrate_plus
+  - migrate_upgrade
+  - migrate_drupal

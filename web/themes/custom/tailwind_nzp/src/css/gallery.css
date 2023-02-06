@@ -1,0 +1,45 @@
+.thumbnail-container {
+    display: flex;
+    gap: 1em;
+    padding:2em 0;
+}
+
+.thumbnail-container img {
+    height:100%;
+    object-fit:cover;
+    border-radius: 4px;
+    box-shadow:1px 1px 4px 8px #efefef;
+    cursor:pointer;
+    
+}
+
+.modal-container {
+    position:fixed;
+    inset:0;
+    z-index:100;
+    display:flex;
+    flex-wrap:wrap;
+    align-items:center;
+    justify-content:center;
+    padding:3em;
+    background:white;
+}
+
+.modal-container img {
+    max-height: 80vh;
+}
+
+.modal-container .prev, .modal-container .next {
+    position:absolute;
+    font-size:medium;
+    cursor: pointer;
+
+}
+
+.prev {
+    left: 1em;
+}
+
+.next {
+    right: 1em;
+}

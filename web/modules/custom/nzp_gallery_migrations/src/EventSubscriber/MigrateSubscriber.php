@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\nzp_gallery_migration\EventSubscriber;
+namespace Drupal\nzp_gallery_migrations\EventSubscriber;
 
 use Drupal\Core\Serialization\Yaml;
 use Drupal\menu_link_content\Entity\MenuLinkContent;
@@ -41,7 +41,7 @@ class MigrateSubscriber implements EventSubscriberInterface {
    */
   public function onPostRowSave(MigratePostRowSaveEvent $event) {
 
-    $mig_id = $event->getMigration()->getBaseId();
+    /**$mig_id = $event->getMigration()->getBaseId();
     $row = $event->getRow();
 
     switch ($mig_id) {
@@ -53,7 +53,7 @@ class MigrateSubscriber implements EventSubscriberInterface {
         // load the curent node
         $animal_node = Node::load($nid);
         // get the target ids for the gallery paras
-        $gallery_p = $animal_node->get('field_modal_gallery')->getValue();
+        $gallery_p = $animal_node->get('field_modal_gallery')->referencedEntities();
         if (!empty($gallery_p)) {
           // $gallery_p = explode(',', $gallery_p);
           foreach ($gallery_p as $para) {
@@ -79,7 +79,7 @@ class MigrateSubscriber implements EventSubscriberInterface {
           $nid = $node->id();
         //update the entity ref field on the animal
           //change this to whatever field you have on your end.
-          $animal_node->set('field_animal_gallery', $nid);
+          $animal_node->set('field_gallery', $nid);
           $animal_node->save();
         }
 
@@ -89,6 +89,7 @@ class MigrateSubscriber implements EventSubscriberInterface {
         // code...
         break;
     }
+    **/
   }
 
   /**
@@ -96,5 +97,48 @@ class MigrateSubscriber implements EventSubscriberInterface {
    */
   public function onPostImport(MigrateImportEvent $event) {
 
+    $mig_id = $event->getMigration()->getBaseId();
+    switch ($mig_id) {
+      case 'upgrade_d7_node_complete_animal':
+        $mig_id = $event->getMigration()->getBaseId();
+        $query = \Drupal::entityQuery('node')
+          ->accessCheck(FALSE)
+          ->condition('type', 'animal');
+        $ids = $query->execute();
+        $nodes = Node::loadMultiple($ids);
+        foreach ($nodes as $animal_node) {
+          $gallery_p = $animal_node->get('field_modal_gallery')->referencedEntities();
+          if (!empty($gallery_p)) {
+            foreach ($gallery_p as $para) {
+              $media = $para->get('field_modal_gallery_media')->getString();
+            }
+            $media = explode(',', $media);
+            // create the gallery node. you'll want to add some kind of check to
+          // make sure it doesn't already exist - maybe check if the animal node field is
+          // already populated.
+            $title = $animal_node->label() . " Gallery";
+            $node = Node::create([
+              'type' => 'gallery',
+              'title' => $title,
+              'field_gallery_items' => $media,
+            // 'body' => '',
+            // 'field_landing_image' => '',
+            // 'field_teaser_title' => '',
+              'uid' => 1,
+            ]);
+            $node->save();
+          // get gallery node id
+            $nid = $node->id();
+          //update the entity ref field on the animal
+            //change this to whatever field you have on your end.
+            $animal_node->set('field_animal_gallery', $nid);
+            $animal_node->save();
+          }
+        }
+        break;
+      default:
+        break;
+    }
   }
+
 }

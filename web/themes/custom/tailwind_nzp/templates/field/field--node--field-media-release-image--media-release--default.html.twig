@@ -18,26 +18,3 @@
         </div>
     {% endfor %}
 </div>
-
-{#
-{% if label_hidden %}
-  {% if multiple %}
-      {% for item in items %}
-       {{ item.content }}
-      {% endfor %}
-  {% else %}
-    {% for item in items %}
-      {{ item.content }}
-    {% endfor %}
-  {% endif %}
-{% else %}
-    <label {{ title_attributes.addClass(title_classes, label_classes)}}>{{ label }}</label>
-    {% if multiple %}
-    {% endif %}
-    {% for item in items %}
-      {{ item.content }}
-    {% endfor %}
-    {% if multiple %}
-    {% endif %}
-{% endif %}
-#}

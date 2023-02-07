@@ -6,22 +6,16 @@
 {%
     set label_classes = ['border-blue-sapphire','font-semibold','sans','inline-block','mb-2','pb-2','border-b-4','uppercase']
 %}
-{%
-    set begin_grid = '<div class="grid greg-grid">'
-%}
-{%
-    set end_grid = '</div>'
-%}
 
 {% if not(label_hidden) %}
     <label {{ title_attributes.addClass(title_classes, label_classes)}}>{{ label }}</label>
 {% endif %}
 
-{{ begin_grid }}
+<div class="grid greg-grid">
     {% for item in items %}
         {{ item.content }}
     {% endfor %}
-{{ end_grid }}
+</div>
 
 {#
 {% if label_hidden %}

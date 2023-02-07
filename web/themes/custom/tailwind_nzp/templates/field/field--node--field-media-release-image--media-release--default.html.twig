@@ -11,7 +11,7 @@
     <label {{ title_attributes.addClass(title_classes, label_classes)}}>{{ label }}</label>
 {% endif %}
 
-<div class="grid greg-grid">
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
     {% for item in items %}
         {{ item.content }}
     {% endfor %}

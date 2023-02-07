@@ -1,23 +1,14 @@
-{{ attach_library('tailwind_nzp/modal_gallery') }}
+{{ attach_library('tailwind_nzp/grid_gallery') }}
 {{ attach_library('tailwind_nzp/swiperjs') }}
 
 
 
-
-<div class="modal-wrapper inset-0 m-auto fixed w-full h-full shadow-md z-[100] items-center hidden rounded-md bg-black w-max-content p-8 overflow-hidden  h-modal">
-<button type="button" class="modal-close z-[100] top-2 absolute right-4 text-oxford-blue bg-lightestgray hover:bg-gray hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray dark:hover:text-white">
-			<svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-				<path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
-			</svg>
-			<span class="sr-only">Close modal</span>
-		</button>
-	<div class="h-max-content overflow-hidden modal-window swiper-container">		
+<div class="gallery-wrapper relative overflow-hidden grid grid-cols-12 gap-4">
+<div class=" col-span-12 lg:col-span-9">
+	<div class="media-container overflow-hidden swiper-container">		
 		<div
 			class="swiper-wrapper">
-
-			<!-- Slides -->
 			{% for key, slide in gallery %}
-
 				<div class="swiper-slide w-full">
 					{{ slide }}
 				</div>
@@ -41,10 +32,13 @@
 </div>
 
 
-<div class="flex gap-2 modal-thumbnail-container w-full flex-wrap">
+<div class="lg:max-h-[500px] grid-thumbnail-container h-full hover:overflow-y-auto  lg:col-span-3 col-span-12">
+<div class="grid lg:grid-cols-2 grid-cols-4 gap-2 auto-rows-max">
 	{% for key, thumbnail in thumbnails %}
-		<div class="modal-thumbnail-item">
+		<div class="grid-thumbnail-item col-span-1">
 			{{ thumbnail }}
 		</div>
 	{% endfor %}
 </div>
+</div>
+

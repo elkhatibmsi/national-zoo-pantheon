@@ -5,6 +5,6 @@ dependencies:
   module:
     - media
 id: media.carousel
-label: carousel
+label: Carousel
 targetEntityType: media
 cache: true

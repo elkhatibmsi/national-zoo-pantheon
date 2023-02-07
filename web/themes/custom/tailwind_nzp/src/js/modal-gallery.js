@@ -9,7 +9,7 @@
       $('.modal-wrapper').removeClass('flex').addClass('hidden');
     }
  
-    $('.thumbnail-item').on('click', function(){
+    $('.modal-thumbnail-item').on('click', function(){
       OpenModal();
     });
 
@@ -36,10 +36,10 @@
         prevEl: ".swiper-prev",
       },
       pagination: {
-        el: '.thumbnail-container',
+        el: '.modal-thumbnail-container',
         clickable: true,
         type: 'custom',
-        bulletClass: 'thumbnail-item',
+        bulletClass: 'modal-thumbnail-item',
 
     }
   });

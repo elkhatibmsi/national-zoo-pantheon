@@ -1,8 +1,9 @@
-uuid: 9f4731f8-3f88-4ef6-9ab0-9d5964e481de
+uuid: 9a68ae5f-8cbf-4328-9058-25a3dde92072
 langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.node.modal_gallery
     - field.field.node.gallery.body
     - field.field.node.gallery.field_gallery_items
     - field.field.node.gallery.field_landing_image
@@ -23,10 +24,10 @@ third_party_settings:
       denylisted_blocks: {  }
       allowlisted_blocks: {  }
       restricted_categories: {  }
-id: node.gallery.default
+id: node.gallery.modal_gallery
 targetEntityType: node
 bundle: gallery
-mode: default
+mode: modal_gallery
 content:
   field_gallery_items:
     type: entity_reference_entity_view

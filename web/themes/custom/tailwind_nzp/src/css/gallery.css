@@ -1,15 +1,14 @@
 .thumbnail-container {
     display: flex;
     gap: 1em;
-    padding:2em 0;
 }
 
 .thumbnail-container img {
-    height:100%;
-    object-fit:cover;
+    /* height:100%;
+    object-fit:cover; */
     border-radius: 4px;
-    box-shadow:1px 1px 4px 8px #efefef;
     cursor:pointer;
+    margin:0.5em;
     
 }
 

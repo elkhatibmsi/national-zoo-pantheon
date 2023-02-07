@@ -1,9 +1,9 @@
-uuid: 3cd3bdc8-d55e-4740-8205-145767947d04
+uuid: 0e33d0a1-7c70-433f-89c9-0a10c95ea0eb
 langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.media.carousel
+    - core.entity_view_mode.media.media_and_caption
     - field.field.media.image.field_dams_number
     - field.field.media.image.field_image_alt_text
     - field.field.media.image.field_media_image
@@ -11,11 +11,11 @@ dependencies:
     - field.field.media.image.field_notes
     - field.field.media.image.field_photographer
     - field.field.media.image.field_we_do_not_own
-    - image.style.slick_media
     - media.type.image
   module:
     - image
     - layout_builder
+    - layout_discovery
     - nzp_layouts
     - text_field_formatter
 third_party_settings:
@@ -29,8 +29,8 @@ third_party_settings:
           label: ''
           context_mapping: {  }
         components:
-          77de130b-00e4-4bcf-aa40-e0372104d453:
-            uuid: 77de130b-00e4-4bcf-aa40-e0372104d453
+          27148c9a-dfd6-49be-ac91-db5370ecf57a:
+            uuid: 27148c9a-dfd6-49be-ac91-db5370ecf57a
             region: image
             configuration:
               id: 'field_block:media:image:field_media_image'
@@ -42,17 +42,17 @@ third_party_settings:
                 view_mode: view_mode
               formatter:
                 type: image
-                label: hidden
+                label: visually_hidden
                 settings:
                   image_link: ''
-                  image_style: slick_rectangle
+                  image_style: wide
                   image_loading:
                     attribute: lazy
                 third_party_settings: {  }
-            weight: 0
+            weight: 1
             additional: {  }
-          79259a75-e6bd-4cd8-80e2-0d068b270fe9:
-            uuid: 79259a75-e6bd-4cd8-80e2-0d068b270fe9
+          e7d2e3bd-91d3-4ace-a983-9fef8e126a91:
+            uuid: e7d2e3bd-91d3-4ace-a983-9fef8e126a91
             region: caption
             configuration:
               id: 'field_block:media:image:field_image_alt_text'
@@ -71,29 +71,37 @@ third_party_settings:
             weight: 0
             additional: {  }
         third_party_settings: {  }
-id: media.image.carousel
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components: {  }
+        third_party_settings: {  }
+_core:
+  default_config_hash: B1a2aBHmUulUZN6HrxITEH1tSResuVjXMBEv1lUBtOo
+id: media.image.media_and_caption
 targetEntityType: media
 bundle: image
-mode: carousel
+mode: media_and_caption
 content:
   field_image_alt_text:
     type: text_field_formatter
-    label: hidden
+    label: above
     settings:
-      wrap_tag: div
-      wrap_class: caption
+      link_to_entity: false
+      wrap_tag: _none
+      wrap_class: ''
       wrap_attributes: ''
       override_link_label: ''
-      link_to_entity: 0
     third_party_settings: {  }
     weight: 1
     region: content
   field_media_image:
     type: image
-    label: hidden
+    label: visually_hidden
     settings:
       image_link: ''
-      image_style: slick_media
+      image_style: ''
       image_loading:
         attribute: lazy
     third_party_settings: {  }

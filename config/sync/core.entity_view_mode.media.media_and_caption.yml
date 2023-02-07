@@ -1,10 +1,10 @@
-uuid: bb505cda-aa35-46c9-bc33-a5eb777a7f40
+uuid: c3fb87fa-7af4-4210-bba5-4746995da2a0
 langcode: en
 status: true
 dependencies:
   module:
     - media
-id: media.webcam_ad
-label: 'Webcam Ad'
+id: media.media_and_caption
+label: 'Media and Caption'
 targetEntityType: media
 cache: true

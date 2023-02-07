@@ -1,0 +1,47 @@
+{%
+  set title_classes = [
+    label_display == 'visually_hidden' ? 'visually-hidden',
+  ]
+%}
+{%
+    set label_classes = ['border-blue-sapphire','font-semibold','sans','inline-block','mb-2','pb-2','border-b-4','uppercase']
+%}
+{%
+    set begin_grid = '<div class="grid greg-grid">'
+%}
+{%
+    set end_grid = '</div>'
+%}
+
+{% if not(label_hidden) %}
+    <label {{ title_attributes.addClass(title_classes, label_classes)}}>{{ label }}</label>
+{% endif %}
+
+{{ begin_grid }}
+    {% for item in items %}
+        {{ item.content }}
+    {% endfor %}
+{{ end_grid }}
+
+{#
+{% if label_hidden %}
+  {% if multiple %}
+      {% for item in items %}
+       {{ item.content }}
+      {% endfor %}
+  {% else %}
+    {% for item in items %}
+      {{ item.content }}
+    {% endfor %}
+  {% endif %}
+{% else %}
+    <label {{ title_attributes.addClass(title_classes, label_classes)}}>{{ label }}</label>
+    {% if multiple %}
+    {% endif %}
+    {% for item in items %}
+      {{ item.content }}
+    {% endfor %}
+    {% if multiple %}
+    {% endif %}
+{% endif %}
+#}

@@ -2,39 +2,47 @@
 {{ attach_library('tailwind_nzp/swiperjs') }}
 
 
-<div class="modal-window swiper-container">
-	<div
-		class="swiper-wrapper">
+<div class="modal-wrapper fixed top-0 left-0 right-0 z-[100] items-center hidden border-b rounded-t dark:border-gray-600 bg-white w-max-content p-8 overflow-x-hidden overflow-y-auto inset-0 h-modal">
+<button type="button" class="modal-close z-[100] top-0 absolute right-4 text-oxford-blue bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray dark:hover:text-white">
+			<svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+				<path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+			</svg>
+			<span class="sr-only">Close modal</span>
+		</button>
+	<div class="modal-window swiper-container lg:max-h-[70vh] lg:max-w-[70vw]">		
+		<div
+			class="swiper-wrapper">
 
-		<!-- Slides -->
-		{% for key, slide in gallery %}
+			<!-- Slides -->
+			{% for key, slide in gallery %}
 
-			<div class="swiper-slide w-full">
-				{{ slide }}
-			</div>
-		{% endfor %}
-	</div>
-						<div class="absolute inset-y-0 left-0 z-10 flex items-center">
-				<button class="swiper-prev bg-white ml-1 flex justify-center items-center w-10 h-10 rounded-full shadow focus:outline-none">
-					<svg viewbox="0 0 20 20" fill="currentColor" class="chevron-left w-6 h-6">
-						<path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-					</svg>
-				</button>
-			</div>
-				<div class="absolute inset-y-0 right-0 z-10 flex items-center">
-					<button class="swiper-next bg-white mr-1 flex justify-center items-center w-10 h-10 rounded-full shadow focus:outline-none">
-						<svg viewbox="0 0 20 20" fill="currentColor" class="chevron-right w-6 h-6">
-							<path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
-						</svg>
-					</button>
+				<div class="swiper-slide w-full">
+					{{ slide }}
 				</div>
+			{% endfor %}
+		</div>
+		<div class="absolute inset-y-0 left-0 z-10 flex items-center">
+			<button class="swiper-prev bg-white ml-1 flex justify-center items-center w-10 h-10 rounded-full shadow focus:outline-none">
+				<svg viewbox="0 0 20 20" fill="currentColor" class="chevron-left w-6 h-6">
+					<path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+				</svg>
+			</button>
+		</div>
+		<div class="absolute inset-y-0 right-0 z-10 flex items-center">
+			<button class="swiper-next bg-white mr-1 flex justify-center items-center w-10 h-10 rounded-full shadow focus:outline-none">
+				<svg viewbox="0 0 20 20" fill="currentColor" class="chevron-right w-6 h-6">
+					<path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
+				</svg>
+			</button>
+		</div>
+	</div>
 </div>
 
 
-<div class="flex gap-2 thumbnail-container w-full">
-{% for key, thumbnail in thumbnails %}
-	<div class="thumbnail-item">
-		{{ thumbnail }}
-	</div>
-{% endfor %}
+<div class="flex gap-2 thumbnail-container w-full flex-wrap">
+	{% for key, thumbnail in thumbnails %}
+		<div class="thumbnail-item">
+			{{ thumbnail }}
+		</div>
+	{% endfor %}
 </div>

@@ -1,12 +1,31 @@
 (function ($, Drupal) {
-  $(document).ready(function () {
 
-    $('.modal-window').hide();
+  $(document).ready(function () {
+    function OpenModal() {
+      $('.modal-wrapper').addClass('flex').removeClass('hidden');
+    }
+  
+    function CloseModal() {
+      $('.modal-wrapper').removeClass('flex').addClass('hidden');
+    }
+ 
     $('.thumbnail-item').on('click', function(){
-      $('.modal-window').show();
+      OpenModal();
     });
 
-    const slider = new Swiper(".modal-window", {
+    $('.modal-close').on('click', function(){
+      CloseModal();
+    });
+
+    $(document).on('keydown', function(e){
+      if(e.keyCode == 27) {
+        CloseModal();
+      }
+    });
+
+
+
+    new Swiper(".modal-window", {
       slidesPerView: 1,
       centeredSlides: true,
       observer: true,

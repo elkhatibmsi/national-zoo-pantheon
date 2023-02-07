@@ -2078,10 +2078,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   grid-auto-columns: auto;
 }
 
-.grid-flow-row-dense{
-  grid-auto-flow: row dense;
-}
-
 .auto-rows-auto{
   grid-auto-rows: auto;
 }
@@ -2692,6 +2688,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .p-4{
   padding: 1rem;
+}
+
+.\!p-0{
+  padding: 0px !important;
 }
 
 .p-3{
@@ -3810,11 +3810,16 @@ h3{
   align-items: center;
   padding-top: 1rem;
   padding-bottom: 1rem;
-  font-size: 3.75rem;
-  line-height: 1;
   font-weight: 700;
   --tw-text-opacity: 1;
   color: rgb(23 23 23 / var(--tw-text-opacity));
+}
+
+@media (min-width: 1024px){
+  .page-title{
+    font-size: 3.75rem;
+    line-height: 1;
+  }
 }
 
 .landing-title{
@@ -5700,10 +5705,6 @@ header.scrolled  .header--hours {
 
   .lg\:h-full{
     height: 100%;
-  }
-
-  .lg\:max-h-\[300px\]{
-    max-height: 300px;
   }
 
   .lg\:max-h-\[500px\]{

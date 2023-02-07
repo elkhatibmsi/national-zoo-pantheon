@@ -97,7 +97,7 @@ h3 {
 }
 
 .page-title {
-  @apply text-6xl py-4 mb-1 mt-2 font-bold flex items-center text-black;
+  @apply lg:text-6xl py-4 mb-1 mt-2 font-bold flex items-center text-black;
 }
 
 .landing-title {

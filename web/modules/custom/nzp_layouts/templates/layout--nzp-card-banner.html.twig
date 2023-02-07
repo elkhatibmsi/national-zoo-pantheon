@@ -6,7 +6,7 @@ the callout box gets an orange border.
 
 
 {% if content %}
-<div {{ attributes.addClass(settings.container_classes).addClass(settings.custom_classes).addClass('mx-auto relative md:min-h-[400px]') }} >
+<div {{ attributes.addClass(settings.container_classes).addClass(settings.custom_classes).addClass('mx-auto relative !p-0 md:min-h-[400px]') }} >
 	<div class="relative w-full">
 		<div {{region_attributes.banner.addClass("banner md:max-h-full max-h-[200px] overflow-hidden").addClass(settings.custom_region_classes.banner).addClass(settings.custom_region_classes.banner)}}>
 			{{ content.banner }}

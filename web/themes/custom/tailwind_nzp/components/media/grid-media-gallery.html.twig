@@ -3,7 +3,7 @@
 
 
 
-<div class="gallery-wrapper relative overflow-hidden grid grid-cols-12 gap-4">
+<div class="gallery-wrapper relative overflow-hidden grid grid-cols-12 gap-x-4">
 <div class=" col-span-12 lg:col-span-9">
 	<div class="media-container overflow-hidden swiper-container">		
 		<div
@@ -32,7 +32,7 @@
 </div>
 
 
-<div class="lg:max-h-[500px] grid-thumbnail-container h-full hover:overflow-y-auto  lg:col-span-3 col-span-12">
+<div class="lg:max-h-[500px] grid-thumbnail-container h-full hover:overflow-y-scroll  lg:col-span-3 col-span-12">
 <div class="grid lg:grid-cols-2 grid-cols-4 gap-2 auto-rows-max">
 	{% for key, thumbnail in thumbnails %}
 		<div class="grid-thumbnail-item col-span-1">

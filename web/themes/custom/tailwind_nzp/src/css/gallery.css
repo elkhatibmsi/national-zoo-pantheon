@@ -1,14 +1,19 @@
-.thumbnail-container {
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.modal-thumbnail-container {
     display: flex;
     gap: 1em;
 }
 
-.thumbnail-container img {
-    /* height:100%;
-    object-fit:cover; */
+.grid-thumbnail-container img {
+    height:100%;
+    object-fit:cover;
     border-radius: 4px;
     cursor:pointer;
     margin:0.5em;
+
     
 }
 
@@ -42,3 +47,16 @@
 .next {
     right: 1em;
 }
+
+.grid-thumbnail-container::-webkit-scrollbar {
+    width: 0.5em;
+  }
+  
+  .grid-thumbnail-container::-webkit-scrollbar-track {
+    @apply bg-lightgray rounded-sm;
+  
+  }
+  
+  .grid-thumbnail-container::-webkit-scrollbar-thumb {
+    @apply bg-oxford-blue rounded-md w-4;
+  }

@@ -310,6 +310,39 @@ third_party_settings:
         layout_settings:
           context_mapping: {  }
           custom_classes: ''
+          custom_region_classes: null
+          region_classes: null
+          container_classes: container
+          html_container_elements: div
+          html_region_elements: null
+          background_color: bg-none
+          region_background_color: null
+        components:
+          1eb2c208-2e78-4909-ab38-2cdbcde6906a:
+            uuid: 1eb2c208-2e78-4909-ab38-2cdbcde6906a
+            region: content
+            configuration:
+              id: 'field_block:node:animal:field_animal_gallery'
+              label: 'Animal Gallery'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: entity_reference_entity_view
+                label: hidden
+                settings:
+                  view_mode: modal_gallery
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+        third_party_settings: {  }
+      -
+        layout_id: layout_nzp_one_col
+        layout_settings:
+          context_mapping: {  }
+          custom_classes: ''
           custom_region_classes: ''
           region_classes:
             content: col-md-12

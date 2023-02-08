@@ -1,9 +1,9 @@
 {% set thumbnails = [] %}
 {% set gallery = [] %}
 
-{% for key, media in node.field_gallery_items %}
-	{% set thumbnail =  media.entity | view('gallery_thumbnail')  %}
-	{% set gallery_item =  media.entity | view('media_and_caption') %}
+{% for key, media in items %}
+	{% set thumbnail =  media.content['#media'] | view('gallery_thumbnail')  %}
+	{% set gallery_item =  media.content['#media'] | view('media_and_caption') %}
 
 	{% set gallery = gallery|merge([gallery_item]) %}
 	{% set thumbnails = thumbnails|merge([thumbnail]) %}

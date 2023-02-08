@@ -119,6 +119,8 @@ module.exports = {
         'bg-gray-100',
         'gap-{gap}',
         '{screens}:gap-{gap}',
+        'gap-y-{gap}',
+        'gap-x-{gap}',
         '{screens}:grid-cols-{gridColumn}',
         'sm:grid-cols-1',
         'md:grid-cols-2',

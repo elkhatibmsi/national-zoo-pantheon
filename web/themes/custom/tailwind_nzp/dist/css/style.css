@@ -1922,6 +1922,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: 1.25rem;
 }
 
+.h-0{
+  height: 0px;
+}
+
 .max-h-\[200px\]{
   max-height: 200px;
 }
@@ -2268,11 +2272,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   row-gap: 0px;
 }
 
-.gap-x-8{
-  -moz-column-gap: 2rem;
-       column-gap: 2rem;
-}
-
 .gap-y-1{
   row-gap: 0.25rem;
 }
@@ -2447,6 +2446,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 .gap-x-7{
   -moz-column-gap: 1.75rem;
        column-gap: 1.75rem;
+}
+
+.gap-x-8{
+  -moz-column-gap: 2rem;
+       column-gap: 2rem;
 }
 
 .gap-x-9{
@@ -5506,6 +5510,10 @@ header.scrolled  .header--hours {
 
   .sm\:block{
     display: block;
+  }
+
+  .sm\:h-auto{
+    height: auto;
   }
 
   .sm\:grid-cols-1{

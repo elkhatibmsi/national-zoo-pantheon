@@ -144,7 +144,9 @@ module.exports = {
         'flex-wrap',
         'flex-row-reverse',
         'max-w-[350px]', 
-        'w-24',       
+        'w-24', 
+        'h-0',
+        'sm:h-auto',      
         'overflow-hidden'
       ],
     }),

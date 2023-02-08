@@ -25,9 +25,7 @@ class NzpOneColLayouts extends NzpWrapperBase {
    *
    */
   protected function getRegionClasses() {
-    return [
-      'col-md-12' => 'col-md-12',
-    ];
+    return [];
   }
 
   protected function getRegionBackgroundColor() {

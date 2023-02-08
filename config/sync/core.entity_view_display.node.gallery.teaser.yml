@@ -1,0 +1,41 @@
+uuid: 52843a15-e210-48e2-9cf0-548743b7a051
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.gallery.body
+    - field.field.node.gallery.field_gallery_items
+    - field.field.node.gallery.field_landing_image
+    - field.field.node.gallery.field_teaser_title
+    - node.type.gallery
+  module:
+    - layout_builder
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+id: node.gallery.teaser
+targetEntityType: node
+bundle: gallery
+mode: teaser
+content:
+  field_gallery_items:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: gallery_thumbnail
+      link: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  body: true
+  field_landing_image: true
+  field_teaser_title: true

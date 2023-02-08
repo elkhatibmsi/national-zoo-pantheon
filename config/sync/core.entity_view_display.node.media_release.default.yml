@@ -32,6 +32,7 @@ third_party_settings:
         layout_settings:
           context_mapping: {  }
           custom_classes: ''
+          custom_region_classes: ''
           region_classes:
             content: col-md-12
           container_classes: container

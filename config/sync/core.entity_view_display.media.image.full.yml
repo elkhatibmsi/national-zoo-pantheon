@@ -6,12 +6,12 @@ dependencies:
     - core.entity_view_mode.media.full
     - field.field.media.image.field_dams_number
     - field.field.media.image.field_image_alt_text
+    - field.field.media.image.field_image_caption
     - field.field.media.image.field_media_image
     - field.field.media.image.field_media_tags
     - field.field.media.image.field_notes
     - field.field.media.image.field_photographer
     - field.field.media.image.field_we_do_not_own
-    - image.style.large
     - media.type.image
   module:
     - image
@@ -43,7 +43,7 @@ content:
     label: visually_hidden
     settings:
       image_link: ''
-      image_style: large
+      image_style: ''
       image_loading:
         attribute: lazy
     third_party_settings: {  }
@@ -51,6 +51,7 @@ content:
     region: content
 hidden:
   created: true
+  field_image_caption: true
   field_media_tags: true
   field_notes: true
   field_photographer: true

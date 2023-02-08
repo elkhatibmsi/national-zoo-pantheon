@@ -1,6 +1,6 @@
 services:
   post_migration_subscriber:
-    class: '\Drupal\nzp_gallery_migration\EventSubscriber\MigrateSubscriber'
+    class: '\Drupal\nzp_gallery_migrations\EventSubscriber\MigrateSubscriber'
     tags:
       - { name: 'event_subscriber' }
 

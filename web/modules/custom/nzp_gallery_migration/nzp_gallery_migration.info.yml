@@ -1,6 +1,0 @@
-name: nzp_gallery_migration
-type: module
-description: The description.
-package: Custom
-core: 8.x
-core_version_requirement: ^8 || ^9

@@ -1,0 +1,10 @@
+uuid: 1144a7ba-e4bf-4398-9bf6-88bdaf711630
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.modal_gallery
+label: 'Modal Gallery'
+targetEntityType: node
+cache: true

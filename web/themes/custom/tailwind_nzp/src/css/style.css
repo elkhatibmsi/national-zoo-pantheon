@@ -97,7 +97,7 @@ h3 {
 }
 
 .page-title {
-  @apply text-6xl py-4 mb-1 mt-2 font-bold flex items-center text-black;
+  @apply lg:text-6xl py-4 mb-1 mt-2 font-bold flex items-center text-black;
 }
 
 .landing-title {
@@ -119,7 +119,8 @@ h3 {
 
 .container,
 .container-fluid {
-  @apply mb-4;
+  @apply mb-4 lg:px-0 px-4;
+
 }
 
 p ul,
@@ -292,7 +293,7 @@ a {
 }
 
 .form-item label, legend {
-  @apply space-x-1 pl-2 border-oxford-blue uppercase;
+  @apply space-x-2 pl-2 border-oxford-blue;
 }
 
 .form-item [type="text"], [type="email"], [type="number"], textarea, select {
@@ -468,3 +469,8 @@ main {
   padding-bottom: 56.25%;
   position: relative;
 }
+
+
+
+
+

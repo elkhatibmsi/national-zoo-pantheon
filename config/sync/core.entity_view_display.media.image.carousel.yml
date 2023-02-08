@@ -6,59 +6,104 @@ dependencies:
     - core.entity_view_mode.media.carousel
     - field.field.media.image.field_dams_number
     - field.field.media.image.field_image_alt_text
+    - field.field.media.image.field_image_caption
     - field.field.media.image.field_media_image
     - field.field.media.image.field_media_tags
     - field.field.media.image.field_notes
     - field.field.media.image.field_photographer
     - field.field.media.image.field_we_do_not_own
-    - image.style.wide
+    - image.style.slick_media
     - media.type.image
   module:
-    - blazy
+    - image
+    - layout_builder
+    - nzp_layouts
+    - text_field_formatter
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: layout_image_with_caption
+        layout_settings:
+          label: ''
+          context_mapping: {  }
+        components:
+          77de130b-00e4-4bcf-aa40-e0372104d453:
+            uuid: 77de130b-00e4-4bcf-aa40-e0372104d453
+            region: image
+            configuration:
+              id: 'field_block:media:image:field_media_image'
+              label: Image
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: image
+                label: hidden
+                settings:
+                  image_link: ''
+                  image_style: slick_rectangle
+                  image_loading:
+                    attribute: lazy
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          79259a75-e6bd-4cd8-80e2-0d068b270fe9:
+            uuid: 79259a75-e6bd-4cd8-80e2-0d068b270fe9
+            region: caption
+            configuration:
+              id: 'field_block:media:image:field_image_alt_text'
+              label: 'Image Alt Text'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: string
+                label: hidden
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+        third_party_settings: {  }
 id: media.image.carousel
 targetEntityType: media
 bundle: image
 mode: carousel
 content:
-  field_media_image:
-    type: blazy
+  field_image_alt_text:
+    type: text_field_formatter
     label: hidden
     settings:
-      caption:
-        title: '0'
-        alt: '0'
-      icon: ''
-      layout: ''
-      view_mode: ''
-      cache: 0
-      current_view_mode: carousel
-      skin: ''
-      fx: ''
-      style: ''
-      background: false
-      box_caption: ''
-      box_caption_custom: ''
-      box_media_style: ''
-      responsive_image_style: ''
-      box_style: ''
-      image_style: wide
-      media_switch: ''
-      ratio: ''
-      thumbnail_style: ''
-      _uri: ''
-      breakpoints: {  }
-      sizes: ''
-      grid_header: ''
-      grid: ''
-      grid_medium: ''
-      grid_small: ''
+      wrap_tag: div
+      wrap_class: caption
+      wrap_attributes: ''
+      override_link_label: ''
+      link_to_entity: 0
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_media_image:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: slick_media
+      image_loading:
+        attribute: lazy
     third_party_settings: {  }
     weight: 0
     region: content
 hidden:
   created: true
   field_dams_number: true
-  field_image_alt_text: true
+  field_image_caption: true
   field_media_tags: true
   field_notes: true
   field_photographer: true

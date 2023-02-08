@@ -64,15 +64,14 @@ third_party_settings:
           switch_field: field_featured_video
           base_layout: layout_card_banner
           custom_classes: ''
-          region_classes:
-            card: col-md-12
-            banner: col-md-12
+          custom_region_classes:
+            card: ''
+            banner: ''
+          region_classes: null
           container_classes: container
-          html_container_elements: div
-          html_region_elements:
-            card: div
-            banner: div
-          background_color: bg-none
+          html_container_elements: null
+          html_region_elements: null
+          background_color: 'knockout bg-oxford-blue'
           region_background_color: null
           getHtmlElements: div
         components:
@@ -263,9 +262,10 @@ third_party_settings:
                 entity: layout_builder.entity
                 view_mode: view_mode
               formatter:
-                type: text_default
+                type: text_summary_or_trimmed
                 label: hidden
-                settings: {  }
+                settings:
+                  trim_length: 300
                 third_party_settings: {  }
             weight: 3
             additional:
@@ -285,12 +285,65 @@ third_party_settings:
                   class: ''
                   style: ''
                   data: ''
+          eacb6e32-ad57-468d-8d9b-057cb1bf1a67:
+            uuid: eacb6e32-ad57-468d-8d9b-057cb1bf1a67
+            region: 'true:card'
+            configuration:
+              id: 'field_block:node:animal:body'
+              label: Summary
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: text_summary_or_trimmed
+                label: hidden
+                settings:
+                  trim_length: 300
+                third_party_settings: {  }
+            weight: 3
+            additional: {  }
         third_party_settings: {  }
       -
         layout_id: layout_nzp_one_col
         layout_settings:
           context_mapping: {  }
           custom_classes: ''
+          custom_region_classes: null
+          region_classes: null
+          container_classes: container
+          html_container_elements: div
+          html_region_elements: null
+          background_color: bg-none
+          region_background_color: null
+        components:
+          1eb2c208-2e78-4909-ab38-2cdbcde6906a:
+            uuid: 1eb2c208-2e78-4909-ab38-2cdbcde6906a
+            region: content
+            configuration:
+              id: 'field_block:node:animal:field_animal_gallery'
+              label: 'Animal Gallery'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: entity_reference_entity_view
+                label: hidden
+                settings:
+                  view_mode: modal_gallery
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+        third_party_settings: {  }
+      -
+        layout_id: layout_nzp_one_col
+        layout_settings:
+          context_mapping: {  }
+          custom_classes: ''
+          custom_region_classes: ''
           region_classes:
             content: col-md-12
           container_classes: container
@@ -309,7 +362,7 @@ third_party_settings:
               label_display: '0'
               provider: system
               context_mapping: {  }
-            weight: 0
+            weight: 1
             additional: {  }
         third_party_settings: {  }
       -
@@ -317,15 +370,18 @@ third_party_settings:
         layout_settings:
           context_mapping: {  }
           custom_classes: ''
+          custom_region_classes: null
           region_classes:
-            one_col: col-span-8
-            two_col: col-span-4
+            two_col:
+              two_col: col-span-4
+            one_col:
+              one_col: col-span-8
           container_classes: 'container mx-auto'
           html_container_elements: div
           html_region_elements:
             one_col: div
             two_col: aside
-          background_color: null
+          background_color: bg-none
           region_background_color:
             one_col: bg-none
             two_col: bg-none

@@ -16,7 +16,7 @@
  
 
 {% if content %}
-    <{{settings.html_container_elements}} {{ attributes.addClass(settings.container_classes).addClass(settings.custom_classes).addClass(settings.background_color).addClass('mx-auto', 'relative') }} >
+    <{{settings.html_container_elements}} {{ attributes.addClass(settings.container_classes, settings.custom_classes, settings.background_color, 'mx-auto', 'relative') }} >
        {% if content.content %}         
             <div {{region_attributes.content}} >
                 {{ content.content }}

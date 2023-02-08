@@ -40,6 +40,7 @@ third_party_settings:
         layout_settings:
           context_mapping: {  }
           custom_classes: ''
+          custom_region_classes: ''
           region_classes:
             content: col-md-12
           container_classes: container
@@ -66,6 +67,7 @@ third_party_settings:
         layout_settings:
           context_mapping: {  }
           custom_classes: ''
+          custom_region_classes: ''
           region_classes:
             card: col-md-12
             banner: col-md-12
@@ -166,6 +168,7 @@ third_party_settings:
         layout_settings:
           context_mapping: {  }
           custom_classes: ''
+          custom_region_classes: ''
           region_classes: null
           container_classes: container
           html_container_elements: div
@@ -193,6 +196,7 @@ third_party_settings:
         layout_settings:
           context_mapping: {  }
           custom_classes: ''
+          custom_region_classes: ''
           region_classes: null
           container_classes: container
           html_container_elements: div
@@ -207,6 +211,7 @@ third_party_settings:
         layout_settings:
           context_mapping: {  }
           custom_classes: ''
+          custom_region_classes: ''
           region_classes:
             one_col: col-span-8
             two_col: col-span-4

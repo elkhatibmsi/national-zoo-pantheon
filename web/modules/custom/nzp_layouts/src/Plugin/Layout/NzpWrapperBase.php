@@ -43,6 +43,7 @@ abstract class NzpWrapperBase extends LayoutDefault implements PluginFormInterfa
 
     return [
       'custom_classes' => '',
+      'custom_region_classes' => '',
       'region_classes' => array_shift($region_classes),
       'container_classes' => array_shift($container_classes),
       'html_container_elements' => array_shift($html_elements),
@@ -104,28 +105,21 @@ if(!empty($this->getBackgroundColor())) {
 
   
   if(count($regions) > 1) {
-    $form['html_region_elements'] = [
-      '#type' => 'details',
-      '#title' => $this->t('HTML Element Options'),
-      '#tree' => TRUE,
-    ];
 
     foreach ($regions as $region_name => $region_definition) {
+
+
       if(!empty($this->getRegionBackgroundColor())) {
         $form['region_background_color'][$region_name] = [
           '#type' => 'select',
+          '#group' => 'region_options',
           '#options' => $this->getRegionBackgroundColor(),
           '#title' => $this->t('Background Color'),
           '#description' => $this->t('Select a background color for @region' , ['@region' => $region_definition['label']]),
           '#default_value' => !empty($configuration['region_background_color'][$region_name]) ? $configuration['region_background_color'][$region_name] : 'bg-none',
         ];
       }
-      $form['region_classes'][$region_name] = [
-        '#type' => 'select',
-        '#options' => $this->getRegionClasses(),
-        '#title' => $this->t('Class for @region', ['@region' => $region_definition['label']]),
-        '#default_value' => !empty($configuration['region_classes'][$region_name]) ? $configuration['region_classes'][$region_name] : 'gr',
-      ];
+      if(!empty($this->getHtmlElements())) {
 
       $form['html_region_elements'][$region_name] = [
         '#type' => 'select',
@@ -133,6 +127,27 @@ if(!empty($this->getBackgroundColor())) {
         '#title' => $this->t('HTML Tag for @region', ['@region' => $region_definition['label']]),
         '#default_value' => !empty($configuration['html_region_elements'][$region_name]) ? $configuration['html_region_elements'][$region_name] : 'div',
       ];
+    }
+    if(!empty($this->getRegionClasses())) {
+
+      $form['region_classes'][$region_name] = [
+        '#type' => 'select',
+        '#group' => 'region_options',
+        '#options' => $this->getRegionClasses(),
+        '#title' => $this->t('Column width for @region', ['@region' => $region_definition['label']]),
+        '#default_value' => !empty($configuration['region_classes'][$region_name]) ? $configuration['region_classes'][$region_name] : '',
+      ];
+    }
+
+      $form['custom_region_classes'][$region_name] = [
+        '#type' => 'textfield',
+        '#title' => $this->t('Extra Classes for @region', ['@region' => $region_definition['label']]),
+        '#description' => $this->t('add additional classes for @region. Do not use commas.', ['@region' => $region_definition['label']]),
+        '#default_value' => !empty($configuration['custom_region_classes'][$region_name]) ? $configuration['custom_region_classes'][$region_name] : '',
+      ];
+  
+
+
     }
   }
     return $form;
@@ -148,14 +163,18 @@ if(!empty($this->getBackgroundColor())) {
    * {@inheritdoc}
    */
   public function submitConfigurationForm(array &$form, FormStateInterface $form_state) {
+    $regions = $this->getPluginDefinition()->getRegions();
 
+    $values = $form_state->getValues();
     $this->configuration['container_classes'] = $form_state->getValue('container_classes');
-    $this->configuration['getHtmlElements'] = $form_state->getValue(['html_container_elements']);
-    $this->configuration['html_region_elements'] = $form_state->getValue('html_region_elements');
-    $this->configuration['region_classes'] = $form_state->getValue('region_classes');
+    $this->configuration['html_container_elements'] = $form_state->getValue('html_container_elements');
     $this->configuration['custom_classes'] = $form_state->getValue('custom_class');
     $this->configuration['background_color'] = $form_state->getValue('background_color');
-    $this->configuration['region_background_color'] = $form_state->getValue('region_background_color');
+    $this->configuration['region_classes']= $form_state->getValue('region_classes');
+    $this->configuration['custom_region_classes']= $form_state->getValue('custom_region_classes');
+    $this->configuration['region_background_color']= $form_state->getValue('region_background_color');
+    $this->configuration['html_region_elements']= $form_state->getValue('html_region_elements');
+      
 
   }
 

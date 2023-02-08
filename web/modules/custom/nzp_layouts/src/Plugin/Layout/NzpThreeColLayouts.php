@@ -71,7 +71,15 @@ class NzpThreeColLayouts extends NzpWrapperBase {
   }
 
   protected function getBackgroundColor() {
-    return [];
+    return [
+      'bg-none'=> 'None', 
+      'bg-white'=> 'White',     
+      'knockout bg-oxford-blue' => 'Oxford Blue',
+      'knockout bg-sap-green' => 'Sap Green',
+      'knockout bg-blue-sapphire' => 'Blue Saphire', 
+      'p-4 bg-sizzling-red' => 'Sizzling Red', 
+      'p-4 bg-cyber-yellow' => 'Cyber Yellow',
+    ];
   }
 
 }

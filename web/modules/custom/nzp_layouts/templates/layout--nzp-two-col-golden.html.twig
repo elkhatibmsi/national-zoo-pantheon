@@ -23,7 +23,7 @@
 
 {% if content %}
     <div{{ attributes.addClass(settings.custom_classes, settings.background_color) }} >
-        <div class="greggrid">
+        <div class="container mx-auto grid grid-cols-[.62fr_.38fr]">
             {% if content.one_col %}
                     {{ content.one_col }}
             {% endif %}

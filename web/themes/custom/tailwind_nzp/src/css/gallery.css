@@ -60,3 +60,22 @@
   .grid-thumbnail-container::-webkit-scrollbar-thumb {
     @apply bg-oxford-blue rounded-md w-4;
   }
+
+
+  .banner-caption {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 2em;
+    font-size: 2em;
+    width: 100%;
+    padding-left:75%;
+    z-index:1;
+    background: linear-gradient(269deg, #002554, #002554fc, #00255433, #0000001c);
+}
+
+.banner-caption * {
+    color: white
+}

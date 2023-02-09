@@ -71,6 +71,45 @@ third_party_settings:
                 third_party_settings: {  }
             weight: 0
             additional: {  }
+          d4a83648-55dd-4a1d-8abf-ffaa5cc2b92f:
+            uuid: d4a83648-55dd-4a1d-8abf-ffaa5cc2b92f
+            region: content
+            configuration:
+              id: 'field_block:media:image:field_media_image'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: image
+                label: hidden
+                settings:
+                  image_link: ''
+                  image_style: slick_media
+                  image_loading:
+                    attribute: lazy
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          82e54e66-3ff3-4d24-b8f0-a93e5ead22a1:
+            uuid: 82e54e66-3ff3-4d24-b8f0-a93e5ead22a1
+            region: content
+            configuration:
+              id: 'field_block:media:image:field_image_alt_text'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: text_field_formatter
+                label: hidden
+                settings:
+                  wrap_tag: div
+                  wrap_class: caption
+                  wrap_attributes: ''
+                  override_link_label: ''
+                  link_to_entity: 0
+                third_party_settings: {  }
+            weight: 1
+            additional: {  }
         third_party_settings: {  }
 id: media.image.carousel
 targetEntityType: media

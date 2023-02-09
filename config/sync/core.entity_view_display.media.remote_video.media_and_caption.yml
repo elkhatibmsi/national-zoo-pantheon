@@ -5,11 +5,11 @@ dependencies:
   config:
     - core.entity_view_mode.media.media_and_caption
     - field.field.media.remote_video.field_media_oembed_video
+    - image.style.wide
     - media.type.remote_video
   module:
+    - blazy
     - layout_builder
-    - media
-    - text_field_formatter
 third_party_settings:
   layout_builder:
     enabled: false
@@ -22,27 +22,27 @@ bundle: remote_video
 mode: media_and_caption
 content:
   field_media_oembed_video:
-    type: oembed
+    type: blazy_oembed
     label: hidden
     settings:
-      max_width: 800
-      max_height: 480
+      caption: {  }
+      background: false
+      box_caption: ''
+      box_caption_custom: ''
+      box_media_style: ''
+      loading: ''
+      preload: true
+      responsive_image_style: ''
+      box_style: ''
+      image_style: wide
+      media_switch: media
+      ratio: '16:9'
+      thumbnail_style: ''
     third_party_settings: {  }
     weight: 0
     region: content
-  name:
-    type: text_field_formatter
-    label: hidden
-    settings:
-      link_to_entity: false
-      wrap_tag: _none
-      wrap_class: ''
-      wrap_attributes: ''
-      override_link_label: ''
-    third_party_settings: {  }
-    weight: 1
-    region: content
 hidden:
   created: true
+  name: true
   thumbnail: true
   uid: true

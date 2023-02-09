@@ -85,6 +85,7 @@ module:
   mysql: 0
   node: 0
   nzp_config: 0
+  nzp_gallery_migrations: 0
   nzp_layouts: 0
   nzp_paragraphs: 0
   oembed_providers: 0

@@ -1878,6 +1878,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   display: none;
 }
 
+.h-0{
+  height: 0px;
+}
+
 .h-auto{
   height: auto;
 }
@@ -1920,10 +1924,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .h-5{
   height: 1.25rem;
-}
-
-.h-0{
-  height: 0px;
 }
 
 .max-h-\[200px\]{
@@ -1992,6 +1992,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .max-w-xs{
   max-width: 20rem;
+}
+
+.max-w-2xl{
+  max-width: 42rem;
 }
 
 .flex-none{
@@ -2086,6 +2090,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .grid-cols-12{
   grid-template-columns: repeat(12, minmax(0, 1fr));
+}
+
+.grid-cols-\[\.62fr_\.38fr\]{
+  grid-template-columns: .62fr .38fr;
 }
 
 .flex-row{
@@ -2725,6 +2733,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .border-b-4{
   border-bottom-width: 4px;
+}
+
+.border-dotted{
+  border-style: dotted;
 }
 
 .border-none{

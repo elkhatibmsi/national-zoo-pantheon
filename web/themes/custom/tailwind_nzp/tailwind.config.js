@@ -144,7 +144,7 @@ module.exports = {
         'flex-wrap',
         'flex-row-reverse',
         'max-w-[350px]',
-        'max-w-2xl',
+        'max-w-7xl',
         'border-dotted',
         'grid-cols-[.62fr_.38fr]', 
         'w-24', 

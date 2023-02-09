@@ -23,7 +23,7 @@
 
 {% if content %}
     <div{{ attributes.addClass(settings.custom_classes, settings.background_color) }} >
-        <div class="container mx-auto grid grid-cols-1 md:grid-cols-[.62fr_.38fr] md:gap-16 lg:gap-24 xl:gap-40 2xl:gap-64">
+        <div class="container mx-auto grid grid-cols-[1fr] md:grid-cols-[.62fr_.38fr] gap-4 md:gap-16 lg:gap-24 xl:gap-40 2xl:gap-64">
             {% if content.one_col %}
                     {{ content.one_col }}
             {% endif %}

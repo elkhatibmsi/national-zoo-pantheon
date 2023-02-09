@@ -1990,16 +1990,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   max-width: 350px;
 }
 
-.max-w-2xl{
-  max-width: 42rem;
+.max-w-7xl{
+  max-width: 80rem;
 }
 
 .max-w-xs{
   max-width: 20rem;
-}
-
-.max-w-7xl{
-  max-width: 80rem;
 }
 
 .flex-none{
@@ -2098,6 +2094,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .grid-cols-\[\.62fr_\.38fr\]{
   grid-template-columns: .62fr .38fr;
+}
+
+.grid-cols-\[1fr\]{
+  grid-template-columns: 1fr;
 }
 
 .flex-row{
@@ -6504,6 +6504,10 @@ header.scrolled  .header--hours {
 
   .md\:grid-cols-12{
     grid-template-columns: repeat(12, minmax(0, 1fr));
+  }
+
+  .md\:grid-cols-\[\.62fr_\.38fr\]{
+    grid-template-columns: .62fr .38fr;
   }
 
   .md\:flex-row{

@@ -2001,9 +2001,8 @@ flex-nowrap
 flex-wrap
 flex-row-reverse
 max-w-[350px]
-max-w-7xl
-border-dotted
-grid-cols-[.62fr_.38fr]
+md:grid-cols-[.62fr_.38fr]
+grid-cols-[1fr]
 w-24
 h-0
 sm:h-auto

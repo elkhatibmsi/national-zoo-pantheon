@@ -1,0 +1,42 @@
+{#
+/**
+ * @file
+ * SI theme implementation for a two column layout.
+ *
+ * This template provides a two column display layout with full width areas at
+ * the top, bottom and in the middle.
+ *
+ * Available variables:
+ * - content: The content for this layout.
+ * - attributes: HTML attributes for the layout.
+ * - region_attributes attributes for the region itself
+ * Settings Variables (pulled from the Layout Section config form): 
+ *   HTML Tags/Elements:
+ *   - settings.html_container_elements: wrapper/container html tags selected by the user.
+ *   - settings.html_region_elements.[region_name]: region html tags selected by the user (eg: settings.html_region_elements.one_col). 
+ *   HTML Classes:
+ *   - settings.container_classes: Container classes set by the user. 
+ *   - settings.region_classes.[region_name]: Region classes set by the user (eg: settings.region_classes.one_col).
+ * @ingroup themeable
+ */
+#}
+
+{% if content %}
+    <div{{ attributes.addClass(settings.custom_classes, settings.background_color) }} >
+        <{{settings.html_container_elements}} {{attributes.addClass(settings.container_classes)}}>
+        <div class="greggrid">
+            {% if content.one_col %}
+                <{{ settings.html_region_elements.one_col }} {{ region_attributes.one_col.addClass(settings.region_classes.one_col, settings.region_background_color.one_col, settings.custom_region_classes.one_col) }}>
+                    {{ content.one_col }}
+                </{{ settings.html_region_elements.one_col }}>
+            {% endif %}
+
+            {% if content.two_col %}
+                <{{settings.html_region_elements.two_col }} {{ region_attributes.two_col.addClass(settings.region_classes.two_col, settings.region_background_color.two_col, settings.custom_region_classes.two_col) }}>
+                    {{ content.two_col }}
+                </{{settings.html_region_elements.two_col }}>
+            {% endif %}
+        </div>
+        </{{settings.html_container_elements}}>
+    </div>
+{% endif %}

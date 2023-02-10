@@ -728,6 +728,7 @@ display:
       link_display: custom_url
       link_url: 'news/archive?related={{ raw_arguments.nid }}'
       display_extenders: {  }
+      block_hide_empty: true
     cache_metadata:
       max-age: -1
       contexts:
@@ -925,6 +926,7 @@ display:
       link_display: custom_url
       link_url: 'news/archive?related={{ raw_arguments.nid }}'
       display_extenders: {  }
+      block_hide_empty: true
     cache_metadata:
       max-age: -1
       contexts:
@@ -1240,6 +1242,7 @@ display:
       link_display: custom_url
       link_url: '/news?related={{ raw_arguments.nid }} '
       display_extenders: {  }
+      block_hide_empty: true
     cache_metadata:
       max-age: -1
       contexts:
@@ -1551,6 +1554,7 @@ display:
       link_url: /news
       header: {  }
       display_extenders: {  }
+      block_hide_empty: true
     cache_metadata:
       max-age: -1
       contexts:

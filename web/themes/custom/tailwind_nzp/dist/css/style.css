@@ -3908,13 +3908,30 @@ h3{
   font-weight: 600;
 }
 
+/* Block titles inside an Aside element: */
+
 .block-title{
+  margin-bottom: 1.5rem;
+  border-bottom-width: 2px;
+  --tw-border-opacity: 1;
+  border-color: rgb(229 229 229 / var(--tw-border-opacity));
+  font-weight: 700;
+}
+
+aside .block-title{
+  border-style: none;
+  --tw-bg-opacity: 1;
+  background-color: rgb(83 120 43 / var(--tw-bg-opacity));
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.5rem;
   padding-bottom: 0.5rem;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 .page-title{
   margin-bottom: 0.25rem;
-  margin-top: 0.5rem;
   display: flex;
   align-items: center;
   padding-top: 1rem;

@@ -16,70 +16,12 @@ dependencies:
   module:
     - image
     - layout_builder
-    - layout_discovery
     - nzp_layouts
 third_party_settings:
   layout_builder:
     enabled: true
     allow_custom: false
     sections:
-      -
-        layout_id: layout_onecol
-        layout_settings:
-          label: ''
-        components:
-          9509454c-015e-4033-8194-6e714d784c56:
-            uuid: 9509454c-015e-4033-8194-6e714d784c56
-            region: content
-            configuration:
-              id: 'field_block:media:image:field_image_alt_text'
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              formatter:
-                type: string
-                label: above
-                settings:
-                  link_to_entity: false
-                third_party_settings: {  }
-            weight: 0
-            additional: {  }
-          cb3fb817-dfaf-4e79-90b5-b2f2c51ac96b:
-            uuid: cb3fb817-dfaf-4e79-90b5-b2f2c51ac96b
-            region: content
-            configuration:
-              id: 'field_block:media:image:field_media_image'
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              formatter:
-                type: image
-                label: visually_hidden
-                settings:
-                  image_link: ''
-                  image_style: ''
-                  image_loading:
-                    attribute: lazy
-                third_party_settings: {  }
-            weight: 1
-            additional: {  }
-          eb3c0d91-bdfa-402b-b36d-9a25656d2905:
-            uuid: eb3c0d91-bdfa-402b-b36d-9a25656d2905
-            region: content
-            configuration:
-              id: 'field_block:media:image:field_dams_number'
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              formatter:
-                type: string
-                label: above
-                settings:
-                  link_to_entity: false
-                third_party_settings: {  }
-            weight: 2
-            additional: {  }
-        third_party_settings: {  }
       -
         layout_id: layout_nzp_two_col
         layout_settings:

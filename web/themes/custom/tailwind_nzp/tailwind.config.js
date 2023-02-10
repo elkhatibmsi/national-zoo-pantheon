@@ -42,7 +42,7 @@ module.exports = {
         css:{
           'max-width': 'none',
           '--tw-prose-body': '#404040',
-          '--tw-prose-headings': '#5c5d5d',
+          '--tw-prose-headings': '#171717',
           '--tw-prose-lead': '#525252',
           '--tw-prose-links': '#16567d',
           '--tw-prose-bold': '#171717',

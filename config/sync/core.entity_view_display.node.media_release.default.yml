@@ -18,6 +18,7 @@ dependencies:
   module:
     - entity_reference_revisions
     - layout_builder
+    - layout_builder_restrictions
     - nzp_layouts
     - system
     - text
@@ -191,6 +192,13 @@ third_party_settings:
             weight: 8
             additional: {  }
         third_party_settings: {  }
+  layout_builder_restrictions:
+    allowed_block_categories: {  }
+    entity_view_mode_restriction:
+      allowed_layouts: {  }
+      denylisted_blocks: {  }
+      allowlisted_blocks: {  }
+      restricted_categories: {  }
 id: node.media_release.default
 targetEntityType: node
 bundle: media_release

@@ -899,7 +899,7 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .prose-neutral{
   --tw-prose-body: #404040;
-  --tw-prose-headings: #5c5d5d;
+  --tw-prose-headings: #171717;
   --tw-prose-lead: #525252;
   --tw-prose-links: #16567d;
   --tw-prose-bold: #171717;
@@ -4364,6 +4364,11 @@ a{
 .views-exposed-form{
   display: flex;
   flex-wrap: wrap;
+}
+
+.views-exposed-form .form-actions{
+  display: flex;
+  align-items: center;
 }
 
 .form-item, .form-actions{

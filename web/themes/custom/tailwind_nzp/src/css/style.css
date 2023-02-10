@@ -288,6 +288,10 @@ a {
 .views-exposed-form {
   @apply flex flex-wrap;
 }
+
+.views-exposed-form .form-actions {
+  @apply flex items-center;
+}
 .form-item, .form-actions {
   @apply py-4 mr-4;
 }

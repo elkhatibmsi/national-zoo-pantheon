@@ -132,7 +132,10 @@
             
             "drupal/layout_builder_boolean": {
                 "fix array key warning": "patches/layout_builder_boolean_fix_array_key_warning.patch"
-            }      
+            },
+            "drupal/layout_builder_component_attributes": {
+                "remove class css validation": "patches/lb_comp_attr_remove_css_class_validation.patch"
+            }     
         },
         "installer-paths": {
             "web/core": [

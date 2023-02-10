@@ -486,7 +486,7 @@ third_party_settings:
         layout_id: layout_nzp_one_col
         layout_settings:
           context_mapping: {  }
-          custom_classes: ''
+          custom_classes: p-4
           custom_region_classes: null
           region_classes: null
           container_classes: container-fuid
@@ -495,23 +495,23 @@ third_party_settings:
           background_color: bg-ice-blue
           region_background_color: null
         components:
-          2b6267e0-79ea-4b71-8d19-98ccb429ecdf:
-            uuid: 2b6267e0-79ea-4b71-8d19-98ccb429ecdf
+          8f260b85-9bd6-49da-9543-b674d8e37909:
+            uuid: 8f260b85-9bd6-49da-9543-b674d8e37909
             region: content
             configuration:
-              id: 'views_block:media_release_and_news-block_2'
+              id: 'views_block:media_release_and_news-block_5'
               label: ''
               label_display: visible
               provider: views
               context_mapping: {  }
               views_label: ''
-              items_per_page: none
+              items_per_page: '6'
             weight: 0
             additional:
               component_attributes:
                 block_attributes:
                   id: ''
-                  class: 'container mx-auto p-4'
+                  class: 'container mx-auto'
                   style: ''
                   data: ''
                 block_title_attributes:

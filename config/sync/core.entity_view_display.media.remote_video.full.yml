@@ -121,6 +121,59 @@ third_party_settings:
                 third_party_settings: {  }
             weight: 3
             additional: {  }
+          2f4556d4-1750-4521-921c-7c4f5dbe6805:
+            uuid: 2f4556d4-1750-4521-921c-7c4f5dbe6805
+            region: content
+            configuration:
+              id: 'field_block:media:remote_video:uid'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: entity_reference_label
+                label: hidden
+                settings:
+                  link: true
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          c4e94c16-db80-4024-8ac2-29cece9eb5b5:
+            uuid: c4e94c16-db80-4024-8ac2-29cece9eb5b5
+            region: content
+            configuration:
+              id: 'field_block:media:remote_video:name'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: text_field_formatter
+                label: above
+                settings:
+                  wrap_tag: h1
+                  wrap_class: page-title
+                  wrap_attributes: ''
+                  override_link_label: ''
+                  link_to_entity: 0
+                third_party_settings: {  }
+            weight: 1
+            additional: {  }
+          ad216d27-2695-4fa6-8054-3bddd40e4603:
+            uuid: ad216d27-2695-4fa6-8054-3bddd40e4603
+            region: content
+            configuration:
+              id: 'field_block:media:remote_video:field_media_oembed_video'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: oembed
+                label: hidden
+                settings:
+                  max_width: 1600
+                  max_height: 900
+                third_party_settings: {  }
+            weight: 2
+            additional: {  }
         third_party_settings: {  }
 _core:
   default_config_hash: gUaDZKMQD3lmLKWPn727X3JHVdKJ525g4EJCCcDVAqk

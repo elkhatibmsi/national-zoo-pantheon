@@ -33,11 +33,11 @@
 
 .btn,
 .button{
-  @apply font-bold my-2 inline-block py-2 px-4 rounded bg-blue-sapphire text-white cursor-pointer shadow-sm hover:bg-blue-sapphire;
+  @apply font-bold my-2 inline-block py-2 px-4 rounded bg-oxford-blue text-white cursor-pointer shadow-sm hover:bg-blue-sapphire;
 }
 .btn-primary,
 .button--primary {
-  @apply bg-blue-sapphire;
+  @apply bg-oxford-blue;
 }
 .button--primary a {
   color: white;
@@ -97,7 +97,7 @@ h3 {
 }
 
 .page-title {
-  @apply lg:text-6xl py-4 mb-1 mt-2 font-bold flex items-center text-black;
+  @apply lg:text-6xl py-4 mb-1 mt-2 font-bold flex items-center;
 }
 
 .landing-title {
@@ -289,11 +289,11 @@ a {
   @apply flex flex-wrap;
 }
 .form-item, .form-actions {
-  @apply py-4 mr-4 flex flex-wrap flex-col;
+  @apply py-4 mr-4;
 }
 
 .form-item label, legend {
-  @apply space-x-2 pl-2 border-oxford-blue;
+  @apply space-x-2 pl-2 border-l-4 text-lg border-lightgray;
 }
 
 .form-item [type="text"], [type="email"], [type="number"], textarea, select {
@@ -308,9 +308,9 @@ select {
   @apply bg-lightestgray;
 }
 
-.form-actions {
+/* .form-actions {
   @apply flex justify-center;
-}
+} */
 
 
 .js-form-type-radio {

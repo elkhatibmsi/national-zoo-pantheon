@@ -1,6 +1,6 @@
 (function ($, Drupal) { 
     $(window).scroll(function () {
-        const header = $('header');
+        const header = $('.page--header');
         const megaMenu = $('.mega-menu');
         const logo = $('.site-logo--inner');
         const alert = $('.site-alert');

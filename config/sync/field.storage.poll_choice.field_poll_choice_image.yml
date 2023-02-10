@@ -1,0 +1,20 @@
+uuid: 335bf91c-231f-497b-ba8d-619cebcb56be
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+    - poll
+id: poll_choice.field_poll_choice_image
+field_name: field_poll_choice_image
+entity_type: poll_choice
+type: entity_reference
+settings:
+  target_type: media
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

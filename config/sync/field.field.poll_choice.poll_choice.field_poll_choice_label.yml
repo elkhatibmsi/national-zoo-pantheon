@@ -1,0 +1,20 @@
+uuid: 434ffa00-4042-4b6e-abb6-672444dfe041
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.poll_choice.field_poll_choice_label
+  module:
+    - poll
+id: poll_choice.poll_choice.field_poll_choice_label
+field_name: field_poll_choice_label
+entity_type: poll_choice
+bundle: poll_choice
+label: 'Poll Choice Label'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

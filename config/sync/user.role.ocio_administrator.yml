@@ -25,11 +25,13 @@ dependencies:
     - contextual
     - devel
     - devel_php
+    - draggableviews
     - filter
     - image
     - node
     - path
     - pathauto
+    - poll
     - redirect
     - search
     - shortcut

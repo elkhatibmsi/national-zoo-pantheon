@@ -20,6 +20,7 @@ dependencies:
     - block
     - contact
     - contextual
+    - draggableviews
     - filter
     - node
     - path

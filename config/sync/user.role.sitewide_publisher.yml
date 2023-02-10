@@ -18,6 +18,7 @@ dependencies:
     - node.type.webcam
   module:
     - contextual
+    - draggableviews
     - filter
     - node
     - path

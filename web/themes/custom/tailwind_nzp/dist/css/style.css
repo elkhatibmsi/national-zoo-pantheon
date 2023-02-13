@@ -1990,10 +1990,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   max-width: 350px;
 }
 
-.max-w-7xl{
-  max-width: 80rem;
-}
-
 .max-w-xs{
   max-width: 20rem;
 }
@@ -2090,10 +2086,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .grid-cols-12{
   grid-template-columns: repeat(12, minmax(0, 1fr));
-}
-
-.grid-cols-\[\.62fr_\.38fr\]{
-  grid-template-columns: .62fr .38fr;
 }
 
 .grid-cols-\[1fr\]{
@@ -2739,10 +2731,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   border-bottom-width: 4px;
 }
 
-.border-dotted{
-  border-style: dotted;
-}
-
 .border-none{
   border-style: none;
 }
@@ -2973,6 +2961,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-bottom: 0.5rem;
 }
 
+.px-4{
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
 .py-4{
   padding-top: 1rem;
   padding-bottom: 1rem;
@@ -2996,11 +2989,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .py-6{
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
-}
-
-.px-4{
-  padding-left: 1rem;
-  padding-right: 1rem;
 }
 
 .py-3{
@@ -6502,12 +6490,20 @@ header.scrolled  .header--hours {
     grid-template-columns: repeat(6, minmax(0, 1fr));
   }
 
+  .md\:grid-cols-\[\.62fr_\.38fr\]{
+    grid-template-columns: .62fr .38fr;
+  }
+
   .md\:grid-cols-12{
     grid-template-columns: repeat(12, minmax(0, 1fr));
   }
 
-  .md\:grid-cols-\[\.62fr_\.38fr\]{
-    grid-template-columns: .62fr .38fr;
+  .md\:grid-cols-\[\.38fr_\.62fr\]{
+    grid-template-columns: .38fr .62fr;
+  }
+
+  .md\:grid-cols-\[\.38fr_\.\.62fr\]{
+    grid-template-columns: .38fr ..62fr;
   }
 
   .md\:flex-row{
@@ -6672,6 +6668,11 @@ header.scrolled  .header--hours {
 
   .md\:border-r-\[1px\]{
     border-right-width: 1px;
+  }
+
+  .md\:px-0{
+    padding-left: 0px;
+    padding-right: 0px;
   }
 }
 

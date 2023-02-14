@@ -302,7 +302,7 @@ a {
 }
 
 .form-item label, legend {
-  @apply space-x-2 pl-2 border-l-4 text-lg border-lightgray;
+  @apply space-x-2 pl-2 text-lg;
 }
 
 .form-item [type="text"], [type="email"], [type="number"], textarea, select {

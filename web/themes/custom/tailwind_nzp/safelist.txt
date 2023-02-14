@@ -1993,6 +1993,16 @@ md:row-start-auto
 lg:row-start-auto
 xl:row-start-auto
 2xl:row-start-auto
+sm:justify-start
+md:justify-start
+lg:justify-start
+xl:justify-start
+2xl:justify-start
+sm:justify-end
+md:justify-end
+lg:justify-end
+xl:justify-end
+2xl:justify-end
 2xl:mb-8
 sm:mt-0
 md:mt-0
@@ -2004,7 +2014,7 @@ flex-wrap
 flex-row-reverse
 max-w-[350px]
 md:grid-cols-[.62fr_.38fr]
-md:grid-cols-[.38fr_..62fr]
+md:grid-cols-[.38fr_.62fr]
 grid-cols-[1fr]
 w-24
 h-0

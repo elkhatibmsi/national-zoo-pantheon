@@ -5536,6 +5536,14 @@ header.scrolled  .header--hours {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
+  .sm\:justify-start{
+    justify-content: flex-start;
+  }
+
+  .sm\:justify-end{
+    justify-content: flex-end;
+  }
+
   .sm\:gap-0{
     gap: 0px;
   }
@@ -6498,16 +6506,12 @@ header.scrolled  .header--hours {
     grid-template-columns: .62fr .38fr;
   }
 
-  .md\:grid-cols-\[\.38fr_\.\.62fr\]{
-    grid-template-columns: .38fr ..62fr;
+  .md\:grid-cols-\[\.38fr_\.62fr\]{
+    grid-template-columns: .38fr .62fr;
   }
 
   .md\:grid-cols-12{
     grid-template-columns: repeat(12, minmax(0, 1fr));
-  }
-
-  .md\:grid-cols-\[\.38fr_\.62fr\]{
-    grid-template-columns: .38fr .62fr;
   }
 
   .md\:flex-row{
@@ -6516,6 +6520,14 @@ header.scrolled  .header--hours {
 
   .md\:flex-col{
     flex-direction: column;
+  }
+
+  .md\:justify-start{
+    justify-content: flex-start;
+  }
+
+  .md\:justify-end{
+    justify-content: flex-end;
   }
 
   .md\:justify-around{
@@ -7596,6 +7608,14 @@ header.scrolled  .header--hours {
     flex-wrap: nowrap;
   }
 
+  .lg\:justify-start{
+    justify-content: flex-start;
+  }
+
+  .lg\:justify-end{
+    justify-content: flex-end;
+  }
+
   .lg\:justify-center{
     justify-content: center;
   }
@@ -8588,6 +8608,14 @@ header.scrolled  .header--hours {
     margin-left: 0.875rem;
   }
 
+  .xl\:justify-start{
+    justify-content: flex-start;
+  }
+
+  .xl\:justify-end{
+    justify-content: flex-end;
+  }
+
   .xl\:gap-0{
     gap: 0px;
   }
@@ -9508,6 +9536,14 @@ header.scrolled  .header--hours {
 
   .\32xl\:ml-3\.5{
     margin-left: 0.875rem;
+  }
+
+  .\32xl\:justify-start{
+    justify-content: flex-start;
+  }
+
+  .\32xl\:justify-end{
+    justify-content: flex-end;
   }
 
   .\32xl\:gap-0{

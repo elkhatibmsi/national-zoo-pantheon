@@ -24,16 +24,16 @@
 {% if content %}
     <div{{ attributes.addClass(settings.custom_classes, settings.background_color) }} >
         <div class="container mx-auto px-4 md:px-0 grid grid-cols-[1fr] md:grid-cols-[.38fr_.62fr] gap-x-4 md:gap-x-16 lg:gap-x-24 xl:gap-x-40 2xl:gap-x-64">
-            {% if content.one_col %}
-                <aside>
+            <aside>
+                {% if content.one_col %}
                     {{ content.one_col }}
-                </aside>
-            {% endif %}
-            {% if content.two_col %}
-                <div>
+                {% endif %}
+            </aside>            
+            <div>
+                {% if content.two_col %}
                     {{ content.two_col }}
-                </div>
-            {% endif %}
+                {% endif %}    
+            </div>
         </div>
     </div>
 {% endif %}

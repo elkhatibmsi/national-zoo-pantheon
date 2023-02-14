@@ -3583,6 +3583,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   text-align: center;
 }
 
+.text-right{
+  text-align: right;
+}
+
 .text-xs{
   font-size: 0.75rem;
   line-height: 1rem;
@@ -6494,16 +6498,16 @@ header.scrolled  .header--hours {
     grid-template-columns: .62fr .38fr;
   }
 
+  .md\:grid-cols-\[\.38fr_\.\.62fr\]{
+    grid-template-columns: .38fr ..62fr;
+  }
+
   .md\:grid-cols-12{
     grid-template-columns: repeat(12, minmax(0, 1fr));
   }
 
   .md\:grid-cols-\[\.38fr_\.62fr\]{
     grid-template-columns: .38fr .62fr;
-  }
-
-  .md\:grid-cols-\[\.38fr_\.\.62fr\]{
-    grid-template-columns: .38fr ..62fr;
   }
 
   .md\:flex-row{

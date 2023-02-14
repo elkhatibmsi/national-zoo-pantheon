@@ -24,8 +24,6 @@ settings:
       Block: Block
       Custom: Custom
       Forms: Forms
-      'Poll Choice fields': 'Poll Choice fields'
-      'Poll fields': 'Poll fields'
       System: System
       Webform: Webform
       'Webform submission fields': 'Webform submission fields'

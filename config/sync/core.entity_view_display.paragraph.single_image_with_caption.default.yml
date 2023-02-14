@@ -6,9 +6,10 @@ dependencies:
     - field.field.paragraph.single_image_with_caption.field_single_image_caption_body
     - field.field.paragraph.single_image_with_caption.field_single_image_caption_image
     - field.field.paragraph.single_image_with_caption.field_single_image_caption_title
+    - field.field.paragraph.single_image_with_caption.field_slide_image
+    - field.field.paragraph.single_image_with_caption.field_text
     - paragraphs.paragraphs_type.single_image_with_caption
   module:
-    - blazy
     - text
 id: paragraph.single_image_with_caption.default
 targetEntityType: paragraph
@@ -23,42 +24,11 @@ content:
     weight: 0
     region: content
   field_single_image_caption_image:
-    type: blazy_media
+    type: entity_reference_entity_view
     label: hidden
     settings:
-      caption: {  }
-      class: ''
-      id: ''
-      image: ''
-      link: ''
-      overlay: ''
-      title: ''
-      vanilla: false
-      layout: ''
       view_mode: default
-      cache: 0
-      skin: ''
-      style: ''
-      background: false
-      box_caption: ''
-      box_caption_custom: ''
-      box_media_style: ''
-      responsive_image_style: ''
-      box_style: ''
-      image_style: ''
-      media_switch: ''
-      ratio: ''
-      thumbnail_style: ''
-      grid: ''
-      grid_medium: ''
-      grid_small: ''
-      breakpoints: {  }
-      current_view_mode: ''
-      fx: ''
-      icon: ''
-      sizes: ''
-      grid_header: ''
-      _uri: ''
+      link: false
     third_party_settings: {  }
     weight: 2
     region: content

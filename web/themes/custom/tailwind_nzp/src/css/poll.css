@@ -1,0 +1,23 @@
+.poll .fieldset-wrapper #edit-choice {
+    display: flex;
+    flex-wrap:wrap;
+}
+
+.poll .fieldset-wrapper #edit-choice .form-item-choice {
+    display:flex;
+    align-items: start;
+    
+}
+
+.poll .fieldset-wrapper #edit-choice .form-item-choice label {
+    border:none;
+    padding:1em;
+}
+
+.poll .fieldset-wrapper #edit-choice .form-item-choice input {
+    opacity: 0;
+}
+
+.poll .fieldset-wrapper #edit-choice .form-item-choice input:checked + label {
+    background: #ccc;
+}

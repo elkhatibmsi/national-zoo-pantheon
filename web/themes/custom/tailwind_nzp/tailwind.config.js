@@ -109,6 +109,7 @@ module.exports = {
         'pr-{spacing}',
         'pb-{spacing}',
         'pl-{spacing}',
+        '-pl-{spacing}',
         'mt-{spacing}',
         'mr-{spacing}',
         'mx-{spacing}',

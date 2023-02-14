@@ -6678,6 +6678,11 @@ header.scrolled  .header--hours {
     gap: 0.875rem;
   }
 
+  .md\:gap-x-16{
+    -moz-column-gap: 4rem;
+         column-gap: 4rem;
+  }
+
   .md\:overflow-y-auto{
     overflow-y: auto;
   }
@@ -7760,6 +7765,11 @@ header.scrolled  .header--hours {
     gap: 0.875rem;
   }
 
+  .lg\:gap-x-24{
+    -moz-column-gap: 6rem;
+         column-gap: 6rem;
+  }
+
   .lg\:space-y-0 > :not([hidden]) ~ :not([hidden]){
     --tw-space-y-reverse: 0;
     margin-top: calc(0px * calc(1 - var(--tw-space-y-reverse)));
@@ -8755,6 +8765,11 @@ header.scrolled  .header--hours {
   .xl\:gap-3\.5{
     gap: 0.875rem;
   }
+
+  .xl\:gap-x-40{
+    -moz-column-gap: 10rem;
+         column-gap: 10rem;
+  }
 }
 
 @media (min-width: 1536px){
@@ -9684,5 +9699,10 @@ header.scrolled  .header--hours {
 
   .\32xl\:gap-3\.5{
     gap: 0.875rem;
+  }
+
+  .\32xl\:gap-x-64{
+    -moz-column-gap: 16rem;
+         column-gap: 16rem;
   }
 }

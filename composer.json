@@ -126,6 +126,10 @@
                 "fixed undefined translations when using paragraphs in conjunction with moderation": "https://www.drupal.org/files/issues/2021-09-30/3024588-28-invalid_translation_language.patch"
             },
             
+            "drupal/layout_builder_component_attributes": {
+                "remove class css validation": "patches/lb_comp_attr_remove_css_class_validation.patch"
+            },
+            
             "drupal/draggableviews": {
                 "enabling draggavle by heirarchy": "https://www.drupal.org/files/issues/2022-08-23/not_working_with_group_by-draggableviews-2867348-54.patch"
             }      

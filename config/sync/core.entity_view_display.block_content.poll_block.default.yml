@@ -1,0 +1,22 @@
+uuid: 9735579a-0c91-43d4-b6ae-df417de7a9a2
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.poll_block
+    - field.field.block_content.poll_block.field_poll_reference
+id: block_content.poll_block.default
+targetEntityType: block_content
+bundle: poll_block
+mode: default
+content:
+  field_poll_reference:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden: {  }

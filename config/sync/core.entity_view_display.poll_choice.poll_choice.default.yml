@@ -1,0 +1,66 @@
+uuid: f474e57b-463a-4784-9084-fe45f95ca5f3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.poll_choice.poll_choice.field_poll_choice_image
+    - field.field.poll_choice.poll_choice.field_poll_choice_label
+    - image.style.350_wide
+  module:
+    - layout_builder
+    - layout_builder_restrictions
+    - media
+    - poll
+    - text_field_formatter
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+  layout_builder_restrictions:
+    allowed_block_categories: {  }
+    entity_view_mode_restriction:
+      allowed_layouts: {  }
+      denylisted_blocks: {  }
+      allowlisted_blocks: {  }
+      restricted_categories: {  }
+id: poll_choice.poll_choice.default
+targetEntityType: poll_choice
+bundle: poll_choice
+mode: default
+content:
+  choice:
+    type: text_field_formatter
+    label: hidden
+    settings:
+      wrap_tag: h3
+      wrap_class: ''
+      wrap_attributes: ''
+      override_link_label: ''
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_poll_choice_image:
+    type: media_thumbnail
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: 350_wide
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_poll_choice_label:
+    type: text_field_formatter
+    label: hidden
+    settings:
+      wrap_tag: div
+      wrap_class: strong
+      wrap_attributes: ''
+      override_link_label: ''
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden: {  }

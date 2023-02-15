@@ -1,0 +1,26 @@
+uuid: 744939d2-b6b0-46bf-970a-1e138c8b5b5b
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.poll_block
+    - field.storage.block_content.field_poll_reference
+id: block_content.poll_block.field_poll_reference
+field_name: field_poll_reference
+entity_type: block_content
+bundle: poll_block
+label: 'Poll Reference'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:poll'
+  handler_settings:
+    target_bundles: null
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+field_type: entity_reference

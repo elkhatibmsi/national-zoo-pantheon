@@ -4,10 +4,8 @@
 #}
 {{ form.messages }}
 <div class="poll">
-  <div class="vote-form">
-    {% if show_question %}
-      <h3 class="poll-question">{{ question }}</h3>
-    {% endif %}
+  <div class="vote-form container mx-auto">
+      <h2 class="block-title poll-question">{{ question }}</h3>
 
     {{ form.choice }}
 

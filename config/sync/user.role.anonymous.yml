@@ -4,9 +4,7 @@ status: true
 dependencies:
   module:
     - contact
-    - content_moderation
     - media
-    - paragraphs
     - poll
     - search
     - system
@@ -39,9 +37,7 @@ permissions:
   - 'view any parameterized_promos bean'
   - 'view any pop_up bean'
   - 'view any temporary_content bean'
-  - 'view any unpublished content'
   - 'view any webcam_ad bean'
   - 'view files'
   - 'view media'
-  - 'view unpublished paragraphs'
   - 'vote on polls'

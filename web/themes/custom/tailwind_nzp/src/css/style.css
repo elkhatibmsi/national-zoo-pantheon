@@ -481,5 +481,29 @@ main {
 
 
 
+/* POLL STYLING */
+.poll .fieldset-wrapper {
+  display: flex;
+  flex-wrap:wrap;
+}
 
+.poll .fieldset-wrapper > div {
+  @apply flex flex-wrap gap-2;
+  
+}
+.poll .form-item-choice {
+  @apply w-full;
+}
+.poll .form-item-choice label {
+  @apply w-full py-2 m-0 cursor-pointer;
 
+}
+
+.poll .fieldset-wrapper .form-item-choice input {
+  opacity: 0;
+}
+
+.poll .fieldset-wrapper .form-item-choice input:checked + label {
+  @apply bg-lightestgray;
+
+}

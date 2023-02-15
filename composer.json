@@ -94,7 +94,6 @@
         "drupal/smart_date": "^3.7@RC",
         "drupal/webform_migrate": "^1.2",
         "drupal/poll": "^1.5"
-
     },
     "require-dev": {
         "drupal/core-dev": "^9.2"
@@ -138,8 +137,11 @@
                 "remove class css validation": "patches/lb_comp_attr_remove_css_class_validation.patch"
             },
             "drupal/poll": {
-                "add fieldable poll choices": "https://www.drupal.org/files/issues/2022-04-25/how_to_add_fields_to_the_the_pollchoice_options-2991361-13.patch",
-                "support multiple choice polls" : "https://www.drupal.org/files/issues/2021-02-02/multiple_choice_poll-2746713-11.patch"
+                "add fieldable poll choices": "https://www.drupal.org/files/issues/2022-04-25/how_to_add_fields_to_the_the_pollchoice_options-2991361-13.patch"
+            },
+            "drupal/advpoll": {
+                "8.1 Compatibility": "patches/adv-poll-8.1-compatibility.patch"
+               
             }     
         },
         "installer-paths": {

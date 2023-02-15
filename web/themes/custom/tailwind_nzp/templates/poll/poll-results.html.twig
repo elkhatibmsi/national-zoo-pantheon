@@ -18,13 +18,9 @@
  * @ingroup themeable
  */
 #}
-<div class="poll mx-auto">
-  {% if show_question %}
-    <h2 class="poll-question">{{ question }}</h2>
-  {% else %}
-    <h3 class="poll-results-title">{{ results_title }}</h3>
-  {% endif %}
-  <dl class="grid grid-cols-12 gap-2">
+<div class="poll container mx-auto">
+    <h2 class="block-title poll-results-title">{{ results_title }}</h3>
+  <dl>
     {{ results }}
   </dl>
   <div class="total">

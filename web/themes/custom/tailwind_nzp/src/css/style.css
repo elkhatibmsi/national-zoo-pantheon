@@ -96,6 +96,10 @@ h3 {
   @apply pb-2;
 }
 
+aside h2.block-title {
+  @apply mt-12 mb-6 bg-sap-green px-4 py-2 text-white font-bold;
+}
+
 .page-title {
   @apply text-6xl py-4 mb-1 mt-2 font-bold flex items-center;
 }

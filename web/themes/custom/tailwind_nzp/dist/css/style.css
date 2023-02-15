@@ -1466,6 +1466,146 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-right: auto;
 }
 
+.-ml-0{
+  margin-left: -0px;
+}
+
+.-ml-1{
+  margin-left: -0.25rem;
+}
+
+.-ml-2{
+  margin-left: -0.5rem;
+}
+
+.-ml-3{
+  margin-left: -0.75rem;
+}
+
+.-ml-4{
+  margin-left: -1rem;
+}
+
+.-ml-5{
+  margin-left: -1.25rem;
+}
+
+.-ml-6{
+  margin-left: -1.5rem;
+}
+
+.-ml-7{
+  margin-left: -1.75rem;
+}
+
+.-ml-8{
+  margin-left: -2rem;
+}
+
+.-ml-9{
+  margin-left: -2.25rem;
+}
+
+.-ml-10{
+  margin-left: -2.5rem;
+}
+
+.-ml-11{
+  margin-left: -2.75rem;
+}
+
+.-ml-12{
+  margin-left: -3rem;
+}
+
+.-ml-14{
+  margin-left: -3.5rem;
+}
+
+.-ml-16{
+  margin-left: -4rem;
+}
+
+.-ml-20{
+  margin-left: -5rem;
+}
+
+.-ml-24{
+  margin-left: -6rem;
+}
+
+.-ml-28{
+  margin-left: -7rem;
+}
+
+.-ml-32{
+  margin-left: -8rem;
+}
+
+.-ml-36{
+  margin-left: -9rem;
+}
+
+.-ml-40{
+  margin-left: -10rem;
+}
+
+.-ml-44{
+  margin-left: -11rem;
+}
+
+.-ml-48{
+  margin-left: -12rem;
+}
+
+.-ml-52{
+  margin-left: -13rem;
+}
+
+.-ml-56{
+  margin-left: -14rem;
+}
+
+.-ml-60{
+  margin-left: -15rem;
+}
+
+.-ml-64{
+  margin-left: -16rem;
+}
+
+.-ml-72{
+  margin-left: -18rem;
+}
+
+.-ml-80{
+  margin-left: -20rem;
+}
+
+.-ml-96{
+  margin-left: -24rem;
+}
+
+.-ml-px{
+  margin-left: -1px;
+}
+
+.-ml-0\.5{
+  margin-left: -0.125rem;
+}
+
+.-ml-1\.5{
+  margin-left: -0.375rem;
+}
+
+.-ml-2\.5{
+  margin-left: -0.625rem;
+}
+
+.-ml-3\.5{
+  margin-left: -0.875rem;
+}
+
 .mt-0{
   margin-top: 0px;
 }
@@ -1844,146 +1984,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .ml-0{
   margin-left: 0px;
-}
-
-.-ml-0{
-  margin-left: -0px;
-}
-
-.-ml-1{
-  margin-left: -0.25rem;
-}
-
-.-ml-2{
-  margin-left: -0.5rem;
-}
-
-.-ml-3{
-  margin-left: -0.75rem;
-}
-
-.-ml-4{
-  margin-left: -1rem;
-}
-
-.-ml-5{
-  margin-left: -1.25rem;
-}
-
-.-ml-6{
-  margin-left: -1.5rem;
-}
-
-.-ml-7{
-  margin-left: -1.75rem;
-}
-
-.-ml-8{
-  margin-left: -2rem;
-}
-
-.-ml-9{
-  margin-left: -2.25rem;
-}
-
-.-ml-10{
-  margin-left: -2.5rem;
-}
-
-.-ml-11{
-  margin-left: -2.75rem;
-}
-
-.-ml-12{
-  margin-left: -3rem;
-}
-
-.-ml-14{
-  margin-left: -3.5rem;
-}
-
-.-ml-16{
-  margin-left: -4rem;
-}
-
-.-ml-20{
-  margin-left: -5rem;
-}
-
-.-ml-24{
-  margin-left: -6rem;
-}
-
-.-ml-28{
-  margin-left: -7rem;
-}
-
-.-ml-32{
-  margin-left: -8rem;
-}
-
-.-ml-36{
-  margin-left: -9rem;
-}
-
-.-ml-40{
-  margin-left: -10rem;
-}
-
-.-ml-44{
-  margin-left: -11rem;
-}
-
-.-ml-48{
-  margin-left: -12rem;
-}
-
-.-ml-52{
-  margin-left: -13rem;
-}
-
-.-ml-56{
-  margin-left: -14rem;
-}
-
-.-ml-60{
-  margin-left: -15rem;
-}
-
-.-ml-64{
-  margin-left: -16rem;
-}
-
-.-ml-72{
-  margin-left: -18rem;
-}
-
-.-ml-80{
-  margin-left: -20rem;
-}
-
-.-ml-96{
-  margin-left: -24rem;
-}
-
-.-ml-px{
-  margin-left: -1px;
-}
-
-.-ml-0\.5{
-  margin-left: -0.125rem;
-}
-
-.-ml-1\.5{
-  margin-left: -0.375rem;
-}
-
-.-ml-2\.5{
-  margin-left: -0.625rem;
-}
-
-.-ml-3\.5{
-  margin-left: -0.875rem;
 }
 
 .block{
@@ -4182,6 +4182,20 @@ h3{
 
 .block-title{
   padding-bottom: 0.5rem;
+}
+
+aside h2.block-title{
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(83 120 43 / var(--tw-bg-opacity));
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  font-weight: 700;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 .page-title{

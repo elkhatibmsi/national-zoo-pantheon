@@ -138,11 +138,7 @@
             },
             "drupal/poll": {
                 "add fieldable poll choices": "https://www.drupal.org/files/issues/2022-04-25/how_to_add_fields_to_the_the_pollchoice_options-2991361-13.patch"
-            },
-            "drupal/advpoll": {
-                "8.1 Compatibility": "patches/adv-poll-8.1-compatibility.patch"
-               
-            }     
+            }  
         },
         "installer-paths": {
             "web/core": [

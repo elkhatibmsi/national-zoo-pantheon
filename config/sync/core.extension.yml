@@ -52,6 +52,7 @@ module:
   geofield_map: 0
   geofield_map_extras: 0
   geolocation: 0
+  geolocation_geofield: 0
   geolocation_google_maps: 0
   geolocation_leaflet: 0
   help: 0

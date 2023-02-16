@@ -20,8 +20,10 @@ dependencies:
     - field.field.node.exhibit.field_tags
     - field.field.node.exhibit.field_teaser_title
     - field.field.node.exhibit.field_upcoming
+    - image.style.350_wide
     - node.type.exhibit
   module:
+    - media
     - text
     - user
 id: node.exhibit.teaser
@@ -43,11 +45,13 @@ content:
     weight: -20
     region: content
   field_landing_image:
-    type: entity_reference_entity_view
+    type: media_thumbnail
     label: hidden
     settings:
-      view_mode: default
-      link: false
+      image_link: content
+      image_style: 350_wide
+      image_loading:
+        attribute: lazy
     third_party_settings: {  }
     weight: 0
     region: content

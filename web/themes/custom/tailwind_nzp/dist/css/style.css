@@ -953,6 +953,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   visibility: hidden;
 }
 
+.static{
+  position: static;
+}
+
 .fixed{
   position: fixed;
 }
@@ -4163,6 +4167,8 @@ a{
 .teaser--image-bg-image, .teaser--image-bg-image div:not(.contextual), .teaser--image-bg-image img{
   margin: 0px;
   height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .layout-four-cols{

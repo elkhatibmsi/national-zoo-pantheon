@@ -236,7 +236,7 @@ a {
 .teaser--image-bg-image,
 .teaser--image-bg-image div:not(.contextual),
 .teaser--image-bg-image img {
-  @apply m-0 h-full;
+  @apply m-0 h-full object-cover;
 }
 
 

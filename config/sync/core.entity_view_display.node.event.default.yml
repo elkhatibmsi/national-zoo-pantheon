@@ -30,6 +30,7 @@ third_party_settings:
         layout_settings:
           context_mapping: {  }
           custom_classes: ''
+          custom_region_classes: ''
           region_classes: null
           container_classes: container
           html_container_elements: div
@@ -55,6 +56,7 @@ third_party_settings:
         layout_settings:
           context_mapping: {  }
           custom_classes: ''
+          custom_region_classes: ''
           region_classes:
             one_col: col-span-6
             two_col: col-span-6
@@ -201,6 +203,7 @@ third_party_settings:
         layout_settings:
           context_mapping: {  }
           custom_classes: ''
+          custom_region_classes: ''
           region_classes:
             one_col: col-span-9
             two_col: col-span-3
@@ -255,6 +258,7 @@ third_party_settings:
         layout_settings:
           context_mapping: {  }
           custom_classes: ''
+          custom_region_classes: ''
           region_classes: null
           container_classes: container
           html_container_elements: div

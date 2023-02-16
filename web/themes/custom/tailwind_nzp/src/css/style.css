@@ -459,6 +459,7 @@ main {
   position: relative;
 }
 
+/* restyle bootstrap video embeds using tailwind */
 .embed-responsive-16by9 {
   @apply aspect-video;
 }

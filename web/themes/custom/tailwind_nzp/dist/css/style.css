@@ -4853,6 +4853,8 @@ header.scrolled  .header--hours {
   position: relative;
 }
 
+/* restyle bootstrap video embeds using tailwind */
+
 .embed-responsive-16by9{
   aspect-ratio: 16 / 9;
 }

@@ -10,9 +10,9 @@ dependencies:
     - field.field.node.exhibit.field_daily_demonstrations
     - field.field.node.exhibit.field_editorial_access
     - field.field.node.exhibit.field_enrichment
+    - field.field.node.exhibit.field_exhibit_location
     - field.field.node.exhibit.field_hours
     - field.field.node.exhibit.field_landing_image
-    - field.field.node.exhibit.field_map
     - field.field.node.exhibit.field_marker
     - field.field.node.exhibit.field_nearby
     - field.field.node.exhibit.field_open
@@ -62,8 +62,8 @@ hidden:
   field_daily_demonstrations: true
   field_editorial_access: true
   field_enrichment: true
+  field_exhibit_location: true
   field_hours: true
-  field_map: true
   field_marker: true
   field_nearby: true
   field_open: true

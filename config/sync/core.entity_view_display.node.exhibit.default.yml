@@ -9,9 +9,9 @@ dependencies:
     - field.field.node.exhibit.field_daily_demonstrations
     - field.field.node.exhibit.field_editorial_access
     - field.field.node.exhibit.field_enrichment
+    - field.field.node.exhibit.field_exhibit_location
     - field.field.node.exhibit.field_hours
     - field.field.node.exhibit.field_landing_image
-    - field.field.node.exhibit.field_map
     - field.field.node.exhibit.field_marker
     - field.field.node.exhibit.field_nearby
     - field.field.node.exhibit.field_open
@@ -24,6 +24,7 @@ dependencies:
     - views.view.exhibits
   module:
     - entity_reference_revisions
+    - geofield
     - layout_builder
     - nzp_layouts
     - system
@@ -67,16 +68,14 @@ third_party_settings:
         layout_settings:
           context_mapping: {  }
           custom_classes: ''
-          custom_region_classes: ''
-          region_classes:
-            card: col-md-12
-            banner: col-md-12
+          custom_region_classes:
+            card: ''
+            banner: ''
+          region_classes: null
           container_classes: container
-          html_container_elements: div
-          html_region_elements:
-            card: div
-            banner: div
-          background_color: bg-none
+          html_container_elements: null
+          html_region_elements: null
+          background_color: bg-white
           region_background_color: null
           getHtmlElements: div
         components:
@@ -98,6 +97,7 @@ third_party_settings:
                   caption:
                     field_dams_number: '0'
                     field_image_alt_text: '0'
+                    field_image_caption: '0'
                     field_media_tags: '0'
                     field_notes: '0'
                     field_photographer: '0'
@@ -112,7 +112,7 @@ third_party_settings:
                   loading: ''
                   preload: false
                   box_style: ''
-                  image_style: slick_rectangle
+                  image_style: wide
                   media_switch: ''
                   ratio: ''
                   thumbnail_style: ''
@@ -162,6 +162,19 @@ third_party_settings:
                 third_party_settings: {  }
             weight: 1
             additional: {  }
+          4e35dbfe-3817-4c12-908b-a20cf8829153:
+            uuid: 4e35dbfe-3817-4c12-908b-a20cf8829153
+            region: card
+            configuration:
+              id: 'views_block:animal_demo-block_2'
+              label: 'Daily Demos'
+              label_display: visible
+              provider: views
+              context_mapping: {  }
+              views_label: 'Daily Demos'
+              items_per_page: none
+            weight: 3
+            additional: {  }
         third_party_settings: {  }
       -
         layout_id: layout_nzp_one_col
@@ -188,7 +201,7 @@ third_party_settings:
               context_mapping: {  }
               views_label: 'Animals in this Exhibit'
               items_per_page: none
-            weight: 2
+            weight: 5
             additional: {  }
         third_party_settings: {  }
       -
@@ -246,35 +259,7 @@ third_party_settings:
                   require_layouts: 0
                   empty_message: ''
                 third_party_settings: {  }
-            weight: 6
-            additional: {  }
-          7b0129b3-a2c9-4711-82b6-5fdc49269356:
-            uuid: 7b0129b3-a2c9-4711-82b6-5fdc49269356
-            region: one_col
-            configuration:
-              id: 'field_block:node:exhibit:body'
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              formatter:
-                type: text_default
-                label: hidden
-                settings: {  }
-                third_party_settings: {  }
-            weight: 5
-            additional: {  }
-          4e35dbfe-3817-4c12-908b-a20cf8829153:
-            uuid: 4e35dbfe-3817-4c12-908b-a20cf8829153
-            region: two_col
-            configuration:
-              id: 'views_block:animal_demo-block_2'
-              label: 'Daily Demos'
-              label_display: visible
-              provider: views
-              context_mapping: {  }
-              views_label: 'Daily Demos'
-              items_per_page: none
-            weight: 2
+            weight: 7
             additional: {  }
           b40b6605-3f2f-4e40-a106-dd60e5979337:
             uuid: b40b6605-3f2f-4e40-a106-dd60e5979337
@@ -292,26 +277,113 @@ third_party_settings:
                 label: hidden
                 settings: {  }
                 third_party_settings: {  }
-            weight: 7
+            weight: 8
             additional: {  }
-          f7da42ed-3138-4a37-b9e5-bb421329fee9:
-            uuid: f7da42ed-3138-4a37-b9e5-bb421329fee9
+          f7293ce1-6e57-48ee-867a-72d9f885b6a5:
+            uuid: f7293ce1-6e57-48ee-867a-72d9f885b6a5
             region: two_col
             configuration:
-              id: 'field_block:node:exhibit:field_map'
-              label: Map
-              label_display: '0'
+              id: 'field_block:node:exhibit:field_exhibit_location'
+              label: 'Exhibit Location'
+              label_display: visible
               provider: layout_builder
               context_mapping:
                 entity: layout_builder.entity
                 view_mode: view_mode
               formatter:
-                type: entity_reference_entity_view
+                type: geofield_google_map
                 label: hidden
                 settings:
-                  view_mode: teaser
+                  map_dimensions:
+                    width: 100%
+                    height: 450px
+                  map_empty:
+                    empty_behaviour: '0'
+                    empty_message: 'No Geofield Value entered for this field'
+                  map_center:
+                    lat: !!float 42
+                    lon: 12.5
+                    center_force: false
+                    geocode: 'Find my location'
+                  map_zoom_and_pan:
+                    zoom:
+                      initial: 19
+                      force: false
+                      min: 5
+                      max: 22
+                      finer: 0
+                    gestureHandling: auto
+                    scrollwheel: false
+                    draggable: false
+                    map_reset_position: TOP_RIGHT
+                    map_reset: false
+                  map_controls:
+                    zoom_control: false
+                    map_type_id: roadmap
+                    map_type_control: true
+                    map_type_control_options_type_ids:
+                      roadmap: '0'
+                      satellite: '0'
+                      hybrid: '0'
+                      terrain: '0'
+                    scale_control: false
+                    street_view_control: false
+                    fullscreen_control: false
+                    disable_default_ui: false
+                  map_marker_and_infowindow:
+                    icon_image_mode: icon_file
+                    icon_file_wrapper:
+                      icon_file:
+                        fids: {  }
+                        upload_button: Upload
+                        remove_button: Remove
+                        upload: ''
+                        is_svg: false
+                      image_style: 350_wide
+                    icon_image_path: ''
+                    infowindow_field: title
+                    view_mode: full
+                    tooltip_field: '0'
+                    multivalue_split: false
+                    force_open: true
+                  map_oms:
+                    map_oms_control: false
+                    map_oms_options: '{"markersWontMove":"true","markersWontHide":"true","basicFormatEvents":"true","nearbyDistance":3}'
+                  map_additional_options: ''
+                  map_geometries_options: '{"strokeColor":"black","strokeOpacity":"0.8","strokeWeight":2,"fillColor":"blue","fillOpacity":"0.1","clickable":false}'
+                  custom_style_map:
+                    custom_style_name: ''
+                    custom_style_options: ''
+                    custom_style_control: false
+                    custom_style_default: false
+                  map_markercluster:
+                    markercluster_additional_options: '{"maxZoom":12,"gridSize":50}'
+                    markercluster_control: false
+                  map_additional_libraries:
+                    places: false
+                    drawing: false
+                    geometry: false
+                    visualization: false
+                  map_lazy_load:
+                    lazy_load: true
+                  weight: ''
                 third_party_settings: {  }
-            weight: 1
+            weight: 3
+            additional: {  }
+          7b0129b3-a2c9-4711-82b6-5fdc49269356:
+            uuid: 7b0129b3-a2c9-4711-82b6-5fdc49269356
+            region: one_col
+            configuration:
+              id: 'field_block:node:exhibit:body'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            weight: 6
             additional: {  }
         third_party_settings: {  }
 id: node.exhibit.default
@@ -339,6 +411,15 @@ content:
     third_party_settings: {  }
     weight: 102
     region: content
+  field_exhibit_location:
+    type: geofield_default
+    label: above
+    settings:
+      output_format: wkt
+      output_escape: true
+    third_party_settings: {  }
+    weight: 103
+    region: content
   field_paragraph_component:
     type: entity_reference_revisions_entity_view
     label: hidden
@@ -361,7 +442,6 @@ hidden:
   field_enrichment: true
   field_hours: true
   field_landing_image: true
-  field_map: true
   field_marker: true
   field_nearby: true
   field_open: true

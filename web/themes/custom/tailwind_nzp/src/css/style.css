@@ -463,3 +463,6 @@ main {
 .embed-responsive-16by9 {
   @apply aspect-video;
 }
+.embed-responsive-item {
+  @apply w-full h-full;
+}

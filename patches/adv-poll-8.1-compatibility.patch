@@ -1,0 +1,13 @@
+diff --git a/src/Form/ApprovalPollViewForm.php b/src/Form/ApprovalPollViewForm.php
+index 1a5af1606668004030fc4b032ae8e2c43bc9cb5c..8a628d6a41d02e458dd01d48e46d22f39b6df998 100644
+--- a/src/Form/ApprovalPollViewForm.php
++++ b/src/Form/ApprovalPollViewForm.php
+@@ -168,7 +168,7 @@ class ApprovalPollViewForm extends PollViewForm implements BaseFormIdInterface {
+     $maxChoices = $this->getMaxChoices();
+     if ($maxChoices) {
+       // Check choices.
+-      $choices = array_filter($form_state->getValue('choice'));
++      $choices = array_filter([$form_state->getValue('choice')]);
+ 
+       // Check multiple write-in.
+       $writeInOptions = [];

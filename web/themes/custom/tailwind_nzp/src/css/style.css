@@ -458,3 +458,7 @@ main {
   padding-bottom: 56.25%;
   position: relative;
 }
+
+.embed-responsive-16by9 {
+  @apply aspect-video;
+}

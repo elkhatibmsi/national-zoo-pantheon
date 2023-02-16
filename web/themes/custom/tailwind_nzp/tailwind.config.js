@@ -155,7 +155,8 @@ module.exports = {
         'w-24', 
         'h-0',
         'sm:h-auto',      
-        'overflow-hidden'
+        'overflow-hidden',
+        'aspect-video'
       ],
     }),
   ],

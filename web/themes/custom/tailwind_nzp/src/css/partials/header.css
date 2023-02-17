@@ -3,14 +3,14 @@
 
 header {
     transition: all 0.5s ease;
+    &.scrolled {
+      @apply lg:translate-y-[-5em];
+      .header--hours {
+        @apply opacity-0;
+      
+      }
+    }
    
   }
-  header.scrolled {
-    @apply lg:translate-y-[-5em];
-  }
-  
-  header.scrolled  .header--hours {
-    opacity: 0;
-  }
-  
+ 
   

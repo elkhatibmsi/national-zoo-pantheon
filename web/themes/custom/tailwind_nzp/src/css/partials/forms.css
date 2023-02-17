@@ -1,0 +1,44 @@
+/* Forms */
+
+.views-exposed-form {
+    @apply flex flex-wrap;
+  }
+  
+  .views-exposed-form .form-actions {
+    @apply flex items-center;
+  }
+  .form-item, .form-actions {
+    @apply py-4 mr-4;
+  }
+  
+  .form-item label, legend {
+    @apply space-x-2 pl-2 text-lg;
+  }
+  
+  .form-item [type="text"], [type="email"], [type="number"], textarea, select {
+    @apply mt-2 bg-lightestgray border-2 border-lightestgray rounded w-full py-2 px-4 text-darkgray leading-tight focus:outline-none focus:bg-white focus:border-blue-sapphire transition-all h-12 mb-2 text-lg focus:shadow-md;
+  }
+  
+  textarea {
+    @apply h-auto;
+  }
+  
+  select {
+    @apply bg-lightestgray;
+  }
+  
+  
+  .js-form-type-radio {
+    @apply flex flex-row content-center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left:1em;
+  
+  }
+  .js-form-type-radio label {
+    @apply normal-case;
+  }
+  
+  
+  

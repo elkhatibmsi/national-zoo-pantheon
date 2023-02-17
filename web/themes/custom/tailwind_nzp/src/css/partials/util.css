@@ -1,0 +1,34 @@
+/* Utility Classes/Overrides */
+
+  
+.visually-hidden {
+    @apply hidden;
+  }
+
+  /* custom class for hiding label when label-hidden is specified */
+.label-hidden .icon-label {
+    @apply hidden;
+  }
+  
+/* stretch all nested content to match parent element */
+
+.stretch * {
+    @apply w-full;
+   
+}
+
+/* knockout utility classes */
+
+.knockout {
+    @apply p-4;
+  }
+  
+  .knockout * {
+    @apply !text-white; 
+}
+  
+  .knockout .layout-builder-block {
+    background: none;
+  
+  }
+  

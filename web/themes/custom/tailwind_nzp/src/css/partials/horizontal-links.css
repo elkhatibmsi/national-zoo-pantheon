@@ -1,0 +1,15 @@
+/* horizontal links styling */
+
+
+.horizontal-links > a {
+    @apply !text-oxford-blue;
+  }
+  
+  
+  .menu_link_content { 
+     @apply mx-auto w-[80%];
+  }
+  
+  .menu-promo {
+    @apply lg:border-l-2 lg:border-gray lg:pl-[2em];  
+  }

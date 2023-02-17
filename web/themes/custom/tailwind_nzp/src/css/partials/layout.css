@@ -1,0 +1,44 @@
+
+/* Layout Overrides */
+
+main {
+    @apply lg:relative lg:mt-[12em];
+  }
+
+  aside {
+    @apply hidden md:block lg:block;
+  }
+  
+
+.layout-three-cols {
+    @apply lg:grid-cols-3 md:grid-cols-2 grid-cols-1;
+  }
+  
+  .layout-two-cols {
+    @apply lg:grid-cols-2 md:grid-cols-2 grid-cols-1;
+  }
+  
+  .layout-one-col {
+    @apply grid-cols-1;
+  }
+  
+  .grid-span-12 {
+    @apply col-span-12;
+  }
+  
+  .grid-span-6 {
+    @apply col-span-12 lg:col-span-6 md:col-span-6;
+  }
+  
+  .grid-span-4 {
+    @apply col-span-12 lg:col-span-4 md:col-span-4;
+  }
+  
+  .grid-span-3 {
+    @apply col-span-12 lg:col-span-3 md:col-span-4;
+  }
+  
+  .grid-span-2 {
+    @apply col-span-12 lg:col-span-6 md:col-span-6;
+  }
+

@@ -1,0 +1,11 @@
+
+/* Nav Tabs overrides */
+
+.nav-tabs a[aria-selected="true"] {
+    @apply border-sizzling-red border-b-2;
+  }
+  
+  .nav-tabs > li {
+    margin:0;
+  }
+  

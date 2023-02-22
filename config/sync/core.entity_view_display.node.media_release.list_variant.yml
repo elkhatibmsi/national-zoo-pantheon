@@ -1,9 +1,9 @@
-uuid: 228353d2-2838-43f7-bc57-e8bd87d9d873
+uuid: 27ee757d-9823-4ed3-9cbf-5a357eb51abe
 langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.node.list
+    - core.entity_view_mode.node.list_variant
     - field.field.node.media_release.body
     - field.field.node.media_release.field_content_block
     - field.field.node.media_release.field_editorial_access
@@ -19,16 +19,24 @@ dependencies:
   module:
     - entity_reference_revisions
     - layout_builder
+    - layout_builder_restrictions
     - text
     - user
 third_party_settings:
   layout_builder:
     enabled: false
     allow_custom: false
-id: node.media_release.list
+  layout_builder_restrictions:
+    allowed_block_categories: {  }
+    entity_view_mode_restriction:
+      allowed_layouts: {  }
+      denylisted_blocks: {  }
+      allowlisted_blocks: {  }
+      restricted_categories: {  }
+id: node.media_release.list_variant
 targetEntityType: node
 bundle: media_release
-mode: list
+mode: list_variant
 content:
   body:
     type: text_default

@@ -1,0 +1,39 @@
+{#
+/**
+ * @file
+ * SI theme implementation for a two column layout.
+ *
+ * This template provides a two column display layout with full width areas at
+ * the top, bottom and in the middle.
+ *
+ * Available variables:
+ * - content: The content for this layout.
+ * - attributes: HTML attributes for the layout.
+ * - region_attributes attributes for the region itself
+ * Settings Variables (pulled from the Layout Section config form): 
+ *   HTML Tags/Elements:
+ *   - settings.html_container_elements: wrapper/container html tags selected by the user.
+ *   - settings.html_region_elements.[region_name]: region html tags selected by the user (eg: settings.html_region_elements.one_col). 
+ *   HTML Classes:
+ *   - settings.container_classes: Container classes set by the user. 
+ *   - settings.region_classes.[region_name]: Region classes set by the user (eg: settings.region_classes.one_col).
+ * @ingroup themeable
+ */
+#}
+
+{% if content %}
+    <div{{ attributes.addClass(settings.custom_classes, settings.background_color) }} >
+        <div class="container mx-auto px-4 grid grid-cols-[1fr] md:grid-cols-[.38fr_.62fr] gap-x-4 md:gap-x-16 lg:gap-x-24 xl:gap-x-40 2xl:gap-x-64">
+            <aside>
+                {% if content.one_col %}
+                    {{ content.one_col }}
+                {% endif %}
+            </aside>            
+            <div>
+                {% if content.two_col %}
+                    {{ content.two_col }}
+                {% endif %}    
+            </div>
+        </div>
+    </div>
+{% endif %}

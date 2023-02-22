@@ -77,7 +77,6 @@ looping_video:
   js:
     src/js/looping-video.js: {}
 
-
 modal_gallery:
   version: 1.x
   header: true

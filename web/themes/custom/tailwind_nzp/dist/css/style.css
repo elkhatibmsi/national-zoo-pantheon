@@ -1015,10 +1015,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   right: 0.5rem;
 }
 
-.right-3{
-  right: 0.75rem;
-}
-
 .z-10{
   z-index: 10;
 }
@@ -1113,10 +1109,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .m-0{
   margin: 0px;
-}
-
-.\!m-0{
-  margin: 0px !important;
 }
 
 .mx-0{
@@ -2323,11 +2315,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .rounded-none{
   border-radius: 0px;
-}
-
-.rounded-b{
-  border-bottom-right-radius: 0.25rem;
-  border-bottom-left-radius: 0.25rem;
 }
 
 .border-0{
@@ -5550,14 +5537,6 @@ header.scrolled  .header--hours {
     height: 100%;
   }
 
-  .lg\:max-h-full{
-    max-height: 100%;
-  }
-
-  .lg\:min-h-\[400px\]{
-    min-height: 400px;
-  }
-
   .lg\:w-\[300px\]{
     width: 300px;
   }
@@ -5785,11 +5764,6 @@ header.scrolled  .header--hours {
   .lg\:px-4{
     padding-left: 1rem;
     padding-right: 1rem;
-  }
-
-  .lg\:px-8{
-    padding-left: 2rem;
-    padding-right: 2rem;
   }
 
   .lg\:pl-3{

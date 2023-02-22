@@ -76,9 +76,6 @@ looping_video:
   header: true
   js:
     src/js/looping-video.js: {}
-<<<<<<< HEAD
-=======
-
 
 modal_gallery:
   version: 1.x
@@ -97,4 +94,3 @@ grid_gallery:
   css:
     theme:
       src/css/gallery.css: {}
->>>>>>> master

@@ -1,0 +1,134 @@
+uuid: 6e01e0cf-bfb3-4161-bdf3-1113bf41ecbf
+langcode: en
+status: closed
+dependencies: {  }
+weight: 0
+open: null
+close: null
+uid: 173
+template: false
+archive: false
+id: webform_8342
+title: 'Special Event Sponsorship Contact'
+description: null
+category: null
+elements: |
+  fieldset_event_sponsorship__corporate_packages:
+    '#type': fieldset
+    '#open': true
+    '#title': 'Event Sponsorship & Corporate Packages' 
+    '#description': ""
+    name_7:
+      '#type': textfield
+      '#title': 'Name' 
+      '#description': ""
+      '#required': true
+    corporation_7:
+      '#type': textfield
+      '#title': 'Corporation/Organization' 
+      '#description': ""
+      '#required': true
+    phone_number_7:
+      '#title': 'Phone Number' 
+      '#description': ""
+      '#required': true
+    email_address_7:
+      '#type': email
+      '#size': 20
+      '#title': 'Email Address' 
+      '#description': ""
+      '#required': true
+    event_7:
+      '#type': checkboxes
+      '#options':
+        1: 'Conservation Discovery Day'
+        2: 'Boo at the Zoo'
+        3: 'Brew at the Zoo'
+        4: 'Easter Monday: A Washington Family Tradition'
+        5: 'Zoo Uncorked'
+        6: 'Earth Optimism Day'
+        7: 'Giant Panda Birthday Celebration'
+        8: 'Night of the Living Zoo'
+        9: 'Bite Night: ZooFari'
+        10: 'ZooLights'
+        11: 'ZooFiesta'
+        12: 'Other'
+      '#multiple': true
+      '#title': 'Event' 
+      '#description': "Please check the events you are interested in sponsoring:"
+      '#required': true
+    message_7:
+      '#type': textarea
+      '#title': 'Message' 
+      '#description': ""
+      '#required': true
+  disclaimer:
+    '#type': processed_text
+    '#format': full_html
+    '#text': "[block:bean=fonz-privacy-disclamer]"
+    '#title': 'Disclaimer' 
+    '#description': ""
+css: ''
+javascript: ''
+settings:
+  page: true
+  wizard_progress_bar: true
+  preview: 0
+  draft: '0'
+  draft_auto_save: false
+  confirmation_type: inline
+  confirmation_url: ''
+  confirmation_message: "<p>Thank you for your submission. Someone will be in touch with your shortly.</p>\r\n"
+  limit_total: null
+  limit_user: 1
+  form_submit_label: ''
+  wizard_complete: 1
+access:
+  create:
+    roles:
+      - anonymous
+      - authenticated
+    users: {  }
+handlers:
+  email_7:
+    id: email
+    handler_id: email_7
+    label: 'Email 7'
+    notes: ''
+    status: true
+    conditions: {  }
+    weight: 7
+    settings:
+      states:
+        - completed
+      to_mail: enchelmeyera@si.edu
+      to_options: {  }
+      bcc_mail: ''
+      bcc_options: {  }
+      cc_mail: ''
+      cc_options: {  }
+      from_mail: default
+      from_options: {  }
+      from_name: default
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
+      subject: default
+      body: |
+        Submitted on [webform_submission:date:long]
+        Submitted by user: [webform_submission:user]
+        Submitted values are:
+        [webform_submission:values]
+      excluded_elements: {  }
+      ignore_access: false
+      exclude_empty: true
+      exclude_empty_checkbox: false
+      exclude_attachments: false
+      html: false
+      attachments: false
+      twig: false
+      theme_name: ''
+      parameters: {  }
+      debug: false
+variants: {  }

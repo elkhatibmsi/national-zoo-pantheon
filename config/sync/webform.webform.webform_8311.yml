@@ -1,0 +1,148 @@
+uuid: eca339fa-4b77-423a-be02-580ff1217824
+langcode: en
+status: closed
+dependencies: {  }
+weight: 0
+open: null
+close: null
+uid: 173
+template: false
+archive: false
+id: webform_8311
+title: 'Contact the Membership Office'
+description: null
+category: null
+elements: |
+  your_name:
+    '#type': textfield
+    '#title': 'Your Name' 
+    '#description': ""
+    '#required': true
+  your_email:
+    '#type': email
+    '#size': 20
+    '#title': 'Your Email' 
+    '#description': ""
+    '#required': true
+  message:
+    '#type': textfield
+    '#title': 'Message' 
+    '#description': ""
+    '#required': true
+  phone_number:
+    '#title': 'Phone Number' 
+    '#description': ""
+    '#required': true
+  disclaimer:
+    '#type': processed_text
+    '#format': full_html
+    '#text': "[block:bean=fonz-privacy-disclamer]"
+    '#title': 'Disclaimer' 
+    '#description': ""
+  two_weeks_notice:
+    '#type': processed_text
+    '#format': full_html
+    '#text': "<p><strong>Circle Members: Please allow at least two weeks notice to schedule your tour(s).</strong></p>"
+    '#title': 'Two Weeks Notice' 
+    '#description': ""
+css: ''
+javascript: ''
+settings:
+  page: true
+  wizard_progress_bar: true
+  preview: 0
+  draft: '0'
+  draft_auto_save: false
+  confirmation_type: inline
+  confirmation_url: ''
+  confirmation_message: "<p>Thank you for contacting the Friends of the National Zoo. Someone will be in touch with you shortly.</p>\r\n"
+  limit_total: null
+  limit_user: 10
+  form_submit_label: ''
+  wizard_complete: 1
+access:
+  create:
+    roles:
+      - anonymous
+      - authenticated
+    users: {  }
+handlers:
+  email_2:
+    id: email
+    handler_id: email_2
+    label: 'Email 2'
+    notes: ''
+    status: true
+    conditions: {  }
+    weight: 2
+    settings:
+      states:
+        - completed
+      to_mail: enchelmeyera@si.edu
+      to_options: {  }
+      bcc_mail: ''
+      bcc_options: {  }
+      cc_mail: ''
+      cc_options: {  }
+      from_mail: '[webform_submission:values:your_email:raw]'
+      from_options: {  }
+      from_name: '[webform_submission:values:your_name:raw]'
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
+      subject: default
+      body: |
+        Submitted on [webform_submission:date:long]
+        Submitted by user: [webform_submission:user]
+        Submitted values are:
+        [webform_submission:values]
+      excluded_elements: {  }
+      ignore_access: false
+      exclude_empty: true
+      exclude_empty_checkbox: false
+      exclude_attachments: false
+      html: false
+      attachments: false
+      twig: false
+      theme_name: ''
+      parameters: {  }
+      debug: false
+  email_3:
+    id: email
+    handler_id: email_3
+    label: 'Email 3'
+    notes: ''
+    status: true
+    conditions: {  }
+    weight: 3
+    settings:
+      states:
+        - completed
+      to_mail: ZooMembership@si.edu
+      to_options: {  }
+      bcc_mail: ''
+      bcc_options: {  }
+      cc_mail: ''
+      cc_options: {  }
+      from_mail: default
+      from_options: {  }
+      from_name: default
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
+      subject: default
+      body: default
+      excluded_elements: {  }
+      ignore_access: false
+      exclude_empty: true
+      exclude_empty_checkbox: false
+      exclude_attachments: false
+      html: false
+      attachments: false
+      twig: false
+      theme_name: ''
+      parameters: {  }
+      debug: false
+variants: {  }

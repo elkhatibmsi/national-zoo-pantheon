@@ -166,3 +166,10 @@ function tailwind_nzp_preprocess_menu_local_task(array &$variables) {
   //$variables['element']['#link']['url']->setOption('attributes', ['class'=>'rounded']);
 }
 
+
+
+function tailwind_nzp_preprocess_webform(&$vars){
+  $wfid = $vars["element"]["#webform_id"];
+  $wf = \Drupal\webform\Entity\Webform::load($wfid);
+  $vars["title"] = $wf->label();
+}

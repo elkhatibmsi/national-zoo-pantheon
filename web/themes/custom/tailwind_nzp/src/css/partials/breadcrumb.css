@@ -1,0 +1,4 @@
+
+.breadcrumb {
+    @apply list-none my-8 !mx-0 !pl-0;
+  }

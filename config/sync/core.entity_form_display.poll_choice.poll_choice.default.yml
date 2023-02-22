@@ -1,0 +1,39 @@
+uuid: d481b684-0eb7-4cf1-9ad2-bb156bba9d4f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.poll_choice.poll_choice.field_poll_choice_image
+    - field.field.poll_choice.poll_choice.field_poll_choice_label
+  module:
+    - media_library
+    - poll
+id: poll_choice.poll_choice.default
+targetEntityType: poll_choice
+bundle: poll_choice
+mode: default
+content:
+  choice:
+    type: string_textfield
+    weight: -100
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_poll_choice_image:
+    type: media_library_widget
+    weight: -99
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+  field_poll_choice_label:
+    type: string_textfield
+    weight: -98
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

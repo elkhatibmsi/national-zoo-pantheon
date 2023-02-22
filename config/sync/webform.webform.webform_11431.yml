@@ -1,0 +1,338 @@
+uuid: 8425364d-7259-4a1c-a37f-a3465f76537f
+langcode: en
+status: open
+dependencies: {  }
+weight: 0
+open: null
+close: null
+uid: 992
+template: false
+archive: false
+id: webform_11431
+title: 'Guess That Milk Quiz'
+description: null
+category: null
+elements: |
+  first_page:
+    '#type': webform_wizard_page
+    '#title': Start
+    giant_anteater_question:
+      '#type': radios
+      '#options':
+        a): 'Platypus'
+        b): 'Sumatran tiger'
+        c): 'Giant anteater'
+      '#title_display': invisible
+      '#title': 'Question 1' 
+      '#description': "<div><p><img src='/sites/default/files/649a9792_giantanteater_roshanpatel.jpg' alt='A sample of frozen milk in a small tube held by a researcher' width='60%'></p>\n<p>I might go as far to describe this milk as having a woody or earthy smell. It has a slightly thick consistency, because it’s high in protein and fat.</p></div>"
+      '#required': true
+  guess_again_next_question:
+    '#type': webform_wizard_page
+    '#title': Anteater hint pagebreak
+    guess_again_anteater:
+      '#type': processed_text
+      '#format': full_html
+      '#text': "<p><strong>Guess again!</strong> <span style='display: none;'>&nbsp;</span>Hint: This animal is an insectivore, meaning it eats insects like ants and termites.</p>\n"
+      '#title': 'Anteater guess again' 
+      '#description': ""
+      '#states':
+        invisible:
+          ':input[name="giant_anteater_question"]':
+            value: c)
+            
+  anteater_correct_pagebreak:
+    '#type': webform_wizard_page
+    '#title': Anteater correct pagebreak
+    anteater_correct:
+      '#type': processed_text
+      '#format': full_html
+      '#text': "<h4>Correct!</h4>\n\n<p>Did you know that female giant anteaters give birth standing up, using their tails for support? The Nutrition Laboratory has giant anteater milk samples from California, Ohio and the Smithsonian’s National Zoo</p>\n"
+      '#title': 'Anteater correct' 
+      '#description': ""
+      '#states':
+        visible:
+          ':input[name="giant_anteater_question"]':
+            value: c)
+            
+  next_question_pagebreak1:
+    '#type': webform_wizard_page
+    '#title': Next question pagebreak1
+    giant_panda_question:
+      '#type': radios
+      '#options':
+        a): 'Andean bear'
+        b): 'Giant panda'
+        c): 'Fennec fox'
+      '#title_display': invisible
+      '#title': 'Question 2' 
+      '#description': "<p>This milk doesn’t have much of a scent, but its consistency is unique. I’d say it’s a bit thinner than a slushie. It’s also high in sugar.</p>\n<img src='/sites/default/files/649a9794_giantpanda_roshanpatel.jpg' alt='A sample of frozen animal milk held by a researcher wearing gloves' width='60%'></img>\n"
+      '#required': true
+  giant_panda_hint_pagebreak:
+    '#type': webform_wizard_page
+    '#title': Giant panda hint pagebreak
+    giant_panda_guess_again:
+      '#type': processed_text
+      '#format': full_html
+      '#text': "<p><strong>Try again!</strong> Hint: This animal has a pseudo-thumb for grasping its main source of food, bamboo, which it crushes with powerful jaws and strong teeth.</p>\n"
+      '#title': 'Giant panda guess again' 
+      '#description': ""
+      '#states':
+        invisible:
+          ':input[name="giant_panda_question"]':
+            value: b)
+            
+  giant_panda_correct_pagebreak:
+    '#type': webform_wizard_page
+    '#title': Giant panda correct pagebreak
+    giant_panda_correct:
+      '#type': processed_text
+      '#format': full_html
+      '#text': "<h4>Correct!</h4>\n\n<p>At birth, giant panda cubs are pink, hairless, blind and about the size of a stick of butter.</p>\n"
+      '#title': 'Giant panda correct' 
+      '#description': ""
+      '#states':
+        visible:
+          ':input[name="giant_panda_question"]':
+            value: b)
+            
+  next_question_pagebreak2:
+    '#type': webform_wizard_page
+    '#title': Next question pagebreak2
+    african_lion_question:
+      '#type': radios
+      '#options':
+        a): 'Screaming hairy armadillo'
+        b): 'African lion'
+        c): 'Cow'
+      '#title_display': invisible
+      '#title': 'Question 3' 
+      '#description': "<p><img src='/sites/default/files/649a9795_africanlion_roshanpatel.jpg' alt='A sample of frozen animal milk held by a researcher wearing gloves' width='60%'></p>\n<p>A high-protein diet means a high-protein milk for this animal. All that protein makes this milk very thick, almost like a milkshake.</p>"
+      '#required': true
+  african_lion_hint_pagebreak:
+    '#type': webform_wizard_page
+    '#title': African lion hint pagebreak
+    african_lion_guess_again:
+      '#type': processed_text
+      '#format': full_html
+      '#text': "<p><strong>Not quite!</strong> Hint: In addition to raising cubs, females are also the primary hunters for this group of animals.</p>\n"
+      '#title': 'African lion guess again' 
+      '#description': ""
+      '#states':
+        invisible:
+          ':input[name="african_lion_question"]':
+            value: b)
+            
+  african_lion_correct_pagebreak:
+    '#type': webform_wizard_page
+    '#title': African lion correct pagebreak
+    african_lion_correct:
+      '#type': processed_text
+      '#format': full_html
+      '#text': "<h4>Correct!</h4>\n\n<p>Did you know that female lions keep their cubs hidden for one to two months before introducing them to the rest of the pride?</p>\n"
+      '#title': 'African lion correct' 
+      '#description': ""
+      '#states':
+        visible:
+          ':input[name="african_lion_question"]':
+            value: b)
+            
+  next_question_pagebreak3:
+    '#type': webform_wizard_page
+    '#title': Next question pagebreak3
+    orca_question:
+      '#type': radios
+      '#options':
+        a): 'Orca'
+        b): 'Sea otter'
+        c): 'Harbor seal'
+      '#title_display': invisible
+      '#title': 'Question 4' 
+      '#description': "<p><img src='/sites/default/files/649a9797_orca_roshanpatel.jpg' alt='A sample of frozen animal milk held by a researcher wearing gloves' width='60%'></p>\n\n<p>This milk is FISHY! It is one of the densest milks that I work with.</p>\n"
+      '#required': true
+  orca_hint_pagebreak:
+    '#type': webform_wizard_page
+    '#title': Orca hint pagebreak
+    orca_guess_again:
+      '#type': processed_text
+      '#format': full_html
+      '#text': "<p><strong>Try again! </strong>Hint: These large marine mammals hunt in pods, working together to chase down prey, such as fish, squid and seals.</p>\n"
+      '#title': 'Orca guess again' 
+      '#description': ""
+      '#states':
+        invisible:
+          ':input[name="orca_question"]':
+            value: a)
+            
+  orca_correct_pagebreak:
+    '#type': webform_wizard_page
+    '#title': Orca correct pagebreak
+    orca_correct:
+      '#type': processed_text
+      '#format': full_html
+      '#text': "<h4>Correct!</h4>\n\n<p>An orca pregnancy lasts an average of 17 months, and orcas give birth to one calf at a time.</p>\n"
+      '#title': 'Orca correct' 
+      '#description': ""
+      '#states':
+        visible:
+          ':input[name="orca_question"]':
+            value: a)
+            
+  next_question_pagebreak4:
+    '#type': webform_wizard_page
+    '#title': Next question pagebreak4
+    asian_elephant_question:
+      '#type': radios
+      '#options':
+        a): 'Cheetah'
+        b): 'Golden lion tamarin'
+        c): 'Asian elephant'
+      '#title_display': invisible
+      '#title': 'Question 5' 
+      '#description': "<p><img src='/sites/default/files/649a9809_asianelephant_roshanpatel.jpg' alt='A sample of frozen animal milk held by a researcher wearing gloves' width='60%'></p>\n\n<p>This animal’s milk is fatty and becomes fattier the longer it nurses. It has a dense texture and a very “milky” smell.</p>"
+      '#required': true
+  asian_elephant_hint_pagebreak:
+    '#type': webform_wizard_page
+    '#title': Asian elephant hint pagebreak
+    asian_elephant_guess_again:
+      '#type': processed_text
+      '#format': full_html
+      '#text': "<p>Try again! Hint: Mothers of this species will nurse their babies for more than three years.</p>\n"
+      '#title': 'Asian elephant guess again' 
+      '#description': ""
+      '#states':
+        invisible:
+          ':input[name="asian_elephant_question"]':
+            value: c)
+            
+  asian_elephant_correct_pagebreak:
+    '#type': webform_wizard_page
+    '#title': Asian elephant correct pagebreak
+    asian_elephant_correct:
+      '#type': processed_text
+      '#format': full_html
+      '#text': "<h4>Correct!</h4>\n\n<p>Asian elephant gestation lasts about 22 months — the longest gestation period for any mammal. When a calf is born, it can weigh between 150 and 350 pounds.</p>\n"
+      '#title': 'Asian elephant correct' 
+      '#description': ""
+      '#states':
+        visible:
+          ':input[name="asian_elephant_question"]':
+            value: c)
+            
+  next_question_pagebreak5:
+    '#type': webform_wizard_page
+    '#title': Next question pagebreak5
+    pangolin_question:
+      '#type': radios
+      '#options':
+        a): 'Siamang'
+        b): 'Pangolin'
+        c): 'Goeldi"s monkey'
+      '#title_display': invisible
+      '#title': 'Question 6' 
+      '#description': "<p><img src='/sites/default/files/649a9810_pangolin_roshanpatel.jpg' alt='A sample of frozen animal milk held by a researcher wearing gloves' width='60%'></p>\n\n<p>This animal’s milk has 13% protein. That’s even more protein than the lion and giant anteater milks.</p>\n"
+      '#required': true
+  pangolin_hint_pagebreak:
+    '#type': webform_wizard_page
+    '#title': Pangolin hint pagebreak
+    pangolin_guess_again:
+      '#type': processed_text
+      '#format': full_html
+      '#text': "<p><strong>Guess again!</strong> Hint: This scaly animal uses its long, sticky tongue to grab ants and termites by the mouthful.</p>\n"
+      '#title': 'Pangolin guess again' 
+      '#description': ""
+      '#states':
+        invisible:
+          ':input[name="pangolin_question"]':
+            value: b)
+            
+  pangolin_correct_pagebreak:
+    '#type': webform_wizard_page
+    '#title': Pangolin correct pagebreak
+    pangolin_correct:
+      '#type': processed_text
+      '#format': full_html
+      '#text': "<h4>Correct!</h4>\n\n<p>The protein found in pangolin milk is not just useful for its own nutritional value. The protein also acts as a capsule that can aid in the transfer of other nutrients, like calcium and phosphorous. If you think about it, it makes sense that a pangolin’s milk has a lot of protein, because pangolins need all of these nutrients to build the protective scales that cover their bodies.</p>\n\n<p>Pangolins are the world’s most trafficked wild mammal. Learn more about pangolins, and find out how the Smithsonian Conservation Biology Institute’s Global Health Program is working to save them <a href='/global-health-program/news/helping-pangolins-peril' target='_blank'>in this update from veterinarian Dr. Marc Valitutto</a>.</p>\n"
+      '#title': 'Pangolin correct' 
+      '#description': ""
+      '#states':
+        visible:
+          ':input[name="pangolin_question"]':
+            value: b)
+            
+  next_question_pagebreak6:
+    '#type': webform_wizard_page
+    '#title': Next question pagebreak6
+    orangutan_question:
+      '#type': radios
+      '#options':
+        a): 'Orangutan'
+        b): 'Ring-tailed lemur'
+        c): 'Sloth bear'
+      '#title_display': invisible
+      '#title': 'Question 7' 
+      '#description': "<p><img src='/sites/default/files/649a9804_orangutanbatang_roshanpatel.jpg' alt='A sample of frozen animal milk held by a researcher wearing gloves' width='60%'></p>\n\n<p>This animal has a thin, very watery milk that is nearly translucent in comparison to other milks. It is high in sugar and doesn’t have what you might think of as a “milky” smell.</p>\n"
+      '#required': true
+  orangutan_hint_pagebreak:
+    '#type': webform_wizard_page
+    '#title': Orangutan hint pagebreak
+    orangutan_guess_again:
+      '#type': processed_text
+      '#format': full_html
+      '#text': "<p><strong>Guess again!</strong> Hint: This primate is critically endangered, primarily due to habitat loss.</p>\n"
+      '#title': 'Orangutan guess again' 
+      '#description': ""
+      '#states':
+        invisible:
+          ':input[name="orangutan_question"]':
+            value: a)
+            
+  orangutan_correct_pagebreak:
+    '#type': webform_wizard_page
+    '#title': Orangutan correct pagebreak
+    orangutan_correct:
+      '#type': processed_text
+      '#format': full_html
+      '#text': "<h4>Correct!</h4>\n\n<p>This milk sample came from the Zoo’s orangutan Batang! Infant orangutans can nurse until they are 6 or 7 years old. That’s exciting for researchers, because it means they could collect milk samples from one orangutan over many years and study how it changes over time.</p>\n"
+      '#title': 'Orangutan correct' 
+      '#description': ""
+      '#states':
+        visible:
+          ':input[name="orangutan_question"]':
+            value: a)
+            
+  congratulations_pagebreak:
+    '#type': webform_wizard_page
+    '#title': Congratulations pagebreak
+    webform_quiz_score:
+      '#type': hidden
+      '#title': 'Total Score' 
+      '#description': ""
+    congratulations_markup:
+      '#type': processed_text
+      '#format': full_html
+      '#text': "<h3>You've made it to the end of the quiz!</h3>\n"
+      '#title': 'Congratulations Markup' 
+      '#description': ""
+css: ''
+javascript: ''
+settings:
+  page: true
+  wizard_progress_bar: true
+  preview: 0
+  draft: '0'
+  draft_auto_save: false
+  confirmation_type: inline
+  confirmation_url: ''
+  confirmation_message: "<h3>Thanks for playing Guess That Milk!</h3>\r\nYou scored:[submission:values:webform_quiz_score] out of 7"
+  limit_total: null
+  limit_user: null
+  form_submit_label: 'See how you scored'
+  wizard_complete: 1
+access:
+  create:
+    roles:
+      - anonymous
+      - authenticated
+    users: {  }
+handlers: {  }
+variants: {  }

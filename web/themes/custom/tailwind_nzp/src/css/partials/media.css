@@ -1,0 +1,53 @@
+/* Blazy Overrides */
+
+.blazy,
+.media--blazy {
+  @apply w-full h-full flex;
+}
+
+.blazy img,
+.media--blazy img {
+  @apply object-cover object-center h-full w-full;
+}
+
+body {
+  @apply leading-normal text-headings text-[16px] font-body;
+}
+
+.section-animals .landing-title:before,
+.section-animals .landing-title:after,
+.section-animals .page-title:after {
+  @apply border-tea-green bg-tea-green;
+}
+
+
+img {
+    @apply !m-0;
+  }
+  
+
+.fill-black svg {
+    fill: #444;
+    z-index:1000
+}
+
+
+.teaser-img-container > img {
+    /* @apply w-[200px] h-[200px] inline-block align-top bg-cover bg-center; */
+    @apply w-full; 
+  }
+  
+  
+  .swiper-slide {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .looping-video {
+    height: 0;
+    padding-bottom: 56.25%;
+    position: relative;
+  }
+  
+  

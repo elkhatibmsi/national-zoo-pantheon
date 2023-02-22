@@ -2,7 +2,7 @@ const colors = require('tailwindcss/colors')
 
 module.exports = {
   content: [
-    './src/**/*.{html,js}',
+    './src/**/*.{html,js,css}',
     '../../../**/*.twig',
     './templates/**/*.twig',
     './safelist.txt'
@@ -14,6 +14,7 @@ module.exports = {
      },
      colors: {
       'oxford-blue': '#002554',
+      'ice-blue': '#eaf6f8',
       'sap-green': '#53782b',
       'blue-sapphire': '#165c7d',
       'tea-green': '#c4dea6',
@@ -41,7 +42,7 @@ module.exports = {
         css:{
           'max-width': 'none',
           '--tw-prose-body': '#404040',
-          '--tw-prose-headings': '#5c5d5d',
+          '--tw-prose-headings': '#171717',
           '--tw-prose-lead': '#525252',
           '--tw-prose-links': '#16567d',
           '--tw-prose-bold': '#171717',

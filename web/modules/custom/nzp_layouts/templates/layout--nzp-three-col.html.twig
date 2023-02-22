@@ -23,7 +23,11 @@
 {% if content %}
 	<div{{attributes}}>
 		<{{settings.html_container_elements}} {{attributes.addClass(settings.container_classes, settings.custom_classes, settings.background_color)}}>
+<<<<<<< HEAD
 		        <div class="grid md:grid-cols-12 gap-6 gap-y-0">
+=======
+		        <div class="grid md:grid-cols-12 gap-6">
+>>>>>>> master
 			{% if content.one_col %}
 				<{{settings.html_region_elements.one_col}} {{ region_attributes.one_col.addClass(settings.region_classes.one_col, settings.region_background_color.one_col, settings.custom_region_classes.one_col) }}>
 					{{ content.one_col }}

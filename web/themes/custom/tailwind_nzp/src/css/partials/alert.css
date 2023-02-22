@@ -1,0 +1,26 @@
+.alert {
+    @apply py-1 px-2 relative my-2;
+  }
+  
+  .alert * {
+    @apply text-white;
+  }
+  
+  .alert .close {
+    @apply absolute top-0 right-0 text-xl p-2;
+  }
+  
+  .warning-message,
+  .alert-warning {
+    @apply bg-cyber-yellow;
+  }
+  .danger-message,
+  .alert-danger {
+    @apply bg-sizzling-red;
+  }
+  
+  .status-message,
+  .alert-info, .alert-success {
+    @apply bg-sap-green;
+  }
+  

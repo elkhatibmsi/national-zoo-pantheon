@@ -4,26 +4,12 @@ border color based on that path. E.g. if the page is in the visit section then
 the figcaption gets an orange border.
 #}
 
-{% set path = path('<current>') %}
-
-{% if '/visit/' in path %}
-    {% set bordercolor = '#f18b21' %}
-{% elseif '/animals/' in path %}
-    {% set bordercolor = '#c8dc65' %} 
-{% elseif '/support/' in path %}
-    {% set bordercolor = '#5ac4be' %} 
-{% elseif '/membership/' in path %}
-    {% set bordercolor = '#f26b6c' %} 
-{% elseif '/education/' in path %}
-    {% set bordercolor = '#c44d58' %} 
-{% elseif '/conservation/' in path %}
-    {% set bordercolor = '#627e9c' %}                        
-{% else %}
-    {% set bordercolor = '#d3d4d4' %}    
-{% endif %}
-    <figure class="mt1 mb1">
-        {{ content.image }}
-        <figcaption class="pl1" style="border-left: 4px solid {{ bordercolor }}; font-size: inherit; font-style: inherit;">
-            {{ content.caption }}
-        </figcaption>
-    </figure>
+<div {{attributes}}>
+<figure class="bg-oxford-blue w-full image-caption-title-container m-0">
+	<div  {{ region_attributes.image }} class="image-caption-image w-full">{{ content.image }}</div>
+	<figcaption class="text-white ml-2 pb-2">
+		<div  {{ region_attributes.caption }} class="image-caption-title ml-2">
+			{{ content.caption }}</div>
+	</figcaption>
+</figure>
+</div>

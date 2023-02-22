@@ -25,6 +25,8 @@ settings:
       Custom: Custom
       Forms: Forms
       System: System
+      Webform: Webform
+      'Webform submission fields': 'Webform submission fields'
       'Chaos Tools': '0'
       'Comment fields': '0'
       'Contact message fields': '0'
@@ -35,6 +37,7 @@ settings:
       'Custom menu link fields': '0'
       Devel: '0'
       'Devel PHP': '0'
+      EDAN: '0'
       'File fields': '0'
       Help: '0'
       'Inline blocks': '0'
@@ -44,6 +47,7 @@ settings:
       'Paragraph fields': '0'
       'Redirect fields': '0'
       'Shortcut link fields': '0'
+      'Storage fields': '0'
       'Taxonomy term fields': '0'
       'URL alias fields': '0'
       User: '0'

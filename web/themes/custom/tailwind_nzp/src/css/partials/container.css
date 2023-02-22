@@ -1,0 +1,8 @@
+
+/* Containers */
+
+.container,
+.container-fluid {
+  @apply mb-4 lg:px-0 px-4;
+
+}

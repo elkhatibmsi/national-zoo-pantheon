@@ -1,0 +1,233 @@
+uuid: d52b7a32-329a-4dc6-88e5-4aa2c12ff72d
+langcode: en
+status: open
+dependencies: {  }
+weight: 0
+open: null
+close: null
+uid: 169
+template: false
+archive: false
+id: webform_9678
+title: 'Play the Nest Game'
+description: null
+category: null
+elements: |
+  first_page:
+    '#type': webform_wizard_page
+    '#title': Start
+    question_1:
+      '#type': radios
+      '#options':
+        1: 'Common Nighthawk (<a href="#" title="Nest: Nighthawks do not construct a nest. They lay their eggs on the ground, often in places where there"s gravel and sparse vegetation (often on graveled roofs of city buildings!)" id="hint1" data-toggle="tooltip">hint</a>)'
+        2: 'Yellow-billed Cuckoo (<a href="#" title="Nest: In tree, vine, shrub as high as 20 ft. above ground, avg. 4-10 feet. Thick bushes overgrown with wild grape favored. Small, shallow, frail platform of sticks, vines, twigs, rootlets; thinly lined with bits of moss, grass, pine needles, catkins. Very little depression to contain eggs. Outside diameter about 5 inches, depth about 1 1/2 inches." id="hint3" data-toggle="tooltip">hint</a>)'
+        3: 'Bank Swallow  (<a href="#" title="Nest: Dense colonies (up to several hundred nests); burrows dug by both sexes, using feet and bill, at rate of about 5 inches per day. Birds kick earth out of tunnel as they dig in vertical side of bank, generally near top. Straws, grass stalks gathered by both sexes and placed in nest cavity after burrow complete; feathers addded after incubation under way." id="hint2" data-toggle="tooltip">hint</a>)'
+      '#title': 'Which of these birds made this nest?' 
+      '#description': "<img src='/sites/default/files/conservation/migratory-birds/coni_nest.jpg' alt='bird sitting on nest on ground'>"
+      '#required': true
+  question_1_break:
+    '#type': webform_wizard_page
+    '#title': Question 1
+    question_2:
+      '#type': radios
+      '#options':
+        1: 'Gray Catbird (<a href="#" title="Nest: Built in dense thickets, briars, vine tangles, shrubs, low trees, typically well concealed by foliage, 3-10 ft. above ground. Substantial, bulky foundation of twigs, grapevine, leaves, grasses, paper, weed stems; deeply cupped; neatly lined with rootlets." id="hint1" data-toggle="tooltip">hint</a>)'
+        2: 'Red-naped Sapsucker (<a href="#" title="Nest: Hole dug in live or dead tree or stub, 8-40 ft. above ground. Cavity gourd-shaped, sides smoothly chiseled. May use same tree annually, digging new cavities for 5-6 years; rarely use old nest hole." id="hint2" data-toggle="tooltip">hint</a>)'
+        3: 'Bald Eagle (<a href="#" title="Nest: An eyrie, built in fork near crown of giant tree; species of tree not so important as its size, shape, distance from other nesting eagles. Immense pile of large sticks, branches, cornstalks, rubbish; lined with grasses, moss, twigs, sod, weeds." id="hint3" data-toggle="tooltip">hint</a>)'
+      '#title': 'Which of these birds made this nest?' 
+      '#description': "<p><img src='/sites/default/files/conservation/migratory-birds/grca_nest.jpg' alt='blue-green eggs in a small nest in shrub'></p>"
+      '#required': true
+  question_2_break:
+    '#type': webform_wizard_page
+    '#title': Question 2
+    question_3:
+      '#type': radios
+      '#options':
+        1: 'Common Nighthawk (<a href="#" title="Nest: Nighthawks do not construct a nest. They lay their eggs on the ground, often in places where there"s gravel and sparse vegetation (often on graveled roofs of city buildings!)" id="hint2" data-toggle="tooltip">hint</a>)'
+        2: 'Red-winged Blackbird (<a href="#" title="Nest: In loose colonies in cattails, rushes, sedges, reeds, bushes (alder, willow), preferably near or over water; also in weeds, grass tussocks, bushes, low trees in dry areas. Sedge leaves, rushes, grasses, rootlets, mosses bound to surrounding vegetation with milkweed fibers; lined with fine grasses; placed 3 in. to 14 ft. above ground or water." id="hint1" data-toggle="tooltip">hint</a>)'
+        3: 'Yellow-billed Cuckoo (<a href="#" title="Nest: In tree, vine, shrub as high as 20 ft. above ground, avg. 4-10 feet. Thick bushes overgrown with wild grape favored. Small, shallow, frail platform of sticks, vines, twigs, rootlets; thinly lined with bits of moss, grass, pine needles, catkins. Very little depression to contain eggs. Outside diameter about 5 inches, depth about 1 1/2 inches." id="hint3" data-toggle="tooltip">hint</a>)'
+      '#title': 'Which of these birds made this nest?' 
+      '#description': "<img src='/sites/default/files/conservation/migratory-birds/rwbl_nest.jpg' alt='scruffy nest in a small shrub'>"
+      '#required': true
+  question_3_break:
+    '#type': webform_wizard_page
+    '#title': Question 3
+    question_4:
+      '#type': radios
+      '#options':
+        1: 'Gray Catbird (<a href="#" title="Nest: Built in dense thickets, briars, vine tangles, shrubs, low trees, typically well concealed by foliage, 3-10 ft. above ground. Substantial, bulky foundation of twigs, grapevine, leaves, grasses, paper, weed stems; deeply cupped; neatly lined with rootlets." id="hint2" data-toggle="tooltip">hint</a>)'
+        2: 'Yellow-billed Cuckoo (<a href="#" title="Nest: In tree, vine, shrub as high as 20 ft. above ground, avg. 4-10 feet. Thick bushes overgrown with wild grape favored. Small, shallow, frail platform of sticks, vines, twigs, rootlets; thinly lined with bits of moss, grass, pine needles, catkins. Very little depression to contain eggs. Outside diameter about 5 inches, depth about 1 1/2 inches." id="hint3" data-toggle="tooltip">hint</a>)'
+        3: 'Bank Swallow (<a href="#" title="Nest: Dense colonies (up to several hundred nests); burrows dug by both sexes, using feet and bill, at rate of about 5 inches per day. Birds kick earth out of tunnel as they dig in vertical side of bank, generally near top. Straws, grass stalks gathered by both sexes and placed in nest cavity after burrow complete; feathers addded after incubation under way." id="hint1" data-toggle="tooltip">hint</a>)'
+      '#title': 'Which of these birds made this nest?' 
+      '#description': "<img src='/sites/default/files/conservation/migratory-birds/ybcu_nest.jpg' alt='flimsy nest with 2 eggs and one chick'>"
+      '#required': true
+  question_4_break:
+    '#type': webform_wizard_page
+    '#title': Question 4
+    question_5:
+      '#type': radios
+      '#options':
+        1: 'House Wren (<a href="#" title="Nest: In natural cavity in tree, stub, fencepost; old woodpecker hole; often birdhouse. On base of twigs, female builds cup of grasses, plant fibers, rootlets, feathers, hair, rubbish." id="hint2" data-toggle="tooltip">hint</a>)'
+        2: 'Red-winged Blackbird (<a href="#" title="Nest: In loose colonies in cattails, rushes, sedges, reeds, bushes (alder, willow), preferably near or over water; also in weeds, grass tussocks, bushes, low trees in dry areas. Sedge leaves, rushes, grasses, rootlets, mosses bound to surrounding vegetation with milkweed fibers; lined with fine grasses; placed 3 in. to 14 ft. above ground or water." id="hint1" data-toggle="tooltip">hint</a>)'
+        3: 'Great Horned Owl (<a href="#" title="Nest: Nests in a natural cavity in a tree, in a fork of a giant cactus, on a rock ledge, or in a rock or earth cave. Often in the old nest of a large bird in such sites. In some treeless regions on open ground." id="hint3" data-toggle="tooltip">hint</a>)'
+      '#title': 'Which of these birds made this nest?' 
+      '#description': "<img src='/sites/default/files/conservation/migratory-birds/howr_nest.jpg' alt='nest made of sticks in a box'>"
+      '#required': true
+  question_5_break:
+    '#type': webform_wizard_page
+    '#title': Question 5
+    question_6:
+      '#type': radios
+      '#options':
+        1: 'Common Nighthawk (<a href="#" title="Nest: Nighthawks do not construct a nest. They lay their eggs on the ground, often in places where there"s gravel and sparse vegetation (often on graveled roofs of city buildings!)" id="hint2" data-toggle="tooltip">hint</a>)'
+        2: 'Ruby-throated Hummingbird (<a href="#" title="Nest: Solitary; in variety of trees, 6-50 feet, average 10-20 feet above ground, attached to twig or small branch that slants downward from tree, usually sheltered above by leafy branches, open to ground beneath. Nest of plant down, fibers, bud scales, attached to limb with spider silk; lined with soft plant down and covered outside with greenish-gray lichens. Viewed from the ground, nest looks like a mossy knot on limb." id="hint1" data-toggle="tooltip">hint</a>)'
+        3: 'Great Horned Owl (<a href="#" title="Nest: Nests in a natural cavity in a tree, in a fork of a giant cactus, on a rock ledge, or in a rock or earth cave. Often in the old nest of a large bird in such sites. In some treeless regions on open ground." id="hint3" data-toggle="tooltip">hint</a>)'
+      '#title': 'Which of these birds made this nest?' 
+      '#description': "<img src='/sites/default/files/conservation/migratory-birds/rthu_nest.jpg' alt='lichen-covered nest attached to a branch with 2 long-billed chicks visible'>"
+      '#required': true
+  question_6_break:
+    '#type': webform_wizard_page
+    '#title': Question 6
+    question_7:
+      '#type': radios
+      '#options':
+        1: 'Bank Swallow (<a href="#" title="Nest: Dense colonies (up to several hundred nests); burrows dug by both sexes, using feet and bill, at rate of about 5 inches per day. Birds kick earth out of tunnel as they dig in vertical side of bank, generally near top. Straws, grass stalks gathered by both sexes and placed in nest cavity after burrow complete; feathers addded after incubation under way." id="hint2" data-toggle="tooltip">hint</a>)'
+        2: 'Swamp Sparrow (<a href="#" title="Nest: In loose colonies where habitat is particularly suitable; also single. In tussock of grass, sedge, or in low bush, commonly over water 2 feet or more deep, built about 1 foot above surface. Female builds a large bulky foundation entirely of grass and lines inner cup with finer grass." id="hint1" data-toggle="tooltip">hint</a>)'
+        3: 'Golden Eagle (<a href="#" title="Nest: Nests are of thick branches, twigs, and stems of any kind, and are lined with leafy twigs or tufts of conifer needles, which may be added continually during the nesting period. Diameter 2 1/2 to 6 feet." id="hint3" data-toggle="tooltip">hint</a>)'
+      '#title': 'Which of these birds made this nest?' 
+      '#description': "<img src='/sites/default/files/conservation/migratory-birds/bans_nest.jpg' alt='small bird at entrance to hole in a cliff'>"
+      '#required': true
+  question_7_break:
+    '#type': webform_wizard_page
+    '#title': Question 7
+    question_8:
+      '#type': radios
+      '#options':
+        1: 'Wood Thrush (<a href="#" title="Nest: Anchored 6-50 feet above ground, average about 10 feet in fork or horizontal limb of tree. Firm, compact cup of grasses, bark, moss, paper, mixed with leafmold, mud; molded by contours of female"s body; lined with rootlets." id="hint2" data-toggle="tooltip">hint</a>)'
+        2: 'Cliff Swallow (<a href="#" title="Nest: In dense colonies; hundreds of nests may occupy side of barn (up to 800 reported). Gourd-shaped structure built of pellets of mud and clay; plastered to sides of buildings, bridges; under eaves of barns, houses, public buildings; sides of cliffs (formerly common, now rare)." id="hint1" data-toggle="tooltip">hint</a>)'
+        3: 'Golden Eagle (<a href="#" title="Nest: Nests are of thick branches, twigs, and stems of any kind, and are lined with leafy twigs or tufts of conifer needles, which may be added continually during the nesting period. Diameter 2 1/2 to 6 feet." id="hint3" data-toggle="tooltip">hint</a>)'
+      '#title': 'Which of these birds made this nest?' 
+      '#description': "<img src='/sites/default/files/conservation/migratory-birds/woth_nest.jpg' alt='nest of sticks and fine twigs'>"
+      '#required': true
+  question_8_break:
+    '#type': webform_wizard_page
+    '#title': Question 8
+    question_9:
+      '#type': radios
+      '#options':
+        1: 'Common Nighthawk (<a href="#" title="Nest: Nighthawks do not construct a nest. They lay their eggs on the ground, often in places where there"s gravel and sparse vegetation (often on graveled roofs of city buildings!)" id="hint2" data-toggle="tooltip">hint</a>)'
+        2: 'Parasitic Jaeger (<a href="#" title="Nest: On ground, built with grasslike vegetation." id="hint1" data-toggle="tooltip">hint</a>)'
+        3: 'Great Horned Owl (<a href="#" title="Nest: Nests in a natural cavity in a tree, in a fork of a giant cactus, on a rock ledge, or in a rock or earth cave. Often in the old nest of a large bird in such sites. In some treeless regions on open ground." id="hint3" data-toggle="tooltip">hint</a>)'
+      '#title': 'Which of these birds made this nest?' 
+      '#description': "<img src='/sites/default/files/conservation/migratory-birds/paja_nest.jpg' alt='single egg in nest on the ground'>"
+      '#required': true
+  question_9_break:
+    '#type': webform_wizard_page
+    '#title': Question 9
+    question_10:
+      '#type': radios
+      '#options':
+        1: 'Bank Swallow (<a href="#" title="Nest: Dense colonies (up to several hundred nests); burrows dug by both sexes, using feet and bill, at rate of about 5 inches per day. Birds kick earth out of tunnel as they dig in vertical side of bank, generally near top. Straws, grass stalks gathered by both sexes and placed in nest cavity after burrow complete; feathers addded after incubation under way." id="hint2" data-toggle="tooltip">hint</a>)'
+        2: 'Swamp Sparrow (<a href="#" title="Nest: In loose colonies where habitat is particularly suitable; also single. In tussock of grass, sedge, or in low bush, commonly over water 2 feet or more deep, built about 1 foot above surface. Female builds a large bulky foundation entirely of grass and lines inner cup with finer grass." id="hint1" data-toggle="tooltip">hint</a>)'
+        3: 'Red-tailed Hawk (<a href="#" title="Nest: Placed 35-90 ft. above ground in tree. Flat and shallow,  becoming thicker if added to from year to year. Well made of sticks and twigs; lined with inner bark of grapevine or cedar, moss, and evergreen sprigs." id="hint3" data-toggle="tooltip">hint</a>)'
+      '#title': 'Which of these birds made this nest?' 
+      '#description': "<img src='/sites/default/files/conservation/migratory-birds/swsp_nest.jpg' alt='nest of stems in a grassy clump'>"
+      '#required': true
+  question_10_break:
+    '#type': webform_wizard_page
+    '#title': Question 10
+    question_11:
+      '#type': radios
+      '#options':
+        1: 'Common Nighthawk (<a href="#" title="Nest: Nighthawks do not construct a nest. They lay their eggs on the ground, often in places where there"s gravel and sparse vegetation (often on graveled roofs of city buildings!)" id="hint2" data-toggle="tooltip">hint</a>)'
+        2: 'Red-naped Sapsucker (<a href="#" title="Nest: Hole dug in live or dead tree or stub, 8-40 ft. above ground. Cavity gourd-shaped, sides smoothly chiseled. May use same tree annually, digging new cavities for 5-6 years; rarely use old nest hole." id="hint1" data-toggle="tooltip">hint</a>)'
+        3: 'Red-tailed Hawk (<a href="#" title="Nest: Placed 35-90 ft. above ground in tree. Flat and shallow,  becoming thicker if added to from year to year. Well made of sticks and twigs; lined with inner bark of grapevine or cedar, moss, and evergreen sprigs." id="hint3" data-toggle="tooltip">hint</a>)'
+      '#title': 'Which of these birds made this nest?' 
+      '#description': "<img src='/sites/default/files/conservation/migratory-birds/rnsa_nest.jpg' alt='hole in an aspen tree'>"
+      '#required': true
+  question_11_break:
+    '#type': webform_wizard_page
+    '#title': Question 11
+    question_12:
+      '#type': radios
+      '#options':
+        1: 'Common Nighthawk (<a href="#" title="Nest: Nighthawks do not construct a nest. They lay their eggs on the ground, often in places where there"s gravel and sparse vegetation (often on graveled roofs of city buildings!)" id="hint2" data-toggle="tooltip">hint</a>)'
+        2: 'Red-winged Blackbird (<a href="#" title="Nest: In loose colonies in cattails, rushes, sedges, reeds, bushes (alder, willow), preferably near or over water; also in weeds, grass tussocks, bushes, low trees in dry areas. Sedge leaves, rushes, grasses, rootlets, mosses bound to surrounding vegetation with milkweed fibers; lined with fine grasses; placed 3 in. to 14 ft. above ground or water." id="hint1" data-toggle="tooltip">hint</a>)'
+        3: 'Cliff Swallow (<a href="#" title="Nest: In dense colonies; hundreds of nests may occupy side of barn (up to 800 reported). Gourd-shaped structure built of pellets of mud and clay; plastered to sides of buildings, bridges; under eaves of barns, houses, public buildings; sides of cliffs (formerly common, now rare)." id="hint3" data-toggle="tooltip">hint</a>)'
+      '#title': 'Which of these birds made this nest?' 
+      '#description': "<img src='/sites/default/files/conservation/migratory-birds/clsw_nest.jpg' alt='several mud nests attached to a rock face'>"
+      '#required': true
+  question_12_break:
+    '#type': webform_wizard_page
+    '#title': Question 12
+    question_13:
+      '#type': radios
+      '#options':
+        1: 'Common Nighthawk (<a href="#" title="Nest: Nighthawks do not construct a nest. They lay their eggs on the ground, often in places where there"s gravel and sparse vegetation (often on graveled roofs of city buildings!)" id="hint2" data-toggle="tooltip">hint</a>)'
+        2: 'Red-winged Blackbird (<a href="#" title="Nest: In loose colonies in cattails, rushes, sedges, reeds, bushes (alder, willow), preferably near or over water; also in weeds, grass tussocks, bushes, low trees in dry areas. Sedge leaves, rushes, grasses, rootlets, mosses bound to surrounding vegetation with milkweed fibers; lined with fine grasses; placed 3 in. to 14 ft. above ground or water." id="hint1" data-toggle="tooltip">hint</a>)'
+        3: 'Red-tailed Hawk (<a href="#" title="Nest: Placed 35-90 ft. above ground in tree. Flat and shallow,  becoming thicker if added to from year to year. Well made of sticks and twigs; lined with inner bark of grapevine or cedar, moss, and evergreen sprigs." id="hint3" data-toggle="tooltip">hint</a>)'
+      '#title': 'Which of these birds made this nest?' 
+      '#description': "<img src='/sites/default/files/conservation/migratory-birds/rtha_nest.jpg' alt='large nest of branches on a cliff'>"
+      '#required': true
+  question_13_break:
+    '#type': webform_wizard_page
+    '#title': Question 13
+    question_14:
+      '#type': radios
+      '#options':
+        1: 'Yellow-billed Cuckoo (<a href="#" title="Nest: In tree, vine, shrub as high as 20 ft. above ground, avg. 4-10 feet. Thick bushes overgrown with wild grape favored. Small, shallow, frail platform of sticks, vines, twigs, rootlets; thinly lined with bits of moss, grass, pine needles, catkins. Very little depression to contain eggs. Outside diameter about 5 inches, depth about 1 1/2 inches." id="hint2" data-toggle="tooltip">hint</a>)'
+        2: 'Bald Eagle (<a href="#" title="Nest: An eyrie, built in fork near crown of giant tree; species of tree not so important as its size, shape, distance from other nesting eagles. Immense pile of large sticks, branches, cornstalks, rubbish; lined with grasses, moss, twigs, sod, weeds." id="hint1" data-toggle="tooltip">hint</a>)'
+        3: 'Wood Thrush (<a href="#" title="Nest: Anchored 6-50 feet above ground, average about 10 feet in fork or horizontal limb of tree. Firm, compact cup of grasses, bark, moss, paper, mixed with leafmold, mud; molded by contours of female"s body; lined with rootlets." id="hint3" data-toggle="tooltip">hint</a>)'
+      '#title': 'Which of these birds made this nest?' 
+      '#description': "<img src='/sites/default/files/conservation/migratory-birds/baea_nest.jpg' alt='huge nest of branches in a tree top'>"
+      '#required': true
+  question_14_break:
+    '#type': webform_wizard_page
+    '#title': Question 14
+    question_15:
+      '#type': radios
+      '#options':
+        1: 'Common Nighthawk (<a href="#" title="Nest: Nighthawks do not construct a nest. They lay their eggs on the ground, often in places where there"s gravel and sparse vegetation (often on graveled roofs of city buildings!)" id="hint2" data-toggle="tooltip">hint</a>)'
+        2: 'Red-winged Blackbird (<a href="#" title="Nest: In loose colonies in cattails, rushes, sedges, reeds, bushes (alder, willow), preferably near or over water; also in weeds, grass tussocks, bushes, low trees in dry areas. Sedge leaves, rushes, grasses, rootlets, mosses bound to surrounding vegetation with milkweed fibers; lined with fine grasses; placed 3 in. to 14 ft. above ground or water." id="hint1" data-toggle="tooltip">hint</a>)'
+        3: 'Golden Eagle (<a href="#" title="Nest: Nests are of thick branches, twigs, and stems of any kind, and are lined with leafy twigs or tufts of conifer needles, which may be added continually during the nesting period. Diameter 2 1/2 to 6 feet." id="hint3" data-toggle="tooltip">hint</a>)'
+      '#title': 'Which of these birds made this nest?' 
+      '#description': "<img src='/sites/default/files/conservation/migratory-birds/goea_nest.jpg' alt='very large nest of sticks and branches on the side of a cliff'>"
+      '#required': true
+  question_15_break:
+    '#type': webform_wizard_page
+    '#title': Question 15
+    question_16:
+      '#type': radios
+      '#options':
+        1: 'House Wren (<a href="#" title="Nest: In natural cavity in tree, stub, fencepost; old woodpecker hole; often birdhouse. On base of twigs, female builds cup of grasses, plant fibers, rootlets, feathers, hair, rubbish." id="hint2" data-toggle="tooltip">hint</a>)'
+        2: 'Red-naped Sapsucker (<a href="#" title="Nest: Hole dug in live or dead tree or stub, 8-40 ft. above ground. Cavity gourd-shaped, sides smoothly chiseled. May use same tree annually, digging new cavities for 5-6 years; rarely use old nest hole." id="hint1" data-toggle="tooltip">hint</a>)'
+        3: 'Great Horned Owl (<a href="#" title="Nest: Nests in a natural cavity in a tree, in a fork of a giant cactus, on a rock ledge, or in a rock or earth cave. Often in the old nest of a large bird in such sites. In some treeless regions on open ground." id="hint3" data-toggle="tooltip">hint</a>)'
+      '#title': 'Which of these birds made this nest?' 
+      '#description': "<img src='/sites/default/files/conservation/migratory-birds/ghow_nest.jpg' alt='large nest of sticks in a tree with an owlet peaking over the edge'>"
+      '#required': true
+  question_16_break:
+    '#type': webform_wizard_page
+    '#title': Question 16
+css: ''
+javascript: ''
+settings:
+  page: true
+  wizard_progress_bar: true
+  preview: 0
+  draft: '0'
+  draft_auto_save: false
+  confirmation_type: inline
+  confirmation_url: ''
+  confirmation_message: "<p><strong>Correct Answer!</strong></p>\r\n\r\n<p>You've reached the end of the game, would you like to:</p>\r\n\r\n<ul>\r\n\t<li><a href=\"/migratory-birds/play-nest-game\">play again?</a></li>\r\n</ul>\r\n"
+  limit_total: null
+  limit_user: null
+  form_submit_label: ''
+  wizard_complete: 1
+access:
+  create:
+    roles:
+      - anonymous
+      - authenticated
+    users: {  }
+handlers: {  }
+variants: {  }

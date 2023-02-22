@@ -38,7 +38,8 @@ third_party_settings:
         layout_id: layout_nzp_two_col
         layout_settings:
           context_mapping: {  }
-          custom_classes: pl-1.5
+          custom_classes: ''
+          custom_region_classes: ''
           region_classes:
             one_col: col-span-9
             two_col: col-span-3

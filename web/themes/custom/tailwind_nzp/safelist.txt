@@ -1,4 +1,5 @@
 text-oxford-blue
+text-ice-blue
 text-sap-green
 text-blue-sapphire
 text-tea-green
@@ -34,6 +35,7 @@ text-right
 text-left
 italic
 border-oxford-blue
+border-ice-blue
 border-sap-green
 border-blue-sapphire
 border-tea-green
@@ -1094,6 +1096,7 @@ lg:ml-3.5
 xl:ml-3.5
 2xl:ml-3.5
 bg-oxford-blue
+bg-ice-blue
 bg-sap-green
 bg-blue-sapphire
 bg-tea-green

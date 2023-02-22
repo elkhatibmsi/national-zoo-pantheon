@@ -1,0 +1,48 @@
+uuid: 011b984c-c80d-4089-b0ae-8e742778daf6
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.media_and_caption
+    - field.field.media.remote_video.field_media_oembed_video
+    - image.style.wide
+    - media.type.remote_video
+  module:
+    - blazy
+    - layout_builder
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+_core:
+  default_config_hash: gUaDZKMQD3lmLKWPn727X3JHVdKJ525g4EJCCcDVAqk
+id: media.remote_video.media_and_caption
+targetEntityType: media
+bundle: remote_video
+mode: media_and_caption
+content:
+  field_media_oembed_video:
+    type: blazy_oembed
+    label: hidden
+    settings:
+      caption: {  }
+      background: false
+      box_caption: ''
+      box_caption_custom: ''
+      box_media_style: ''
+      loading: ''
+      preload: true
+      responsive_image_style: ''
+      box_style: ''
+      image_style: wide
+      media_switch: media
+      ratio: '16:9'
+      thumbnail_style: ''
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  created: true
+  name: true
+  thumbnail: true
+  uid: true

@@ -1,0 +1,25 @@
+
+/* Card Teaser */
+
+.card-teaser {
+    @apply m-auto relative rounded overflow-hidden shadow-lg;
+  }
+  
+  
+  
+  .card-grid > div,
+  .card-grid article {
+    height: 100%;
+  }
+  
+  .teaser--image-bg-image,
+  .teaser--image-bg-image div:not(.contextual),
+  .teaser--image-bg-image img {
+    @apply m-0 h-full object-cover;
+  }
+  
+  
+  .layout-four-cols {
+    @apply lg:grid-cols-4 md:grid-cols-2 grid-cols-1;
+  }
+  

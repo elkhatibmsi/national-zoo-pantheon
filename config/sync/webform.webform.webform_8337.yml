@@ -1,0 +1,174 @@
+uuid: a4dc596e-4539-4b91-b49c-186634e2c43a
+langcode: en
+status: open
+dependencies: {  }
+weight: 0
+open: null
+close: null
+uid: 173
+template: false
+archive: false
+id: webform_8337
+title: 'Special Event Media Contact'
+description: null
+category: null
+elements: |
+  fieldset_media_contact:
+    '#type': fieldset
+    '#open': true
+    '#title': 'Media Contact' 
+    '#description': ""
+    name_7:
+      '#type': textfield
+      '#title': 'Name' 
+      '#description': ""
+      '#required': true
+    media_7:
+      '#type': textfield
+      '#title': 'Media Outlet' 
+      '#description': ""
+      '#required': true
+    phone_number_7:
+      '#title': 'Phone Number' 
+      '#description': ""
+      '#required': true
+    email_address_7:
+      '#type': email
+      '#size': 20
+      '#title': 'Email Address' 
+      '#description': ""
+      '#required': true
+    event_7:
+      '#type': checkboxes
+      '#options':
+        2: 'Boo at the Zoo'
+        3: 'Brew at the Zoo'
+        1: 'Conservation Discovery Day'
+        4: 'Easter Monday: A Washington Family Tradition'
+        6: 'International Family Equality Day at the Zoo'
+        8: 'Night of the Living Zoo'
+        9: 'ZooFari'
+        10: 'ZooLights'
+        11: 'ZooFiesta'
+        5: 'Zoo Uncorked'
+        12: 'Other'
+      '#multiple': true
+      '#title': 'Event' 
+      '#description': "Please check the events you are interested in covering:"
+      '#required': true
+    message_7:
+      '#type': textarea
+      '#title': 'Message' 
+      '#description': ""
+      '#required': true
+  disclaimer:
+    '#type': processed_text
+    '#format': full_html
+    '#text': "[block:bean=fonz-privacy-disclamer]"
+    '#title': 'Disclaimer' 
+    '#description': ""
+css: ''
+javascript: ''
+settings:
+  page: true
+  wizard_progress_bar: true
+  preview: 0
+  draft: '0'
+  draft_auto_save: false
+  confirmation_type: inline
+  confirmation_url: ''
+  confirmation_message: "<p>Thank you for your submission. Someone will be in touch with your shortly.</p>\r\n"
+  limit_total: null
+  limit_user: 1
+  form_submit_label: ''
+  wizard_complete: 1
+access:
+  create:
+    roles:
+      - anonymous
+      - authenticated
+    users: {  }
+handlers:
+  email_5:
+    id: email
+    handler_id: email_5
+    label: 'Email 5'
+    notes: ''
+    status: true
+    conditions: {  }
+    weight: 5
+    settings:
+      states:
+        - completed
+      to_mail: enchelmeyera@si.edu
+      to_options: {  }
+      bcc_mail: ''
+      bcc_options: {  }
+      cc_mail: ''
+      cc_options: {  }
+      from_mail: default
+      from_options: {  }
+      from_name: default
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
+      subject: default
+      body: |
+        Submitted on [webform_submission:date:long]
+        Submitted by user: [webform_submission:user]
+        Submitted values are:
+        [webform_submission:values]
+      excluded_elements: {  }
+      ignore_access: false
+      exclude_empty: true
+      exclude_empty_checkbox: false
+      exclude_attachments: false
+      html: false
+      attachments: false
+      twig: false
+      theme_name: ''
+      parameters: {  }
+      debug: false
+  email_6:
+    id: email
+    handler_id: email_6
+    label: 'Email 6'
+    notes: ''
+    status: true
+    conditions: {  }
+    weight: 6
+    settings:
+      states:
+        - completed
+      to_mail: meyeran@si.edu
+      to_options: {  }
+      bcc_mail: ''
+      bcc_options: {  }
+      cc_mail: ''
+      cc_options: {  }
+      from_mail: '[webform_submission:values:email_address:raw]'
+      from_options: {  }
+      from_name: '[webform_submission:values:name:raw]'
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
+      subject: default
+      body: |
+        Submitted on [webform_submission:date:long]
+        Submitted by user: [webform_submission:user]
+        Submitted values are:
+        [webform_submission:values]
+      excluded_elements: {  }
+      ignore_access: false
+      exclude_empty: true
+      exclude_empty_checkbox: false
+      exclude_attachments: false
+      html: false
+      attachments: false
+      twig: false
+      theme_name: ''
+      parameters: {  }
+      debug: false
+variants: {  }

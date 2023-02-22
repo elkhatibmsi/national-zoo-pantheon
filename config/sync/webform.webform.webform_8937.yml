@@ -1,0 +1,42 @@
+uuid: c75fe40f-ed1a-4a66-bd54-3a630ef52563
+langcode: en
+status: closed
+dependencies: {  }
+weight: 0
+open: null
+close: null
+uid: 174
+template: false
+archive: false
+id: webform_8937
+title: 'Premier Gift Membership Activation'
+description: null
+category: null
+elements: |
+  5_digit_code:
+    '#title': '5 digit code' 
+    '#description': "To activate your membership, enter the authorization code printed on the back of your gift card."
+    '#required': true
+css: ''
+javascript: ''
+settings:
+  page: true
+  wizard_progress_bar: true
+  preview: 0
+  draft: '0'
+  draft_auto_save: false
+  confirmation_type: page
+  confirmation_url: ''
+  confirmation_message: "<p><strong>Your membership has been paid in full. To activate your membership, please complete the registration form below.</strong></p>\r\n\r\n<div id=\"bbox-root-c5b371a0-5b2c-45f7-91c2-c2a453513b75\"></div>\r\n<script type=\"text/javascript\">\r\n    var bboxInit2 = bboxInit2 || [];\r\n    bboxInit2.push(function () {\r\n        bboxApi.showForm('c5b371a0-5b2c-45f7-91c2-c2a453513b75');\r\n    });\r\n    (function () {\r\n        var e = document.createElement('script'); e.async = true;\r\n        e.src = 'https://bbox.blackbaudhosting.com/webforms/bbox-2.0-min.js';\r\n        document.getElementsByTagName('head')[0].appendChild(e);\r\n    }());\r\n</script>"
+  limit_total: null
+  limit_user: 3
+  form_submit_label: ''
+  wizard_complete: 1
+access:
+  create:
+    roles:
+      - anonymous
+      - authenticated
+    users: {  }
+handlers: {  }
+variants: {  }

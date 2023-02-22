@@ -5,6 +5,6 @@ dependencies:
   module:
     - media
 id: media.gallery_thumbnail
-label: gallery_thumbnail
+label: 'Gallery Thumbnail'
 targetEntityType: media
 cache: true

@@ -1,0 +1,92 @@
+uuid: c3427306-6c73-4359-9a8b-2cb608459fb5
+langcode: en
+status: open
+dependencies: {  }
+weight: 0
+open: null
+close: null
+uid: 2230
+template: false
+archive: false
+id: webform_15654
+title: 'Ask a Cheetah Keeper'
+description: null
+category: null
+elements: |
+  intro_text:
+    '#type': processed_text
+    '#format': full_html
+    '#text': "<p>We'll feature select questions and answers each week in our <a href='/animals/latest-cheetah-cub-news'>Cheetah Cubdates</a>!</p>\n\n<h6>If you’re not already subscribed, you will receive emails and updates from the Smithsonian. You can opt out at any time.</h6>\n"
+    '#title': 'Intro Text' 
+    '#description': ""
+  email:
+    '#type': email
+    '#size': 20
+    '#title': 'Your Email Address' 
+    '#description': "If you’re not already subscribed, you will receive emails and updates from the Smithsonian. You can opt out at any time."
+    '#required': true
+  question:
+    '#type': textarea
+    '#title': 'Question' 
+    '#description': ""
+    '#required': true
+css: ''
+javascript: ''
+settings:
+  page: true
+  wizard_progress_bar: true
+  preview: 0
+  draft: '0'
+  draft_auto_save: false
+  confirmation_type: page
+  confirmation_url: ''
+  confirmation_message: 'Thanks for your question! You can submit one each day.'
+  limit_total: null
+  limit_user: 1
+  form_submit_label: ''
+  wizard_complete: 1
+access:
+  create:
+    roles:
+      - anonymous
+      - authenticated
+    users: {  }
+handlers:
+  email_1:
+    id: email
+    handler_id: email_1
+    label: 'Email 1'
+    notes: ''
+    status: true
+    conditions: {  }
+    weight: 1
+    settings:
+      states:
+        - completed
+      to_mail: 'enchelmeyera@si.edu,goetza@si.edu'
+      to_options: {  }
+      bcc_mail: ''
+      bcc_options: {  }
+      cc_mail: ''
+      cc_options: {  }
+      from_mail: default
+      from_options: {  }
+      from_name: default
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
+      subject: default
+      body: default
+      excluded_elements: {  }
+      ignore_access: false
+      exclude_empty: true
+      exclude_empty_checkbox: false
+      exclude_attachments: false
+      html: false
+      attachments: false
+      twig: false
+      theme_name: ''
+      parameters: {  }
+      debug: false
+variants: {  }

@@ -1,0 +1,66 @@
+diff --git a/src/Form/ManageComponentAttributesForm.php b/src/Form/ManageComponentAttributesForm.php
+index 1610eb0..965f1dc 100644
+--- a/src/Form/ManageComponentAttributesForm.php
++++ b/src/Form/ManageComponentAttributesForm.php
+@@ -277,20 +277,9 @@ class ManageComponentAttributesForm extends FormBase {
+    */
+   public function validateForm(array &$form, FormStateInterface $form_state) {
+     $values = $form_state->getValues();
+-
+-    // Validate block attributes.
+-    if (isset($values['block_attributes']['id']) && !$this->validateCssClass($values['block_attributes']['id'])) {
+-      $form_state->setError($form['block_attributes']['id'], $this->t('Element ID must be a valid CSS ID'));
+-    }
+-
++    
+     if (isset($values['block_attributes']['class'])) {
+       $classes = explode(' ', $values['block_attributes']['class']);
+-      foreach ($classes as $class) {
+-        if (!$this->validateCssClass($class)) {
+-          $form_state->setError($form['block_attributes']['class'], $this->t('Classes must be valid CSS classes'));
+-          break;
+-        }
+-      }
+     }
+ 
+     if (isset($values['block_attributes']['style'])) {
+@@ -314,19 +303,8 @@ class ManageComponentAttributesForm extends FormBase {
+       }
+     }
+ 
+-    // Validate block title attributes.
+-    if (isset($values['block_title_attributes']['id']) && !$this->validateCssClass($values['block_title_attributes']['id'])) {
+-      $form_state->setError($form['block_title_attributes']['id'], $this->t('Element ID must be a valid CSS ID'));
+-    }
+-
+     if (isset($values['block_title_attributes']['class'])) {
+       $classes = explode(' ', $values['block_title_attributes']['class']);
+-      foreach ($classes as $class) {
+-        if (!$this->validateCssClass($class)) {
+-          $form_state->setError($form['block_title_attributes']['class'], $this->t('Classes must be valid CSS classes'));
+-          break;
+-        }
+-      }
+     }
+ 
+     if (isset($values['block_title_attributes']['style'])) {
+@@ -350,19 +328,8 @@ class ManageComponentAttributesForm extends FormBase {
+       }
+     }
+ 
+-    // Validate block content attributes.
+-    if (isset($values['block_content_attributes']['id']) && !$this->validateCssClass($values['block_content_attributes']['id'])) {
+-      $form_state->setError($form['block_content_attributes']['id'], $this->t('Element ID must be a valid CSS ID'));
+-    }
+-
+     if (isset($values['block_content_attributes']['class'])) {
+       $classes = explode(' ', $values['block_content_attributes']['class']);
+-      foreach ($classes as $class) {
+-        if (!$this->validateCssClass($class)) {
+-          $form_state->setError($form['block_content_attributes']['class'], $this->t('Classes must be valid CSS classes'));
+-          break;
+-        }
+-      }
+     }
+ 
+     if (isset($values['block_content_attributes']['style'])) {

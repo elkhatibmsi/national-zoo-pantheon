@@ -1,0 +1,322 @@
+uuid: 527e1684-f2d7-4f97-899d-f4c9be871c58
+langcode: en
+status: open
+dependencies: {  }
+weight: 0
+open: null
+close: null
+uid: 173
+template: false
+archive: false
+id: webform_16199
+title: 'Sick Wild Bird Report '
+description: null
+category: null
+elements: |
+  first_page:
+    '#type': webform_wizard_page
+    '#title': Start
+  page_2:
+    '#type': webform_wizard_page
+    '#title': Bird Condition
+    alive_or_dead:
+      '#type': radios
+      '#options':
+        1: 'Alive'
+        2: 'Dead'
+        3: 'I can"t tell'
+      '#title': 'Is the bird alive or dead?' 
+      '#description': ""
+      '#required': true
+    dead_options:
+      '#type': checkboxes
+      '#options':
+        1: 'There is noticeable crusty discharge around its eyes'
+        2: 'It was hit by/run over by a car'
+        3: 'It appears eaten by an animal'
+        4: 'It collided with window'
+        5: 'There is no apparent sign of trauma'
+      '#multiple': true
+      '#title': 'What do you notice about the dead bird?' 
+      '#description': ""
+      '#states':
+        visible:
+          ':input[name="alive_or_dead"]':
+            value: '2'
+            
+    bird_condition:
+      '#type': checkboxes
+      '#options':
+        1: 'Something is wrong with its eyes'
+        2: 'It appears physically injured (other than an eye issue)'
+        3: 'It cannot stand'
+        4: 'It appears to be shivering and/or shaking'
+        9: 'It has a head tilt or the head is drooping'
+        5: 'It appears confused or unresponsive'
+        6: 'It collided with a window'
+        7: 'It was hit/run over by a car'
+        10: 'It was attacked by another animal'
+        8: 'I don"t know'
+      '#multiple': true
+      '#title': 'What is wrong with the bird? (check all that apply)' 
+      '#description': ""
+      '#required': true
+      '#states':
+        visible:
+          ':input[name="alive_or_dead"]':
+            value: '1'
+            
+    bird_eyes_condition:
+      '#type': checkboxes
+      '#options':
+        1: 'It appears blind'
+        2: 'Its eyes are injured'
+        3: 'It has crusty discharge around the eye'
+        4: 'Its eyes are closed'
+        5: 'Something else is wrong with its eyes'
+      '#multiple': true
+      '#title': 'What is wrong with the bird"s eye(s)? (check all that apply)' 
+      '#description': ""
+      '#states':
+        visible:
+          ':input[name="bird_condition[1]"]':
+            checked: true
+            
+    other_death_description_please_explain:
+      '#type': textfield
+      '#title': 'Other death description' 
+      '#description': ""
+      '#states':
+        visible:
+          ':input[name="alive_or_dead"]':
+            value: '2'
+            
+    other_eye_condition_please_explain:
+      '#type': textfield
+      '#title': 'Other eye condition' 
+      '#description': ""
+      '#states':
+        visible:
+          ':input[name="bird_eyes_condition[5]"]':
+            checked: true
+            
+  bird_species_and_age:
+    '#type': webform_wizard_page
+    '#title': Bird Species and Age
+    bird_age:
+      '#type': radios
+      '#options':
+        1: 'Adult'
+        2: 'Not an adult (nestling, juvenile, fledgling)'
+        3: 'I don"t know'
+      '#title': 'How old is the bird?' 
+      '#description': ""
+    can_you_identify_the_species_of_bird:
+      '#type': radios
+      '#options':
+        1: 'Yes'
+        2: 'No'
+      '#title': 'Can you identify the species of bird?' 
+      '#description': ""
+    species:
+      '#type': select
+      '#options':
+        16: 'Blue jay'
+        10: 'Cardinal'
+        4: 'Carolina wren'
+        5: 'Common grackle'
+        7: 'Gray catbird'
+        11: 'Flicker'
+        8: 'House finch'
+        9: 'House sparrow'
+        12: 'Mockingbird'
+        13: 'Pigeon'
+        2: 'Robin'
+        6: 'Starling'
+        14: 'Titmouse'
+        15: 'Other'
+      '#title': 'Bird Species OLD' 
+      '#description': ""
+    bird_species:
+      '#type': textfield
+      '#size': 
+      '#title': 'Bird Species' 
+      '#description': "Start entering the name of the bird species to get a list of possible matches"
+      '#states':
+        visible:
+          ':input[name="can_you_identify_the_species_of_bird"]':
+            value: '1'
+            
+          ':input[name="can_you_identify_the_species_of_bird"]':
+            value: '1'
+            
+  bird_location:
+    '#type': webform_wizard_page
+    '#title': Bird Location
+    date_bird_found:
+      '#type': date
+      '#default_value': 'today' 
+      '#title_display': inline
+      '#title': 'When did you find the bird?' 
+      '#description': ""
+      '#required': true
+    address:
+      '#type': textfield
+      '#title': 'Where did you find the bird?' 
+      '#description': ""
+    address_city:
+      '#type': textfield
+      '#title': 'City' 
+      '#description': ""
+    state:
+      '#type': select
+      '#options':
+        AL: 'Alabama'
+        AK: 'Alaska'
+        AS: 'American Samoa'
+        AZ: 'Arizona'
+        AR: 'Arkansas'
+        CA: 'California'
+        CO: 'Colorado'
+        CT: 'Connecticut'
+        DE: 'Delaware'
+        DC: 'District of Columbia'
+        FL: 'Florida'
+        GA: 'Georgia'
+        GU: 'Guam'
+        HI: 'Hawaii'
+        ID: 'Idaho'
+        IL: 'Illinois'
+        IN: 'Indiana'
+        IA: 'Iowa'
+        KS: 'Kansas'
+        KY: 'Kentucky'
+        LA: 'Louisiana'
+        ME: 'Maine'
+        MH: 'Marshall Islands'
+        MD: 'Maryland'
+        MA: 'Massachusetts'
+        MI: 'Michigan'
+        MN: 'Minnesota'
+        MS: 'Mississippi'
+        MO: 'Missouri'
+        MT: 'Montana'
+        NE: 'Nebraska'
+        NV: 'Nevada'
+        NH: 'New Hampshire'
+        NJ: 'New Jersey'
+        NM: 'New Mexico'
+        NY: 'New York'
+        NC: 'North Carolina'
+        ND: 'North Dakota'
+        MP: 'Northern Marianas Islands'
+        OH: 'Ohio'
+        OK: 'Oklahoma'
+        OR: 'Oregon'
+        PW: 'Palau'
+        PA: 'Pennsylvania'
+        PR: 'Puerto Rico'
+        RI: 'Rhode Island'
+        SC: 'South Carolina'
+        SD: 'South Dakota'
+        TN: 'Tennessee'
+        TX: 'Texas'
+        UT: 'Utah'
+        VT: 'Vermont'
+        VI: 'Virgin Islands'
+        VA: 'Virginia'
+        WA: 'Washington'
+        WV: 'West Virginia'
+        WI: 'Wisconsin'
+        WY: 'Wyoming'
+      '#title': 'State' 
+      '#description': ""
+    latitude:
+      '#type': textfield
+      '#title': 'Latitude' 
+      '#description': ""
+    longitude:
+      '#type': textfield
+      '#title': 'Longitude' 
+      '#description': ""
+  add_a_photo:
+    '#type': webform_wizard_page
+    '#title': Add a Photo
+    upload_a_photo:
+      '#type': managed_file
+      '#max_filesize': '15'
+      '#file_extensions': 'gif jpg jpeg png'
+      '#title': 'Upload a photo' 
+      '#description': ""
+    id_like_to_add_more_information:
+      '#type': textarea
+      '#default_value': 'Please share anything else you think might be helpful here.' 
+      '#title_display': invisible
+      '#title': 'I"d like to add more information' 
+      '#description': ""
+    virginia_message:
+      '#type': processed_text
+      '#format': full_html
+      '#text': "<p></p>\n\n<p><strong>Because you selected Virginia as your location site, please also consider submitting your observation to the Virginia Department of Wildlife Resources using this link: <a href='https://dwr.virginia.gov/wildlife/diseases/bird-mortality-reporting-form/' rel='noreferrer noopener' tabindex='-1' target='_blank' title='https://dwr.virginia.gov/wildlife/diseases/bird-mortality-reporting-form/'>https://dwr.virginia.gov/wildlife/diseases/bird-mortality-reporting-form/</a></strong></p>\n"
+      '#title': 'Virginia Message' 
+      '#description': ""
+css: ''
+javascript: ''
+settings:
+  page: true
+  wizard_progress_bar: true
+  preview: 0
+  draft: '0'
+  draft_auto_save: false
+  confirmation_type: page
+  confirmation_url: ''
+  confirmation_message: "<p></p>\r\n\r\n<h3>Thank you for your submission.</h3>\r\n\r\n<p>If you just submitted a form from any of the following states, please post your data there as well:</p>\r\n\r\n<ul>\r\n\t<li><a href=\"https://dwr.virginia.gov/wildlife/diseases/bird-mortality-reporting-form/\">Virginia</a></li>\r\n\t<li><a href=\"https://ohiodnr.gov/wps/portal/gov/odnr/home/additional-resources/division-of-wildlife/bird-disease-reporting\">Ohio</a></li>\r\n</ul>\r\n\r\n<h4><strong>If the bird is alive,</strong> please&nbsp;contact your local wildlife rehabilitation center for instructions on what to do with the bird that you have found.</h4>\r\n\r\n<h4><em>Do not touch or handle the bird prior to contacting your local rehabilitation center.</em></h4>\r\n\r\n<ul>\r\n\t<li>District of Columbia: <a href=\"https://citywildlife.org/\" rel=\"noreferrer noopener\" tabindex=\"-1\" target=\"_blank\" title=\"https://citywildlife.org/\">City Wildlife</a></li>\r\n\t<li>Maryland: <a href=\"https://dnr.maryland.gov/wildlife/Pages/plants_wildlife/rehabilitators.aspx\" rel=\"noreferrer noopener\" tabindex=\"-1\" target=\"_blank\" title=\"https://dnr.maryland.gov/wildlife/pages/plants_wildlife/rehabilitators.aspx\">Wildlife Rehabilitators in Maryland</a></li>\r\n\t<li>Virginia: <a href=\"https://dwr.virginia.gov/wildlife/injured/rehabilitators/\" rel=\"noreferrer noopener\" tabindex=\"-1\" target=\"_blank\" title=\"https://dwr.virginia.gov/wildlife/injured/rehabilitators/\">Wildlife Rehabilitators in Virginia</a></li>\r\n\t<li>Delaware: <a href=\"https://www.dewildliferescue.com/\" rel=\"noreferrer noopener\" tabindex=\"-1\" target=\"_blank\" title=\"https://www.dewildliferescue.com/\">Delaware Wildlife Rescue</a></li>\r\n\t<li>Pennsylvania: <a href=\"https://pawr.com/\" rel=\"noreferrer noopener\" tabindex=\"-1\" target=\"_blank\" title=\"https://pawr.com/\">Pennsylvania Association of Wildlife Rehabilitators</a></li>\r\n</ul>\r\n\r\n<p></p>\r\n\r\n<p></p>\r\n"
+  limit_total: null
+  limit_user: 5
+  form_submit_label: ''
+  wizard_complete: 1
+access:
+  create:
+    roles:
+      - anonymous
+      - authenticated
+    users: {  }
+handlers:
+  email_2:
+    id: email
+    handler_id: email_2
+    label: 'Email 2'
+    notes: ''
+    status: true
+    conditions: {  }
+    weight: 2
+    settings:
+      states:
+        - completed
+      to_mail: evansbr@si.edu
+      to_options: {  }
+      bcc_mail: ''
+      bcc_options: {  }
+      cc_mail: ''
+      cc_options: {  }
+      from_mail: default
+      from_options: {  }
+      from_name: default
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
+      subject: default
+      body: default
+      excluded_elements: {  }
+      ignore_access: false
+      exclude_empty: true
+      exclude_empty_checkbox: false
+      exclude_attachments: false
+      html: false
+      attachments: false
+      twig: false
+      theme_name: ''
+      parameters: {  }
+      debug: false
+variants: {  }

@@ -1,0 +1,14 @@
+/* Admin overrides */
+
+
+.knockout .layout-builder__add-block {
+    background:none; 
+  }
+  
+  .lpb-controls:not(.is-layout) * {
+    @apply text-darkestgray z-50;
+  }
+  
+  .lpb-enable__wrapper {
+    @apply relative;
+  }

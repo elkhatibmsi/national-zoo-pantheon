@@ -1,0 +1,46 @@
+/* Mega Menu */
+
+.open {
+    display: block !important;
+  }
+  
+  .main-menu--level-0 > li.active {
+    @apply text-xl flex-wrap flex-row overflow-auto;
+  }
+  
+  .main-menu--level-0 > li.active svg {
+    transform: rotate(90deg);
+  }
+  .main-menu--level-0 > li.active .mega-menu {
+    @apply top-0 mt-2;
+  }
+  
+  .main-menu--level-0 > li > span a {
+    @apply font-semibold flex flex-grow lg:p-2 text-white lg:justify-center items-center;
+  }
+  
+  .main-nav:hover {
+    @apply lg:flex flex-none;
+  }
+  
+  .mega-menu {
+    @apply lg:bg-white !hidden  p-4 left-2/4 w-10/12 transform -translate-x-2/4 lg:mt-[59px] translate-y-[-10px] z-10; 
+  
+  }
+   
+  .main-menu--level-0 li:hover > .mega-menu {
+    @apply lg:block !important;
+  }
+  
+  .toggle-dropdown {
+    @apply lg:hidden !important;
+  }
+  
+  .dropdown-hide {
+    display: none !important;
+  }
+  
+  .dropdown-show {
+    display: block !important;
+    position: relative;
+  }

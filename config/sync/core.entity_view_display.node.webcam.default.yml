@@ -27,6 +27,7 @@ third_party_settings:
         layout_settings:
           context_mapping: {  }
           custom_classes: mt-4
+          custom_region_classes: ''
           region_classes: null
           container_classes: container
           html_container_elements: div

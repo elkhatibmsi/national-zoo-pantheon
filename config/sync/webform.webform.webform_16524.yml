@@ -1,0 +1,84 @@
+uuid: 29585d1a-e4af-4cad-9800-647686e3b87d
+langcode: en
+status: open
+dependencies: {  }
+weight: 0
+open: null
+close: null
+uid: 992
+template: false
+archive: false
+id: webform_16524
+title: 'Membership Questions'
+description: null
+category: null
+elements: |
+  i_have_a_question_about:
+    '#type': select
+    '#options':
+      1: 'Member cards'
+      2: 'Member ID number'
+      3: 'Free parking benefit'
+      4: 'Other member benefits'
+      5: 'Membership renewal'
+    '#title': 'I have a question about' 
+    '#description': ""
+    '#required': true
+  member_card_response:
+    '#type': processed_text
+    '#format': full_html
+    '#text': "Your membership is active the day you join. If you joined online, you should have received an email confirmation containing your membership ID (sometimes called your customer ID), which can be used as proof of membership until your membership cards arrive in the mail."
+    '#title': 'Member card response' 
+    '#description': ""
+    '#states':
+      visible:
+        ':input[name="i_have_a_question_about"]':
+          value: '1'
+          
+  question:
+    '#type': textarea
+    '#title': 'Question' 
+    '#description': ""
+    '#required': true
+  first_name:
+    '#type': textfield
+    '#title': 'First name' 
+    '#description': ""
+    '#required': true
+  last_name:
+    '#type': textfield
+    '#title': 'Last name' 
+    '#description': ""
+    '#required': true
+  email_address:
+    '#type': email
+    '#size': 20
+    '#title': 'Email address' 
+    '#description': ""
+    '#required': true
+  phone_number:
+    '#title': 'Phone number' 
+    '#description': ""
+css: ''
+javascript: ''
+settings:
+  page: true
+  wizard_progress_bar: true
+  preview: 0
+  draft: '0'
+  draft_auto_save: false
+  confirmation_type: inline
+  confirmation_url: ''
+  confirmation_message: 'Thank you for contacting us. We will get back to you as soon as possible.'
+  limit_total: null
+  limit_user: null
+  form_submit_label: ''
+  wizard_complete: 1
+access:
+  create:
+    roles:
+      - anonymous
+      - authenticated
+    users: {  }
+handlers: {  }
+variants: {  }

@@ -108,7 +108,7 @@ process:
   alt_from_media:
     -
       plugin: skip_on_empty
-      source: field_file_image_alt_text
+      source: field_image_alt_text
       method: process
     -
       plugin: extract
@@ -164,10 +164,5 @@ process:
 destination:
   plugin: 'entity:media'
 migration_dependencies:
-  required:
-    - upgrade_d7_file_entity_type_image
-    - upgrade_d7_file_entity_source_field_config_image
-    - upgrade_d7_user
-    - upgrade_d7_field_instance
-    - upgrade_d7_file
+  required: {  }
   optional: {  }

@@ -65,13 +65,25 @@ class NzpThreeColLayouts extends NzpWrapperBase {
       'knockout bg-oxford-blue' => 'Oxford Blue',
       'knockout bg-sap-green' => 'Sap Green',
       'knockout bg-blue-sapphire' => 'Blue Saphire', 
-      'p-4 bg-sizzling-red' => 'Sizzling Red', 
-      'p-4 bg-cyber-yellow' => 'Cyber Yellow',
+      'bg-sizzling-red' => 'Sizzling Red', 
+      'bg-cyber-yellow' => 'Cyber Yellow',
+      'bg-ice-blue' => 'Ice Blue',
+      'bg-lightergray' => 'Light Gray',
     ];
   }
 
   protected function getBackgroundColor() {
-    return [];
+    return [
+      'bg-none'=> 'None', 
+      'bg-white'=> 'White',     
+      'knockout bg-oxford-blue' => 'Oxford Blue',
+      'knockout bg-sap-green' => 'Sap Green',
+      'knockout bg-blue-sapphire' => 'Blue Saphire', 
+      'bg-sizzling-red' => 'Sizzling Red', 
+      'bg-cyber-yellow' => 'Cyber Yellow',
+      'bg-ice-blue' => 'Ice Blue',
+      'bg-lightergray' => 'Light Gray',
+    ];
   }
 
 }

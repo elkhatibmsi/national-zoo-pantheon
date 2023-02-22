@@ -224,7 +224,7 @@ layout_card_banner:
   label: 'Card Banner'
   path: templates
   template: layout--nzp-card-banner
-  class: \Drupal\nzp_layouts\Plugin\Layout\NzpOneColLayouts
+  class: '\Drupal\nzp_layouts\Plugin\Layout\NzpBanner'
   category: 'Components'
   default_region: content
   icon_map:

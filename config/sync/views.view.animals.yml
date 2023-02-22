@@ -6,7 +6,12 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - field.storage.node.field_image
     - node.type.animal
+    - node.type.media_release
+    - node.type.news
     - taxonomy.vocabulary.animal_types
+    - taxonomy.vocabulary.website_areas
+  content:
+    - 'taxonomy_term:website_areas:7adcd60f-ecb1-47b3-9d04-df9103c0c3af'
   module:
     - image
     - node
@@ -726,6 +731,9 @@ display:
         - 'config:core.entity_view_display.node.exhibit.default'
         - 'config:core.entity_view_display.node.exhibit.teaser'
         - 'config:core.entity_view_display.node.gallery.default'
+        - 'config:core.entity_view_display.node.gallery.grid_gallery'
+        - 'config:core.entity_view_display.node.gallery.modal_gallery'
+        - 'config:core.entity_view_display.node.gallery.teaser'
         - 'config:core.entity_view_display.node.internship.default'
         - 'config:core.entity_view_display.node.internship.teaser'
         - 'config:core.entity_view_display.node.media_release.default'
@@ -742,5 +750,7 @@ display:
         - 'config:core.entity_view_display.node.volunteer_opportunity.teaser'
         - 'config:core.entity_view_display.node.webcam.default'
         - 'config:core.entity_view_display.node.webcam.teaser'
+        - 'config:core.entity_view_display.node.webform.default'
+        - 'config:core.entity_view_display.node.webform.teaser'
         - 'config:core.entity_view_display.node.zoo_hours.default'
         - 'config:core.entity_view_display.node.zoo_hours.teaser'

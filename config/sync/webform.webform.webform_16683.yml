@@ -1,0 +1,279 @@
+uuid: 65052379-9b3c-4a4b-929f-8d2cd80a4996
+langcode: en
+status: open
+dependencies: {  }
+weight: 0
+open: null
+close: null
+uid: 173
+template: false
+archive: false
+id: webform_16683
+title: 'Zoo Passes (Tickets) Help Form'
+description: null
+category: null
+elements: |
+  i_would_like_to:
+    '#type': radios
+    '#options':
+      1: 'I"d like to cancel my reservation'
+      2: 'I"d like to change the dates of my reservation (subject to availability).'
+      3: 'I need help finding my passes or I never received an e-mail confirmation with my passes.'
+      4: 'I need to reserve more than 15 passes at a time.'
+      5: 'Other (Please describe in the area below)'
+    '#title': 'I would like to' 
+    '#description': ""
+    '#required': true
+  refund:
+    '#type': processed_text
+    '#format': full_html
+    '#text': "<div class='callout'>\n<p><strong>Refunds/Cancelations:</strong> Please note that refunds for paid parking passes are available until the day before your reservation. <strong><em>Same-day parking refunds are not available.</em></strong></p>\n</div>\n"
+    '#title': 'Refund info' 
+    '#description': ""
+    '#states':
+      visible:
+        ':input[name="[]"]':
+          null
+        ':input[name="i_would_like_to"]':
+          value: '1'
+          
+        ':input[name="[]"]':
+          value: '1'
+          
+  exchange:
+    '#type': processed_text
+    '#format': full_html
+    '#text': "<div class='callout'>\n<p><strong>Exchanges:</strong> You may request to exchange your passes up until the day before your reservation. However, there must be available passes on the new day your request to be able to make an exchange.&nbsp;<em><strong>Same-day exchanges are not available.</strong></em></p>\n</div>\n"
+    '#title': 'Exchange info' 
+    '#description': ""
+    '#states':
+      visible:
+        ':input[name="[]"]':
+          null
+        ':input[name="i_would_like_to"]':
+          value: '2'
+          
+        ':input[name="[]"]':
+          value: '2'
+          
+  group_reservations:
+    '#type': processed_text
+    '#format': full_html
+    '#text': "<div class='callout'>\n<p>For parties of 15 or more, Group Reservations are required. <a href='https://secure.nationalzoo.si.edu/group22'>Please use the Group Reservation Booking Form here.</a></p>\n</div>\n"
+    '#title': 'Group Reservations' 
+    '#description': ""
+  find_your_tickets:
+    '#type': processed_text
+    '#format': full_html
+    '#text': "<div class='callout'><p>You should receive your passes from&nbsp;zootickets@es10.si.edu. If you don't see them in your main inbox, please check your spam folder.</p>\n\n<p>If you're having trouble finding the email, you can also view your tickets by returning to the Smithsonian's National Zoo and Conservation Biology Institute's website&nbsp;and click on&nbsp;<a href='https://secure.nationalzoo.si.edu/account/login?ReturnUrl=%2faccount%2fupcomingevents'>'Access Your Passes.'</a></p>\n</div>"
+    '#title': 'Find your tickets' 
+    '#description': ""
+  please_submit_your_contact_information:
+    '#type': processed_text
+    '#format': full_html
+    '#text': ""
+    '#title': 'Please submit your contact information' 
+    '#description': ""
+  name2:
+    '#type': textfield
+    '#default_value': 'John Dove' 
+    '#title': 'Name' 
+    '#description': ""
+    '#required': true
+    '#states':
+      visible:
+        ':input[name="i_would_like_to"]':
+          value: '2'
+          
+        ':input[name="i_would_like_to"]':
+          value: '1'
+          
+        ':input[name="i_would_like_to"]':
+          value: '5'
+          
+        ':input[name="i_would_like_to"]':
+          value: '3'
+          
+  ticket_order_number:
+    '#type': textfield
+    '#title': 'Order Number' 
+    '#description': ""
+    '#states':
+      visible:
+        ':input[name="i_would_like_to"]':
+          value: '2'
+          
+        ':input[name="i_would_like_to"]':
+          value: '1'
+          
+        ':input[name="i_would_like_to"]':
+          value: '5'
+          
+        ':input[name="i_would_like_to"]':
+          value: '3'
+          
+  email:
+    '#type': email
+    '#size': 20
+    '#default_value': 'pandasrock@zooemail.com' 
+    '#title': 'Email' 
+    '#description': ""
+    '#required': true
+    '#states':
+      visible:
+        ':input[name="i_would_like_to"]':
+          value: '2'
+          
+        ':input[name="i_would_like_to"]':
+          value: '1'
+          
+        ':input[name="i_would_like_to"]':
+          value: '5'
+          
+        ':input[name="i_would_like_to"]':
+          value: '3'
+          
+  current_visit_reservation:
+    '#type': date
+    '#title': 'My tickets are for this day (select below)' 
+    '#description': ""
+    '#required': true
+    '#states':
+      visible:
+        ':input[name="[]"]':
+          null
+        ':input[name="i_would_like_to"]':
+          value: '2'
+          
+        ':input[name="i_would_like_to"]':
+          value: '1'
+          
+        ':input[name="[]"]':
+          value: '1'
+          
+  requested_visit_reservation:
+    '#type': date
+    '#title': 'I"d like tickets for this day instead (select below)' 
+    '#description': "Please know that pass exchanges are dependent on availability"
+    '#required': true
+    '#states':
+      visible:
+        ':input[name="i_would_like_to"]':
+          value: '2'
+          
+  other:
+    '#type': textarea
+    '#default_value': 'Please describe how we can help you with your Zoo passes.' 
+    '#title': 'More information' 
+    '#description': ""
+    '#states':
+      visible:
+        ':input[name="i_would_like_to"]':
+          value: '2'
+          
+        ':input[name="i_would_like_to"]':
+          value: '1'
+          
+        ':input[name="i_would_like_to"]':
+          value: '5'
+          
+        ':input[name="i_would_like_to"]':
+          value: '3'
+          
+css: ''
+javascript: ''
+settings:
+  page: true
+  wizard_progress_bar: true
+  preview: 0
+  draft: '0'
+  draft_auto_save: false
+  confirmation_type: page
+  confirmation_url: ''
+  confirmation_message: 'Thank you for submitting your question. Someone will be in touch within 48 hours.'
+  limit_total: null
+  limit_user: 1
+  form_submit_label: ''
+  wizard_complete: 1
+access:
+  create:
+    roles:
+      - anonymous
+      - authenticated
+    users: {  }
+handlers:
+  email_1:
+    id: email
+    handler_id: email_1
+    label: 'Email 1'
+    notes: ''
+    status: true
+    conditions: {  }
+    weight: 1
+    settings:
+      states:
+        - completed
+      to_mail: zootickets@si.edu
+      to_options: {  }
+      bcc_mail: ''
+      bcc_options: {  }
+      cc_mail: ''
+      cc_options: {  }
+      from_mail: default
+      from_options: {  }
+      from_name: default
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
+      subject: default
+      body: default
+      excluded_elements: {  }
+      ignore_access: false
+      exclude_empty: true
+      exclude_empty_checkbox: false
+      exclude_attachments: false
+      html: false
+      attachments: false
+      twig: false
+      theme_name: ''
+      parameters: {  }
+      debug: false
+  email_2:
+    id: email
+    handler_id: email_2
+    label: 'Email 2'
+    notes: ''
+    status: true
+    conditions: {  }
+    weight: 2
+    settings:
+      states:
+        - completed
+      to_mail: enchelmeyera@si.edu
+      to_options: {  }
+      bcc_mail: ''
+      bcc_options: {  }
+      cc_mail: ''
+      cc_options: {  }
+      from_mail: default
+      from_options: {  }
+      from_name: default
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
+      subject: '[webform_submission:values:i_would_like_to:raw]'
+      body: default
+      excluded_elements: {  }
+      ignore_access: false
+      exclude_empty: true
+      exclude_empty_checkbox: false
+      exclude_attachments: false
+      html: false
+      attachments: false
+      twig: false
+      theme_name: ''
+      parameters: {  }
+      debug: false
+variants: {  }

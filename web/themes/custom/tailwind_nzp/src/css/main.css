@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,400&display=swap');
+
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+
+/* Individual Partials */
+@import "partials/typography.css";
+@import "partials/util.css";
+@import "partials/admin.css";
+@import "partials/alert.css";
+@import "partials/breadcrumb.css";
+@import "partials/buttons.css";
+@import "partials/card.css";
+@import "partials/container.css";
+@import "partials/forms.css";
+@import "partials/gallery.css";
+@import "partials/header.css";
+@import "partials/horizontal-links.css";
+@import "partials/layout.css";
+@import "partials/logo.css";
+@import "partials/media.css";
+@import "partials/mega-menu.css";
+@import "partials/nav-tabs.css";
+@import "partials/pager.css";
+@import "partials/poll.css";
+
+
+

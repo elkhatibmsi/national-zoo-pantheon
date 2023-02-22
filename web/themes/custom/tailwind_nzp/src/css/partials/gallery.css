@@ -1,0 +1,14 @@
+/* Gallery Overrides */
+
+.grid-thumbnail-item,
+.modal-thumbnail-item {
+  @apply rounded-md overflow-hidden cursor-pointer;
+  img {
+    @apply h-full;
+  }
+}
+
+/* if admin toolbar is present push down modal by 60px */
+.toolbar-horizontal .modal-wrapper {
+  top: 80px;
+}

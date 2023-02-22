@@ -7,6 +7,7 @@ module:
   bean_migrate: 0
   big_pipe: 0
   blazy: 0
+  blazy_ui: 0
   block: 0
   block_class: 0
   block_content: 0
@@ -47,11 +48,21 @@ module:
   field_ui: 0
   file: 0
   filter: 0
+  geofield: 0
+  geofield_map: 0
+  geofield_map_extras: 0
+  geolocation: 0
+  geolocation_geofield: 0
+  geolocation_google_maps: 0
+  geolocation_leaflet: 0
   help: 0
   history: 0
   image: 0
   image_field_to_media: 0
   inline_entity_form: 0
+  jquery_ui: 0
+  jquery_ui_autocomplete: 0
+  jquery_ui_menu: 0
   layout_builder: 0
   layout_builder_boolean: 0
   layout_builder_component_attributes: 0
@@ -85,6 +96,7 @@ module:
   mysql: 0
   node: 0
   nzp_config: 0
+  nzp_gallery_migrations: 0
   nzp_layouts: 0
   nzp_paragraphs: 0
   oembed_providers: 0
@@ -92,6 +104,7 @@ module:
   page_cache: 0
   path: 0
   path_alias: 0
+  poll: 0
   rdf: 0
   redirect: 0
   search: 0
@@ -128,6 +141,8 @@ module:
   views_ui: 0
   viewsreference: 0
   webform: 0
+  webform_migrate: 0
+  webform_node: 0
   webform_ui: 0
   workflows: 0
   pathauto: 1

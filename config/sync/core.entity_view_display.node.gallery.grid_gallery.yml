@@ -1,0 +1,45 @@
+uuid: 692eacb7-0ab5-4f25-bbf6-6d1cb0136f29
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.grid_gallery
+    - field.field.node.gallery.body
+    - field.field.node.gallery.field_gallery_items
+    - field.field.node.gallery.field_landing_image
+    - field.field.node.gallery.field_teaser_title
+    - node.type.gallery
+  module:
+    - layout_builder
+    - layout_builder_restrictions
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+  layout_builder_restrictions:
+    allowed_block_categories: {  }
+    entity_view_mode_restriction:
+      allowed_layouts: {  }
+      denylisted_blocks: {  }
+      allowlisted_blocks: {  }
+      restricted_categories: {  }
+id: node.gallery.grid_gallery
+targetEntityType: node
+bundle: gallery
+mode: grid_gallery
+content:
+  field_gallery_items:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  body: true
+  field_landing_image: true
+  field_teaser_title: true
+  links: true

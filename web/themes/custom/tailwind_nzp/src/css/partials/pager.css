@@ -1,0 +1,13 @@
+/* Pagination overrides */
+
+.pager > ul {
+    @apply container flex flex-row flex-nowrap justify-between md:justify-center items-center mt-6 mb-4;
+  }
+  
+  .pager__item a {
+    @apply flex w-10 h-10 mr-2 font-bold font-body justify-center items-center rounded-full border-blue-sapphire bg-blue-sapphire text-white hover:bg-blue-sapphire;
+  }
+  
+  .pager__item--ellipsis {
+    @apply text-2xl;
+  }

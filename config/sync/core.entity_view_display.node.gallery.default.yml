@@ -7,29 +7,126 @@ dependencies:
     - field.field.node.gallery.field_gallery_items
     - field.field.node.gallery.field_landing_image
     - field.field.node.gallery.field_teaser_title
-    - image.style.slick_lighbox
     - node.type.gallery
   module:
-    - media
+    - layout_builder
+    - layout_builder_restrictions
+    - nzp_layouts
     - user
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: layout_nzp_one_col
+        layout_settings:
+          context_mapping: {  }
+          custom_classes: ''
+          custom_region_classes: null
+          region_classes: null
+          container_classes: container
+          html_container_elements: div
+          html_region_elements: null
+          background_color: bg-none
+          region_background_color: null
+        components:
+          d5185bcb-d2a3-4383-a42d-91f73ecda9c9:
+            uuid: d5185bcb-d2a3-4383-a42d-91f73ecda9c9
+            region: content
+            configuration:
+              id: 'field_block:node:gallery:field_gallery_items'
+              label: 'Gallery Items'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: entity_reference_entity_view
+                label: hidden
+                settings:
+                  view_mode: default
+                third_party_settings: {  }
+            weight: 2
+            additional: {  }
+          78578db4-f5ce-4103-91a9-c076d12ed019:
+            uuid: 78578db4-f5ce-4103-91a9-c076d12ed019
+            region: content
+            configuration:
+              id: 'field_block:node:gallery:body'
+              label: Summary
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            weight: 1
+            additional:
+              component_attributes:
+                block_attributes:
+                  id: ''
+                  class: text-xl
+                  style: ''
+                  data: ''
+                block_title_attributes:
+                  id: ''
+                  class: ''
+                  style: ''
+                  data: ''
+                block_content_attributes:
+                  id: ''
+                  class: ''
+                  style: ''
+                  data: ''
+          3bccad5f-87fa-4600-8118-43edd19c97e4:
+            uuid: 3bccad5f-87fa-4600-8118-43edd19c97e4
+            region: content
+            configuration:
+              id: 'field_block:node:gallery:title'
+              label: Title
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: text_field_formatter
+                label: hidden
+                settings:
+                  link_to_entity: 0
+                  wrap_tag: h1
+                  wrap_class: page-title
+                  wrap_attributes: ''
+                  override_link_label: ''
+                  token: ''
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+        third_party_settings: {  }
+  layout_builder_restrictions:
+    allowed_block_categories: {  }
+    entity_view_mode_restriction:
+      allowed_layouts: {  }
+      denylisted_blocks: {  }
+      allowlisted_blocks: {  }
+      restricted_categories: {  }
 id: node.gallery.default
 targetEntityType: node
 bundle: gallery
 mode: default
 content:
   field_gallery_items:
-    type: media_thumbnail
+    type: entity_reference_entity_view
     label: hidden
     settings:
-      image_link: ''
-      image_style: slick_lighbox
-      image_loading:
-        attribute: lazy
-    third_party_settings: {  }
-    weight: 1
-    region: content
-  links:
-    settings: {  }
+      view_mode: default
+      link: false
     third_party_settings: {  }
     weight: 0
     region: content
@@ -37,3 +134,4 @@ hidden:
   body: true
   field_landing_image: true
   field_teaser_title: true
+  links: true

@@ -4,16 +4,14 @@ border color based on that path. E.g. if the page is in the visit section then
 the callout box gets an orange border.
 #}
 
-{% set path = path('<current>')|split('/')[1]|clean_class %}
-{% set borderClass = 'border-' ~ path %}
 
 {% if content %}
-<div {{ attributes.addClass(settings.container_classes).addClass(settings.custom_classes).addClass('mx-auto relative md:min-h-[400px]') }} >
+<div {{ attributes.addClass(settings.container_classes).addClass(settings.custom_classes).addClass('mx-auto relative !p-0 md:min-h-[400px]') }} >
 	<div class="relative w-full">
-		<div {{region_attributes.banner.addClass("banner  md:max-h-full max-h-[200px] overflow-hidden")}}>
+		<div {{region_attributes.banner.addClass("banner md:max-h-full max-h-[200px] overflow-hidden").addClass(settings.custom_region_classes.banner).addClass(settings.custom_region_classes.banner)}}>
 			{{ content.banner }}
 		</div>
-		<div {{region_attributes.card.addClass(borderClass ~ ' knockout md:absolute z-10 border-t-8 text-white bg-oxford-blue text-center md:max-w-[350px] md:min-w-[225px] md:min-h-32 md:overflow-y-auto grid grid-rows-auto gap-2 content-center p-4 shadow-md top-12 right-12') }}>
+		<div {{region_attributes.card.addClass('md:absolute z-10 md:max-w-[350px] md:min-w-[225px] md:min-h-32 md:overflow-y-auto p-4 shadow-md top-12 right-12').addClass(settings.custom_region_classes.banner).addClass(settings.background_color).addClass(settings.custom_region_classes.banner)}}>
 			{{ content.card }}
 		</div>
 	</div>

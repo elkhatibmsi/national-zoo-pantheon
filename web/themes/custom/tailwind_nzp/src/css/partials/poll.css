@@ -1,0 +1,25 @@
+/* POLL STYLING Overrides */
+
+.poll {
+    .fieldset-wrapper {
+        @apply flex flex-wrap;
+        & > div {
+            @apply flex flex-wrap gap-2;
+          }
+      }
+
+      .form-item-choice {
+        @apply w-full;
+        label {
+            @apply w-full py-2 m-0 cursor-pointer;
+          }
+          input {
+           @apply opacity-0;
+            &:checked + label {
+                @apply bg-lightestgray;
+              }
+          }
+      }
+  
+
+}

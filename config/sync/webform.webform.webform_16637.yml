@@ -1,0 +1,242 @@
+uuid: 37456bbe-9feb-4193-af8d-62c8f568b71a
+langcode: en
+status: open
+dependencies: {  }
+weight: 0
+open: null
+close: null
+uid: 169
+template: false
+archive: false
+id: webform_16637
+title: 'Bus Parking Reservation Request'
+description: null
+category: null
+elements: |
+  first_name:
+    '#type': textfield
+    '#title': 'First Name' 
+    '#description': ""
+    '#required': true
+  last_name:
+    '#type': textfield
+    '#title': 'Last Name' 
+    '#description': ""
+    '#required': true
+  email:
+    '#type': email
+    '#size': 20
+    '#title': 'Email' 
+    '#description': ""
+    '#required': true
+  school_field_trip:
+    '#type': radios
+    '#options':
+      1: 'Yes'
+      2: 'No'
+    '#title': 'Is this Visit a School Field Trip?' 
+    '#description': ""
+    '#required': true
+  fieldset_school_bus_parking_additional_questions:
+    '#type': fieldset
+    '#open': true
+    '#title_display': invisible
+    '#title': 'School Trip Additional Questions' 
+    '#description': ""
+    '#states':
+      visible:
+        ':input[name="school_field_trip"]':
+          value: '1'
+          
+    school_field_trip_markup_14:
+      '#type': processed_text
+      '#format': full_html
+      '#text': "<h1></h1>\n\n<hr />\n<h3>School Trip Reservations: Additional Questions</h3>\n\n<p><em>Answer the following additional questions regarding your school trip</em></p>\n\n<p></p>\n\n<p></p>\n"
+      '#title': 'School Field Trip Instructions' 
+      '#description': ""
+    organization_school_name_14:
+      '#type': textfield
+      '#title': 'Organization/School Name' 
+      '#description': ""
+    organization_school_address_14:
+      '#type': textfield
+      '#title': 'Organization/School Address:' 
+      '#description': ""
+    total_number_of_participants_18_plus_14:
+      '#type': textfield
+      '#size': 20
+      '#min': 
+      '#max': 
+      '#step': 
+      '#unique': false
+      '#title': 'Total number of participants ages 18+, including chaperones for student groups:' 
+      '#description': ""
+    total_number_of_participants_17_below_14:
+      '#type': textfield
+      '#size': 20
+      '#min': 
+      '#max': 
+      '#step': 
+      '#unique': false
+      '#title': 'Total number of participants ages 0-17' 
+      '#description': ""
+    on_site_contacts_14:
+      '#type': textarea
+      '#title': 'Contacts/Chaperones during visit' 
+      '#description': "Enter the names and phone numbers for each chaperone/contact as shown below\neg: Susan Doe - (202) 123-1234"
+    name_of_bus_company_14:
+      '#type': textfield
+      '#title': 'Name of Bus Company' 
+      '#description': ""
+    estimated_departure_time_14:
+      '#type': time
+      '#title': 'Estimated Departure Time' 
+      '#description': ""
+  number_of_participants:
+    '#title': 'Approximate Number of Participants' 
+    '#description': ""
+    '#required': true
+    '#states':
+      invisible:
+        ':input[name="school_field_trip"]':
+          value: '1'
+          
+  number_of_buses:
+    '#title': 'Total Number of Buses' 
+    '#description': ""
+    '#required': true
+  preferred_date:
+    '#type': date
+    '#title': 'Preferred Date' 
+    '#description': ""
+    '#required': true
+  preferred_time:
+    '#type': time
+    '#title': 'Preferred Time' 
+    '#description': ""
+    '#required': true
+  secondary_date:
+    '#type': date
+    '#title': 'Second Choice Date' 
+    '#description': ""
+    '#required': true
+  secondary_time:
+    '#type': time
+    '#title': 'Second Choice Time' 
+    '#description': ""
+    '#required': true
+  tertiary_date:
+    '#type': date
+    '#title': 'Third Choice Date' 
+    '#description': ""
+    '#required': true
+  tertiary_time:
+    '#type': time
+    '#title': 'Third Choice Time' 
+    '#description': ""
+    '#required': true
+css: ''
+javascript: ''
+settings:
+  page: true
+  wizard_progress_bar: true
+  preview: 0
+  draft: '0'
+  draft_auto_save: false
+  confirmation_type: page
+  confirmation_url: ''
+  confirmation_message: ''
+  limit_total: null
+  limit_user: null
+  form_submit_label: ''
+  wizard_complete: 1
+access:
+  create:
+    roles:
+      - anonymous
+      - authenticated
+    users: {  }
+handlers:
+  email_1:
+    id: email
+    handler_id: email_1
+    label: 'Email 1'
+    notes: ''
+    status: true
+    conditions: {  }
+    weight: 1
+    settings:
+      states:
+        - completed
+      to_mail: ZooParking@si.edu
+      to_options: {  }
+      bcc_mail: ''
+      bcc_options: {  }
+      cc_mail: ''
+      cc_options: {  }
+      from_mail: default
+      from_options: {  }
+      from_name: default
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
+      subject: default
+      body: default
+      excluded_elements: {  }
+      ignore_access: false
+      exclude_empty: true
+      exclude_empty_checkbox: false
+      exclude_attachments: false
+      html: false
+      attachments: false
+      twig: false
+      theme_name: ''
+      parameters: {  }
+      debug: false
+  email_2:
+    id: email
+    handler_id: email_2
+    label: 'Email 2'
+    notes: ''
+    status: true
+    conditions: {  }
+    weight: 2
+    settings:
+      states:
+        - completed
+      to_mail: '[webform_submission:values:email:raw]'
+      to_options: {  }
+      bcc_mail: ''
+      bcc_options: {  }
+      cc_mail: ''
+      cc_options: {  }
+      from_mail: default
+      from_options: {  }
+      from_name: default
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
+      subject: default
+      body: |
+        Submitted on [webform_submission:date:long]
+
+        Thank you for requesting a Bus Reservation. Below is a summary of your submission. Someone from our guest services team will follow-up with you.
+
+        Requests are processed Monday through Friday. 
+
+        Summary of your request
+        [webform_submission:values]
+      excluded_elements: {  }
+      ignore_access: false
+      exclude_empty: true
+      exclude_empty_checkbox: false
+      exclude_attachments: false
+      html: false
+      attachments: false
+      twig: false
+      theme_name: ''
+      parameters: {  }
+      debug: false
+variants: {  }

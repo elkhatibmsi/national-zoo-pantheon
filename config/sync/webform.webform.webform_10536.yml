@@ -1,0 +1,106 @@
+uuid: 2bb9ae22-cb05-462f-bd67-9b8d8d4af724
+langcode: en
+status: closed
+dependencies: {  }
+weight: 0
+open: null
+close: null
+uid: 174
+template: false
+archive: false
+id: webform_10536
+title: 'Auditorium Seat Nameplate Personalization'
+description: null
+category: null
+elements: |
+  name:
+    '#type': textfield
+    '#title': 'Your Name' 
+    '#description': ""
+    '#required': true
+  your_email:
+    '#type': email
+    '#size': 20
+    '#title': 'Your Email' 
+    '#description': ""
+    '#required': true
+  fieldset_inscription:
+    '#type': fieldset
+    '#open': true
+    '#title': 'Inscription' 
+    '#description': ""
+    line_one_7:
+      '#type': textfield
+      '#title': 'Line One' 
+      '#description': ""
+      '#required': true
+    line_two_7:
+      '#type': textfield
+      '#default_value': 'Optional' 
+      '#title': 'Line Two' 
+      '#description': ""
+    line_three_7:
+      '#type': textfield
+      '#default_value': 'Optional' 
+      '#title': 'Line Three' 
+      '#description': ""
+css: ''
+javascript: ''
+settings:
+  page: true
+  wizard_progress_bar: true
+  preview: 0
+  draft: '0'
+  draft_auto_save: false
+  confirmation_type: page
+  confirmation_url: ''
+  confirmation_message: "<p>Thank you for submitting your nameplate inscription. If you purchased multiple nameplates, please <a href=\"/support/auditorium-seat-nameplate-personalization\">submit a new form</a> for each additional nameplate.</p>\r\n"
+  limit_total: null
+  limit_user: null
+  form_submit_label: ''
+  wizard_complete: 1
+access:
+  create:
+    roles:
+      - anonymous
+      - authenticated
+    users: {  }
+handlers:
+  email_1:
+    id: email
+    handler_id: email_1
+    label: 'Email 1'
+    notes: ''
+    status: true
+    conditions: {  }
+    weight: 1
+    settings:
+      states:
+        - completed
+      to_mail: oglanderl@si.edu
+      to_options: {  }
+      bcc_mail: ''
+      bcc_options: {  }
+      cc_mail: ''
+      cc_options: {  }
+      from_mail: default
+      from_options: {  }
+      from_name: default
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
+      subject: default
+      body: default
+      excluded_elements: {  }
+      ignore_access: false
+      exclude_empty: true
+      exclude_empty_checkbox: false
+      exclude_attachments: false
+      html: false
+      attachments: false
+      twig: false
+      theme_name: ''
+      parameters: {  }
+      debug: false
+variants: {  }

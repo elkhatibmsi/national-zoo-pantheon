@@ -1,0 +1,30 @@
+uuid: 04bf9b6b-ac46-4657-8b4f-2741ab2ac446
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.poll_choice.field_poll_choice_image
+    - media.type.image
+  module:
+    - poll
+id: poll_choice.poll_choice.field_poll_choice_image
+field_name: field_poll_choice_image
+entity_type: poll_choice
+bundle: poll_choice
+label: 'Poll Choice Image'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,62 @@
+uuid: 50baad3e-f594-4aa3-9be4-25d559cb8756
+langcode: en
+status: closed
+dependencies: {  }
+weight: 0
+open: null
+close: null
+uid: 193
+template: false
+archive: false
+id: webform_9913
+title: 'Name our Tiger Cubs'
+description: null
+category: null
+elements: |
+  cub_one:
+    '#type': radios
+    '#options':
+      1: 'Name option 1'
+      2: 'Name option 2'
+      3: 'Name option 3'
+    '#title': 'Cub one' 
+    '#description': ""
+    '#required': true
+  cub_two:
+    '#type': radios
+    '#options':
+      1: 'Slash'
+      2: 'Stripes'
+      3: 'Tiger McTigerface'
+    '#title': 'Cub two' 
+    '#description': "<img src='/sites/default/files/styles/thumbnail/public/support/adopt/sumatrantiger-05.jpg>"
+    '#required': true
+  your_email_address:
+    '#type': email
+    '#size': 20
+    '#title_display': inline
+    '#title': 'Your Email Address' 
+    '#description': "Enter your email address so we can keep you up-to-date on Tiger cub happenings and other Zoo news!"
+css: ''
+javascript: ''
+settings:
+  page: true
+  wizard_progress_bar: true
+  preview: 0
+  draft: '0'
+  draft_auto_save: false
+  confirmation_type: page
+  confirmation_url: ''
+  confirmation_message: ''
+  limit_total: null
+  limit_user: 1
+  form_submit_label: ''
+  wizard_complete: 1
+access:
+  create:
+    roles:
+      - anonymous
+      - authenticated
+    users: {  }
+handlers: {  }
+variants: {  }

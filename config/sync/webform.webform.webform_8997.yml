@@ -1,0 +1,44 @@
+uuid: 26a2c080-420d-4ee6-b0d0-3852c68b2078
+langcode: en
+status: closed
+dependencies: {  }
+weight: 0
+open: null
+close: null
+uid: 193
+template: false
+archive: false
+id: webform_8997
+title: 'Premier Membership Discount'
+description: null
+category: null
+elements: |
+  promo_code:
+    '#type': textfield
+    '#size': 
+    '#title': 'Enter your Tanger Outlet promo code below:	' 
+    '#description': "Enter your Tanger Outlet promo code:"
+    '#required': true
+css: ''
+javascript: ''
+settings:
+  page: true
+  wizard_progress_bar: true
+  preview: 0
+  draft: '0'
+  draft_auto_save: false
+  confirmation_type: url
+  confirmation_url: 'https://supporter.fonz.org/dev/contribute.aspx?don=104'
+  confirmation_message: "<!--<div id=\"bbox-root-201c37c6-3927-44c4-8470-e06ab1a987b7\"></div>\r\n<script type=\"text/javascript\">\r\n   var bboxInit2 = bboxInit2 || [];\r\n   bboxInit2.push(function () {\r\n       bboxApi.showForm('201c37c6-3927-44c4-8470-e06ab1a987b7');\r\n   });\r\n   (function () {\r\n       var e = document.createElement('script'); e.async = true;\r\n       e.src = 'https://bbox.blackbaudhosting.com/webforms/bbox-2.0-min.js';\r\n       document.getElementsByTagName('head')[0].appendChild(e);\r\n   }());\r\n</script>-->"
+  limit_total: null
+  limit_user: null
+  form_submit_label: ''
+  wizard_complete: 1
+access:
+  create:
+    roles:
+      - anonymous
+      - authenticated
+    users: {  }
+handlers: {  }
+variants: {  }

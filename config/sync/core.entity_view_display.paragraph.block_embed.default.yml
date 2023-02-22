@@ -4,7 +4,10 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.block_embed.field_block_embed_title
+    - field.field.paragraph.block_embed.field_block_field
     - paragraphs.paragraphs_type.block_embed
+  module:
+    - block_field
 id: paragraph.block_embed.default
 targetEntityType: paragraph
 bundle: block_embed
@@ -12,11 +15,17 @@ mode: default
 content:
   field_block_embed_title:
     type: string
-    label: above
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
     weight: 0
     region: content
-hidden:
-  field_block_field: true
+  field_block_field:
+    type: block_field
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden: {  }

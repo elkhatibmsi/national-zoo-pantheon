@@ -4929,6 +4929,11 @@ img{
   width: 100%;
 }
 
+iframe[src*="youtube"]{
+  aspect-ratio: 16 / 9;
+  width: 100%;
+}
+
 /* Mega Menu */
 
 .open {

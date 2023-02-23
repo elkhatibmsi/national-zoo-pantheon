@@ -56,6 +56,9 @@ img {
 }
 .embed-responsive-item {
   @apply w-full h-full;
+}
+iframe[src*="youtube"] {
+  @apply w-full aspect-video;
 } 
   
   

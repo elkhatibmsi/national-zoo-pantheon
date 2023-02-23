@@ -4,11 +4,11 @@
 main {
     @apply lg:relative lg:mt-[12em];
   }
-
+/*
   aside {
     @apply hidden md:block lg:block;
   }
-  
+*/  
 
 .layout-three-cols {
     @apply lg:grid-cols-3 md:grid-cols-2 grid-cols-1;

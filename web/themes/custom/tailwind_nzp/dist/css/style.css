@@ -4702,21 +4702,11 @@ header.scrolled .header--hours{
   }
 }
 
-aside{
-  display: none;
-}
-
-@media (min-width: 768px){
-  aside{
-    display: block;
+/*
+  aside {
+    @apply hidden md:block lg:block;
   }
-}
-
-@media (min-width: 1024px){
-  aside{
-    display: block;
-  }
-}
+*/
 
 .layout-three-cols{
   grid-template-columns: repeat(1, minmax(0, 1fr));
@@ -4918,7 +4908,7 @@ img{
   position: relative;
 }
 
-/* restyle bootstrap video embeds using tailwind */
+/* restyle bootstrap and other video embeds using tailwind */
 
 .embed-responsive-16by9{
   aspect-ratio: 16 / 9;

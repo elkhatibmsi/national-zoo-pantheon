@@ -50,7 +50,7 @@ img {
     position: relative;
   }
 
- /* restyle bootstrap video embeds using tailwind */
+ /* restyle bootstrap and other video embeds using tailwind */
 .embed-responsive-16by9 {
   @apply aspect-video;
 }

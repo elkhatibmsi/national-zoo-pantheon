@@ -4708,10 +4708,6 @@ header.scrolled .header--hours{
   }
 */
 
-sup {
-  margin-top: 1em;
-}
-
 .layout-three-cols{
   grid-template-columns: repeat(1, minmax(0, 1fr));
 }

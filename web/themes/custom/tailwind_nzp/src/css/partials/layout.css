@@ -9,9 +9,6 @@ main {
     @apply hidden md:block lg:block;
   }
 */ 
-sup {
-  margin-top: 1em;
-} 
 
 .layout-three-cols {
     @apply lg:grid-cols-3 md:grid-cols-2 grid-cols-1;

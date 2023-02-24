@@ -2203,12 +2203,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   max-width: 350px;
 }
 
-.max-w-xs{
-  max-width: 20rem;
-}
-
 .max-w-\[80ch\]{
   max-width: 80ch;
+}
+
+.max-w-xs{
+  max-width: 20rem;
 }
 
 .flex-none{
@@ -5028,9 +5028,22 @@ iframe:nth-child(n+1){
 /* Nav Tabs overrides */
 
 .nav-tabs a[aria-selected="true"]{
+  margin-right: 1.5rem;
   border-bottom-width: 2px;
   --tw-border-opacity: 1;
   border-color: rgb(240 81 90 / var(--tw-border-opacity));
+  padding-right: 0px;
+  font-weight: 700;
+  --tw-text-opacity: 1;
+  color: rgb(23 23 23 / var(--tw-text-opacity));
+}
+
+.nav-tabs a[aria-selected="false"]{
+  margin-right: 1.5rem;
+  padding-right: 0px;
+  font-weight: 700;
+  --tw-text-opacity: 1;
+  color: rgb(212 212 212 / var(--tw-text-opacity));
 }
 
 .nav-tabs > li {

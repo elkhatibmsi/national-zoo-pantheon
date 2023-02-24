@@ -8,4 +8,8 @@
   .nav-tabs > li {
     margin:0;
   }
+
+  .tab-wrapper > div > div {
+    @apply max-w-[80ch];
+  }
   

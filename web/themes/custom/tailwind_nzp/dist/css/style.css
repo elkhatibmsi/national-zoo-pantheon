@@ -2207,6 +2207,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   max-width: 20rem;
 }
 
+.max-w-\[80ch\]{
+  max-width: 80ch;
+}
+
 .flex-none{
   flex: none;
 }
@@ -5031,6 +5035,10 @@ iframe:nth-child(n+1){
 
 .nav-tabs > li {
   margin:0;
+}
+
+.tab-wrapper > div > div{
+  max-width: 80ch;
 }
 
 /* Pagination overrides */
@@ -8690,16 +8698,6 @@ iframe:nth-child(n+1){
     padding: 1rem;
   }
 
-  .lg\:px-8{
-    padding-left: 2rem;
-    padding-right: 2rem;
-  }
-
-  .lg\:px-4{
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-
   .lg\:px-0{
     padding-left: 0px;
     padding-right: 0px;
@@ -8720,6 +8718,11 @@ iframe:nth-child(n+1){
     padding-right: 0.75rem;
   }
 
+  .lg\:px-4{
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
   .lg\:px-5{
     padding-left: 1.25rem;
     padding-right: 1.25rem;
@@ -8733,6 +8736,11 @@ iframe:nth-child(n+1){
   .lg\:px-7{
     padding-left: 1.75rem;
     padding-right: 1.75rem;
+  }
+
+  .lg\:px-8{
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
 
   .lg\:px-9{

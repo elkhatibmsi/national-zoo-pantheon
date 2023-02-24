@@ -2,10 +2,10 @@
 /* Nav Tabs overrides */
 
 .nav-tabs a[aria-selected="true"] {
-    @apply border-sizzling-red border-b-2 text-black font-bold pr-0 mr-6;
+    @apply border-sizzling-red border-b-2 text-black pr-0 mr-6;
 }
   .nav-tabs a[aria-selected="false"] {
-    @apply text-lightgray font-bold pr-0 mr-6;
+    @apply text-lightgray pr-0 mr-6;
 }  
   
 .nav-tabs > li {

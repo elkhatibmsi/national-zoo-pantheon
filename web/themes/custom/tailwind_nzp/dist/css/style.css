@@ -5033,7 +5033,6 @@ iframe:nth-child(n+1){
   --tw-border-opacity: 1;
   border-color: rgb(240 81 90 / var(--tw-border-opacity));
   padding-right: 0px;
-  font-weight: 700;
   --tw-text-opacity: 1;
   color: rgb(23 23 23 / var(--tw-text-opacity));
 }
@@ -5041,7 +5040,6 @@ iframe:nth-child(n+1){
 .nav-tabs a[aria-selected="false"]{
   margin-right: 1.5rem;
   padding-right: 0px;
-  font-weight: 700;
   --tw-text-opacity: 1;
   color: rgb(212 212 212 / var(--tw-text-opacity));
 }

@@ -110,6 +110,7 @@ module.exports = {
         'pr-{spacing}',
         'pb-{spacing}',
         'pl-{spacing}',
+        '{screens}:px-{spacing}',
         '-ml-{spacing}',
         'mt-{spacing}',
         'mr-{spacing}',

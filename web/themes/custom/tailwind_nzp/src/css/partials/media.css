@@ -60,7 +60,7 @@ img {
 iframe[src*="youtube"] {
   @apply w-full aspect-video;
 } 
-
+/* add whitespace between stacked videos */
 iframe:nth-child(n+1) {
   @apply mt-4;
 }

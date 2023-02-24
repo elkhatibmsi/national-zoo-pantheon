@@ -60,5 +60,9 @@ img {
 iframe[src*="youtube"] {
   @apply w-full aspect-video;
 } 
+
+iframe:nth-child(n+1) {
+  @apply mt-4;
+}
   
   

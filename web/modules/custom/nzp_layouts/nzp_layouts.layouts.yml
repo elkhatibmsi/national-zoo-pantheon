@@ -40,6 +40,34 @@ layout_nzp_two_col:
     two_col:
       label: Column 2
 
+layout_nzp_two_col_golden:
+  label: 'nzp Two Column Golden'
+  path: templates
+  template: layout--nzp-two-col-golden
+  category: 'Columns: 2'
+  default_region: one_col
+  icon_map:
+    - [first, second]
+  regions:
+    one_col:
+      label: Column 1
+    two_col:
+      label: Column 2      
+
+layout_nzp_two_col_golden_reverse:
+  label: 'nzp Two Column Golden Sidebar Left'
+  path: templates
+  template: layout--nzp-two-col-golden-reverse
+  category: 'Columns: 2'
+  default_region: one_col
+  icon_map:
+    - [first, second]
+  regions:
+    one_col:
+      label: Column 1
+    two_col:
+      label: Column 2      
+
 layout_nzp_three_col:
   label: 'nzp Three Column'
   path: templates

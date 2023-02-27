@@ -1,0 +1,20 @@
+{%
+  set title_classes = [
+    label_display == 'visually_hidden' ? 'visually-hidden',
+  ]
+%}
+{%
+    set label_classes = ['border-blue-sapphire','font-semibold','sans','inline-block','mb-2','pb-2','border-b-4','uppercase']
+%}
+
+{% if not(label_hidden) %}
+    <label {{ title_attributes.addClass(title_classes, label_classes)}}>{{ label }}</label>
+{% endif %}
+
+<div class="grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+    {% for item in items %}
+        <div>
+            {{ item.content }}
+        </div>
+    {% endfor %}
+</div>

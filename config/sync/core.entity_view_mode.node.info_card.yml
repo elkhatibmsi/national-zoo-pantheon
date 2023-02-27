@@ -5,6 +5,6 @@ dependencies:
   module:
     - node
 id: node.info_card
-label: info_tabs
+label: 'Information Tabs'
 targetEntityType: node
 cache: true

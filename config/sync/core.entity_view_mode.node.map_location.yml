@@ -1,10 +1,10 @@
-uuid: 4c83e8ab-3877-4ee7-b828-c49d6b78f247
+uuid: a9afc0fe-3cb7-44db-b222-099b2af2508d
 langcode: en
 status: true
 dependencies:
   module:
     - node
-id: node.example_node_list
-label: example_node_list
+id: node.map_location
+label: 'Map Location'
 targetEntityType: node
 cache: true

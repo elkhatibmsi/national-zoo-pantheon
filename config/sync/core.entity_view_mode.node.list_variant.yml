@@ -1,10 +1,10 @@
-uuid: 3c50774c-7e06-4f6a-bc42-a2635ecbee3b
+uuid: ab43e657-6bc5-40d8-8559-a183ab6c3cca
 langcode: en
 status: true
 dependencies:
   module:
     - node
-id: node.node_embed
-label: node_embed
+id: node.list_variant
+label: 'List Variant'
 targetEntityType: node
 cache: true

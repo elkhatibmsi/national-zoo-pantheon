@@ -159,6 +159,7 @@ module.exports = {
         'h-0',
         'sm:h-auto',      
         'overflow-hidden',
+        'truncate',
         'aspect-video'
       ],
     }),

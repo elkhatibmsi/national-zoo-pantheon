@@ -2878,6 +2878,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   overflow-x: hidden;
 }
 
+.truncate{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
 .rounded-md{
   border-radius: 0.375rem;
 }
@@ -6932,10 +6938,6 @@ img{
 
   .md\:ml-3\.5{
     margin-left: 0.875rem;
-  }
-
-  .md\:block{
-    display: block;
   }
 
   .md\:max-h-full{

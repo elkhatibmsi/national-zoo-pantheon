@@ -149,6 +149,8 @@ module.exports = {
         'flex-nowrap',
         'flex-wrap',
         'flex-row-reverse',
+        'justify-start',
+        'md:justify-end',
         'max-w-[350px]',
         'md:grid-cols-[.62fr_.38fr]',
         'md:grid-cols-[.38fr_.62fr]',

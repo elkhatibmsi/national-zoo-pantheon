@@ -4246,6 +4246,7 @@ h3{
 }
 
 aside .block-title{
+  margin-top: 0px;
   border-style: none;
   --tw-bg-opacity: 1;
   background-color: rgb(83 120 43 / var(--tw-bg-opacity));

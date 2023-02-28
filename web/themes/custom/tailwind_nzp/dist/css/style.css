@@ -4695,19 +4695,7 @@ header.scrolled .header--hours{
 }
 
 aside{
-  display: none;
-}
-
-@media (min-width: 768px){
-  aside{
-    display: block;
-  }
-}
-
-@media (min-width: 1024px){
-  aside{
-    display: block;
-  }
+  display: block;
 }
 
 .layout-three-cols{

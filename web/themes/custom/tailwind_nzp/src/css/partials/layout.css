@@ -6,7 +6,7 @@ main {
   }
 
   aside {
-    @apply hidden md:block lg:block;
+    @apply block;
   }
   
 

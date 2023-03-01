@@ -43,7 +43,7 @@ h1, h2, h3, h4, h5, h6 {
   
   /* Block titles inside an Aside element: */
   .block-title {
-    @apply font-bold mb-6 border-b-2 border-lightergray;
+    @apply font-bold mb-6 border-b-2 border-lightergray capitalize;
   }
   
   aside .block-title {

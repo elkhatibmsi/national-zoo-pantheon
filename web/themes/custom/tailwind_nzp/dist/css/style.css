@@ -4249,6 +4249,7 @@ h3{
   --tw-border-opacity: 1;
   border-color: rgb(229 229 229 / var(--tw-border-opacity));
   font-weight: 700;
+  text-transform: capitalize;
 }
 
 aside .block-title{
@@ -4713,12 +4714,6 @@ aside > div:first-child{
   aside > div:first-child{
     margin-top: 0px;
   }
-}
-
-.container > div > div:last-child{
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
 }
 
 .layout-three-cols{

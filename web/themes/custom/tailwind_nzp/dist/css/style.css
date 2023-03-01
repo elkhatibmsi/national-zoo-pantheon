@@ -6001,8 +6001,8 @@ img{
     height: auto;
   }
 
-  .sm\:max-w-0{
-    max-width: 0rem;
+  .sm\:max-w-full{
+    max-width: 100%;
   }
 
   .sm\:grid-cols-1{
@@ -6965,10 +6965,6 @@ img{
 
   .md\:min-w-\[225px\]{
     min-width: 225px;
-  }
-
-  .md\:max-w-0{
-    max-width: 0rem;
   }
 
   .md\:max-w-\[350px\]{
@@ -8077,10 +8073,6 @@ img{
     width: 350px;
   }
 
-  .lg\:max-w-0{
-    max-width: 0rem;
-  }
-
   .lg\:max-w-\[225px\]{
     max-width: 225px;
   }
@@ -9154,10 +9146,6 @@ img{
     margin-left: 0.875rem;
   }
 
-  .xl\:max-w-0{
-    max-width: 0rem;
-  }
-
   .xl\:justify-start{
     justify-content: flex-start;
   }
@@ -10091,10 +10079,6 @@ img{
 
   .\32xl\:ml-3\.5{
     margin-left: 0.875rem;
-  }
-
-  .\32xl\:max-w-0{
-    max-width: 0rem;
   }
 
   .\32xl\:justify-start{

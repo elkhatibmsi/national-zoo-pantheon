@@ -8,6 +8,9 @@ main {
   aside {
     @apply block;
   }
+  aside > div:first-child {
+    @apply mt-8 md:mt-0;
+  }
   
 
 .layout-three-cols {

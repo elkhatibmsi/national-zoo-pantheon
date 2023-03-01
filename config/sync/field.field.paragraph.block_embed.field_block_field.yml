@@ -22,15 +22,16 @@ settings:
   selection_settings:
     categories:
       Block: Block
+      'Content fields': 'Content fields'
       Custom: Custom
       Forms: Forms
+      Menus: Menus
       System: System
       Webform: Webform
       'Webform submission fields': 'Webform submission fields'
       'Chaos Tools': '0'
       'Comment fields': '0'
       'Contact message fields': '0'
-      'Content fields': '0'
       'Content moderation state fields': '0'
       core: '0'
       'Custom block fields': '0'
@@ -39,12 +40,15 @@ settings:
       'Devel PHP': '0'
       EDAN: '0'
       'File fields': '0'
+      'Geofield Map': '0'
+      Geolocation: '0'
       Help: '0'
       'Inline blocks': '0'
       'Lists (Views)': '0'
       'Media fields': '0'
-      Menus: '0'
       'Paragraph fields': '0'
+      'Poll Choice fields': '0'
+      'Poll fields': '0'
       'Redirect fields': '0'
       'Shortcut link fields': '0'
       'Storage fields': '0'

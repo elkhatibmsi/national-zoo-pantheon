@@ -159,7 +159,8 @@ module.exports = {
         'grid-cols-[1fr]', 
         'w-24', 
         'h-0',
-        'sm:h-auto',      
+        'sm:h-auto', 
+        'before:content-["$"]',     
         'overflow-hidden',
         'truncate',
         'aspect-video'

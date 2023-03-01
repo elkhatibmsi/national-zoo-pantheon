@@ -6,6 +6,8 @@
   }
   
   .nav-tabs > li {
-    margin:0;
+    margin:0 1em -2px 0;
+    padding-left:0px;
+
   }
   

@@ -4715,6 +4715,12 @@ aside > div:first-child{
   }
 }
 
+.container > div > div:last-child{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
 .layout-three-cols{
   grid-template-columns: repeat(1, minmax(0, 1fr));
 }

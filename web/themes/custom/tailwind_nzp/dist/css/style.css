@@ -6967,12 +6967,12 @@ img{
     min-width: 225px;
   }
 
-  .md\:max-w-\[350px\]{
-    max-width: 350px;
-  }
-
   .md\:max-w-0{
     max-width: 0rem;
+  }
+
+  .md\:max-w-\[350px\]{
+    max-width: 350px;
   }
 
   .md\:flex-grow{
@@ -8077,16 +8077,16 @@ img{
     width: 350px;
   }
 
+  .lg\:max-w-0{
+    max-width: 0rem;
+  }
+
   .lg\:max-w-\[225px\]{
     max-width: 225px;
   }
 
   .lg\:max-w-full{
     max-width: 100%;
-  }
-
-  .lg\:max-w-0{
-    max-width: 0rem;
   }
 
   .lg\:cursor-auto{

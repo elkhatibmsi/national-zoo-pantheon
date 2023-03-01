@@ -6001,6 +6001,10 @@ img{
     height: auto;
   }
 
+  .sm\:max-w-0{
+    max-width: 0rem;
+  }
+
   .sm\:grid-cols-1{
     grid-template-columns: repeat(1, minmax(0, 1fr));
   }
@@ -6965,6 +6969,10 @@ img{
 
   .md\:max-w-\[350px\]{
     max-width: 350px;
+  }
+
+  .md\:max-w-0{
+    max-width: 0rem;
   }
 
   .md\:flex-grow{
@@ -8077,6 +8085,10 @@ img{
     max-width: 100%;
   }
 
+  .lg\:max-w-0{
+    max-width: 0rem;
+  }
+
   .lg\:cursor-auto{
     cursor: auto;
   }
@@ -9142,6 +9154,10 @@ img{
     margin-left: 0.875rem;
   }
 
+  .xl\:max-w-0{
+    max-width: 0rem;
+  }
+
   .xl\:justify-start{
     justify-content: flex-start;
   }
@@ -10075,6 +10091,10 @@ img{
 
   .\32xl\:ml-3\.5{
     margin-left: 0.875rem;
+  }
+
+  .\32xl\:max-w-0{
+    max-width: 0rem;
   }
 
   .\32xl\:justify-start{

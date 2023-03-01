@@ -152,6 +152,7 @@ module.exports = {
         'justify-start',
         'md:justify-end',
         'max-w-[350px]',
+        '{screens}:max-w-{spacing}',
         'md:grid-cols-[.62fr_.38fr]',
         'md:grid-cols-[.38fr_.62fr]',
         'grid-cols-[1fr]', 

@@ -9,6 +9,7 @@ dependencies:
     - field.field.node.exhibit.field_daily_demonstrations
     - field.field.node.exhibit.field_editorial_access
     - field.field.node.exhibit.field_enrichment
+    - field.field.node.exhibit.field_exhibit_hours
     - field.field.node.exhibit.field_exhibit_location
     - field.field.node.exhibit.field_hours
     - field.field.node.exhibit.field_landing_image
@@ -22,7 +23,9 @@ dependencies:
     - node.type.exhibit
     - views.view.animal_demo
     - views.view.exhibits
+    - views.view.media_release_and_news
   module:
+    - addtoany
     - entity_reference_revisions
     - geofield
     - layout_builder
@@ -38,23 +41,14 @@ third_party_settings:
     allow_custom: false
     sections:
       -
-        layout_id: layout_nzp_one_col
+        layout_id: layout_nzp_two_col_golden
         layout_settings:
+          label: 'bread crumb'
           context_mapping: {  }
-          custom_classes: ''
-          custom_region_classes: ''
-          region_classes:
-            content: col-md-12
-          container_classes: container
-          html_container_elements: div
-          html_region_elements:
-            content: div
-          background_color: bg-none
-          region_background_color: null
         components:
-          6ed7593b-2292-48b6-9e36-62cdda1c2890:
-            uuid: 6ed7593b-2292-48b6-9e36-62cdda1c2890
-            region: content
+          8601a7da-5541-4534-a70b-7e21ce6f845c:
+            uuid: 8601a7da-5541-4534-a70b-7e21ce6f845c
+            region: one_col
             configuration:
               id: system_breadcrumb_block
               label: Breadcrumbs
@@ -62,7 +56,54 @@ third_party_settings:
               provider: system
               context_mapping: {  }
             weight: 0
-            additional: {  }
+            additional:
+              component_attributes:
+                block_attributes:
+                  id: ''
+                  class: '-ml-1.5'
+                  style: ''
+                  data: ''
+                block_title_attributes:
+                  id: ''
+                  class: ''
+                  style: ''
+                  data: ''
+                block_content_attributes:
+                  id: ''
+                  class: ''
+                  style: ''
+                  data: ''
+          3443975b-bb48-45cf-8ef3-47de902d93f4:
+            uuid: 3443975b-bb48-45cf-8ef3-47de902d93f4
+            region: two_col
+            configuration:
+              id: addtoany_block
+              label: 'AddToAny share buttons'
+              label_display: '0'
+              provider: addtoany
+              context_mapping: {  }
+              link_url: ''
+              link_title: ''
+              buttons_size: ''
+              addtoany_html: ''
+            weight: 0
+            additional:
+              component_attributes:
+                block_attributes:
+                  id: ''
+                  class: 'h-full flex justify-start md:justify-end items-center -ml-1'
+                  style: ''
+                  data: ''
+                block_title_attributes:
+                  id: ''
+                  class: ''
+                  style: ''
+                  data: ''
+                block_content_attributes:
+                  id: ''
+                  class: ''
+                  style: ''
+                  data: ''
         third_party_settings: {  }
       -
         layout_id: layout_card_banner
@@ -120,6 +161,25 @@ third_party_settings:
                 third_party_settings: {  }
             weight: 1
             additional: {  }
+          08a5aca0-e70b-4887-821c-4a41a7b3dfb4:
+            uuid: 08a5aca0-e70b-4887-821c-4a41a7b3dfb4
+            region: card
+            configuration:
+              id: 'field_block:node:exhibit:field_exhibit_hours'
+              label: 'exhibit hours'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: entity_reference_entity_view
+                label: hidden
+                settings:
+                  view_mode: default
+                third_party_settings: {  }
+            weight: 3
+            additional: {  }
           5ff3bc2f-43b4-4a34-9932-4b19ec783029:
             uuid: 5ff3bc2f-43b4-4a34-9932-4b19ec783029
             region: card
@@ -143,38 +203,6 @@ third_party_settings:
                   token: ''
                 third_party_settings: {  }
             weight: 2
-            additional: {  }
-          cf320669-fe0d-4590-8edd-3b84d0dba056:
-            uuid: cf320669-fe0d-4590-8edd-3b84d0dba056
-            region: card
-            configuration:
-              id: 'field_block:node:exhibit:field_hours'
-              label: Hours
-              label_display: '0'
-              provider: layout_builder
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
-              formatter:
-                type: entity_reference_revisions_entity_view
-                label: hidden
-                settings:
-                  view_mode: default
-                third_party_settings: {  }
-            weight: 1
-            additional: {  }
-          4e35dbfe-3817-4c12-908b-a20cf8829153:
-            uuid: 4e35dbfe-3817-4c12-908b-a20cf8829153
-            region: card
-            configuration:
-              id: 'views_block:animal_demo-block_2'
-              label: 'Daily Demos'
-              label_display: visible
-              provider: views
-              context_mapping: {  }
-              views_label: 'Daily Demos'
-              items_per_page: none
-            weight: 3
             additional: {  }
         third_party_settings: {  }
       -
@@ -206,80 +234,11 @@ third_party_settings:
             additional: {  }
         third_party_settings: {  }
       -
-        layout_id: layout_nzp_one_col
+        layout_id: layout_nzp_two_col_golden
         layout_settings:
+          label: content
           context_mapping: {  }
-          custom_classes: ''
-          custom_region_classes: ''
-          region_classes: null
-          container_classes: container
-          html_container_elements: div
-          html_region_elements: null
-          background_color: bg-none
-          region_background_color: null
-          getHtmlElements: div
-        components: {  }
-        third_party_settings: {  }
-      -
-        layout_id: layout_nzp_two_col
-        layout_settings:
-          context_mapping: {  }
-          custom_classes: ''
-          custom_region_classes: ''
-          region_classes:
-            one_col: col-span-8
-            two_col: col-span-4
-          container_classes: 'container mx-auto'
-          html_container_elements: div
-          html_region_elements:
-            one_col: div
-            two_col: div
-          background_color: null
-          region_background_color:
-            one_col: bg-none
-            two_col: bg-none
-          getHtmlElements: div
         components:
-          ffe3c963-5a16-4c95-bef9-fad0db03e8eb:
-            uuid: ffe3c963-5a16-4c95-bef9-fad0db03e8eb
-            region: one_col
-            configuration:
-              id: 'field_block:node:exhibit:field_paragraph_component'
-              label: 'Paragraph Component'
-              label_display: '0'
-              provider: layout_builder
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
-              formatter:
-                type: layout_paragraphs_builder
-                label: hidden
-                settings:
-                  preview_view_mode: default
-                  nesting_depth: 0
-                  require_layouts: 0
-                  empty_message: ''
-                third_party_settings: {  }
-            weight: 7
-            additional: {  }
-          b40b6605-3f2f-4e40-a106-dd60e5979337:
-            uuid: b40b6605-3f2f-4e40-a106-dd60e5979337
-            region: one_col
-            configuration:
-              id: 'field_block:node:exhibit:field_nearby'
-              label: Nearby
-              label_display: visible
-              provider: layout_builder
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
-              formatter:
-                type: text_default
-                label: hidden
-                settings: {  }
-                third_party_settings: {  }
-            weight: 8
-            additional: {  }
           f7293ce1-6e57-48ee-867a-72d9f885b6a5:
             uuid: f7293ce1-6e57-48ee-867a-72d9f885b6a5
             region: two_col
@@ -369,22 +328,175 @@ third_party_settings:
                     lazy_load: false
                   weight: ''
                 third_party_settings: {  }
-            weight: 3
+            weight: 0
             additional: {  }
-          7b0129b3-a2c9-4711-82b6-5fdc49269356:
-            uuid: 7b0129b3-a2c9-4711-82b6-5fdc49269356
+          9c2e1a26-06b3-4dfc-a572-0d293d684383:
+            uuid: 9c2e1a26-06b3-4dfc-a572-0d293d684383
             region: one_col
             configuration:
               id: 'field_block:node:exhibit:body'
+              label: Summary
               label_display: '0'
+              provider: layout_builder
               context_mapping:
                 entity: layout_builder.entity
+                view_mode: view_mode
               formatter:
                 type: text_default
                 label: hidden
                 settings: {  }
                 third_party_settings: {  }
-            weight: 6
+            weight: 1
+            additional: {  }
+          26b863e1-0032-4867-8227-db2cba9a7beb:
+            uuid: 26b863e1-0032-4867-8227-db2cba9a7beb
+            region: one_col
+            configuration:
+              id: 'field_block:node:exhibit:field_paragraph_component'
+              label: Content
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: entity_reference_revisions_entity_view
+                label: hidden
+                settings:
+                  view_mode: default
+                third_party_settings: {  }
+            weight: 2
+            additional: {  }
+          95db6036-7584-4986-99db-c6f46845a95d:
+            uuid: 95db6036-7584-4986-99db-c6f46845a95d
+            region: one_col
+            configuration:
+              id: 'field_block:node:exhibit:title'
+              label: Title
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: text_field_formatter
+                label: hidden
+                settings:
+                  link_to_entity: 0
+                  wrap_tag: h2
+                  wrap_class: ''
+                  wrap_attributes: ''
+                  override_link_label: ''
+                  token: ''
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          7aa13238-1e3b-4fee-ac53-586066356f09:
+            uuid: 7aa13238-1e3b-4fee-ac53-586066356f09
+            region: two_col
+            configuration:
+              id: 'views_block:animal_demo-block_2'
+              label: 'Demo Schedule'
+              label_display: visible
+              provider: views
+              context_mapping: {  }
+              views_label: 'Demo Schedule'
+              items_per_page: none
+            weight: 1
+            additional: {  }
+          d17b2f70-14c7-4766-97fe-d0cf2f0c4b2a:
+            uuid: d17b2f70-14c7-4766-97fe-d0cf2f0c4b2a
+            region: two_col
+            configuration:
+              id: 'views_block:media_release_and_news-block_3'
+              label: ''
+              label_display: visible
+              provider: views
+              context_mapping: {  }
+              views_label: ''
+              items_per_page: none
+            weight: 2
+            additional: {  }
+        third_party_settings: {  }
+      -
+        layout_id: layout_nzp_tab
+        layout_settings:
+          label: ''
+          context_mapping: {  }
+          tab_title:
+            tab:
+              - Enrichment
+              - Nearby
+              - Conservation
+              - 'Meet the Animals'
+          num_tabs: 4
+        components:
+          ff989ec6-d734-4276-bf4c-9d5b610d1fbc:
+            uuid: ff989ec6-d734-4276-bf4c-9d5b610d1fbc
+            region: tab_content_0
+            configuration:
+              id: 'field_block:node:exhibit:field_enrichment'
+              label: Enrichment
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          63c42f28-4e3b-4964-9ed8-da1a3b56f3a7:
+            uuid: 63c42f28-4e3b-4964-9ed8-da1a3b56f3a7
+            region: tab_content_1
+            configuration:
+              id: 'field_block:node:exhibit:field_nearby'
+              label: Nearby
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          a24b6b74-996b-4066-9455-fec81ede22e2:
+            uuid: a24b6b74-996b-4066-9455-fec81ede22e2
+            region: tab_content_2
+            configuration:
+              id: 'field_block:node:exhibit:field_conservation_efforts'
+              label: 'Conservation Efforts'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          a7ecafbc-600e-4212-86e8-b8b63b3ca0e9:
+            uuid: a7ecafbc-600e-4212-86e8-b8b63b3ca0e9
+            region: tab_content_3
+            configuration:
+              id: 'views_block:exhibits-block_5'
+              label: ''
+              label_display: '0'
+              provider: views
+              context_mapping: {  }
+              views_label: ''
+              items_per_page: none
+            weight: 0
             additional: {  }
         third_party_settings: {  }
       -
@@ -486,6 +598,7 @@ content:
     weight: 100
     region: content
 hidden:
+  addtoany: true
   field_card_position: true
   field_conservation_efforts: true
   field_daily_demonstrations: true

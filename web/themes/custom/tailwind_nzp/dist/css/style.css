@@ -4296,6 +4296,11 @@ aside .block-title{
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+aside .block-title a{
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
 .page-title{
   margin-bottom: 0.25rem;
   display: flex;

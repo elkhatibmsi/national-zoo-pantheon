@@ -1,0 +1,20 @@
+uuid: c4e6945a-64f4-4fc4-9f58-1a59d4803baf
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - storage
+id: node.field_exhibit_hours
+field_name: field_exhibit_hours
+entity_type: node
+type: entity_reference
+settings:
+  target_type: storage
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

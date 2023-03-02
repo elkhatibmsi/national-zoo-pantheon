@@ -1,0 +1,29 @@
+uuid: 2c640eb6-9e91-4c67-9232-3d3d0b742552
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_exhibit_hours
+    - node.type.exhibit
+    - storage.storage_type.hours
+id: node.exhibit.field_exhibit_hours
+field_name: field_exhibit_hours
+entity_type: node
+bundle: exhibit
+label: 'Exhibit Hours'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:storage'
+  handler_settings:
+    target_bundles:
+      hours: hours
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -43,7 +43,7 @@
 %}
 
 {%
-    set label_classes = ['border-blue-sapphire','font-semibold','sans','inline-block','mb-2','pb-2','border-b-4','uppercase']
+    set strong_classes = ['inline-block']
 %}
 
 {% if label_hidden %}
@@ -57,7 +57,7 @@
     {% endfor %}
   {% endif %}
 {% else %}
-    <strong {{ title_attributes.addClass(title_classes, label_classes)}}>{{ label }}</strong>
+    <strong {{ title_attributes.addClass(title_classes, strong_classes)}}>{{ label }}</strong>:
     {% if multiple %}
     {% endif %}
     {% for item in items %}

@@ -1,4 +1,4 @@
-uuid: 5c68d103-432f-47a0-b4d0-a30db79787e5
+uuid: c8f5d351-4a37-4907-8cca-0ae8a4ae6649
 langcode: en
 status: true
 dependencies:
@@ -12,6 +12,7 @@ dependencies:
     - paragraphs.paragraphs_type.webcam_embed
   module:
     - link
+    - media_library
     - text
 id: paragraph.webcam_embed.default
 targetEntityType: paragraph
@@ -19,48 +20,52 @@ bundle: webcam_embed
 mode: default
 content:
   field_webcam_poster_image:
-    type: entity_reference_entity_view
-    label: hidden
-    settings:
-      view_mode: media_url
-      link: false
-    third_party_settings: {  }
+    type: media_library_widget
     weight: 0
     region: content
-  field_webcam_timeout:
-    type: number_integer
-    label: hidden
     settings:
-      thousand_separator: ''
-      prefix_suffix: true
+      media_types: {  }
     third_party_settings: {  }
+  field_webcam_preroll_video:
+    type: entity_reference_autocomplete
     weight: 3
     region: content
-  field_webcam_timeout_message:
-    type: text_default
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    weight: 4
-    region: content
-  field_webcam_video_url:
-    type: link
-    label: hidden
     settings:
-      trim_length: 80
-      url_only: false
-      url_plain: false
-      rel: ''
-      target: ''
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
+  field_webcam_timeout:
+    type: number
     weight: 1
     region: content
-  field_webcam_volume:
-    type: number_unformatted
-    label: hidden
-    settings: {  }
+    settings:
+      placeholder: ''
     third_party_settings: {  }
+  field_webcam_timeout_message:
+    type: text_textarea
     weight: 2
     region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_webcam_video_url:
+    type: link_default
+    weight: 4
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  field_webcam_volume:
+    type: number
+    weight: 5
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
 hidden:
-  field_webcam_preroll_video: true
+  created: true
+  status: true

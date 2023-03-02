@@ -91,6 +91,11 @@ grid_gallery:
   header: true
   js:
     src/js/grid-gallery.js: {}
-  css:
-    theme:
-      src/css/gallery.css: {}
+
+webcam_embed:
+  version: 1.x
+  header: true
+  js:
+    https://cdn.rawgit.com/video-dev/hls.js/18bb552/dist/hls.min.js: { type: external, minified: true }
+    src/js/webcam-embed.js: {}
+

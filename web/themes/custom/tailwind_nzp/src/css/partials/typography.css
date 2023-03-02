@@ -1,7 +1,11 @@
 /* Typography */
 
   
-  a {
+body {
+  font-size:14px;
+}
+
+a {
     @apply !no-underline;
   }
   

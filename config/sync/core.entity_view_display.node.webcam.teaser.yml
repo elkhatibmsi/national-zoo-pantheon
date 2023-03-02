@@ -10,6 +10,8 @@ dependencies:
     - field.field.node.webcam.field_landing_image
     - field.field.node.webcam.field_related_animal
     - field.field.node.webcam.field_sponsored_by
+    - field.field.node.webcam.field_teaser_title
+    - field.field.node.webcam.field_webcam_gallery
     - node.type.webcam
   module:
     - text
@@ -47,3 +49,4 @@ hidden:
   field_related_animal: true
   field_sponsored_by: true
   field_teaser_title: true
+  field_webcam_gallery: true

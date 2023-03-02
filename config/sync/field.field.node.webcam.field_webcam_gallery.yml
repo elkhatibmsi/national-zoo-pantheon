@@ -1,0 +1,29 @@
+uuid: 815a8e37-386d-4ac8-acf6-ff83c77f01f8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_webcam_gallery
+    - node.type.gallery
+    - node.type.webcam
+id: node.webcam.field_webcam_gallery
+field_name: field_webcam_gallery
+entity_type: node
+bundle: webcam
+label: 'Webcam Gallery'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      gallery: gallery
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

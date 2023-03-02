@@ -23,4 +23,8 @@
   .alert-info, .alert-success {
     @apply bg-sap-green;
   }
+
+  .callout {
+    @apply py-4 border-2 rounded border-l-sizzling-red;
+  }
   

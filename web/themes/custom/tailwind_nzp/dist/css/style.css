@@ -4395,6 +4395,15 @@ aside .block-title{
   background-color: rgb(83 120 43 / var(--tw-bg-opacity));
 }
 
+.callout{
+  border-radius: 0.25rem;
+  border-width: 2px;
+  --tw-border-opacity: 1;
+  border-left-color: rgb(240 81 90 / var(--tw-border-opacity));
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
 .breadcrumb{
   margin-top: 2rem;
   margin-bottom: 2rem;

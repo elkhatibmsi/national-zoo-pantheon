@@ -100,6 +100,7 @@ module.exports = {
         'border-r-[1px]',
         'border-b-[1px]',
         'border-l-[1px]',
+        'border-l-4',
         'ring-0',
         'shadow-transparent',
         'outline-0',

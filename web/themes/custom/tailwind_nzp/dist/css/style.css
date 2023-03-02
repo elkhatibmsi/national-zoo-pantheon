@@ -3113,6 +3113,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   border-top-color: rgb(255 255 255 / var(--tw-border-opacity));
 }
 
+.border-l-sizzling-red{
+  --tw-border-opacity: 1;
+  border-left-color: rgb(240 81 90 / var(--tw-border-opacity));
+}
+
 .bg-oxford-blue{
   --tw-bg-opacity: 1;
   background-color: rgb(0 37 84 / var(--tw-bg-opacity));
@@ -4398,6 +4403,7 @@ aside .block-title{
 .callout{
   border-radius: 0.25rem;
   border-width: 2px;
+  border-left-width: 4px;
   border-color: rgb(212 212 212 / var(--tw-border-opacity));
   --tw-border-opacity: 1;
   border-left-color: rgb(240 81 90 / var(--tw-border-opacity));

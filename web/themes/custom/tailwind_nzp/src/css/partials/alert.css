@@ -25,6 +25,6 @@
   }
 
   .callout {
-    @apply p-4 border-2 rounded border-lightgray border-l-sizzling-red;
+    @apply p-4 border-2 rounded border-lightgray border-l-sizzling-red border-l-4;
   }
   

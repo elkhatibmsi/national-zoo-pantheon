@@ -6,7 +6,7 @@
 }
 .btn-primary,
 .button--primary {
-  @apply bg-oxford-blue;
+  @apply button bg-oxford-blue;
   a {
    @apply text-white;
   }

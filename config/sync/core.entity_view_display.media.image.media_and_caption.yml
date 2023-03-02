@@ -16,7 +16,6 @@ dependencies:
   module:
     - image
     - layout_builder
-    - layout_discovery
     - nzp_layouts
     - text_field_formatter
 third_party_settings:
@@ -25,36 +24,29 @@ third_party_settings:
     allow_custom: false
     sections:
       -
-        layout_id: layout_image_with_caption
+        layout_id: layout_nzp_two_col
         layout_settings:
-          label: ''
           context_mapping: {  }
+          custom_classes: ''
+          custom_region_classes:
+            one_col: ''
+            two_col: ''
+          region_classes:
+            one_col: col-span-9
+            two_col: col-span-3
+          container_classes: 'container mx-auto'
+          html_container_elements: div
+          html_region_elements:
+            one_col: div
+            two_col: div
+          background_color: bg-none
+          region_background_color:
+            one_col: bg-none
+            two_col: bg-none
         components:
-          27148c9a-dfd6-49be-ac91-db5370ecf57a:
-            uuid: 27148c9a-dfd6-49be-ac91-db5370ecf57a
-            region: image
-            configuration:
-              id: 'field_block:media:image:field_media_image'
-              label: Image
-              label_display: '0'
-              provider: layout_builder
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
-              formatter:
-                type: image
-                label: visually_hidden
-                settings:
-                  image_link: ''
-                  image_style: wide
-                  image_loading:
-                    attribute: lazy
-                third_party_settings: {  }
-            weight: 1
-            additional: {  }
           007afb8c-faf3-48ea-bfae-0ad6157e75e5:
             uuid: 007afb8c-faf3-48ea-bfae-0ad6157e75e5
-            region: caption
+            region: two_col
             configuration:
               id: 'field_block:media:image:field_image_caption'
               label: 'Image Caption'
@@ -68,14 +60,93 @@ third_party_settings:
                 label: hidden
                 settings: {  }
                 third_party_settings: {  }
+            weight: 3
+            additional: {  }
+          7cc52980-b621-4ef1-bf18-9756dd031ac9:
+            uuid: 7cc52980-b621-4ef1-bf18-9756dd031ac9
+            region: one_col
+            configuration:
+              id: 'field_block:media:image:field_media_image'
+              label: Image
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: image
+                label: hidden
+                settings:
+                  image_link: ''
+                  image_style: ''
+                  image_loading:
+                    attribute: lazy
+                third_party_settings: {  }
             weight: 0
             additional: {  }
-        third_party_settings: {  }
-      -
-        layout_id: layout_onecol
-        layout_settings:
-          label: ''
-        components: {  }
+          3837e654-2f30-49ce-9030-b60c3b1b48e9:
+            uuid: 3837e654-2f30-49ce-9030-b60c3b1b48e9
+            region: two_col
+            configuration:
+              id: 'field_block:media:image:field_media_image'
+              label: Image
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: file_download_link
+                label: hidden
+                settings:
+                  link_text: 'Download ([file:size])'
+                  link_title: ''
+                  new_tab: true
+                  force_download: false
+                  custom_classes: ''
+                third_party_settings: {  }
+            weight: 4
+            additional:
+              component_attributes:
+                block_attributes:
+                  id: ''
+                  class: button--primary
+                  style: ''
+                  data: ''
+                block_title_attributes:
+                  id: ''
+                  class: ''
+                  style: ''
+                  data: ''
+                block_content_attributes:
+                  id: ''
+                  class: ''
+                  style: ''
+                  data: ''
+          644be422-b8f9-40d9-bbc0-7776feaeba65:
+            uuid: 644be422-b8f9-40d9-bbc0-7776feaeba65
+            region: two_col
+            configuration:
+              id: 'field_block:media:image:field_image_alt_text'
+              label: 'Image Alt Text'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: text_field_formatter
+                label: hidden
+                settings:
+                  link_to_entity: 0
+                  wrap_tag: h3
+                  wrap_class: text-white
+                  wrap_attributes: ''
+                  override_link_label: ''
+                  token: ''
+                third_party_settings: {  }
+            weight: 2
+            additional: {  }
         third_party_settings: {  }
 _core:
   default_config_hash: B1a2aBHmUulUZN6HrxITEH1tSResuVjXMBEv1lUBtOo

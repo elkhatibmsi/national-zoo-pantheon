@@ -2993,6 +2993,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   border-left-width: 1px;
 }
 
+.border-l-4{
+  border-left-width: 4px;
+}
+
 .border-b-2{
   border-bottom-width: 2px;
 }
@@ -3001,12 +3005,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   border-bottom-width: 1px;
 }
 
-.border-l-4{
-  border-left-width: 4px;
-}
-
 .border-b-4{
   border-bottom-width: 4px;
+}
+
+.border-l-2{
+  border-left-width: 2px;
 }
 
 .border-none{
@@ -4402,8 +4406,10 @@ aside .block-title{
 
 .callout{
   border-radius: 0.25rem;
-  border-width: 2px;
-  border-left-width: 4px;
+  border-top-width: 1px;
+  border-right-width: 1px;
+  border-bottom-width: 1px;
+  border-left-width: 2px;
   border-color: rgb(212 212 212 / var(--tw-border-opacity));
   --tw-border-opacity: 1;
   border-left-color: rgb(240 81 90 / var(--tw-border-opacity));

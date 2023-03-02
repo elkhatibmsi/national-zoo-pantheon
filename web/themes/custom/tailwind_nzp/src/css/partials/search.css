@@ -1,0 +1,27 @@
+
+
+.search-form {
+    overflow:visible;
+  }
+  
+  .search-form .form-item  {
+    padding:0px;
+    margin:0px;
+  }
+  .search-form input[type="text"] {
+    width:100%;
+    border-radius:1.5em;
+    position:relative;
+    padding: 1em 0.5em;
+    margin:0 !important;
+  }
+  
+  .search-form input[type="submit"] {
+    display:none;
+  }
+  
+  .fill-black svg {
+    fill: #444;
+    z-index:1000
+  }
+  

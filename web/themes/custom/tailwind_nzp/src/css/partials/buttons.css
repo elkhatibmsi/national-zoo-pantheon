@@ -7,15 +7,27 @@
 .btn-primary,
 .button--primary {
   @apply bg-oxford-blue;
+  a {
+   @apply text-white;
+  }
 }
-.button--primary a {
-  color: white;
-}
-.btn-primary:hover,
+
 .button--primary:hover {
   @apply bg-sap-green;
 }
 
 .layout-builder-form {
   @apply container mx-auto py-4;
+}
+
+.more-link {
+  @apply btn-primary button;
+  a {
+    @apply text-white flex flex-wrap items-center;
+    &:after {
+      content: "›";
+      margin-left:0.5em;
+      font-size:1.5em;
+    }
+  }
 }

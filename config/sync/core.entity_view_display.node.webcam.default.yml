@@ -300,6 +300,7 @@ content:
     weight: 0
     region: content
 hidden:
+  addtoany: true
   field_content_block: true
   field_editorial_access: true
   field_landing_image: true

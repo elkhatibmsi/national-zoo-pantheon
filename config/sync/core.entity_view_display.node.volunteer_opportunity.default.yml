@@ -9,7 +9,6 @@ dependencies:
     - field.field.node.volunteer_opportunity.field_commitment
     - field.field.node.volunteer_opportunity.field_editorial_access
     - field.field.node.volunteer_opportunity.field_featured
-    - field.field.node.volunteer_opportunity.field_image
     - field.field.node.volunteer_opportunity.field_maximum_age
     - field.field.node.volunteer_opportunity.field_minimum_age
     - field.field.node.volunteer_opportunity.field_nzp_location
@@ -125,6 +124,5 @@ hidden:
   field_application_live_range: true
   field_editorial_access: true
   field_featured: true
-  field_image: true
   field_maximum_age: true
   field_minimum_age: true

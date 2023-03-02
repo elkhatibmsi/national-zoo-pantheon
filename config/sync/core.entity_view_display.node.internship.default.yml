@@ -9,6 +9,7 @@ dependencies:
     - field.field.node.internship.field_housing
     - field.field.node.internship.field_how_to_apply
     - field.field.node.internship.field_internship_category
+    - field.field.node.internship.field_intro_text
     - field.field.node.internship.field_nzp_location
     - field.field.node.internship.field_parking
     - field.field.node.internship.field_qualifications
@@ -63,6 +64,13 @@ content:
       link: true
     third_party_settings: {  }
     weight: 10
+    region: content
+  field_intro_text:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
     region: content
   field_nzp_location:
     type: entity_reference_label

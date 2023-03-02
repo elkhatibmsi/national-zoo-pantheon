@@ -1519,146 +1519,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-right: 0px !important;
 }
 
-.-ml-0{
-  margin-left: -0px;
-}
-
-.-ml-1{
-  margin-left: -0.25rem;
-}
-
-.-ml-2{
-  margin-left: -0.5rem;
-}
-
-.-ml-3{
-  margin-left: -0.75rem;
-}
-
-.-ml-4{
-  margin-left: -1rem;
-}
-
-.-ml-5{
-  margin-left: -1.25rem;
-}
-
-.-ml-6{
-  margin-left: -1.5rem;
-}
-
-.-ml-7{
-  margin-left: -1.75rem;
-}
-
-.-ml-8{
-  margin-left: -2rem;
-}
-
-.-ml-9{
-  margin-left: -2.25rem;
-}
-
-.-ml-10{
-  margin-left: -2.5rem;
-}
-
-.-ml-11{
-  margin-left: -2.75rem;
-}
-
-.-ml-12{
-  margin-left: -3rem;
-}
-
-.-ml-14{
-  margin-left: -3.5rem;
-}
-
-.-ml-16{
-  margin-left: -4rem;
-}
-
-.-ml-20{
-  margin-left: -5rem;
-}
-
-.-ml-24{
-  margin-left: -6rem;
-}
-
-.-ml-28{
-  margin-left: -7rem;
-}
-
-.-ml-32{
-  margin-left: -8rem;
-}
-
-.-ml-36{
-  margin-left: -9rem;
-}
-
-.-ml-40{
-  margin-left: -10rem;
-}
-
-.-ml-44{
-  margin-left: -11rem;
-}
-
-.-ml-48{
-  margin-left: -12rem;
-}
-
-.-ml-52{
-  margin-left: -13rem;
-}
-
-.-ml-56{
-  margin-left: -14rem;
-}
-
-.-ml-60{
-  margin-left: -15rem;
-}
-
-.-ml-64{
-  margin-left: -16rem;
-}
-
-.-ml-72{
-  margin-left: -18rem;
-}
-
-.-ml-80{
-  margin-left: -20rem;
-}
-
-.-ml-96{
-  margin-left: -24rem;
-}
-
-.-ml-px{
-  margin-left: -1px;
-}
-
-.-ml-0\.5{
-  margin-left: -0.125rem;
-}
-
-.-ml-1\.5{
-  margin-left: -0.375rem;
-}
-
-.-ml-2\.5{
-  margin-left: -0.625rem;
-}
-
-.-ml-3\.5{
-  margin-left: -0.875rem;
-}
-
 .mt-0{
   margin-top: 0px;
 }
@@ -2043,6 +1903,146 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-left: 0px;
 }
 
+.-ml-0{
+  margin-left: -0px;
+}
+
+.-ml-1{
+  margin-left: -0.25rem;
+}
+
+.-ml-2{
+  margin-left: -0.5rem;
+}
+
+.-ml-3{
+  margin-left: -0.75rem;
+}
+
+.-ml-4{
+  margin-left: -1rem;
+}
+
+.-ml-5{
+  margin-left: -1.25rem;
+}
+
+.-ml-6{
+  margin-left: -1.5rem;
+}
+
+.-ml-7{
+  margin-left: -1.75rem;
+}
+
+.-ml-8{
+  margin-left: -2rem;
+}
+
+.-ml-9{
+  margin-left: -2.25rem;
+}
+
+.-ml-10{
+  margin-left: -2.5rem;
+}
+
+.-ml-11{
+  margin-left: -2.75rem;
+}
+
+.-ml-12{
+  margin-left: -3rem;
+}
+
+.-ml-14{
+  margin-left: -3.5rem;
+}
+
+.-ml-16{
+  margin-left: -4rem;
+}
+
+.-ml-20{
+  margin-left: -5rem;
+}
+
+.-ml-24{
+  margin-left: -6rem;
+}
+
+.-ml-28{
+  margin-left: -7rem;
+}
+
+.-ml-32{
+  margin-left: -8rem;
+}
+
+.-ml-36{
+  margin-left: -9rem;
+}
+
+.-ml-40{
+  margin-left: -10rem;
+}
+
+.-ml-44{
+  margin-left: -11rem;
+}
+
+.-ml-48{
+  margin-left: -12rem;
+}
+
+.-ml-52{
+  margin-left: -13rem;
+}
+
+.-ml-56{
+  margin-left: -14rem;
+}
+
+.-ml-60{
+  margin-left: -15rem;
+}
+
+.-ml-64{
+  margin-left: -16rem;
+}
+
+.-ml-72{
+  margin-left: -18rem;
+}
+
+.-ml-80{
+  margin-left: -20rem;
+}
+
+.-ml-96{
+  margin-left: -24rem;
+}
+
+.-ml-px{
+  margin-left: -1px;
+}
+
+.-ml-0\.5{
+  margin-left: -0.125rem;
+}
+
+.-ml-1\.5{
+  margin-left: -0.375rem;
+}
+
+.-ml-2\.5{
+  margin-left: -0.625rem;
+}
+
+.-ml-3\.5{
+  margin-left: -0.875rem;
+}
+
 .block{
   display: block;
 }
@@ -2085,10 +2085,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .aspect-video{
   aspect-ratio: 16 / 9;
-}
-
-.h-0{
-  height: 0px;
 }
 
 .h-auto{
@@ -2137,6 +2133,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .h-\[80px\]{
   height: 80px;
+}
+
+.h-0{
+  height: 0px;
 }
 
 .max-h-\[200px\]{
@@ -2534,6 +2534,16 @@ Ensure the default browser behavior of the `hidden` attribute.
   row-gap: 0px;
 }
 
+.gap-x-4{
+  -moz-column-gap: 1rem;
+       column-gap: 1rem;
+}
+
+.gap-x-8{
+  -moz-column-gap: 2rem;
+       column-gap: 2rem;
+}
+
 .gap-y-1{
   row-gap: 0.25rem;
 }
@@ -2690,11 +2700,6 @@ Ensure the default browser behavior of the `hidden` attribute.
        column-gap: 0.75rem;
 }
 
-.gap-x-4{
-  -moz-column-gap: 1rem;
-       column-gap: 1rem;
-}
-
 .gap-x-5{
   -moz-column-gap: 1.25rem;
        column-gap: 1.25rem;
@@ -2708,11 +2713,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .gap-x-7{
   -moz-column-gap: 1.75rem;
        column-gap: 1.75rem;
-}
-
-.gap-x-8{
-  -moz-column-gap: 2rem;
-       column-gap: 2rem;
 }
 
 .gap-x-9{
@@ -4443,11 +4443,12 @@ aside .block-title{
   background-color: rgb(0 37 84 / var(--tw-bg-opacity));
 }
 
-.button--primary a {
-  color: white;
+.btn-primary a, .button--primary a{
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
-.btn-primary:hover, .button--primary:hover{
+.button--primary:hover{
   --tw-bg-opacity: 1;
   background-color: rgb(83 120 43 / var(--tw-bg-opacity));
 }
@@ -4494,6 +4495,50 @@ aside .block-title{
   margin-bottom: 1rem;
   padding-left: 1rem;
   padding-right: 1rem;
+}
+
+.more-link{
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 0.25rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 37 84 / var(--tw-bg-opacity));
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  font-weight: 700;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+  --tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.more-link:hover{
+  --tw-bg-opacity: 1;
+  background-color: rgb(22 92 125 / var(--tw-bg-opacity));
+}
+
+.more-link{
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 37 84 / var(--tw-bg-opacity));
+}
+
+.more-link a{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.more-link a:after {
+  content: "›";
+  margin-left:0.5em;
+  font-size:1.5em;
 }
 
 /* Card Teaser */
@@ -5145,6 +5190,32 @@ img{
 .poll .form-item-choice input:checked + label{
   --tw-bg-opacity: 1;
   background-color: rgb(245 245 245 / var(--tw-bg-opacity));
+}
+
+.search-form {
+  overflow:visible;
+}
+
+.search-form .form-item  {
+  padding:0px;
+  margin:0px;
+}
+
+.search-form input[type="text"] {
+  width:100%;
+  border-radius:1.5em;
+  position:relative;
+  padding: 1em 0.5em;
+  margin:0 !important;
+}
+
+.search-form input[type="submit"] {
+  display:none;
+}
+
+.fill-black svg {
+  fill: #444;
+  z-index:1000
 }
 
 .first\:pl-0:first-child{
@@ -6991,16 +7062,16 @@ img{
     grid-template-columns: repeat(6, minmax(0, 1fr));
   }
 
-  .md\:grid-cols-\[\.62fr_\.38fr\]{
-    grid-template-columns: .62fr .38fr;
+  .md\:grid-cols-12{
+    grid-template-columns: repeat(12, minmax(0, 1fr));
   }
 
   .md\:grid-cols-\[\.38fr_\.62fr\]{
     grid-template-columns: .38fr .62fr;
   }
 
-  .md\:grid-cols-12{
-    grid-template-columns: repeat(12, minmax(0, 1fr));
+  .md\:grid-cols-\[\.62fr_\.38fr\]{
+    grid-template-columns: .62fr .38fr;
   }
 
   .md\:flex-row{
@@ -7477,6 +7548,22 @@ img{
     margin-top: 0px;
   }
 
+  .lg\:ml-4{
+    margin-left: 1rem;
+  }
+
+  .lg\:ml-0{
+    margin-left: 0px;
+  }
+
+  .lg\:ml-20{
+    margin-left: 5rem;
+  }
+
+  .lg\:mt-\[59px\]{
+    margin-top: 59px;
+  }
+
   .lg\:mt-1{
     margin-top: 0.25rem;
   }
@@ -7893,10 +7980,6 @@ img{
     margin-bottom: 0.875rem;
   }
 
-  .lg\:ml-0{
-    margin-left: 0px;
-  }
-
   .lg\:ml-1{
     margin-left: 0.25rem;
   }
@@ -7907,10 +7990,6 @@ img{
 
   .lg\:ml-3{
     margin-left: 0.75rem;
-  }
-
-  .lg\:ml-4{
-    margin-left: 1rem;
   }
 
   .lg\:ml-5{
@@ -7951,10 +8030,6 @@ img{
 
   .lg\:ml-16{
     margin-left: 4rem;
-  }
-
-  .lg\:ml-20{
-    margin-left: 5rem;
   }
 
   .lg\:ml-24{
@@ -8031,10 +8106,6 @@ img{
 
   .lg\:ml-3\.5{
     margin-left: 0.875rem;
-  }
-
-  .lg\:mt-\[59px\]{
-    margin-top: 59px;
   }
 
   .lg\:block{
@@ -9529,6 +9600,14 @@ img{
     grid-row-start: auto;
   }
 
+  .\32xl\:mb-8{
+    margin-bottom: 2rem;
+  }
+
+  .\32xl\:mt-8{
+    margin-top: 2rem;
+  }
+
   .\32xl\:mt-0{
     margin-top: 0px;
   }
@@ -9559,10 +9638,6 @@ img{
 
   .\32xl\:mt-7{
     margin-top: 1.75rem;
-  }
-
-  .\32xl\:mt-8{
-    margin-top: 2rem;
   }
 
   .\32xl\:mt-9{
@@ -9839,10 +9914,6 @@ img{
 
   .\32xl\:mb-7{
     margin-bottom: 1.75rem;
-  }
-
-  .\32xl\:mb-8{
-    margin-bottom: 2rem;
   }
 
   .\32xl\:mb-9{
@@ -10242,6 +10313,7 @@ img{
          column-gap: 16rem;
   }
 }
+
 
 
 

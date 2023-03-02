@@ -4398,10 +4398,10 @@ aside .block-title{
 .callout{
   border-radius: 0.25rem;
   border-width: 2px;
+  border-color: rgb(212 212 212 / var(--tw-border-opacity));
   --tw-border-opacity: 1;
   border-left-color: rgb(240 81 90 / var(--tw-border-opacity));
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+  padding: 1rem;
 }
 
 .breadcrumb{

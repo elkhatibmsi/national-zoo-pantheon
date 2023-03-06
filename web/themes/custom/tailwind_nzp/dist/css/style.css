@@ -4316,6 +4316,13 @@ aside .block-title{
   background-color: bg-tea-green;
 }
 
+/* format publications block on scbi project pages */
+
+.publications-wrapper span{
+  margin-bottom: 1rem;
+  display: block;
+}
+
 /* Utility Classes/Overrides */
 
 .visually-hidden{

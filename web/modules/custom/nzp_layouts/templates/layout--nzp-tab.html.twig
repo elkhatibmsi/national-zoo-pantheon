@@ -21,7 +21,7 @@
 
 {% if content %}
 		<div class="tab-wrapper container mx-auto p-4">
-			<ul class="nav nav-tabs flex flex-col md:flex-row flex-wrap list-none border-lightestgray border-b-2 pl-0 mb-4" id="tabs-tab" role="tablist" data-tabs="{{tab_id}}">
+			 <ul class="nav nav-tabs flex flex-col md:flex-row flex-wrap list-none border-lightestgray border-b-2 pl-0 mb-4" id="tabs-tab" role="tablist" data-tabs="{{tab_id}}">
 				<li class="nav-item" role="presentation">
 					<a class="{{tab_nav_classes}} active" data-tabby-default href="#tab-{{tab_id}}-0">{{ settings.tab_title.tab[0]}}</a>
 				</li>
@@ -31,11 +31,12 @@
 					</li>
 				{% endfor %}
 			</ul>
+			<div class="tab-content">
 			{% for index in range(0, tabIndex-1) %}
 				<div {{attribute(region_attributes, 'tab_content_' ~index)}} id="tab-{{tab_id}}-{{index}}">
-					{{ attribute(content, 'tab_content_' ~ index) }}
+				<div>	{{ attribute(content, 'tab_content_' ~ index) }} </div>
 				</div>
 			{% endfor %}
+			</div>
 		</div>
-	</section>
 {% endif %}

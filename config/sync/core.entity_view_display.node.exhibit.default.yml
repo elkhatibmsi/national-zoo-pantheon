@@ -26,6 +26,7 @@ dependencies:
     - views.view.media_release_and_news
   module:
     - addtoany
+    - ctools
     - entity_reference_revisions
     - geofield
     - layout_builder
@@ -346,7 +347,7 @@ third_party_settings:
                 label: hidden
                 settings: {  }
                 third_party_settings: {  }
-            weight: 1
+            weight: 2
             additional: {  }
           26b863e1-0032-4867-8227-db2cba9a7beb:
             uuid: 26b863e1-0032-4867-8227-db2cba9a7beb
@@ -365,7 +366,7 @@ third_party_settings:
                 settings:
                   view_mode: default
                 third_party_settings: {  }
-            weight: 2
+            weight: 3
             additional: {  }
           95db6036-7584-4986-99db-c6f46845a95d:
             uuid: 95db6036-7584-4986-99db-c6f46845a95d
@@ -389,7 +390,7 @@ third_party_settings:
                   override_link_label: ''
                   token: ''
                 third_party_settings: {  }
-            weight: 0
+            weight: 1
             additional: {  }
           7aa13238-1e3b-4fee-ac53-586066356f09:
             uuid: 7aa13238-1e3b-4fee-ac53-586066356f09
@@ -417,86 +418,18 @@ third_party_settings:
               items_per_page: none
             weight: 2
             additional: {  }
-        third_party_settings: {  }
-      -
-        layout_id: layout_nzp_tab
-        layout_settings:
-          label: ''
-          context_mapping: {  }
-          tab_title:
-            tab:
-              - Enrichment
-              - Nearby
-              - Conservation
-              - 'Meet the Animals'
-          num_tabs: 4
-        components:
-          ff989ec6-d734-4276-bf4c-9d5b610d1fbc:
-            uuid: ff989ec6-d734-4276-bf4c-9d5b610d1fbc
-            region: tab_content_0
+          16c2e323-0452-45b2-9fc2-c2cc5578124d:
+            uuid: 16c2e323-0452-45b2-9fc2-c2cc5578124d
+            region: one_col
             configuration:
-              id: 'field_block:node:exhibit:field_enrichment'
-              label: Enrichment
+              id: 'entity_view:node'
+              label: 'Entity view (Content)'
               label_display: '0'
-              provider: layout_builder
+              provider: ctools
+              view_mode: info_card
               context_mapping:
                 entity: layout_builder.entity
-                view_mode: view_mode
-              formatter:
-                type: text_default
-                label: hidden
-                settings: {  }
-                third_party_settings: {  }
-            weight: 0
-            additional: {  }
-          63c42f28-4e3b-4964-9ed8-da1a3b56f3a7:
-            uuid: 63c42f28-4e3b-4964-9ed8-da1a3b56f3a7
-            region: tab_content_1
-            configuration:
-              id: 'field_block:node:exhibit:field_nearby'
-              label: Nearby
-              label_display: '0'
-              provider: layout_builder
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
-              formatter:
-                type: text_default
-                label: hidden
-                settings: {  }
-                third_party_settings: {  }
-            weight: 0
-            additional: {  }
-          a24b6b74-996b-4066-9455-fec81ede22e2:
-            uuid: a24b6b74-996b-4066-9455-fec81ede22e2
-            region: tab_content_2
-            configuration:
-              id: 'field_block:node:exhibit:field_conservation_efforts'
-              label: 'Conservation Efforts'
-              label_display: '0'
-              provider: layout_builder
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
-              formatter:
-                type: text_default
-                label: hidden
-                settings: {  }
-                third_party_settings: {  }
-            weight: 0
-            additional: {  }
-          a7ecafbc-600e-4212-86e8-b8b63b3ca0e9:
-            uuid: a7ecafbc-600e-4212-86e8-b8b63b3ca0e9
-            region: tab_content_3
-            configuration:
-              id: 'views_block:exhibits-block_5'
-              label: ''
-              label_display: '0'
-              provider: views
-              context_mapping: {  }
-              views_label: ''
-              items_per_page: none
-            weight: 0
+            weight: 4
             additional: {  }
         third_party_settings: {  }
       -
@@ -523,7 +456,7 @@ third_party_settings:
               context_mapping: {  }
               views_label: 'More Exhibits'
               items_per_page: none
-            weight: 0
+            weight: 1
             additional:
               component_attributes:
                 block_attributes:

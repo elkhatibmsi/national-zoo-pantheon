@@ -8,21 +8,23 @@ dependencies:
     - field.field.storage.hours.field_hours_description
     - storage.storage_type.hours
   module:
-    - text
+    - time_field
 id: storage.hours.default
 targetEntityType: storage
 bundle: hours
 mode: default
 content:
-  field_hours_description:
-    type: text_default
+  field_hours_available:
+    type: time_range_formatter
     label: hidden
-    settings: {  }
+    settings:
+      time_format: 'g a'
+      timerange_format: 'start ~ end'
     third_party_settings: {  }
     weight: 0
     region: content
 hidden:
   field_dates_active: true
-  field_hours_available: true
+  field_hours_description: true
   name: true
   user_id: true

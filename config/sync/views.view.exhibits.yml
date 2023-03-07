@@ -150,7 +150,7 @@ display:
         type: tailwindGrid
         options:
           uses_fields: false
-          column_count: grid-span-6
+          column_count: grid-span-4
           row_classes: ''
       row:
         type: 'entity:node'

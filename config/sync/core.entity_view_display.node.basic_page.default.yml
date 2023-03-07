@@ -26,6 +26,7 @@ dependencies:
     - node.type.basic_page
     - system.menu.main
   module:
+    - addtoany
     - layout_builder
     - layout_builder_restrictions
     - menu_block
@@ -39,23 +40,60 @@ third_party_settings:
     allow_custom: true
     sections:
       -
-        layout_id: layout_nzp_one_col
+        layout_id: layout_nzp_two_col
         layout_settings:
           context_mapping: {  }
           custom_classes: ''
-          custom_region_classes: ''
+          custom_region_classes:
+            one_col: ''
+            two_col: ''
           region_classes:
-            content: col-md-12
-          container_classes: container
+            one_col: col-span-9
+            two_col: col-span-3
+          container_classes: 'container mx-auto'
           html_container_elements: div
           html_region_elements:
-            content: div
+            one_col: div
+            two_col: div
           background_color: bg-none
-          region_background_color: null
+          region_background_color:
+            one_col: bg-none
+            two_col: bg-none
         components:
+          eaf81cc1-e8c5-412e-9c47-4002946d8833:
+            uuid: eaf81cc1-e8c5-412e-9c47-4002946d8833
+            region: two_col
+            configuration:
+              id: addtoany_block
+              label: 'AddToAny share buttons'
+              label_display: '0'
+              provider: addtoany
+              context_mapping: {  }
+              link_url: ''
+              link_title: ''
+              buttons_size: ''
+              addtoany_html: ''
+            weight: 2
+            additional:
+              component_attributes:
+                block_attributes:
+                  id: ''
+                  class: 'h-full flex justify-start md:justify-end items-center -ml-1'
+                  style: ''
+                  data: ''
+                block_title_attributes:
+                  id: ''
+                  class: ''
+                  style: ''
+                  data: ''
+                block_content_attributes:
+                  id: ''
+                  class: ''
+                  style: ''
+                  data: ''
           dc4cba85-ea99-43f4-a33b-67853ca50299:
             uuid: dc4cba85-ea99-43f4-a33b-67853ca50299
-            region: content
+            region: one_col
             configuration:
               id: system_breadcrumb_block
               label: Breadcrumbs
@@ -64,70 +102,30 @@ third_party_settings:
               context_mapping: {  }
             weight: 0
             additional: {  }
-          8a9a15ec-92ed-4223-8a9b-c947b1edb027:
-            uuid: 8a9a15ec-92ed-4223-8a9b-c947b1edb027
-            region: content
-            configuration:
-              id: 'extra_field_block:node:basic_page:content_moderation_control'
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-            weight: 1
-            additional: {  }
-          03d5e410-f2a9-4a4e-b793-f07aadb0e124:
-            uuid: 03d5e410-f2a9-4a4e-b793-f07aadb0e124
-            region: content
-            configuration:
-              id: 'field_block:node:basic_page:field_subtitle'
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              formatter:
-                type: string
-                label: hidden
-                settings:
-                  link_to_entity: false
-                third_party_settings: {  }
-            weight: 4
-            additional: {  }
-          2116eb3b-c21e-45d6-8271-d01b91f663ae:
-            uuid: 2116eb3b-c21e-45d6-8271-d01b91f663ae
-            region: content
-            configuration:
-              id: 'field_block:node:basic_page:field_featured_video'
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              formatter:
-                type: entity_reference_entity_view
-                label: above
-                settings:
-                  view_mode: default
-                  link: false
-                third_party_settings: {  }
-            weight: 5
-            additional: {  }
         third_party_settings: {  }
       -
         layout_id: layout_nzp_two_col
         layout_settings:
           context_mapping: {  }
           custom_classes: ''
-          custom_region_classes: ''
+          custom_region_classes:
+            one_col: ''
+            two_col: ''
           region_classes:
             one_col: col-span-3
             two_col: col-span-9
-          container_classes: 'container mx-auto p-4'
+          container_classes: 'container mx-auto'
           html_container_elements: div
           html_region_elements:
-            one_col: aside
+            one_col: div
             two_col: div
-          background_color: null
-          region_background_color: bg-none
-          getHtmlElements: div
+          background_color: bg-none
+          region_background_color:
+            one_col: bg-none
+            two_col: bg-none
         components:
-          03c0a1e1-c090-42f1-9630-b20ce45f642d:
-            uuid: 03c0a1e1-c090-42f1-9630-b20ce45f642d
+          29b69d59-3fac-4d04-8747-74e745cef30b:
+            uuid: 29b69d59-3fac-4d04-8747-74e745cef30b
             region: two_col
             configuration:
               id: 'field_block:node:basic_page:title'
@@ -150,6 +148,25 @@ third_party_settings:
                 third_party_settings: {  }
             weight: 0
             additional: {  }
+        third_party_settings: {  }
+      -
+        layout_id: layout_nzp_two_col
+        layout_settings:
+          context_mapping: {  }
+          custom_classes: ''
+          custom_region_classes: ''
+          region_classes:
+            one_col: col-span-3
+            two_col: col-span-9
+          container_classes: 'container mx-auto p-4'
+          html_container_elements: div
+          html_region_elements:
+            one_col: aside
+            two_col: div
+          background_color: null
+          region_background_color: bg-none
+          getHtmlElements: div
+        components:
           eeb8dfc2-2377-4fcc-95db-9a09ad0af2d4:
             uuid: eeb8dfc2-2377-4fcc-95db-9a09ad0af2d4
             region: two_col
@@ -166,7 +183,7 @@ third_party_settings:
                 label: hidden
                 settings: {  }
                 third_party_settings: {  }
-            weight: 1
+            weight: 2
             additional: {  }
           527d17ff-c7cb-4107-9b80-34231fdab468:
             uuid: 527d17ff-c7cb-4107-9b80-34231fdab468
@@ -188,7 +205,7 @@ third_party_settings:
                   require_layouts: 0
                   empty_message: 'Add a new Container'
                 third_party_settings: {  }
-            weight: 2
+            weight: 3
             additional: {  }
           19da46d7-5783-4dfa-a9f8-db6403438098:
             uuid: 19da46d7-5783-4dfa-a9f8-db6403438098
@@ -279,6 +296,7 @@ content:
     weight: 4
     region: content
 hidden:
+  addtoany: true
   field_card_position: true
   field_card_subtitle: true
   field_content_block: true

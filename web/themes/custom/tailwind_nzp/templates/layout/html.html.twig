@@ -25,7 +25,11 @@
 #}
 
 {% set path = path('<current>')|split('/')[1]|clean_class %}
-{% set section_class = 'section-' ~ path %}
+{% set section_class = [
+'section-' ~ path,
+ node_type ? 'node-type-' ~ node_type|clean_class,
+]
+%}
 
 <!DOCTYPE html>
 <html{{ html_attributes }}>

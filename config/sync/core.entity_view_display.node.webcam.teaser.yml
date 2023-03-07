@@ -8,6 +8,7 @@ dependencies:
     - field.field.node.webcam.field_content_block
     - field.field.node.webcam.field_editorial_access
     - field.field.node.webcam.field_landing_image
+    - field.field.node.webcam.field_lower_page_content
     - field.field.node.webcam.field_related_animal
     - field.field.node.webcam.field_sponsored_by
     - field.field.node.webcam.field_teaser_title
@@ -44,8 +45,10 @@ content:
     weight: 100
     region: content
 hidden:
+  addtoany: true
   field_content_block: true
   field_editorial_access: true
+  field_lower_page_content: true
   field_related_animal: true
   field_sponsored_by: true
   field_teaser_title: true

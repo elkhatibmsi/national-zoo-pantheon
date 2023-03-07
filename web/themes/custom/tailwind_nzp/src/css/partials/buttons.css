@@ -2,7 +2,7 @@
 
 .btn,
 .button{
-  @apply font-bold my-2 inline-block py-2 px-4 rounded bg-oxford-blue text-white cursor-pointer shadow-sm hover:bg-blue-sapphire;
+  @apply font-bold my-2 flex content-center items-center max-w-fit py-2 px-4 rounded bg-oxford-blue text-white cursor-pointer shadow-sm hover:bg-blue-sapphire;
 }
 .btn-primary,
 .button--primary {
@@ -21,9 +21,9 @@
 }
 
 .more-link {
-  @apply btn-primary button;
+
   a {
-    @apply text-white flex flex-wrap items-center;
+    @apply btn-primary button;
     &:after {
       content: "›";
       margin-left:0.5em;

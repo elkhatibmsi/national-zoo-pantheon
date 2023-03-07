@@ -1,5 +1,9 @@
 <div class="card--list mb-4 pb-4 border-b-[1px]">
-  <div class="text-xs mb-2 uppercase font-bold">
-    <span>{{ authored_date }}</span> | <span>{{ content_type }}</span></div>
+{% if authored_date|render %} 
+   <div class="text-xs mb-2 uppercase font-bold">
+  <span>{{ authored_date }}</span>
+   </div>
+  {% endif %}
+  
   <a href="{{ link }}"><strong class="text-sm">{{ title }}</strong></a>
 </div>

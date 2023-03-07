@@ -12,8 +12,8 @@
   
 /* stretch all nested content to match parent element */
 
-.stretch * {
-    @apply w-full;
+.stretch img {
+    @apply w-full h-full object-fill;
    
 }
 

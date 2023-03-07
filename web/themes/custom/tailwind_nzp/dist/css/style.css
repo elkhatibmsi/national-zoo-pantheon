@@ -1075,6 +1075,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   z-index: 30;
 }
 
+.z-\[1000\]{
+  z-index: 1000;
+}
+
 .col-span-1{
   grid-column: span 1 / span 1;
 }
@@ -2147,6 +2151,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   max-height: 6rem;
 }
 
+.max-h-\[250px\]{
+  max-height: 250px;
+}
+
 .min-h-\[150px\]{
   min-height: 150px;
 }
@@ -2157,6 +2165,14 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .min-h-screen{
   min-height: 100vh;
+}
+
+.min-h-\[250px\]{
+  min-height: 250px;
+}
+
+.min-h-\[300px\]{
+  min-height: 300px;
 }
 
 .w-24{
@@ -2225,6 +2241,12 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .max-w-\[200px\]{
   max-width: 200px;
+}
+
+.max-w-fit{
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
 }
 
 .flex-none{
@@ -3254,6 +3276,11 @@ Ensure the default browser behavior of the `hidden` attribute.
      object-fit: cover;
 }
 
+.object-fill{
+  -o-object-fit: fill;
+     object-fit: fill;
+}
+
 .object-center{
   -o-object-position: center;
      object-position: center;
@@ -3340,6 +3367,16 @@ Ensure the default browser behavior of the `hidden` attribute.
 .py-1{
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
+}
+
+.px-8{
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.py-8{
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 
 .pt-0{
@@ -4355,8 +4392,11 @@ aside .block-title a{
 
 /* stretch all nested content to match parent element */
 
-.stretch *{
+.stretch img{
+  height: 100%;
   width: 100%;
+  -o-object-fit: fill;
+     object-fit: fill;
 }
 
 /* knockout utility classes */
@@ -4456,8 +4496,13 @@ aside .block-title a{
 .btn, .button{
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
-  display: inline-block;
+  display: flex;
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
   cursor: pointer;
+  align-content: center;
+  align-items: center;
   border-radius: 0.25rem;
   --tw-bg-opacity: 1;
   background-color: rgb(0 37 84 / var(--tw-bg-opacity));
@@ -4557,7 +4602,7 @@ aside .block-title a{
   padding-right: 1rem;
 }
 
-.more-link{
+.more-link a{
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
   display: inline-block;
@@ -4577,20 +4622,17 @@ aside .block-title a{
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
-.more-link:hover{
+.more-link a:hover{
   --tw-bg-opacity: 1;
   background-color: rgb(22 92 125 / var(--tw-bg-opacity));
 }
 
-.more-link{
+.more-link a{
   --tw-bg-opacity: 1;
   background-color: rgb(0 37 84 / var(--tw-bg-opacity));
 }
 
-.more-link a{
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
+.more-link a a{
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }

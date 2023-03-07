@@ -719,6 +719,7 @@ display:
         - 'config:core.entity_view_display.node.event.default'
         - 'config:core.entity_view_display.node.event.teaser'
         - 'config:core.entity_view_display.node.exhibit.default'
+        - 'config:core.entity_view_display.node.exhibit.info_card'
         - 'config:core.entity_view_display.node.exhibit.map_location'
         - 'config:core.entity_view_display.node.exhibit.teaser'
         - 'config:core.entity_view_display.node.gallery.default'
@@ -968,6 +969,7 @@ display:
           required: false
       display_description: ''
       display_extenders: {  }
+      block_hide_empty: true
     cache_metadata:
       max-age: -1
       contexts:
@@ -1006,6 +1008,7 @@ display:
         - 'config:core.entity_view_display.node.event.default'
         - 'config:core.entity_view_display.node.event.teaser'
         - 'config:core.entity_view_display.node.exhibit.default'
+        - 'config:core.entity_view_display.node.exhibit.info_card'
         - 'config:core.entity_view_display.node.exhibit.map_location'
         - 'config:core.entity_view_display.node.exhibit.teaser'
         - 'config:core.entity_view_display.node.gallery.default'

@@ -15,7 +15,10 @@ dependencies:
     - field.field.node.media_release.field_tags
     - field.field.node.media_release.field_teaser_title
     - node.type.media_release
+    - views.view.animals
+    - views.view.media_release_and_news
   module:
+    - addtoany
     - entity_reference_revisions
     - layout_builder
     - layout_builder_restrictions
@@ -23,29 +26,119 @@ dependencies:
     - system
     - text
     - user
+    - views
 third_party_settings:
   layout_builder:
     enabled: true
     allow_custom: false
     sections:
       -
-        layout_id: layout_nzp_one_col
+        layout_id: layout_nzp_two_col_golden
         layout_settings:
+          label: 'golden breadcrumb'
           context_mapping: {  }
-          custom_classes: ''
-          custom_region_classes: ''
-          region_classes:
-            content: col-md-12
-          container_classes: container
-          html_container_elements: div
-          html_region_elements:
-            content: div
-          background_color: bg-none
-          region_background_color: null
         components:
-          795bc261-abab-4a50-aa5a-eabebbbca78c:
-            uuid: 795bc261-abab-4a50-aa5a-eabebbbca78c
-            region: content
+          fb3d49c5-3682-4326-8341-80f2e98bbe37:
+            uuid: fb3d49c5-3682-4326-8341-80f2e98bbe37
+            region: one_col
+            configuration:
+              id: system_breadcrumb_block
+              label: Breadcrumbs
+              label_display: '0'
+              provider: system
+              context_mapping: {  }
+            weight: 0
+            additional:
+              component_attributes:
+                block_attributes:
+                  id: ''
+                  class: '-ml-1.5'
+                  style: ''
+                  data: ''
+                block_title_attributes:
+                  id: ''
+                  class: ''
+                  style: ''
+                  data: ''
+                block_content_attributes:
+                  id: ''
+                  class: ''
+                  style: ''
+                  data: ''
+          80438dbd-c3fa-4a9a-bd28-436968984c69:
+            uuid: 80438dbd-c3fa-4a9a-bd28-436968984c69
+            region: two_col
+            configuration:
+              id: addtoany_block
+              label: 'AddToAny buttons'
+              label_display: '0'
+              provider: addtoany
+              context_mapping: {  }
+            weight: 1
+            additional:
+              component_attributes:
+                block_attributes:
+                  id: ''
+                  class: 'h-full flex justify-start md:justify-end items-center -ml-1'
+                  style: ''
+                  data: ''
+                block_title_attributes:
+                  id: ''
+                  class: ''
+                  style: ''
+                  data: ''
+                block_content_attributes:
+                  id: ''
+                  class: ''
+                  style: ''
+                  data: ''
+        third_party_settings: {  }
+      -
+        layout_id: layout_nzp_two_col_golden
+        layout_settings:
+          label: 'golden title'
+          context_mapping: {  }
+        components:
+          abf6fffa-c474-4638-a117-86558787ffc2:
+            uuid: abf6fffa-c474-4638-a117-86558787ffc2
+            region: one_col
+            configuration:
+              id: 'field_block:node:media_release:created'
+              label: 'Authored on'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: timestamp
+                label: hidden
+                settings:
+                  date_format: short
+                  custom_date_format: ''
+                  timezone: ''
+                third_party_settings: {  }
+            weight: 2
+            additional:
+              component_attributes:
+                block_attributes:
+                  id: ''
+                  class: 'italic text-lightgray'
+                  style: ''
+                  data: ''
+                block_title_attributes:
+                  id: ''
+                  class: ''
+                  style: ''
+                  data: ''
+                block_content_attributes:
+                  id: ''
+                  class: ''
+                  style: ''
+                  data: ''
+          8f2519b9-47c9-45cb-b4b3-6b6f4e562d45:
+            uuid: 8f2519b9-47c9-45cb-b4b3-6b6f4e562d45
+            region: one_col
             configuration:
               id: 'field_block:node:media_release:title'
               label: Title
@@ -59,138 +152,192 @@ third_party_settings:
                 label: hidden
                 settings:
                   link_to_entity: 0
-                  wrap_tag: h1
-                  wrap_class: page-title
+                  wrap_tag: h2
+                  wrap_class: mt-0
                   wrap_attributes: ''
                   override_link_label: ''
                   token: ''
                 third_party_settings: {  }
-            weight: 2
-            additional: {  }
-          674ebd82-0739-4718-a615-29cc87ee4fef:
-            uuid: 674ebd82-0739-4718-a615-29cc87ee4fef
-            region: content
+            weight: 1
+            additional:
+              component_attributes:
+                block_attributes:
+                  id: ''
+                  class: ''
+                  style: ''
+                  data: ''
+                block_title_attributes:
+                  id: ''
+                  class: ''
+                  style: ''
+                  data: ''
+                block_content_attributes:
+                  id: ''
+                  class: ''
+                  style: ''
+                  data: ''
+        third_party_settings: {  }
+      -
+        layout_id: layout_nzp_two_col_golden
+        layout_settings:
+          label: '2 column golden dev'
+          context_mapping: {  }
+        components:
+          97b127a6-50c7-42fa-bb89-4f5743711437:
+            uuid: 97b127a6-50c7-42fa-bb89-4f5743711437
+            region: one_col
             configuration:
-              id: 'field_block:node:media_release:field_media_release_image'
-              label: 'Media Release Image'
+              id: 'field_block:node:media_release:body'
+              label: Body
               label_display: '0'
               provider: layout_builder
               context_mapping:
                 entity: layout_builder.entity
                 view_mode: view_mode
-              formatter:
-                type: blazy_media
-                label: hidden
-                settings:
-                  caption:
-                    field_dams_number: '0'
-                    field_image_alt_text: '0'
-                    field_media_tags: '0'
-                    field_notes: '0'
-                    field_photographer: '0'
-                    field_we_do_not_own: '0'
-                    field_media_image_http: '0'
-                    title: '0'
-                    alt: '0'
-                  view_mode: teaser
-                  style: ''
-                  background: false
-                  box_caption: ''
-                  box_caption_custom: ''
-                  box_media_style: ''
-                  box_style: ''
-                  image_style: slick_media
-                  media_switch: ''
-                  ratio: ''
-                  thumbnail_style: ''
-                  grid: ''
-                  grid_medium: ''
-                  grid_small: ''
-                  current_view_mode: _custom
-                third_party_settings: {  }
-            weight: 5
-            additional: {  }
-          f9906d20-4684-4b00-9366-820aee18fcca:
-            uuid: f9906d20-4684-4b00-9366-820aee18fcca
-            region: content
-            configuration:
-              id: 'field_block:node:media_release:field_subtitle'
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              formatter:
-                type: string
-                label: hidden
-                settings:
-                  link_to_entity: false
-                third_party_settings: {  }
-            weight: 4
-            additional: {  }
-          bc7cc5cc-5cad-49bf-8a2a-0c5ecdb28320:
-            uuid: bc7cc5cc-5cad-49bf-8a2a-0c5ecdb28320
-            region: content
-            configuration:
-              id: 'field_block:node:media_release:body'
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
               formatter:
                 type: text_default
                 label: hidden
                 settings: {  }
                 third_party_settings: {  }
-            weight: 6
-            additional: {  }
-          d39c19b1-d66e-4d97-a623-4f5d97698cd3:
-            uuid: d39c19b1-d66e-4d97-a623-4f5d97698cd3
-            region: content
+            weight: 2
+            additional:
+              component_attributes:
+                block_attributes:
+                  id: ''
+                  class: ''
+                  style: ''
+                  data: ''
+                block_title_attributes:
+                  id: ''
+                  class: ''
+                  style: ''
+                  data: ''
+                block_content_attributes:
+                  id: ''
+                  class: ''
+                  style: ''
+                  data: ''
+          acf8f60f-e347-4cb4-a7a9-ebd6e50b0132:
+            uuid: acf8f60f-e347-4cb4-a7a9-ebd6e50b0132
+            region: two_col
             configuration:
-              id: system_breadcrumb_block
-              label: Breadcrumbs
+              id: 'block_content:b1cc47db-b3d5-4464-a7f5-c6adbfbf26a3'
+              label: 'Email Signup Sidebar'
               label_display: '0'
-              provider: system
+              provider: block_content
+              status: true
+              info: ''
+              view_mode: full
               context_mapping: {  }
-            weight: 1
-            additional: {  }
-          ec6b9ef8-c083-4847-b6a9-5b9fa49b16c3:
-            uuid: ec6b9ef8-c083-4847-b6a9-5b9fa49b16c3
-            region: content
+            weight: 0
+            additional:
+              component_attributes:
+                block_attributes:
+                  id: ''
+                  class: ''
+                  style: ''
+                  data: ''
+                block_title_attributes:
+                  id: ''
+                  class: ''
+                  style: ''
+                  data: ''
+                block_content_attributes:
+                  id: ''
+                  class: ''
+                  style: ''
+                  data: ''
+          1994a573-8123-43ae-bae1-ebf875266239:
+            uuid: 1994a573-8123-43ae-bae1-ebf875266239
+            region: two_col
             configuration:
-              id: 'field_block:node:media_release:field_content_block'
-              label: 'Paragraph Components'
-              label_display: '0'
+              id: 'views_block:media_release_and_news-block_4'
+              label: 'Related News'
+              label_display: visible
+              provider: views
+              context_mapping: {  }
+              views_label: 'Related News'
+              items_per_page: none
+            weight: 3
+            additional:
+              component_attributes:
+                block_attributes:
+                  id: ''
+                  class: ''
+                  style: ''
+                  data: ''
+                block_title_attributes:
+                  id: ''
+                  class: ''
+                  style: ''
+                  data: ''
+                block_content_attributes:
+                  id: ''
+                  class: ''
+                  style: ''
+                  data: ''
+          0a24b3e3-11fc-4c8d-89ef-5de2aadd2012:
+            uuid: 0a24b3e3-11fc-4c8d-89ef-5de2aadd2012
+            region: two_col
+            configuration:
+              id: 'views_block:animals-block_3'
+              label: 'Related Animal(s)'
+              label_display: visible
+              provider: views
+              context_mapping: {  }
+              views_label: 'Related Animal(s)'
+              items_per_page: none
+            weight: 2
+            additional:
+              component_attributes:
+                block_attributes:
+                  id: ''
+                  class: ''
+                  style: ''
+                  data: ''
+                block_title_attributes:
+                  id: ''
+                  class: ''
+                  style: ''
+                  data: ''
+                block_content_attributes:
+                  id: ''
+                  class: ''
+                  style: ''
+                  data: ''
+          11df9d76-cc68-4bb8-91a5-db3505f06f0f:
+            uuid: 11df9d76-cc68-4bb8-91a5-db3505f06f0f
+            region: one_col
+            configuration:
+              id: 'field_block:node:media_release:field_media_release_image'
+              label: 'Image Gallery'
+              label_display: visible
               provider: layout_builder
               context_mapping:
                 entity: layout_builder.entity
                 view_mode: view_mode
               formatter:
-                type: layout_paragraphs_builder
+                type: entity_reference_entity_view
                 label: hidden
                 settings:
-                  preview_view_mode: default
-                  nesting_depth: 0
-                  require_layouts: 0
-                  empty_message: ''
+                  view_mode: default
                 third_party_settings: {  }
-            weight: 7
+            weight: 3
             additional: {  }
-          03df5dd5-7431-4a68-a6ae-4d74c65b168e:
-            uuid: 03df5dd5-7431-4a68-a6ae-4d74c65b168e
-            region: content
-            configuration:
-              id: 'field_block:node:media_release:field_content_block'
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              formatter:
-                type: entity_reference_revisions_entity_view
-                label: hidden
-                settings:
-                  view_mode: full
-                  link: ''
-                third_party_settings: {  }
-            weight: 8
-            additional: {  }
+        third_party_settings: {  }
+      -
+        layout_id: layout_nzp_one_col
+        layout_settings:
+          context_mapping: {  }
+          custom_classes: ''
+          custom_region_classes: null
+          region_classes: null
+          container_classes: container
+          html_container_elements: div
+          html_region_elements: null
+          background_color: bg-none
+          region_background_color: null
+        components: {  }
         third_party_settings: {  }
   layout_builder_restrictions:
     allowed_block_categories: {  }
@@ -243,6 +390,7 @@ content:
     weight: 0
     region: content
 hidden:
+  addtoany: true
   field_editorial_access: true
   field_landing_image: true
   field_media_release_category: true

@@ -9,6 +9,7 @@ dependencies:
     - field.field.node.internship.field_housing
     - field.field.node.internship.field_how_to_apply
     - field.field.node.internship.field_internship_category
+    - field.field.node.internship.field_intro_text
     - field.field.node.internship.field_nzp_location
     - field.field.node.internship.field_parking
     - field.field.node.internship.field_qualifications
@@ -43,6 +44,7 @@ third_party_settings:
       children:
         - field_editorial_access
         - title
+        - field_intro_text
         - field_internship_category
         - field_status
       label: 'Basic Information'
@@ -110,13 +112,13 @@ content:
     third_party_settings: {  }
   field_application_date:
     type: datetime_default
-    weight: 13
+    weight: 16
     region: content
     settings: {  }
     third_party_settings: {  }
   field_duties_and_responsibilitie:
     type: text_textarea
-    weight: 14
+    weight: 17
     region: content
     settings:
       rows: 5
@@ -130,7 +132,7 @@ content:
     third_party_settings: {  }
   field_housing:
     type: string_textarea
-    weight: 16
+    weight: 19
     region: content
     settings:
       rows: 5
@@ -138,7 +140,7 @@ content:
     third_party_settings: {  }
   field_how_to_apply:
     type: text_textarea
-    weight: 18
+    weight: 21
     region: content
     settings:
       rows: 5
@@ -146,7 +148,7 @@ content:
     third_party_settings: {  }
   field_internship_category:
     type: entity_reference_autocomplete
-    weight: 10
+    weight: 11
     region: content
     settings:
       match_operator: CONTAINS
@@ -154,15 +156,23 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+  field_intro_text:
+    type: text_textarea
+    weight: 10
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
   field_nzp_location:
     type: options_select
-    weight: 15
+    weight: 18
     region: content
     settings: {  }
     third_party_settings: {  }
   field_parking:
     type: string_textarea
-    weight: 17
+    weight: 20
     region: content
     settings:
       rows: 5
@@ -170,7 +180,7 @@ content:
     third_party_settings: {  }
   field_qualifications:
     type: text_textarea
-    weight: 21
+    weight: 24
     region: content
     settings:
       rows: 5
@@ -178,13 +188,13 @@ content:
     third_party_settings: {  }
   field_status:
     type: options_select
-    weight: 11
+    weight: 12
     region: content
     settings: {  }
     third_party_settings: {  }
   field_stipend:
     type: string_textarea
-    weight: 19
+    weight: 22
     region: content
     settings:
       rows: 5
@@ -192,7 +202,7 @@ content:
     third_party_settings: {  }
   field_term_of_appointment:
     type: text_textarea
-    weight: 20
+    weight: 23
     region: content
     settings:
       rows: 5
@@ -219,7 +229,7 @@ content:
     third_party_settings: {  }
   status:
     type: boolean_checkbox
-    weight: 9
+    weight: 10
     region: content
     settings:
       display_label: true

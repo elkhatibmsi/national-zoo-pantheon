@@ -94,10 +94,6 @@ process:
     -
       plugin: get
       source: field_slideshow
-  field_hours:
-    -
-      plugin: get
-      source: field_hours
   field_marker:
     -
       plugin: sub_process
@@ -124,8 +120,117 @@ process:
       source: field_cost
   field_content_block:
     -
-      plugin: get
+      plugin: sub_process
       source: field_content_block
+      process:
+        target_id:
+          -
+            plugin: migration_lookup
+            migration:
+              - paragraph__accordion_tabs
+              - paragraph__accordion
+              - paragraph__block_embed_no_title
+              - paragraph__block_embed
+              - paragraph__button_grid
+              - paragraph__button_item
+              - paragraph__callout
+              - paragraph__card_grid
+              - paragraph__card_icon_item
+              - paragraph__card_item_blank
+              - paragraph__card_item
+              - paragraph__cell
+              - paragraph__class_session
+              - paragraph__collapsible_block
+              - paragraph__content_video
+              - paragraph__entity_list
+              - paragraph__faq_item
+              - paragraph__faq
+              - paragraph__flipbook_grid_item
+              - paragraph__flipbook_grid
+              - paragraph__grid
+              - paragraph__horizontal_single_tab
+              - paragraph__horizontal_tabs
+              - paragraph__icon_card_item
+              - paragraph__image_collection
+              - paragraph__image
+              - paragraph__looping_video
+              - paragraph__menu_tabs
+              - paragraph__modal_media_gallery
+              - paragraph__multi_column_layout_text_
+              - paragraph__section_heading
+              - paragraph__section
+              - paragraph__single_image_with_caption
+              - paragraph__slide
+              - paragraph__slideshow_image_only
+              - paragraph__slideshow
+              - paragraph__sponsors
+              - paragraph__sticky_anchor_menu
+              - paragraph__text
+              - paragraph__thumbnail_slideshow
+              - paragraph__two_column_grid
+              - paragraph__two_columns_40_60
+              - paragraph__two_columns_equal
+              - paragraph__two_columns
+              - paragraph__view_embed
+            source: value
+          -
+            plugin: extract
+            index:
+              - 0
+        target_revision_id:
+          -
+            plugin: migration_lookup
+            migration:
+              - paragraph__accordion_tabs
+              - paragraph__accordion
+              - paragraph__block_embed_no_title
+              - paragraph__block_embed
+              - paragraph__button_grid
+              - paragraph__button_item
+              - paragraph__callout
+              - paragraph__card_grid
+              - paragraph__card_icon_item
+              - paragraph__card_item_blank
+              - paragraph__card_item
+              - paragraph__cell
+              - paragraph__class_session
+              - paragraph__collapsible_block
+              - paragraph__content_video
+              - paragraph__entity_list
+              - paragraph__faq_item
+              - paragraph__faq
+              - paragraph__flipbook_grid_item
+              - paragraph__flipbook_grid
+              - paragraph__grid
+              - paragraph__horizontal_single_tab
+              - paragraph__horizontal_tabs
+              - paragraph__icon_card_item
+              - paragraph__image_collection
+              - paragraph__image
+              - paragraph__looping_video
+              - paragraph__menu_tabs
+              - paragraph__modal_media_gallery
+              - paragraph__multi_column_layout_text_
+              - paragraph__section_heading
+              - paragraph__section
+              - paragraph__single_image_with_caption
+              - paragraph__slide
+              - paragraph__slideshow_image_only
+              - paragraph__slideshow
+              - paragraph__sponsors
+              - paragraph__sticky_anchor_menu
+              - paragraph__text
+              - paragraph__thumbnail_slideshow
+              - paragraph__two_column_grid
+              - paragraph__two_columns_40_60
+              - paragraph__two_columns_equal
+              - paragraph__two_columns
+              - paragraph__view_embed
+            source: value
+          -
+            plugin: extract
+            index:
+              - 1
   field_accessibility:
     -
       plugin: sub_process
@@ -153,8 +258,6 @@ destination:
   translations: true
   default_bundle: attraction
 migration_dependencies:
-  required:
-    - upgrade_d7_user
-    - upgrade_d7_node_type
+  required: {  }
   optional:
     - upgrade_d7_field_instance

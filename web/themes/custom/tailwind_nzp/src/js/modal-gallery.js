@@ -9,7 +9,7 @@
       $('.modal-wrapper').removeClass('flex').addClass('hidden');
     }
  
-    $('.modal-thumbnail-item').on('click', function(){
+    $('.modal-thumbnail-item img').on('click', function(){
       OpenModal();
     });
 

@@ -10,6 +10,7 @@ dependencies:
     - field.field.node.internship.field_housing
     - field.field.node.internship.field_how_to_apply
     - field.field.node.internship.field_internship_category
+    - field.field.node.internship.field_intro_text
     - field.field.node.internship.field_nzp_location
     - field.field.node.internship.field_parking
     - field.field.node.internship.field_qualifications
@@ -36,6 +37,7 @@ hidden:
   field_housing: true
   field_how_to_apply: true
   field_internship_category: true
+  field_intro_text: true
   field_nzp_location: true
   field_parking: true
   field_qualifications: true

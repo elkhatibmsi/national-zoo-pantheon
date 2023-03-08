@@ -71,6 +71,7 @@ content:
     weight: 0
     region: content
 hidden:
+  addtoany: true
   body: true
   content_moderation_control: true
   field_animal_gallery: true

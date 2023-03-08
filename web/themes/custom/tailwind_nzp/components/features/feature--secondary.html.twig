@@ -49,21 +49,19 @@
 {% endif %}
 
 
-  <div  class=" grid grid-cols-1 lg:grid-cols-2 {{ bgcolor }}">
+  <div  class=" grid grid-cols-1 lg:grid-cols-2 {{ bgcolor }} min-h-[300px]">
         <div class="stretch {{ start_column }} ">
             {{ feature_image }}
         </div>
-        <div class="flex flex-col justify-center">
-            <h2 class="m-0 mt-4 lg:mt-0 text-center {{ textcolor }}">
+        <div class="flex flex-col justify-center m-0 p-8">
+            <h2 class="{{ textcolor }} m-0">
                 {{ feature_title }}
             </h2>
-            <div class="m-0 mx-8 text-center {{ textcolor }}">
+            <div class=" {{ textcolor }}">
                 {{ feature_description }}
             </div>
-            <button class="my-8 lg:my-4 text-center">
-                <a href="{{ feature_link_url }}" class="{{ buttontextcolor }} font-bold border {{ buttonbordercolor }} rounded py-2 px-6">
+                <a href="{{ feature_link_url }}" class="{{ buttontextcolor }} font-bold border {{ buttonbordercolor }} w-auto rounded py-2 px-6 max-w-fit">
                     {{ feature_link_text }}
                 </a>
-            </button>
         </div>             
   </div>

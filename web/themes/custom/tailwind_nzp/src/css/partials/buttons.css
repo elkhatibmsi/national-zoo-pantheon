@@ -2,20 +2,32 @@
 
 .btn,
 .button{
-  @apply font-bold my-2 inline-block py-2 px-4 rounded bg-oxford-blue text-white cursor-pointer shadow-sm hover:bg-blue-sapphire;
+  @apply font-bold my-2 flex content-center items-center max-w-fit py-2 px-4 rounded bg-oxford-blue text-white cursor-pointer shadow-sm hover:bg-blue-sapphire;
 }
 .btn-primary,
 .button--primary {
-  @apply bg-oxford-blue;
+  @apply button bg-oxford-blue;
+  a {
+   @apply text-white;
+  }
 }
-.button--primary a {
-  color: white;
-}
-.btn-primary:hover,
+
 .button--primary:hover {
   @apply bg-sap-green;
 }
 
 .layout-builder-form {
   @apply container mx-auto py-4;
+}
+
+.more-link {
+
+  a {
+    @apply btn-primary button;
+    &:after {
+      content: "›";
+      margin-left:0.5em;
+      font-size:1.5em;
+    }
+  }
 }

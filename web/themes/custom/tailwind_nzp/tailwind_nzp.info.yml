@@ -23,3 +23,10 @@ regions:
 components:
   namespaces:
     nzpComponents: components
+
+
+libraries-override:
+  blazy/media:
+    css:
+      component:
+        css/components/blazy.media.css: false

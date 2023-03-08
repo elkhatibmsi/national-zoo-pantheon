@@ -1,4 +1,7 @@
-
+.breadcrumb {
+  @apply list-none my-4 !mx-0 !pl-0;
+}
+/*
 .breadcrumb {
     @apply list-none my-8 !mx-0 !pl-0;
     li:last-child {
@@ -6,3 +9,4 @@
 
     }
   }
+*/

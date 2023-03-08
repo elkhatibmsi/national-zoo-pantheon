@@ -4429,26 +4429,23 @@ aside .block-title a{
 }
 
 .breadcrumb{
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
   margin-left: 0px !important;
   margin-right: 0px !important;
   list-style-type: none;
   padding-left: 0px !important;
 }
 
-.breadcrumb li:last-child{
-  max-width: 200px;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-}
+/*
+.breadcrumb {
+    @apply list-none my-8 !mx-0 !pl-0;
+    li:last-child {
+      @apply truncate overflow-hidden text-ellipsis max-w-[200px] lg:max-w-full;
 
-@media (min-width: 1024px){
-  .breadcrumb li:last-child{
-    max-width: 100%;
+    }
   }
-}
+*/
 
 /* Buttons */
 

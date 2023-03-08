@@ -13,7 +13,7 @@
     {% for item in breadcrumb %}
       <li class="truncate">
         {% if item.url %}
-          <a class="font-semibold" href="{{ item.url }}">{{ item.text }}</a><span class="px-3">/</span>
+          <a class="font-semibold" href="{{ item.url }}">{{ item.text }}</a><span class="px-1 md:px-3">/</span>
         {% else %}
           {{ item.text }}
         {% endif %}

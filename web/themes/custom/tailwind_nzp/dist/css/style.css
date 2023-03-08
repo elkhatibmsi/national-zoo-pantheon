@@ -3342,6 +3342,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-bottom: 0.25rem;
 }
 
+.px-1{
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+}
+
 .pt-0{
   padding-top: 0px;
 }
@@ -7374,6 +7379,11 @@ iframe[src*="youtube"]{
 
   .md\:border-r-\[1px\]{
     border-right-width: 1px;
+  }
+
+  .md\:px-3{
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
   }
 }
 

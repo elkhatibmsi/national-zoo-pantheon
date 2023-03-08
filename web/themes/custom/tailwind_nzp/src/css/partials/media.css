@@ -49,6 +49,17 @@ img {
     padding-bottom: 56.25%;
     position: relative;
   }
+
+ /* restyle bootstrap video embeds using tailwind */
+.embed-responsive-16by9 {
+  @apply aspect-video;
+}
+.embed-responsive-item {
+  @apply w-full h-full;
+}
+iframe[src*="youtube"] {
+  @apply w-full aspect-video;
+} 
   
   
 

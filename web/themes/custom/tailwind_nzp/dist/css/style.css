@@ -5090,6 +5090,22 @@ img{
   position: relative;
 }
 
+/* restyle bootstrap video embeds using tailwind */
+
+.embed-responsive-16by9{
+  aspect-ratio: 16 / 9;
+}
+
+.embed-responsive-item{
+  height: 100%;
+  width: 100%;
+}
+
+iframe[src*="youtube"]{
+  aspect-ratio: 16 / 9;
+  width: 100%;
+}
+
 .media__icon {
   opacity:0;
   background: white;

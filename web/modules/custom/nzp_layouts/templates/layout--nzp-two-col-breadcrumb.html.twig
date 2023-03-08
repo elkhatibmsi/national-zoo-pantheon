@@ -23,12 +23,12 @@
 
 {% if content %}
     <div{{ attributes.addClass("container mx-auto px-4 grid grid-cols-[1fr_90px] gap-x-2") }} >
-            <div {{region_attributes.one_col}}>
+            <div {{region_attributes.one_col.addClass("-ml-1.5") }}>
                 {% if content.one_col %}
                     {{ content.one_col }}
                 {% endif %}
             </div>
-        <div {{region_attributes.two_col}}>
+            <div {{region_attributes.two_col.addClass("flex justify items-center") }}>
             {% if content.one_col %}            
                     {{ content.two_col }}
                 {% endif %}    

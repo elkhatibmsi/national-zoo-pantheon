@@ -11,7 +11,7 @@
   <nav role="navigation" aria-labelledby="system-breadcrumb">
     <ol class="flex breadcrumb">
     {% for item in breadcrumb %}
-      <li>
+      <li class="truncate">
         {% if item.url %}
           <a class="font-semibold" href="{{ item.url }}">{{ item.text }}</a><span class="px-3">/</span>
         {% else %}

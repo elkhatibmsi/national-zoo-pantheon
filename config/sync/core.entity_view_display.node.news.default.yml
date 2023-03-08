@@ -18,7 +18,7 @@ dependencies:
     - views.view.animals
     - views.view.media_release_and_news
   content:
-    - 'block_content:basic:b1cc47db-b3d5-4464-a7f5-c6adbfbf26a3'
+    - 'block_content:basic:ac1c72a0-ba39-4ac3-bc23-028a7deb08e2'
   module:
     - addtoany
     - block_content
@@ -210,20 +210,6 @@ third_party_settings:
                 third_party_settings: {  }
             weight: 2
             additional: {  }
-          2b04d291-f428-4ede-94e5-fa0e67c5992f:
-            uuid: 2b04d291-f428-4ede-94e5-fa0e67c5992f
-            region: two_col
-            configuration:
-              id: 'block_content:b1cc47db-b3d5-4464-a7f5-c6adbfbf26a3'
-              label: 'Email Signup Sidebar'
-              label_display: '0'
-              provider: block_content
-              status: true
-              info: ''
-              view_mode: full
-              context_mapping: {  }
-            weight: 0
-            additional: {  }
           663e7c5b-70cf-456c-a65d-8d87c56d7c5d:
             uuid: 663e7c5b-70cf-456c-a65d-8d87c56d7c5d
             region: two_col
@@ -235,7 +221,7 @@ third_party_settings:
               context_mapping: {  }
               views_label: 'Related Animal(s)'
               items_per_page: none
-            weight: 1
+            weight: 2
             additional: {  }
           4daf2050-4b1f-40ca-9754-f081e257cebd:
             uuid: 4daf2050-4b1f-40ca-9754-f081e257cebd
@@ -249,6 +235,20 @@ third_party_settings:
               views_label: 'Related News'
               items_per_page: none
             weight: 3
+            additional: {  }
+          a2434fb2-5efd-49d2-b4a1-7d25f54dafe1:
+            uuid: a2434fb2-5efd-49d2-b4a1-7d25f54dafe1
+            region: two_col
+            configuration:
+              id: 'block_content:ac1c72a0-ba39-4ac3-bc23-028a7deb08e2'
+              label: Signup
+              label_display: visible
+              provider: block_content
+              status: true
+              info: ''
+              view_mode: full
+              context_mapping: {  }
+            weight: 1
             additional: {  }
         third_party_settings: {  }
   layout_builder_restrictions:

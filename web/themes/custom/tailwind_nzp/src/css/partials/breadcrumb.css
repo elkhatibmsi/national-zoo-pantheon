@@ -1,4 +1,8 @@
 
 .breadcrumb {
     @apply list-none my-8 !mx-0 !pl-0;
+    li:last-child {
+      @apply truncate overflow-hidden text-ellipsis max-w-[200px] lg:max-w-full;
+
+    }
   }

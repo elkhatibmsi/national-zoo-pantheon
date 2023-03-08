@@ -1,20 +1,20 @@
-{%
-  set title_classes = [
-    label_display == 'visually_hidden' ? 'visually-hidden',
-  ]
-%}
-{%
-    set label_classes = ['border-blue-sapphire','font-semibold','sans','inline-block','mb-2','pb-2','border-b-4','uppercase']
-%}
+{% set thumbnails = [] %}
+{% set gallery = [] %}
 
-{% if not(label_hidden) %}
-    <label {{ title_attributes.addClass(title_classes, label_classes)}}>{{ label }}</label>
-{% endif %}
+{% for key, media in items %}
 
-<div class="grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
-    {% for item in items %}
-        <div>
-            {{ item.content }}
-        </div>
-    {% endfor %}
-</div>
+
+	{% set thumbnail =  media.content['#media'] | view('gallery_thumbnail')  %}
+	{% set gallery_item = media.content['#media'] | view('media_and_caption') %}
+
+	{% set gallery = gallery|merge([gallery_item]) %}
+	{% set thumbnails = thumbnails|merge([thumbnail]) %}
+
+{% endfor %}
+
+ {%
+		include '@nzpComponents/media/modal-media-gallery.html.twig' with {
+			gallery:  gallery,
+			thumbnails: thumbnails,		
+            } 
+%}

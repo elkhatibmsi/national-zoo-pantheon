@@ -9,7 +9,6 @@ dependencies:
     - field.field.node.volunteer_opportunity.field_commitment
     - field.field.node.volunteer_opportunity.field_editorial_access
     - field.field.node.volunteer_opportunity.field_featured
-    - field.field.node.volunteer_opportunity.field_image
     - field.field.node.volunteer_opportunity.field_maximum_age
     - field.field.node.volunteer_opportunity.field_minimum_age
     - field.field.node.volunteer_opportunity.field_nzp_location
@@ -20,12 +19,10 @@ dependencies:
     - field.field.node.volunteer_opportunity.field_training
     - field.field.node.volunteer_opportunity.field_url
     - field.field.node.volunteer_opportunity.field_volunteer_category
-    - image.style.thumbnail
     - node.type.volunteer_opportunity
   module:
     - content_moderation
     - field_group
-    - image
     - link
     - path
     - text
@@ -177,14 +174,6 @@ content:
     region: content
     settings:
       display_label: true
-    third_party_settings: {  }
-  field_image:
-    type: image_image
-    weight: 23
-    region: content
-    settings:
-      progress_indicator: throbber
-      preview_image_style: thumbnail
     third_party_settings: {  }
   field_maximum_age:
     type: number

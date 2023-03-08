@@ -7,15 +7,17 @@ dependencies:
     - field.field.node.webcam.field_content_block
     - field.field.node.webcam.field_editorial_access
     - field.field.node.webcam.field_landing_image
+    - field.field.node.webcam.field_lower_page_content
     - field.field.node.webcam.field_related_animal
     - field.field.node.webcam.field_sponsored_by
     - field.field.node.webcam.field_teaser_title
+    - field.field.node.webcam.field_webcam_gallery
     - node.type.webcam
   module:
     - content_moderation
     - field_group
+    - layout_paragraphs
     - media_library
-    - paragraphs
     - path
     - text
 third_party_settings:
@@ -43,6 +45,7 @@ third_party_settings:
         - field_editorial_access
         - title
         - field_sponsored_by
+        - field_webcam_gallery
         - group_teaser
       label: 'Basic Information'
       region: content
@@ -59,6 +62,7 @@ third_party_settings:
     group_page_content:
       children:
         - field_content_block
+        - field_lower_page_content
       label: 'Page Content'
       region: content
       parent_name: group_tabs
@@ -157,22 +161,14 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_content_block:
-    type: paragraphs
-    weight: 9
+    type: layout_paragraphs
+    weight: 30
     region: content
     settings:
-      title: Paragraph
-      title_plural: Paragraphs
-      edit_mode: open
-      closed_mode: summary
-      autocollapse: none
-      closed_mode_threshold: 0
-      add_mode: dropdown
-      form_display_mode: default
-      default_paragraph_type: ''
-      features:
-        collapse_edit_all: collapse_edit_all
-        duplicate: duplicate
+      preview_view_mode: default
+      nesting_depth: 0
+      require_layouts: 0
+      empty_message: ''
     third_party_settings: {  }
   field_editorial_access:
     type: options_select
@@ -187,6 +183,16 @@ content:
     settings:
       media_types: {  }
     third_party_settings: {  }
+  field_lower_page_content:
+    type: layout_paragraphs
+    weight: 31
+    region: content
+    settings:
+      preview_view_mode: default
+      nesting_depth: 0
+      require_layouts: 0
+      empty_message: ''
+    third_party_settings: {  }
   field_related_animal:
     type: entity_reference_autocomplete
     weight: 12
@@ -199,7 +205,7 @@ content:
     third_party_settings: {  }
   field_sponsored_by:
     type: options_select
-    weight: 11
+    weight: 10
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -208,6 +214,16 @@ content:
     weight: 26
     region: content
     settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_webcam_gallery:
+    type: entity_reference_autocomplete
+    weight: 11
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
       size: 60
       placeholder: ''
     third_party_settings: {  }

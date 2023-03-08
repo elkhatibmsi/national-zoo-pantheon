@@ -135,35 +135,7 @@ process:
             plugin: extract
             index:
               - 0
-        target_revision_id:
-          -
-            plugin: migration_lookup
-            migration:
-              - paragraph__callout
-              - paragraph__content_video
-              - paragraph__flipbook_grid
-              - paragraph__faq
-              - paragraph__card_grid
-              - paragraph__horizontal_tabs
-              - paragraph__grid
-              - paragraph__modal_media_gallery
-              - paragraph__section_heading
-              - paragraph__slide
-              - paragraph__slideshow_image_only
-              - paragraph__single_image_with_caption
-              - paragraph__sticky_anchor_menu
-              - paragraph__text
-              - paragraph__thumbnail_slideshow
-              - paragraph__block_embed
-              - paragraph__block_embed_no_title
-              - paragraph__webcam_embed
-              - paragraph__view_embed
-            source: value
-          -
-            plugin: extract
-            index:
-              - 1
-  field_sidebar_section_content:
+  field_lower_page_content:
     -
       plugin: sub_process
       source: field_sidebar_section_content
@@ -228,9 +200,4 @@ destination:
   plugin: 'entity_complete:node'
   translations: true
   default_bundle: webcam
-migration_dependencies:
-  required:
-    - upgrade_d7_user
-    - upgrade_d7_node_type
-  optional:
-    - upgrade_d7_field_instance
+migration_dependencies: {  }

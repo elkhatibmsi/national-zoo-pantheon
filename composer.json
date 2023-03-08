@@ -60,7 +60,7 @@
         "drupal/menu_item_extras": "^2.16",
         "drupal/menu_link_attributes": "^1.2",
         "drupal/metatag": "^1.7",
-        "drupal/micon": "^2.0@beta",
+        "drupal/micon": "^2.1@beta",
         "drupal/migrate_plus": "^5.1",
         "drupal/migrate_tools": "^6.0",
         "drupal/migrate_upgrade": "^3.2",
@@ -95,7 +95,8 @@
         "drupal/file_download_link": "^2.0",
         "drupal/webform_migrate": "^1.2",
         "drupal/poll": "^1.5",
-        "drupal/geofield_map": "^3.0"
+        "drupal/geofield_map": "^3.0",
+        "drupal/better_exposed_filters": "^6.0"
     },
     "require-dev": {
         "drupal/core-dev": "^9.2"

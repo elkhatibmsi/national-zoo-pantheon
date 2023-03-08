@@ -1,0 +1,191 @@
+uuid: 1d87339d-9cd5-4d26-bcd7-7ccd3b2f2c20
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.info_card
+    - field.field.node.exhibit.body
+    - field.field.node.exhibit.field_card_position
+    - field.field.node.exhibit.field_conservation_efforts
+    - field.field.node.exhibit.field_daily_demonstrations
+    - field.field.node.exhibit.field_editorial_access
+    - field.field.node.exhibit.field_enrichment
+    - field.field.node.exhibit.field_exhibit_hours
+    - field.field.node.exhibit.field_exhibit_location
+    - field.field.node.exhibit.field_hours
+    - field.field.node.exhibit.field_landing_image
+    - field.field.node.exhibit.field_marker
+    - field.field.node.exhibit.field_nearby
+    - field.field.node.exhibit.field_open
+    - field.field.node.exhibit.field_paragraph_component
+    - field.field.node.exhibit.field_tags
+    - field.field.node.exhibit.field_teaser_title
+    - field.field.node.exhibit.field_upcoming
+    - node.type.exhibit
+    - views.view.exhibits
+  module:
+    - entity_reference_revisions
+    - geofield
+    - layout_builder
+    - layout_builder_restrictions
+    - nzp_layouts
+    - text
+    - user
+    - views
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: layout_nzp_tab
+        layout_settings:
+          label: ''
+          context_mapping: {  }
+          tab_title:
+            tab:
+              - Enrichment
+              - Nearby
+              - Conservation
+              - 'Meet the Animals'
+          num_tabs: 4
+        components:
+          63960d16-921c-477f-a492-ec1c0a38222c:
+            uuid: 63960d16-921c-477f-a492-ec1c0a38222c
+            region: tab_content_0
+            configuration:
+              id: 'field_block:node:exhibit:field_enrichment'
+              label: Enrichment
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          6e71e9f2-ccb2-4bd5-9486-4a4cad2b3ab1:
+            uuid: 6e71e9f2-ccb2-4bd5-9486-4a4cad2b3ab1
+            region: tab_content_1
+            configuration:
+              id: 'field_block:node:exhibit:field_nearby'
+              label: Nearby
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          4b1d1cc4-f556-4b5f-a125-8fed0fd47eba:
+            uuid: 4b1d1cc4-f556-4b5f-a125-8fed0fd47eba
+            region: tab_content_2
+            configuration:
+              id: 'field_block:node:exhibit:field_conservation_efforts'
+              label: 'Conservation Efforts'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          1f12b209-e169-4973-b914-83efa03ccf0d:
+            uuid: 1f12b209-e169-4973-b914-83efa03ccf0d
+            region: tab_content_3
+            configuration:
+              id: 'views_block:exhibits-block_4'
+              label: ''
+              label_display: '0'
+              provider: views
+              context_mapping: {  }
+              views_label: ''
+              items_per_page: none
+            weight: 0
+            additional: {  }
+        third_party_settings: {  }
+  layout_builder_restrictions:
+    allowed_block_categories: {  }
+    entity_view_mode_restriction:
+      allowed_layouts: {  }
+      denylisted_blocks: {  }
+      allowlisted_blocks: {  }
+      restricted_categories: {  }
+id: node.exhibit.info_card
+targetEntityType: node
+bundle: exhibit
+mode: info_card
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: -20
+    region: content
+  field_exhibit_hours:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_exhibit_location:
+    type: geofield_default
+    label: above
+    settings:
+      output_format: wkt
+      output_escape: true
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  field_paragraph_component:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: full
+      link: ''
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  addtoany: true
+  field_card_position: true
+  field_conservation_efforts: true
+  field_daily_demonstrations: true
+  field_editorial_access: true
+  field_enrichment: true
+  field_hours: true
+  field_landing_image: true
+  field_marker: true
+  field_nearby: true
+  field_open: true
+  field_slideshow: true
+  field_tags: true
+  field_teaser_title: true
+  field_upcoming: true

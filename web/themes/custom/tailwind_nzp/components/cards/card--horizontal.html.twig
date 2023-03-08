@@ -1,5 +1,5 @@
 {{ attach_library('tailwind_nzp/teaser_styles_js') }}
-<div class="border-t-2 border-gray">
+<div class="my-4">
   <div class="w-full lg:max-w-full min-h-[150px] lg:flex">
 
     {% if image|render %}
@@ -7,15 +7,18 @@
         {{ image }}
       </div>
     {% endif %}
-    <div class="card-horizontal--teaser p-4">
-        <div class="text-xs strong uppercase mb-2">
+    <div class="card-horizontal--teaser mt-2 lg:ml-4">
+        {% if authored_date|render %}
+        <div class="text-xs strong uppercase mb-2"> 
         {{ authored_date }}
       </div>
-      <a href="{{ link }}"><h4 class="font-bold text-2xl">{{ title }}</h4></a>
- 
+      {% endif %}
+      <a href="{{ link }}"><h4 class="font-semi-bold text-xl">{{ title }} ›</h4></a>
+     {% if summary|render %}
       <div class="text-sm">
         {{ summary }}
       </div> 
+     {% endif %}
     </div>
   </div>
 </div>

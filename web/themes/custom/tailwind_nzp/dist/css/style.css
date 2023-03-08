@@ -2327,6 +2327,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   grid-auto-columns: auto;
 }
 
+.auto-cols-fr{
+  grid-auto-columns: minmax(0, 1fr);
+}
+
 .auto-rows-auto{
   grid-auto-rows: auto;
 }

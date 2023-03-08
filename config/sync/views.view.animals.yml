@@ -517,7 +517,7 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          view_mode: teaser
+          view_mode: image_and_title
       pager:
         type: none
         options:
@@ -681,6 +681,7 @@ display:
           required: false
       display_description: ''
       display_extenders: {  }
+      block_hide_empty: true
     cache_metadata:
       max-age: -1
       contexts:

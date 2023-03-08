@@ -8,7 +8,7 @@ dependencies:
     - media.type.image_http
     - node.type.bio_profiles
   content:
-    - 'media:image:0e4815f6-8bd3-4935-9509-9906e534be03'
+    - 'media:image:7cbb81b7-253c-4962-a70b-befcd70d06d5'
 id: node.bio_profiles.field_headshot
 field_name: field_headshot
 entity_type: node
@@ -19,7 +19,7 @@ required: false
 translatable: false
 default_value:
   -
-    target_uuid: 0e4815f6-8bd3-4935-9509-9906e534be03
+    target_uuid: 7cbb81b7-253c-4962-a70b-befcd70d06d5
     weight: 0
 default_value_callback: ''
 settings:

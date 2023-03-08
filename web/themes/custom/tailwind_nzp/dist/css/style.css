@@ -1971,6 +1971,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-bottom: 0.5rem;
 }
 
+.mb-3{
+  margin-bottom: 0.75rem;
+}
+
 .mb-6{
   margin-bottom: 1.5rem;
 }
@@ -1997,10 +2001,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .mb-2\.5{
   margin-bottom: 0.625rem;
-}
-
-.mb-3{
-  margin-bottom: 0.75rem;
 }
 
 .mb-3\.5{
@@ -2143,6 +2143,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: 80px;
 }
 
+.h-\[75px\]{
+  height: 75px;
+}
+
+.h-\[50px\]{
+  height: 50px;
+}
+
 .max-h-\[200px\]{
   max-height: 200px;
 }
@@ -2219,6 +2227,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 200px;
 }
 
+.w-\[75px\]{
+  width: 75px;
+}
+
+.w-\[50px\]{
+  width: 50px;
+}
+
 .max-w-\[350px\]{
   max-width: 350px;
 }
@@ -2247,10 +2263,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .flex-grow{
   flex-grow: 1;
-}
-
-.basis-10{
-  flex-basis: 2.5rem;
 }
 
 .basis-40{
@@ -2313,6 +2325,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .auto-cols-auto{
   grid-auto-columns: auto;
+}
+
+.auto-cols-fr{
+  grid-auto-columns: minmax(0, 1fr);
 }
 
 .auto-rows-auto{
@@ -2402,6 +2418,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .items-center{
   align-items: center;
+}
+
+.justify-start{
+  justify-content: flex-start;
 }
 
 .justify-end{
@@ -3032,16 +3052,16 @@ Ensure the default browser behavior of the `hidden` attribute.
   border-left-width: 1px;
 }
 
+.border-l-4{
+  border-left-width: 4px;
+}
+
 .border-b-2{
   border-bottom-width: 2px;
 }
 
 .border-b{
   border-bottom-width: 1px;
-}
-
-.border-l-4{
-  border-left-width: 4px;
 }
 
 .border-b-4{
@@ -3150,6 +3170,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 .border-t-white{
   --tw-border-opacity: 1;
   border-top-color: rgb(255 255 255 / var(--tw-border-opacity));
+}
+
+.border-l-sizzling-red{
+  --tw-border-opacity: 1;
+  border-left-color: rgb(240 81 90 / var(--tw-border-opacity));
 }
 
 .bg-oxford-blue{
@@ -3920,12 +3945,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-left: 0.875rem;
 }
 
-.pb-\[0\.5em\]{
-  padding-bottom: 0.5em;
-}
-
 .pt-\[150px\]{
   padding-top: 150px;
+}
+
+.pb-\[0\.5em\]{
+  padding-bottom: 0.5em;
 }
 
 .text-left{
@@ -4300,9 +4325,11 @@ h3{
   --tw-border-opacity: 1;
   border-color: rgb(229 229 229 / var(--tw-border-opacity));
   font-weight: 700;
+  text-transform: capitalize;
 }
 
 aside .block-title{
+  margin-top: 0px;
   border-style: none;
   --tw-bg-opacity: 1;
   background-color: rgb(83 120 43 / var(--tw-bg-opacity));
@@ -4310,11 +4337,14 @@ aside .block-title{
   padding-right: 1rem;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 aside .block-title a{
+  font-weight: 700;
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
@@ -4359,6 +4389,13 @@ aside .block-title a{
   background-color: bg-tea-green;
 }
 
+/* format publications block on scbi project pages */
+
+.publications-wrapper span{
+  margin-bottom: 1rem;
+  display: block;
+}
+
 /* Utility Classes/Overrides */
 
 .visually-hidden{
@@ -4376,8 +4413,8 @@ aside .block-title a{
 .stretch img{
   height: 100%;
   width: 100%;
-  -o-object-fit: fill;
-     object-fit: fill;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 /* knockout utility classes */
@@ -4448,6 +4485,18 @@ aside .block-title a{
 .status-message, .alert-info, .alert-success{
   --tw-bg-opacity: 1;
   background-color: rgb(83 120 43 / var(--tw-bg-opacity));
+}
+
+.callout{
+  border-radius: 0.25rem;
+  border-top-width: 1px;
+  border-right-width: 1px;
+  border-bottom-width: 1px;
+  border-left-width: 4px;
+  border-color: rgb(212 212 212 / var(--tw-border-opacity));
+  --tw-border-opacity: 1;
+  border-left-color: rgb(240 81 90 / var(--tw-border-opacity));
+  padding: 1rem;
 }
 
 .breadcrumb{
@@ -4809,6 +4858,8 @@ select{
 
 .grid-thumbnail-item img, .modal-thumbnail-item img{
   height: 100%;
+  -o-object-fit: fill;
+     object-fit: fill;
 }
 
 /* if admin toolbar is present push down modal by 60px */
@@ -4875,18 +4926,16 @@ header.scrolled .header--hours{
 }
 
 aside{
-  display: none;
+  display: block;
+}
+
+aside > div:first-child{
+  margin-top: 2rem;
 }
 
 @media (min-width: 768px){
-  aside{
-    display: block;
-  }
-}
-
-@media (min-width: 1024px){
-  aside{
-    display: block;
+  aside > div:first-child{
+    margin-top: 0px;
   }
 }
 
@@ -5374,6 +5423,11 @@ iframe[src*="youtube"]{
 .fill-black svg {
   fill: #444;
   z-index:1000
+}
+
+.before\:content-\[\"\$\"\]::before{
+  --tw-content: "$";
+  content: var(--tw-content);
 }
 
 .first\:pl-0:first-child{
@@ -6232,6 +6286,10 @@ iframe[src*="youtube"]{
 
   .sm\:h-auto{
     height: auto;
+  }
+
+  .sm\:max-w-full{
+    max-width: 100%;
   }
 
   .sm\:grid-cols-1{
@@ -7178,10 +7236,6 @@ iframe[src*="youtube"]{
 
   .md\:ml-3\.5{
     margin-left: 0.875rem;
-  }
-
-  .md\:block{
-    display: block;
   }
 
   .md\:max-h-full{

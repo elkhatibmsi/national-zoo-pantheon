@@ -1,0 +1,21 @@
+uuid: 4b16995f-7efe-4121-a86c-91a1654ea92b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_exhibit_location
+    - node.type.attraction
+  module:
+    - geofield
+id: node.attraction.field_exhibit_location
+field_name: field_exhibit_location
+entity_type: node
+bundle: attraction
+label: 'Attraction Location'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: geofield

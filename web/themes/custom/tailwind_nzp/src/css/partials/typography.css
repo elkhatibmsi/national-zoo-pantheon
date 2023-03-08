@@ -47,14 +47,14 @@ h1, h2, h3, h4, h5, h6 {
   
   /* Block titles inside an Aside element: */
   .block-title {
-    @apply font-bold mb-6 border-b-2 border-lightergray;
+    @apply font-bold mb-6 border-b-2 border-lightergray capitalize;
   }
   
   aside .block-title {
-    @apply  bg-sap-green px-4 py-2 border-none text-white;
-    a {
-      @apply text-white;
-    }
+    @apply  bg-sap-green px-4 py-2 mt-0 border-none text-white text-base;
+     a {
+     @apply  text-white font-bold;
+     }
   }
   
   .page-title {
@@ -76,3 +76,7 @@ h1, h2, h3, h4, h5, h6 {
     background-color: bg-tea-green;
   }
 
+/* format publications block on scbi project pages */  
+.publications-wrapper span {
+  @apply block mb-4;
+}

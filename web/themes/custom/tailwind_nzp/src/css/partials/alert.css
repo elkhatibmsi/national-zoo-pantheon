@@ -23,4 +23,8 @@
   .alert-info, .alert-success {
     @apply bg-sap-green;
   }
+
+  .callout {
+    @apply p-4 border-t-[1px] border-r-[1px] border-b-[1px] rounded border-lightgray border-l-sizzling-red border-l-4;
+  }
   

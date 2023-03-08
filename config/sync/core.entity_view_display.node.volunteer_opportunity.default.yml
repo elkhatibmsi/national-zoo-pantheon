@@ -19,12 +19,630 @@ dependencies:
     - field.field.node.volunteer_opportunity.field_training
     - field.field.node.volunteer_opportunity.field_url
     - field.field.node.volunteer_opportunity.field_volunteer_category
+    - field.field.node.volunteer_opportunity.field_volunteer_image
     - node.type.volunteer_opportunity
+  content:
+    - 'block_content:basic:220efcd3-c1d4-4283-b632-d084e7797fb4'
   module:
+    - addtoany
+    - block_content
+    - layout_builder
+    - layout_builder_restrictions
     - link
+    - nzp_layouts
     - options
+    - system
     - text
     - user
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: layout_nzp_two_col_golden
+        layout_settings:
+          label: 'bc trail & share'
+          context_mapping: {  }
+        components:
+          18e08e5a-7353-4acd-b494-5ce849822d35:
+            uuid: 18e08e5a-7353-4acd-b494-5ce849822d35
+            region: two_col
+            configuration:
+              id: addtoany_block
+              label: 'AddToAny share buttons'
+              label_display: '0'
+              provider: addtoany
+              context_mapping: {  }
+              link_url: ''
+              link_title: ''
+              buttons_size: '22'
+              addtoany_html: ''
+            weight: 0
+            additional:
+              component_attributes:
+                block_attributes:
+                  id: ''
+                  class: 'h-full flex justify-start md:justify-end items-center -ml-1'
+                  style: ''
+                  data: ''
+                block_title_attributes:
+                  id: ''
+                  class: ''
+                  style: ''
+                  data: ''
+                block_content_attributes:
+                  id: ''
+                  class: ''
+                  style: ''
+                  data: ''
+          575bdf2c-179d-41c0-a395-1d8ea7388be6:
+            uuid: 575bdf2c-179d-41c0-a395-1d8ea7388be6
+            region: one_col
+            configuration:
+              id: system_breadcrumb_block
+              label: Breadcrumbs
+              label_display: '0'
+              provider: system
+              context_mapping: {  }
+            weight: 0
+            additional:
+              component_attributes:
+                block_attributes:
+                  id: ''
+                  class: '-ml-1.5'
+                  style: ''
+                  data: ''
+                block_title_attributes:
+                  id: ''
+                  class: ''
+                  style: ''
+                  data: ''
+                block_content_attributes:
+                  id: ''
+                  class: ''
+                  style: ''
+                  data: ''
+          c884b35a-cfa5-4ec6-8087-7d697f286c4e:
+            uuid: c884b35a-cfa5-4ec6-8087-7d697f286c4e
+            region: content
+            configuration:
+              id: 'field_block:node:volunteer_opportunity:field_commitment'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: list_default
+                label: above
+                settings: {  }
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          26a12474-8bff-4c40-adc2-1853fe770ef0:
+            uuid: 26a12474-8bff-4c40-adc2-1853fe770ef0
+            region: content
+            configuration:
+              id: 'field_block:node:volunteer_opportunity:field_special_qualifications'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: basic_string
+                label: above
+                settings: {  }
+                third_party_settings: {  }
+            weight: 1
+            additional: {  }
+          b903c112-ea2d-4823-8635-2ba64647d229:
+            uuid: b903c112-ea2d-4823-8635-2ba64647d229
+            region: content
+            configuration:
+              id: 'field_block:node:volunteer_opportunity:field_training'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: text_default
+                label: above
+                settings: {  }
+                third_party_settings: {  }
+            weight: 2
+            additional: {  }
+          a9f7abf7-7725-4d5e-a79a-a3c243baa5cf:
+            uuid: a9f7abf7-7725-4d5e-a79a-a3c243baa5cf
+            region: content
+            configuration:
+              id: 'field_block:node:volunteer_opportunity:field_nzp_location'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: entity_reference_label
+                label: above
+                settings:
+                  link: true
+                third_party_settings: {  }
+            weight: 3
+            additional: {  }
+          9c5b4960-9487-4ab4-a04a-46dc6b422060:
+            uuid: 9c5b4960-9487-4ab4-a04a-46dc6b422060
+            region: content
+            configuration:
+              id: 'field_block:node:volunteer_opportunity:field_status'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: list_default
+                label: above
+                settings: {  }
+                third_party_settings: {  }
+            weight: 4
+            additional: {  }
+          b588ea75-7647-4a7a-b2ff-8749eb996522:
+            uuid: b588ea75-7647-4a7a-b2ff-8749eb996522
+            region: content
+            configuration:
+              id: 'field_block:node:volunteer_opportunity:field_volunteer_category'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: entity_reference_label
+                label: above
+                settings:
+                  link: true
+                third_party_settings: {  }
+            weight: 5
+            additional: {  }
+          6309bdf2-a408-4271-a731-2c81b74cd312:
+            uuid: 6309bdf2-a408-4271-a731-2c81b74cd312
+            region: content
+            configuration:
+              id: 'field_block:node:volunteer_opportunity:field_phone'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: string
+                label: above
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            weight: 6
+            additional: {  }
+          eef42116-fb35-43fd-aee4-00f141d3ddd3:
+            uuid: eef42116-fb35-43fd-aee4-00f141d3ddd3
+            region: content
+            configuration:
+              id: 'field_block:node:volunteer_opportunity:field_additional_information'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: text_default
+                label: above
+                settings: {  }
+                third_party_settings: {  }
+            weight: 7
+            additional: {  }
+          00484c6d-51b6-40aa-a830-4300c4e1ee8d:
+            uuid: 00484c6d-51b6-40aa-a830-4300c4e1ee8d
+            region: content
+            configuration:
+              id: 'field_block:node:volunteer_opportunity:field_opportunities_available_in'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: list_default
+                label: above
+                settings: {  }
+                third_party_settings: {  }
+            weight: 8
+            additional: {  }
+          16f22bae-3a3e-4144-afc5-aa1e5cde58d7:
+            uuid: 16f22bae-3a3e-4144-afc5-aa1e5cde58d7
+            region: content
+            configuration:
+              id: 'field_block:node:volunteer_opportunity:field_url'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: link
+                label: hidden
+                settings:
+                  trim_length: 80
+                  url_only: false
+                  url_plain: false
+                  rel: ''
+                  target: ''
+                third_party_settings: {  }
+            weight: 9
+            additional: {  }
+          9aaa36dc-e49b-4706-9df2-7b3f9c6e99aa:
+            uuid: 9aaa36dc-e49b-4706-9df2-7b3f9c6e99aa
+            region: content
+            configuration:
+              id: 'extra_field_block:node:volunteer_opportunity:links'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+            weight: 10
+            additional: {  }
+          6ca57035-5242-4b41-86d5-731cab92e31f:
+            uuid: 6ca57035-5242-4b41-86d5-731cab92e31f
+            region: content
+            configuration:
+              id: 'field_block:node:volunteer_opportunity:body'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            weight: 11
+            additional: {  }
+        third_party_settings: {  }
+      -
+        layout_id: layout_nzp_two_col_golden
+        layout_settings:
+          label: title
+          context_mapping: {  }
+        components:
+          ec948283-0475-40ff-886a-d29320f64efe:
+            uuid: ec948283-0475-40ff-886a-d29320f64efe
+            region: one_col
+            configuration:
+              id: 'field_block:node:volunteer_opportunity:title'
+              label: Title
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: text_field_formatter
+                label: hidden
+                settings:
+                  link_to_entity: 0
+                  wrap_tag: h1
+                  wrap_class: mt-0
+                  wrap_attributes: ''
+                  override_link_label: ''
+                  token: ''
+                third_party_settings: {  }
+            weight: 0
+            additional:
+              component_attributes:
+                block_attributes:
+                  id: ''
+                  class: ''
+                  style: ''
+                  data: ''
+                block_title_attributes:
+                  id: ''
+                  class: ''
+                  style: ''
+                  data: ''
+                block_content_attributes:
+                  id: ''
+                  class: ''
+                  style: ''
+                  data: ''
+        third_party_settings: {  }
+      -
+        layout_id: layout_nzp_two_col_golden
+        layout_settings:
+          label: 'content and sidebar'
+          context_mapping: {  }
+        components:
+          aa4c23d4-a69e-4ac9-8062-a3da2f2af4a5:
+            uuid: aa4c23d4-a69e-4ac9-8062-a3da2f2af4a5
+            region: one_col
+            configuration:
+              id: 'field_block:node:volunteer_opportunity:body'
+              label: 'Position Description'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            weight: 2
+            additional: {  }
+          e38bede1-4739-4f33-a96b-5f734aebd46e:
+            uuid: e38bede1-4739-4f33-a96b-5f734aebd46e
+            region: one_col
+            configuration:
+              id: 'field_block:node:volunteer_opportunity:field_minimum_age'
+              label: 'Minimum Age'
+              label_display: visible
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: number_integer
+                label: hidden
+                settings:
+                  thousand_separator: ''
+                  prefix_suffix: true
+                third_party_settings: {  }
+            weight: 3
+            additional: {  }
+          83cd64c3-1ee5-4f19-86e7-5a1f55ac2443:
+            uuid: 83cd64c3-1ee5-4f19-86e7-5a1f55ac2443
+            region: one_col
+            configuration:
+              id: 'field_block:node:volunteer_opportunity:field_maximum_age'
+              label: 'Maximum age'
+              label_display: visible
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: number_integer
+                label: hidden
+                settings:
+                  thousand_separator: ''
+                  prefix_suffix: true
+                third_party_settings: {  }
+            weight: 4
+            additional: {  }
+          13d5fcfb-e56c-49ae-a603-a214388ad9e1:
+            uuid: 13d5fcfb-e56c-49ae-a603-a214388ad9e1
+            region: one_col
+            configuration:
+              id: 'field_block:node:volunteer_opportunity:field_commitment'
+              label: Commitment
+              label_display: visible
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: list_default
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            weight: 5
+            additional: {  }
+          a910db10-42a7-4807-a0cf-a73a546d8ab4:
+            uuid: a910db10-42a7-4807-a0cf-a73a546d8ab4
+            region: one_col
+            configuration:
+              id: 'field_block:node:volunteer_opportunity:field_special_qualifications'
+              label: 'Special qualifications'
+              label_display: visible
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: basic_string
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            weight: 6
+            additional: {  }
+          39667a6f-a7e1-4571-bf9c-d91a3357fe06:
+            uuid: 39667a6f-a7e1-4571-bf9c-d91a3357fe06
+            region: one_col
+            configuration:
+              id: 'field_block:node:volunteer_opportunity:field_training'
+              label: Training
+              label_display: visible
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            weight: 7
+            additional: {  }
+          cf8efa31-38a4-4a40-9a1b-c5b0c311abd5:
+            uuid: cf8efa31-38a4-4a40-9a1b-c5b0c311abd5
+            region: one_col
+            configuration:
+              id: 'field_block:node:volunteer_opportunity:field_nzp_location'
+              label: Location
+              label_display: visible
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: entity_reference_label
+                label: hidden
+                settings:
+                  link: false
+                third_party_settings: {  }
+            weight: 8
+            additional: {  }
+          6068389a-4f0b-42da-a958-c336143bce01:
+            uuid: 6068389a-4f0b-42da-a958-c336143bce01
+            region: one_col
+            configuration:
+              id: 'field_block:node:volunteer_opportunity:field_status'
+              label: Status
+              label_display: visible
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: list_default
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            weight: 9
+            additional: {  }
+          855e6c3c-732b-4f07-950f-7c6e906c3481:
+            uuid: 855e6c3c-732b-4f07-950f-7c6e906c3481
+            region: one_col
+            configuration:
+              id: 'field_block:node:volunteer_opportunity:field_volunteer_category'
+              label: Category
+              label_display: visible
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: entity_reference_label
+                label: hidden
+                settings:
+                  link: false
+                third_party_settings: {  }
+            weight: 10
+            additional: {  }
+          6efdd1fd-88f1-4c40-b193-66c2a61b64e1:
+            uuid: 6efdd1fd-88f1-4c40-b193-66c2a61b64e1
+            region: one_col
+            configuration:
+              id: 'field_block:node:volunteer_opportunity:field_phone'
+              label: 'Contact phone'
+              label_display: visible
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: string
+                label: hidden
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            weight: 11
+            additional: {  }
+          09a6c97a-68a8-4617-9b01-44ef991fae0e:
+            uuid: 09a6c97a-68a8-4617-9b01-44ef991fae0e
+            region: one_col
+            configuration:
+              id: 'field_block:node:volunteer_opportunity:field_additional_information'
+              label: 'Application Requirements'
+              label_display: visible
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            weight: 12
+            additional: {  }
+          9b7b1e42-431c-4608-bfca-c0adc8bce3d0:
+            uuid: 9b7b1e42-431c-4608-bfca-c0adc8bce3d0
+            region: one_col
+            configuration:
+              id: 'field_block:node:volunteer_opportunity:field_url'
+              label: 'Application link'
+              label_display: visible
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: link
+                label: hidden
+                settings:
+                  trim_length: 80
+                  url_only: false
+                  url_plain: false
+                  rel: '0'
+                  target: '0'
+                third_party_settings: {  }
+            weight: 15
+            additional:
+              component_attributes:
+                block_attributes:
+                  id: ''
+                  class: 'truncate max-w-xs sm:max-w-full'
+                  style: ''
+                  data: ''
+                block_title_attributes:
+                  id: ''
+                  class: ''
+                  style: ''
+                  data: ''
+                block_content_attributes:
+                  id: ''
+                  class: ''
+                  style: ''
+                  data: ''
+          6d6bba01-99d2-4dde-8a5a-ed445974d024:
+            uuid: 6d6bba01-99d2-4dde-8a5a-ed445974d024
+            region: one_col
+            configuration:
+              id: 'field_block:node:volunteer_opportunity:field_volunteer_image'
+              label: 'Volunteer Image'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: entity_reference_entity_view
+                label: hidden
+                settings:
+                  view_mode: default
+                third_party_settings: {  }
+            weight: 1
+            additional: {  }
+          82343a9e-4987-458b-90a8-3386e5822944:
+            uuid: 82343a9e-4987-458b-90a8-3386e5822944
+            region: one_col
+            configuration:
+              id: 'field_block:node:volunteer_opportunity:field_opportunities_available_in'
+              label: 'Opportunities Available in the Following Zoo Areas'
+              label_display: visible
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: list_default
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            weight: 14
+            additional: {  }
+          5aa6fb5d-c95f-4274-adeb-7e9bc26ddbf6:
+            uuid: 5aa6fb5d-c95f-4274-adeb-7e9bc26ddbf6
+            region: two_col
+            configuration:
+              id: 'block_content:220efcd3-c1d4-4283-b632-d084e7797fb4'
+              label: 'Contact Us'
+              label_display: visible
+              provider: block_content
+              status: true
+              info: ''
+              view_mode: full
+              context_mapping: {  }
+            weight: 0
+            additional: {  }
+        third_party_settings: {  }
+  layout_builder_restrictions:
+    allowed_block_categories: {  }
+    entity_view_mode_restriction:
+      allowed_layouts: {  }
+      denylisted_blocks: {  }
+      allowlisted_blocks: {  }
+      restricted_categories: {  }
 id: node.volunteer_opportunity.default
 targetEntityType: node
 bundle: volunteer_opportunity
@@ -121,8 +739,11 @@ content:
     weight: 100
     region: content
 hidden:
+  addtoany: true
   field_application_live_range: true
   field_editorial_access: true
   field_featured: true
+  field_image: true
   field_maximum_age: true
   field_minimum_age: true
+  field_volunteer_image: true

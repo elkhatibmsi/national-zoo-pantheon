@@ -5,10 +5,12 @@ main {
     @apply lg:relative lg:mt-[12em];
   }
 
-  aside {
-    @apply hidden md:block lg:block;
-  }
-  
+aside {
+  @apply block;
+}
+aside > div:first-child {
+  @apply mt-8 md:mt-0;
+}
 
 .layout-three-cols {
     @apply lg:grid-cols-3 md:grid-cols-2 grid-cols-1;

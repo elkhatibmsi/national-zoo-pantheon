@@ -16,11 +16,304 @@ dependencies:
     - field.field.node.scbi_project.field_scbi_staff
     - field.field.node.scbi_project.field_species_work_with_filter
     - field.field.node.scbi_project.field_tags
+    - field.field.node.scbi_project.field_teaser_title
     - node.type.scbi_project
+    - system.menu.main
+    - views.view.animals
   module:
+    - addtoany
+    - layout_builder
     - link
+    - menu_block
+    - nzp_layouts
+    - system
     - text
     - user
+    - views
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: layout_nzp_two_col_golden
+        layout_settings:
+          label: 'bread crumb'
+          context_mapping: {  }
+        components:
+          31ae8c94-116d-41d7-8e60-bc72be04b963:
+            uuid: 31ae8c94-116d-41d7-8e60-bc72be04b963
+            region: one_col
+            configuration:
+              id: system_breadcrumb_block
+              label: Breadcrumbs
+              label_display: '0'
+              provider: system
+              context_mapping: {  }
+            weight: 0
+            additional:
+              component_attributes:
+                block_attributes:
+                  id: ''
+                  class: '-ml-1.5'
+                  style: ''
+                  data: ''
+                block_title_attributes:
+                  id: ''
+                  class: ''
+                  style: ''
+                  data: ''
+                block_content_attributes:
+                  id: ''
+                  class: ''
+                  style: ''
+                  data: ''
+          9d4ccc48-e94c-452f-80b8-2f75b359fdfd:
+            uuid: 9d4ccc48-e94c-452f-80b8-2f75b359fdfd
+            region: two_col
+            configuration:
+              id: addtoany_block
+              label: 'AddToAny share buttons'
+              label_display: '0'
+              provider: addtoany
+              context_mapping: {  }
+              link_url: ''
+              link_title: ''
+              buttons_size: '22'
+              addtoany_html: ''
+            weight: 0
+            additional:
+              component_attributes:
+                block_attributes:
+                  id: ''
+                  class: 'h-full flex justify-start md:justify-end items-center -ml-1'
+                  style: ''
+                  data: ''
+                block_title_attributes:
+                  id: ''
+                  class: ''
+                  style: ''
+                  data: ''
+                block_content_attributes:
+                  id: ''
+                  class: ''
+                  style: ''
+                  data: ''
+          55fba85f-ac0d-44b0-a5af-64922b83bed9:
+            uuid: 55fba85f-ac0d-44b0-a5af-64922b83bed9
+            region: content
+            configuration:
+              id: 'field_block:node:scbi_project:field_publications'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: link
+                label: above
+                settings:
+                  trim_length: 80
+                  url_only: false
+                  url_plain: false
+                  rel: ''
+                  target: ''
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          affdf739-d475-4ccd-97a2-bd7ac83d1a2f:
+            uuid: affdf739-d475-4ccd-97a2-bd7ac83d1a2f
+            region: content
+            configuration:
+              id: 'extra_field_block:node:scbi_project:links'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+            weight: 1
+            additional: {  }
+          4227ea64-e802-4cb5-98e9-2f82c18232b8:
+            uuid: 4227ea64-e802-4cb5-98e9-2f82c18232b8
+            region: content
+            configuration:
+              id: 'field_block:node:scbi_project:body'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            weight: 2
+            additional: {  }
+        third_party_settings: {  }
+      -
+        layout_id: layout_nzp_two_col_golden
+        layout_settings:
+          label: title
+          context_mapping: {  }
+        components:
+          65c0cdab-4d04-408d-8746-9f626dc7cf01:
+            uuid: 65c0cdab-4d04-408d-8746-9f626dc7cf01
+            region: one_col
+            configuration:
+              id: 'field_block:node:scbi_project:title'
+              label: Title
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: text_field_formatter
+                label: hidden
+                settings:
+                  link_to_entity: 0
+                  wrap_tag: h1
+                  wrap_class: ''
+                  wrap_attributes: ''
+                  override_link_label: ''
+                  token: ''
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+        third_party_settings: {  }
+      -
+        layout_id: layout_nzp_two_col_golden
+        layout_settings:
+          label: content
+          context_mapping: {  }
+        components:
+          bc83087c-7690-4999-8cb2-c862c4f8d211:
+            uuid: bc83087c-7690-4999-8cb2-c862c4f8d211
+            region: one_col
+            configuration:
+              id: 'field_block:node:scbi_project:field_image'
+              label: 'Page Image'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: image
+                label: hidden
+                settings:
+                  image_link: ''
+                  image_style: ''
+                  image_loading:
+                    attribute: lazy
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          c39084ca-cbd2-4aa7-b329-a69bdafbd207:
+            uuid: c39084ca-cbd2-4aa7-b329-a69bdafbd207
+            region: one_col
+            configuration:
+              id: 'field_block:node:scbi_project:body'
+              label: Summary
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            weight: 1
+            additional: {  }
+          aa0ec32e-8240-48a7-ac3b-90b5dd284b26:
+            uuid: aa0ec32e-8240-48a7-ac3b-90b5dd284b26
+            region: two_col
+            configuration:
+              id: 'views_block:animals-block_2'
+              label: ''
+              label_display: visible
+              provider: views
+              context_mapping: {  }
+              views_label: ''
+              items_per_page: none
+            weight: 1
+            additional: {  }
+          10b4aef6-a54e-44d1-bfdb-f4820d24040d:
+            uuid: 10b4aef6-a54e-44d1-bfdb-f4820d24040d
+            region: one_col
+            configuration:
+              id: 'field_block:node:scbi_project:field_publications'
+              label: Publications
+              label_display: visible
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: link
+                label: hidden
+                settings:
+                  trim_length: null
+                  url_only: false
+                  url_plain: false
+                  rel: '0'
+                  target: '0'
+                third_party_settings: {  }
+            weight: 2
+            additional: {  }
+          85f393ba-1345-4a3a-9986-4daffbb60e58:
+            uuid: 85f393ba-1345-4a3a-9986-4daffbb60e58
+            region: two_col
+            configuration:
+              id: 'field_block:node:scbi_project:field_scbi_staff'
+              label: 'Project Staff'
+              label_display: visible
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: entity_reference_entity_view
+                label: hidden
+                settings:
+                  view_mode: list
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          31dba749-489c-4f1c-be52-dd3b99fb81f2:
+            uuid: 31dba749-489c-4f1c-be52-dd3b99fb81f2
+            region: two_col
+            configuration:
+              id: 'menu_block:main'
+              label: Carnivores
+              label_display: visible
+              provider: menu_block
+              context_mapping: {  }
+              follow: true
+              follow_parent: active
+              label_link: false
+              label_type: parent
+              level: 1
+              depth: 1
+              expand_all_items: false
+              parent: 'main:menu_link_content:8ce5d2cc-370d-44c9-be7f-e7eab98adc18'
+              suggestion: main
+            weight: 2
+            additional:
+              component_attributes:
+                block_attributes:
+                  id: ''
+                  class: mt-8
+                  style: ''
+                  data: ''
+                block_title_attributes:
+                  id: ''
+                  class: ''
+                  style: ''
+                  data: ''
+                block_content_attributes:
+                  id: ''
+                  class: ''
+                  style: ''
+                  data: ''
+        third_party_settings: {  }
 id: node.scbi_project.default
 targetEntityType: node
 bundle: scbi_project
@@ -51,6 +344,7 @@ content:
     weight: 100
     region: content
 hidden:
+  addtoany: true
   field_content_block: true
   field_editorial_access: true
   field_image: true
@@ -62,3 +356,4 @@ hidden:
   field_scbi_staff: true
   field_species_work_with_filter: true
   field_tags: true
+  field_teaser_title: true

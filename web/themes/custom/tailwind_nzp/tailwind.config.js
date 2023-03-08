@@ -152,6 +152,7 @@ module.exports = {
         'max-w-[350px]',
         'md:grid-cols-[.62fr_.38fr]',
         'md:grid-cols-[.38fr_.62fr]',
+        'grid-cols-[1fr_90px]',
         'grid-cols-[1fr]', 
         'w-24', 
         'h-0',

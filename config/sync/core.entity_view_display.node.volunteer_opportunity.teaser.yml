@@ -20,6 +20,7 @@ dependencies:
     - field.field.node.volunteer_opportunity.field_training
     - field.field.node.volunteer_opportunity.field_url
     - field.field.node.volunteer_opportunity.field_volunteer_category
+    - field.field.node.volunteer_opportunity.field_volunteer_image
     - node.type.volunteer_opportunity
   module:
     - text
@@ -43,6 +44,7 @@ content:
     weight: 100
     region: content
 hidden:
+  addtoany: true
   field_additional_information: true
   field_application_live_range: true
   field_commitment: true
@@ -58,3 +60,4 @@ hidden:
   field_training: true
   field_url: true
   field_volunteer_category: true
+  field_volunteer_image: true

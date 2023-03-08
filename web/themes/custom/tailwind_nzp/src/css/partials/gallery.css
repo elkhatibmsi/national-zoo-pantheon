@@ -4,7 +4,7 @@
 .modal-thumbnail-item {
   @apply rounded-md overflow-hidden cursor-pointer;
   img {
-    @apply h-full;
+    @apply h-full object-fill;
   }
 }
 

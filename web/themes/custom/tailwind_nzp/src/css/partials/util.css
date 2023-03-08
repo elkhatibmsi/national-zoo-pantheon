@@ -13,7 +13,7 @@
 /* stretch all nested content to match parent element */
 
 .stretch img {
-    @apply w-full h-full object-fill;
+    @apply w-full h-full object-cover;
    
 }
 

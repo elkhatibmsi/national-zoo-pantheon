@@ -1,0 +1,29 @@
+uuid: 94a14106-0acd-41f0-845b-1b9428e06740
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_volunteer_image
+    - media.type.image
+    - node.type.volunteer_opportunity
+id: node.volunteer_opportunity.field_volunteer_image
+field_name: field_volunteer_image
+entity_type: node
+bundle: volunteer_opportunity
+label: 'Volunteer Image'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

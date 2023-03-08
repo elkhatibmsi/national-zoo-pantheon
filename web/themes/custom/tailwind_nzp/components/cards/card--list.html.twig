@@ -1,9 +1,14 @@
-<div class="card--list mb-4 pb-4 border-b-[1px]">
+<div class="card--list mb-4 pb-4 border-b-[1px] border-lightergray">
 {% if authored_date|render %} 
    <div class="text-xs mb-2 uppercase font-bold">
   <span>{{ authored_date }}</span>
    </div>
   {% endif %}
   
-  <a href="{{ link }}"><strong class="text-sm">{{ title }}</strong></a>
+  <a href="{{ link }}" class="flex gap-2 flex-nowrap items-center">
+  {% if image|render %}
+  <div class="img rounded-full w-[50px] h-[50px] overflow-hidden stretch">{{image}}</div>
+  {% endif %}
+  <strong class="text-sm">{{ title }}</strong>
+  </a>
 </div>

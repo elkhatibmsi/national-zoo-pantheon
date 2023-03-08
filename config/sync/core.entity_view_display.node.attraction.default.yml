@@ -9,18 +9,405 @@ dependencies:
     - field.field.node.attraction.field_content_block
     - field.field.node.attraction.field_cost
     - field.field.node.attraction.field_editorial_access
+    - field.field.node.attraction.field_exhibit_location
     - field.field.node.attraction.field_hours
     - field.field.node.attraction.field_landing_image
     - field.field.node.attraction.field_marker
     - field.field.node.attraction.field_seasonal
-    - field.field.node.attraction.field_slideshow
     - field.field.node.attraction.field_subtitle
+    - field.field.node.attraction.field_teaser_title
     - field.field.node.attraction.field_ticket_info
     - node.type.attraction
+    - views.view.attractions
   module:
+    - addtoany
     - entity_reference_revisions
+    - geofield
+    - layout_builder
+    - nzp_layouts
+    - system
     - text
     - user
+    - views
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: layout_nzp_two_col_golden
+        layout_settings:
+          label: 'bread crumb'
+          context_mapping: {  }
+        components:
+          a1daf4a4-6b9b-4a3d-8e79-3dbaff970dd3:
+            uuid: a1daf4a4-6b9b-4a3d-8e79-3dbaff970dd3
+            region: one_col
+            configuration:
+              id: system_breadcrumb_block
+              label: Breadcrumbs
+              label_display: '0'
+              provider: system
+              context_mapping: {  }
+            weight: 0
+            additional:
+              component_attributes:
+                block_attributes:
+                  id: ''
+                  class: '-ml-1.5'
+                  style: ''
+                  data: ''
+                block_title_attributes:
+                  id: ''
+                  class: ''
+                  style: ''
+                  data: ''
+                block_content_attributes:
+                  id: ''
+                  class: ''
+                  style: ''
+                  data: ''
+          bc0c8ac6-1b35-4368-992d-c02da532ef84:
+            uuid: bc0c8ac6-1b35-4368-992d-c02da532ef84
+            region: two_col
+            configuration:
+              id: addtoany_block
+              label: 'AddToAny share buttons'
+              label_display: '0'
+              provider: addtoany
+              context_mapping: {  }
+              link_url: ''
+              link_title: ''
+              buttons_size: '22'
+              addtoany_html: ''
+            weight: 0
+            additional:
+              component_attributes:
+                block_attributes:
+                  id: ''
+                  class: 'h-full flex justify-start md:justify-end items-center -ml-1'
+                  style: ''
+                  data: ''
+                block_title_attributes:
+                  id: ''
+                  class: ''
+                  style: ''
+                  data: ''
+                block_content_attributes:
+                  id: ''
+                  class: ''
+                  style: ''
+                  data: ''
+        third_party_settings: {  }
+      -
+        layout_id: layout_nzp_two_col_golden
+        layout_settings:
+          label: title
+          context_mapping: {  }
+        components:
+          8749c8d1-1024-484a-a548-cd1ae9e614d2:
+            uuid: 8749c8d1-1024-484a-a548-cd1ae9e614d2
+            region: one_col
+            configuration:
+              id: 'field_block:node:attraction:title'
+              label: Title
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: text_field_formatter
+                label: hidden
+                settings:
+                  link_to_entity: 0
+                  wrap_tag: h1
+                  wrap_class: mt-0
+                  wrap_attributes: ''
+                  override_link_label: ''
+                  token: ''
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          eb6e7bdb-f923-44fd-a1b1-fe1abac7e75b:
+            uuid: eb6e7bdb-f923-44fd-a1b1-fe1abac7e75b
+            region: one_col
+            configuration:
+              id: 'field_block:node:attraction:field_subtitle'
+              label: Subheading
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: text_field_formatter
+                label: hidden
+                settings:
+                  link_to_entity: 0
+                  wrap_tag: h3
+                  wrap_class: ''
+                  wrap_attributes: ''
+                  override_link_label: ''
+                  token: ''
+                third_party_settings: {  }
+            weight: 1
+            additional: {  }
+        third_party_settings: {  }
+      -
+        layout_id: layout_nzp_two_col_golden
+        layout_settings:
+          label: content
+          context_mapping: {  }
+        components:
+          22a3d19b-22eb-4529-a0c9-9e963f2f912e:
+            uuid: 22a3d19b-22eb-4529-a0c9-9e963f2f912e
+            region: one_col
+            configuration:
+              id: 'field_block:node:attraction:body'
+              label: Summary
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          d5278d08-bcaf-4e58-b7ca-40a771853da3:
+            uuid: d5278d08-bcaf-4e58-b7ca-40a771853da3
+            region: one_col
+            configuration:
+              id: 'field_block:node:attraction:field_accessibility'
+              label: Accessibility
+              label_display: visible
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: entity_reference_label
+                label: hidden
+                settings:
+                  link: false
+                third_party_settings: {  }
+            weight: 1
+            additional: {  }
+          42c1fd09-9a99-4b44-9fd7-d69c3b75d4c7:
+            uuid: 42c1fd09-9a99-4b44-9fd7-d69c3b75d4c7
+            region: one_col
+            configuration:
+              id: 'field_block:node:attraction:field_ticket_info'
+              label: 'Ticket Information'
+              label_display: visible
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            weight: 2
+            additional: {  }
+          88843c28-1ea2-454e-b21c-f8f9e1cfd1a7:
+            uuid: 88843c28-1ea2-454e-b21c-f8f9e1cfd1a7
+            region: one_col
+            configuration:
+              id: 'field_block:node:attraction:field_cost'
+              label: 'Ticket Cost'
+              label_display: visible
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: number_unformatted
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            weight: 3
+            additional:
+              component_attributes:
+                block_attributes:
+                  id: ''
+                  class: ''
+                  style: ''
+                  data: ''
+                block_title_attributes:
+                  id: ''
+                  class: ''
+                  style: ''
+                  data: ''
+                block_content_attributes:
+                  id: ''
+                  class: ''
+                  style: ''
+                  data: ''
+          135b4461-2e83-4a0f-b642-aef748a011e8:
+            uuid: 135b4461-2e83-4a0f-b642-aef748a011e8
+            region: one_col
+            configuration:
+              id: 'field_block:node:attraction:field_landing_image'
+              label: 'Teaser Image'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: entity_reference_entity_view
+                label: hidden
+                settings:
+                  view_mode: default
+                third_party_settings: {  }
+            weight: -1
+            additional: {  }
+          5c9e2d86-d78a-412f-91c4-f659fc8c98dd:
+            uuid: 5c9e2d86-d78a-412f-91c4-f659fc8c98dd
+            region: two_col
+            configuration:
+              id: 'views_block:attractions-block_1'
+              label: ''
+              label_display: visible
+              provider: views
+              context_mapping: {  }
+              views_label: ''
+              items_per_page: none
+            weight: 1
+            additional: {  }
+          7342e3b6-4794-4c27-8341-7ab150cdbb62:
+            uuid: 7342e3b6-4794-4c27-8341-7ab150cdbb62
+            region: two_col
+            configuration:
+              id: 'field_block:node:attraction:field_exhibit_location'
+              label: 'Attraction Location'
+              label_display: visible
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: geofield_google_map
+                label: hidden
+                settings:
+                  map_dimensions:
+                    width: 100%
+                    height: 62%
+                  map_empty:
+                    empty_behaviour: '0'
+                    empty_message: 'No Geofield Value entered for this field'
+                  map_center:
+                    lat: !!float 42
+                    lon: 12.5
+                    center_force: false
+                    geocode: 'Find my location'
+                  map_zoom_and_pan:
+                    zoom:
+                      initial: 16
+                      force: false
+                      min: 1
+                      max: 22
+                      finer: 0
+                    gestureHandling: auto
+                    scrollwheel: false
+                    draggable: false
+                    map_reset_position: TOP_RIGHT
+                    map_reset: false
+                  map_controls:
+                    zoom_control: false
+                    map_type_id: roadmap
+                    map_type_control: false
+                    map_type_control_options_type_ids:
+                      roadmap: '0'
+                      satellite: '0'
+                      hybrid: '0'
+                      terrain: '0'
+                    scale_control: false
+                    street_view_control: false
+                    fullscreen_control: false
+                    disable_default_ui: false
+                  map_marker_and_infowindow:
+                    icon_image_mode: icon_file
+                    icon_file_wrapper:
+                      icon_file:
+                        fids: {  }
+                        upload_button: Upload
+                        remove_button: Remove
+                        upload: ''
+                        is_svg: false
+                      image_style: geofield_map_default_icon_style
+                    icon_image_path: ''
+                    infowindow_field: title
+                    view_mode: full
+                    tooltip_field: title
+                    multivalue_split: false
+                    force_open: false
+                  map_oms:
+                    map_oms_control: false
+                    map_oms_options: '{"markersWontMove":"true","markersWontHide":"true","basicFormatEvents":"true","nearbyDistance":3}'
+                  map_additional_options: ''
+                  map_geometries_options: '{"strokeColor":"black","strokeOpacity":"0.8","strokeWeight":2,"fillColor":"blue","fillOpacity":"0.1","clickable":false}'
+                  custom_style_map:
+                    custom_style_name: ''
+                    custom_style_options: ''
+                    custom_style_control: false
+                    custom_style_default: false
+                  map_markercluster:
+                    markercluster_additional_options: '{"maxZoom":12,"gridSize":50}'
+                    markercluster_control: false
+                  map_additional_libraries:
+                    places: false
+                    drawing: false
+                    geometry: false
+                    visualization: false
+                  map_lazy_load:
+                    lazy_load: false
+                  weight: ''
+                third_party_settings: {  }
+            weight: 0
+            additional:
+              component_attributes:
+                block_attributes:
+                  id: ''
+                  class: mb-8
+                  style: ''
+                  data: ''
+                block_title_attributes:
+                  id: ''
+                  class: ''
+                  style: ''
+                  data: ''
+                block_content_attributes:
+                  id: ''
+                  class: ''
+                  style: ''
+                  data: ''
+          ff86578a-9772-4247-be35-dd427a420bd2:
+            uuid: ff86578a-9772-4247-be35-dd427a420bd2
+            region: one_col
+            configuration:
+              id: 'field_block:node:attraction:field_content_block'
+              label: Content
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: entity_reference_revisions_entity_view
+                label: hidden
+                settings:
+                  view_mode: default
+                third_party_settings: {  }
+            weight: 4
+            additional: {  }
+        third_party_settings: {  }
 id: node.attraction.default
 targetEntityType: node
 bundle: attraction
@@ -61,6 +448,15 @@ content:
     third_party_settings: {  }
     weight: 3
     region: content
+  field_exhibit_location:
+    type: geofield_default
+    label: above
+    settings:
+      output_format: wkt
+      output_escape: true
+    third_party_settings: {  }
+    weight: 102
+    region: one_col
   field_ticket_info:
     type: text_default
     label: hidden
@@ -74,11 +470,12 @@ content:
     weight: 100
     region: content
 hidden:
+  addtoany: true
   field_card_position: true
   field_editorial_access: true
   field_hours: true
   field_landing_image: true
   field_marker: true
   field_seasonal: true
-  field_slideshow: true
   field_subtitle: true
+  field_teaser_title: true

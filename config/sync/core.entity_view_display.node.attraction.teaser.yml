@@ -10,12 +10,14 @@ dependencies:
     - field.field.node.attraction.field_content_block
     - field.field.node.attraction.field_cost
     - field.field.node.attraction.field_editorial_access
+    - field.field.node.attraction.field_exhibit_location
     - field.field.node.attraction.field_hours
     - field.field.node.attraction.field_landing_image
     - field.field.node.attraction.field_marker
     - field.field.node.attraction.field_seasonal
     - field.field.node.attraction.field_slideshow
     - field.field.node.attraction.field_subtitle
+    - field.field.node.attraction.field_teaser_title
     - field.field.node.attraction.field_ticket_info
     - node.type.attraction
   module:
@@ -49,14 +51,17 @@ content:
     weight: 100
     region: content
 hidden:
+  addtoany: true
   field_accessibility: true
   field_card_position: true
   field_content_block: true
   field_cost: true
   field_editorial_access: true
+  field_exhibit_location: true
   field_hours: true
   field_marker: true
   field_seasonal: true
   field_slideshow: true
   field_subtitle: true
+  field_teaser_title: true
   field_ticket_info: true

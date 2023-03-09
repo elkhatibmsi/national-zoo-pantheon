@@ -114,6 +114,7 @@ module.exports = {
         'pl-{spacing}',
         '-ml-{spacing}',
         'mt-{spacing}',
+        '{screens}:-mt-{spacing}',
         'mr-{spacing}',
         'mx-{spacing}',
         'my-{spacing}',

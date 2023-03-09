@@ -33,6 +33,7 @@ text-9xl
 text-transparent
 text-right
 text-left
+text-base
 italic
 border-oxford-blue
 border-ice-blue

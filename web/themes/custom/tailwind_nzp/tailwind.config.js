@@ -89,6 +89,7 @@ module.exports = {
         'text-transparent',
         'text-right',
         'text-left',
+        'text-base',
         'italic',
         'border-{colors}',
         'border-{borderWidth}',

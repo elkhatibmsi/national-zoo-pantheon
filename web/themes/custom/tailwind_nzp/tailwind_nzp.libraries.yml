@@ -99,3 +99,8 @@ webcam_embed:
     https://cdn.rawgit.com/video-dev/hls.js/18bb552/dist/hls.min.js: { type: external, minified: true }
     src/js/webcam-embed.js: {}
 
+iucn_js:
+  version: 1.x
+  header: true
+  js:
+    src/js/iucn.js: {}

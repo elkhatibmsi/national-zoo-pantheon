@@ -36,9 +36,11 @@
  * @see template_preprocess_field()
  */
 #}
+{{ attach_library('tailwind_nzp/iucn_js') }}
 
 
-<ul id="iucn-list" class="{{items.content}}">
+
+<ul id="iucn-list" data-designation="{{items.0.content['#markup']}}">
 <li class="lc">Least Concern</li>
 <li class="nt">Near Threatened</li>
 <li class="vu">Vulnerable</li>

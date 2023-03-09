@@ -4726,6 +4726,10 @@ aside .block-title a{
   padding-right: 1rem;
 }
 
+.container > div > div p:first-child{
+  margin-top: 0px;
+}
+
 .container-fluid{
   padding-left: 0px;
   padding-right: 0px;

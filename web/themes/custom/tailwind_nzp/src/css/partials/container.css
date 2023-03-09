@@ -3,7 +3,9 @@
 
 .container {
   @apply mb-4 px-4;
-
+}
+.container > div > div p:first-child {
+  @apply mt-0;
 }
 
 .container-fluid {

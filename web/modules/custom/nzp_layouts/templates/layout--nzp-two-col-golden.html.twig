@@ -28,10 +28,10 @@
                     {{ content.one_col }}
                 {% endif %}
             </div>
-        <div {{region_attributes.two_col}}>
-            {% if content.one_col %}            
+            <aside {{region_attributes.two_col}}>
+                {% if content.two_col %}            
                     {{ content.two_col }}
                 {% endif %}    
-            </div>
+            </aside>
     </div>
 {% endif %}

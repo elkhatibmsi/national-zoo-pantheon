@@ -4912,7 +4912,7 @@ header.scrolled .header--hours{
   width: 10px;
   left: 0;
   top: 0;
-  background: linear-gradient(45deg, #a90b0b, #f9cd00, #ffff54, #44a544);
+  background: linear-gradient(45deg, #ddd, #444, #a90b0b, #f9cd00, #ffff54, #44a544);
   height: 100%;
   border-radius: 5px;
 }

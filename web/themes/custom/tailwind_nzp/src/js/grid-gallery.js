@@ -15,10 +15,15 @@
         clickable: true,
         type: 'custom',
         bulletClass: 'grid-thumbnail-item',
+        bulletActiveClass: 'active',
 
     }
   });
 });
 
+$('.grid-thumbnail-item').on('click', function(){
+  $(this).addClass('active');
+
+});
 
 })(jQuery, Drupal);

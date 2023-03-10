@@ -3,7 +3,7 @@
 
 {% for key, media in items %}
 	{% set thumbnail =  media.content['#media'] | view('gallery_thumbnail')  %}
-	{% set gallery_item =  media.content['#media'] | view('media_and_caption') %}
+	{% set gallery_item =  media.content['#media'] | view('default') %}
 
 	{% set gallery = gallery|merge([gallery_item]) %}
 	{% set thumbnails = thumbnails|merge([thumbnail]) %}

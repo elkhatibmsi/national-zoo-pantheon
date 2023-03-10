@@ -1,21 +1,17 @@
 (function ($, Drupal) { 
     $(document).ready(function(){
+
         const listItem = document.querySelectorAll('#iucn-list li');
-        const selectedItem = document.querySelector("#iucn-list").getAttribute("data-designation");
-        
+        const selectedItem = document.querySelector("#iucn-list").getAttribute("data-designation").toLowerCase();
+         
         listItem.forEach((ele) => {
-        let label = ele.getAttribute("class");
-         let button = document.createElement("span");
-          button.className = label;
-          let text = document.createTextNode(label);
-          button.appendChild(text);
-          ele.insertBefore(button, ele.children[0]);
-          if(ele.textContent.includes(selectedItem)) {
-            button.classList.add("active");
+          let badge = ele.children[0];
+          let label = ele.children[1];
+        
+          if(label.textContent.toLowerCase() ===  selectedItem) {
+            badge.classList.add("active");
           }
         });
-            
-        
     });
     
     

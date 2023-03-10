@@ -3,7 +3,7 @@
 
 {% for key, media in node.field_gallery_items %}
 	{% set thumbnail =  media.entity | view('gallery_thumbnail')  %}
-	{% set gallery_item =  media.entity | view('full') %}
+	{% set gallery_item =  media.entity | view('default') %}
 
 	{% set gallery = gallery|merge([gallery_item]) %}
 	{% set thumbnails = thumbnails|merge([thumbnail]) %}

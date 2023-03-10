@@ -4925,7 +4925,7 @@ header.scrolled .header--hours{
   padding: 0 0 0 2em;
 }
 
-#iucn-list li:not(:first-child) span:before {
+#iucn-list li:not(:first-child) span.iucn--badge:before {
   content: "";
   height: 13px;
   width: 2px;
@@ -4935,7 +4935,7 @@ header.scrolled .header--hours{
   z-index: -1;
 }
 
-#iucn-list li span {
+#iucn-list li span.iucn--badge {
   pointer-events: none;
   position: absolute;
   display: flex;
@@ -4953,7 +4953,7 @@ header.scrolled .header--hours{
   line-height: 0;
 }
 
-#iucn-list li span.active {
+#iucn-list li span.iucn--badge.active {
   background-color: #f9cd00 !important;
   font-weight: bold;
 }

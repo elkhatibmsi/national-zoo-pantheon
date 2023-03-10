@@ -17,7 +17,7 @@
     align-items: center;
     height:40px;
     padding: 0 0 0 2em;
-    &:not(:first-child) span:before {
+    &:not(:first-child) span.iucn--badge:before {
       content: "";
       height: 13px;
       width: 2px;
@@ -27,7 +27,7 @@
       z-index: -1;
     }
 
-    span {
+    span.iucn--badge {
       pointer-events: none;
       position: absolute;
       display: flex;

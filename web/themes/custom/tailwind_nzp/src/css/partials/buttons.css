@@ -21,9 +21,8 @@
 }
 
 .more-link {
-
   a {
-    @apply btn-primary button;
+    @apply btn-primary button capitalize;
     &:after {
       content: "›";
       margin-left:0.5em;

@@ -169,6 +169,7 @@ module.exports = {
         'before:content-["$"]',     
         'overflow-hidden',
         'truncate',
+        'capitalize',
         'aspect-video'
       ],
     }),

@@ -4513,8 +4513,8 @@ aside .block-title a{
   border-radius: 0.25rem;
   --tw-bg-opacity: 1;
   background-color: rgb(0 37 84 / var(--tw-bg-opacity));
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
   padding-left: 1rem;
   padding-right: 1rem;
   font-weight: 700;

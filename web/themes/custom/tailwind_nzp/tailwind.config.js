@@ -115,6 +115,7 @@ module.exports = {
         '-ml-{spacing}',
         'mt-{spacing}',
         '{screens}:-mt-{spacing}',
+        '!mt-8',
         'mr-{spacing}',
         'mx-{spacing}',
         'my-{spacing}',
